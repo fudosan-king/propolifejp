@@ -3,6 +3,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /recruit/
+RewriteRule ^career/development/$ - [F]
+RewriteRule ^career/secretary/$ - [F]
+RewriteRule ^career/legal-affairs/$ - [F]
+RewriteRule ^career/contract-management/$ - [F]
+RewriteRule ^career/design/$ - [F]
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

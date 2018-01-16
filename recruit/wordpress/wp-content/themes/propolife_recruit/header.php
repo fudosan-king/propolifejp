@@ -4,7 +4,13 @@ $current_page_url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERV
 $temp_dir = get_stylesheet_directory_uri();
 
 $has_script_page = array('home', 'benefit', 'office', 'news', 'support', 'recruit', 'point', 'job');
+if (isset($post->ID) && $post->ID = 663 && $post->post_name=='sales-2'){
+    ?>
+    <script> window.location="https://www.propolife.co.jp/recruit/career/"; </script>
+    <?php
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+	トップページ
+------------------------------------------------------------*/
+.headLine02 {
+	margin-bottom: 82px;
+}
+
+#history {
+	margin: 0 auto;
+	width: 890px;
+}
+
+.comTable th {
+	padding-right: 35px;
+	text-align: right;
+}
+
+
+@media all and (min-width: 0px) and (max-width: 640px) {
+	.headLine02 {
+		margin-bottom: 50px;
+	}
+	
+	#history {
+		width: auto;
+	}
+	
+	.comTable th {
+		padding-right: 15px;
+	}
+	
+	.comTable td {
+		font-size: 0.9rem;
+	}
+
+
+}

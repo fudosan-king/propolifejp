@@ -1,0 +1,1125 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+	デフォルトスタイル
+------------------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header, button,
+hgroup, menu, nav, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 1em;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body, table,
+input, textarea, select, option, button,
+h1, h2, h3, h4, h5, h6 {
+  font-family: "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+table,
+input, textarea, select, option {
+  line-height: 1.1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+img {
+  vertical-align: top;
+}
+
+a,
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+}
+
+/*------------------------------------------------------------
+	書式設定
+------------------------------------------------------------*/
+/* テキストの位置 */
+.taLeft {
+  text-align: left !important;
+}
+
+.taCenter {
+  text-align: center !important;
+}
+
+.taRight {
+  text-align: right !important;
+}
+
+.vTop {
+  vertical-align: top !important;
+}
+
+.vMiddle {
+  vertical-align: middle !important;
+}
+
+/* フォントの太さ */
+.fwNormal {
+  font-weight: normal !important;
+}
+
+.fwBold {
+  font-weight: bold !important;
+}
+
+/*------------------------------------------------------------
+	微調整用クラス（※多用しないこと）
+------------------------------------------------------------*/
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+/*------------------------------------------------------------
+	clearfix（float解除）
+------------------------------------------------------------*/
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/*------------------------------------------------------------
+	トラッキングタグの余計なスペースを削除
+------------------------------------------------------------*/
+.trackTags {
+  display: none;
+}
+
+/*------------------------------------------------------------
+	レイアウト
+------------------------------------------------------------*/
+body {
+ 	min-width: 1300px;
+  /* ウインドウ幅で横スクロール時に背景が切れるバグ対策でコンテンツと同じ幅を指定 */
+	line-height: 1.5;
+	text-align: center;
+}
+@media all and (min-width: 0px) and (max-width: 640px) {
+	html,body {
+		width: 100% !important;
+		overflow-x: hidden !important;	
+		-webkit-text-size-adjust: 100%;
+	}
+}
+#container {
+	background-color: #fff;
+	text-align: left;
+}
+
+#main {
+	margin: 0 auto 190px;
+	width: 1000px;
+	font-size: 1.6rem;
+}
+
+#main:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/*------------------------------------------------------------
+	ヘッダー
+------------------------------------------------------------*/
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+#header .hInner {
+	margin: 0 auto;
+	padding: 20px 0 0 60px;
+	width: 1230px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#header .header {
+	padding-bottom: 19px;
+}
+
+#header .hInner h1 {
+	float: left;
+}
+
+#header .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #fff;
+}
+
+#header .hBox {
+	position: fixed;
+	top: 80px;
+	left:0 ;
+	width: 100%;
+	background: url(../../common/img/bg01.png) repeat left top;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s linear;
+	-webkit-transition: opacity 0.5s linear;
+}
+
+#header .hBox.on {
+	opacity: 1;
+	visibility: visible;
+}
+
+#header .hBox .subBox {
+	margin: 0 auto;
+	padding: 38px 0 17px;
+	width: 1100px;
+}
+#header .hBox .subBox .txtbanner li {
+	width: 32% !important;
+	display: inline-block;
+	margin-right: 2%;
+}
+#header .hBox .subBox .txtbanner a {
+	padding: 8px 10px 5px;
+	display: block;
+	color: #fff;
+	position: relative;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	z-index: 2;
+	text-decoration: none;
+	border: 2px solid #fff;
+}
+#header .hBox .subBox .txtbanner {
+	padding-bottom: 10px;
+}
+#header .hBox .subBox .txtbanner a:hover {
+	color: #67181d;
+}
+#header .hBox .subBox .txtbanner a:before,
+#header .hBox .subBox .txtbanner a:after {
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 100%;
+	content: '';
+	z-index: -1;
+	opacity: 0;
+	background-color: #FFF;
+}
+
+#header .hBox .subBox .txtbanner a:before {
+	right: 50%;
+}
+
+#header .hBox .subBox .txtbanner a:after {
+	left: 50%;
+}
+
+#header .hBox .subBox .txtbanner a:hover:before,
+#header .hBox .subBox .txtbanner a:hover:after {
+	width: 50%;
+	opacity: 1;
+}
+
+#header .hBox .subBox .txtbanner a,
+#header .hBox .subBox .txtbanner a:before,
+#header .hBox .subBox .txtbanner a:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+#header .hBox .subBox .txtbanner a span {
+	display: block;
+	background: url(../../common/img/icon08.png) no-repeat right center;
+	margin: 0 !important;
+}
+#header .hBox .subBox .txtbanner a:hover span {
+	background: url(../../common/img/icon0602.png) no-repeat right center;
+	background-size: 6px 10px;
+	color: #67181d;
+}
+
+
+
+
+#header .hBox .subBox li {
+	margin: 0 16px 7px 0;
+	width: 356px;
+	float: left;
+}
+
+#header .hBox .subBox li a {
+	display: block;
+	/*background-color: #fff;*/
+}
+
+#header .hBox .subBox li:nth-child(3n) {
+	margin-right: 0;
+}
+
+#header .hBox .subBox li a:hover img {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+#header .hBox .subBox li a {
+	color: #fff;
+}
+#header .hBox .subBox li span {
+	margin: 7px 0 0 10px;
+	display: block;
+}
+
+#header .hBox .subBox li span  {
+	padding-left: 15px;
+	display: inline-block;
+	font-size: 1.2rem;
+	color: #fff;
+	font-weight: bold;
+	background: url(../../common/img/icon07.png) no-repeat left center;
+}
+
+#header .header {
+	display: none;
+}
+
+#header.scroll .header {
+	display: block;
+}
+
+#header.scroll > .hInner {
+	display: none;
+}
+
+/*------------------------------------------------------------
+	グローバルナビ
+------------------------------------------------------------*/
+.gNavi {
+	padding-top: 7px;
+	width: 730px;
+	float: right;
+}
+
+.gNavi ul {
+	padding-top: 4px;
+	float: right;
+}
+
+.gNavi li {
+	padding: 30px 23px 50px 22px;
+	display: inline;
+	position: relative;
+	z-index: 10;
+}
+
+.gNavi li a {
+	color: #fff;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.header .gNavi li a {
+	color: #000;
+}
+
+.gNavi li a:hover {
+	padding-bottom: 6px;
+	border-bottom: 2px solid #72151A;
+}
+
+.gNavi .link {
+	padding-left: 17px;
+	padding-top: 5px;
+	float: right;
+}
+
+.gNavi .link .img02 {
+	display: none;
+}
+
+.gNavi li a.on {
+	padding-bottom: 6px;
+	border-bottom: 2px solid #72151A;
+}
+
+/*------------------------------------------------------------
+	パンクズリスト
+------------------------------------------------------------*/
+#pagePath {
+	margin-bottom: 111px;
+	padding: 16px 0 12px;
+	font-size: 1.2rem;
+	background-color: #F3F3F3;
+}
+#pagePath .inner{
+	width: 1000px;
+	margin: 0 auto;
+}
+#pagePath .inner br{
+	display: none;
+}
+#pagePath a {
+	margin-left: 3px;
+}
+#pagePath span {
+	margin-right: 2px;
+}
+
+
+/*------------------------------------------------------------
+	pagetop
+------------------------------------------------------------*/
+
+#side-dock {
+	display:block;
+	list-style:none;
+	margin: 0 0 0 0;
+	width: 117px;
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
+	z-index: 99998;
+	opacity: 0.8;
+	text-decoration: none;
+	overflow: hidden;	
+}  
+#side-dock li {
+	padding: 0 0 10px 0;
+}  
+#side-dock li a img:hover {
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+@media all and (min-width: 0px) and (max-width: 640px) {
+#side-dock {
+	width: 45px;
+	height: auto:
+	}
+}
+/*------------------------------------------------------------
+	コンテンツ
+------------------------------------------------------------*/
+#conts {
+}
+
+/*------------------------------------------------------------
+	サイドバー
+------------------------------------------------------------*/
+#sideBar {
+}
+/*------------------------------------------------------------
+	フッター
+------------------------------------------------------------*/
+#footer {
+	position: relative;
+	z-index: 10;
+	background-color: #F6F6F6;
+}
+
+#footer .pageTop {
+	text-align: center;
+	background-color: #F0F0F0;
+}
+
+#footer .pageTop a:hover img {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+
+#footer .naviBox {
+	margin: 0 auto;
+	padding: 50px 0 111px;
+	width: 1000px;
+}
+
+#footer .naviBox .naviUl > li {
+	padding: 0 20px 0 48px;
+	width: 186px;
+	float: left;
+	border-left: 1px solid #C8C8C8;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#footer .naviBox .naviUl > li:first-child {
+	width: 115px;
+	border: none;
+	padding-left: 28px;
+}
+
+#footer .naviBox .naviUl > li:nth-child(2) {
+	width: 236px;
+}
+
+#footer .naviBox .naviUl > li:nth-child(4) {
+	width: 156px;
+}
+
+#footer .naviBox .naviUl > li:nth-child(5) {
+	width: 305px;
+	padding-right: 0;
+}
+
+#footer .naviBox .naviUl > li p {
+	margin-top: 23px;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+#footer .naviBox .naviUl > li ul {
+	margin-top: 15px;
+}
+
+#footer .naviBox .naviUl > li ul li {
+	padding-bottom: 7.5px;
+}
+
+#footer .naviBox .naviUl > li ul li a,
+#footer .naviBox .naviUl > li ul li span{
+	padding-left: 15px;
+	display: inline-block;
+	font-size: 1.5rem;
+	line-height: 1.6em;
+	background: url(../../common/img/icon01.png) no-repeat left 5px;
+}
+
+#footer .fBox {
+	background-color: #67181D;
+}
+
+#footer .fBox .subBox {
+	margin: 0 auto;
+	padding: 16px 0 22px;
+	width: 1100px;
+}
+
+#footer .fBox p {
+	float: left;
+	width: 330px;
+	padding-top: 4px;
+	font-size: 1.2rem;
+	color: #fff;
+}
+
+#footer .fBox ul {
+	padding: 1px 7px 0 0;
+	float: right;
+}
+
+#footer .fBox li {
+	padding-left: 17px;
+	float: left;
+	font-size: 1.4rem;
+}
+
+#footer .fBox li a {
+	padding-left: 12px;
+	display: inline-block;
+	color: #fff;
+	background: url(../../common/img/icon02.png) no-repeat left center;
+}
+
+/*------------------------------------------------------------
+	見出し
+------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+	アイコン
+------------------------------------------------------------*/
+section#pressrelease dl dd a.pdf_ico {
+	padding:5px 35px 5px 0;
+	background: url(../../common/img/pdf_ico.png) right 50% no-repeat;
+	background-size: 25px auto;
+	
+}
+/*------------------------------------------------------------
+	ボタン
+------------------------------------------------------------*/
+
+#main .btmLink {
+	margin: 0 auto;
+	width: 320px;
+}
+
+#main .btmLink a {
+	padding: 8px 10px 6px;
+	display: block;
+	font-size: 1.4rem;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	border: 2px solid #000;
+	background-color: #fff;
+	z-index: 2;
+}
+
+#main .btmLink a:hover {
+	color: #fff;
+	background-color: #72161b;
+	border-color: #72161b;
+}
+
+#main .btmLink a span {
+	display: block;
+	background: url(../../common/img/icon06.png) no-repeat right center;
+	background-size: 6px 10px;
+}
+
+#main .btmLink a:hover span {
+	background-image: url(../../common/img/icon11.png);
+}
+
+#main .btmLink a:after,
+#main .btmLink a:before {
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	content: '';
+	z-index: -1;
+	background-color: #fff;
+}
+
+#main .btmLink a,
+#main .btmLink a:before,
+#main .btmLink a:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+#main .btmLink a:before {
+	right: 0;
+}
+
+#main .btmLink a:after {
+	left: 0;
+}
+
+#main .btmLink a:hover:before,
+#main .btmLink a:hover:after {
+	width: 0;
+	background-color: #fff;
+}
+
+
+#main .business {
+	padding: 102px 0 55px 0;
+	position: relative;
+	z-index: 10;
+	background-color: #fff;
+}
+
+
+/*------------------------------------------------------------
+	箇条書き
+------------------------------------------------------------*/
+#mainVisual {
+	min-height: 392px;
+	background: url(../../common/img/com_bg01.jpg) no-repeat center bottom;
+	background-size: cover;
+}
+
+#mainVisual .headLine01 {
+	padding-top: 220px;
+	font-size: 3.5rem;
+	font-weight: normal;
+	color: #fff;
+	letter-spacing: 2.5px;
+	text-align: center;
+}
+
+.headLine02 {
+	margin-bottom: 110px;
+	font-size: 2.7rem;
+	text-align: center;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+
+.comTable {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #D6D6D6;
+}
+
+.comTable th {
+	padding: 13px 10px 13px 22px;
+	width: 25%;
+	font-weight: normal;
+	line-height: 1.95;
+	text-align: left;
+	vertical-align: top;
+	background-color: #F4F4F4;
+	border-bottom: 1px solid #D6D6D6;
+}
+
+.comTable td {
+	padding: 13px 10px 13px 40px;
+	line-height: 1.95;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid #D6D6D6;
+}
+
+.comTable td .textSpan {
+	margin-bottom: 30px;
+	display: block;
+}
+
+.sp {
+	display: none !important;
+}
+
+.menuBox,
+.menuBg {
+	display: none;
+}
+
+.menuBg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	opacity: 0.7;
+	background-color: #000;
+}
+.draggable {
+	padding:  0 !important;
+}
+
+
+@media all and (min-width: 640px) and (max-width: 767px) {
+
+	.gNavi li {
+		padding: 30px 12px 50px;
+	}
+	
+}
+
+@media all and (min-width: 0px) and (max-width: 640px) {
+	body {
+		min-width: inherit;
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.sp {
+		display: block !important;
+	}
+	
+	.pc {
+		display: none !important;
+	}
+	
+	#header {
+		position: fixed;
+	}
+	
+	.menu {
+		position: absolute;
+		top: 19px;
+		right: 15px;
+		width: 18px;
+	}
+	
+	#header .hInner {
+		width: auto;
+		padding: 16px 15px;
+	}
+		
+	#header .header {
+		padding-bottom: 0;
+	}
+	
+	
+	#header .hInner h1 {
+		float: none;
+		width: 120px;
+	}
+	
+	.menuBox {
+		position: fixed;
+		right: -212px;
+		top: 0;
+		width: 212px;
+		z-index: 10000;
+		height: 100%;
+		overflow: auto;
+		display: block;
+		background-color: #fff;
+		transition: right 0.2s;
+		-webkit-transition: right 0.2s;
+	}
+	
+	.menuBox.on {
+		right: 0;
+	}
+
+	.menuBox .close {
+		width: 16px;
+		position: absolute;
+		top: 18px;
+		right: 15px;
+	}
+
+	.menuBox ul {
+		margin-top: 42px;
+		border-top: 1px solid #C8C8C8;
+	}
+
+	.menuBox ul > li a,
+	.menuBox ul > li span{
+		padding: 8px 28px 7px 15px;
+		font-size: 1.2rem;
+		display: block;
+		position: relative;
+		text-decoration: none;
+		border-bottom: 1px solid #C8C8C8;
+	}
+
+	.menuBox ul > li a:after,
+	.menuBox ul > li span:after{
+		width: 12px;  
+		height: 20px;
+		margin-top: -5px;
+		background: url(../../common/img/icon03.png) no-repeat right top;
+		background-size: 6px 10px;
+		position: absolute;  
+		top: 50%;
+		right: 16px;  
+		content: ""; 
+	}
+
+	.menuBox ul > li:nth-child(5) p a:after,
+	.menuBox ul > li:nth-child(3) p a:after,
+	.menuBox ul > li:nth-child(2) p a:after {
+		width: 18px;  
+		height: 18px;
+		margin-top: -4px;
+		background: url(../../common/img/icon04.png) no-repeat right top;
+		background-size: 9px 9px;
+		position: absolute;  
+		top: 50%;
+		right: 15px;  
+		content: ""; 
+	}
+	
+	.menuBox ul > li:nth-child(5) p a.on:after,
+	.menuBox ul > li:nth-child(3) p a.on:after,
+	.menuBox ul > li:nth-child(2) p a.on:after {
+		background-image: url(../../common/img/icon05.png);
+	}
+
+	.menuBox ul li ul {
+		margin: 0;
+		display: none;
+		border: none;
+	}
+	
+	.menuBox ul > li ul li a,
+	.menuBox ul > li ul li span{
+		padding-left: 30px;
+	}
+	
+	.gNavi {
+		display: none;
+	}
+	#main .btmLink {
+	margin: 0 auto;
+	width: 100% !important;
+	}
+
+	#mainVisual {
+		min-height: inherit;
+		background-image: url(../../common/img/sp_bg01.jpg);
+		background-position: bottom;
+	}
+	
+	#mainVisual .headLine01 {
+		padding: 98px 0 72px;
+		font-size: 1.8rem;
+		letter-spacing: 1px;
+	}
+	
+	#pagePath {
+		margin-bottom: 53px;
+		padding: 11px 14px 10px;
+	}
+	
+	#pagePath ul {
+		width: auto;
+	}
+	
+	#pagePath li {
+		font-size: 0.8rem;
+	}
+	
+	#main {
+		margin: 0 15px 60px;
+		width: auto;
+		font-size: 1rem;
+	}
+	
+	#footer .pageTop a {
+		margin: 0 auto;
+		width: 33px;
+		display: block;
+	}
+	
+	#footer .naviBox {
+		width: auto;
+		padding: 0;
+	}
+	
+	#footer .naviBox .naviUl > li {
+		height: auto !important;
+		padding: 0 !important;
+		width: auto !important;
+		float: none;
+		border-bottom: 1px solid #C8C8C8 !important;
+		border-left: none;
+	}
+	
+	#footer .naviBox .naviUl > li p {
+		font-size: 1.2rem;
+		margin: 0;
+	}
+
+	#footer .naviBox .naviUl > li p a {
+		padding: 8px 25px 8px 15px;
+		display: block;
+		font-weight: normal;
+		position: relative;
+		text-decoration: none;
+	}
+	
+	#footer .naviBox .naviUl > li p a:after {
+		width: 12px;  
+		height: 20px;
+		margin-top: -5px;
+		background: url(../../common/img/icon03.png) no-repeat right top;
+		background-size: 6px 10px;
+		position: absolute;  
+		top: 50%;
+		right: 14px;  
+		content: ""; 
+	}
+
+	#footer .naviBox .naviUl > li:first-child p a {
+		padding-top: 10px;
+	}
+
+	#footer .naviBox .naviUl > li:nth-child(5) p a:after,
+	#footer .naviBox .naviUl > li:nth-child(3) p a:after,
+	#footer .naviBox .naviUl > li:nth-child(2) p a:after {
+		width: 18px;  
+		height: 18px;
+		margin-top: -4px;
+		background: url(../../common/img/icon04.png) no-repeat right top;
+		background-size: 9px 9px;
+		position: absolute;  
+		top: 50%;
+		right: 13px;  
+		content: ""; 
+	}
+	
+	#footer .naviBox .naviUl > li:nth-child(5) p a.on:after,
+	#footer .naviBox .naviUl > li:nth-child(3) p a.on:after,
+	#footer .naviBox .naviUl > li:nth-child(2) p a.on:after {
+		background-image: url(../../common/img/icon05.png);
+	}
+	
+	#footer .naviBox .naviUl > li ul {
+		margin: 0;
+		display: none;
+		border-top: 1px solid #C8C8C8;
+	}
+	
+	#footer .naviBox .naviUl > li ul li {
+		padding: 0;
+	}
+	
+	#footer .naviBox .naviUl > li ul li a,
+	#footer .naviBox .naviUl > li ul li span {
+		padding: 8px 25px 8px 25px;
+		display: block;
+		font-size: 1.2rem;
+		position: relative;
+		text-decoration: none;
+		background: none;
+		border-bottom: 1px solid #C8C8C8;
+	}
+
+	#footer .naviBox .naviUl > li ul li:last-child a {
+		border-bottom: none;
+	}
+
+	#footer .naviBox .naviUl > li ul li a:after {
+		width: 12px;  
+		height: 20px;
+		margin-top: -5px;
+		background: url(../../common/img/icon03.png) no-repeat right top;
+		background-size: 6px 10px;
+		position: absolute;  
+		top: 50%;
+		right: 14px;  
+		content: ""; 
+	}
+	#footer .naviBox .naviUl > li ul li span:after {
+		width: 12px;  
+		height: 20px;
+		margin-top: -5px;
+		background: url(../../common/img/icon03.png) no-repeat right top;
+		background-size: 6px 10px;
+		position: absolute;  
+		top: 50%;
+		right: 14px;  
+		content: ""; 
+	}	
+	#footer .fBox .subBox {
+		width: auto;
+		padding: 9px 10px 7px;
+	}
+	
+	#footer .fBox p {
+		width: auto;
+		float: none;
+		font-size: 0.8rem;
+		letter-spacing: 0.5px;
+		text-align: center;
+	}
+	
+	#footer .fBox ul {
+		display: none;
+	}
+	
+	.headLine02 {
+		margin-bottom: 28px;
+		font-size: 2rem;
+		letter-spacing: 1px;
+	}
+	
+	a:hover,
+	a:hover img {
+		filter: alpha(opacity=100) !important;
+		opacity: 1 !important;
+	}
+	
+	
+	.comTable th {
+		padding: 13px 10px;
+		width: 29.5%;
+		font-size: 1.1rem;
+		line-height: 1.3;
+	}
+	
+	.comTable td {
+		padding: 13px 5px 13px 14px;
+		font-size: 1.1rem;
+		line-height: 1.3;
+	}
+
+	.comTable .tdStyle {
+		vertical-align: middle;
+	}
+	
+	.comTable .tdStyle02 {
+		font-size: 0.9rem;
+		line-height: 1.6;
+	}
+	
+	.comTable td .textSpan {
+		margin-bottom: 13px;
+	}
+
+}
+
+@media all and (min-width: 641px) {
+	.menuBox,
+	.menuBg {
+		display: none !important;
+	}
+	
+	#footer .naviBox .naviUl > li ul {
+		display: block !important;
+	}
+}

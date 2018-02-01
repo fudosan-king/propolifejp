@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+	トップページ
+------------------------------------------------------------*/
+.headLine02 {
+	margin-bottom: 105px;
+}
+.news_ico {
+	width: 114px;
+	text-align: center;
+    background: #eee none repeat scroll 0 0;
+    color: #666;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 10px 5px 5px;
+    padding: 2px 5px;
+}
+span.date {
+    display: inline-block;
+    margin: 0px 10px 0 5px;
+	padding: 0;
+}
+.media_img {
+	width: 150px;
+	float: left;
+	margin: 0px 5px 0 5px;
+}
+#pressrelease {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+#main .h4Ttl {
+	margin-bottom: 71px;
+	font-size: 1.8rem;
+}
+
+#pressrelease dl {
+	margin-bottom: 130px;
+}
+
+#pressrelease dt {
+	margin-bottom: 50px;
+	font-size: 1.6rem;
+	padding-bottom: 3px;
+	font-weight: normal;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+#pressrelease dd {
+	font-size: 1.6rem;
+}
+
+#pressrelease dd .title {
+	margin: 0 0 40px;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+#pressrelease dd p {
+	margin-top: 30px;
+	font-size: 1.6rem;
+	line-height: 1.87;
+	letter-spacing: 1px;
+}
+
+/*------------------------------------------------------------
+	pageList
+------------------------------------------------------------*/
+#main .pageList {
+	padding-top: 42px;
+	text-align: center;
+}
+
+#main .pageList li {
+	margin: 0 2px;
+	display: inline-block;
+	font-size: 1.4rem;
+	color: #000;
+}
+
+#main .pageList .current span,
+#main .pageList li a {
+	padding: 5px 13px;
+	display: block;
+	color: #000;
+	background-color: #e3e3e3;
+}
+
+#main .pageList .current span,
+#main .pageList li a:hover {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #000;
+}
+
+#main .pageList .prev a,
+#main .pageList .next a {
+	letter-spacing: 2px;
+}
+.wp-pagenavi {
+    clear: both;
+	text-align: center;
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	border: none;
+    margin: 2px;
+    padding: 5px 13px;
+    text-decoration: none;
+	background-color: #e3e3e3;
+}
+.wp-pagenavi span.current,
+.wp-pagenavi a:hover{
+	color: #FFF;
+	text-decoration: none;
+	background-color: #000;
+}
+
+@media all and (min-width: 0px) and (max-width: 640px) {
+.news_ico {
+    background: #eee none repeat scroll 0 0;
+    color: #666;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 10px 0 5px;
+    padding: 2px 5px;
+}
+	
+	.headLine02 {
+		margin-bottom: 40px;
+	}
+		
+	#pressrelease {
+		width: auto;
+	}
+	
+	#main .h4Ttl {
+		margin-bottom: 35px;
+		font-size: 1.1rem;
+	}
+	
+	#pressrelease dl {
+		margin-bottom: 60px;
+	}
+		
+	#pressrelease dt {
+		margin-bottom: 25px;
+		font-size: 1.1rem;
+		padding-bottom: 4px;
+	}
+	
+	#pressrelease dd {
+		margin-bottom: 20px;
+	}
+	
+	#pressrelease dd .title {
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+	}
+	
+	#pressrelease dd p {
+		margin-top: 20px;
+		font-size: 1rem;
+		line-height: 2;
+	}
+	
+	/*------------------------------------------------------------
+		pageList
+	------------------------------------------------------------*/
+	#main .pageList {
+		padding-top: 25px;
+	}
+	
+	#main .pageList li {
+		font-size: 1.1rem;
+	}
+	
+	#main .pageList .current span,
+	#main .pageList li a {
+		padding: 5px 10px;
+	}
+	
+
+}

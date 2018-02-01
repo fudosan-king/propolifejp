@@ -1,17 +1,16 @@
+
+
+#SITEGUARD_PLUGIN_SETTINGS_START
+#SITEGUARD_PLUGIN_SETTINGS_END
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
-
 RewriteEngine On
-RewriteBase /
-RewriteRule ^career/development/$ - [L]
-RewriteRule ^career/secretary/$ - [L]
-RewriteRule ^career/legal-affairs/$ - [L]
-RewriteRule ^career/contract-management/$ - [L]
-RewriteRule ^career/design/$ - [L]
+RewriteBase /wp/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteRule . /wp/index.php [L]
 </IfModule>
 
 # END WordPress

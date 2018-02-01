@@ -139,7 +139,14 @@ get_header(); ?>
 						
 						<span>株式会社プロポライフホテルズ</span>
 				    </li>
-
+					
+					<li>
+						
+							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="101" alt="PROPOLIFE HOTELS">
+							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link12.jpg" width="100%" alt="PROPOLIFE HOTELS">
+						
+						<span>株式会社沖縄イゲトー</span>
+				    </li>
 
 
 			    </ul>

@@ -1,0 +1,10 @@
+#contentContainer  {
+	float: right;
+	width: 68%;
+}
+
+#sidebarContainer {
+	float: left;
+	width: 24%;
+	margin-left: 5px;
+}

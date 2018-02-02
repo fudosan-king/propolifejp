@@ -1,0 +1,410 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#wrapper {
+	padding: 0px;
+	width: 800px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #666;
+	border-left-color: #666;
+	background-color: #FFF;
+}
+
+
+/** safari用のCSS hack **/
+/* safari only \*/
+html:\66irst-child
+#wrapper {
+	padding: 0px;
+	width: 800px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #666;
+	border-left-color: #666;
+	background-color: #FFF;
+}
+#head {
+	width: 800px;
+	margin: 0px;
+	padding: 0px;
+	height: 92px;
+}
+#head img {
+	float: left;
+}
+#head #headerNavi {
+	float: right;
+	margin-top: 65px;
+	padding-right: 10px;
+}
+#globalnav {
+	margin: 0px;
+	padding: 0px;
+	width: 800px;
+	text-align: left;
+	height: 45px;
+	clear: both;
+}
+#globalnav ul {
+	margin: 0px;
+	padding: 0px;
+	width: 800px;
+	height: 45px;
+}
+#globalnav ul li {
+	float: left;
+	list-style-type: none;
+}
+#globalnav a {
+	text-indent: -9999px;
+	display: block;
+	height: 45px;
+}
+#Menu01 {
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 45px;
+	width: 160px;
+}
+#Menu01 {
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 45px;
+	width: 160px;
+}
+#Menu02 {
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -160px top;
+	height: 45px;
+	width: 160px;
+}
+#Menu03 {
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -320px top;
+	height: 45px;
+	width: 160px;
+}
+#Menu04 {
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -480px top;
+	height: 45px;
+	width: 160px;
+}
+#Menu05 {
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -640px top;
+	height: 45px;
+	width: 160px;
+}
+#Menu01 a:hover{
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: left -45px;
+	height: 45px;
+	width: 160px;
+}
+#Menu02 a:hover{
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -160px -45px;
+	height: 45px;
+	width: 160px;
+}
+#Menu03 a:hover{
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -320px -45px;
+	height: 45px;
+	width: 160px;
+}
+#Menu04 a:hover{
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -480px -45px;
+	height: 45px;
+	width: 160px;
+}
+#Menu05 a:hover{
+	background-image: url(../images/menu.jpg);
+	background-repeat: no-repeat;
+	background-position: -640px -45px;
+	height: 45px;
+	width: 160px;
+}
+#mainpic {
+	margin: 0px;
+	padding: 0px;
+	width: 800px;
+	height: 256px;
+	background-image: url(../images/main_pic.jpg);
+	background-position: left top;
+}
+
+#content {
+	width: 800px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+#right {
+	padding: 0px;
+	float: right;
+	width: 250px;
+	margin-top: 0px;
+	margin-right: 25px;
+	margin-bottom: 0px;
+	margin-left: 25px;
+	text-align: center;
+	display: inline;
+}
+#right ul {
+	text-align: left;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 15px;
+	margin-left: auto;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+	width: 220px;
+}
+#right li {
+	list-style-type: none;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCC;
+}
+
+#mainBody {
+	float: left;
+	width: 475px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 25px;
+	display: inline;
+}
+#mainBody h3 {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 7px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #989278;
+	border-right-color: #989278;
+	border-bottom-color: #989278;
+	border-left-color: #989278;
+	color: #630;
+}
+#mainBody .Box {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+}
+
+
+#mainBody .Box strong {
+	font-size: 120%;
+	font-weight: bold;
+	color: #063;
+	display: block;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 7px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #063;
+	border-right-color: #063;
+	border-bottom-color: #063;
+	border-left-color: #063;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#News {
+	margin: 0px;
+	padding: 0px;
+}
+#News dl.list {
+	line-height: 3em;
+	width: 450px;
+	margin-right: auto;
+	margin-bottom: 2em;
+	margin-left: auto;
+}
+
+#News dt {
+	width: 10em;
+	float: left;
+	padding-bottom: 1px;
+	text-indent: 1em;
+}
+#News dd {
+	padding-left: 10em;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #ccc;
+}
+#footer {
+	padding: 10px;
+	width: 780px;
+	clear: both;
+}
+#footer .cipylight {
+	text-align: center;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #999;
+}
+#footer #footerMenu {
+	padding: 0px;
+	width: 768px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	height: 25px;
+}
+#footerMenu ul {
+	margin: 0px;
+	padding: 0px;
+}
+#footerMenu ul li {
+	float: left;
+	list-style-type: none;
+}
+#footerMenu a {
+	text-indent: -9999px;
+	display: block;
+	height: 25px;
+}
+#footerMenu01 {
+	height: 25px;
+	width: 89px;
+	background-image: url(../images/under.gif);
+	background-position: left top;
+}
+#footerMenu02 {
+	height: 25px;
+	width: 98px;
+	background-position: -89px top;
+	background-image: url(../images/under.gif);
+}
+#footerMenu03 {
+	height: 25px;
+	width: 123px;
+	background-position: -187px top;
+	background-image: url(../images/under.gif);
+}
+#footerMenu04 {
+	height: 25px;
+	width: 86px;
+	background-position: -310px top;
+	background-image: url(../images/under.gif);
+}
+#footerMenu05 {
+	height: 25px;
+	width: 114px;
+	background-image: url(../images/under.gif);
+	background-position: -396px top;
+}
+#footerMenu06 {
+	height: 25px;
+	width: 120px;
+	background-image: url(../images/under.gif);
+	background-position: -510px top;
+}
+#footerMenu07 {
+	height: 25px;
+	width: 138px;
+	background-image: url(../images/under.gif);
+	background-position: right top;
+}
+/*-----------------------------------------------------------------------------------*/
+#footerMenu01 a:hover {
+	height: 25px;
+	width: 89px;
+	background-image: url(../images/under.gif);
+	background-position: left -25px;
+}
+#footerMenu02 a:hover {
+	height: 25px;
+	width: 98px;
+	background-position: -89px -25px;
+	background-image: url(../images/under.gif);
+}
+#footerMenu03 a:hover {
+	height: 25px;
+	width: 123px;
+	background-position: -187px -25px;
+	background-image: url(../images/under.gif);
+}
+#footerMenu04 a:hover {
+	height: 25px;
+	width: 86px;
+	background-position: -310px -25px;
+	background-image: url(../images/under.gif);
+}
+#footerMenu05 a:hover {
+	height: 25px;
+	width: 114px;
+	background-image: url(../images/under.gif);
+	background-position: -396px -25px;
+}
+#footerMenu06 a:hover {
+	height: 25px;
+	width: 120px;
+	background-image: url(../images/under.gif);
+	background-position: -510px -25px;
+}
+#footerMenu07 a:hover {
+	height: 25px;
+	width: 138px;
+	background-image: url(../images/under.gif);
+	background-position: right -25px;
+}
+#mainBody h2 {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,20 @@
+/* Back to Top Button */
+
+#back-top {
+	display: none;
+}
+
+#back-top a {
+	display: none;
+}
+
+#back-top a:hover {
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+	display: none;
+}
+
+#back-top a:hover span {
+}

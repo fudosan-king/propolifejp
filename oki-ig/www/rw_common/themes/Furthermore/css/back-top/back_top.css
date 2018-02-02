@@ -1,0 +1,54 @@
+/* Back to Top Button */
+
+/* Back to Top Button */
+
+#back-top {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+#back-top a {
+	float: right;
+	width: 120px;
+	display: block;
+	padding: 0;
+	
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+
+#back-top a:hover {
+}
+
+#back-top a:hover {
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+	float: right;
+	width: 38px;
+	height: 38px;
+	display: block;
+	margin-right: 8px;
+	background-image: url(../../images/up_arrow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+
+	/* rounded corners */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	
+	behavior: url(PIE.htc);
+}
+
+#back-top a:hover span {
+}

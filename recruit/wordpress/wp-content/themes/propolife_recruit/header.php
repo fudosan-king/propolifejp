@@ -227,7 +227,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                     <ul>
                         <li><a href="https://www.propolife.co.jp/company/president/">代表者挨拶</a></li>
                         <li><a href="https://www.propolife.co.jp/company/philosophy/">経営理念</a></li>
-                        <li><a href="https://www.propolife.co.jp/company/company/">会社概要</a></li>
+                        <li><a href="https://www.propolife.co.jp/company/">会社概要</a></li>
                         <li><a href="https://www.propolife.co.jp/company/history/">沿革</a></li>
                         <li><a href="https://www.propolife.co.jp/company/officer/">役員一覧</a></li>
                         <li><a href="https://www.propolife.co.jp/company/access/">アクセス</a></li>

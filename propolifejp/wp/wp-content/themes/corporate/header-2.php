@@ -338,7 +338,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<ul>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/president/">代表者挨拶</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/philosophy/">経営理念</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/about/">会社概要</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/">会社概要</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/history/">沿革</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/officer/">役員一覧</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/access/">アクセス</a></li>

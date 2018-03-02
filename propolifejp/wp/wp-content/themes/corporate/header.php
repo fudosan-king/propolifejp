@@ -332,7 +332,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
 					<li><span>PROPOLIFE SINGAPORE</span></li>
 					<li><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></li>
-					<li><span>小滝野</span></li>
 					<li><a href="http://www.propolifehotels.com">PROPOLIFE HOTELS</a></li>
 					<li><span>株式会社沖縄イゲトー</span></li>
 				</ul>

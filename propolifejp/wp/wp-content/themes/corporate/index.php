@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Template Name:index_temp
  */
@@ -79,7 +79,7 @@ get_header(); ?>
 						</a>
 						<span><a href="https://www.chronicle-web.com/reform/" target="_blank">株式会社クロニクル建設</a></span>
 				    </li>
-						
+
 					<li>
 						<a href="https://www.prostyle-residence.com/" target="_blank">
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/group/link03.jpg" width="356" height="101" alt="PROSTYLE">
@@ -94,7 +94,7 @@ get_header(); ?>
 						</a>
 						<span><a href="https://www.prostyle-villa.com/" target="_blank">株式会社プロスタイルヴィラ</a></span>
 				    </li>
-						
+
 					<li>
 						<a href="http://chinokanri.co.jp/" target="_blank">
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/group/link05.jpg" width="356" height="101" alt="CHINO 千野建物管理">
@@ -102,12 +102,12 @@ get_header(); ?>
 						</a>
 						<span><a href="http://chinokanri.co.jp/" target="_blank">千野建物管理株式会社</a></span>
 				    </li>
-						
+
 					<li>
-						
+
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/group/link06.jpg" width="356" height="101" alt="">
 							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/group/sp_link06.jpg" width="100%" alt="">
-						
+
 						<span>煙台提案生活木業有限公司</span>
 				    </li>
 					<li>
@@ -116,15 +116,15 @@ get_header(); ?>
 							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/group/sp_link07.jpg" width="100%" alt="">
 						</a>
 						<span><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></span>
-				    </li>					
+				    </li>
 					<li>
-						
+
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/group/link09.jpg" width="356" height="101" alt="PROPOLIFE SHINGAPORE">
 							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/group/sp_link09.jpg" width="100%" alt="PROPOLIFE SHINGAPORE">
-						
+
 						<span>PROPOLIFE SINGAPORE</span>
 				    </li>
-				    
+
 					<li>
 						<a href="http://kotakino.wpblog.jp" target="_blank">
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link10.jpg" width="356" height="98" alt="株式会社小滝野">
@@ -132,20 +132,20 @@ get_header(); ?>
 						</a>
 						<span><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></span>
 					</li>
-				    <li>
+
+<li>
 						<a href="http://www.propolifehotels.com" target="_blank">
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpeg" width="356" height="101" alt="PROPOLIFE HOTELS">
 							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link11.jpeg" width="100%" alt="PROPOLIFE HOTELS">
 						</a>
 						<a href="http://www.propolifehotels.com" target="_blank"><span>株式会社プロポライフホテルズ</span></a>
 				    </li>
-					
 					<li>
-						
-							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="101" alt="PROPOLIFE HOTELS">
-							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link12.jpg" width="100%" alt="PROPOLIFE HOTELS">
-						
-						<span>株式会社沖縄イゲトー</span>
+						<a>
+							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="101" alt="株式会社沖縄イゲトー">
+							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link12.jpg" width="100%" alt="株式会社沖縄イゲトー">
+						</a>
+						<span><a>株式会社沖縄イゲトー</a></span>
 				    </li>
 
 

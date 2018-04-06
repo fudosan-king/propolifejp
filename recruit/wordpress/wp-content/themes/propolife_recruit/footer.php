@@ -47,6 +47,7 @@
                     <li><span>PROPOLIFE SINGAPORE</span></li>
                     <li><a href="http://kotakino.wpblog.jp/" target="_blank">株式会社小滝野</a></li>
                     <li><a href="http://www.propolifehotels.com/" target="_blank">PROPOLIFE HOTELS</a></li>
+		    <li><a>株式会社沖縄イゲトー</a></li>
                 </ul>
             </li>
             <li class="sp">

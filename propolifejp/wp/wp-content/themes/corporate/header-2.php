@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="ja">
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
@@ -265,12 +265,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<span><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></span>
 					</li>
 					<li>
+						<a href="http://www.propolifehotels.com" target="_blank" >
 						<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpeg" width="356" height="98" alt="株式会社プロポライフホテルズ">
-						<span>株式会社プロポライフホテルズ</span>
+           					</a>
+						<span><a href="http://www.propolifehotels.com" target="_blank"> 株式会社プロポライフホテルズ</a></span>
 					</li>
 					<li>
+						<a>
 						<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー">
-						<span>株式会社沖縄イゲトー</span>
+						</a>
+						<span><a>株式会社沖縄イゲトー</a></span>
 					</li>
 				</ul>
 			</div>
@@ -359,8 +363,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
 					<li><span>PROPOLIFE SINGAPORE</span></li>
 					<li><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></li>
-					<li><a href="http://www.propolifehotels.com">PROPOLIFE HOTELS</a></li>
-					<li><span>株式会社沖縄イゲトー</span></li>
+<li><a href="http://www.propolifehotels.com">PROPOLIFE HOTELS</a></li>
+<li><a>株式会社沖縄イゲトー</a></li>
 				</ul>
 			</li>
 			<li>

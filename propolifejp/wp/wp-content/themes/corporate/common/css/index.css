@@ -29,7 +29,7 @@
 		background-size: cover;
 		margin-top: -130px;
 	}
-	
+
 	#maximage .item02 {
 	background: url(../../common/img/index/main_img02.jpg) no-repeat center bottom;
 	background-size: cover;
@@ -49,7 +49,7 @@
 	margin-top: -80px;
 	}
 }
-@media screen and (max-width:1399px) { 
+@media screen and (max-width:1399px) {
 	#maximage .item {
 		height: 100vh;
 		background: url(../../common/img/index/main_img01.jpg) no-repeat center top;
@@ -167,7 +167,7 @@
     background: #eee none repeat scroll 0 0;
     color: #666;
     display: inline-block;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     margin: 0 10px 0 5px;
     padding: 2px 5px;
 }
@@ -180,12 +180,12 @@
 	}
 }
 #new:after {
-	width: 53%;  
+	width: 53%;
 	height: 1000px;
 	background-size: 100% auto;
 	position: absolute;
 	top: 0;
-	left: 0;  
+	left: 0;
 }
 
 #new .bg {
@@ -233,23 +233,23 @@
 }
 
 #new .newsBox dt:after {
-	width: 1px;  
+	width: 1px;
 	height: 17px;
 	background: url(../../common/img/line01.png) repeat-y left top;
 	position: absolute;
-	bottom: -5px;  
-	left: 0;  
-	content: ""; 
+	bottom: -5px;
+	left: 0;
+	content: "";
 }
 
 #new .newsBox dt:before {
-	width: 1px;  
+	width: 1px;
 	height: 17px;
 	background: url(../../common/img/line01.png) repeat-y right top;
-	position: absolute;  
-	bottom: -5px;  
-	right: 0;  
-	content: ""; 
+	position: absolute;
+	bottom: -5px;
+	right: 0;
+	content: "";
 }
 
 #new .newsBox dd {
@@ -315,11 +315,11 @@
 }
 
 #main .linkBox .list li a:after {
-	width: 100%;  
+	width: 100%;
 	height: 100%;
-	position: absolute;  
+	position: absolute;
 	top: 0;
-	right: 0;  
+	right: 0;
 	content: "";
 }
 
@@ -369,26 +369,26 @@
 }
 
 #main .linkBox .list .liStyle a:after {
-	width: 8px;  
+	width: 8px;
 	height: 14px;
 	margin-top: -7px;
 	background: url(/common/img/icon06.png) no-repeat right top;
-	position: absolute;  
+	position: absolute;
 	top: 50%;
-	right: 35px;  
-	content: ""; 
+	right: 35px;
+	content: "";
 }
 
 #main .linkBox .list01 li:before {
-	width: 14px;  
+	width: 14px;
 	height: 26px;
 	margin-top: -13px;
 	background: url(/common/img/icon09.png) no-repeat right top;
-	position: absolute;  
+	position: absolute;
 	top: 50%;
-	right: 0;  
+	right: 0;
 	content: "";
-	z-index: 15; 
+	z-index: 15;
 }
 
 #main .linkBox .list01 li:nth-child(2n):before {
@@ -405,8 +405,8 @@
 #main .linkBox .list01 li:nth-child(7):before,
 #main .linkBox .list01 li:nth-child(3):before {
 	background-image: url(/common/img/icon10.png);
-	position: absolute;  
-	right: -14px;  
+	position: absolute;
+	right: -14px;
 }
 
 #main .linkBox .list02 li {
@@ -423,15 +423,15 @@
 }
 
 #main .linkBox .list03 li.liStyle:before {
-	width: 14px;  
+	width: 14px;
 	height: 26px;
 	margin-top: -13px;
 	background: url(/common/img/icon10.png) no-repeat right top;
-	position: absolute;  
+	position: absolute;
 	top: 50%;
-	right: -14px;  
+	right: -14px;
 	content: "";
-	z-index: 15; 
+	z-index: 15;
 }
 
 #main .linkBox .list03 li:nth-child(15):before,
@@ -439,8 +439,8 @@
 #main .linkBox .list03 li:nth-child(7):before,
 #main .linkBox .list03 li:nth-child(3):before {
 	background-image: url(/common/img/icon09.png);
-	position: absolute;  
-	right: 0;  
+	position: absolute;
+	right: 0;
 }
 */
 
@@ -537,15 +537,15 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 @media all and (min-width: 0px) and (max-width: 640px) {
 	div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
  	       margin-right: none !important;
-	}	
+	}
 	#main .h4Ttl {
 		margin-bottom: 11px;
 	}
-		
+
 	#main .h4Ttl span {
 		padding: 0 25px;
 	}
-	
+
 	#main .h4Ttl span img {
 		width: 160px;
 		height: auto;
@@ -565,7 +565,7 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 		height: auto !important;
 		float: left;
 		margin:0 8px 7px 0 !important;
-	}	
+	}
 	#main .subBox ul li img {
 	width: 100%;
 	height: auto;
@@ -581,7 +581,7 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 		margin: 1px 0 0 3px;
 		padding-bottom: 10px;
 	}
-	
+
 	#main .subBox li span:before {
 		margin-top: 0;
 		width: 2px;
@@ -589,13 +589,13 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 		top: 6px;
 		background-size: 2px 4px;
 	}
-		
+
 	#main .subBox li span {
 		padding: 3px 0 0 5px;
 		font-size: 0.8rem;
 		vertical-align: top;
 	}
-	
+
 	.news_ico {
 		display: block;
 	}
@@ -694,7 +694,7 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 	}
 }
 
-@media screen and (max-width:640px) { 
+@media screen and (max-width:640px) {
 #main .btmLink {
 	margin: 0 auto !important;
 	width: 94% !important;
@@ -703,75 +703,75 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 	#main {
 		margin: 0 0;
 	}
-	
+
 	#maximage .item {
 		background: url(../../common/img/index/sp_main_img01.jpg) no-repeat center -60px;
 		background-size: contain;
 	}
-	
+
 	#maximage .item02 {
 		background: url(../../common/img/index/sp_main_img02.jpg) no-repeat center -60px;
 		background-size: contain;
 	}
-	
+
 	#main .pBox {
 		margin-bottom: 28px;
 		padding: 0 0 23px;
 	}
-	
+
 	#main .pBox p {
 		margin-bottom: 20px;
 		line-height: 2;
 	}
-	
+
 	#main .pBox .title {
 		margin-bottom: 13px;
 		font-size: 1.1rem;
 	}
-		
+
 	#maximage > div > img {
 		height: auto;
 	}
-	
+
 	#main .topInner {
 		height: 320px;
 	}
-	
+
 	#main .topInner p {
 		margin-bottom: 15px;
 	}
-	
+
 	#main .topInner p img {
 		width: 77%;
 		height: auto;
 		max-width: 486px;
 	}
-	
+
 	#main .topInner .link {
 		width: 120px;
 	}
-	
+
 	#main .topInner .link a {
 		padding: 3px 5px 2px;
 		font-size: 0.85rem;
 		font-weight: normal;
 		border-width: 1px;
 	}
-	
+
 	#main .topInner .link a span,
 	#main .topInner .link a:hover span {
 		background-size: auto 5px;
 	}
-	
+
 	#main .topInner .link a span {
 		background-size: auto 5px;
 	}
-	
+
 	#new {
 		margin-top: -125px;
 		padding-top: 272px;
 	}
-	
+
 	#new .whiteBox {
 		margin: 0;
 		padding: 0 15px;
@@ -780,22 +780,22 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 		top: 40px;
 		box-sizing: border-box;
 	}
-	
+
 	#new .headLine03 {
 		margin-bottom: 26px;
 		font-size: 1.75rem;
 		font-weight: normal;
 	}
-	
+
 	#new .newsBox {
 		margin-right: -10px;
 		height: 145px;
 	}
-	
+
 	#new .newsBox dl {
 		padding-top: 7px;
 	}
-	
+
 	#new .newsBox dt {
 		padding-top: 15px;
 		width: 84px;
@@ -803,7 +803,7 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 		color: #282828;
 		font-size: 1rem;
 	}
-	
+
 	#new .newsBox dd {
 		margin-bottom: 0;
 		line-height: 1.2;
@@ -820,7 +820,7 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 	    display: inline-block;
 		margin: 8px;
 	}
-	
+
 	#new .newsBox dd::before {
 		background: url(../../common/img/line01.png) repeat-y right top;
 		bottom: 0px;
@@ -830,7 +830,7 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 		left: 0;
 		width: 1px;
 	}
-	
+
 	#new .newsBox dd::after {
 		background: url(../../common/img/line01.png) repeat-y right top;
 		bottom: 0px;
@@ -840,108 +840,108 @@ div#main div.business div.linkBox div.subBox ul li:nth-child(3n) {
 		left: 84px;
 		width: 1px;
 	}
-	
+
 	#new .newsBox dt:after {
 		background-image: inherit;
 	}
-	
+
 	#new .newsBox dt:before {
 		background-image: inherit;
 	}
-	
+
 	#propolife {
 		background-color: transparent;
 	}
-	
+
 	#propolife .headLine03 {
 		padding: 47px 10px 42px;
 		font-size: 1.6rem;
 	}
-	
+
 	#main .business {
 		padding: 0 0 25px;
 	}
-	
+
 	#main .linkBox {
 		padding-top: 20px;
 		margin-bottom: 28px;
 		width: auto;
 	}
-	
+
 	#main .linkBox .list li {
 		width: 50%;
 		height: auto;
 	}
-	
+
 	#main .linkBox .list li a .sub .subBox {
 		font-size: 1rem;
 		font-weight: normal;
 	}
-	
+
 	#main .linkBox .list .liStyle img {
 	}
-	
+
 	#main .linkBox .list .liStyle a .textSpan {
 		display: none;
 	}
-	
+
 	#main .linkBox .list01 li::before {
 		background-size: 7px auto;
 	}
-	
+
 	#main .linkBox .list01 li:nth-child(15)::before,
 	#main .linkBox .list01 li:nth-child(11)::before,
 	#main .linkBox .list01 li:nth-child(7)::before,
 	#main .linkBox .list01 li:nth-child(3)::before {
 		right: -6px;
 	}
-	
+
 	#main .linkBox .list .liStyle a::after {
 		background-image: inherit;
 	}
-		
+
 	#main .linkBox .list01 li::before {
 		margin-top: -6px;
 	}
-	
+
 	#main .linkBox .list02 li {
 		width: 30.46% !important;
 	}
-	
+
 	#main .linkBox .list02 li:nth-child(2) {
 		width: 36.25% !important;
 	}
-	
+
 	#main .linkBox .list02 li:nth-child(3) {
 		width: 33.29% !important;
 	}
-	
+
 	#main .linkBox .list02 li a .sub .subBox {
 		font-size: 0.8rem;
 	}
-	
+
 	#main .linkBox .list03 li.liStyle:before {
 		margin-top: -6px;
 		z-index: 10;
 		right: -6px;
 		background-size: 7px auto;
 	}
-	
+
 	#main .btmLink {
 		margin: 0 15px;
 		width: auto;
 	}
-	
+
 	#main .btmLink a {
 		border-width: 1px;
 		font-size: 1.3rem;
 	}
 }
 
-@media screen and (max-width:350px) { 
+@media screen and (max-width:350px) {
 	#new {
 		margin-top: -210px;
 		padding-top: 272px;
 	}
-	
+
 }

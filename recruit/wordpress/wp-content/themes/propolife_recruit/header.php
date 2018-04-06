@@ -253,7 +253,6 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
                         <li><span>PROPOLIFE SINGAPORE</span></li>
                         <li><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></li>
-                        <li><span>小滝野</span></li>
 			<li><a href="http://www.propolifehotels.com/" target="_blank">PROPOLIFE HOTELS</a></li>
 			<li><a>株式会社沖縄イゲトー</a></li>
                     </ul>
@@ -264,7 +263,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                 <li>
                     <p><a href="https://www.propolife.co.jp/privacypolicy/">プライバシーポリシー</a></p>
                 </li>
-            </ul>ur
+            </ul>
         </div>
         <!-- /#header -->
 

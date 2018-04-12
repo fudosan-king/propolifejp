@@ -1,0 +1,19 @@
+/*
+Theme Name: Order Renove
+Theme URI: https://www.propolife.co.jp/
+Description: Propolife VietNam
+Author: Propolife
+Author URI: https://www.propolife.co.jp/
+Template: twentyfifteen
+Version: 0.1
+*/
+
+/*@import url("css/styles.css");*/
+.doc-footer ul li a {color: #ffffff;}
+.block-detail ul li .w1 {width: 90px;}
+@media (min-width: 769px) {
+	.container .row .thumbnail a .img-responsive {height: 260px;}
+}
+@media (max-width: 768px) {
+	.container .row .thumbnail a .img-responsive {height: auto;}
+}

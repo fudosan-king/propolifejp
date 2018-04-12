@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+/* general params
+---------------------------------*/
+
+
+#pop_btn ul{
+	width:430px;
+	margin:0 auto;
+}
+
+#pop_btn li{
+	float:left;
+	padding-right:30px;
+	padding-top:40px;
+
+}
+
+#pop_btn li.last{
+	float:left;
+	padding-right:0;
+	padding-top:40px;
+
+}
+
+#pop_btn li a:hover img {
+    opacity: 0.6; 
+    filter: alpha(opacity=60); 
+    -moz-opacity: 0.6;
+}
+
+
+@media (max-width: 640px) {
+	
+#header h1.logo_s{
+	position:absolute;
+	left:30% !important;
+	top:8px !important;
+	margin:0;
+	padding:0;
+	display:block;
+}
+	
+#pop_btn ul{
+	display:none;
+}
+
+}

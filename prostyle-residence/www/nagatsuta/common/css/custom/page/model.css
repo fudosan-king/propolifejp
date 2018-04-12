@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/*  clearfix  */
+.clearfix:after {
+	content: "."; /* 新しい要素を作る */
+	display: block; /* ブロックレベル要素に */
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	min-height: 1px;
+}
+* html .clearfix {
+	height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+p.attention {
+	font-size: 10px;
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+@media (min-width: 901px) {
+	#sec01 {
+		width: 980px;
+		height: 500px;
+		position: relative;
+		margin-bottom: 40px;
+	}
+	#sec01 .mainphoto {
+		position: relative;
+	}
+	#sec01 .text {
+		padding: 25px;
+		background: rgba(255, 255, 255, 0.8);
+		position: absolute;
+		top: 30px;
+		right: 40px;
+		z-index: 999;
+	}
+	#sec01 .text img {
+		margin-bottom: 20px;
+	}
+
+	#sec02 {
+		width: 980px;
+		height: 525px;
+		position: relative;
+		margin-bottom: 40px;
+	}
+	#sec02 .mainphoto {
+		position: relative;
+	}
+	#sec02 .text {
+		padding: 25px;
+		background: rgba(255, 255, 255, 0.8);
+		position: absolute;
+		top: 30px;
+		left: 20px;
+		z-index: 999;
+		width: 560px;
+	}
+	#sec02 .text2 {
+		position: absolute;
+		bottom: 0;
+		left: 20px;
+		z-index: 999;
+	}
+
+	#sec03 .fl {
+		float: left;
+	}
+	#sec03 .fl2 {
+		display: none;
+	}
+	#sec03 .fr {
+		width: 723px;
+		float: right;
+	}
+	#sec03 .fr .photo img:first-child {
+		margin-right: 8px;
+	}
+	#sec03 .fr p {
+		margin-top: 30px;
+		margin-left: 10px;
+	}
+	#sec03 .attention {
+		text-align: right;
+	}
+}
+
+
+
+
+
+
+
+@media (min-width: 641px) and (max-width: 900px) {
+	.tb-hide {
+		display: none;
+	}
+
+	#sec03 .fl {
+		float: left;
+		margin-right: 8px;
+		max-width: 25%;
+	}
+	#sec03 .fl2 {
+		display: none;
+	}
+	#sec03 .fr {
+		float: right;
+		width: 73%;
+	}
+	#sec03 .fr img {
+		margin-bottom: 8px;
+		max-width: 49.5%;
+	}
+	#sec03 .fr img:first-child {
+		margin-right: 1%;
+	}
+
+}
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+	#sec01,
+	#sec02 {
+		margin-bottom: 40px;
+	}
+	#sec01 .mainphoto,
+	#sec02 .mainphoto {
+		max-width: 100%;
+	}
+	.text p {
+		margin-bottom: 10px;
+	}
+	.text img {
+		margin-bottom: 20px;
+	}
+
+
+}
+
+
+
+
+
+
+@media (max-width: 640px) {
+	.sp-hide {
+		display: none;
+	}
+	.text img {
+		max-width: 100%;
+	}
+	#sec03 img.fl {
+		/*width: 100%;
+		margin-bottom: 8px;*/
+		display: none;
+	}
+	img.fl2 {
+		float: left;
+		width: 39%;
+	}
+	.photo > div {
+		width: 58.6%;
+		float: right;
+	}
+	#sec03 .fr img {
+		max-width: 100%;
+		margin-bottom: 1%;
+	}
+
+}

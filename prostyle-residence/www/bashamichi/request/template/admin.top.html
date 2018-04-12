@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.ListHeader	{
+		BACKGROUND: #FFCC00;
+		BORDER-BOTTOM: #CC9900 1px solid;
+		BORDER-LEFT: #FFFF99 1px solid;
+		BORDER-RIGHT: #CC9900 1px solid;
+		BORDER-TOP: #FFFF99 1px solid;
+		COLOR: #000000;
+		PADDING-LEFT: 2px;
+	}
+</STYLE>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body>
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><strong><font color="#555533">【 MP Form Mail CGI Professional版 管理メニュー 】</font></strong></div></td>        
+</table>
+<br>
+<table border="0" width="600">
+  <tr>
+    <td width="100%">　MP Form Mail CGI   
+      の各種設定やログ管理を行います。各メニューの内容をご覧頂き、ご利用の環境にあわせて設定してください。初めてセットアップする場合には、以下のメニューを上から順に行ってください。</td>
+  </tr>
+</table>
+<br>
+<table border="0" cellpadding="3" cellspacing="1">
+  <tr>
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=syscheck"> システム診断</a></td>   
+    <td width="10">&nbsp;</td> 
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=conf1"> 基本設定</a></td>  
+  </tr>
+  <tr>
+    <td width="290" valign="top" bgcolor="#F8F8FF">MP Form Mail CGI Professional版が正しくセットアップされているかを診断します。設定の前に必ずシステム診断を実行してください。異常があると、赤字で警告を表示します。</td>  
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="290" valign="top" bgcolor="#F8F8FF">MP Form Mail CGI      
+        を動作させるために必要最低限の設定です。必ずすべてを設定してください。</td>
+  </tr>
+  <tr>
+    <td width="290">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td width="290">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=conf2"> 機能設定</a></td>  
+    <td width="10">&nbsp;</td> 
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=itemlist"> 項目設定</a></td>  
+  </tr>
+  <tr>
+    <td width="290" valign="top" bgcolor="#F8F8FF">各種オプション機能を設定します。お好みに合わせて機能を選択してください。</td>
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="290" valign="top" bgcolor="#F8F8FF">フォームの各項目ごとに、必須かどうか、入力文字数（バイト数）上限、入力値の変換、入力値の制限を設定します。</td>
+  </tr>
+  <tr>
+    <td width="290">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td width="290">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=checklist"> 再入力設定</a></td>   
+    <td width="10">&nbsp;</td> 
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=maileditor"> メール編集</a></td>  
+  </tr>
+  <tr>
+    <td width="290" valign="top" bgcolor="#F8F8FF">パスワードやメールアドレスなど、2      
+        回入力させてチェックする仕組みを設定します。</td>
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="290" valign="top" bgcolor="#F8F8FF">フォームから送信されるメール文を編集します。機能設定で、メールフォーマットが「カスタマイズ」となっている場合にのみ編集可能です。「オートフォーマット」の場合には無効になります。</td>
+  </tr>
+  <tr>
+    <td width="290">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td width="290">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=replyeditor"> 返信メール編集</a></td>  
+    <td width="10">&nbsp;</td> 
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=confirmeditor"> 確認画面編集</a></td> 
+  </tr>
+  <tr>
+    <td width="290" valign="top" bgcolor="#F8F8FF">自動返信メールの文を編集します。機能設定で、自動返信メール機能が有効になっている場合のみ編集可能です。</td>
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="290" valign="top" bgcolor="#F8F8FF">確認画面のHTMLを編集します。機能設定で確認画面表示が有効になっている場合のみ編集可能です。</td>
+  </tr>
+  <tr>
+    <td width="290">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td width="290">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=thankseditor"> 完了画面編集</a></td> 
+    <td width="10">&nbsp;</td> 
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=erroreditor"> エラー画面編集</a></td> 
+  </tr>
+  <tr>
+    <td width="290" valign="top" bgcolor="#F8F8FF">確認画面のHTMLを編集します。基本設定の完了画面表示方法が「テンプレートを使ってCGIが出力」になっている場合のみ編集可能です。</td>
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="290" valign="top" bgcolor="#F8F8FF">エラー画面のHTMLを編集します。</td>
+  </tr>
+  <tr>
+    <td width="290">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td width="290">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="290" bgcolor="#F5F5DC"><font color="#555533">▼</font> <a href="admin.cgi?action=logadmin">ログ管理</a>    
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="290">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="290" valign="top" bgcolor="#F8F8FF">ログファイルのダウンロード、削除をすることができます。機能設定で、「ログ出力」が有効になっている場合ののみご利用いただけます。</td>
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="290" valign="top">&nbsp;</td>
+  </tr>
+</table>
+<hr width="600">
+$COPYRIGHT2$
+
+</center>
+</body>
+</html>
+
+

@@ -1,0 +1,7 @@
+.git
+.gitignore
+excludes_wp
+#letsencrypt/
+wp/.well-known
+wp/wp-content/uploads
+.DS_Store

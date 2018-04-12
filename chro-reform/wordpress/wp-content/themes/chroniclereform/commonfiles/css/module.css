@@ -1,0 +1,648 @@
+<style type="text/css" id="less:wordpress-wp-content-themes-chroniclereform-commonfiles-css-module">@charset "utf-8";
+/* =============================================================
+
+　　LESS変数 カラー設定
+
+============================================================= */
+/* 　ベースカラー
+---------------------------------------------*/
+/* -- 茶色 -- */
+/* 　ポイントカラー
+---------------------------------------------*/
+/* -- 青色 -- */
+/* 　背景カラー
+---------------------------------------------*/
+/* -- 灰色 -- */
+/* 　その他カラー
+---------------------------------------------*/
+/* -- 白色 -- */
+/* -- 灰色 -- */
+/* =============================================================
+
+　　共通設定
+
+============================================================= */
+/*  全体 共通設定
+---------------------------------------------*/
+/*  リンク 共通設定
+-------------------------- */
+/* -- 動き滑らか -- */
+#header a:hover,
+#side a:hover,
+#aside a:hover,
+.boxPostList .imgThumb,
+.boxPaging p a:hover span,
+.singleBoxPaging p a:hover,
+.boxPostDetail + .boxPaging a:hover,
+.page-top #content a:hover,
+.boxWorksList li a:hover,
+.als-boxItem a:hover {
+  transition: all 0.4s ease;
+}
+/* -- 半透明 -- */
+#header a:hover,
+#aside a:hover,
+.boxPostList .btnLinkHover .imgThumb,
+.boxPostDetail + .boxPaging a:hover,
+.singleBoxPaging p a:hover,
+.page-top #content a:hover,
+.boxWorksList li a:hover,
+.als-boxItem a:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  filter: none\9;
+  color: #888\9;
+}
+/* -- 下線 -- */
+#footer a:hover,
+.boxBreadcrumb a:hover,
+.boxPostList .btnLinkHover .ttlPost,
+#recent.boxPostMenu > dd a:hover .ttlPost {
+  text-decoration: underline;
+}
+/* -- 青色 -- */
+#side a:hover {
+  color: #3abcce;
+}
+/*  テキスト 共通設定
+-------------------------- */
+em {
+  font-weight: bold;
+}
+/*  画像 共通設定
+-------------------------- */
+/* フレーム付き画像 */
+.imgFrame {
+  border: 1px solid #f6f5f2;
+  background: #ffffff;
+  padding: 10px;
+}
+/* スマホ用画像 */
+.imgSmp {
+  display: none;
+}
+/*  ヘッダー 共通設定
+---------------------------------------------*/
+#header {
+  /* -------- サイトロゴ -------- */
+  /* -------- お問い合わせ先 -------- */
+  /* -------- グローバルナビ -------- */
+}
+#header #ttlSiteLogo {
+  padding: 25px 0 35px;
+}
+#header #ttlSiteLogo img {
+  width: 180px;
+}
+#header .boxContact {
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+#header .boxContact a .imgFreeCall {
+  display: none;
+}
+#header #boxGlobalNav {
+  margin-bottom: 25px;
+  /* -- メディア＆ニュース -- */
+  /* -- クロニクルリフォームとは -- */
+  /* -- 自然素材 -- */
+  /* -- サービス内容 -- */
+  /* -- リフォームプラン -- */
+  /* -- 施行事例 -- */
+  /* -- お問い合わせ -- */
+  /* -- 非表示 -- */
+}
+#header #boxGlobalNav .btnOpen {
+  display: none;
+}
+#header #boxGlobalNav li {
+  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav-line.gif) no-repeat top left;
+  float: left;
+  height: 35px;
+  padding-left: 1px;
+}
+#header #boxGlobalNav li:first-child {
+  background: none;
+  padding-left: 0;
+}
+#header #boxGlobalNav a {
+  padding: 0 28px;
+}
+#header #boxGlobalNav a span {
+  display: block;
+  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav.png) no-repeat 0 -2px;
+  height: 35px;
+  color: #ffffff;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#header #boxGlobalNav .btnMedia a {
+  padding-left: 16px;
+}
+#header #boxGlobalNav .btnMedia a span {
+  background-position: -16px -2px;
+  width: 128px;
+}
+#header #boxGlobalNav .btnAbout a span {
+  background-position: -197px -2px;
+  width: 178px;
+}
+#header #boxGlobalNav .btnMaterial a span {
+  background-position: -432px -2px;
+  width: 66px;
+}
+#header #boxGlobalNav .btnService a span {
+  background-position: -560px -2px;
+  width: 65px;
+}
+#header #boxGlobalNav .btnPlan a span {
+  background-position: -682px -2px;
+  width: 120px;
+}
+#header #boxGlobalNav .btnWorks a span {
+  background-position: -856px -2px;
+  width: 70px;
+}
+#header #boxGlobalNav .btnContact a {
+  padding-right: 10px;
+}
+#header #boxGlobalNav .btnContact a span {
+  background-position: -984px -2px;
+  width: 100px;
+}
+#header #boxGlobalNav .btnEvent,
+#header #boxGlobalNav .btnBlog,
+#header #boxGlobalNav .btnClose {
+  display: none;
+}
+/* ---- 閲覧中のカテゴリ ---- */
+.page-media #header #boxGlobalNav .btnMedia a,
+.page-about #header #boxGlobalNav .btnAbout a,
+.page-works #header #boxGlobalNav .btnWorks a,
+.page-material #header #boxGlobalNav .btnMaterial a,
+.page-service #header #boxGlobalNav .btnService a,
+.page-plan #header #boxGlobalNav .btnPlan a,
+.page-contact #header #boxGlobalNav .btnContact a {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  filter: none\9;
+}
+/*  メイン 共通設定
+---------------------------------------------*/
+/* -------- カテゴリータイトル -------- */
+.ttlCategory {
+  margin: 0 0 14px;
+}
+.ttlCategory .boxInner {
+  text-align: center;
+}
+.ttlCategory span {
+  display: block;
+  text-shadow: 1px 1px 1px #ffffff;
+}
+.ttlCategory .txtMain {
+  padding-top: 28px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-size: 1.6em;
+  color: #534337;
+  overflow-x: hidden;
+}
+.ttlCategory .txtMain img {
+  margin-top: -28px;
+  margin-left: -200px;
+}
+.ttlCategory .txtSub {
+  padding-bottom: 15px;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  color: #a4a4a4;
+}
+/* -------- パンくず -------- */
+.boxBreadcrumb {
+  margin-bottom: 40px;
+  padding: 0 0 0 5px;
+  font-size: 0.8em;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+.boxBreadcrumb span,
+.boxBreadcrumb a {
+  margin-right: 3px;
+}
+.boxBreadcrumb span:first-child {
+  margin-left: 0;
+}
+/* -------- セクション -------- */
+.bgGrey {
+  background: #f6f5f2;
+}
+.bgDotBtm {
+  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
+}
+.liDot li {
+  padding-left: 20px;
+}
+.liDot li:before {
+  float: left;
+  margin: 0 5px 0 -20px;
+  content: "・";
+}
+.txtNotes {
+  position: relative;
+  top: -2px;
+  background: #b20001;
+  margin: 0 10px;
+  padding: 3px 10px 1px;
+  line-height: 20px;
+  color: #ffffff;
+  font-size: 0.7em;
+  font-weight: normal;
+}
+.btnBlue {
+  background: #31bbd0;
+  margin: 0 12px;
+  padding: 1px 18px 0;
+  line-height: 20px;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.btnBrown {
+  background: #534336;
+  width: 100%;
+}
+/* -------- お問い合わせ先 -------- */
+.boxContact > dl > dt {
+  font-weight: bold;
+}
+/* -------- ページング -------- */
+.boxPaging {
+  margin: 20px 0 35px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 0;
+}
+.boxPaging p {
+  margin: 0 auto;
+}
+.boxPaging p span {
+  border: 1px solid #534336;
+  background: #534336;
+  margin: 0 2px;
+  padding: 7px 11px;
+  color: #ffffff;
+  font-weight: normal;
+  line-height: 28px;
+}
+.boxPaging p a span {
+  background: #ffffff;
+  color: #534336;
+}
+.boxPaging p a:hover span {
+  border-color: #3abcce;
+  color: #3abcce;
+}
+.boxPaging .btnPrev {
+  float: left;
+}
+.boxPaging .btnTop {
+  margin: 0 auto;
+}
+.boxPaging .btnNext {
+  float: right;
+}
+.boxPostDetail + .boxPaging {
+  padding-left: 0;
+  padding-right: 0;
+}
+.boxPostDetail + .boxPaging .btnPrev,
+.boxPostDetail + .boxPaging .btnTop,
+.boxPostDetail + .boxPaging .btnNext {
+  background: #f6f5f2;
+  width: 240px;
+  padding: 10px;
+}
+/* -------- 表 -------- */
+.boxTable {
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+  margin: 0 0 40px;
+  line-height: 28px;
+}
+.boxTable tr td {
+  border-left: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  padding: 12px 14px;
+}
+.boxTable tr > td:first-child {
+  background: #f6f5f2;
+  width: 20%;
+  width: 24% \9;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.boxTable tr > td:first-child + td {
+  background: #ffffff;
+  width: 80%;
+  width: 76% \9;
+}
+.boxTable ol {
+  padding: 0 0 0 20px;
+}
+.boxTable ol li {
+  list-style: decimal;
+}
+/* ----- メインビジュアル 画像切り替え ----- */
+.boxImgChange .boxSelectBtn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+}
+.boxImgChange .boxSelectBtn li {
+  cursor: pointer;
+}
+.boxImgChange .boxSelectBtn li .imgBtn {
+  display: block;
+}
+.boxImgChange .boxContWrap.disnon {
+  display: none;
+}
+/* ----- 画像切り替え02 ----- */
+.boxImgChange02 {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  width: 100%;
+  margin-bottom: 40px;
+  /*  ページング */
+}
+.boxImgChange02 a {
+  display: inline;
+  transition: none ! important;
+}
+.boxImgChange02 img {
+  width: 100%;
+}
+.boxImgChange02 .flex-control-paging {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+.boxImgChange02 .flex-control-paging li {
+  display: inline-block;
+  margin: 0 7px;
+}
+.boxImgChange02 .flex-control-paging li a {
+  display: block;
+  float: left;
+  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slides-pagination.png) no-repeat;
+  background-size: 10px;
+  width: 10px;
+  height: 11px;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.boxImgChange02 .flex-control-paging a.flex-active {
+  background-position: 0 -13px;
+}
+.boxImgChange02 .flex-control-paging a,
+.boxImgChange02 .flex-control-paging a:hover {
+  transition: none !important;
+}
+.boxImgChange02 .flex-direction-nav {
+  display: none;
+}
+/* ----- タブ切り替え ----- */
+.boxTab {
+  display: none;
+}
+.boxTab.visible {
+  display: block;
+}
+/* ----- （PC）メインビジュアル 画像切り替え ----- */
+/* メインビジュアルを囲う要素 */
+.boxImgChangePC {
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  /* タブを囲う要素 */
+  /* メイン画像を囲う要素 */
+  /* タブが存在しない時に使用 */
+}
+.boxImgChangePC .boxSlidetabs {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  min-width: 1100px;
+  overflow: hidden;
+  /* タブ */
+}
+.boxImgChangePC .boxSlidetabs li {
+  display: inline-block;
+  /* ボタン */
+  /* ボタン選択中 */
+}
+.boxImgChangePC .boxSlidetabs li a {
+  display: block;
+  text-align: center;
+}
+.boxImgChangePC .boxContWrap {
+  position: relative;
+  width: 100%;
+  /* メイン画像 */
+  /* テキスト */
+}
+.boxImgChangePC .boxContWrap .boxItem {
+  position: absolute;
+  display: none;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.boxImgChangePC .boxContWrap .txt {
+  display: none;
+}
+.boxImgChangePC .disabled {
+  visibility: hidden !important;
+}
+/* ----- （スマホ）メインビジュアル 画像切り替え ----- */
+.boxImgChangeSmp {
+  display: none !important;
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.boxImgChangeSmp .boxSelectBtn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  text-align: center;
+}
+.boxImgChangeSmp .boxSelectBtn li {
+  display: inline-block;
+  cursor: pointer;
+}
+.boxImgChangeSmp .boxSelectBtn li .imgBtn {
+  display: block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.boxImgChangeSmp .boxSelectBtn li .imgBtn img {
+  width: 100%;
+}
+.boxImgChangeSmp .boxContWrap {
+  width: 100%;
+  height: auto;
+}
+.boxImgChangeSmp .boxContWrap img {
+  position: static;
+  top: auto;
+  left: auto;
+  width: 100%;
+  margin-left: 0;
+}
+.boxImgChangeSmp .boxContWrap.disnon {
+  display: none;
+}
+/*  フッター 共通設定
+---------------------------------------------*/
+#footer {
+  background: #ffffff;
+  font-size: 0.8em;
+  line-height: 20px;
+  /* -------- フッター中部 -------- */
+  /* -------- フッター下部 -------- */
+}
+#footer #footerTop {
+  /* -- （PC）ページトップへ戻る -- */
+}
+#footer #footerTop .boxInner {
+  padding: 30px 0 40px;
+}
+#footer #footerTop .boxCateNav > ul {
+  display: table;
+  width: 100%;
+}
+#footer #footerTop .boxCateNav > ul > li {
+  display: table-cell;
+  border-right: 1px solid #cccccc;
+  width: 20%;
+  padding: 10px 20px;
+  vertical-align: top;
+}
+#footer #footerTop .boxCateNav > ul > li:first-child {
+  padding: 0;
+  vertical-align: middle;
+}
+#footer #footerTop .boxCateNav > ul > li > dl > dt {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#footer #footerTop .boxCateNav > ul > li > dl > dd li {
+  margin-bottom: 5px;
+}
+#footer #footerTop #btnPageTopPC {
+  display: block;
+  position: fixed;
+  bottom: 20%;
+  right: 10px;
+}
+#footer #footerMdl {
+  /* --- アバウト --- */
+  /* --- サイトナビ --- */
+}
+#footer #footerMdl .boxInner {
+  display: table;
+}
+#footer #footerMdl .boxInner > * {
+  display: table-cell;
+  vertical-align: top;
+}
+#footer #footerMdl .boxAbout {
+  float: left;
+}
+#footer #footerMdl .boxAbout dl {
+  position: relative;
+  min-height: 100px;
+  padding: 3px 0 0 190px;
+}
+#footer #footerMdl .boxAbout dl dt {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#footer #footerMdl .boxAbout dl img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#footer #footerMdl .boxSiteNav {
+  float: right;
+  width: 40%;
+}
+#footer #footerMdl .boxSiteNav ul {
+  text-align: right;
+  margin-right: 10px;
+}
+#footer #footerMdl .boxSiteNav li {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+#footer #footerMdl .boxSiteNav li:before {
+  position: absolute;
+  top: 4px;
+  left: -10px;
+  border-left: 1px solid #444;
+  width: 1px;
+  height: 12px;
+  content: "";
+}
+#footer #footerMdl .boxSiteNav li:first-child {
+  margin-left: 0;
+}
+#footer #footerMdl .boxSiteNav li:first-child:before {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  #footer .boxSiteNav {
+    float: none;
+    width: 100%;
+  }
+}
+#footer #footerBtm {
+  /* -- （スマホ）ページトップへ戻る -- */
+}
+#footer #footerBtm .boxInner {
+  position: relative;
+}
+#footer #footerBtm .boxCopyright {
+  margin-bottom: 170px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #555;
+  font-size: 1.2em;
+}
+#footer #footerBtm #btnPageTopSmp {
+  display: none !important;
+}
+</style>

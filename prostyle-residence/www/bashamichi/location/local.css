@@ -1,0 +1,944 @@
+/* ------------------------------------------------ */
+/* -- サイト 個別設定用CSS -- */
+/* ------------------------------------------------ */
+
+#gNavi li#gNav06 a {margin-top:-50px;}
+
+h2 {
+	font-size:14px;
+	color:#333;
+	font-weight:bold;
+	width:880px;
+	margin:0 0 10px 0;
+	padding-top:2px;
+}
+
+#outline {
+	width:880px;
+	padding:20px 0 20px 0;
+	margin:0 auto;
+}
+
+#outline table {
+	background:#CCC;
+	width:880px;
+	margin:0 auto;
+}
+
+#outline th {
+	background:url(img/th_bg.jpg) top no-repeat;
+	text-align:left;
+	font-weight:normal;
+	color:#333;
+	padding:5px;
+	width:200px;
+	vertical-align:top;
+}
+
+#outline td {
+	background:#FFF;
+	padding:5px;
+	vertical-align:top;
+}
+
+#outline td a {
+	color:#666;
+	text-decoration:underline;
+}
+
+.tit {
+	border-left:#d0c644 3px solid;
+	padding-left:8px;
+}
+
+#outline p {
+	margin:20px 0 0 0;
+}
+
+.font-w {
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+}
+#information {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+#information table{
+		width:290px;
+		margin-bottom:10px;
+
+		}
+#information table th{
+		width:50%;
+		border-bottom:dotted 1px #CECECE;
+		padding:4px 0;
+		line-height: 1.4;
+		}
+		
+#information table td{
+		width:50%;
+		text-align:right;
+		border-bottom:dotted 1px #CECECE;
+		padding:4px 0;
+		line-height: 1.4;
+
+		}	
+		
+.loc_box_left{
+		width:290px;
+		float:left;
+		margin-left:20px;
+		}
+.loc_box_left2{
+		width:290px;
+		float:left;
+		margin-left:20px;
+		}
+.loc_box_right{
+		float:left;
+		width:280px;
+		margin-left:10px;
+
+		}
+		
+		
+		
+#information .list_loc table caption {
+background: #d2ecfa;
+font-weight: bold;
+font-size: 120%;
+text-align: center;
+padding: 5px;
+color: #000;
+}
+
+
+
+
+#information .list_loc {
+	/*height: 100%;
+	width: 241px;*/
+}
+
+
+#information .loc_box_left {
+	/*float: left;
+	width: 300px;
+	padding-top: 0;
+	padding-right: 25px;
+	padding-left: 10px;*/
+}
+#information .loc_box_left2 {
+/*float: left;
+width: 290px;
+padding: 0;*/
+}
+#information .loc_box_right {
+/*float: right;
+width: 241px;
+margin-right: 15px;*/
+}
+
+#information .list_loc table {
+/*width: 290px;
+_width: 285px;
+float: left;
+margin: 0 0 0 0;*/
+}
+#information .list_loc table caption {
+/*background: #d2ecfa;
+font-weight: bold;
+font-size: 120%;
+text-align: center;
+padding: 5px;
+color: #000;*/
+}
+#information .list_loc table td {
+/*padding: 5px;
+vertical-align: top;
+text-align: right;
+border-bottom: 1px dotted #999;*/
+}
+#information .list_loc table th {
+/*width: 40%;
+text-align: left;
+padding: 1px 1px 1px 0px;
+line-height: 1.3;
+font-weight: normal;
+border-bottom: 1px dotted #999;*/
+}
+
+
+
+
+
+
+#minatomirai {
+	margin-bottom: 50px;
+	clear: both;
+}
+#hanabi {
+	width: 414px;
+	float: right;
+	background-image: url(img/location_img02bg.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	height: 160px;
+	position: relative;
+}
+
+#hanabi .h01 {
+	position: absolute;
+	left: 75px;
+	top: 27px;
+	height: 40px;
+	width: 127px;
+}
+#hanabi .h02 {
+	position: absolute;
+	left: 75px;
+	top: 78px;
+	width: 127px;
+	line-height: 1.2;
+	font-size: 11px;
+}
+#hanabi .h03 {
+	position: absolute;
+	top: 25px;
+	right: 35px;
+}
+
+#minato_bg {
+	position: relative;
+	margin-bottom: 15px;
+	clear: both;
+	background-image: url(img/location_img07bg.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 588px;
+	width: 910px;
+	line-height: 1.3;
+	color: #231815;
+}
+
+#minato_bg p{
+	line-height:1.4em;
+		}
+	
+	
+#minato_bg .b01 {
+	position: absolute;
+	top: 25px;
+	right: 402px;
+	width: 179px;
+	height: 188px;
+}
+#minato_bg .b02 {
+	position: absolute;
+	top: 212px;
+	right: 402px;
+	width: 179px;
+	height: 188px;
+}
+#minato_bg .b03 {
+	position: absolute;
+	top: 25px;
+	right: 210px;
+	width: 179px;
+	height: 188px;
+}
+#minato_bg .b04 {
+	position: absolute;
+	top: 212px;
+	right: 210px;
+	width: 179px;
+	height: 188px;
+}
+#minato_bg .b05 {
+	position: absolute;
+	top: 25px;
+	right: 15px;
+	width: 182px;
+	height: 188px;
+}
+#minato_bg .b06 {
+	position: absolute;
+	top: 212px;
+	right: 15px;
+	width: 182px;
+	height: 188px;
+}
+#minatomirai #spot {
+	margin-bottom: 30px;
+	position: relative;
+	height: 600px;
+	width: 910px;
+	line-height: 1.3;
+}
+#spot p{
+		line-height:1.4em;
+		}
+
+#spot .s01 {
+	position: absolute;
+	left: 0px;
+	top: 97px;
+	height: 34px;
+	width: 179px;
+}
+#spot .s02 {
+	position: absolute;
+	left: 0px;
+	top: 126px;
+	height: 50px;
+	width: 179px;
+}
+#spot .s03 {
+	position: absolute;
+	left: 0px;
+	top: 190px;
+	height: 138px;
+	width: 179px;
+}
+#spot .s04 {
+	position: absolute;
+	left: 206px;
+	top: 97px;
+	height: 34px;
+	width: 179px;
+}
+#spot .s05 {
+	position: absolute;
+	left: 206px;
+	top: 126px;
+	height: 50px;
+	width: 179px;
+}
+#spot .s06 {
+	position: absolute;
+	left: 206px;
+	top: 190px;
+	height: 138px;
+	width: 179px;
+}
+#spot .s07 {
+	position: absolute;
+	left: 412px;
+	top: 97px;
+	height: 34px;
+	width: 179px;
+}
+#spot .s08 {
+	position: absolute;
+	left: 412px;
+	top: 126px;
+	height: 50px;
+	width: 179px;
+}
+#spot .s09 {
+	position: absolute;
+	left: 412px;
+	top: 190px;
+	height: 138px;
+	width: 179px;
+}
+#spot .s10 {
+	position: absolute;
+	left: 0px;
+	top: 340px;
+	height: 34px;
+	width: 179px;
+}
+#spot .s11 {
+	position: absolute;
+	left: 0px;
+	top: 370px;
+	height: 50px;
+	width: 179px;
+}
+#spot .s12 {
+	position: absolute;
+	left: 0px;
+	top: 437px;
+	height: 138px;
+	width: 179px;
+}
+#spot .s13 {
+	position: absolute;
+	left: 206px;
+	top: 340px;
+	height: 34px;
+	width: 179px;
+}
+#spot .s14 {
+	position: absolute;
+	left: 206px;
+	top: 370px;
+	height: 50px;
+	width: 179px;
+}
+#spot .s15 {
+	position: absolute;
+	left: 206px;
+	top: 437px;
+	height: 138px;
+	width: 179px;
+}
+#spot .s16 {
+	position: absolute;
+	left: 412px;
+	top: 340px;
+	height: 35px;
+	width: 179px;
+}
+#spot .s17 {
+	position: absolute;
+	left: 412px;
+	top: 370px;
+	width: 179px;
+	height: 50px;
+}
+#spot .s18 {
+	position: absolute;
+	left: 412px;
+	top: 437px;
+	height: 138px;
+	width: 179px;
+}
+#spot .s19 {
+	position: absolute;
+	top: 0px;
+	height: 34px;
+	width: 284px;
+	right: 0px;
+}
+#spot .s20 {
+	position: absolute;
+	top: 430px;
+	height: 146px;
+	width: 282px;
+	right: 0px;
+}
+#spot .s21 {
+	position: absolute;
+	top: 293px;
+	width: 154px;
+	right: 130px;
+}
+#spot .s22 {
+	position: absolute;
+	top: 458px;
+	width: 90px;
+	right: 0px;
+}
+#yokohamaeki {
+	margin-bottom: 10px;
+	overflow: hidden;
+	height: 760px;
+}
+#yokohamaeki #yokohamaeki_l {
+	float: left;
+	width: 418px;
+	display: inline;
+}
+#yokohamaeki #yokohamaeki_r {
+	float: right;
+	width: 467px;
+	position: relative;
+	line-height: 1.3;
+	display: inline;
+	height: 760px;
+}
+
+#yokohamaeki_r p{
+	line-height:1.4em;
+	}
+
+
+#yokohamaeki_r .y01 {
+	height: 38px;
+	width: 215px;
+	position: absolute;
+	top: 234px;
+}
+#yokohamaeki_r .y02 {
+	position: absolute;
+	top: 267px;
+	width: 215px;
+	height: 50px;
+}
+#yokohamaeki_r .y03 {
+	position: absolute;
+	top: 332px;
+	height: 160px;
+	width: 215px;
+}
+#yokohamaeki_r .y04 {
+	height: 38px;
+	width: 215px;
+	position: absolute;
+	top: 512px;
+	left: 0px;
+}
+#yokohamaeki_r .y05 {
+	position: absolute;
+	top: 545px;
+	width: 215px;
+	height: 50px;
+	left: 0px;
+}
+#yokohamaeki_r .y06 {
+	position: absolute;
+	top: 595px;
+	height: 160px;
+	width: 215px;
+	left: 0px;
+}
+#yokohamaeki_r .y07 {
+	height: 38px;
+	width: 215px;
+	position: absolute;
+	top: 234px;
+	right: 0px;
+}
+#yokohamaeki_r .y08 {
+	position: absolute;
+	top: 267px;
+	width: 215px;
+	height: 50px;
+	right: 0px;
+}
+#yokohamaeki_r .y09 {
+	position: absolute;
+	top: 332px;
+	right: 0px;
+	height: 160px;
+	width: 215px;
+}
+#yokohamaeki_r .y10 {
+	height: 38px;
+	width: 215px;
+	position: absolute;
+	top: 513px;
+	right: 0px;
+}
+#yokohamaeki_r .y11 {
+	position: absolute;
+	top: 545px;
+	width: 215px;
+	height: 50px;
+	right: 0px;
+}
+#yokohamaeki_r .y12 {
+	position: absolute;
+	top: 595px;
+	right: 0px;
+	height: 160px;
+	width: 215px;
+}
+
+#kaigandori {
+	position: relative;
+	margin-bottom: 50px;
+	clear: both;
+	height: 500px;
+	line-height: 1.3;
+}
+
+#kaigandori p {
+		line-height:1.4em;
+		}
+
+
+#kaigandori .k01 {
+	position: absolute;
+	left: 0px;
+	top: 212px;
+	width: 216px;
+	height: 35px;
+}
+#kaigandori .k02 {
+	height: 50px;
+	width: 216px;
+	position: absolute;
+	left: 0px;
+	top: 247px;
+}
+#kaigandori .k03 {
+	position: absolute;
+	left: 0px;
+	top: 297px;
+}
+
+
+#kaigandori .k04 {
+	position: absolute;
+	left: 244px;
+	top: 212px;
+	width: 217px;
+	height: 35px;
+}
+#kaigandori .k05 {
+	left: 244px;
+	top: 247px;
+	height: 50px;
+	width: 217px;
+	position: absolute;
+}
+
+#kaigandori .k06 {
+	height: 172px;
+	width: 217px;
+	position: absolute;
+	top: 297px;
+	left: 244px;
+}
+#kaigandori .k07 {
+	position: absolute;
+	left: 496px;
+	top: 0px;
+	height: 197px;
+	width: 160px;
+}
+#kaigandori .k08 {
+	position: absolute;
+	left: 496px;
+	height: 50px;
+	width: 160px;
+	top: 197px;
+}
+#kaigandori .k09 {
+	position: absolute;
+	left: 496px;
+	width: 160px;
+	top: 247px;
+	height: 200px;
+}
+#kaigandori .k10 {
+	position: absolute;
+	left: 496px;
+	top: 447px;
+	width: 160px;
+}
+#kaigandori .k11 {
+	top: 0px;
+	right: 0px;
+	height: 282px;
+	width: 233px;
+	position: absolute;
+}
+#kaigandori .k12 {
+	height: 50px;
+	width: 233px;
+	position: absolute;
+	top: 282px;
+	right: 0px;
+}
+#kaigandori .k13 {
+	position: absolute;
+	right: 0px;
+	width: 233px;
+	top: 352px;
+}
+
+#kaigandori .k14 {
+	width: 92px;
+	right: 0px;
+	position: absolute;
+	top: 388px;
+}
+
+#yamashita {
+	position: relative;
+	margin-bottom: 50px;
+	height: 460px;
+	line-height: 1.3;
+}
+
+
+#yamashita p {
+	line-height:1.4em;
+	}
+
+
+#yamashita .y01 {
+	height: 333px;
+	width: 460px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#yamashita .y02 {
+	height: 333px;
+	width: 460px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#yamashita .y03 {
+	width: 144px;
+	position: absolute;
+	top: 253px;
+	left: 0px;
+}
+#yamashita .y04 {
+	height: 85px;
+	width: 460px;
+	position: absolute;
+	top: 350px;
+	left: 0px;
+}
+#yamashita .y05 {
+	width: 244px;
+	position: absolute;
+	top: 385px;
+	left: 216px;
+}
+#yamashita .y06 {
+	height: 51px;
+	width: 192px;
+	position: absolute;
+	top: 190px;
+	right: 220px;
+}
+#yamashita .y07 {
+	height: 50px;
+	width: 192px;
+	position: absolute;
+	top: 238px;
+	right: 220px;
+}
+#yamashita .y08 {
+	height: 131px;
+	width: 192px;
+	position: absolute;
+	top: 303px;
+	right: 220px;
+}
+#yamashita .y09 {
+	height: 250px;
+	width: 193px;
+	position: absolute;
+	top: 190px;
+	right: 0px;
+}
+#yamashita .y10 {
+	height: 157px;
+	width: 98px;
+	position: absolute;
+	top: 333px;
+	right: 95px;
+}
+#yamashita .y11 {
+	height: 157px;
+	width: 414px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#chuka {
+	position: relative;
+	margin-bottom: 50px;
+}
+#motomachi {
+	position: relative;
+	margin-bottom: 10px;
+	height: 820px;
+	line-height: 1.3;
+}
+
+#motomachi p{
+		line-height:1.4em;
+		}
+		
+#motomachi .m01 {
+	position: absolute;
+	height: 189px;
+	width: 210px;
+	left: 0px;
+	top: 188px;
+}
+#motomachi .m02 {
+	position: absolute;
+	left: 0px;
+	top: 377px;
+	width: 210px;
+}
+
+#motomachi .m03 {
+	position: absolute;
+	height: 32px;
+	width: 276px;
+	left: 240px;
+	top: 188px;
+}
+#motomachi .m04 {
+	position: absolute;
+	height: 50px;
+	width: 278px;
+	left: 240px;
+	top: 220px;
+}
+#motomachi .m05 {
+	position: absolute;
+	height: 164px;
+	width: 278px;
+	left: 240px;
+	top: 270px;
+}
+#motomachi .m06 {
+	height: 286px;
+	width: 523px;
+	position: absolute;
+	left: 0px;
+	top: 454px;
+}
+#motomachi .m07 {
+	height: 27px;
+	width: 165px;
+	position: absolute;
+	right: 190px;
+	top: 162px;
+}
+#motomachi .m08 {
+	height: 50px;
+	width: 165px;
+	position: absolute;
+	right: 190px;
+	top: 189px;
+}
+#motomachi .m09 {
+	height: 133px;
+	width: 165px;
+	position: absolute;
+	right: 190px;
+	top: 249px;
+}
+#motomachi .m10 {
+	height: 27px;
+	width: 165px;
+	position: absolute;
+	top: 382px;
+	right: 190px;
+}
+#motomachi .m11 {
+	height: 50px;
+	width: 165px;
+	position: absolute;
+	top: 409px;
+	right: 190px;
+}
+
+
+#motomachi .m12 {
+	position: absolute;
+	top: 469px;
+	right: 190px;
+	width: 165px;
+	height: 130px;
+}
+#motomachi .m13 {
+	position: absolute;
+	top: 600px;
+	right: 190px;
+}
+#motomachi .m14 {
+	position: absolute;
+	top: 627px;
+	right: 190px;
+	width: 165px;
+	height: 50px;
+}
+#motomachi .m15 {
+	position: absolute;
+	top: 690px;
+	right: 190px;
+	height: 126px;
+	width: 165px;
+}
+
+#motomachi .m16 {
+	height: 27px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 162px;
+}
+#motomachi .m17 {
+	height: 50px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 189px;
+}
+#motomachi .m18 {
+	height: 133px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 249px;
+}
+#motomachi .m19 {
+	height: 27px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+}
+#motomachi .m20 {
+	height: 27px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 382px;
+}
+#motomachi .m21 {
+	height: 50px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 409px;
+}
+#motomachi .m22 {
+	height: 130px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 469px;
+}
+#motomachi .m23 {
+	height: 27px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 600px;
+}
+#motomachi .m24 {
+	height: 50px;
+	width: 165px;
+	position: absolute;
+	right: 0px;
+	top: 627px;
+}
+#motomachi .m25 {
+	position: absolute;
+	top: 690px;
+	right: 0px;
+	height: 130px;
+	width: 165px;
+}
+
+
+
+.cap_r {
+	font-size: 10px;
+	text-align: right;
+	clear: both;
+	margin-bottom: 50px;
+}
+
+
+#price_banner{
+	display:none;
+	}

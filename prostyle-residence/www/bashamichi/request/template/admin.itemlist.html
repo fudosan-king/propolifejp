@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.ListHeader	{
+		BACKGROUND: #888855;
+		BORDER-BOTTOM: #555533 1px solid;
+		BORDER-LEFT: #FFFF99 1px solid;
+		BORDER-RIGHT: #555533 1px solid;
+		BORDER-TOP: #FDF5E8 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 2px;
+	}
+</STYLE>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<center>
+
+<table border="0" width="600"><tr><td>
+
+
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ 項目設定 ■</font></div></td> 
+</table>
+　
+<table border="0" width="550">
+  <tr>
+    <td width="100%">　フォームの入力項目 <b><font color="#CC0000">すべて   
+      </font></b>を定義してください。入力項目の設定に漏れがあると、送信されるメールに該当項目が掲載されない、ログに記録されないことになりますので、ご注意ください。
+      <p>　MP Form Mail CGI Professional      
+      版では、入力項目ごとに、必須指定、入力値変換、入力値制限を設定することができます。必須指定で「必須とする」と指定すると、該当の項目が未選択もしくは未入力だった場合に、エラーを表示します。入力値変換は、入力された値を全角から半角に変換したり、ハイフンを削除するなど、規定のルールを選択することで設定することができます。入力値制限は、入力値が規定のルールに従っていない場合、エラーを表示します。</p>
+      <p>　ここで入力した順番は、ログファイルのカラムの順番となります。変更する場合には、「順番」欄の「▲」「▼」を押してください。
+      <hr>
+    </td>
+  </tr>
+</table>
+<form action="admin.cgi">
+<input type="hidden" name="action" value="itemaddform">
+<input type="submit" name="b2" value="　新規追加　">
+</form>
+
+<form method="POST" action="admin.cgi">
+<input type="hidden" name="action" value="itemdel">
+
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td class="ListHeader" nowrap>カラム</td> 
+      <td class="ListHeader" nowrap>name 属性</td>   
+      <td class="ListHeader" nowrap>項目名称</td>
+      <td class="ListHeader" nowrap>必須設定</td>
+      <td class="ListHeader" nowrap>入力値変換</td>
+      <td class="ListHeader" nowrap>入力値制限</td>
+      <td class="ListHeader" nowrap>サイズ制限</td>
+      <td class="ListHeader" nowrap>順番</td>
+      <td class="ListHeader" nowrap>削除</td>
+    </tr>
+$LIST$
+  </table>
+</td></tr></table>
+
+
+<p>
+$DELBUTTON$
+</p>
+
+</form>
+<hr>
+$COPYRIGHT2$
+</center>
+
+</td></tr></table>
+</center>
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+{include file='iphones/header.html'}
+		<section>
+			<h1>インフォメーション</h1>
+			<!--{if $information_text.excerpt}-->
+				{$information_text.excerpt|smarty:nodefaults}
+			<!--{/if}-->
+			<!--{if $information_text.more}-->
+				<!--{if $freo.query.continue}-->
+				<div id="continue">
+					{$information_text.more|smarty:nodefaults}
+				</div>
+				<!--{else}-->
+				<p><a href="{$freo.core.http_file}/information?continue=1#continue" title="インフォメーションの続き">続きを読む</a></p>
+				<!--{/if}-->
+			<!--{/if}-->
+			<!--{if $freo.user.authority == 'root' or $freo.user.authority == 'author'}-->
+			<ul class="menu">
+				<li><a href="{$freo.core.http_file}/index.php/admin/information_form">編集</a></li>
+			</ul>
+			<!--{/if}-->
+		</section>
+{include file='iphones/footer.html'}

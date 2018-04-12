@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*//////////////////////////////////////////////////*/
+/*// エラーアラート etc　　　　                   //*/
+/*//////////////////////////////////////////////////*/
+form#mailform {
+	margin: 0px auto 0px auto;
+	padding: 0px;
+}
+form#mailform label {
+	cursor: pointer;
+	display: block;
+	padding: 5px 5px;
+	margin-bottom: 1px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+div#mailfrom_hidden_object {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+div#mailfrom_hidden_object input {
+	margin: 10px;
+}
+
+input.mfp {
+	padding: 2px;
+}
+textarea.mfp {
+	padding: 5px;
+}
+
+ 
+/* 検証エラーメッセージ */
+label.error { text-align: left;
+	text-indent:1.2em;
+	margin: 5px 0px 0px 0px;
+	padding: 0;
+	color: #FF0000;
+	font-size: 12px;
+	line-height: normal;
+	display: none;
+	background-image: url(img/mfp_error.gif);
+	background-repeat: no-repeat;
+	background-position: 0 6px; }

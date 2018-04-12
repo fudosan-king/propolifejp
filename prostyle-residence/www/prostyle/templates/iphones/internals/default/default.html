@@ -1,0 +1,257 @@
+{include file='iphones/header.html'}
+
+
+
+
+<!--{foreach from=$entries|smarty:nodefaults item='entry'}-->
+<!--{if $entry_associates[$entry.id].category.slide}-->
+
+<div id="slide">
+<!--{if $entry_texts[$entry.id].excerpt}-->
+{$entry_texts[$entry.id].excerpt|smarty:nodefaults}
+<!--{/if}-->
+</div>
+
+<!--{if $freo.user.authority == 'root' or $freo.user.id == $entry.user_id}-->
+<div style="text-align: right;">
+<a href="{$freo.core.http_file}/index.php/admin/entry_form?id={$entry.id}"><img src="{$freo.core.http_url}images/icons/edit.png" alt="編集" title="編集" width="16" height="16" /></a>
+</div>
+<!--{/if}-->
+
+<!--{/if}-->
+<!--{/foreach}-->
+
+
+
+
+
+<div id="entry">
+<!--{foreach from=$entries|smarty:nodefaults item='entry'}-->
+<!--{if $entry_associates[$entry.id].category.property}-->
+
+<div class="entry">
+<!--{if $entry_associates[$entry.id].category.sell}-->
+<img src="{$freo.core.http_url}files/medias/common/icon_sell.jpg" width="85" alt="販売中" title="販売中" />
+<!--{/if}-->
+<!--{if $entry_associates[$entry.id].category.sold}-->
+<img src="{$freo.core.http_url}files/medias/common/icon_sold.jpg" width="85" alt="完売御礼" title="完売御礼" />
+<!--{/if}-->
+<!--{if $entry_associates[$entry.id].category.soon}-->
+<img src="{$freo.core.http_url}files/medias/common/icon_soon.jpg" width="85" alt="販売予定" title="販売予定" />
+<!--{/if}-->
+
+<h3><!--{if $entry_associates[$entry.id].option.officialsite}--><a href="{$entry_associates[$entry.id].option.officialsite|smarty:nodefaults}" target="_blank"><!--{/if}-->{$entry.title}<!--{if $entry_associates[$entry.id].option.officialsite}--></a><!--{/if}--></h3>
+
+<div class="content">
+
+
+<!--{if $entry.file}-->
+<div class="image_center">
+<!--{if $entry_associates[$entry.id].option.officialsite}--><a href="{$entry_associates[$entry.id].option.officialsite|smarty:nodefaults}" target="_blank"><!--{/if}--><img src="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}entry_files/{$entry.id}/{$entry.file}" class="entry_img" alt="{if $entry.memo}{$entry.memo|default:$page.file}{else}{$entry.title}{/if}" /><!--{if $entry_associates[$entry.id].option.officialsite}--></a><!--{/if}-->
+
+<!--{if $entry.image}-->
+<!--{if $entry_associates[$entry.id].option.officialsite}--><a href="{$entry_associates[$entry.id].option.officialsite|smarty:nodefaults}" target="_blank"><!--{/if}--><img src="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}entry_images/{$entry.id}/{$entry.image}" class="entry_img" alt="{if $entry.memo}{$entry.memo|default:$page.file}{else}{$entry.title}{/if}" /><!--{if $entry_associates[$entry.id].option.officialsite}--></a><!--{/if}-->
+</div>
+<!--{/if}-->
+</div>
+<!--{/if}-->
+
+
+
+<!--{if $entry_texts[$entry.id].excerpt}-->
+<div class="content_text">
+{$entry_texts[$entry.id].excerpt|smarty:nodefaults}
+</div>
+<!--{/if}-->
+
+
+<div class="shousai">
+<dl>
+<!--{if $entry_associates[$entry.id].option.schedule}-->
+<dt>販売<br />スケジュール</dt>
+<dd>{$entry_associates[$entry.id].option.schedule|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.add}-->
+<dt>{$freo.refer.options.add.name}</dt>
+<dd>{$entry_associates[$entry.id].option.add|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.traffic}-->
+<dt>{$freo.refer.options.traffic.name}</dt>
+<dd>{$entry_associates[$entry.id].option.traffic|smarty:nodefaults|nl2br}<br />
+<!--{if $entry_associates[$entry.id].option.access}-->
+<div style="padding-top: 5px;">
+<a href="{$entry_associates[$entry.id].option.access}" target="_blank">現地案内図</a></div>
+<!--{/if}-->
+</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.classification}-->
+<dt>{$freo.refer.options.classification.name}</dt>
+<dd>{$entry_associates[$entry.id].option.classification|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.usage}-->
+<dt>用途地域/<br />高度地区</dt>
+<dd>{$entry_associates[$entry.id].option.usage|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.unit}-->
+<dt>{$freo.refer.options.unit.name}</dt>
+<dd>{$entry_associates[$entry.id].option.unit|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.units}-->
+<dt>{$freo.refer.options.units.name}</dt>
+<dd>{$entry_associates[$entry.id].option.units|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.price}-->
+<dt>{$freo.refer.options.price.name}</dt>
+<dd>{$entry_associates[$entry.id].option.price|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.madori}-->
+<dt>{$freo.refer.options.madori.name}</dt>
+<dd>{$entry_associates[$entry.id].option.madori|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.shikichimenseki}-->
+<dt>{$freo.refer.options.shikichimenseki.name}</dt>
+<dd>{$entry_associates[$entry.id].option.shikichimenseki|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.enshoumnseki}-->
+<dt>{$freo.refer.options.enshoumnseki.name}</dt>
+<dd>{$entry_associates[$entry.id].option.enshoumnseki|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.menseki}-->
+<dt>{$freo.refer.options.menseki.name}</dt>
+<dd>{$entry_associates[$entry.id].option.menseki|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.kenri}-->
+<dt>土地の<br />権利形態</dt>
+<dd>{$entry_associates[$entry.id].option.kenri|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.kouzou}-->
+<dt>{$freo.refer.options.kouzou.name}</dt>
+<dd>{$entry_associates[$entry.id].option.kouzou|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.kansei}-->
+<dt>完成時期<br />（築年月）</dt>
+<dd>{$entry_associates[$entry.id].option.kansei|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.nyuukyo}-->
+<dt>{$freo.refer.options.nyuukyo.name}</dt>
+<dd>{$entry_associates[$entry.id].option.nyuukyo|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.eigyouannnai}-->
+<dt>{$freo.refer.options.eigyouannnai.name}</dt>
+<dd>{$entry_associates[$entry.id].option.eigyouannnai|smarty:nodefaults|nl2br}</dd>
+<!--{/if}-->
+
+</dl>
+
+</div>
+
+<!--{if $entry_associates[$entry.id].option.seikyu_url}-->
+<a href="{$entry_associates[$entry.id].option.seikyu_url|smarty:nodefaults}" target="_blank"><div class="bt_seikyuu">資料請求</div></a>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.no_bt_left}-->
+<!--
+<div class="bt_seikyuu_no">{$entry_associates[$entry.id].option.no_bt_left|smarty:nodefaults}</div></a>
+-->
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.raijou_url}-->
+<a href="{$entry_associates[$entry.id].option.raijou_url|smarty:nodefaults}" target="_blank"><div class="bt_reservation">来場予約</div></a>
+<!--{/if}-->
+
+<!--{if $entry_associates[$entry.id].option.no_bt}-->
+<!--
+<div class="bt_reservation_no">{$entry_associates[$entry.id].option.no_bt|smarty:nodefaults}</div>
+-->
+<!--{/if}-->
+
+<br style="clear: both;" />
+<div class="bt_site"><a href="{$entry_associates[$entry.id].option.officialsite|smarty:nodefaults}" target="_blank">物件公式サイト</a></div>
+
+
+
+</div>
+<!--{if $freo.user.authority == 'root' or $freo.user.id == $entry.user_id}-->
+<ul class="link">
+<li><a href="{$freo.core.http_file}/index.php/admin/entry_form?id={$entry.id}"><img src="{$freo.core.http_url}images/icons/edit.png" alt="編集" title="編集" width="16" height="16" /></a></li>
+</ul>
+<!--{/if}-->
+
+</div>
+<!--{/if}-->
+<!--{/foreach}-->
+</div>
+
+
+
+
+<div class="bt_top">
+<a href="#top">▲TOPへ</a>
+</div>
+
+
+
+
+<a id="news"></a>
+
+{include file='iphones/utility.html'}
+
+
+
+<div class="bt_top">
+<a href="#top">▲TOPへ</a>
+</div>
+<br />
+
+
+
+<!--{if $freo.config.view.information and !$smarty.get.category}-->
+<div id="information">
+
+<!--{if $information_page}-->
+<div class="page">
+<!--{if $information_page.file}-->
+<a href="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_files/{$information_page.id}/{$information_page.file}"><img src="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_files/{$information_page.id}/{$information_page.file}" alt="{$information_page.memo|default:$information_page.file}" title="{$information_page.memo|default:$information_page.file}" width="{$information_page_image.width}" height="{$information_page_image.height}" /></a>
+<!--{/if}-->
+
+<!--{if $information_page.image}-->
+<a href="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_images/{$information_page.id}/{$information_page.image}"><img src="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_images/{$information_page.id}/{$information_page.image}" alt="{$information_page.memo|default:$information_page.file}" title="{$information_page.memo|default:$information_page.file}" width="{$information_page_image.width}" height="{$information_page_image.height}" /></a>
+<!--{/if}-->
+
+<!--{if $information_page_text.excerpt}-->
+{$information_page_text.excerpt|smarty:nodefaults|autolink}
+<!--{/if}-->
+</div>
+<!--{/if}-->
+
+<!--{if $information.text}-->
+<div class="text">
+<!--{if $information_text.excerpt}-->
+{$information_text.excerpt|smarty:nodefaults}
+<!--{/if}-->
+</div>
+<!--{/if}-->
+</div>
+<!--{/if}-->
+
+
+
+
+
+{include file='iphones/footer.html'}

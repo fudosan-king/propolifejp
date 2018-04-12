@@ -1,0 +1,217 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2015
+*   PROPOLIFE
+*
+*   pressrelease.css
+*
+--------------------------------------------------------------------------------*/
+#topic_path{
+    margin-bottom: 35px;
+}
+
+#contents{
+    padding-bottom: 190px;
+    background-image:url(../images/pressrelease/img_bg_contents.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+#section_title .sns{
+    margin: -20px 0 0 285px;
+}
+
+#section_title h2{
+    padding: 0 30px !important;
+    text-align: center;
+    line-height: 1em;
+    position: relative;
+}
+
+#section_title h2 img{
+    width: 100%;
+    max-width: 457px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#section_title .ruby{ margin: 14px 0 10px 0; font-size: 18px;}
+@media screen and (max-width: 768px){ #section_title .ruby{ margin: 15px 0; font-size: 16px;} }
+@media screen and (max-width: 480px){ #section_title .ruby{ margin: 10px 0; font-size: 11px;} }
+
+.ico_new{
+    padding: 4px 12px 4px 13px;
+    margin: 0 0 0 10px;
+    font-size: 13px;
+    background-color: #f20000;
+    color: #fff;
+    letter-spacing: .005em;
+}
+
+.for_ie #section_estate .ico_new{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+
+/* ---------- #section_pressrelease ---------- */
+#section_pressrelease{
+    max-width: 880px;
+    margin: 0 auto 20px auto;
+    letter-spacing: 0;
+}
+
+#section_pressrelease h3{
+    padding: 12px 15px 10px 15px;
+    margin: 0 0 30px 0;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#section_pressrelease dl{
+    overflow: hidden;
+}
+
+#section_pressrelease dt{
+    padding: 3px 0 10px 0;
+    margin: 0 0 13px 0;
+    border-bottom: 1px dotted #222;
+    line-height: 1em;
+}
+
+#section_pressrelease dd{
+    margin: 0 0 30px 0;
+}
+
+#section_pressrelease dd span{
+    margin: 0 0 0 10px;
+    display: inline-blcok;
+}
+
+#section_pressrelease dd span img{
+    margin: -4px 0 0 0;
+    vertical-align: middle;
+    transition: opacity .2s ease;
+}
+
+#section_pressrelease dd span img:hover{
+    opacity: .7;
+}
+
+
+/* -------------------------------------------------------
+*
+    for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+#section_title .sns{
+    margin: 0 0 60px 0;
+    position: relative;
+}
+
+#section_title .sns a{
+    display: inline-block;
+}
+
+#section_title .line{
+    margin-bottom: 0;
+}
+
+#contents{
+    padding-bottom: 145px;
+    background-image:url(../images/pressrelease/img_bg_contents.png);
+    background-repeat: no-repeat;
+    background-position: left 97%;
+    background-size: 170px;
+}
+
+
+
+
+}
+
+
+/* -------------------------------------------------------
+*
+    for 480px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+.ico_new{
+    padding: 3px 9px 3px 10px;
+    margin: 0 0 0 10px;
+    font-size: 11px;
+    background-color: #f20000;
+    color: #fff;
+    letter-spacing: .005em;
+}
+
+#section_title .sns{
+    margin: 0 0 55px 0;
+    position: relative;
+}
+
+#section_title .sns img{
+    width: 30px;
+    height: auto;
+}
+
+#section_title .line{
+    margin-bottom: -15px;
+}
+
+#section_pressrelease{
+    margin: 0 auto 10px auto;
+}
+
+#section_pressrelease h3{
+    padding: 5px;
+    margin: 0 0 30px 0;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#section_pressrelease dt{
+    padding: 5px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 1px dotted #222;
+    line-height: 1em;
+}
+
+#section_pressrelease dd{
+    margin: 0 0 30px 0;
+}
+
+#section_pressrelease dd span{
+    margin: 0 0 0 5px;
+}
+
+#section_pressrelease dd span img{
+    width: 16px;
+    height: auto;
+    margin: -4px 0 0 0;
+    vertical-align: middle;
+}
+
+#section_pressrelease dd h3{
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#section_pressrelease dd p img{
+    margin: 0 0 5px 10px;
+}
+
+}

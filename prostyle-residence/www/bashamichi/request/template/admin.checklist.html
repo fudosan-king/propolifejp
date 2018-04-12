@@ -1,0 +1,111 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a	{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.ListHeader	{
+		BACKGROUND: #888855;
+		BORDER-BOTTOM: #555533 1px solid;
+		BORDER-LEFT: #FFFF99 1px solid;
+		BORDER-RIGHT: #555533 1px solid;
+		BORDER-TOP: #FDF5E8 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 2px;
+	}
+</STYLE>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<center>
+
+<table border="0" width="600"><tr><td>
+
+
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ 再入力設定 ■</font></div></td> 
+</table>
+
+　
+
+<table border="0" width="500">
+  <tr>
+    <td width="100%">
+      　MP Form Mail CGI Professional 版では、メールアドレスやパスワードなど、2 回入力させてそれぞれが同じであるかをチェックするようにすることができます。 
+      チェックする項目の name 属性をそれぞれ指定してください。 
+      そして、もし入力値が同じでなかった場合に表示するエラーメッセージを指定してください。 
+      最後に「追加」ボタンを押してください。「追加」ボタンを押さないと有効になりませんので、ご注意ください。
+      <p>　name 
+      属性は、「項目設定」で追加されている項目がリストに表示されます。再入力チェックをしたい項目は、事前に「項目設定」で追加してください。</p>
+    </td>
+  </tr>
+</table>
+<br>
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td class="ListHeader" nowrap>name 属性 1</td>  
+      <td class="ListHeader" nowrap>name 属性 2</td> 
+      <td class="ListHeader" nowrap>エラーメッセージ</td>
+      <td class="ListHeader" nowrap>&nbsp;</td>
+    </tr>
+    <form method="POST" action="admin.cgi">
+    <input type="hidden" name="action" value="checkadd">
+    <tr>
+      <td bgcolor="#F5F5DC" nowrap>
+        <select size="1" name="NAME1">
+$NAMELIST$
+        </select>
+      </td>
+      <td bgcolor="#F5F5DC" nowrap>
+        <select size="1" name="NAME2">
+$NAMELIST$
+        </select>
+      </td>
+      <td bgcolor="#F5F5DC" nowrap> <input type="text" name="ERROR" size="50"> </td>
+      <td bgcolor="#F5F5DC" nowrap> <input type="submit" value="追加" name="B1"> </td>
+    </tr>
+    </form>
+    <tr>
+      <td></td> 
+      <td></td> 
+      <td></td>
+      <td></td>
+    </tr>
+    <form method="POST" action="admin.cgi">
+    <input type="hidden" name="action" value="checkdel">
+$LIST$
+  </table>
+</td></tr></table>
+<br>
+<p>
+$DELBUTTON$
+</p>
+</form>
+
+
+<hr>
+$COPYRIGHT2$
+</center>
+
+</td></tr></table>
+</center>
+</body>
+</html>
+
+

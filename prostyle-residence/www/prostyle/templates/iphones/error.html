@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>エラー</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="{$freo.core.http_url}{$smarty.const.FREO_CSS_DIR}iphone/common.css" media="screen" />
+		<script src="{$freo.core.http_url}{$smarty.const.FREO_JS_DIR}jquery.js"></script>
+		<script src="{$freo.core.http_url}{$smarty.const.FREO_JS_DIR}jquery.autoresize.js"></script>
+		<script src="{$freo.core.http_url}{$smarty.const.FREO_JS_DIR}common.js"></script>
+		<script src="{$freo.core.http_url}{$smarty.const.FREO_JS_DIR}iphone/common.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>エラー</h1>
+			<nav id="back">
+				<ul>
+					<li><a href="{$freo.core.http_file}" rel="back">戻る</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<p>エラーが発生しました。</p>
+			<p>{$message}</p>
+		</section>
+		<footer>
+			<h1>メニュー</h1>
+			<nav>
+				<ul>
+					<li><a href="{$freo.core.http_file}">トップページ</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>

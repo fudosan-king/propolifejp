@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+<title>資料請求　確認画面｜≪公式≫プロスタイル横浜馬車道</title>
+
+<meta name="Description" content="「プロスタイル横浜馬車道」の資料を請求したい方、環境を知りたい方、現地を見学したい方、お問い合わせもお待ちしています。" />
+<meta name="Keywords" content="資料請求,見学会,相談,来場予約" />
+
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="local.css" />
+
+<script language="Javascript" type="text/javascript" src="js/DD_belatedPNG.js"></script>
+<script language="Javascript" type="text/javascript" src="js/smartRollover.js"></script>  
+
+<!--[郵便番号検索]-->
+<script type="text/javascript" src="ajaxzip2/prototype.js"></script>
+<script type="text/javascript" src="ajaxzip2/ajaxzip2.js" charset="UTF-8"></script>
+<!--[郵便番号検索]-->
+
+<!--[エラーアラート]-->
+<link rel="stylesheet" href="mailform.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/jquery.validate.messages_jp.js" charset="UTF-8"></script>
+<!--[エラーアラート]-->
+
+<!--[マウスオーバーした行をハイライト]-->
+<script type="text/javascript" src="js/highlight.js"></script>
+<script type="text/javascript">
+<!--
+window.onload = function(){
+addTableRolloverEffect("focus", "tableRollOverEffect1");
+}
+// -->
+</script>
+<!--[マウスオーバーした行をハイライト]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51599384-1', 'prostyle-residence.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header">
+<div id="ttl"><img src="img/ttl_req.gif" alt="資料請求"></div>
+<h1><a href="/bashamichi/"><img src="img/name.png" alt="プロスタイル横浜馬車道"></a></h1>
+</div>
+<!-- /header -->
+
+<div id="contact">
+
+<p id="privacy">
+<span class="indis">※必須</span>がついている項目はご記入必須項目になります。<br />
+下記内容でよろしければ、【送 信】ボタンを押してください。
+</p>
+
+<table width="0" border="0" align="center" cellpadding="5" cellspacing="0" id="focus">
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">お名前</th>
+<td>$sei$ $mei$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">性別</th>
+<td>$sex$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">家族数</th>
+<td>$family$&nbsp;人（ご本人を含め）</td>
+</tr>
+<tr>
+<th class="st01">&nbsp;</th>
+<th class="st02">郵便番号</th>
+<td>$zip$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">ご住所</th>
+<td>$address1$　$address2$　$address3$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">電話番号</th>
+<td>$tel1$ - $tel2$ - $tel3$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">メールアドレス</th>
+<td>$mailaddress$</td>
+</tr>
+
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">ご職業</th>
+<td>$job$</td>
+</tr>
+
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">ご予算</th>
+<td>$budget$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">ご希望間取り</th>
+<td>$room$</td>
+</tr>
+<tr>
+<th class="st01">&nbsp;</th>
+<th class="st02">ご年収</th>
+<td>$annual$　2,000万円超の場合：$annual-etc$</td>
+</tr>
+<tr>
+<th class="st01">&nbsp;</th>
+<th class="st02">自己資金</th>
+<td>$self$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">ご希望の広さ</th>
+<td>$room_size$&nbsp;m<sup>2</sup></td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">現在の居住形態</th>
+<td>$residence$</td>
+</tr>
+<tr>
+  <th class="st01"><span class="indis">※必須</span></th>
+  <th class="st02">このホームページを<br />
+どこで知りましたか？</th>
+  <td>$sites$　その他の場合：$sites-etc$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">「プロスタイル横浜馬車道」についてどう思われますか？</th>
+<td>$question$　その他の場合：$question-etc$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">横浜馬車道エリアとのご関連をお聞かせください。</th>
+<td>$answer$</td>
+</tr>
+<tr>
+<th class="st01">&nbsp;</th>
+<th class="st02">その他、ご意見等ございましたらご自由にお書きください。</th>
+<td>$etc$</td>
+</tr>
+<tr>
+<th class="st01"><span class="indis">※必須</span></th>
+<th class="st02">個人情報の取扱について</th>
+<td>$agree$</td>
+</tr>
+</table>
+
+<div class="center">
+<form action="$cgiurl$" method="post">
+$hidden$
+
+<a href="javascript:void(0)" onclick="javascript:history.back()">
+<img src="img/btn_back_on.jpg" alt="入力画面に戻る" style="margin-right:20px;">
+</a>
+
+<input type="image" onmouseover="this.src='img/btn_contact_on.jpg'" onmouseout="this.src='img/btn_contact_off.jpg'" src="img/btn_contact_off.jpg" alt="上記内容を送信する">
+</form>
+</div>
+<!-- /center -->
+
+
+</div>
+<!-- /contact -->
+
+<div id="footer">
+<img src="img/line_popup.png" class="pb10" /><br />
+<p>Copyright (C) 2014 PROPOLIFE.INC. All rights reserved.</p>
+</div>
+<!-- /copy -->
+</div>
+<!-- /footer -->
+
+</body>
+</html>

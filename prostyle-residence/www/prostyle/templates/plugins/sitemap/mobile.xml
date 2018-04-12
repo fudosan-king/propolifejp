@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+    <url>
+        <loc>{$freo.core.http_url}</loc>
+        <mobile:mobile/>
+    </url>
+   	 <!--{foreach from=$articles|smarty:nodefaults item='article'}-->
+     <url>
+        <loc>{$freo.core.http_url}page/{$article.id}</loc>
+        <mobile:mobile/>
+     </url>
+     <!--{/foreach}-->
+	<!--{if $entry_articles|smarty:nodefaults}-->
+     <!--{foreach from=$entry_articles|smarty:nodefaults item='entry_article'}-->
+     <url>
+        <loc>{$freo.core.http_url}view/{if $entry_article.code}{$entry_article.code}{else}{$entry_article.id}{/if}</loc>
+        <mobile:mobile/>
+     </url>
+     <!--{/foreach}-->
+     <!--{/if}-->
+</urlset>

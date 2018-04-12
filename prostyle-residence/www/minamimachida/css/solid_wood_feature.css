@@ -1,0 +1,660 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+input[type="button"], [type="image"], input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/*--------------------------------------
+   natural_solid_wood_feature
+---------------------------------------*/
+body {
+  font-family: Helvetica, Arial, "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+}
+
+.woodFeature {
+  width: 100%;
+  background: url(../img/common/bg_pop.jpg) left top repeat-x;
+  padding: 0 0 50px 0;
+}
+@media screen and (max-width: 710px) {
+  .woodFeature {
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 710px) {
+  .woodFeature {
+    padding: 3rem 0;
+  }
+}
+.woodFeature .content {
+  float: none;
+  width: 960px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .content {
+    width: 100%;
+  }
+}
+
+.woodFeature * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.woodFeature img {
+  vertical-align: bottom;
+}
+
+/*--------------------------------------
+   .main
+---------------------------------------*/
+.woodFeature .main {
+  width: 100%;
+  background: url(../img/natural_solid_wood/feature/main_bg@2x.jpg) center 40px no-repeat;
+  background-size: 100%;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .main {
+    background-position: center bottom;
+  }
+}
+.woodFeature .main h1 {
+  text-align: center;
+  margin: 0 auto 40px auto;
+  padding: 90px 0 0 0;
+}
+@media screen and (max-width: 710px) {
+  .woodFeature .main h1 {
+    padding: 0 0 0 0;
+    margin: 0 auto 1.5rem auto;
+  }
+}
+@media screen and (max-width: 515px) {
+  .woodFeature .main h1 {
+    padding: 0.5rem 0 0 0;
+    margin: 0 auto 1rem auto;
+  }
+}
+.woodFeature .main h1 img {
+  width: 471px;
+  max-width: 100%;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .main h1 img {
+    width: 80%;
+    max-width: 471px;
+  }
+}
+.woodFeature .main .lead {
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .main .lead {
+    margin: 0 0 1.5rem 0;
+  }
+}
+@media screen and (max-width: 515px) {
+  .woodFeature .main .lead {
+    margin: 0 0 1rem 0;
+  }
+}
+.woodFeature .main .lead img {
+  width: 630px;
+  max-width: 100%;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .main .lead img {
+    width: 85%;
+    max-width: 630px;
+  }
+}
+.woodFeature .main .movie {
+  width: 640px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .main .movie {
+    max-width: 95%;
+    padding: 0 0 0.5rem 0;
+  }
+}
+.woodFeature .main .movie video {
+  width: 640px;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .main .movie video {
+    max-width: 100%;
+  }
+}
+
+/*--------------------------------------
+   .detail
+---------------------------------------*/
+.detail {
+  width: 100%;
+  background: #edebe8;
+  padding: 40px 0;
+}
+@media screen and (max-width: 959px) {
+  .detail {
+    padding: 1.5rem 0;
+  }
+}
+.detail h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #4a331c;
+  font-size: 18px;
+  margin: 0 0 1.5em 0;
+}
+@media screen and (max-width: 600px) {
+  .detail h2 {
+    font-size: 16px;
+  }
+}
+.detail .lead {
+  text-align: center;
+  margin: 0 0 2em 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+  .detail .lead {
+    width: 90%;
+    margin: 0 auto 2em auto;
+    text-align: left;
+    font-size: 12px;
+  }
+}
+.detail .introduction {
+  width: 750px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 749px) {
+  .detail .introduction {
+    width: 95%;
+  }
+}
+.detail .introduction h3 {
+  background: #4a331c;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.5em 0;
+  letter-spacing: 0.2em;
+  font-size: 16px;
+  font-weight: bold;
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction h3 {
+    letter-spacing: 0.01em;
+    font-size: 14px;
+  }
+}
+.detail .introduction .t {
+  width: 100%;
+  display: table;
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .t {
+    display: block;
+  }
+}
+.detail .introduction .t .l {
+  display: table-cell;
+  vertical-align: middle;
+  width: 378px;
+  padding: 0 5px 0 0;
+}
+@media screen and (max-width: 749px) {
+  .detail .introduction .t .l {
+    width: 50%;
+    padding: 0 1% 0 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .t .l {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+.detail .introduction .t .l img {
+  max-width: 100%;
+}
+.detail .introduction .t .r {
+  display: table-cell;
+  vertical-align: middle;
+  width: 372px;
+  background: url(../img/natural_solid_wood/feature/detail_img2@2x.jpg) left top no-repeat;
+  background-size: 100%;
+  color: #ffffff;
+}
+@media screen and (max-width: 749px) {
+  .detail .introduction .t .r {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .t .r {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+.detail .introduction .t .r h4 {
+  width: 70%;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 5px 0;
+  margin: 0 auto 10px auto;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 0px 3px #666;
+}
+@media screen and (max-width: 749px) {
+  .detail .introduction .t .r h4 {
+    width: 90%;
+  }
+}
+.detail .introduction .t .r h4 span {
+  font-size: 12px;
+}
+.detail .introduction .t .r p {
+  width: 70%;
+  line-height: 1.6;
+  font-size: 12px;
+  margin: 0 auto;
+  text-shadow: 0px 0px 6px #333;
+}
+@media screen and (max-width: 749px) {
+  .detail .introduction .t .r p {
+    width: 90%;
+    font-size: 10px;
+  }
+}
+.detail .introduction .b {
+  width: 100%;
+  background: #d5d0ca;
+}
+.detail .introduction .b .inner {
+  width: 710px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: table;
+}
+@media screen and (max-width: 749px) {
+  .detail .introduction .b .inner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .b .inner {
+    display: block;
+    padding: 0 0 0 0;
+  }
+}
+.detail .introduction .b .inner .item {
+  display: table-cell;
+  background: #ffffff;
+  width: 238px;
+  border-right: 4px solid #d5d0ca;
+  vertical-align: top;
+}
+@media screen and (max-width: 749px) {
+  .detail .introduction .b .inner .item {
+    width: 33.3%;
+    border-right: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .b .inner .item {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #d5d0ca;
+  }
+}
+.detail .introduction .b .inner .item .ph {
+  width: 100%;
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .b .inner .item .ph {
+    width: 35%;
+    float: left;
+    padding: 0.5rem 0 0 0.5rem;
+  }
+}
+.detail .introduction .b .inner .item .ph img {
+  width: 100%;
+}
+.detail .introduction .b .inner .item .txt {
+  width: 100%;
+  padding: 30px 0;
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .b .inner .item .txt {
+    width: 65%;
+    float: right;
+    padding: 0.5rem 0;
+  }
+}
+.detail .introduction .b .inner .item .txt h4 {
+  width: 76%;
+  background: #d5d0ca;
+  text-align: center;
+  color: #4a331c;
+  padding: 4px 0;
+  margin: 0 auto 10px auto;
+  font-weight: bold;
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .b .inner .item .txt h4 {
+    width: 90%;
+    font-size: 14px;
+    margin: 0 auto 5px auto;
+  }
+}
+.detail .introduction .b .inner .item .txt p {
+  width: 76%;
+  line-height: 1.6;
+  margin: 0 auto;
+  font-size: 11px;
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .b .inner .item .txt p {
+    width: 90%;
+    line-height: 1.2;
+    font-size: 10px;
+  }
+}
+.detail .introduction .b .inner .item:last-child {
+  width: 234px;
+  border-right: 0px;
+}
+@media screen and (max-width: 499px) {
+  .detail .introduction .b .inner .item:last-child {
+    width: 100%;
+  }
+}
+.detail .introduction .note {
+  margin: 5px 0 0 0;
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: right;
+}
+@media screen and (max-width: 699px) {
+  .detail .introduction .note {
+    text-align: left;
+  }
+}
+
+/*--------------------------------------
+   .plan
+---------------------------------------*/
+.woodFeature .plan {
+  width: 100%;
+}
+.woodFeature .plan .note {
+  margin: 5px 0 0 0;
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: right;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .note {
+    text-align: left;
+    width: 95%;
+    margin: 5px auto 0 auto;
+  }
+}
+.woodFeature .plan .item {
+  margin: 0 auto;
+  padding: 40px 0;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item {
+    padding: 1.5rem 0;
+  }
+}
+.woodFeature .plan .item .outFrame {
+  text-align: right;
+  margin-top: 10px;
+  padding-right: 40px;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .outFrame {
+    width: 95%;
+    margin: 0.5rem auto 0 auto;
+    padding-right: 0;
+  }
+}
+.woodFeature .plan .item .inner {
+  width: 100%;
+  display: table;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+.woodFeature .plan .item .inner .txt {
+  display: table-cell;
+  vertical-align: top;
+  width: 200px;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner .txt {
+    display: block;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner .txt .titWrap {
+    float: left;
+    width: 30%;
+  }
+}
+.woodFeature .plan .item .inner .txt h3 {
+  width: 160px;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner .txt h3 {
+    width: 100%;
+  }
+}
+.woodFeature .plan .item .inner .txt h3 img {
+  width: 100%;
+  max-width: 160px;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner .txt .areaWrap {
+    float: right;
+    width: 70%;
+    padding-left: 10px;
+  }
+}
+.woodFeature .plan .item .inner .txt .area {
+  text-align: center;
+  margin: 10px 0 6px 0;
+  padding: 10px 0;
+  border-top: 1px solid #4a331c;
+  border-bottom: 1px solid #4a331c;
+  display: table-cell;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner .txt .area {
+    display: block;
+    margin: 0 0 6px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.woodFeature .plan .item .inner .txt .area p.note {
+  text-align: right;
+  letter-spacing: 0;
+  font-size: 10px;
+  margin: 8px 0 0 0;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner .txt .area p.note {
+    text-align: center;
+  }
+}
+.woodFeature .plan .item .inner .txt .area p.note span {
+  font-size: 14px;
+}
+.woodFeature .plan .item .inner .txt .area img {
+  width: 100%;
+  max-width: 160px;
+}
+.woodFeature .plan .item .inner .txt .note {
+  margin: 3px 0 0 0;
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: left;
+  letter-spacing: -0.001em;
+}
+.woodFeature .plan .item .inner .planImg {
+  display: table-cell;
+  vertical-align: top;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item .inner .planImg {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.woodFeature .plan .item.Ctype .txt {
+  padding-left: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item.Ctype .txt {
+    padding-left: 0;
+  }
+}
+.woodFeature .plan .item.Ctype .planImg {
+  text-align: right;
+  padding-right: 40px;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item.Ctype .planImg {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+.woodFeature .plan .item.Ctype .planImg img {
+  max-width: 664px;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .plan .item.Ctype .planImg img {
+    max-width: 100%;
+  }
+}
+.woodFeature .plan .item.Etype {
+  background: #fefdf6;
+}
+.woodFeature .plan .item.Etype .txt {
+  padding-right: 40px;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item.Etype .txt {
+    padding-right: 0;
+  }
+}
+.woodFeature .plan .item.Etype .planImg {
+  padding-left: 40px;
+}
+@media screen and (max-width: 699px) {
+  .woodFeature .plan .item.Etype .planImg {
+    padding-left: 0;
+  }
+}
+.woodFeature .plan .item.Etype .planImg img {
+  max-width: 653px;
+}
+@media screen and (max-width: 959px) {
+  .woodFeature .plan .item.Etype .planImg img {
+    max-width: 100%;
+  }
+}
+
+ul.request {
+  width: 234px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+ul.request img {
+  width: 100%;
+  max-width: 234px;
+}

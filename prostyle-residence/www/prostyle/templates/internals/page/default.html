@@ -1,0 +1,91 @@
+{include file='header.html'}
+<div id="page_content">
+<!--{if $freo.query.id}-->
+<h2>{$page.title}</h2>
+<div class="content">
+
+
+
+<!--{if $page.image}-->
+<a href="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_images/{$page.id}/{$page.image}"><img src="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_images/{$page.id}/{$page.image}" class="imagecenter" alt="{$page.title}" width="{$page_image.width}" height="{$page_image.height}" /></a>
+<!--{/if}-->
+
+
+<!--{if $page.file}-->
+<a href="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_files/{$page.id}/{$page.file}"><img src="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}page_files/{$page.id}/{$page.file}" class="image_right" alt="{$page.title}" width="{$page_image.width}" height="{$page_image.height}" /></a>
+<!--{/if}-->
+
+<!--{if $page.id == 'contact'}-->
+<div id="form">
+<form action="{$freo.core.http_file}/index.php/form/send?id={$page.id}" method="post" id="plugin_form">
+<fieldset>
+<legend>送信フォーム</legend>
+<input type="hidden" name="plugin_form[id]" value="{$page.id}" />
+<!--{/if}-->
+
+<!--{if $page_text.excerpt}-->
+{$page_text.excerpt|smarty:nodefaults|autolink}
+<!--{/if}-->
+
+
+<!--{if $page.id == 'contact'}-->
+</fieldset>
+</form>
+
+<script src="{$freo.core.http_url}{$smarty.const.FREO_JS_DIR}plugins/form.js"></script>
+{literal}
+<script type="text/javascript">
+
+//郵便番号から住所を検索
+$('#plugin_form_zipcode').keyup(function() {
+  AjaxZip3.zip2addr(this, '', 'plugin_form[prefecture]', 'plugin_form[address]');
+});
+
+</script>
+{/literal}
+</div>
+<!--{/if}-->
+
+
+
+<!--{if $page.file}--><br style="clear: both;" /><!--{/if}-->
+
+<!--{if $freo.user.authority == 'root' or $freo.user.id == $page.user_id}-->
+<ul class="link">
+<li><a href="{$freo.core.http_file}/index.php/admin/page_form?id={$page.id}"><img src="{$freo.core.http_url}images/icons/edit.png" alt="編集" title="編集" width="16" height="16" /></a></li>
+</ul>
+<!--{/if}-->
+
+
+
+
+
+<!--{if $page.id != 'contact'}-->
+
+<!--{if $plugin_page_childs|smarty:nodefaults}-->
+<ul>
+<!--{foreach from=$plugin_page_childs|smarty:nodefaults item='plugin_page_child'}-->
+<li><a href="{$freo.core.http_file}/page/{$plugin_page_child.id}">{$plugin_page_child.title}</a></li>
+<!--{/foreach}-->
+</ul>
+<!--{/if}-->
+
+<!--{if $plugin_page_parent and ($plugin_page_link_previous or $plugin_page_link_next)}-->
+<div id="page_link">
+<ul class="page_link">
+<!--{if $plugin_page_link_previous}--><li class="previous"><a href="{$freo.core.http_file}/page/{if $plugin_page_link_previous.code}{$plugin_page_link_previous.code}{else}{$plugin_page_link_previous.id}{/if}">{$plugin_page_link_previous.title}</a></li><!--{/if}-->
+<li class="home"><a href="{$freo.core.http_file}/page/{$plugin_page_parent.id}">{$plugin_page_parent.title}</a></li>
+<!--{if $plugin_page_link_next}--><li class="next"><a href="{$freo.core.http_file}/page/{if $plugin_page_link_next.code}{$plugin_page_link_next.code}{else}{$plugin_page_link_next.id}{/if}">{$plugin_page_link_next.title}</a></li><!--{/if}-->
+</ul>
+</div>
+<!--{/if}-->
+
+<!--{/if}-->
+
+
+
+
+</div>
+<!--{/if}-->
+</div>
+{include file='footer.html'}

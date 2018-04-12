@@ -1,0 +1,286 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.imeoff { ime-mode:disabled;}
+</STYLE>
+<script language="javascript">
+<!-- //
+function nameChange() {
+	var name = document.form.NAME.value;
+	if(name.match(/^attachment[0-9]*$/)) {
+		document.form.INPUT_MAX_SIZE.disabled = true;
+		document.form.CONV1.disabled = true;
+		document.form.CONV2.disabled = true;
+		document.form.CONV3.disabled = true;
+		document.form.CONV4.disabled = true;
+		document.form.CONV5.disabled = true;
+		document.form.RESTRICT1.disabled = true;
+		document.form.RESTRICT2.disabled = true;
+		document.form.RESTRICT3.disabled = true;
+		document.form.INPUT_MAX_SIZE.style.backgroundColor='#D4D0C8';
+		document.form.CONV1.style.backgroundColor='#D4D0C8';
+		document.form.CONV2.style.backgroundColor='#D4D0C8';
+		document.form.CONV3.style.backgroundColor='#D4D0C8';
+		document.form.CONV4.style.backgroundColor='#D4D0C8';
+		document.form.CONV5.style.backgroundColor='#D4D0C8';
+		document.form.RESTRICT1.style.backgroundColor='#D4D0C8';
+		document.form.RESTRICT2.style.backgroundColor='#D4D0C8';
+		document.form.RESTRICT3.style.backgroundColor='#D4D0C8';
+	} else {
+		document.form.INPUT_MAX_SIZE.disabled = false;
+		document.form.CONV1.disabled = false;
+		document.form.CONV2.disabled = false;
+		document.form.CONV3.disabled = false;
+		document.form.CONV4.disabled = false;
+		document.form.CONV5.disabled = false;
+		document.form.RESTRICT1.disabled = false;
+		document.form.RESTRICT2.disabled = false;
+		document.form.RESTRICT3.disabled = false;
+		document.form.INPUT_MAX_SIZE.style.backgroundColor='';
+		document.form.CONV1.style.backgroundColor='';
+		document.form.CONV2.style.backgroundColor='';
+		document.form.CONV3.style.backgroundColor='';
+		document.form.CONV4.style.backgroundColor='';
+		document.form.CONV5.style.backgroundColor='';
+		document.form.RESTRICT1.style.backgroundColor='';
+		document.form.RESTRICT2.style.backgroundColor='';
+		document.form.RESTRICT3.style.backgroundColor='';
+	}
+}
+// -->
+</script>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body onload="nameChange()">
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">項目修正</font></div></td>
+</table>
+
+<form method="POST" action="admin.cgi" name="form">
+  <input type="hidden" name="action" value="itemmod">
+  <input type="hidden" name="itemno" value="$itemno$">
+
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">■ name 属性</td>            
+      <td bgcolor="#F8F8FF" nowrap width="400"><input type="text" name="NAME" size="20" value="$NAME$" onchange="nameChange()" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">■ 項目名称</td>           
+      <td bgcolor="#F8F8FF" nowrap width="400"><font color="#663300">項目の名称を指定して下さい。項目名称は、エラーメッセージ、ログの先頭行等で利用されます。</font><br>
+        <input type="text" name="DISP_NAME" size="40" value="$DISP_NAME$"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">■ 必須設定</td>          
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="NECESSARY_FLAG">
+          <option value="0"$NECESSARY_FLAG0$>必須でない</option>
+          <option value="1"$NECESSARY_FLAG1$>必須とする</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">■ サイズ制限</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><font color="#663300">入力値のサイズを制限する場合には、バイト数を指定して下さい。指定しない場合には、何も入力しない、もしくは   
+        0 を入力して下さい。</font><br>  
+        <input type="text" name="INPUT_MAX_SIZE" size="4" class="imeoff" value="$INPUT_MAX_SIZE$">バイト</td>
+    </tr>
+    <tr>
+      <td nowrap colspan="2" bgcolor="#F5F5DC">■ 入力値変換設定</td>          
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 変換 1</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="CONV1">
+          <option value="0" $CONV1_0$>変換しない</option>
+          <option value="1"$CONV1_1$>全角数字と全角ハイフンを半角に変換</option>
+          <option value="2"$CONV1_2$>半角数字と半角ハイフンを全角に変換</option>
+          <option value="3"$CONV1_3$>全角・半角ハイフンを削除</option>
+          <option value="4"$CONV1_4$>全角アルファベットを半角に変換</option>
+          <option value="5"$CONV1_5$>半角アルファベットを全角に変換</option>
+          <option value="6"$CONV1_6$>半角カナを全角カナに変換</option>
+          <option value="7"$CONV1_7$>メールアドレスを半角に変換</option>
+          <option value="8"$CONV1_8$>全角カタカナを全角ひらがなに変換</option>
+          <option value="9"$CONV1_9$>全角ひらがなを全角カタカナに変換</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 変換 2</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="CONV2">
+          <option value="0" $CONV2_0$>変換しない</option>
+          <option value="1"$CONV2_1$>全角数字と全角ハイフンを半角に変換</option>
+          <option value="2"$CONV2_2$>半角数字と半角ハイフンを全角に変換</option>
+          <option value="3"$CONV2_3$>全角・半角ハイフンを削除</option>
+          <option value="4"$CONV2_4$>全角アルファベットを半角に変換</option>
+          <option value="5"$CONV2_5$>半角アルファベットを全角に変換</option>
+          <option value="6"$CONV2_6$>半角カナを全角カナに変換</option>
+          <option value="7"$CONV2_7$>メールアドレスを半角に変換</option>
+          <option value="8"$CONV2_8$>全角カタカナを全角ひらがなに変換</option>
+          <option value="9"$CONV2_9$>全角ひらがなを全角カタカナに変換</option>
+       </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 変換 3</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="CONV3">
+          <option value="0" $CONV3_0$>変換しない</option>
+          <option value="1"$CONV3_1$>全角数字と全角ハイフンを半角に変換</option>
+          <option value="2"$CONV3_2$>半角数字と半角ハイフンを全角に変換</option>
+          <option value="3"$CONV3_3$>全角・半角ハイフンを削除</option>
+          <option value="4"$CONV3_4$>全角アルファベットを半角に変換</option>
+          <option value="5"$CONV3_5$>半角アルファベットを全角に変換</option>
+          <option value="6"$CONV3_6$>半角カナを全角カナに変換</option>
+          <option value="7"$CONV3_7$>メールアドレスを半角に変換</option>
+          <option value="8"$CONV3_8$>全角カタカナを全角ひらがなに変換</option>
+          <option value="9"$CONV3_9$>全角ひらがなを全角カタカナに変換</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 変換 4</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="CONV4">
+          <option value="0" $CONV4_0$>変換しない</option>
+          <option value="1"$CONV4_1$>全角数字と全角ハイフンを半角に変換</option>
+          <option value="2"$CONV4_2$>半角数字と半角ハイフンを全角に変換</option>
+          <option value="3"$CONV4_3$>全角・半角ハイフンを削除</option>
+          <option value="4"$CONV4_4$>全角アルファベットを半角に変換</option>
+          <option value="5"$CONV4_5$>半角アルファベットを全角に変換</option>
+          <option value="6"$CONV4_6$>半角カナを全角カナに変換</option>
+          <option value="7"$CONV4_7$>メールアドレスを半角に変換</option>
+          <option value="8"$CONV4_8$>全角カタカナを全角ひらがなに変換</option>
+          <option value="9"$CONV4_9$>全角ひらがなを全角カタカナに変換</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 変換 5</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="CONV5">
+          <option value="0" $CONV5_0$>変換しない</option>
+          <option value="1"$CONV5_1$>全角数字と全角ハイフンを半角に変換</option>
+          <option value="2"$CONV5_2$>半角数字と半角ハイフンを全角に変換</option>
+          <option value="3"$CONV5_3$>全角・半角ハイフンを削除</option>
+          <option value="4"$CONV5_4$>全角アルファベットを半角に変換</option>
+          <option value="5"$CONV5_5$>半角アルファベットを全角に変換</option>
+          <option value="6"$CONV5_6$>半角カナを全角カナに変換</option>
+          <option value="7"$CONV5_7$>メールアドレスを半角に変換</option>
+          <option value="8"$CONV5_8$>全角カタカナを全角ひらがなに変換</option>
+          <option value="9"$CONV5_9$>全角ひらがなを全角カタカナに変換</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap colspan="2" bgcolor="#F5F5DC">■ 入力値制限設定</td>         
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 制限 1</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="RESTRICT1">
+          <option value="0" $RESTRICT1_0$>制限しない</option>
+          <option value="1"$RESTRICT1_1$>半角数字のみ</option>
+          <option value="2"$RESTRICT1_2$>全角数字のみ</option>
+          <option value="3"$RESTRICT1_3$>半角アルファベットのみ</option>
+          <option value="4"$RESTRICT1_4$>全角アルファベットのみ</option>
+          <option value="5"$RESTRICT1_5$>半角英数のみ</option>
+          <option value="6"$RESTRICT1_6$>全角英数のみ</option>
+          <option value="7"$RESTRICT1_7$>メールアドレス</option>
+          <option value="11" $RESTRICT1_11$>ハイフンなしの固定電話（半角）（例：0312345678）</option>
+          <option value="12" $RESTRICT1_12$>ハイフンありの固定番号（半角）（例：03-1234-5678）</option>
+          <option value="13" $RESTRICT1_13$>ハイフンなしの携帯電話（半角）（例：09012345678）</option>
+          <option value="14" $RESTRICT1_14$>ハイフンありの携帯電話（半角）（例：090-1234-5678）</option>
+          <option value="15" $RESTRICT1_15$>ハイフンなしのＰＨＳ　（半角）（例：07012345678）</option>
+          <option value="16" $RESTRICT1_16$>ハイフンありのＰＨＳ　（半角）（例：070-1234-5678）</option>
+          <option value="17"$RESTRICT1_17$>ハイフンなしの電話全般（半角）</option>
+          <option value="18"$RESTRICT1_18$>ハイフンありの電話全般（半角）</option>
+          <option value="21" $RESTRICT1_21$>ハイフンなしの郵便番号（半角）（例：1234567）</option>
+          <option value="22" $RESTRICT1_22$>ハイフンありの郵便番号（半角）（例：123-4567）</option>
+          <option value="23" $RESTRICT1_23$>半角数字3桁（郵便番号の前半）</option>
+          <option value="24" $RESTRICT1_24$>半角数字4桁（郵便番号の後半）</option>
+          <option value="31"$RESTRICT1_31$>全角ひらがなのみ</option>
+          <option value="32"$RESTRICT1_32$>全角カタカナのみ</option>
+          <option value="41"$RESTRICT1_41$>URL</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 制限 2</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="RESTRICT2">
+          <option value="0" $RESTRICT2_0$>制限しない</option>
+          <option value="1"$RESTRICT2_1$>半角数字のみ</option>
+          <option value="2"$RESTRICT2_2$>全角数字のみ</option>
+          <option value="3"$RESTRICT2_3$>半角アルファベットのみ</option>
+          <option value="4"$RESTRICT2_4$>全角アルファベットのみ</option>
+          <option value="5"$RESTRICT2_5$>半角英数のみ</option>
+          <option value="6"$RESTRICT2_6$>全角英数のみ</option>
+          <option value="7"$RESTRICT2_7$>メールアドレス</option>
+          <option value="11" $RESTRICT2_11$>ハイフンなしの固定電話（半角）（例：0312345678）</option>
+          <option value="12" $RESTRICT2_12$>ハイフンありの固定番号（半角）（例：03-1234-5678）</option>
+          <option value="13" $RESTRICT2_13$>ハイフンなしの携帯電話（半角）（例：09012345678）</option>
+          <option value="14" $RESTRICT2_14$>ハイフンありの携帯電話（半角）（例：090-1234-5678）</option>
+          <option value="15" $RESTRICT2_15$>ハイフンなしのＰＨＳ　（半角）（例：07012345678）</option>
+          <option value="16" $RESTRICT2_16$>ハイフンありのＰＨＳ　（半角）（例：070-1234-5678）</option>
+          <option value="17"$RESTRICT2_17$>ハイフンなしの電話全般（半角）</option>
+          <option value="18"$RESTRICT2_18$>ハイフンありの電話全般（半角）</option>
+          <option value="21" $RESTRICT2_21$>ハイフンなしの郵便番号（半角）（例：1234567）</option>
+          <option value="22" $RESTRICT2_22$>ハイフンありの郵便番号（半角）（例：123-4567）</option>
+          <option value="23" $RESTRICT2_23$>半角数字3桁（郵便番号の前半）</option>
+          <option value="24" $RESTRICT2_24$>半角数字4桁（郵便番号の後半）</option>
+          <option value="31"$RESTRICT2_31$>全角ひらがなのみ</option>
+          <option value="32"$RESTRICT2_32$>全角カタカナのみ</option>
+          <option value="41"$RESTRICT2_41$>URL</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">　・ 制限 3</td>         
+      <td bgcolor="#F8F8FF" nowrap width="400"><select size="1" name="RESTRICT3">
+          <option value="0" $RESTRICT3_0$>制限しない</option>
+          <option value="1"$RESTRICT3_1$>半角数字のみ</option>
+          <option value="2"$RESTRICT3_2$>全角数字のみ</option>
+          <option value="3"$RESTRICT3_3$>半角アルファベットのみ</option>
+          <option value="4"$RESTRICT3_4$>全角アルファベットのみ</option>
+          <option value="5"$RESTRICT3_5$>半角英数のみ</option>
+          <option value="6"$RESTRICT3_6$>全角英数のみ</option>
+          <option value="7"$RESTRICT3_7$>メールアドレス</option>
+          <option value="11" $RESTRICT3_11$>ハイフンなしの固定電話（半角）（例：0312345678）</option>
+          <option value="12" $RESTRICT3_12$>ハイフンありの固定番号（半角）（例：03-1234-5678）</option>
+          <option value="13" $RESTRICT3_13$>ハイフンなしの携帯電話（半角）（例：09012345678）</option>
+          <option value="14" $RESTRICT3_14$>ハイフンありの携帯電話（半角）（例：090-1234-5678）</option>
+          <option value="15" $RESTRICT3_15$>ハイフンなしのＰＨＳ　（半角）（例：07012345678）</option>
+          <option value="16" $RESTRICT3_16$>ハイフンありのＰＨＳ　（半角）（例：070-1234-5678）</option>
+          <option value="17"$RESTRICT3_17$>ハイフンなしの電話全般（半角）</option>
+          <option value="18"$RESTRICT3_18$>ハイフンありの電話全般（半角）</option>
+          <option value="21" $RESTRICT3_21$>ハイフンなしの郵便番号（半角）（例：1234567）</option>
+          <option value="22" $RESTRICT3_22$>ハイフンありの郵便番号（半角）（例：123-4567）</option>
+          <option value="23" $RESTRICT3_23$>半角数字3桁（郵便番号の前半）</option>
+          <option value="24" $RESTRICT3_24$>半角数字4桁（郵便番号の後半）</option>
+          <option value="31"$RESTRICT3_31$>全角ひらがなのみ</option>
+          <option value="32"$RESTRICT3_32$>全角カタカナのみ</option>
+          <option value="41"$RESTRICT3_41$>URL</option>
+        </select></td>
+    </tr>
+  </table>
+</td></tr></table>
+
+
+<p>
+<input type="submit" value="　修　正　" name="B1">
+</p>
+
+</form>
+<hr>
+<a href="javascript:history.back()">戻る</a>
+
+
+</center>
+</body>
+</html>
+
+

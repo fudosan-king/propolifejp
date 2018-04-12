@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css"/>
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>現地案内図｜プロスタイル横浜馬車道</title>
+
+  <meta name="description" content="プロスタイル横浜馬車道の案内図です。"/>
+  <meta name="Keywords" content="案内図,みなとみらい線,馬車道駅,神奈川,プロポライフ"/>
+
+
+  <script type="text/javascript" src="../common/js/jquery.js"></script>
+  <script type="text/javascript" src="../common/js/common.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="../common/css/import.css" media="all"/>
+  <link rel="stylesheet" type="text/css" href="local.css" media="all"/>
+  <link rel="stylesheet" type="text/css" href="print.css" media="print"/>
+
+  <script>
+    (function (sp_url) {
+      $(function () {
+        var ua = navigator.userAgent.toLowerCase();
+        var want_redirect = false;
+        if (ua.indexOf('iphone') !== -1 || ua.indexOf('android') !== -1 || ua.indexOf('mobile') !== -1)
+          want_redirect = true;
+        if (want_redirect)
+          location.href = sp_url;
+      });
+    })('../sp/map.html');
+
+  </script>
+</head>
+
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TSV2KJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TSV2KJ');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KFVKSR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KFVKSR');</script>
+<!-- End Google Tag Manager -->
+
+<div align="center">
+  <img src="img/map-detail.jpg" alt="プロスタイル横浜馬車道　案内図" />
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<title>$COPYRIGHT$</title>
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+</STYLE>
+<script language="JavaScript">
+<!--//
+	function FormatCustomFlagChange() {
+		var selectedNum = document.form.FORMAT_CUSTOM_FLAG.selectedIndex;
+		if(selectedNum == 1) {
+			document.form.MAIL_FORMAT.disabled = false;
+			document.form.MAIL_FORMAT.style.backgroundColor='#FFFFFF';
+			document.form.B1.disabled = false;
+		} else {
+			document.form.MAIL_FORMAT.disabled = true;
+			document.form.MAIL_FORMAT.style.backgroundColor='#D4D0C8';
+			document.form.B1.disabled = true;
+		}
+	}
+//-->
+</script>
+</head>
+
+<body onload="FormatCustomFlagChange()">
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ メール編集 ■</font></div></td>                 
+</table>
+<br>
+<table border="0" width="500">
+  <tr>
+    <td width="100%">　フォームから送信されるメールのフォーマットをカスタマイズすることができます。デフォルトでは、オートフォーマットとなっております。カスタマイズする場合には、設定を「カスタマイズ」に変更した上で、メールフォーマットを編集してください。
+      <p><font color="#333399">$name属性$</font> 
+      と記述すると、その部分がフォームに入力もしくは選択された値に置き換わってメールが送信されます。たとえば、name                 
+      属性が「<font color="#333399">name</font>」とすると、<font color="#333399">$name$</font> 
+      と記述します。該当欄に、「太郎」と入力されたとすると、<font color="#333399">$name$</font>                
+      の部分が「太郎」に置き換わります。</p>                
+      <p>ご自分でメールを受信する際に都合のよいようにフォーマットを編集してください。</p>
+    </td>
+  </tr>
+</table>
+<form method="POST" action="admin.cgi" name="form">
+  <input type="hidden" name="action" value="mailedit">
+
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">メールフォーマット</font></td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="FORMAT_CUSTOM_FLAG" onchange="FormatCustomFlagChange()">
+          <option value="0"$FORMAT_CUSTOM_FLAG0$>オートフォーマット</option>
+          <option value="1"$FORMAT_CUSTOM_FLAG1$>カスタマイズ</option>
+        </select></td>
+    </tr>
+  </table>
+</td></tr></table>
+
+
+<p>
+<textarea rows="22" name="MAIL_FORMAT" cols="62">$MAIL_FORMAT$</textarea>
+</p>
+
+
+<p>
+<input type="submit" value="設定" name="B1">
+</p>
+
+</form>
+<hr>
+$COPYRIGHT2$
+</center>
+</body>
+</html>
+
+

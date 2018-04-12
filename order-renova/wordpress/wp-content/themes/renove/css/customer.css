@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+.tpd a {color: #ffffff;}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+background-color: #333333 !important;border-color: #333333 !important;border: 1px solid #cccccc !important;margin-left: 4px !important;border-radius:0px !important;padding: 6px 12px!important;}

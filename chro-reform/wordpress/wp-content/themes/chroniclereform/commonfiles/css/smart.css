@@ -1,0 +1,1675 @@
+@charset "utf-8";
+/* =============================================================
+
+　　LESS変数 カラー設定
+
+============================================================= */
+/* 　ベースカラー
+---------------------------------------------*/
+/* -- 茶色 -- */
+/* 　ポイントカラー
+---------------------------------------------*/
+/* -- 青色 -- */
+/* 　背景カラー
+---------------------------------------------*/
+/* -- 灰色 -- */
+/* 　その他カラー
+---------------------------------------------*/
+/* -- 白色 -- */
+/* -- 灰色 -- */
+@media screen and (max-width: 640px) {
+  /* =============================================================
+
+　　スマホ画面 共通設定
+
+============================================================= */
+  /*  全体 共通設定
+---------------------------------------------*/
+  /*  画像 共通設定
+-------------------------- */
+  /* スマホ用画像 */
+  .imgSmp {
+    display: inline;
+  }
+  .imgMain {
+    display: none;
+  }
+  /* 　コンテナー　レイアウト設定
+---------------------------------------------*/
+  .boxInner {
+    width: 100%;
+  }
+  /* 　ヘッダー 共通設定
+---------------------------------------------*/
+  #header {
+    /* -------- サイトタイトルロゴ -------- */
+    /* -------- お問い合わせ -------- */
+    /* -------- グローバルナビ -------- */
+  }
+  #header #ttlSiteLogo {
+    padding: 18px 0;
+  }
+  #header #ttlSiteLogo img {
+    width: 130px;
+  }
+  #header .boxContact {
+    position: inherit;
+    top: inherit;
+    border-top: 1px solid #534336;
+    border-bottom: 1px solid #534336;
+  }
+  #header .boxContact ul {
+    display: table;
+    width: 100%;
+  }
+  #header .boxContact li {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+  }
+  #header .boxContact li a {
+    display: block;
+    height: 34px;
+    text-align: center;
+  }
+  #header .boxContact li a .imgSmp {
+    position: relative;
+    top: 2px;
+    width: 152px;
+    vertical-align: middle;
+  }
+  #header .boxContact li:first-child + li a {
+    background: #534336;
+  }
+  #header .boxContact li:first-child + li a .imgSmp {
+    width: 146px;
+  }
+  #header #boxGlobalNav {
+    border-top: none;
+    margin-bottom: 0;
+    /* -- グローバルナビ開く・閉じるボタン -- */
+    /* --- 開くボタン --- */
+    /* --- 閉じるボタン --- */
+    /* --- グローバルナビ一覧 --- */
+    /* -- 表示 -- */
+  }
+  #header #boxGlobalNav .btnOpen,
+  #header #boxGlobalNav .btnClose {
+    display: block;
+  }
+  #header #boxGlobalNav .btnOpen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #534336;
+    padding: 14px 15px;
+    cursor: pointer;
+  }
+  #header #boxGlobalNav .btnOpen.hover {
+    background: #bbd366;
+  }
+  #header #boxGlobalNav .btnOpen img {
+    width: 30px;
+  }
+  #header #boxGlobalNav .btnClose {
+    background: #000;
+    padding: 8px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  #header #boxGlobalNav .btnClose:before {
+    position: relative;
+    content: "\25B2";
+    padding: 0 7px 0 0;
+  }
+  #header #boxGlobalNav .btnClose.hover {
+    background: #44bcce;
+  }
+  #header #boxGlobalNav dl dd {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    z-index: 100;
+    border-top: 1px solid #ffffff;
+    width: 100%;
+    font-size: 0.8em;
+  }
+  #header #boxGlobalNav dl .boxMenu {
+    display: none;
+  }
+  #header #boxGlobalNav li {
+    display: block;
+    float: none;
+    border-bottom: 1px solid #ffffff !important;
+    background: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  #header #boxGlobalNav li a {
+    background: #534336;
+    padding: 10px 13px !important;
+    text-align: left;
+  }
+  #header #boxGlobalNav li a span:before {
+    position: relative;
+    top: 9px;
+    float: left;
+    border-radius: 10px;
+    background: #ffffff;
+    width: 8px;
+    height: 8px;
+    margin: 0 10px 0 0;
+    content: "";
+  }
+  #header #boxGlobalNav li a:after {
+    position: relative;
+    float: right;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    width: 12px;
+    height: 12px;
+    margin-top: -20px;
+  }
+  #header #boxGlobalNav li a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background: #44bcce !important;
+  }
+  #header #boxGlobalNav a {
+    display: block;
+  }
+  #header #boxGlobalNav a span {
+    background: none;
+    width: 100% !important;
+    height: auto;
+    color: #ffffff;
+    text-indent: inherit;
+    overflow: auto;
+    white-space: inherit;
+  }
+  #header #boxGlobalNav .btnEvent,
+  #header #boxGlobalNav .btnBlog,
+  #header #boxGlobalNav .btnClose {
+    display: block;
+  }
+  /* ---- 閲覧中のカテゴリ ---- */
+  .page-media #header #boxGlobalNav .btnMedia a,
+  .page-about #header #boxGlobalNav .btnAbout a,
+  .page-works #header #boxGlobalNav .btnWorks a,
+  .page-material #header #boxGlobalNav .btnMaterial a,
+  .page-service #header #boxGlobalNav .btnService a,
+  .page-plan #header #boxGlobalNav .btnPlan a,
+  .page-contact #header #boxGlobalNav .btnContact a {
+    opacity: inherit;
+    filter: none;
+  }
+  /*  コンテンツ 共通設定
+---------------------------------------------*/
+  #content {
+    display: block;
+    padding-bottom: 0;
+    line-height: 22px;
+    font-size: 0.8em;
+  }
+  /* -------- カテゴリータイトル -------- */
+  .ttlCategory {
+    padding: 0;
+    font-size: 0.95em;
+  }
+  .ttlCategory .txtMain {
+    padding-top: 18px;
+    letter-spacing: 0;
+  }
+  .ttlCategory .txtMain img {
+    width: 100%;
+    margin-top: -15px;
+  }
+  .ttlCategory .txtSub {
+    padding-bottom: 12px;
+  }
+  /* -------- パンくず -------- */
+  .boxBreadcrumb {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  /* -------- Article -------- */
+  .boxArticle {
+    width: 100%;
+    /*padding: 0 10px;*/
+  }
+  .boxArticle img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  /* -------- セクション -------- */
+  .liDot li {
+    padding-left: 12px;
+  }
+  .liDot li:before {
+    margin: 0 2px 0 -14px;
+  }
+  /* -------- 表 -------- */
+  .boxTable tr td {
+    display: block;
+    width: 100%;
+  }
+  .boxTable tr > td:first-child {
+    width: 100%;
+  }
+  .boxTable tr > td:first-child + td {
+    width: 100%;
+    line-height: 26px;
+  }
+  /* -------- ページング -------- */
+  .boxPaging {
+    margin: 0 0 20px;
+  }
+  .boxPostDetail + .boxPaging {
+    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
+    margin-bottom: 0;
+    padding: 20px 0;
+  }
+  .boxPostDetail + .boxPaging .btnPrev,
+  .boxPostDetail + .boxPaging .btnTop,
+  .boxPostDetail + .boxPaging .btnNext {
+    width: 48%;
+  }
+  .boxPostDetail + .boxPaging .btnTop {
+    display: none;
+  }
+  /* ----- クリックで画像切り替え ----- */
+  .boxImgChange {
+    min-width: 100%;
+    margin-bottom: 10px;
+  }
+  /*  メイン・サイド共通設定
+---------------------------------------------*/
+  #main,
+  #side {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+  }
+  /*  メイン 共通設定
+---------------------------------------------*/
+  #main {
+    margin: 0;
+    padding-top: 0;
+  }
+  /*  サイド 共通設定
+---------------------------------------------*/
+  #side {
+    margin-bottom: 0;
+  }
+  /*  ASIDE 共通設定
+------------------------------------*/
+  /* -------- バナーエリア -------- */
+  #aside {
+    border-top: 1px solid #cccccc;
+    padding: 20px 10px !important;
+  }
+  #aside a {
+    max-width: 500px;
+    width: 90%;
+  }
+  #aside a img {
+    width: 100%;
+  }
+  /*  フッター 共通設定
+---------------------------------------------*/
+  #footer {
+    position: inherit;
+    left: inherit;
+    bottom: inherit;
+    height: auto;
+    /* -------- フッター上部 -------- */
+    /* -------- フッター中部 -------- */
+    /* -------- フッター下部 -------- */
+  }
+  #footer #footerTop .boxInner {
+    padding: 20px 0 20px 20px;
+  }
+  #footer #footerTop .boxCateNav {
+    font-size: 0.9em;
+  }
+  #footer #footerTop .boxCateNav > ul {
+    width: 100%;
+  }
+  #footer #footerTop .boxCateNav > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    border-right: none;
+    width: 49%;
+    padding: 0 0 20px;
+  }
+  #footer #footerTop .boxCateNav > ul > li > dl > dt {
+    margin-bottom: 5px;
+  }
+  #footer #footerTop .boxCateNav > ul > li > dl > dd li {
+    margin-bottom: 0;
+  }
+  #footer #footerTop .boxCateNav > ul > li:first-child {
+    display: none;
+  }
+  #footer #footerMdl {
+    /* --- アバウト --- */
+    /* --- サイトナビ --- */
+  }
+  #footer #footerMdl .boxInner {
+    display: block;
+    padding: 15px 10px;
+  }
+  #footer #footerMdl .boxInner > * {
+    display: block;
+    float: none;
+  }
+  #footer #footerMdl .boxAbout {
+    float: none;
+    text-align: center;
+  }
+  #footer #footerMdl .boxAbout dl {
+    display: inline-block;
+    padding-left: 90px;
+    text-align: left;
+    font-size: 0.9em;
+  }
+  #footer #footerMdl .boxAbout dl dd {
+    font-size: 0.8em;
+    line-height: 18px;
+  }
+  #footer #footerMdl .boxAbout dl dd img {
+    width: 80px;
+  }
+  #footer #footerMdl .boxSiteNav {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.7em;
+  }
+  #footer #footerMdl .boxSiteNav ul {
+    display: inline-block;
+    float: none;
+    margin-right: 0;
+    text-align: center;
+  }
+  #footer #footerMdl .boxSiteNav li {
+    margin-left: 10px;
+  }
+  #footer #footerMdl .boxSiteNav li:before {
+    left: -5px;
+  }
+  #footer #footerBtm {
+    /* -- ページトップへ戻る -- */
+  }
+  #footer #footerBtm .boxInner {
+    padding-bottom: 50px;
+  }
+  #footer #footerBtm .boxCopyright {
+    margin-bottom: 0;
+    padding: 15px 10px;
+    font-size: 0.9em;
+  }
+  #footer #footerBtm .boxCopyright small {
+    display: block;
+    margin-bottom: 15px;
+  }
+  #footer #footerBtm #btnPageTop {
+    right: 10px !important;
+    bottom: 10px !important;
+    text-align: center;
+  }
+  #footer #footerBtm #btnPageTop img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  #footer #footerBtm #btnPageTop.btm {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  /* =============================================================
+
+　　スマホ画面 各ページ 個別設定
+
+============================================================= */
+  /*  TOP : トップページ
+---------------------------------------------*/
+  .page-top #content {
+    /* ----- （PC）メインビジュアル 画像切り替え ---- */
+    /* ----- （スマホ）メインビジュアル 画像切り替え ---- */
+    /* -------- 最新情報エリア -------- */
+    /* -------- クロニクルリフォームとは -------- */
+    /* -------- 自然素材 -------- */
+    /* -------- サービス -------- */
+    /* -------- リフォームプラン -------- */
+    /* -------- 施工事例 -------- */
+    /* -------- ショールーム -------- */
+    /* -------- お問い合わせ -------- */
+  }
+  .page-top #content .btnArw a {
+    width: 100%;
+  }
+  .page-top #content .imgSmp img {
+    width: 100%;
+  }
+  .page-top #content .boxInner {
+    padding: 0 10px;
+  }
+  .page-top #content .boxInner.pt60 {
+    padding-top: 10px !important;
+  }
+  .page-top #content .boxInner.pt60 .ttlCategory.mb30 {
+    margin-bottom: 10px !important;
+  }
+  .page-top #content #topmain.boxImgChangePC {
+    display: none ! important;
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp {
+    display: block !important;
+    background: #534336;
+    margin-bottom: 18%;
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn {
+    bottom: -30%;
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li {
+    width: 15%;
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li .imgBtn {
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-off.png);
+    padding: 5px;
+    margin-bottom: 7%;
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li.on .imgBtn {
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-on.png);
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li:first-child {
+    margin-right: 10%;
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li:first-child .imgSmp img {
+    max-width: 62px;
+  }
+  .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li:first-child + li .imgSmp img {
+    width: 130%;
+    max-width: 82px;
+  }
+  .page-top #content .boxLatestInfo {
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+  .page-top #content .boxLatestInfo > div {
+    display: block;
+    width: 100% !important;
+    min-height: 100% !important;
+    height: auto !important;
+  }
+  .page-top #content .boxLatestInfo .boxLeft,
+  .page-top #content .boxLatestInfo .boxCenter,
+  .page-top #content .boxLatestInfo .boxCP,
+  .page-top #content .boxLatestInfo .boxEvent {
+    padding: 14px 10px 10px;
+  }
+  .page-top #content .boxLatestInfo .boxLeft,
+  .page-top #content .boxLatestInfo .boxCenter {
+    margin: 0 0 20px;
+  }
+  .page-top #content .boxLatestInfo .boxEvent {
+    position: static;
+    left: auto;
+    bottom: auto;
+  }
+  .page-top #content .boxLatestInfo .ttl {
+    margin-bottom: 14px;
+    font-size: 1.2em;
+  }
+  .page-top #content .boxLatestInfo .boxMedia .ttl + a {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .page-top #content .boxLatestInfo .boxMedia .ttl + a img {
+    width: 60%;
+  }
+  .page-top #content .boxLatestInfo .boxMedia .ttl + a .ttlMedia {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 20px;
+    text-align: left;
+  }
+  .page-top #content .boxLatestInfo .boxMedia .btn a {
+    line-height: 16px;
+  }
+  .page-top #content .boxLatestInfo .boxMedia .btn a img {
+    width: 100px;
+  }
+  .page-top #content .boxLatestInfo .boxBlog li {
+    border-bottom: 1px solid #e0dcd9;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .page-top #content .boxLatestInfo .boxBlog li a {
+    font-size: 0.9em;
+  }
+  .page-top #content .boxLatestInfo .boxBlog li a img {
+    margin-right: 10px;
+  }
+  .page-top #content .boxLatestInfo .boxBlog .btn a {
+    line-height: 16px;
+  }
+  .page-top #content .boxLatestInfo .boxBlog .btn a img {
+    width: 70px;
+  }
+  .page-top #content .boxLatestInfo .boxCP,
+  .page-top #content .boxLatestInfo .boxEvent {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .page-top #content .boxLatestInfo .boxCP a img,
+  .page-top #content .boxLatestInfo .boxEvent a img {
+    width: 100%;
+  }
+  .page-top #content .boxAbout {
+    margin-bottom: 30px;
+  }
+  .page-top #content .boxAbout .boxSection p {
+    margin-right: 0 !important;
+    margin-bottom: 30px !important;
+    margin-left: 0 !important;
+  }
+  .page-top #content .boxAbout .boxSection p img {
+    width: 100%;
+  }
+  .page-top #content .boxAbout .boxSection p:first-child {
+    margin: 0 14px 14px !important;
+  }
+  .page-top #content .boxAbout .boxSection p:first-child + p {
+    margin: 0 14px 40px 14px !important;
+    line-height: 24px;
+    font-size: 1em;
+    width: auto;
+  }
+  .page-top #content .boxAbout .boxSection p:first-child + p + p + p img {
+    width: 90%;
+  }
+  .page-top #content .boxAbout .boxSection p:first-child + p + p + p + p {
+    line-height: 24px;
+    text-align: left !important;
+  }
+  .page-top #content .boxMaterial {
+    margin-bottom: 60px;
+  }
+  .page-top #content .boxMaterial #topmainMaterial .imgSmp {
+    width: 100%;
+  }
+  .page-top #content .boxMaterial .boxSection {
+    /* -- 特徴 -- */
+  }
+  .page-top #content .boxMaterial .boxSection > div {
+    margin-bottom: 20px;
+  }
+  .page-top #content .boxMaterial .boxSection .ttlMaterial {
+    border: none;
+    float: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px !important;
+  }
+  .page-top #content .boxMaterial .boxSection .ttlMaterial img {
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    width: 180px;
+    margin: 0;
+  }
+  .page-top #content .boxMaterial .boxSection .ttlMaterial:before {
+    display: none;
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm {
+    float: none;
+    width: 100%;
+    /* 安心安全 */
+    /* 耐久性 */
+    /* デザイン */
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm li {
+    margin: 0 0 10px;
+    padding: 8px 0;
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm li dl dt {
+    width: 30%;
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm li dl dt img {
+    position: relative;
+    top: 2px;
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm li dl dd {
+    width: 65%;
+    line-height: 18px;
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm li:first-child dt img {
+    width: 80px;
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm li:first-child + li dt img {
+    width: 64px;
+  }
+  .page-top #content .boxMaterial .boxSection .boxCharm li:first-child + li + li dt img {
+    width: 80px;
+  }
+  .page-top #content .boxService {
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+  }
+  .page-top #content .boxService .boxSection .boxStep {
+    border: none;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    padding: 0 0 10px 0px;
+    text-align: center;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol {
+    background: none;
+    width: 100%;
+    margin-left: -20px;
+    /* STEP01 */
+    /* STEP02 */
+    /* STEP03 */
+    /* STEP04 */
+    /* STEP05 */
+    /* STEP06 */
+    /* STEP07 */
+    /* STEP08 */
+    /* 矢印 */
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li {
+    position: relative;
+    width: 45%;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li dl {
+    /* STEP丸アイコン */
+    /* イメージ画像 */
+    /* ⇒矢印 */
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li dl dt {
+    left: 3%;
+    width: 20%;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li dl dt img {
+    max-width: 40px;
+    width: 100%;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li dl dt + dd {
+    position: relative;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li dl dt + dd img {
+    width: 100%;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li dl dt + dd:before {
+    left: -20px;
+    background-size: 100%;
+    width: 8%;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li dl dt + dd + dd {
+    padding: 8px 0;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(1) dd + dd img {
+    width: 90px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(2) dd + dd img {
+    width: 60px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(3) dd + dd img {
+    width: 100px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(4) dd + dd img {
+    width: 120px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(5) dd + dd img {
+    width: 28px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(6) dd + dd img {
+    width: 20px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(7) dd + dd img {
+    width: 65px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(8) dd + dd img {
+    width: 100px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(1),
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(3),
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(5) {
+    margin-bottom: 30px;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-child(odd) dt + dd:before {
+    display: none;
+  }
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(1):before,
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(3):before,
+  .page-top #content .boxService .boxSection .boxStep .boxStepInner ol li:nth-of-type(5):before {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-step-arw2-smp.png) no-repeat center;
+    background-size: 50%;
+    width: 200%;
+    height: 30px;
+    content: "";
+  }
+  .page-top #content .boxService .boxSection .boxStep:before {
+    display: none;
+  }
+  .page-top #content .boxService .boxSection .boxStep + p.mb70 {
+    margin-bottom: 30px !important;
+  }
+  .page-top #content .boxService .boxSection .boxStep + p.mb70 img {
+    width: 100%;
+  }
+  .page-top #content .boxPlan {
+    margin-bottom: 10px;
+  }
+  .page-top #content .boxPlan .ttlCategory.mb30 {
+    margin-bottom: 10px !important;
+  }
+  .page-top #content .boxPlan .boxSection {
+    text-align: center;
+  }
+  .page-top #content .boxPlan .boxSection ul li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .page-top #content .boxPlan .boxSection ul li dt {
+    width: 80%;
+    margin: 0 auto 20px;
+    text-align: left;
+  }
+  .page-top #content .boxPlan .boxSection ul li dt .ttlPlan {
+    background-position: 97%;
+    background-size: 20px;
+    padding: 12px 12px 10px;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  .page-top #content .boxPlan .boxSection ul li dt .ttlPlan .txtSub {
+    padding: 0 2px;
+    font-size: 0.5em;
+  }
+  .page-top #content .boxPlan .boxSection ul li dt img {
+    width: 100%;
+  }
+  .page-top #content .boxPlan .boxSection ul li dd {
+    font-size: 0.9em;
+    text-align: left;
+  }
+  .page-top #content .boxPlan .boxSection ul li dd br {
+    display: none;
+  }
+  .page-top #content .boxPlan .boxSection ul li:first-child {
+    margin-right: 0;
+  }
+  .page-top #content .boxWorks {
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+  }
+  .page-top #content .boxWorks .boxWorksList {
+    margin-bottom: 20px;
+  }
+  .page-top #content .boxShowroom {
+    margin-bottom: 20px;
+  }
+  .page-top #content .boxShowroom .ttlCategory.mb30 {
+    margin-bottom: 10px !important;
+  }
+  .page-top #content .boxShowroom .boxSection p.mb40 {
+    margin-bottom: 20px !important;
+    line-height: 24px;
+  }
+  .page-top #content .boxShowroom .boxSection p.mb40 br {
+    display: none;
+  }
+  .page-top #content .boxShowroom .boxSection p a img {
+    width: 100%;
+  }
+  .page-top #content .boxContact {
+    margin-bottom: 0 !important;
+    padding-bottom: 40px;
+  }
+  .page-top #content .boxContact .boxTable {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .page-top #content .boxContact .boxTable tr td {
+    padding: 8px 15px;
+  }
+  .page-top #content .boxContact .boxTable tr td p {
+    margin-bottom: 10px !important;
+  }
+  .page-top #content .boxContact .boxTable tr td p span {
+    display: block;
+  }
+  .page-top #content .boxContact .boxTable tr > td:first-child + td {
+    padding-left: 15px;
+  }
+  .page-top #content .boxContact input[type="radio"] {
+    top: 0;
+  }
+  .page-top #content .boxContact input[name="zip1"] {
+    margin-left: 0;
+  }
+  .page-top #content .boxContact input[name="zip1"],
+  .page-top #content .boxContact input[name="zip2"] {
+    width: 100px;
+  }
+  .page-top #content .boxContact input[size="65"],
+  .page-top #content .boxContact select {
+    margin: 0;
+  }
+  .page-top #content .boxContact input[size="30"],
+  .page-top #content .boxContact input[size="65"],
+  .page-top #content .boxContact select,
+  .page-top #content .boxContact textarea {
+    width: 100%;
+  }
+  .page-top #content .boxContact textarea {
+    margin-top: 5px;
+  }
+  .page-top #content .boxContact .txtGrey {
+    display: block;
+    padding: 0;
+  }
+  .page-top #content .boxContact .btnSubmit {
+    padding-top: 20px;
+  }
+  .page-top #content .boxContact .btnSubmit input {
+    width: 100%;
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact-smp.png);
+    background-size: 60px;
+    margin: 0;
+  }
+  /*  MEDIA : メディア＆ニュース
+--------------------------------------------- */
+  .page-media #main .txtDate {
+    margin-bottom: 4px;
+  }
+  /* -------- 投稿一覧 -------- */
+  .boxPostList {
+    margin-bottom: 20px;
+  }
+  .boxPostList > ul > li {
+    background-size: 3px;
+    padding: 20px 0;
+  }
+  .boxPostList .imgThumb {
+    width: 100px;
+    transition: none;
+  }
+  .boxPostList .imgThumb img {
+    width: 100%;
+  }
+  .boxPostList .txtDate,
+  .boxPostList .ttlPost {
+    margin-left: 120px;
+    line-height: 24px;
+  }
+  /* -------- 投稿詳細 -------- */
+  .boxPostDetail {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+  .boxPostDetail .boxPostHead {
+    line-height: 26px;
+  }
+  .boxPostDetail .ttlPost {
+    font-size: 1.4em !important;
+  }
+  .boxPostDetail .boxSNS {
+    width: 100%;
+    text-align: center;
+  }
+  .boxPostDetail .boxSNS ul {
+    float: none;
+    display: inline-block;
+    border: none;
+    padding: 4px 8px;
+  }
+  .boxPostDetail .boxSection img {
+    max-width: 100%;
+  }
+  .boxPostDetail .boxSection p {
+    margin-bottom: 20px;
+    line-height: 26px;
+  }
+  /* -------- 投稿メニュー -------- */
+  .boxPostMenu {
+    margin: 0 0 10px;
+  }
+  .boxPostMenu .ttlMain {
+    display: none;
+  }
+  .boxPostMenu .ttlSmp {
+    position: relative;
+    display: block;
+    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/post/bg-open.png) no-repeat 96% center #f6f5f2;
+    background-size: 10px 10px;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  .boxPostMenu .ttlSmp.on {
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/post/bg-close.png);
+  }
+  .boxPostMenu ul {
+    margin-bottom: 20px;
+  }
+  .boxPostMenu ul > li {
+    font-size: 1em;
+    line-height: 20px;
+  }
+  .boxPostMenu ul > li a {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .boxPostMenu ul > li:first-child a {
+    padding-top: 5px;
+  }
+  /*　アコーディオンメニュー表示設定 */
+  #side.gt260 ul {
+    display: none;
+  }
+  /* ---- バナーエリア ---- */
+  .boxBannerArea ul li {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .boxBannerArea ul li a {
+    max-width: 500px;
+    width: 90%;
+  }
+  .boxBannerArea ul li a img {
+    width: 100%;
+  }
+  /*  BLOG : スタッフブログ
+--------------------------------------------- */
+  .page-blog #content .boxPostDetail .boxPostHead {
+    width: 100%;
+  }
+  .page-blog #content .boxPostDetail .txtDate {
+    top: 0;
+    display: block;
+    padding: 0;
+  }
+  /*  EVENT : イベント情報
+--------------------------------------------- */
+  .page-event #content .boxArticle {
+    border: none;
+    margin-bottom: 0;
+    padding: 0 10px;
+    line-height: 26px;
+  }
+  .page-event #content .boxArticle .boxArticleHead {
+    margin: 0 0 15px;
+  }
+  .page-event #content .boxArticle .boxArticleHead .ttlArticle {
+    margin-top: 30px;
+    margin-bottom: 0;
+    line-height: 26px;
+  }
+  .page-event #content .boxSection {
+    margin: 0 0 20px;
+  }
+  .page-event #content .boxSection .ttlSection {
+    margin-bottom: 15px;
+  }
+  .page-event #content .boxSection .boxProgram li dl dt {
+    margin-bottom: 5px;
+  }
+  .page-event #content .boxSection .boxContact {
+    padding: 15px 10px 10px;
+    text-align: center;
+    /* お問い合わせ・TEL */
+    /* クロニクルフォームお問い合わせ */
+  }
+  .page-event #content .boxSection .boxContact li {
+    float: none;
+  }
+  .page-event #content .boxSection .boxContact li:first-child {
+    border: none;
+    margin-right: 0;
+    margin-bottom: 5px;
+    padding-right: 0;
+  }
+  .page-event #content .boxSection .boxContact li:first-child img {
+    width: 180px;
+  }
+  .page-event #content .boxSection .boxContact li:first-child + li img {
+    max-width: 300px;
+    width: 100%;
+  }
+  /*  MATERIAL : 自然素材
+--------------------------------------------- */
+  .page-material #content {
+    /* ------- はじめに（自然素材3つの魅力） ------- */
+    /* ------- 素材の紹介（自然素材詳細） ------- */
+  }
+  .page-material #content .boxArticle .boxArticleHead {
+    margin-bottom: 20px;
+    /* 自然素材3つの魅力 */
+  }
+  .page-material #content .boxArticle .boxArticleHead .ttlArticle .imgSmp {
+    display: block;
+  }
+  .page-material #content .boxArticle .boxArticleHead .ttlArticle .imgMain {
+    display: none;
+  }
+  .page-material #content .boxArticle .boxArticleHead + h2.mb30 {
+    margin-bottom: 5px !important;
+  }
+  .page-material #content .boxArticle .boxArticleHead + h2.mb30 img {
+    width: 180px;
+  }
+  .page-material #content #introduction {
+    /* 安心安全 */
+    /* 耐久性 */
+    /* デザイン */
+  }
+  .page-material #content #introduction .boxSection {
+    padding: 30px 0 40px;
+  }
+  .page-material #content #introduction .boxSection .imgCharm {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .page-material #content #introduction .boxSection .boxCharm {
+    width: 100%;
+    margin-left: 0;
+  }
+  .page-material #content #introduction .boxSection .boxCharm dt {
+    margin-bottom: 10px;
+  }
+  .page-material #content #introduction .boxSection .boxCharm dd {
+    line-height: 26px;
+  }
+  .page-material #content #introduction #charm01.boxSection .boxCharm dt img {
+    width: 100px;
+  }
+  .page-material #content #introduction #charm02.boxSection .boxCharm dt img {
+    width: 80px;
+  }
+  .page-material #content #introduction #charm03.boxSection .boxCharm dt img {
+    width: 90px;
+  }
+  .page-material #content #detail {
+    margin-bottom: 0;
+    padding: 10px;
+  }
+  .page-material #content #detail .ttlArticle.mb60 {
+    margin-bottom: 0 !important;
+    padding: 20px 0 0;
+    line-height: 28px;
+    font-size: 1.2em;
+    text-align: left !important;
+  }
+  .page-material #content #detail .boxSection {
+    border: none;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .page-material #content #detail .imgMaterial {
+    display: none;
+  }
+  .page-material #content #detail .boxMaterial {
+    width: 100%;
+  }
+  .page-material #content #detail .boxMaterial .boxTwoColumn .fltL {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .page-material #content #detail .boxMaterial .boxTwoColumn .fltR {
+    width: 100%;
+  }
+  .page-material #content #detail .boxMaterial .boxTwoColumn .fltR dd {
+    line-height: 24px;
+  }
+  /*（PC）メインビジュアル 画像切り替え */
+  #topmainMaterial.boxImgChangePC {
+    display: none !important;
+  }
+  /*（スマホ）メインビジュアル 画像切り替え */
+  #topmainMaterialSmp.boxImgChangeSmp {
+    display: block !important;
+    min-width: 100%;
+    margin-bottom: 12% !important;
+  }
+  #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn {
+    bottom: -15%;
+  }
+  #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li {
+    width: 15%;
+    max-width: 75px;
+  }
+  #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li .imgBtn {
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-off.png);
+    padding: 3px;
+  }
+  #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li.on .imgBtn {
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-on.png);
+  }
+  #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li:first-child,
+  #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li:first-child + li {
+    margin-right: 5%;
+  }
+  /*  SERVICE : サービス
+--------------------------------------------- */
+  .page-service #content .boxArticle {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .page-service #content .boxArticle .boxArticleHead {
+    padding: 0 10px;
+  }
+  .page-service #content .boxArticle .boxArticleHead .ttlArticle {
+    margin: 0 0 25px;
+  }
+  .page-service #content .boxArticle .boxArticleHead .ttlArticle img {
+    width: 100%;
+    max-width: 450px;
+  }
+  .page-service #content .boxArticle #boxStepNav ul {
+    display: table;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .page-service #content .boxArticle #boxStepNav ul li {
+    display: table-cell;
+    margin-right: 0;
+  }
+  .page-service #content .boxArticle #boxStepNav ul li a {
+    border-left: none !important;
+    width: 100%;
+    margin-left: 0;
+  }
+  .page-service #content .boxArticle #boxStepNav ul li a:before,
+  .page-service #content .boxArticle #boxStepNav ul li a:after {
+    display: none;
+  }
+  .page-service #content .boxArticle #boxStepNav ul li:first-child a {
+    margin-left: 0;
+    border-left: 1px solid #cccccc !important;
+  }
+  .page-service #content .boxArticle .boxServiceStep {
+    border-color: #e2e1e0;
+  }
+  .page-service #content .boxArticle .boxServiceStep .boxInner {
+    margin-bottom: 20px;
+    padding: 50px 10px 0 10px;
+  }
+  .page-service #content .boxArticle .boxServiceStep .boxInner .imgStep {
+    margin-top: 5px;
+    width: 22%;
+  }
+  .page-service #content .boxArticle .boxServiceStep .boxInner .imgStep:after {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    width: 94%;
+    height: 94%;
+  }
+  .page-service #content .boxArticle .boxServiceStep .boxInner .boxStep {
+    width: 70%;
+  }
+  .page-service #content .boxArticle .boxServiceStep .boxInner .boxStep dt {
+    margin-bottom: 10px;
+  }
+  .page-service #content .boxArticle .boxServiceStep .boxInner .boxStep dd {
+    line-height: 26px;
+    font-size: 0.9em;
+  }
+  .page-service #content .boxArticle .boxServiceStep .boxInner:before {
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/service/icn-arw-smp.gif);
+    background-size: 50%;
+  }
+  .page-service #content .boxArticle #boxStepNav.fixed {
+    top: 5px;
+  }
+  .page-service #content .boxArticle #step01.boxServiceStep .boxInner {
+    padding-top: 50px;
+  }
+  .page-service #content .boxArticle #step01.boxServiceStep .boxInner .boxStep {
+    width: 70%;
+  }
+  .page-service #content .boxArticle #step01.boxServiceStep .boxInner .boxStep dt img {
+    width: 150px;
+  }
+  .page-service #content .boxArticle #step02.boxServiceStep .boxStep dt img {
+    width: 120px;
+  }
+  .page-service #content .boxArticle #step03.boxServiceStep .boxStep dt img {
+    width: 160px;
+  }
+  .page-service #content .boxArticle #step04.boxServiceStep .boxStep dt img {
+    width: 240px;
+  }
+  .page-service #content .boxArticle #step05.boxServiceStep .boxStep dt img {
+    width: 80px;
+  }
+  .page-service #content .boxArticle #step06.boxServiceStep .boxStep dt img {
+    width: 65px;
+  }
+  .page-service #content .boxArticle #step07.boxServiceStep .boxStep dt img {
+    width: 120px;
+  }
+  .page-service #content .boxArticle #step08.boxServiceStep .boxStep dt img {
+    width: 180px;
+  }
+  /*  REFORM PLAN : リフォームプラン
+--------------------------------------------- */
+  .page-plan #content {
+    /* ---- 選べる5つのスタイル ---- */
+    /* --- 自由設計プラン --- */
+  }
+  .page-plan #content .boxPlanSelect,
+  .page-plan #content .boxStyleSelect {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .page-plan #content .boxPlanSelect > p,
+  .page-plan #content .boxStyleSelect > p {
+    margin-bottom: 20px !important;
+    text-align: left;
+  }
+  .page-plan #content .boxPlanSelect > p br,
+  .page-plan #content .boxStyleSelect > p br {
+    display: none;
+  }
+  .page-plan #content .boxPlanSelect {
+    margin-bottom: 45px !important;
+  }
+  .page-plan #content .boxPlanSelect > p {
+    padding-top: 0 !important;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn {
+    width: 100%;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn li {
+    width: 48%;
+    vertical-align: top;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn li:first-child {
+    margin-right: 5px;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn li a {
+    width: 100%;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn li p {
+    width: 100%;
+    padding: 5px 5px 0;
+    font-size: 0.7em;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn li p:before {
+    bottom: -34px;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn p .txtMain {
+    top: 3px;
+    font-size: 1.3em;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn a p .txtMain:before {
+    left: -23px;
+    bottom: -5px;
+    background-size: 100%;
+    width: 18px;
+    height: 18px;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn a p span {
+    margin-left: 20px;
+  }
+  .page-plan #content .boxPlanSelect .boxSelectBtn p .txtSub {
+    top: -7px;
+  }
+  .page-plan #content .boxStyleSelect {
+    margin-bottom: 20px !important;
+    /* タイトル：選べる5つのスタイル */
+    /* -- スタイル選択エリア -- */
+  }
+  .page-plan #content .boxStyleSelect > h2 {
+    margin-bottom: 10px !important;
+    font-size: 1.3em;
+  }
+  .page-plan #content .boxStyleSelect > p {
+    padding-bottom: 25px !important;
+    font-size: 0.9em;
+  }
+  .page-plan #content .boxStyleSelect .bgDotBtm {
+    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot-small.gif);
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn {
+    width: 100%;
+    padding-bottom: 10px !important;
+    text-align: left;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn ul {
+    width: 100%;
+    margin: 0;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn ul li {
+    width: 32%;
+    margin: 0 0 10px;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn li .btnImg {
+    display: none;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn li:nth-child(1) .btnTxt {
+    width: 70px;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn li:nth-child(2) .btnTxt {
+    width: 80px;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn li:nth-child(3) .btnTxt {
+    width: 75px;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn li:nth-child(4) .btnTxt {
+    width: 90px;
+  }
+  .page-plan #content .boxStyleSelect .boxSelectBtn li:nth-child(5) .btnTxt {
+    width: 120px;
+  }
+  .page-plan #content .boxArticle {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .page-plan #content .boxArticle .boxArticleHead {
+    background-size: 100%;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  .page-plan #content #basic-style .boxArticleHead .ttlArticle img {
+    width: 120px;
+  }
+  .page-plan #content #natural-style .boxArticleHead .ttlArticle img {
+    width: 150px;
+  }
+  .page-plan #content #italian-style .boxArticleHead .ttlArticle img {
+    width: 150px;
+  }
+  .page-plan #content #japanese-style .boxArticleHead .ttlArticle img {
+    width: 160px;
+  }
+  .page-plan #content #vintage-style .boxArticleHead .ttlArticle img {
+    width: 200px;
+  }
+  .page-plan #content .boxArticle .boxSection {
+    padding: 0 10px;
+  }
+  .page-plan #content .boxArticleHead + .boxSection > p:first-child {
+    margin-bottom: 20px !important;
+    line-height: 24px !important;
+    text-align: left !important;
+  }
+  .page-plan #content .boxArticle .boxSection > p br {
+    display: none;
+  }
+  .page-plan #content .boxInteriorList {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .page-plan #content .boxInteriorList li {
+    width: 47%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .page-plan #content .boxInteriorList li dl dd {
+    font-size: 0.9em;
+  }
+  .page-plan #content .boxInteriorList li:nth-child(odd) {
+    margin-right: 10px;
+  }
+  .page-plan #content .boxFreePlan {
+    margin-bottom: 30px !important;
+  }
+  .page-plan #content .boxFreePlan .fltL {
+    width: 100%;
+    float: none !important;
+  }
+  .page-plan #content .boxFreePlan .ttlArticle {
+    margin-bottom: 40px !important;
+    padding: 0 10px;
+    line-height: 28px;
+  }
+  .page-plan #content .boxFreePlan .fltR {
+    float: none !important;
+    margin: 0 !important;
+    text-align: center;
+  }
+  .page-plan #content .boxFreePlan dt {
+    margin-bottom: 15px !important;
+  }
+  .page-plan #content .boxFreePlan dd {
+    line-height: 24px;
+  }
+  .page-plan #content .boxFreePlan dd > p {
+    margin-bottom: 20px !important;
+  }
+  .page-plan #content #works01 .boxArticleHead .ttlArticle img {
+    width: 120px;
+  }
+  /*  WORKS : 施工事例
+--------------------------------------------- */
+  .boxWorks {
+    margin-bottom: 0;
+  }
+  .boxWorks .boxSection {
+    /* ----- 画像切り替え02 ----- */
+    /* ----- PICK UP画像横並び ----- */
+  }
+  .boxWorks .boxSection .ttlWorks img {
+    width: 100%;
+  }
+  .boxWorks .boxSection .boxImgChange02 {
+    display: block !important;
+  }
+  .boxWorks .boxSection .boxPickUp {
+    margin-bottom: 30px;
+  }
+  .boxWorks .boxSection .boxPickUp li {
+    padding: 10px 10px 8px;
+  }
+  .boxWorksList {
+    position: relative;
+    left: 4px;
+    margin: 0 0 20px;
+  }
+  .boxWorksList li {
+    width: 33%;
+    margin: 0 0 0 -4px;
+  }
+  .boxWorksList li img {
+    width: 100%;
+  }
+  .boxWorksList li span {
+    background-size: 100%;
+    width: 45px;
+    padding-top: 1px;
+    padding-left: 2px;
+    font-size: 0.9em;
+  }
+  .page-works #content .ttl {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  .page-works #content h2.ttl {
+    margin-bottom: 15px;
+    line-height: 26px;
+    font-size: 1.25em;
+  }
+  .page-works #content .bdrOrange {
+    padding: 0 0 10px 0;
+  }
+  .page-works #content p {
+    line-height: 22px;
+  }
+  .page-works #content .boxPostDetail {
+    margin-bottom: 0;
+  }
+  .page-works #content .boxPostDetail .boxPostHead {
+    margin-bottom: 10px;
+    padding: 10px 13px;
+  }
+  .page-works #content .boxPostDetail .boxSection .imgTopMain {
+    margin-bottom: 10px;
+  }
+  .page-works #content .boxPostDetail .boxSection .ttl.bdrOrange + p {
+    margin-bottom: 30px !important;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxRoom {
+    margin-bottom: 20px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxRoom .imgRoom {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxRoom .imgRoom img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxRoom dl {
+    width: 100%;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft {
+    margin-bottom: 10px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft dl {
+    width: 100%;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft dl dt,
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft dl dd {
+    text-align: center;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft dl dt {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft dl dd {
+    margin-bottom: 10px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft .boxBfr dd {
+    margin-bottom: 40px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft .boxBfr dd:after {
+    top: auto;
+    right: 50%;
+    bottom: -30px;
+    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-arw-btm.gif) no-repeat center;
+    background-size: 70%;
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft .boxAft .ttl {
+    background: #00bcd6;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxBfrAft + p {
+    margin-bottom: 40px !important;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxShikouDetail .ttl {
+    font-size: 1.6em;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxShikouDetail dl {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxShikouDetail dl dt,
+  .page-works #content .boxPostDetail .boxSection .boxShikouDetail dl dd {
+    padding: 10px;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxShikouDetail dl dt {
+    width: 40%;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxShikouDetail dl dd {
+    width: 60%;
+  }
+  .page-works #content .boxPostDetail .boxSection .boxShikouDetail .txtTotalCost {
+    padding: 0 15px;
+  }
+  .page-works #content .boxPaging {
+    background: none !important;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .page-works #content #side {
+    padding-top: 0;
+  }
+  .page-works #content #side .boxPostMenu {
+    margin-bottom: 30px;
+  }
+  .page-works #content #side .boxPostMenu .ttlPostMenu {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    letter-spacing: 0;
+  }
+  /* ----- 画像スライド ----- */
+  .boxImgSlide {
+    margin: 0 auto 35px;
+  }
+  .als-boxViewport {
+    width: 100% !important;
+  }
+  .als-boxItem {
+    margin-right: 10px;
+  }
+  /* ---- その他の事例 ----- */
+  .boxOtherWorks {
+    margin-bottom: 0;
+  }
+  .boxOtherWorks .ttl {
+    margin-bottom: 20px;
+  }
+  .boxOtherWorks .boxWorksList {
+    width: 100%;
+    margin-left: -8px;
+  }
+  .boxOtherWorks .boxWorksList li {
+    width: 23.5%;
+    margin-left: 2px;
+    margin-bottom: 2px;
+  }
+  .boxOtherWorks .boxWorksList li span {
+    background-size: 100%;
+    width: 60%;
+    padding: 0 4px;
+  }
+}
+/** fdk 追加分 **/
+.boxContact .btnSubmit {
+  padding-top: 30px;
+  text-align: center;
+}
+.boxContact .btnSubmit input {
+  border: none;
+  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact.png) no-repeat center #534336;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+  height: 30px;
+  padding: 5px 0 8px;
+  line-height: 70px;
+  cursor: pointer;
+}
+.boxContact textarea {
+  width: 100%;
+}
+</style>

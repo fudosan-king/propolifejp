@@ -1,0 +1,10 @@
+
+/* =========== ˆóüİ’èCSS =========== */
+
+body {
+	zoom: 95%;
+}
+
+@media print{
+#printout{display:none;}
+} 

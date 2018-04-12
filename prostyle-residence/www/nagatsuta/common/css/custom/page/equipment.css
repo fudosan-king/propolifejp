@@ -1,0 +1,677 @@
+@charset "utf-8";
+
+
+/*  clearfix  */
+.clearfix:after {
+	content: "."; /* 新しい要素を作る */
+	display: block; /* ブロックレベル要素に */
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	min-height: 1px;
+}
+* html .clearfix {
+	height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+.pc-hide {
+	display: none;
+}
+.mb-10 {
+	margin-bottom: 10px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.ta-c {
+	text-align: center;
+}
+#equipment .content {
+	padding-top: 0;
+}
+#equipment img {
+	max-width: 100%;
+}
+#equipment p {
+	color: #2F2F2F;
+	line-height: 1.7;
+	font-size: 14px;
+}
+.caption {
+	font-family:"ヒラギノ明朝 ProN W6","HiraMinProN-W6","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0.5em 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+h3.pagetitle {
+	text-align: center;
+}
+#equipment .mainphoto {
+	margin-bottom: 13px;
+	text-align: center;
+}
+#equipment .mainphoto img {
+	width: 100%;
+}
+#equipment section {
+	margin: 30px 0 50px 0;
+}
+#equipment section h4 {
+	color: #007072;
+	font-size: 22px;
+	line-height: 1.2;
+	font-family: "ＭＳ Ｐ明朝","MS PMincho","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro",serif;
+	font-weight: normal;
+	margin: 0 auto 15px auto;
+	border-bottom: 1px solid #888888;
+	padding-bottom: 10px;
+}
+#equipment section h4 span {
+	font-size: 15px;
+}
+#equipment section p {
+	line-height: 1.3;
+	font-size: 12px;
+}
+#equipment article header {
+	margin-bottom: 30px;
+}
+#equipment article header p {
+	font-size: 14px;
+}
+#kitchen .row .fl,
+#kitchen .row .fr {
+	margin-bottom: 1em;
+}
+
+#kitchen .row .second .fl,
+#bath .row .second .fl {
+	width: 177px;
+	min-height: 240px;
+	float: left;
+	margin-left: 10px;
+}
+#equipment .attention {
+	font-size: 10px;
+	margin-top: 1em;
+}
+#bath .bath {
+	margin-bottom: 50px;
+}
+#amenity .trunk {
+	border: 1px solid #9bd8dc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+#amenity .trunk h6 {
+	margin-bottom: 10px;
+}
+#amenity .row .first {
+	margin-bottom: 10px;
+}
+#amenity .row .second {
+	margin-bottom: 10px;
+}
+#amenity .row .second .fl {
+	float: left;
+	width: 48%;
+}
+#amenity .row .second .fr {
+	float: right;
+	width: 48%;
+}
+#amenity h5 {
+	margin-bottom: 20px;
+} 
+#amenity .sec01,
+#amenity .sec02 {
+	margin-bottom: 50px;
+}
+#amenity .sec02 .fl,
+#amenity .sec02 .fr,
+#amenity .sec03 .fl,
+#amenity .sec03 .fr {
+	float: left;
+}
+#equipment section#amenity .sec03 .second p {
+	margin: 1em 0 3em;
+}
+#quality .box h5 {
+	background: #c8c9ca;
+	line-height: 24px;
+	position: relative;
+	height: 24px;
+	font-family:"ヒラギノ明朝 ProN W6","HiraMinProN-W6","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+	font-size: 16px;
+	padding-left: 35px;
+	letter-spacing: 1px;
+    font-weight: normal;
+}
+#quality .box h5 span {
+	line-height: 30px;
+	width: 30px;
+	display: inline-block;
+	color: #fff;
+	background: #007072;
+	position: absolute;
+	top: -6px;
+	left: 0;
+	text-align: center;
+	font-size: 14px;
+}
+#quality .box p {
+	margin: 1em 0 2em;
+}
+#quality .clearfix {
+	border-bottom: 1px solid #c8c9ca;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+#quality .clearfix h5 {
+	margin-bottom: 10px;
+	font-family:"ヒラギノ明朝 ProN W6","HiraMinProN-W6","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+	font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: normal;
+
+}
+#amenity .sec03 .fr .attention {
+	margin-bottom: 10px;
+}
+
+
+/*追加*/
+
+#material #sec01 {
+	background: url(../../../img/page/equipment/model-photo01.jpg) no-repeat center bottom;
+	background-size: cover;
+	margin-bottom:2%;
+}
+
+#material #sec01 p {
+	padding: 0 0 7% 5%;
+	font-size:14px;
+}
+
+#material #sec01-2{
+	background-color:rgba( 255, 255, 255, 0.7);
+	width: 400px;
+}
+
+#material #sec01-2 img{
+	padding:20px 20px 0 20px;
+	width: 350px;
+	}
+
+#material #sec02{
+	background-color:#F6F1EB;
+	overflow:hidden;
+	}
+
+#material #sec02 p {
+	padding: 10px 20px 20px 20px;
+}
+
+
+#sec02-1 img{
+	float:left;
+  width: 34.9%;
+	}
+
+#sec02-3{
+	float:left;
+	width:58%;
+	  margin: 3% 2.5% 0px;
+	}
+
+#equipment #sec02-3 h4{
+	font-weight:bold;
+	margin-top:1%;
+	letter-spacing:3px;
+	
+}
+
+
+#equipment #sec02-3 p{
+	padding:0;}
+
+
+.clear{
+	clear:both;
+	}
+
+/*追加おわり*/
+
+
+
+/* PC */
+@media (min-width: 901px) {
+	#kitchen .row .first {
+		width: 580px;
+		float: left;
+	}
+	#kitchen .row .second {
+		width: 375px;
+		float: left;
+	}
+	#kitchen .row .first .fl {
+		width: 353px;
+		float: left;
+	}
+	#kitchen .row .first .fr {
+		width: 175px;
+		float: right;
+	}
+
+	#bath .row .first {
+		width: 335px;
+		float: left;
+	}
+	#bath .row .first img {
+		max-width: 100%;
+	}
+	#bath .row .second {
+		width: 460px;
+		float: left;
+		margin-left: 20px;
+	}
+	#bath .row.powder .second {
+		width: 600px;
+	}
+	#bath .row .second .fl {
+		width: 139px;
+		min-height: 280px;
+	}
+	#bath .row .second .fl.long {
+		width: 274px;
+	}
+	#amenity h5 .line {
+		position: relative;
+		top: -10px;
+		left: 10px;
+	} 
+	#amenity .sec01 .first {
+		float: left;
+		width: 175px;
+	}
+	#amenity .sec01 .second {
+		float: left;
+		width: 360px;
+		margin-right: 15px;
+	}
+	#amenity .sec01 .second .fl,
+	#amenity .sec01 .second .fr {
+		width: 176px;
+	}
+	#amenity .sec01 .therd {
+		float: right;
+		width: 397px;
+	}
+	#amenity .row.sec02 .fl,
+	#amenity .row.sec02 .fr {
+		width: 219px;
+		float: left;
+		margin-left: 28px;
+	}
+	#amenity .row.sec02 .clearfix .fl:first-child {
+		margin-left: 0;
+	}
+	#amenity .sec03 .first {
+		width: 504px;
+		float: left;
+	}
+	#amenity .sec03 .second {
+		width: 423px;
+		float: right;
+	}
+	#amenity .sec03 .fl {
+		width: 45%;
+		margin-bottom: 10px;
+		min-height: 280px;
+	}
+	#amenity .sec03 .fr {
+		width: 45%;
+		float: right;
+		margin-bottom: 10px;
+		min-height: 280px;
+	}
+	#amenity .sec03 .attention {
+		margin-bottom: 20px;
+	}
+	#security .lock .fl {
+		float: left;
+		width: 300px;
+		margin: 15px 0 15px 30px;
+		min-height: 270px;
+	}
+	#security .lock .clearfix .fl.first {
+		margin-left: 0;
+	}
+	#structure .lock .fl {
+		float: left;
+		width: 300px;
+		margin: 15px 0 15px 30px;
+		min-height: 380px;
+	}
+	#security .mainphoto {
+		float: left;
+		margin-right: 20px;
+	}
+	#structure .lock .fl.short {
+		min-height: 250px;
+	}
+	#structure .lock .clearfix .fl.first {
+		margin-left: 0;
+	}
+	#quality .clearfix .ta-c {
+		float: left;
+		margin-right: 50px;
+	}
+	
+/* PC追加 */	
+#material #sec01 {
+		height: 640px;
+		padding: 20px;
+	}
+#material #sec02-2{
+		display:block;
+		}
+		
+		
+
+
+/* PC追加おわり */	
+
+}
+
+
+
+
+
+
+
+/* タブレット */
+@media (min-width: 641px) and (max-width: 900px) {
+	#equipment section h4 {
+		margin: 0 auto 1em auto;
+		width: 100%;
+	}
+	#equipment section p {
+		width: 100%;
+	}
+	#kitchen .row .second > .clearfix {
+		float: left;
+		margin-right: 10px;
+	}
+	#kitchen .row .first .fl {
+		width: 55%;
+		float: left;
+		margin-right: 5%;
+	}
+	#kitchen .row .first .fr {
+		width: 40%;
+		float: right;
+	}
+	#bath .row .second .fl {
+		min-height: 280px;
+	}
+	#amenity .row.sec01 .first {
+		float: left;
+		width: 25%;
+	}
+	#amenity .row.sec01 .second {
+		float: right;
+		width: 72%;
+	}
+	#amenity .row.sec01 .second .fl {
+		width: 176px;
+		margin-right: 20px;
+	}
+	#amenity .row.sec01 .second .fr {
+		width: 176px;
+		float: left;
+	}
+	#amenity .row.sec01 .second {
+		margin-bottom: 30px;
+	}
+	#amenity .row.sec02 .fl,
+	#amenity .row.sec02 .fr {
+		width: 22%;
+		float: left;
+		margin-left: 4%;
+	}
+	#amenity .row.sec02 .clearfix .fl:first-child {
+		margin-left: 0;
+	}
+	#amenity .sec03 .first {
+		width: 48%;
+		float: left;
+	}
+	#amenity .sec03 .second {
+		width: 48%;
+		float: right;
+	}
+	#amenity .sec03 .fl {
+		width: 45%;
+		margin-bottom: 10px;
+		min-height: 240px;
+	}
+	#amenity .sec03 .fr {
+		width: 45%;
+		float: right;
+		margin-bottom: 10px;
+		min-height: 240px;
+	}
+	#amenity .sec03 .attention {
+		margin-bottom: 20px;
+	}
+	#security .lock .fl {
+		float: left;
+		width: 30%;
+		margin: 15px 0 15px 3%;
+		min-height: 230px;
+	}
+	#security .lock .clearfix .fl.first {
+		margin-left: 0;
+	}
+	#structure .lock .fl {
+		float: left;
+		width: 30%;
+		margin: 15px 0 15px 3%;
+		min-height: 350px;
+	}
+	#structure .lock .clearfix .fl.first {
+		margin-left: 0;
+	}
+	#structure .lock .clearfix .fl.short {
+		min-height: 200px;
+	}
+	#quality .clearfix .ta-c {
+		float: left;
+		margin-right: 20px;
+	}
+
+/*タブレット追加*/
+#material #sec01 {
+		padding:20px 20px 300px 20px;
+	}
+	
+	
+#material #sec01-2{
+	background-color:rgba( 255, 255, 255, 0.7);
+	width: 380px;
+	height: 100%;
+}
+
+#material #sec01-2 img {
+  padding: 15px 15px 0 15px;
+}
+
+
+#sec02-3 {
+  margin: 2%% 2.5% 0px;
+}		
+
+#equipment #sec02-3 h4 {
+  margin-bottom: 1%;
+}
+
+
+/*タブレット追加おわり*/
+
+
+}
+
+
+
+
+
+
+
+
+
+/* スマホ */
+@media (max-width: 640px) {
+	#equipment .sp-hide {
+		display: none;
+	}
+	#equipment .pc-hide {
+		display: inline;
+	}
+	#equipment section h4.pc-hide {
+		display: block;
+	}
+	#kitchen .row .first {
+		width: auto;
+		float: none;
+	}
+	#kitchen .row .first .fl {
+		width: auto;
+		float: none;
+	}
+	#kitchen .row .first .fr {
+		width: auto;
+		float: none;
+	}
+	#kitchen .row .second .fl,
+	#bath .row .second .fl {
+		width: 48%;
+		margin-left: 2%;
+	}
+	#bath .row .second .fl.short {
+		min-height: 300px;
+	}
+	#bath .row .therd img {
+		float: left;
+		margin-right: 10px;
+	}
+	#bath .row .second .fl.long {
+		width: 96%;
+		margin: 0 2%;
+	}
+	#amenity .row.sec01 .first img {
+		margin-right: 10px;
+		max-width: 40%;
+		float: left;
+	}
+	#amenity .sec02 .fl {
+		width: 45%;
+		margin-bottom: 10px;
+		min-height: 280px;
+	}
+	#amenity .sec02 .fr {
+		width: 45%;
+		float: right;
+		margin-bottom: 10px;
+		min-height: 280px;
+	}
+	#amenity .sec03 .fr {
+		width: 45%;
+		float: right;
+		margin-bottom: 10px;
+		min-height: 280px;
+	}
+	#amenity .sec03 .fl {
+		width: 45%;
+		margin-bottom: 10px;
+		min-height: 280px;
+	}
+	#amenity .sec03 .attention {
+		margin-bottom: 20px;
+	}
+	#security .lock .fl {
+		float: left;
+		width: 46%;
+		margin: 15px 2%;
+		min-height: 200px;
+	}
+	#security .lock .last {
+	  clear: both;
+	}
+	
+	
+	#structure .lock .fl {
+		float: left;
+		width: 46%;
+		margin: 5px 2%;
+		/*min-height: 360px;*/
+	}
+	#structure .lock .fl:nth-child(2) {
+		margin-bottom: 50px;
+	}
+	#structure .lock .fl:nth-child(4) {
+		margin-bottom: 140px;
+	}
+	#quality .clearfix .ta-c {
+		margin-bottom: 20px;
+	}
+
+/*スマホ追加*/
+#material #sec01 {
+		padding:2% 19% 60% 0;
+		margin-bottom:4%;
+	}
+	
+#material #sec01-2{
+	width: 100%;
+	height: 100%;
+	margin-left:3%;
+	}
+
+#material #sec01-2 img {
+  	padding: 0;
+	}
+	
+#sec02-3 {
+  float:none;  
+  width:94.8%;
+  padding:2%
+  margin: 0;
+}
+#equipment #sec02-3 p {
+padding:0 0 3% 0;
+}
+
+#sec02-1 img {
+	float:none;
+	width:100%;
+	}
+
+#equipment #sec02-3 h4 {
+  margin-bottom: 1%;
+}
+	
+	
+	
+	
+/*スマホ追加おわり*/
+
+}

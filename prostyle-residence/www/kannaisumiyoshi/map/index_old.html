@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="JR関内駅（北口）から徒歩5分の好立地に、プロスタイルウェルス関内住吉町が誕生！女性にも人気の住吉町で、天然無垢材フローリングを採用したデザイナーズマンションです。">
+<META name="keywords" content="新築,分譲,マンション,無垢材フローリング,関内,横浜,徒歩,日本大通り,みなとみらい,プロスタイル">
+<title>【公式】プロスタイルウェルス関内住吉町｜JR京浜東北・根岸線「関内」駅（北口）徒歩5分、横浜市営地下鉄「関内」駅徒歩5分｜プロポライフの新築分譲マンション｜物件概要</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css">
+<link href="../css/map.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB6OX3-9C4o_xEetAtZDmjHJvW6O43Twk&language=ja"></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<!-- bxSlider Javascript -->
+<script src="../js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS -->
+<link href="../css/jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/scrollback.js"></script>
+<link rel="stylesheet" href="../css/jquery.sidr.dark.css" />
+
+<!--sidr.jsの読み込み-->
+<script src="../js/jquery.sidr.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#simple-menu').sidr({
+        side:'right'
+    });
+});
+</script>
+<script>
+function initialize() {
+    var center = new google.maps.LatLng(35.448246, 139.636276); // Center
+
+    var myLatlng = []
+    myLatlng.push(new google.maps.LatLng(35.445529, 139.639500)); // プロスタイルウェルス関内住吉町
+    myLatlng.push(new google.maps.LatLng(35.449469, 139.634570)); // マンションギャラリー
+
+    var title = []
+    title.push('プロスタイルウェルス関内住吉町');
+    title.push('マンションギャラリー');
+
+    var adress = []
+    adress.push('横浜市中区住吉町1丁目４番１・２（地番）'); // プロスタイルウェルス関内住吉町
+    adress.push('〒231-0007 神奈川県横浜市中区弁天通６丁目８５宇徳ビルディング1F'); // マンションギャラリー
+
+    var mapOptions = {
+        center: center,
+        zoom: 16,
+        disableDefaultUI: true,
+    };
+
+    var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+    for (i = 0; i < myLatlng.length; i++){
+        var marker = new google.maps.Marker({
+            position: myLatlng[i],
+            title: title[i],
+        })
+        var logo = ''
+        if (title[i] == 'プロスタイルウェルス関内住吉町'){
+            logo = '<div class="logo"><img src="../img/common/logo.jpg" width="200" alt="PROSTYLE WEALTH"></div> '
+        }
+        var infoContent = logo + '<div class="markerInfo"><span class="title">' + title[i] + '</span>' +
+        '<br><span class="adress">' + adress[i] + '</span></div>';
+        var markerInfo = new google.maps.InfoWindow({
+            content : infoContent
+        });
+        marker.setMap(map);
+        google.maps.event.addListener(marker, 'click', function() {
+            markerInfo.open(map, marker);
+        });
+        google.maps.event.trigger(marker, 'click');
+    }
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+<style type="text/css" media="print">
+    .no-print {
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+<div id="container" class="clearfix">
+
+  <!--　　↓↓↓　ヘッダー　↓↓↓　　-->
+
+  <header>
+    <div class="wrapper">
+    <h1 id="pankuzu" class="no-print">物件概要｜プロスタイルウェルス関内住吉町｜≪新築分譲マンション≫プロポライフ</h1>
+      <div id="logo" class="clearfix">
+        <a href="../index.html"><img src="../img/common/logo.jpg" width="80%" alt="PROSTYLE WEALTH"/></a></div>
+      <a id="simple-menu" class="sponly" href="#sidr"><img src="../img/common/icon.png" width="100%" alt=""/></a>
+      <div id="sidr" class="sponly">
+        <!-- ナビゲーションを<ul>タグで囲います。 -->
+        <ul>
+          <li><span class="title">MENU</span></li>
+          <li><a href="../index.html">トップ</a></li>
+          <li class="no"><a href="#">間取り</a></li>
+          <li class="no"><a href="#">設備・仕様</a></li>
+          <li class="no"><a href="#">周辺環境</a></li>
+          <li class="no"><a href="#">アクセス</a></li>
+          <li><a href="../outline">物件概要</a></li>
+          <li class="no"><a href="#">現地案内図</a></li>
+          <li><a href="http://prostyle-residence.com/kannaisumiyoshi/form/">資料請求</a></li>
+          <!--<li class="active"><a href="#">Menu5</a></li>-->
+          <!--class名に"active"を指定するとボタンを押した状態を表現できます。-->
+        </ul>
+      </div>
+      <div id="contact" class="clearfix"> <img src="../img/common/header_r.jpg" width="326" height="106" alt=""/>
+        <div class="menu clearfix">
+          <div><a href="http://prostyle-residence.com/kannaisumiyoshi/form"><img src="../img/common/sekyu.jpg" width="146" height="32" alt="資料請求"/></a></div>
+          <div class="btn"><a href="../map"><img src="../img/common/access.gif" width="81" height="13"></a></div>
+          <div class="btn"><a href="../outline"><img src="../img/common/sales.gif" width="71" height="14" alt="物件概要"/></a></div>
+        </div>
+      </div>
+    </div>
+    <div id="menubar" class="clearfix">
+      <ul>
+        <a href="../index.html">
+        <li><img src="../img/common/menubtn_top.png" width="42" height="19" alt=""/>
+          <p>TOP</p>
+        </li>
+        </a>
+        <li class="no"><img src="../img/common/menubtn_plan.png" width="43" height="19" alt=""/>
+          <p>PLAN</p>
+          <div class="comingsoon">Coming Soon</div>
+        </li>
+        <li class="no"><img src="../img/common/menubtn_equip.png" width="74" height="19" alt=""/>
+          <p>EQUIPMENT</p>
+          <div class="comingsoon">Coming Soon</div>
+        </li>
+        <li class="no"><img src="../img/common/menubtn_locat.png" width="105" height="19" alt=""/>
+          <p>LOCATION</p>
+          <div class="comingsoon">Coming Soon</div>
+        </li>
+        <li class="last no"><img src="../img/common/menubtn_access.png" width="60" height="19" alt=""/>
+          <p>ACCESS</p>
+          <div class="comingsoon">Coming Soon</div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!--　　↑↑↑　ヘッダー　↑↑↑　　-->
+
+  <!--　　↓↓↓　メインコンテンツ　↓↓↓　　-->
+
+  <div id="maincontents" class="topbdr">
+    <h3><img src="../img/map/tlt.png" height="20" alt="現地案内図"/></h3>
+    <!--　　↑↑↑　Map　↑↑↑　　-->
+    <div id="map-canvas">
+    </div>
+    <div id="banner-map">
+      <img src="../img/map/banner.png" width="960" alt="Map"/>
+    </div>
+    <!--　　↑↑↑　End Map　↑↑↑　　-->
+
+    <!--　　↑↑↑　Button　↑↑↑　　-->
+    <div id="pop_btn" class="no-print">
+      <ul>
+      <li><a href="javascript:print();"><img src="../img/common/btn_print.jpg" alt="印刷する"></a></li>
+      <li class="last"><a href="javascript:close();"><img src="../img/common/btn_close.jpg" alt="閉じる"></a></li>
+      </ul>
+      <div class="clear"></div>
+      </div>
+    <!--　　↑↑↑　End Button　↑↑↑　　-->
+  </div>
+
+  <div class="sponly fmenu"><a href="../index.html"><div>トップ</div></a>
+    <div style="color: #d5d5d5;">間取り</div>
+    <div style="color: #d5d5d5;">設備・仕様</div>
+    <div style="color: #d5d5d5;">周辺環境</div>
+    <div style="color: #d5d5d5;">アクセス</div>
+    <a href="../outline"><div>物件概要</div></a>
+    <div style="color: #d5d5d5;">現地案内図</div>
+    <a href="http://prostyle-residence.com/kannaisumiyoshi/form/"><div>資料請求</div></a>
+  </div>
+
+  <!--　　↑↑↑　メインコンテンツ　↑↑↑　　-->
+
+  <!--　　↓↓↓　　　フッター　　　↓↓↓　　-->
+
+  <footer class="clearfix no-print">
+    <div id="f_menu">| <a href="../index.html">トップ</a> | <span style="color: #b4b4b4;">間取り</span> | <span style="color: #b4b4b4;">設備・仕様</span> | <span style="color: #b4b4b4;">周辺環境</span> | <span style="color: #b4b4b4;">アクセス</span> | <a href="../outline">物件概要</a> | <span style="color: #b4b4b4;">現地案内図</span> | <a href="http://prostyle-residence.com/kannaisumiyoshi/form/">資料請求</a> | </div>
+    <div class="wrapper">
+      <div id="f_info" class="clearfix"> <a href="https://www.propolife.co.jp/" target="_blank"><img src="../img/common/footer_logo01.gif" alt=""/></a> </div>
+    </div>
+    <div id="banner">
+      <a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロポライフの新築マンション<br class="sponly">「プロスタイル」シリーズ</a><br>
+      <a href="https://www.prostyle-residence.com/" target="_blank"><img src="../img/banners/bnr_prostyle.png" width="235" height="74" alt=""/></a>
+      <a href="https://www.prostyle-residence.com/minamimachida/" target="_blank"><img src="../img/banners/bnr_motosumiyoshi.png" width="235" height="74" alt=""/></a>
+      <a href="https://www.prostyle-residence.com/nagatsuta/" target="_blank"><img src="../img/banners/bnr_nagatsuta.png" width="235" height="74" alt=""/></a>
+
+    </div>
+
+    <hr>
+    <div id="copyright">Copyright(C)2014 PROPOLIFE.INC. ALL rights reserved. </div>
+  </footer>
+
+  <!--　　↑↑↑　　　フッター　　　↑↑↑　　-->
+
+</div>
+
+<!--　　↓↓↓　トップ戻るボタン　↓↓↓　　-->
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+     //まずトップに戻るを消しておきます。
+    $("#back-top").hide();
+
+     //スクロールされたら
+    $(window).scroll(function () {
+        //100pxいったら
+        if ($(this).scrollTop() > 100) {
+            //トップに戻るをフェードイン
+            $('#back-top').fadeIn();
+        //100pxいかなかったら
+        } else {
+            //隠す
+            $('#back-top').fadeOut();
+        }
+    });
+
+     //トップに戻るをクリックしたら
+    $('#back-top a').click(function () {
+        //スムーズに上に戻る
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+});
+</script>
+<div id="bt" class="no-print"><img src="../img/common/btn_pt.png" width="55" height="54" alt=""/></div>
+
+<!--　　↑↑↑　トップ戻るボタン　↑↑↑　　-->
+
+</body>
+</html>

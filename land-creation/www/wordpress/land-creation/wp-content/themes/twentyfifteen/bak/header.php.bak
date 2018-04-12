@@ -1,0 +1,98 @@
+<?php
+/**
+ * The template for displaying the header
+ *
+ * Displays all of the head element and everything up until the "site-content" div.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fifteen
+ * @since Twenty Fifteen 1.0
+ */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?> class="no-js">
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<!--[if lt IE 9]>
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+	<![endif]-->
+	<script>(function(){document.documentElement.className='js'})();</script>
+<link href="/land-creation/wp-content/themes/twentyfifteen/style.css" rel="stylesheet" type="text/css">
+<link href="http://www.landcreation.co.jp/static/common/css/reset.css" rel="stylesheet" type="text/css">
+<link href="http://www.landcreation.co.jp/static/common/css/clearfix.css" rel="stylesheet" type="text/css">
+<link href="http://www.landcreation.co.jp/static/common/css/common.css" rel="stylesheet" type="text/css">
+<link href="http://www.landcreation.co.jp/static/common/css/table.css" rel="stylesheet" type="text/css">
+<link href="http://www.landcreation.co.jp/static/common/css/contents.css" rel="stylesheet" type="text/css">
+<link href="http://www.landcreation.co.jp/static/common/css/sp.css" rel="stylesheet" type="text/css">
+<link href="http://www.landcreation.co.jp/static/common/css/dropdownmenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://www.landcreation.co.jp/static/common/js/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="http://www.landcreation.co.jp/static/common/js/tell_link.js"></script>
+	
+</head>
+
+<body <?php body_class(); ?>>
+<header class="wrapper">
+<h1 class="logo"><span style="display:none;">さいたま市の新築一戸建て・中古一戸建て・マンション・土地の不動産情報はランドクリエイションにお任せ下さい。</span><a href="http://www.landcreation.co.jp/"><img src="http://www.landcreation.co.jp/static/img/common/logo.png" width="296" height="57" alt="株式会社ランドクリエイション　不動産総合情報サービス"/></a></h1>
+<div class="freedial"><img class="tel-link" src="http://www.landcreation.co.jp/static/img/common/freedial.png" width="276" height="52" alt="0120-15-3718"/></div>
+<a href="http://www.landcreation.co.jp/contact" class="mail not_print"><img src="http://www.landcreation.co.jp/static/img/common/btn_mail.png" width="82" height="41" alt="お問い合せ"/></a>
+
+<a href="#toggle" class="menubtn sp"><img src="http://www.landcreation.co.jp/static/img/common/sp/menu_open.png"></a>
+
+<ul class="dropdown-menu">
+  <li><a href="http://www.landcreation.co.jp/"><img src="http://www.landcreation.co.jp/static/img/common/menu_home.png" width="28" height="63" alt=""/></a></li>
+  <li><a href="http://www.landcreation.co.jp/search"><img src="/static/img/common/menu_search.png" width="60" height="63" alt=""/></a></li>
+  <li><a class="nolink"><img src="http://www.landcreation.co.jp/static/img/common/menu_renovation.png" width="146" height="63" alt=""/></a></li>
+  <li><a class="nolink"><img src="http://www.landcreation.co.jp/static/img/common/menu_knowledge.png" width="132" height="63" alt=""/></a></li>
+  <li><a class="nolink"><img src="http://www.landcreation.co.jp/static/img/common/menu_rental_management.png" width="60" height="63" alt=""/></a></li>
+  <li><a class="nolink"><img src="http://www.landcreation.co.jp/static/img/common/menu_conference.png" width="162" height="63" alt=""/></a></li>
+  <li><a href="#" class="nolink"><img src="http://www.landcreation.co.jp/static/img/common/menu_blog.png" width="46" height="63" alt=""/></a></li>
+  <li><a href="http://www.landcreation.co.jp/company/index.html" class="last"><img src="http://www.landcreation.co.jp/static/img/common/menu_company.png" width="62" height="63" alt=""/></a></li>
+</ul>
+<script>
+$('.menubtn').on({
+  click:function(e){
+    e.preventDefault();
+
+    var cls = $(".dropdown-menu").attr("class");
+
+    if(cls.match(/open/)){
+      $(".dropdown-menu").removeClass("open");
+    }
+    else{
+      $(".dropdown-menu").addClass("open");
+    }
+  }
+});
+</script>
+
+</header>
+<div class="menubar clearfix">
+  <ul>
+  <li><a class="home" href="http://www.landcreation.co.jp/"></a></li>
+  <li><a class="search" href="http://www.landcreation.co.jp/search"></a></li>
+  <li><a class="renova nolink" href="#"></a></li>
+  <li><a class="know nolink" href="#"></a></li>
+  <li><a class="manage nolink" href="#"></a></li>
+  <li><a class="conf nolink" href="#"></a></li>
+  <li><a class="blog nolink" href="#"></a></li>
+  <li class="last"><a class="company" href="http://www.landcreation.co.jp/company/index.html"></a></li>
+  </ul>
+</div>
+<div class="pankuzu wrapper"><a href="http://www.landcreation.co.jp/">トップ</a>　＞　ブログ</div>
+<div class="contents wrapper">
+
+  <h2><img src="http://www.landcreation.co.jp/static/img/h/h_blog.png" height="37" alt="ブログ"/></h2>
+  <div class="box blog">
+    <h3><img src="http://www.landcreation.co.jp/static/img/blog/blog_hdr.png" width="958" height="200" alt="ランドクリエイション　スタッフブログ"></h3>
+
+<div id="page" class="hfeed site">
+
+	<div id="sidebar" class="sidebar">
+
+		<?php get_sidebar(); ?>
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">

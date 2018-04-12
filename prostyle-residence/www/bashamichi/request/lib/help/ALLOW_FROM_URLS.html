@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=Shift_JIS">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>外部サーバからの利用禁止設定</title>
+		<style type="text/css" media="screen"><!--
+table	{font-size: 12px}
+span	{font-size: 14px; font-weight: bold;}--></style>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<span>外部サーバからの利用禁止設定</span>
+		<hr>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<p>この CGI を使って、まったく別のページから勝手にメールを送信されないように、フォームのURLを限定することができます。CGI の利用を許可するフォームの URL を指定して下さい。指定がない場合には、制限は一切かかりません。ここで指定する URL のパターンマッチは、すべて前方一致です。</p>
+					<p>複数指定する場合には、改行を入れて記述してください。</p>
+					<p><textarea rows="2" name="ALLOW_FROM_URLS" cols="27">http://www.futomi.com/
+http://futomi.com/</textarea></p>
+					<p>この機能は、ブラウザーが送ってくる参照元URL（HTTP_REFERER）を使っています。もしこの機能を使った場合、HTTP_REFERERを送信しないブラウザーからアクセスした場合、エラーとなってしまいますので、ご注意ください。（携帯電話や、Norton Internet Security がインストールされたパソコン等） </p>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<button name="buttonName" type="button" onclick="javascript:window.close()">閉じる</button>
+	</body>
+
+</html>

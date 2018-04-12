@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+
+@media screen and (max-width: 767px) {
+
+.modal-button-area {
+
+    margin-bottom: 18%;
+}
+	
+.page-plan-detail #conversion_btn {
+    position: fixed;
+    right: auto;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    background: rgba(140, 81, 81,0.3);
+    padding: 2.5%;
+}
+.page-plan-detail #conversion_btn #fix_btn {
+    display: block;
+}
+
+.page-plan-detail #conversion_btn #float_btn {
+    display: none;
+}
+	
+	
+/*.modal-button-area {
+
+    margin-bottom: 18%;
+}*/
+	
+.page-map #conversion_btn {
+    position: fixed;
+    right: auto;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    background: rgba(140, 81, 81,0.3);
+    padding: 2.5%;
+}
+.page-map #conversion_btn #fix_btn {
+    display: block;
+}
+
+.page-map #conversion_btn #float_btn {
+    display: none;
+}
+	
+	
+	
+	
+	
+}

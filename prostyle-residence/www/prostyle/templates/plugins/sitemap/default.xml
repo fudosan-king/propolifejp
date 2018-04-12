@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>{$freo.core.http_url}</loc>
+		<lastmod><!--{if $sitemap_update != null}-->{$sitemap_update|date_format:'%Y-%m-%d'}<!--{else}-->{$user_update|date_format:'%Y-%m-%d'}<!--{/if}--></lastmod>
+		<changefreq>always</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<!--{foreach from=$articles|smarty:nodefaults item='article'}-->
+	<url>
+		<loc>{$freo.core.http_url}page/{$article.id}</loc>
+		<lastmod>{$article.modified|date_format:'%Y-%m-%d'}</lastmod>
+		<changefreq>always</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<!--{/foreach}-->
+	<!--{if $entry_articles|smarty:nodefaults}-->
+	<!--{foreach from=$entry_articles|smarty:nodefaults item='entry_article'}-->
+	<url>
+		<loc>{$freo.core.http_url}view/{if $entry_article.code}{$entry_article.code}{else}{$entry_article.id}{/if}</loc>
+		<lastmod>{$entry_article.modified|date_format:'%Y-%m-%d'}</lastmod>
+		<changefreq>always</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<!--{/foreach}-->
+	<!--{/if}-->
+</urlset>
+
+
+

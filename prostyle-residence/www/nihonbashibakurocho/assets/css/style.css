@@ -369,7 +369,7 @@ body.scroll-fix{padding-top:5rem;}
 .site-footer .footer-content{width:100%;padding:3rem 0;background-color:#fff;content:"";display:table;}
 }
 
-.site-footer .footer-content div{display: table-cell;vertical-align: middle;text-align: center;width: 50%;box-sizing: border-box;padding: 0 20px;}
+.site-footer .footer-content div{display: table-cell;vertical-align: middle;text-align: center;/**width: 50%;**/ box-sizing: border-box;padding: 0 20px;}
 .site-footer .footer-content .compnany-list{font-size:0;text-align:center;width:100%;}
 .site-footer .footer-content .compnany-list li{display:inline-block;vertical-align:top;}
 .site-footer .footer-content .compnany-list li.company01{max-width:26.4rem;margin-right:4rem;}

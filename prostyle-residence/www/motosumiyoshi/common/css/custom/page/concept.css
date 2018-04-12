@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+body#location article{
+	background:#FFF;
+	color:#666;
+}
+
+body#concept article{
+	background:#FFF;
+	color:#666;
+}
+
+.pc_img img{
+	width:98%;
+	display:block!important;
+	margin:0 auto ;
+	text-align:center;
+}
+.sp_img img{
+	display:none!important;
+	margin:0 auto;
+	text-align:center;
+}
+.pc-cont {
+	display: block;
+}
+.sp-cont {
+	display: none;
+}
+@media screen and (max-width:640px){
+.pc_img img{
+	display:none!important;
+	margin:0 auto;
+	text-align:center;
+}
+.sp_img img{
+	width:98%;
+	display:block!important;
+	margin:0 auto;
+	text-align:center;
+}
+.pc-cont {
+	display: none;
+}
+.sp-cont {
+	display: block;
+}
+}
+.page-title1 {
+	margin: 0 0 20px;
+}
+.page-title2 {
+	padding: 0 0 5px;
+	margin: 0 0 20px;
+	border-bottom: 1px solid #ccc;
+}
+.note {
+	font-size: 10px;
+}
+.main-visual {
+	margin: 0 0 20px;
+	position: relative;
+}
+.main-visual h1 {
+	position: absolute;
+	top: 0;
+	left:0;
+}
+.main-visual h1 img {
+	width: 100%;
+	height: auto;
+}
+.main-visual p {
+	padding: 13% 40% 41.8% 7%;
+	z-index: 2000;
+	position: relative;
+	font-size: 12px;
+	line-height: 2.2;
+}
+.main-visual p span {
+	font-size: 14px;
+}
+.img img {
+	width: 100%;
+	height: auto;
+}
+@media screen and (max-width:900px){
+	.main-visual {
+		margin: 0 0 30px;
+		background-color: #f2f2e5;
+	}
+	.main-visual h1 {
+		position: static;
+	}
+	.main-visual p {
+		padding: 3%;
+		line-height: 1.75;
+	}
+}
+.con01 {
+	margin: 0 0 50px;
+}
+@media screen and (max-width:640px){
+	.con01 {
+		margin: 0 0 15px;
+	}
+}
+
+.con02 {
+	margin: 0 0 30px;
+}
+.con02 .img {
+	margin: 0 0 20px;
+}
+.con02 h4 {
+	margin: 0 0 15px;
+}
+.con02 h4 img {
+	max-width: 648px;
+	width: 100%;
+	height: auto;
+}
+
+.con03 {
+	margin: 0 0 30px;
+}
+.con0301 {
+	padding: 20px 0 0;
+	margin: 0 0 30px;
+}
+.con0301 .left-cont {
+	width: 43.44%;
+	float: left;
+}
+.con0301 .left-cont p {
+	padding: 10.8% 0 0 3.6%;
+}
+@media screen and (max-width:640px){
+	.con0301 .left-cont {
+		width: 100%;
+		float: none;
+		border-bottom: 1px solid #ccc;
+	}
+	.con0301 .left-cont p {
+		padding: 0 0 1% 1%;
+	}
+}
+.con0301 .right-cont {
+	width: 54.38%;
+	padding: 0 0 0 2%;
+	float: right;
+	border-left: 1px solid #ccc;
+}
+@media screen and (max-width:640px){
+	.con0301 .right-cont {
+		width: 100%;
+		padding: 1%;
+		float: none;
+		border: none;
+	}
+}
+.con0301 .right-cont h4 {
+	margin: 0 0 10px;
+}
+@media screen and (max-width:640px){
+	.con0301 .right-cont h4 img {
+		width: 100%;
+		height: auto;
+	}
+}
+.con0301 .right-cont .img {
+	width: 52.3%;
+	float: left;
+}
+.con0301 .right-cont .right-cont {
+	width: 45.7%;
+	padding: 0;
+	float: right;
+	border: none;
+}
+.con0301 .right-cont .right-cont p {
+	line-height: 1.5;
+}
+@media screen and (max-width:640px){
+	.con0301 .right-cont .right-cont p {
+		font-size: 11px;
+		line-height: 1.3;
+	}
+}
+
+.con0302 {
+	margin: 0 0 10px;
+}
+.con0302 li {
+	width: 34.27%;
+	margin: 0 1% 0 0;
+	float: left;
+}
+@media screen and (max-width:640px){
+	.con0302 li {
+		width: 48.47%;
+	}
+	.con0302 li.sp-right {
+		margin: 0;
+	}
+}
+.con0302 .right {
+	width: 27.33%;
+	/*width: 28.33%;*/
+	float: right;
+}
+.con0302 .right p {
+	margin: 0 0 30px;
+}
+
+.con0303 {
+	margin: 0 0 10px;
+}
+.con0303 .img {
+	width: 69.69%;
+	float: left;
+}
+@media screen and (max-width:640px){
+	.con0303 .img {
+		width: 100%;
+		margin: 0 0 15px;
+		float: none;
+	}
+}
+.con0303 .right-cont {
+	width: 28.33%;
+	float: right;
+}
+@media screen and (max-width:640px){
+	.con0303 .right-cont {
+		width: 100%;
+		float: none;
+	}
+}
+.con0303 .right-cont h3 {
+	margin: 0 0 10px;
+}
+@media screen and (max-width:640px){
+	.con0303 .right-cont h3 img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.con04 h4 {
+	margin: 0 0 15px;
+}
+@media screen and (max-width:640px){
+	.con04 h4 img {
+		width: 100%;
+		height: auto;
+	}
+}
+.con04 .img {
+	margin: 0 0 30px;
+}
+.con04 .con0401 {
+	position: relative;
+}
+.con04 .con0401 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.con04 .con0401 .lead {
+	position: relative;
+	z-index: 2000;
+	padding: 33.5% 50% 3.3% 5%;
+	/*padding: 33.5% 50% 3.3% 3%;*/
+	margin: 0;
+}
+@media screen and (max-width:900px){
+	.con04 .con0401 img {
+		position: static;
+	}
+	.con04 .con0401 .lead {
+		padding: 0;
+		margin: 0 0 15px 10px;
+	}
+}

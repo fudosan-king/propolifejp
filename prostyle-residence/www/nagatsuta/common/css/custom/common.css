@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+img{
+	border:none;
+}
+nav ul {
+    list-style:none;
+}
+@media print {
+* html body{zoom:67%;}
+}
+html {
+	width: 100%;
+	height: auto;
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family:"メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	height:auto;
+	background:#fff;
+	/*background:#FFF url(../../img/element/content_bg.jpg) center top repeat;*/
+	position:relative;
+    line-height:1;
+	-webkit-text-size-adjust: none;
+}
+
+
+
+/* general params
+---------------------------------*/
+p {
+	color:#222;
+	font-size: 1.2em;
+	line-height: 1.8;
+	letter-spacing: 0;
+}
+
+.note {
+	font-size:12px;
+}
+
+a:link,
+a:visited {
+	font-size: 1.2em;
+	line-height: 1.8;
+	letter-spacing: 0;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	text-decoration: underline;
+}
+li {
+	list-style: none;
+}
+
+h1.site{
+	text-align:left;
+	width:960px;
+	bottom:-40px;
+	left:0px;
+	z-index:9999;
+	font-weight:normal;
+	font-size:10px;
+	color:#999;
+	/*border-bottom:solid 1px #ccc;*/
+	padding:5px 0;
+    text-indent: 5px;
+	margin:0 auto;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+h1.site{
+	text-align:center;
+	width:100%;
+	position:absolute;
+	bottom:-40px;
+	left:0px;
+	z-index:9999;
+	font-weight:normal;
+	font-size:10px;
+	color:#999;
+	border-bottom:none;
+	padding:10px 0;
+}
+}
+/*---------------------------------*/
+
+
+/* !pageTop
+---------------------------------------------------------- */
+#page-top {
+	position: fixed;
+	bottom: 63px;
+	right: 20px;
+	font-size: 77%;
+	text-align:right;
+	z-index:99999;
+}
+
+#page-top a {
+	width:60px;
+	height:55px;
+	background: url(../../img/element/btn_top_no.jpg) no-repeat;
+    display: block;
+}
+
+#page-top a:hover {
+	background: url(../../img/element/btn_top_on.jpg) no-repeat;
+}
+
+.none{
+	display:none;
+}
+
+.map_content{
+    width: 100%;
+    margin: auto;
+}
+
+.map_content img{
+    display: table;
+    margin: 0 auto;
+}
+#update ul li span a {
+	text-decoration: underline;
+}

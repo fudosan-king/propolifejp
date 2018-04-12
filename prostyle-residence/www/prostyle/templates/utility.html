@@ -1,0 +1,36 @@
+<div id="utility">
+<h2>ユーティリティ</h2>
+
+
+<div class="utility">
+<h3>NEWS</h3>
+<div class="content">
+<dl>
+<!--{foreach from=$entries|smarty:nodefaults item='entry'}-->
+<!--{if $entry_associates[$entry.id].category.news}-->
+<dt>{$entry.datetime|date_format:'%Y.%m.%d'}</dt>
+
+<dd>
+<div style="font-weight: bold;">
+{$entry.title}
+</div>
+<!--{if $entry_texts[$entry.id].excerpt}-->
+{$entry_texts[$entry.id].excerpt|smarty:nodefaults}
+<!--{/if}-->
+<div style="float: right;">
+<!--{if $freo.user.authority == 'root' or $freo.user.id == $entry.user_id}-->
+<a href="{$freo.core.http_file}/index.php/admin/entry_form?id={$entry.id}"><img src="{$freo.core.http_url}images/icons/edit.png" alt="編集" title="編集" width="16" height="16" /></a>
+<!--{/if}-->
+</div>
+<br style="clear: both;" />
+</dd>
+<!--{/if}-->
+<!--{/foreach}-->
+</dl>
+</div>
+</div>
+
+
+
+
+</div>

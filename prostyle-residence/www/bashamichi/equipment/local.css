@@ -1,0 +1,174 @@
+
+/* ------------------------------------------------ */
+/* -- サイト 個別設定用CSS -- */
+/* ------------------------------------------------ */
+
+#gNavi li#gNav04 a {margin-top:-50px;}
+
+
+h2 {
+	font-size:14px;
+	color:#333;
+	font-weight:bold;
+	width:880px;
+	margin:0 0 10px 0;
+	padding-top:2px;
+}
+
+#second{ line-height:150%; _font-size:12px; }
+
+.caps{
+	font-size:9px;
+}
+
+p span.bd_n{
+	border:none;
+	display:inline;}
+
+#ki_box,#ba_box,#eco_box,#ame_box,#mr_Box {
+	width:910px;
+}
+
+.ki_txt{
+	width:174px;
+	margin:5px 0;
+}
+
+.ki_txt span{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.ba_txt01{
+	width:223px;
+	margin:5px 0;
+}
+
+.ba_txt02{
+	width:144px;
+	margin:5px 0;
+}
+
+.ba_txt01 span,.ba_txt02 span,.po_txt01 span,.po_txt02 span,.po_txt03 span{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.po_txt01{
+	width:190px;
+	margin:5px 0;
+}
+
+.po_txt02{
+	width:100px;
+	margin:5px 0;
+}
+
+.po_txt03{
+	width:244px;
+	margin:5px 0;
+}
+
+.eco_txt01{
+	width:95px;
+	margin:0 0 5px;
+}
+
+.eco_txt02{
+	width:125px;
+	margin:0 0 5px;
+}
+
+.eco_txt03{
+	width:150px;
+	margin:0 0 5px;
+}
+
+.eco_txt01 span,.eco_txt02 span,.eco_txt03 span{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.qu_txt01{
+	width:320px;
+	margin:0 0 5px;
+}
+
+.qu_txt02{
+	width:655px;
+	margin:0 0 5px;
+}
+
+.qu_txt01 span,.qu_txt02 span{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.w655{
+	width:655px;
+}
+
+.w80{
+	width:80px;
+}
+
+.ame_ttl01{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.ame_txt01{
+	width:655px;
+	margin:5px 0;
+}
+
+.ame_ttl02{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.ame_txt02{
+	width:230px;
+	margin:5px 0;
+}
+
+.ame_txt02 span{
+	background:#666666;
+	padding:2px 5px;
+	color:#ffffff;
+}
+
+.sec_ttl01{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.sec_txt01{
+	width:180px;
+	margin:5px 0;
+}
+
+.sec_txt02{
+	width:80px;
+	margin:5px 0;
+}
+
+.st_ttl{
+	border-bottom:1px solid #CCC;
+	display:block;
+}
+
+.st_txt01{
+	width:390px;
+	margin:5px 0;
+}
+
+.st_txt02{
+	width:500px;
+	margin:5px 0;
+}
+
+
+#price_banner{
+	display:none;
+	}

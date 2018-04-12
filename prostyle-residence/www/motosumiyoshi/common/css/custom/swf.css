@@ -1,0 +1,25 @@
+#flash{
+	position: relative;
+	/*min-width:960px;*/
+}
+#flash:before{
+  	padding-top: 39.7%;
+    display: block;
+    content: "";
+	max-width:1600px;
+}
+#flash > #flashcontent{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+#mainV:before {
+content: "";
+display: block;
+padding-top: 0;
+padding-top: 0\9;
+}
+
+

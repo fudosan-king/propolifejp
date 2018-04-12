@@ -1,0 +1,72 @@
+{include file='header.html'}
+<br style="clear: both;" />
+<!--
+<h2><img src="{$freo.core.http_url}files/medias/common/title_gallery.jpg" alt="PROSTYLE GALLERY" title="PROSTYLE GALLERY" /></h2>
+-->
+
+<div id="gallery_view">
+
+
+<div class="gallery_view">
+<!--{if $entry.file and $entry.image}-->
+<!--{elseif $entry.file and $entry_file.width and $entry_file.height}-->
+<img src="{$freo.core.http_url}{$smarty.const.FREO_FILE_DIR}entry_files/{$entry.id}/{$entry.file}" class="gallery_view_img" alt="{$entry.memo|default:$entry.file}" title="{$entry.memo|default:$entry.file}" width="{$entry_file.width}" height="{$entry_file.height}" />
+<!--{/if}-->
+
+
+<div class="gallery_entry">
+<h3>{$entry.title}</h3>
+<p>{$entry_associate.option.midashi|smarty:nodefaults|nl2br}</p>
+
+
+<div class="top_gallery_shousai">
+<dl>
+<dt>所在地</dt>
+<dd>{$entry_associate.option.add}</dd>
+<dt>交通</dt>
+<dd>{$entry_associate.option.traffic|smarty:nodefaults|nl2br}</dd>
+<dt>価格</dt>
+<dd>{$entry_associate.option.price}</dd>
+<dt>総戸数</dt>
+<dd>{$entry_associate.option.unit}</dd>
+</dl>
+</div>
+
+</div>
+
+
+
+
+
+<br style="clear: both;" />
+</div>
+
+
+<!--{if $entry_text.excerpt}-->
+{$entry_text.excerpt|smarty:nodefaults}
+<!--{/if}-->
+<!--{if $entry_text.more}-->
+<!--{if $freo.query.continue}-->
+<div id="continue">
+{$entry_text.more|smarty:nodefaults}
+</div>
+<!--{else}-->
+<p><a href="{$freo.core.http_file}/view/{if $entry.code}{$entry.code}{else}{$entry.id}{/if}?continue=1#continue" title="No.{$entry.id}の続き">続きを読む</a></p>
+<!--{/if}-->
+<!--{/if}-->
+
+<ul class="link">
+<!--{if $freo.user.authority == 'root' or $freo.user.id == $entry.user_id}-->
+<li><a href="{$freo.core.http_file}/index.php/admin/entry_form?id={$entry.id}"><img src="{$freo.core.http_url}images/icons/edit.png" alt="編集" title="編集" width="16" height="16" /></a></li>
+<!--{/if}-->
+</ul>
+
+</div>
+
+
+
+
+
+
+<br style="clear: both;" />
+{include file='footer.html'}

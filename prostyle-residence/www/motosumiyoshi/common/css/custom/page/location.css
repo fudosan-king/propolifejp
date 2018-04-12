@@ -1,0 +1,918 @@
+@charset "utf-8";
+
+body#location article{
+	background:#FFF;
+	color:#666;
+}
+body#location section{
+	margin-bottom:30px;
+}
+body#location h3{
+	text-align:center;
+	height:auto;
+	width:100%;
+	vertical-align:middle;
+	margin-bottom:20px;
+	padding-bottom:20px;
+	background:url(../../../img/element/h3_line.gif) bottom center no-repeat;
+}
+body#location .h4_01{
+		background:url(../../../img/page/location/h4_01.png) center center no-repeat;
+		padding:10px 0 10px 0;
+		width:100%;
+		text-indent:100%;
+		*text-indent: -9000px; /* for IE7/6 */
+		white-space:nowrap;
+		overflow:hidden;
+		margin-bottom:20px;
+}
+body#location .h4_02{
+		background:url(../../../img/page/location/h4_02.png) center center no-repeat;
+		padding:25px 0 25px 0;
+		width:100%;
+		text-indent:100%;
+		*text-indent: -9000px; /* for IE7/6 */
+		white-space:nowrap;
+		overflow:hidden;
+		margin-bottom:20px;
+}
+body#location .h4_03{
+		background:url(../../../img/page/location/h4_03.png) center center no-repeat;
+		padding:10px 0 10px 0;
+		width:100%;
+		text-indent:100%;
+		*text-indent: -9000px; /* for IE7/6 */
+		white-space:nowrap;
+		overflow:hidden;
+		margin-bottom:20px;
+}
+body#location .cap{
+	font-size:10px;
+	text-align:right;
+}
+body#location .sec01{
+	display:block;
+}
+
+body#location .sec03 .point{
+	width:100%;
+	height:auto;
+	background-color:#fff;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+
+body#location .sec03 h5{
+	height:50px;
+	border-bottom:dotted 1px #CCC;
+	background:#fff url(../../../img/page/location/sec03_img03.gif) 100% bottom no-repeat;
+	vertical-align:middle;
+	overflow:hidden;
+	padding:10px;
+}
+body#location .sec03 h5 img{
+	float:left;
+	margin-right:10px;
+	}
+
+body#location .sec03 h5 .p01{
+	background:url(../../../img/page/location/sec03_01t.jpg) 20px 50% no-repeat;
+	*background:url(../../../img/page/location/sec03_01t.jpg) 20px 25% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+	*line-height:50px;
+}
+body#location .sec03 h5 .p02{
+	background:url(../../../img/page/location/sec03_02t.jpg) 20px 50% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+}
+body#location .sec03 h5 .p03{
+	background:url(../../../img/page/location/sec03_03t.jpg) 20px 50% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+}
+body#location .sec03 h5 .p04{
+	background:url(../../../img/page/location/sec03_04t.jpg) 20px 50% no-repeat;
+	*background:url(../../../img/page/location/sec03_04t.jpg) 20px 25% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+	*line-height:50px;
+}
+body#location .sec03 h5 .p05{
+	background:url(../../../img/page/location/sec03_05t.jpg) 20px 50% no-repeat;
+	*background:url(../../../img/page/location/sec03_05t.jpg) 20px 25% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+	*line-height:50px;
+}
+body#location .sec03 .img{
+	float:right;
+	padding:20px;
+}
+
+body#location .sec03 .txt1{
+	width:59%;
+	float:left;
+	padding:10px
+}
+body#location .sec03 .txt2{
+	width:95%;
+	float:left;
+	padding:10px
+}
+body#location .sec03 .txt3{
+	width:65%;
+	float:left;
+	padding:10px
+}
+body#location .sec03 a{
+	white-space: pre-wrap;      /* CSS 2.1 */
+  white-space: pre-line;      /* CSS 3.0 */
+  white-space: -pre-wrap;     /* Opera 4-6 */
+  white-space: -o-pre-wrap;   /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap;  /* HP Printers */
+  word-wrap: break-word;      /* IE 5+ */
+  font-size:10px;
+  }
+
+body#location .sec02 h5{
+	overflow:hidden;
+	padding-bottom:20px;
+	width:480px;
+	float:left;
+	}
+body#location .sec02 h5 img{
+	float:left;
+	margin-right:10px;
+	}
+
+
+body#location .sec02 .point01,
+body#location .sec02 .point04{
+	text-align:center;
+	width:47%;
+	height:240px;
+	background-color:#FFF;
+	margin-bottom:20px;
+	overflow:hidden;
+	float:left;
+	padding:10px;
+}
+body#location .sec02 .point02,
+body#location .sec02 .point05{
+	text-align:center;
+	width:47%;
+	height:240px;
+	background-color:#FFF;
+	margin-bottom:20px;
+	overflow:hidden;
+	float:right;
+	padding:10px;
+}
+body#location .sec02 .point03{
+	text-align:center;
+	max-width:100%;
+	height:165px;
+	background-color:#FFF;
+	margin-bottom:20px;
+	overflow:hidden;
+	clear:both;
+	padding:10px;
+}
+body#location .sec02 .point01 p,
+body#location .sec02 .point02 p{
+	width:50%;
+	float:left;
+	text-align:left;
+}
+body#location .sec02 .point01 .img,
+body#location .sec02 .point02 .img{
+	width:205px;
+	float:right;
+	text-align:right;
+}
+body#location .sec02 .point03 p{
+	width:400px;
+	float:left;
+	text-align:left;
+}
+body#location .sec02 .point03 .img{
+	width:414px;
+	float:right;
+}
+body#location .sec02 .point04 .img,
+body#location .sec02 .point05 .img{
+	width:225px;
+	text-align:right;
+	float:left;
+}
+body#location .sec02 h5 .p01t{
+	background:url(../../../img/page/location/sec02_01t.jpg) 10px 0% no-repeat;
+	*background:url(../../../img/page/location/sec02_01t.jpg) 10px -5% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	float:left;
+	width:375px;
+	height:42px;
+	line-height:42px;
+	text-align:left;
+}
+body#location .sec02 h5 .p02t{
+	background:url(../../../img/page/location/sec02_02t.jpg) 10px 0% no-repeat;
+	*background:url(../../../img/page/location/sec02_02t.jpg) 10px -5% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	float:left;
+	width:362px;
+	height:42px;
+	line-height:42px;
+	text-align:left;
+}
+body#location .sec02 h5 .p03t{
+	background:url(../../../img/page/location/sec02_03t.jpg) 10px 0% no-repeat;
+	*background:url(../../../img/page/location/sec02_03t.jpg) 10px -5% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	float:left;
+	width:362px;
+	height:42px;
+	line-height:42px;
+	text-align:left;
+}
+body#location .sec02 h5 .p04t{
+	background:url(../../../img/page/location/sec02_04t.jpg) 10px 0% no-repeat;
+	*background:url(../../../img/page/location/sec02_04t.jpg) 10px -5% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	float:left;
+	width:362px;
+	height:42px;
+	line-height:42px;
+	text-align:left;
+}
+body#location .sec02 h5 .p05t{
+	background:url(../../../img/page/location/sec02_05t.jpg) 10px 0% no-repeat;
+	*background:url(../../../img/page/location/sec02_05t.jpg) 10px -5% no-repeat;
+	text-indent:100%;
+	*text-indent: -9000px; /* for IE7/6 */
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	float:left;
+	width:362px;
+	height:42px;
+	line-height:42px;
+	text-align:left;
+}
+body#location .content img {
+	width: 100%;
+	height: auto;
+}
+body#location h2 {
+	max-width: 450px;
+	margin: 0 0 10px;
+}
+body#location .header-text {
+	max-width: 510px;
+	margin: 0 0 15px;
+}
+body#location .lead {
+	display: none;
+}
+body#location .main-visual {
+	margin: 0 0 30px;
+}
+body#location .location01 {
+	margin: 0 0 35px;
+}
+body#location .location01 ul:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+body#location .location01 ul li {
+	float: left;
+	margin: 0 .52% 15px 0;
+}
+body#location .location01 ul li.wide {
+	width: 61.98%
+}
+body#location .location01 ul li.narrow {
+	width: 37.5%;
+}
+body#location .location01 ul li.right {
+	margin: 0 0 15px;
+}
+body#location .location02 {
+	margin: 0 0 35px;
+}
+body#location .location02 h3 {
+	padding: 0;
+	margin: 0 0 20px;
+	background: none;
+	text-align: left;
+}
+body#location .location02 .location0201 {
+	margin: 0 0 20px;
+}
+body#location .location02 .location0201:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+body#location .location02 .location0201-right {
+	width: 77.19%;
+	float: right;
+}
+body#location .location02 .location0201 h4 {
+	max-width: 369px;
+	padding: 20px 0 0;
+	margin: 0 0 10px;
+}
+body#location .location02 .location0201 .txt {
+	padding: 0;
+}
+body#location .location02 .location0201 .img {
+	width: 20.31%;
+	float: left;
+}
+body#location .location02 .location0202 {
+	padding: 25% 0 5.5% 24%;
+	background: url(../../../img/page/location/bg-location-pc.jpg) no-repeat 0 0;
+	background-size: 100% auto;
+}
+body#location .location02 .location0202:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+body#location .location02 .location0202-right {
+	width: 68.22%;
+	float: right;
+}
+body#location .location02 .location0202 h4 {
+	max-width: 305px;
+	padding: 5px 0 0;
+	margin: 0 0 10px;
+}
+body#location .location02 .location0202 .txt {
+	padding: 0;
+}
+body#location .location02 .location0202 .img {
+	width: 29.04%;
+	float: left;
+}
+body#location .location03 {
+	margin: 0 0 20px;
+}
+body#location .location03:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+body#location .location03 .img-map {
+	width: 100%;
+	float: left;
+}
+body#location .location03 .img {
+	width: 20.63%;
+	margin: -90px 0 0;
+	float: right;
+}
+body#location .location04 {
+	margin: 0 0 20px;
+}
+body#location .location04:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+body#location .location04 .institution-box {
+	width: 30.73%;
+	margin: 0 3.9% 15px 0;
+	float: left;
+}
+body#location .location04 .institution-box.right {
+	margin: 0 0 15px;
+}
+body#location .location04 .institution-box h4 {
+	margin: 0 0 5px;
+}
+
+body#location .location04 .institution-box li {
+	position: relative;
+	font-size: 12px;
+	line-height: 1.3;
+	border-bottom: 1px dotted #999;
+	padding: 8px 0 8px;
+}
+body#location .location04 .institution-box li:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+body#location .location04 .institution-box li .name {
+	float: left;
+	width:59%;
+}
+body#location .location04 .institution-box li .dis {
+	/*position: absolute;
+	top: 0;
+	right: 0;*/
+	float: right;
+	font-size: 9px;
+}
+body#location .location04 .institution-box li .big {
+	/*position: static;*/
+	float: none;
+	font-size: 12px;
+}
+body#location .location04 .note {
+	margin: 0 0 10px;
+	text-align: right;
+	font-size: 10px;
+	clear: both;
+	color:#666;
+	line-height:1.2
+}
+body#location .location04 .institution-img:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+body#location .location04 .institution-img li {
+	width: 16.36%;
+	margin: 0 .36% 0 0;
+	float: left;
+}
+body#location .location04 .institution-img li.right {
+	margin: 0;
+}
+body#location .location-footer {
+	background: url(../../../img/page/location/img-location15-pc.jpg) repeat-x 0 0;
+}
+body#location .location-footer div {
+	max-width: 331px;
+}
+@media (max-width: 900px) {
+
+body#location .sec02{
+	position:relative;
+	height:auto;
+	width:100%;
+	display:block;
+	background-color:#fbfaf5;
+}
+body#location .sec01 img{
+	width:100%;
+	height:auto;
+}
+body#location .sec02 .img{
+	width:100%;
+	height:auto;
+}
+body#location .sec02 .p01{
+	text-align:left;
+	position:static;
+	background:#fff url(../../../img/page/location/sec02_img03.gif) 2% center no-repeat;
+	border:solid 1px #e4bcc3;
+	width:78%;
+	height:40px;
+	margin:0 auto;
+	padding-right:20px;
+}
+body#location .sec02 .p02{
+	text-align:left;
+	position:static;
+	background:#fff url(../../../img/page/location/sec02_img04.gif) 2% center no-repeat;
+	border:solid 1px #9fcdc6;
+	width:78%;
+	height:40px;
+	margin:10px auto;
+	padding-right:20px;
+}
+
+body#location .sec03 h5{
+	height:50px;
+	border-bottom:dotted 1px #CCC;
+	background:#fff url(../../../img/page/location/sec03_img03.gif) 100% bottom no-repeat;
+	vertical-align:middle;
+	overflow:hidden;
+	padding:10px;
+}
+body#location .sec03 h5 img{
+	float:left;
+	}
+
+body#location .sec03 h5 .p01{
+	background:url(../../../img/page/location/sec03_01t.jpg) 20px 50% no-repeat;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+}
+body#location .sec03 h5 .p02{
+	background:url(../../../img/page/location/sec03_02t.jpg) 20px 50% no-repeat;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+}
+body#location .sec03 h5 .p03{
+	background:url(../../../img/page/location/sec03_03t.jpg) 20px 50% no-repeat;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:460px;
+	height:50px;
+	line-height:50px;
+}
+
+body#location .sec03 .img{
+	float:right;
+	padding:20px;
+}
+body#location .sec03 .txt1{
+	width:45%;
+	float:left;
+	padding:10px
+}
+body#location .sec03 .txt2{
+	width:95%;
+	float:left;
+	padding:10px
+}
+body#location .sec03 .txt3{
+	width:48%;
+	float:left;
+	padding:10px
+}
+body#location .sec02 .point01 p,
+body#location .sec02 .point02 p{
+	width:65%;
+	float:left;
+	text-align:left;
+}
+body#location .sec02 .point01,
+body#location .sec02 .point02{
+	text-align:center;
+	width:100%;
+	height:auto;
+	float:none;
+}
+body#location .sec02 .point03{
+	height:auto;
+}
+body#location .sec02 .point03 p{
+	width:100%;
+	float:none;
+	text-align:left;
+	margin-top:10px;
+}
+body#location .sec02 .point03 .img{
+	width:414px;
+	margin:0 auto;
+	float:none;
+}
+body#location .sec02 .point04,
+body#location .sec02 .point05{
+	height:auto;
+	text-align:center;
+}
+body#location .sec02 .point04 .img,
+body#location .sec02 .point05 .img{
+	clear:both;
+	width:225px;
+	text-align:right;
+	float:left;
+}
+
+body#location .location02 {
+	height: auto;
+	background-position: 0 100%;
+}
+body#location .location02 .location0202 {
+	padding: 25% 0 8.5% 24%;
+}
+body#location .location04 .institution-box li {
+	/*padding: 0 48% 0 0;*/
+}
+body#location .location04 .institution-box li br {
+	display: none;
+}
+}
+
+@media (max-width: 640px) {
+body#location h2 {
+
+margin: 0 0 10px;
+}
+body#location h3 img{
+	width:100%;
+	height:auto;
+	margin-bottom:10px;
+}
+body#location h3 img:nth-child(2){
+	width:80%;
+	height:auto;
+}
+body#location .h4_01,
+body#location .h4_02,
+body#location .h4_03{
+	font-family: "�ҥ饮������ Pro W6","Hiragino Mincho ProN","HGS����E","�ͣ� ������",serif;	
+	background-image:none;
+	padding:0px 0 20px 0;
+	margin:0 auto;
+	width:90%;
+	text-indent:0px;
+	white-space:normal;
+	overflow:hidden;
+	font-size:1.6em;
+	text-align:center;
+	color:#052275;
+	line-height:22px;
+}
+body#location h4 span{
+	display:block;
+}
+body#location .sec03 h5 .p01{
+	font-family: "�ҥ饮������ Pro W6","Hiragino Mincho ProN","HGS����E","�ͣ� ������",serif;	
+	background-image:none;
+	text-indent:0px;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:auto;
+	height:50px;
+	line-height:25px;
+	color:#052275;
+	font-size:1.3em;
+}
+body#location .sec03 h5 .p02{
+	font-family: "�ҥ饮������ Pro W6","Hiragino Mincho ProN","HGS����E","�ͣ� ������",serif;	
+	background-image:none;
+	text-indent:5px;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:auto;
+	height:50px;
+	line-height:50px;
+	color:#052275;
+	font-size:1.3em;
+}
+body#location .sec03 h5 .p03{
+	font-family: "�ҥ饮������ Pro W6","Hiragino Mincho ProN","HGS����E","�ͣ� ������",serif;	
+	background-image:none;
+	text-indent:5px;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block;
+	width:auto;
+	height:50px;
+	line-height:50px;
+	color:#052275;
+	font-size:1.3em;
+}
+
+body#location .h4_02 span{
+	display:block;
+}
+body#location .sec03 .img{
+	float:none;
+	padding:20px;
+}
+body#location .sec03 .txt1{
+	width:95%;
+	float:none;
+	padding:10px
+}
+body#location .sec03 .txt2{
+	width:95%;
+	float:none;
+	padding:10px
+}
+body#location .sec03 .txt3{
+	width:95%;
+	float:none;
+	padding:10px
+}
+body#location .sec02 .point01 p,
+body#location .sec02 .point02 p{
+	clear:both;
+	width:95%;
+	float:none;
+	text-align:left;
+}
+body#location .sec02 .point01 .img,
+body#location .sec02 .point02 .img{
+	width:205px;
+	margin:0 auto;
+	float:none;
+	text-align:center;
+}
+body#location .sec02 .point03 .img{
+	width:100%;
+	height:auto;
+}
+body#location .sec02 .point04,
+body#location .sec02 .point05{
+	width:100%;
+	float:none;
+	height:auto;
+	text-align:center;
+}
+body#location .sec02 .point04 .img,
+body#location .sec02 .point05 .img{
+	clear:both;
+	width:225px;
+	text-align:right;
+	float:none;
+	margin:0 auto;
+}
+body#location .sec02 h5 .p01t{
+}
+body#location .sec02 h5 .p01t,
+body#location .sec02 h5 .p02t,
+body#location .sec02 h5 .p03t,
+body#location .sec02 h5 .p04t,
+body#location .sec02 h5 .p05t{
+	font-family: "�ҥ饮������ Pro W6","Hiragino Mincho ProN","HGS����E","�ͣ� ������",serif;	
+	background-image:none;
+	width:310px;
+	height:auto;
+	text-indent:0px;
+	white-space:normal;
+	overflow:hidden;
+	font-size:1.6em;
+	text-align:center;
+	color:#052275;
+	line-height:20px;
+	text-align:left;
+	
+}
+
+body#location .lead {
+	display: block;
+	color:#666;
+}
+body#location .location01 ul li.loc01,
+body#location .location01 ul li.loc03 {
+	width: auto;
+	margin: 0 0 5px;
+}
+body#location .location01 ul li.loc02 {
+	width: 49%;
+	float: left;
+}
+body#location .location01 ul li.loc04 {
+	width: 49%;
+	margin: 0 0 5px;
+	float: right;
+}
+
+body#location .location02 {
+	height: auto;
+}
+
+body#location .location02 h3{
+	margin: 0;
+}
+body#location .location02 .location0201 {
+	margin: 0;
+}
+body#location .location02 .location0201 h4 {
+	padding: 0;
+}
+body#location .location02 .location0201 .img,
+body#location .location02 .location0202 .img {
+	max-width: 130px;
+	width: auto;
+	margin: 0 10px 10px 0;
+}
+body#location .location02 .location0202 {
+	padding: 25% 0 0 0;
+	background: url(../../../img/page/location/bg-location-sp.jpg) no-repeat 0 0;
+	background-size: 100% auto;
+}
+body#location .location02 .location0202 h4 {
+	max-width: none;
+	padding: 5px 0 0 20%;
+}
+body#location .location02 .location0201 .txt img,
+body#location .location02 .location0202 .txt img {
+	display: none;
+}
+body#location .location02 .location0201 .txt:after,
+body#location .location02 .location0202 .txt:after {
+	content: attr( data-text );
+	font-size: 9px;
+	line-height: 1.1;
+}
+
+body#location .location02 .location0201 .location0201-right,
+body#location .location02 .location0202 .location0202-right {
+	width: auto;
+	float: none;
+}
+body#location .location03 .img-map {
+	width: auto;
+	float: none;
+}
+body#location .location03 .img {
+	width: auto;
+	margin: 0 ;
+	float: none;
+}
+body#location .location04 .institution-box {
+	width: 100%;
+	float: left;
+}
+body#location .location04 .institution-box h4 {
+	padding: 2%;
+	background-color: #a17d46;
+	color: #fff;
+	box-sizing: border-box;
+}
+body#location .location04 .institution-box h4 img {
+	display: none;
+}
+body#location .location04 .institution-box h4:after {
+	content: attr( data-text );
+	font-size: 12px;
+}
+body#location .location04 .institution-box.right {
+	margin: 0 7.8% 0 0;
+}
+body#location .location04 .institution-box.sp-right,
+body#location .location04 .institution-box.sp-right.right {
+	margin: 0 0 15px;
+}
+
+body#location .location04 .institution-img li {
+	width: 32.82%;
+	margin: 0 .77% .77% 0;
+	float: left;
+}
+body#location .location04 .institution-img li:nth-child(3n) {
+	margin: 0 0 .77% 0;
+}
+}

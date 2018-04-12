@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+body#model article{
+	background:#FFF;
+}
+
+#model_content .main-visual {
+	margin: 0 0 35px;
+	position: relative;
+}
+#model_content .main-visual img {
+	width: 100%;
+	height: auto;
+}
+#model_content .main-visual .lead {
+	padding: 54.8% 6.26% 0 50.58%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 2.2;
+}
+@media screen and (max-width: 900px) {
+	#model_content .main-visual .lead {
+		font-size: 11px;
+	}
+}
+@media screen and (max-width: 880px) {
+	#model_content .main-visual .lead {
+		padding: 53.8% 6.26% 0 50.58%;
+		font-size: 11px;
+		line-height: 1.8;
+	}
+}
+@media screen and (max-width: 780px) {
+	#model_content .main-visual .lead {
+		font-size: 10px;
+		line-height: 1.8;
+	}
+}
+@media screen and (max-width: 710px) {
+	#model_content .main-visual .lead {
+		padding: 53.8% 5.26% 0 49.58%;
+		line-height: 1.6;
+	}
+}
+@media screen and (max-width: 670px) {
+	#model_content .main-visual .lead {
+		font-size: 9px;
+	}
+}
+@media screen and (max-width:640px) {
+	#model_content .main-visual .lead {
+		padding: 51.8% 6.26% 0 27.58%;
+		font-size: 11px;
+		line-height: 1.8;
+	}
+}
+@media screen and (max-width:580px) {
+	#model_content .main-visual .lead {
+		font-size: 10px;
+		line-height: 1.8;
+	}
+}
+@media screen and (max-width:530px) {
+	#model_content .main-visual .lead {
+		font-size: 9px;
+		line-height: 1.8;
+	}
+}
+@media screen and (max-width:475px) {
+	#model_content .main-visual .lead br {
+		display: none;
+	}
+}
+@media screen and (max-width:440px) {
+	#model_content .main-visual .lead {
+		line-height: 1.4;
+	}
+}
+@media screen and (max-width:395px) {
+	#model_content .main-visual .lead {
+		font-size: 8px;
+		line-height: 1.2;
+	}
+}
+#model_content .note {
+	font-size: 9px;
+	clear: both;
+}
+@media screen and (max-width:640px) {
+	#model_content .note {
+		line-height: 1.3;
+	}
+}
+#model_content .con01 {
+	margin: 0 0 30px;
+}
+#model_content .con01 .note {
+	display: block;
+}
+#model_content .con01 .left-cont {
+	width: 69.38%;
+	float: left;
+}
+#model_content .con01 .left-cont img {
+	width: 100%;
+	height: auto;
+}
+#model_content .con01 .left-cont .note {
+	display: none;
+}
+#model_content .con01 .right-cont {
+	width: 28.75%;
+	float: right;
+}
+#model_content .con01 .right-cont h2 {
+	width: 67.39%;
+	padding: 8% 0;
+}
+#model_content .con01 .right-cont img {
+	width: 100%;
+	height: auto;
+}
+#model_content .con01 .right-cont p {
+	line-height: 1.7;
+}
+@media screen and (max-width:900px) {
+	#model_content .con01 .right-cont h2 {
+		padding: 6% 0;
+	}
+	#model_content .con01 .right-cont p {
+		line-height: 1.5;
+	}
+}
+@media screen and (max-width:870px) {
+	#model_content .con01 .right-cont h2 {
+		padding: 4% 0;
+	}
+	#model_content .con01 .right-cont p {
+		line-height: 1.3;
+	}
+}
+@media screen and (max-width:760px) {
+	#model_content .con01 .right-cont h2 {
+		padding: 2% 0;
+	}
+	#model_content .con01 .right-cont p br {
+		display: none;
+	}
+}
+@media screen and (max-width:685px) {
+	#model_content .con01 .right-cont h2 {
+		padding: 0;
+	}
+	#model_content .con01 .right-cont p {
+		font-size: 11px;
+	}
+}
+@media screen and (max-width:640px) {
+	#model_content .con01 .note {
+		display: none;
+	}
+	#model_content .con01 .left-cont {
+		width: 100%;
+		margin: 0 0 30px;
+		float: none;
+	}
+	#model_content .con01 .left-cont .note {
+		display: block;
+	}
+	#model_content .con01 .right-cont {
+		width: 100%;
+		float: none;
+	}
+	#model_content .con01 .right-cont .fright {
+		width: 35.53%;
+		margin: 6% 10.94% 0 0;
+		float: right;
+	}
+	#model_content .con01 .right-cont .fleft {
+		width: 44.63%;
+		margin: 0 0 0 4.38%;
+		float: left;
+	}
+	#model_content .con01 .right-cont .fleft h2 {
+		margin: 0 0 4%;
+	}
+}
+
+#model_content .con02 {
+	margin: 0 0 10px;
+}
+#model_content .con02 .left-cont {
+	width: 26.67%;
+	margin: 0 0 0 1.04%;
+	float: left;
+}
+#model_content .con02 .left-cont h2 {
+	width: 81.25%;
+	margin: 0 0 10%;
+}
+#model_content .con02 .left-cont img {
+	width: 100%;
+	height: auto;
+}
+#model_content .con02 .right-cont {
+	width: 69.27%;
+	float: right;
+}
+#model_content .con02 .right-cont img {
+	width: 100%;
+	height: auto;
+}
+@media screen and (max-width:900px) {
+	#model_content .con02 .left-cont h2 {
+		margin: 0 0 5%;
+	}
+	#model_content .con02 .left-cont p {
+		line-height: 1.4;
+	}
+}
+@media screen and (max-width:810px) {
+	#model_content .con02 .left-cont h2 {
+		margin: 0 0 3%;
+	}
+	#model_content .con02 .left-cont p {
+		font-size: 11px;
+		line-height: 1.2;
+	}
+}
+@media screen and (max-width:740px) {
+	#model_content .con02 .left-cont p br {
+		display: none;
+	}
+}
+@media screen and (max-width:680px) {
+	#model_content .con02 .left-cont p {
+		font-size: 10px;
+	}
+}
+@media screen and (max-width:640px) {
+	#model_content .con02 .left-cont {
+		width: 100%;
+		margin: 0 0 15px;
+		float: none;
+	}
+	#model_content .con02 .left-cont h2 {
+		width: 60.94%;
+		margin: 0 0 2%;
+	}
+	#model_content .con02 .right-cont {
+		width: 100%;
+		margin: 0 0 15px;
+		float: none;
+	}
+}
+
+#model_content .con03 {
+	clear: both;
+}
+#model_content .con03 .left-cont {
+	width: 69.38%;
+	float: left;
+}
+#model_content .con03 .left-cont img {
+	width: 100%;
+	height: auto;
+}
+#model_content .con03 .right-cont {
+	width: 29.69%;
+	float: right;
+}
+#model_content .con03 .right-cont img {
+	width: 100%;
+	height: auto;
+}
+#model_content .con03 .right-cont .con0301 {
+	margin: 0 0 7.5%;
+}
+#model_content .con03 .right-cont .con0302 {
+	margin: 0 0 7.5%;
+}
+#model_content .con03 .right-cont .con0304 {
+	display: none;
+}
+
+@media screen and (max-width:640px) {
+	#model_content .con03 .left-cont {
+		width: 100%;
+		margin: 0 0 15px;
+		float: none;
+	}
+	#model_content .con03 .right-cont {
+		width: 100%;
+		margin: 0 0 15px;
+		float: none;
+	}
+	#model_content .con03 .right-cont .con0301 {
+		width: 50%;
+		margin: 0;
+		float: left;
+	}
+	#model_content .con03 .right-cont .con0302 {
+		display: none;
+	}
+	#model_content .con03 .right-cont .con0303 {
+		width: 46.63%;
+		margin: 0;
+		float: right;
+	}
+	#model_content .con03 .right-cont .con0304 {
+		width: 41%;
+		margin: 0 0 5px;
+		display: block;
+	}
+}

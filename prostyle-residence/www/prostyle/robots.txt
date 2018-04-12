@@ -1,0 +1,4 @@
+User-Agent:*
+Allow:/
+ 
+Sitemap: http://1246.jp/prostyle/sitemap

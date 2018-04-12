@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<title><?php wp_title('｜', true, 'right'); ?><?php bloginfo('name'); ?></title>
+
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/reset.css">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/general.css">
+<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/colorscheme.less">
+<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/base.less">
+<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/module.less">
+<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/parts.less">
+<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/smart.less">
+<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/flexslider.css">
+<link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker.css">
+<link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker_nav.css">
+<link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" type="image/png" />
+<!--[if lt IE 9]>
+<script src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.js"></script>
+<script type="text/javascript">
+// if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+//         document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
+//     }else{
+//         document.write('<meta name="viewport" content="width=1100, maximum-scale=1">');
+//     }
+</script>
+<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/less.js"></script>
+<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.als.js"></script>
+<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/common.js"></script>
+<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.flexslider.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+  $('#carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: true,
+    itemWidth: 92,
+    itemMargin: 0,
+    asNavFor: '#slider'
+  });
+
+  $('#slider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: true,
+    sync: "#carousel"
+  });
+});
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9S2NL');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9S2NL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="container" class="page-works">
+
+<!--================= Header start ==================-->
+<?php get_header(); ?>
+<!--================= //Header end ==================-->
+
+
+<!--================= Content start ==================-->
+<div id="content" class="clearfix">
+
+<!--======== Category Title start ===========-->
+<div class="ttlCategory bgGrey">
+	<div class="boxInner">
+	<h1 class="txtMain">施工事例</h1>
+	<p class="txtSub">WORKS</p>
+	</div>
+</div>
+<!--======== //Category Title end ===========-->
+
+<!--======== Breadcrumb start ===========-->
+<nav class="boxBreadcrumb boxInner">
+	<p>
+	<span><a href="/">ホーム</a> » </span>
+	<span><a href="/works/">施工事例</a> » </span>
+	<span><?php the_title(); ?></span>
+	</p>
+</nav>
+<!--======== //Breadcrumb end ===========-->
+
+
+<!--======== Columns start ===========-->
+<div id="Columns" class="boxInner">
+<!--======== Main start ===========-->
+<div id="main">
+
+<?php if(have_posts()):while(have_posts()):the_post();?>
+<!--===== ▼施工事例詳細 start =====-->
+<article class="boxPostDetail">
+	<header class="boxPostHead">
+	<h1 class="ttlPost"><?php the_title(); ?></h1>
+	</header>
+
+	<!--===== Section start =====-->
+	<section class="boxSection">
+
+	<div class="imgTopMain">
+
+<!-- メイン画像を設定 -->
+	<div id="slider" class="flexslider">
+	  <ul class="slides">
+		  <?php echo apply_filters('the_content', get_post_meta($post->ID, 'photo', true)); ?>
+	  </ul>
+	</div>
+
+<div class="imgTopMainTxt clearfix">
+<span><?php $text = get_field('works_no'); if ( $text ) {echo $text;}?></span>
+<dl>
+<dt>CHRONICLE REFORM'S WORKS</dt>
+<dd><?php $text = get_field('catchcopy'); if ( $text ) {echo $text;}?></dd>
+</dl>
+
+</div>
+
+</div>
+
+
+<!-- サムネイル画像を設定 -->
+	<div id="carousel" class="flexslider">
+	  <ul class="slides">
+		  <?php echo apply_filters('the_content', get_post_meta($post->ID, 'thumbnails', true)); ?>
+	  </ul>
+	</div>
+
+
+	<?php the_content('');?>
+
+	</section>
+	<!--===== //Section end =====-->
+
+
+</article>
+<!--===== //施工事例詳細 end =====-->
+<?php endwhile;endif;?>
+
+<!--===== ▼ページング start =====-->
+<div class="singleBoxPaging clearfix">
+	<p>
+		<span class="btnPrev"><?php previous_post_link('%link','&laquo;&nbsp;PREV');?></span>
+		<span class="btnNext"><?php next_post_link('%link','NEXT&nbsp;&raquo;');?></span>
+	</p>
+</div>
+<!--===== //ページング end =====-->
+
+<!--===== ▼その他の事例 start =====-->
+<div class="boxOtherWorks clearfix">
+	<h3 class="ttl">その他の事例</h3>
+	<ul class="boxWorksList clearfix">
+
+<?php
+$args = array(
+'post_type' => 'works',
+'taxonomy' => 'workscat',
+'numberposts' => '4',
+);
+$my_posts = get_posts($args);
+foreach ( $my_posts as $post ) {
+setup_postdata($post); ?>
+<?php
+$attach_id = get_post_meta($post->ID,"メイン画像",true);
+$image_info = wp_get_attachment_image_src( $attach_id  , 'full' );
+list( $url, $w, $h) = $image_info;
+$alt = get_post_meta($attach_id , '_wp_attachment_image_alt', true);
+?>
+<li><a href="<?php the_permalink() ?>"><span><?php $text = get_field('works_no'); if ( $text ) {echo $text;}?></span>
+<?php if(has_post_thumbnail()){the_post_thumbnail('worksThumb'); }else{ echo '<img src="/img/noimg.gif" />'; } ?></a></li>
+
+<?php
+}
+?>
+	</ul>
+</div>
+<!--===== //その他の事例 end =====-->
+
+
+
+
+</div>
+<!--======== //Main end ===========-->
+
+
+<!--======== Side start ===========-->
+<div id="side">
+
+<!--===== ▼Whatnew start =====-->
+<div id="whatnew" class="boxPostMenu">
+	<h3 class="ttlPostMenu">What’s new!</h3>
+<ul>
+<?php
+$args = array(
+'post_type' => 'works',
+'taxonomy' => 'worksscat',
+'posts_per_page' => 5,
+'numberposts' => '-1',
+);
+$my_posts = get_posts($args);
+foreach ( $my_posts as $post ) {
+setup_postdata($post); ?>
+<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+<?php
+}
+?>
+</ul>
+</div>
+<!--===== //Whatnew end =====-->
+
+<!--===== ▼バナーエリア start =====-->
+<div class="boxBannerArea">
+	<ul>
+	<li><a href="https://www.chronicle-plus.com/showroom/" target="_blank"><img class="imgMain" src ="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-our-showroom.png" alt="Our Showroom"><img class="imgSmp" src ="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-our-showroom-smp.png" alt="Our Showroom"></a></li>
+	</ul>
+</div>
+<!--===== //バナーエリア end =====-->
+
+</div>
+<!--======== //Side end ===========-->
+</div>
+<!--======== //Columns end ===========-->
+
+
+
+<!--======== A-Side start ===========-->
+<aside id="aside" class="boxInner">
+<p class="txtC">
+<a href="http://www.rakuten.co.jp/mokume/" target="_blank">
+<img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
+<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
+</a>
+</p>
+</aside>
+<!--======== //A-Side end ===========-->
+
+<?php get_footer(); ?>

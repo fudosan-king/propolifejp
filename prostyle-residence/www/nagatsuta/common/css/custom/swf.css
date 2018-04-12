@@ -1,0 +1,51 @@
+/*#flash{
+	position: relative;
+	min-width:960px;
+	max-height:630px;
+	background-color:#000;
+}
+#flash:before{
+  	padding-top: 50%;
+    display: block;
+    content: "";
+	max-width:1600px;
+}
+#flash > #flashcontent{
+	max-width:1260px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+	margin:0 auto;
+}*/
+
+
+
+#mainV:before {
+content: "";
+display: block;
+padding-top: 0;
+padding-top: 0\9;
+}
+
+
+
+#flash{
+	position: relative;
+	min-width:960px;
+}
+#flash:before{
+    padding-top: 48%;
+    display: block;
+    content: "";
+}
+#flash > #flashcontent{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+

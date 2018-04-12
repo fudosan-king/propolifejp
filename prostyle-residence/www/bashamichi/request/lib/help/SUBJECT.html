@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=Shift_JIS">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>デフォルトのメールサブジェクト</title>
+		<style type="text/css" media="screen"><!--
+table	{font-size: 12px}
+span	{font-size: 14px; font-weight: bold;}--></style>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<span>デフォルトのメールサブジェクト</span>
+		<hr>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<p>フォームから送信されたメールのサブジェクト（題名）を指定します。しかし、ご用意された フォーム HTML の項目で、name 属性が &quot;subject&quot; のものがあれば、それが優先されます。ここでは、もし name 属性 &quot;subject&quot; がなかった場合もしくは入力されなかった場合に適用されるサブジェクトを指定します。</p>
+					<p>もしサブジェクトに <tt>$name属性$</tt> を指定すると、その部分は、入力された値に置き換わります。たとえば、name 属性 &quot;name&quot; の欄に「太郎」と入力されたとします。サブジェクトの設定が</p>
+					<table border="1" bgcolor="#FFFFCC" cellspacing="0" cellpadding="5">
+						<tr>
+							<td width="100%"><tt><font color="#0000FF">$name$</font> 様からのお問い合わせ</tt></td>
+						</tr>
+					</table>
+					<p>となっていれば、</p>
+					<table border="1" bgcolor="#FFFFCC" cellspacing="0" cellpadding="5">
+						<tr>
+							<td width="100%"><tt><font color="#0000FF">太郎</font> 様からのお問い合わせ</tt></td>
+						</tr>
+					</table>
+					<p>に置き換わります。</p>
+					<p>フォームの項目以外に、$SIRIAL$ を指定すると、シリアル番号に置き換わります。ただし、「機能設定」の「シリアル番号の生成」を「する」と指定した場合にのみ有効となります。</p>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<button name="buttonName" type="button" onclick="javascript:window.close()">閉じる</button>
+	</body>
+
+</html>

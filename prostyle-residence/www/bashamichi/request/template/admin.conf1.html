@@ -1,0 +1,200 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.imeoff { ime-mode:disabled;}
+	.ListHeader	{
+		BACKGROUND: #FFCC00;
+		BORDER-BOTTOM: #CC9900 1px solid;
+		BORDER-LEFT: #FFFF99 1px solid;
+		BORDER-RIGHT: #CC9900 1px solid;
+		BORDER-TOP: #FFFF99 1px solid;
+		COLOR: #000000;
+		PADDING-LEFT: 2px;
+	}
+</STYLE>
+<script language="JavaScript">
+<!--//
+	function help(target){
+		var SWA
+		SWA = window.open(target,"help","WIDTH=500,HEIGHT=300,toolbar=no,location=no,status=no,menubar=no,directories=no,scrollbars=yes");
+		SWA.focus();
+	}
+	function ThanksPageMethodChange() {
+		if(document.form.THANKS_PAGE_METHOD[0].checked == true) {
+			document.form.REDIRECT_URL.disabled = false;
+			document.form.REDIRECT_URL.style.backgroundColor='#FFFFFF';
+			for(i=0;i<document.form.REDIRECT_METHOD.length;i++) {
+				document.form.REDIRECT_METHOD[i].disabled = false;
+			}
+		} else {
+			document.form.REDIRECT_URL.disabled = true;
+			document.form.REDIRECT_URL.style.backgroundColor='#D4D0C8';
+			for(i=0;i<document.form.REDIRECT_METHOD.length;i++) {
+				document.form.REDIRECT_METHOD[i].disabled = true;
+			}
+		}
+
+	}
+//-->
+</script>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body onload="ThanksPageMethodChange()">
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ 基本設定 ■</font></div></td>
+</table>
+　
+<table border="0" width="500">
+  <tr>
+    <td width="100%">　基本設定は、必要最小限の設定項目です。必ず、すべての項目を設定してください。</td>
+  </tr>
+</table>
+<form method="POST" action="admin.cgi" name="form">
+  <input type="hidden" name="action" value="setconf1">
+
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">メール送信先アドレス</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=MAILTO')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="MAILTO" size="40" value="$MAILTO$" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">デフォルトのメール送信元アドレス</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=FROM')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="FROM" size="40" value="$FROM$" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">デフォルトのメールサブジェクト</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=SUBJECT')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="SUBJECT" size="40" value="$SUBJECT$"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">完了画面表示方法</font></td>  
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=THANKS_PAGE_METHOD')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap>
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td nowrap><input type="radio" value="1" name="THANKS_PAGE_METHOD" onclick="ThanksPageMethodChange()" $THANKS_PAGE_METHOD1$></td>
+            <td nowrap>指定URLへリダイレクト</td>
+          </tr>
+          <tr>
+            <td nowrap><input type="radio" value="2" name="THANKS_PAGE_METHOD" onclick="ThanksPageMethodChange()" $THANKS_PAGE_METHOD2$></td>
+            <td nowrap>テンプレートを使ってCGIが出力</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">リダイレクト先 URL</font></td>      
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=REDIRECT_URL')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="REDIRECT_URL" size="40" value="$REDIRECT_URL$" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">リダイレクト方法</font></td> 
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=REDIRECT_METHOD')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap>
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td nowrap><input type="radio" name="REDIRECT_METHOD" value="1"$REDIRECT_METHOD1$></td>
+            <td nowrap>Locationヘッダー</td>
+          </tr>
+          <tr>
+            <td nowrap><input type="radio" name="REDIRECT_METHOD" value="2"$REDIRECT_METHOD2$></td>
+            <td nowrap>メタタグ</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">sendmail のパス</font></td>      
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=SENDMAIL')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="SENDMAIL" size="40" value="$SENDMAIL$" class="imeoff"></td>
+    </tr>
+								<tr>
+									<td nowrap bgcolor="#F5F5DC">
+										<table border="0" width="100%">
+											<tr>
+												<td nowrap><font color="#555533">ログ格納ディレクトリのパス</font></td>
+												<td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=LOG_DIR')"><b><font color="#996600">？</font></b></a></td>
+											</tr>
+										</table>
+									</td>
+									<td bgcolor="#F8F8FF" nowrap><input type="text" name="LOG_DIR" size="40" value="$LOG_DIR$" class="imeoff"></td>
+								</tr>
+							</table>
+</td></tr></table>
+
+
+<p>
+<input type="submit" value="設定" name="B1">
+</p>
+
+</form>
+<hr>
+$COPYRIGHT2$
+
+</center>
+</body>
+</html>
+
+

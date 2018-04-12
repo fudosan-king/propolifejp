@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+#canvasContainer {
+    position: relative;
+    width: 100%;
+	background:#FFF;
+}
+#canvasContainer:before {
+    content:"";
+    display: block;
+    padding-top: 57.083333%;
+}
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	margin:auto;
+	/*width:100%;*/
+}

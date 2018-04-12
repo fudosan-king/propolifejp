@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+</STYLE>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body>
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ ログダウンロード ■</font></div></td>              
+</table>
+　
+<table border="0" width="500">
+  <tr>
+    <td width="100%">　サーバに保存されているログファイルをダウンロードします。以下のオプションを選択して「ダウンロード」ボタンを押してください。ブラウザーの画面にログの内容が表示されてしまう場合には、別の種類のブラウザーで試して下さい。
+    </td>
+  </tr>
+</table>
+<form method="POST" action="admin.cgi">
+  <input type="hidden" name="action" value="download">
+
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">ログファイル</font></td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="LOGFILE">
+ $LIST$       
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">拡張子</font></td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="EXT">
+          <option value="txt">.txt</option>
+          <option value="log">.log</option>
+          <option value="csv">.csv</option>
+          <option value="cgi">.cgi</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">改行コード</font></td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="RETURN_CODE">
+          <option value="CRLF">CR + LF (Windows)</option>
+          <option value="CR">CR (Mac)</option>
+          <option value="LF">LF (Unix)</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">文字コード</font></td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="CHAR_CODE">
+          <option value="SJIS">SJIS</option>
+          <option value="EUC">EUC</option>
+          <option value="JIS">JIS</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">先頭行の扱い</font></td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="FIRST_LINE">
+          <option value="0">何も入れない</option>
+          <option value="1">name属性値を付加する</option>
+          <option value="2">項目名を付加する</option>
+        </select></td>
+    </tr>
+  </table>
+</td></tr></table>
+
+
+<p>
+<input type="submit" value="ダウンロード" name="B1">
+</p>
+
+</form>
+<hr>
+$COPYRIGHT2$
+</center>
+</body>
+</html>
+
+

@@ -1,0 +1,880 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2015
+*   PROPOLIFE
+*
+*   home.css
+*
+--------------------------------------------------------------------------------*/
+
+body, html{ height: 100%;}
+body{ overflow-y: hidden;}
+#wrap, #footer{ opacity: 0;}
+.loading{
+    width: 100%;
+    height: 100%;
+    background-image:url(../images/parts_loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    z-index: 65535;
+    position: fixed;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#wrap{
+    padding: 0;
+    position: relative;
+    background-color: #ebebeb;
+}
+
+#contents{
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+#contents:before{
+    width: 30px;
+    height: 100%;
+    content: '';
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#contents:after{
+    width: 30px;
+    height: 100%;
+    content: '';
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.btm_mask{
+    display: none;
+}
+
+#footer .btn_pagetop{ margin: -60px 0 30px 0;}
+#footer{ margin: -0 0 55px 0; width: 100%; position: relative; background-color:#FFF;}
+#footer_nav{ width: 100%; position: fixed; bottom: 0; left: 0;}
+#footer_nav .copyright{ padding: 0 60px 0 0;}
+
+/* -------------------------------------------------------
+HOME
+------------------------------------------------------- */
+#background{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#background #pic{ position: absolute; z-index: -1;}
+#background #pic li{ display: table; position: absolute;}
+#background #pic li span{ width: 100%; height: 100%; display: table-cell; vertical-align: middle;}
+
+#background #animal{width: 100%; height: 100%; min-height: 560px; position: absolute; z-index: -1; }
+#background #animal p{width: 100%; height: 100%; display: table; position: absolute; bottom: 55px;}
+#background #animal p.rino{ text-align: left; margin: 0 0 90px -165px;}
+#background #animal p.lion{ text-align: right; margin: 0 0 90px 0;}
+#background #animal p img{ position: relative;}
+#background #animal p span{ width: 100%; height: 100%; display: table-cell; vertical-align: bottom;}
+
+/* ----- for sp, table ----- */
+.sp #background #animal p.rino,
+.tablet #background #animal p.rino{ display: none;}
+.sp #background #animal p.lion,
+.tablet #background #animal p.lion{ display: none;}
+.sp #animal .animal_sp,
+.tablet #animal .animal_sp{
+    top: 10px;
+    background-image:url(../images/home/img_bg_animal_sp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+}
+/* -------------------- */
+
+#main_visual{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: table;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+#main_visual_inner{
+    width: 100%;
+    margin: 54px 0 0 0;
+    background-image:url(../images/home/pic_main_visual.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+#main_visual .main_copy{
+    width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    z-index: 5;
+    top: 55px;
+}
+
+#main_visual .main_copy span{
+    padding: 0 30px;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#main_visual .main_copy img{
+    width: 100%;
+    max-width: 868px;
+    height: auto;
+    position: relative;
+    top: -55px;
+    transition: opacity .2s ease;
+}
+
+.en #main_visual .main_copy img.pc{ display: inline-block;}
+.en #main_visual .main_copy img.sp{ display: none;}
+/*
+#main_visual .main_copy img:hover{
+opacity: .7;
+}
+*/
+#main_visual .box_message{
+    width: 100%;
+    height: 116px;
+    background-image:url(../images/home/img_bg_stripe.png);
+    border-bottom: 4px solid #734638;
+    line-height: 1em;
+    display: table;
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+}
+
+#main_visual .box_message a{
+    width: 100%;
+    height: 116px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1em;
+    position: relative;
+    transition: opacity .2s ease;
+}
+
+#main_visual .box_message a:hover{
+    opacity: .7;
+}
+
+#main_visual .box_message a:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 100%;
+    background-image: url(../images/home/parts_message_arrow.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    right: 55px;
+    top: 0;
+}
+
+#contents_inner{
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#contents_inner .section{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+#contents_inner .section_inner{
+    width: 880px;
+    height: 425px;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+}
+
+#contents_inner .section_inner a{
+    outline: none;
+}
+
+#contents_inner .section_inner h3,
+#contents_inner .section_inner .pic,
+#contents_inner .section_inner .btn_more{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contents_inner .section_inner h3,
+#contents_inner .section_inner .btn_more{
+    z-index: 2;
+}
+
+.section img h3 .pc{ display: inline-block !important;}
+.section img h3 .sp{ display: none !important;}
+
+.section_inner h3 img,
+.section_inner .pic img,
+.section_inner .btn_more img{
+    position: relative;
+    display: inline-block;
+}
+
+.section_inner h3,
+.section_inner .pic,
+.section_inner .btn_more{
+    width: 100%;
+    text-align: left;
+}
+
+
+#contents_inner .section .btn_more img{ transition: opacity .2s ease;}
+#contents_inner .section .btn_more img:hover{ opacity: .7;}
+#contents_inner .section .pc{ display: inline-block;}
+#contents_inner .section .sp{ display: none;}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------
+Home Main Contents Position
+------------------------------------------------------------------------------------------------------------------------------------ */
+#section01 .section_inner h3{ text-align: right;}
+#section01 .section_inner .pic{ text-align: left;}
+#section01 .section_inner .btn_more{ text-align: left;}
+#section01 .section_inner h3 img{ margin: 100px 60px 0 270px;}
+#section01 .section_inner .pic img{ margin: 0 290px 0 0;}
+#section01 .section_inner .btn_more img{ margin: 380px 0 0 270px;}
+
+#section02 .section_inner h3{ text-align: right;}
+#section02 .section_inner .pic{ text-align: right;}
+#section02 .section_inner .btn_more{ text-align: right;}
+#section02 .section_inner h3 img{ margin: 40px 165px 0 0;}
+#section02 .section_inner .pic img{}
+#section02 .section_inner .btn_more img{ margin: 345px 280px 0 0;}
+
+#section03 .section_inner h3{ text-align: right;}
+#section03 .section_inner .pic{ text-align: left;}
+#section03 .section_inner .btn_more{ text-align: left;}
+#section03 .section_inner h3 img{ margin: 100px 150px 0 0;}
+#section03 .section_inner .pic img{ margin: 0 290px 0 0;}
+#section03 .section_inner .btn_more img{ margin: 380px 0 0 270px;}
+
+#section04 .section_inner h3{ text-align: right;}
+#section04 .section_inner .pic{ text-align: right;}
+#section04 .section_inner .btn_more{ text-align: right;}
+#section04 .section_inner h3 img{ margin: 110px 220px 0 0;}
+#section04 .section_inner .pic img{}
+#section04 .section_inner .btn_more img{ margin: 390px 280px 0 0;}
+
+#section05 .section_inner h3{ text-align: right;}
+#section05 .section_inner .pic{ text-align: left;}
+#section05 .section_inner .btn_more{ text-align: left;}
+#section05 .section_inner h3 img{ margin: 120px 125px 0 0;}
+#section05 .section_inner .pic img{ margin: 0 290px 0 0;}
+#section05 .section_inner .btn_more img{ margin: 380px 0 0 270px;}
+
+#section06 .section_inner h3{ text-align: left;}
+#section06 .section_inner .pic{ text-align: left;}
+#section06 .section_inner .btn_more{ text-align: left;}
+#section06 .section_inner h3 img{ margin: 115px 0 0 280px;}
+#section06 .section_inner .pic img{ margin:;}
+#section06 .section_inner .btn_more img{ margin: 390px 0 0 280px;}
+
+/* -------------------------------------------------------
+for 768px;
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    #contents_inner .section .pc{ display: none;}
+    #contents_inner .section .sp{ display: inline-block;}
+
+    #contents_inner .section{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-align: center;
+        top: 0;
+        left: 0;
+    }
+
+    #contents_inner{
+        padding: 0 !important;
+    }
+
+    .section_inner h3,
+    .section_inner .pic,
+    .section_inner .btn_more{
+        width: 100%;
+        text-align: left;
+    }
+
+    #section01 .section_inner h3{ text-align: left;}
+    #section01 .section_inner .pic{ text-align: left;}
+    #section01 .section_inner .btn_more{ text-align: left;}
+    #section01 .section_inner h3 img{ width: 320px; height: auto; margin: 90px 0 0 140px;}
+    #section01 .section_inner .pic img{ width: 280px; height: auto; margin: 0 0 0 8px;}
+    #section01 .section_inner .btn_more img{width: 160px; height: auto; margin: 285px 0 0 245px;}
+
+    #section02{ margin: 80px 0 0 0;}
+    #section02 .section_inner h3{ text-align: left;}
+    #section02 .section_inner .pic{ text-align: right;}
+    #section02 .section_inner .btn_more{ text-align: left;}
+    #section02 .section_inner h3 img{ width: 216px; height: auto; margin: 50px 0 0 40px;}
+    #section02 .section_inner .pic img{ width: 280px; height: auto; margin: 0 5px 0 0;}
+    #section02 .section_inner .btn_more img{ width: 160px; height: auto; margin: 290px 0 0 45px;}
+
+    #section03 .section_inner h3{ text-align: left;}
+    #section03 .section_inner .pic{ text-align: left;}
+    #section03 .section_inner .btn_more{ text-align: left;}
+    #section03 .section_inner h3 img{ width: 300px; height: auto; margin: 100px 0 0 140px;}
+    #section03 .section_inner .pic img{ width: 280px; height: auto; margin: 0 0 0 8px;}
+    #section03 .section_inner .btn_more img{width: 160px; height: auto; margin: 285px 0 0 245px;}
+
+    #section04 .section_inner h3{ text-align: left;}
+    #section04 .section_inner .pic{ text-align: right;}
+    #section04 .section_inner .btn_more{ text-align: left;}
+    #section04 .section_inner h3 img{ width: 300px; height: auto; margin: 110px 0 0 10px;}
+    #section04 .section_inner .pic img{ width: 280px; height: auto; margin: 0 0 0 8px;}
+    #section04 .section_inner .btn_more img{width: 160px; height: auto; margin: 285px 0 0 45px;}
+
+    #section05 .section_inner h3{ text-align: left;}
+    #section05 .section_inner .pic{ text-align: left;}
+    #section05 .section_inner .btn_more{ text-align: left;}
+    #section05 .section_inner h3 img{ width: 300px; height: auto; margin: 110px 0 0 140px;}
+    #section05 .section_inner .pic img{ width: 280px; height: auto; margin: 0 0 0 8px;}
+    #section05 .section_inner .btn_more img{width: 160px; height: auto; margin: 285px 0 0 245px;}
+
+    #section06{ margin: 30px 0 60px 0;}
+    #section06 .section_inner h3{ text-align: right;}
+    #section06 .section_inner .pic{ text-align: left;}
+    #section06 .section_inner .btn_more{ text-align: left;}
+    #section06 .section_inner h3 img{ width: 200px; height: auto; margin: 135px 20px 0 0;}
+    #section06 .section_inner .pic img{ width: 280px; height: auto; margin: 0 0 0 8px;}
+    #section06 .section_inner .btn_more img{ width: 160px; height: auto; margin: 325px 0 0 230px;}
+
+}
+
+
+/* -------------------------------------------------------
+for 480px;
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+    #section01{ margin: -30px 0 -60px 0;}
+    #section01 .section_inner h3{ text-align: right;}
+    #section01 .section_inner .pic{ text-align: left;}
+    #section01 .section_inner .btn_more{ text-align: right;}
+    #section01 .section_inner h3 img{ width: 220px; height: auto; margin: 60px 0 0 0;}
+    #section01 .section_inner .pic img{ width: 195px; height: auto; margin:0;}
+    #section01 .section_inner .btn_more img{width: 100px; height: auto; margin: 200px 20px 0 0;}
+
+    #section02 .section_inner h3{ text-align: left;}
+    #section02 .section_inner .pic{ text-align: right;}
+    #section02 .section_inner .btn_more{ text-align: left;}
+    #section02 .section_inner h3 img{ width: 135px; height: auto; margin: 40px 0 0 40px;}
+    #section02 .section_inner .pic img{ width: 195px; height: auto; margin: 0;}
+    #section02 .section_inner .btn_more img{ width: 100px; height: auto; margin: 195px 0 0 40px;}
+    .cn #section02 .section_inner .btn_more img{ width: 100px; height: auto; margin: 195px 0 0 20px;}
+
+    #section03 .section_inner h3{ text-align: right;}
+    #section03 .section_inner .pic{ text-align: left;}
+    #section03 .section_inner .btn_more{ text-align: right;}
+    #section03 .section_inner h3 img{ width: 203px; height: auto; margin: 75px 0 0 70px;}
+    #section03 .section_inner .pic img{ width: 195px; height: auto; margin:0;}
+    #section03 .section_inner .btn_more img{width: 100px; height: auto; margin: 200px 20px 0 0;}
+
+    #section04 .section_inner h3{ text-align: left;}
+    #section04 .section_inner .pic{ text-align: right;}
+    #section04 .section_inner .btn_more{ text-align: left;}
+    #section04 .section_inner h3 img{ width: 193px; height: auto; margin: 70px 0 0 0;}
+    #section04 .section_inner .pic img{ width: 195px; height: auto; margin:0;}
+    #section04 .section_inner .btn_more img{width: 100px; height: auto; margin: 200px 20px 0 0;}
+
+    #section05 .section_inner h3{ text-align: right;}
+    #section05 .section_inner .pic{ text-align: left;}
+    #section05 .section_inner .btn_more{ text-align: right;}
+    #section05 .section_inner h3 img{ width: 183px; height: auto; margin: 90px 20px 0 0;}
+    #section05 .section_inner .pic img{ width: 195px; height: auto; margin:0;}
+    #section05 .section_inner .btn_more img{width: 100px; height: auto; margin: 200px 20px 0 0;}
+
+    #section06 .section_inner h3{ text-align: right;}
+    #section06 .section_inner .pic{ text-align: left;}
+    #section06 .section_inner .btn_more{ text-align: right;}
+    #section06 .section_inner h3 img{ width: 120px; height: auto; margin: 115px 33px 0 0;}
+    #section06 .section_inner .pic img{ width: 195px; height: auto; margin: 0;}
+    #section06 .section_inner .btn_more img{ width: 100px; height: auto; margin: 230px 30px 0 0;}
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------ */
+#btm_section{
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+#btm_section_inner{
+    width: 1000px;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+#btm_information{
+    width: 1080px;
+    overflow: hidden;
+}
+
+#btm_information h3{
+    height: 70px;
+    font-family:'游ゴシック','YuGothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+#btm_information h3 span{
+    display: block;
+}
+
+#btm_information ul.col_parents{
+    width: 700px;
+    margin: 0 0 50px 0;
+    float: left;
+}
+
+#btm_information .col{
+    width: 300px;
+    min-height: 403px;
+    margin: 0 23px 0 0;
+    padding: 0 23px;
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    position: relative;
+}
+
+#btm_information .col.information{
+	width: 300px;
+    border: none;
+    padding: 0;
+}
+
+#btm_information .col_fb{
+    width: 300px;
+    height: 403px;
+    overflow: hidden;
+    float: left;
+}
+
+#btm_information .col li{
+    font-size: 12px;
+    margin: 0 0 25px 0;
+    letter-spacing: 0;
+    line-height: 1.5em;
+}
+
+#btm_information .col li:last-child{
+    height: inherit;
+}
+
+#btm_information .col li h4{ margin: 0 0 3px 0;}
+#btm_information .col li h4 span{
+    width: 106px;
+    height: 10px;
+    padding: 3px 0;
+    margin: 1px 0 0 8px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1em;
+    white-space: nowrap;
+}
+
+#btm_information .col li h4 span.information{ color: #742727; background-color: #dcc3c3;}
+#btm_information .col li h4 span.pressrelease{ color: #285d99; background-color: #c3d5dc;}
+#btm_information .col li h4 span.media{ color: #7d6011; background-color: #dfd48d;}
+
+#btm_information .col li .title{
+    font-weight: bold;
+}
+
+#btm_recommend{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.en #btm_recommend,
+.cn #btm_recommend{
+    margin-top: 30px;
+}
+
+#btm_recommend h3{
+    margin: 0 0 33px 0;
+    border-bottom: 1px dotted #000;
+    text-align: left;
+    line-height: 1em;
+    position: relative;
+}
+
+#btm_recommend h3 img{
+    margin: 0 0 -8px 0;
+}
+
+#btm_banner{
+    clear: both;
+    margin: 0 auto 30px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#btm_banner div{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#btm_banner div img{
+    width: 100%;
+}
+
+#btm_banner ul{
+    width: 1080px;
+    margin: 0 0 0 -10px;
+}
+
+#btm_banner li{
+    width: auto;
+    margin: 0 10px 10px 10px;
+    float: left;
+}
+
+#btm_banner li a{ transition: opacity .2s ease; }
+#btm_banner li a:hover{ opacity: .7; }
+
+#footer{
+    clear: both;
+    z-index: 5;
+}
+
+/* -------------------------------------------------------
+*
+for 1080px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 1080px) {
+    #btm_section_inner{
+        width: 100%;
+    }
+
+    #btm_information{
+        width: auto;
+        padding: 0 30px;
+    }
+
+    #btm_section_inner{
+        padding: 25px 0 0 0;
+        overflow: hidden;
+    }
+
+    #btm_information ul.col_parents{
+        width: auto;
+        margin: 0 0 0 0;
+        float: none;
+        border-collapse: collapse;
+        border-spacing: 50px 0;
+    }
+
+    #btm_information .col{
+        width: 100%;
+        height: inherit !important;
+        min-height: inherit !important;
+        display: block !important;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-right: 0;
+        float: none;
+    }
+
+    #btm_information .col:last-child{
+        border: none !important;
+    }
+
+    #btm_information .col_fb{
+        width: 500px;
+        margin: 25px auto;
+        float: none;
+    }
+
+    #btm_information .col ul{
+        margin: 0 0 25px 0;
+        padding: 0 0 10px 0;
+        border: none;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    #btm_information .col:last-child ul{
+        margin: 0;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    #btm_information .col li{
+        height: auto;
+        margin: 0 0 15px 0;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 1.5em;
+    }
+
+    #btm_information .col li:last-child{
+        height: inherit !important;
+    }
+
+    #btm_recommend{
+        padding: 0 30px;
+        max-width: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #btm_banner{
+        clear: both;
+        text-align: center;
+        margin: 0 auto 70px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #btm_banner ul{
+        width: auto;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #btm_banner li{
+        width: auto;
+        margin: 0 10px 10px 10px;
+        display: inline;
+    }
+
+    #btm_banner li img{
+        width: 100%;
+        height: auto;
+    }
+
+
+    #footer{
+        clear: both;
+        z-index: 5;
+    }
+
+}
+
+
+/* -------------------------------------------------------
+*
+for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    #contents:before{ display: none;}
+    #contents:after{ display: none;}
+
+    #background #animal p.rino{ display: none;}
+    #background #animal p.lion{ display: none;}
+    #animal .animal_sp{
+        top: 10px;
+        background-image:url(../images/home/img_bg_animal_sp.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+    }
+
+    #footer .btn_pagetop{ display: inline-block; margin: -10px 0 30px 0; background-color: #eee;}
+    #footer{ padding: 40px 0 0 0; margin: 0; width: 100%; position: relative; background-color: #eee; z-index: 10;}
+    #footer_nav{ width: auto; position: relative; bottom: 0; left: 0;}
+    #footer_nav .copyright{ padding: 0;}
+
+    #background li img{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #main_visual{
+        background-color: transparent;
+    }
+
+    #main_visual .box_message{
+        width: 100%;
+        height: 58px;
+        border-bottom: 2px solid #734638;
+        bottom: -60px;
+        visibility: visible;
+    }
+
+    #main_visual .box_message a{
+        padding: 0 60px;
+        height: 58px;
+    }
+
+    #main_visual .box_message a img{
+        width: 100%;
+        max-width: 481px;
+        height: auto;
+    }
+
+    #main_visual .box_message a:after{
+        background-size: 8px;
+        right: 27px;
+    }
+
+}
+
+
+/* -------------------------------------------------------
+*
+for 580px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 580px) {
+
+    .en #main_visual .main_copy img.pc{ display: none;}
+    .en #main_visual .main_copy img.sp{ display: inline-block;}
+
+    #main_visual .main_copy span{
+        padding: 0 15px;
+    }
+
+    #main_visual .box_message{
+        width: 100%;
+        height: 58px;
+        border-bottom: 2px solid #734638;
+        bottom: -60px;
+        visibility: visible;
+    }
+
+    #main_visual .box_message a{
+        padding: 0 30px;
+        height: 58px;
+    }
+
+    #main_visual .box_message a img{
+        width: 100%;
+        max-width: 241px;
+        height: auto;
+    }
+
+    #main_visual .box_message a:after{
+        right: 14px;
+        background-size: 6px;
+    }
+
+    #btm_information,
+    #btm_recommend{
+        padding: 0 15px;
+    }
+
+    #btm_information .col li{
+        font-size: 11px;
+        margin: 0 0 15px 0;
+    }
+
+    #btm_information h3{
+        height: 60px !important;
+    }
+
+    #btm_information h3{ font-size: 10px !important;}
+    #btm_information .information h3 img{ width: 93px; height: auto;}
+    #btm_information .news h3 img{ width: 77px; height: auto;}
+    #btm_recommend h3{ padding: 30px 0 0 0; font-size: 10px; border: none; border-top: 1px solid #d8d8d8;}
+    #btm_recommend h3 img{ width: 181px; height: auto;}
+
+    .en #btm_recommend,
+    .cn #btm_recommend{ margin-top: 0; }
+    .en #btm_recommend h3,
+    .cn #btm_recommend h3{ border: none;}
+
+    #btm_information .col_fb{ width: 290px;}
+
+    #btm_banner{
+        clear: both;
+        width: 290px;
+        text-align: center;
+        margin: 0 auto 30px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #btm_banner ul{
+        width: auto;
+        display: block;
+        margin: 0 0 0 -5px;
+        text-align: center;
+    }
+
+    #btm_banner li{
+        width: 140px;
+        margin: 0 5px 10px 5px;
+        display: inline;
+    }
+
+    #btm_banner li img{
+        width: 140px;
+        height: auto;
+    }
+
+}

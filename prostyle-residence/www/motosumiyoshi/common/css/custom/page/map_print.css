@@ -1,0 +1,59 @@
+
+body{zoom:0.65;}
+
+@media all and (-ms-high-contrast:none){
+  *::-ms-backdrop, body { zoom: 1 } /* IE11 */
+}
+
+header{
+	display:none;
+	}
+
+#header {
+height: 50px;
+}		
+		
+/*#header ,logo img{
+display:block;
+}
+		
+#header ,logo_s img{
+display:none;
+}	*/
+
+#map {
+	/*width: 100%;*/
+	margin:0 auto;
+}
+
+
+#header ul{
+	display:none;
+	}
+
+
+#pop_btn{
+	display:none;
+	}
+
+.bottom_info{
+	display:none;
+	}
+
+#footer{
+	display:none;
+	}
+	
+/*	#footer_tel .area img {
+	width:50%;
+	}*/
+	
+
+.site{display:none;}
+
+.ttl_area{display:none;}
+#print_tit{display:block;
+	text-align:center;
+	margin-top:10px;
+	}
+#page-top{display:none;}

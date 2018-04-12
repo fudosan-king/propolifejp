@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<title>イベント情報｜クロニクルリフォーム</title>
+
+<link rel="stylesheet" type="text/css" href ="<?php bloginfo('template_directory'); ?>/commonfiles/css/reset.css">
+<link rel="stylesheet" type="text/css" href ="<?php bloginfo('template_directory'); ?>/commonfiles/css/general.css">
+<link rel="stylesheet/less" type="text/css" href ="<?php bloginfo('template_directory'); ?>/commonfiles/css/colorscheme.less">
+<link rel="stylesheet/less" type="text/css" href ="<?php bloginfo('template_directory'); ?>/commonfiles/css/base.less">
+<link rel="stylesheet/less" type="text/css" href ="<?php bloginfo('template_directory'); ?>/commonfiles/css/module.less">
+<link rel="stylesheet/less" type="text/css" href ="<?php bloginfo('template_directory'); ?>/commonfiles/css/parts.less">
+<link rel="stylesheet/less" type="text/css" href ="<?php bloginfo('template_directory'); ?>/commonfiles/css/smart.less">
+<link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker.css">
+<link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker_nav.css">
+<link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/tablet.css">
+<link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" type="image/png" />
+<!--[if lt IE 9]>
+<script src="<?php bloginfo('template_directory'); ?>/commonfiles/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.js"></script>
+<script type="text/javascript">
+// if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+//         document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
+//     }else{
+//         document.write('<meta name="viewport" content="width=1100, maximum-scale=1">');
+//     }
+</script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/less.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/common.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9S2NL');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9S2NL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="container" class="page-event">
+
+<!--================= Header start ==================-->
+<?php get_header(); ?>
+<!--================= //Header end ==================-->
+
+
+<!--================= Content start ==================-->
+<div id="content" class="clearfix">
+
+<!--======== Category Title start ===========-->
+<div class="ttlCategory bgGrey">
+	<div class="boxInner">
+	<h1 class="txtMain">イベント情報</h1>
+	<p class="txtSub">EVENT</p>
+	</div>
+</div>
+<!--======== //Category Title end ===========-->
+
+<!--======== Breadcrumb start ===========-->
+<nav class="boxBreadcrumb boxInner">
+	<p>
+	<span><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/">ホーム</a> » </span>
+	<span><a href="./">イベント情報</a> » </span>
+	<span>「自然素材でリノベーション！」勉強会</span>
+	</p>
+</nav>
+<!--======== //Breadcrumb end ===========-->
+
+
+<!--======== ▼イベント情報 start ===========-->
+<article class="boxArticle boxInner clearfix">
+	<header class="boxArticleHead">
+	<p class="txtC"><img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/event/bnr-event-study.png" alt="「自然素材でリノベーション！」勉強会">
+	<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/event/bnr-event-study-smp.png" alt="「自然素材でリノベーション！」勉強会"></p>
+	<h1 class="ttlArticle">「自然素材でリノベーション」勉強会</h1>
+	<p class="txtDate">2014.10.15 UP</p>
+	</header>
+
+	<section class="boxSection">
+	<p class="mb30">「自然素材のおうちに興味がある」「リノベーションで自分らしい住まいをつくってみたい」というお客様のための無料勉強会です。知っておきたい自然素材の予備知識や利点、理想のおうちをつくるためのリノベーションのコツをわかりやすくご説明します。</p>
+
+	<table class="boxTable">
+	<tr>
+		<td>開催日時</td>
+		<td>
+			毎月第３日曜　14：00〜
+		</td>
+	</tr>
+	<tr>
+		<td>所要時間</td>
+		<td>約60分</td>
+	</tr>
+		<tr>
+		<td>会場</td>
+		<td>八重洲ショールーム<a class="btnBlue" href="https://www.propolife.co.jp/%E5%85%AB%E9%87%8D%E6%B4%B2OFFICE/?keepThis=true&TB_iframe=true&height=470&width=940" target="_blank">MAP</a></td>
+	</tr>
+	</table>
+	</section>
+
+	<section class="boxSection">
+	<h2 class="ttlSection">プログラム</h2>
+
+	<ul class="boxProgram">
+	<li>
+	<dl>
+	<dt>1. リノベーション基礎講座 １５分</dt>
+	<dd>
+	リノベーションをするための基本的な知識をわかりやすくご紹介します。<br>
+	スケジュールから、物件探し、資金計画、プランニングなど、リノベーションを始めるまえに知っておいていただきたいことを<br>
+	ポイント別にお話させていただきます。
+	</dd>
+	</dl>
+	</li>
+
+	<li>
+	<dl>
+	<dt>２.「自然素材のおうちづくりセミナー」 ３０分</dt>
+	<dd>自然素材を使って作られたおうちのデザイン的な魅力や、素材がもつさまざまなメリットなどについてわかりやすくご紹介します。<br>
+	当社ショールームにて、実際にリフォームやリノベーション物件で使用されている自然素材を使用した商品サンプルや、<br>
+	住宅設備をご覧いただきながら、その魅力をプチ体感していただきます。<br>
+	気になるメンテナンスの仕方の一つとして傷やシミの対処方法も実際に体験していただきます。
+	</dd>
+	</dl>
+	</li>
+
+	<li>
+	<dl>
+	<dt>３.物件探し個別相談会<span class="txtNotes">要予約</span></dt>
+	<dd>
+	希望のエリアやご予算をお伺いし、リノベーションプランを考慮しながら理想の中古物件探しのお手伝いをいたします。<br>専門の相談員がご対応させていただきますので、参加ご希望の方は必ず事前にご予約ください。
+	</dd>
+	</dl>
+	</li>
+
+	<li>
+	<dl>
+	<dt>４.リノベーション個別相談会<span class="txtNotes">要予約</span></dt>
+	<dd>住まいのお悩みから、希望のデザインやインテリアについて個別にご対応いたします。<br>
+	より具体的なお話ができるので大変人気の相談会となっています。参加ご希望の方は必ず事前にご予約ください。
+	</dd>
+	</dl>
+	</li>
+	</ul>
+	</section>
+
+	<section class="boxSection">
+	<h2 class="ttlSection">お申し込み方法</h2>
+	<p class="mb40">
+	参加費は無料です。<br>
+	下記フリーダイヤルからご希望の日時をお知らせください。<br>
+	個別相談会をご希望の方は、その旨、担当者へお伝えください。
+	</p>
+
+	<ul class="boxContact clearfix">
+	<li><img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/event/bnr-freecall.png" alt="お問い合わせ・見積もり依頼受付中">
+	<a class="imgSmp" href="tel:0120-791-437"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/event/bnr-freecall.png" alt="お問い合わせ・見積もり依頼受付中"></a></li>
+	<li><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-ohncq-a6256eea8b2bb0ffa3acf846063a435f" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/event/bnr-contact-mail.png" alt="クロニクルリフォームお問い合わせ"></a></li>
+	</ul>
+	</section>
+</article>
+<!--======== //イベント情報 end ===========-->
+
+
+<!--======== A-Side start ===========-->
+<aside id="aside" class="boxInner">
+<p class="txtC">
+<a href="http://www.rakuten.co.jp/mokume/" target="_blank">
+<img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
+<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
+</a>
+</p>
+</aside>
+<!--======== //A-Side end ===========-->
+
+<?php get_footer(); ?>
+
+</body>
+
+</html>

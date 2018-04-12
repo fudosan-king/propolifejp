@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+/* main
+-------------------------------------------------- */
+#main-data {
+	background: no-repeat 50%;
+	background-size: cover;
+	line-height: 1;
+	position: relative;
+}
+
+#main-data .wrap {
+	height: 220px;
+}
+
+#main-data h2 {
+	color: #333;
+	font-size: 35px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#main-data h2 a {
+	color: #333;
+	text-decoration: none;
+}
+
+#main-data h2 span {
+	color: #734638;
+	display: block;
+	font-family: Loto;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+/* catch
+-------------------------------------------------- */
+.catch {
+	background: #333;
+	color: #fff;
+	font-size: 17px;
+	line-height: 1;
+	font-weight: bold;
+	padding: 11px 0 10px;
+	text-align: center;
+}
+
+/* localNav
+-------------------------------------------------- */
+#container-data #localNav {
+	border-bottom: 1px solid #e2e2e2;
+	margin-bottom: 35px;
+}
+
+#container-data #localNav li {
+	float: left;
+	text-align: center;
+	width: 179px;
+}
+
+#container-data #localNav li:first-child {
+	width: 105px;
+}
+
+#container-data #localNav li a {
+	border-right: 1px solid #e2e2e2;
+	color: #000;
+	display: table-cell;
+	font-size: 15px;
+	font-weight: bold;
+	height: 62px;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 1000px;
+}
+
+#container-data #localNav li a span {
+	color: #7c7c7c;
+	display: block;
+	font-size: 10px;
+	font-weight: normal;
+	margin-bottom: 7px;
+}
+
+#container-data #localNav li:first-child a {
+	border-left: 1px solid #e2e2e2;
+}
+
+#container-data #localNav li a:hover,
+#container-data #localNav li a.on {
+	background: #f5f5f5;
+	color: #734638;
+}
+
+/* pager
+-------------------------------------------------- */
+#container-data .pager {
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+}
+
+#container-data .pager span,
+#container-data .pager a {
+	background: #333;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 5px;
+	min-width: 36px;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+#container-data .pager a:hover,
+#container-data .pager .current {
+	background: #eaeaea;
+	color: #000;
+}
+
+/* detail
+-------------------------------------------------- */
+#container-data #detail h3.ttl {
+	background: #f5f5f5;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 5px solid #734638;
+	font-size: 30px;
+	line-height: 1;
+	margin-bottom: 50px;
+	padding: 34px 0 30px;
+}
+
+/* pageList
+-------------------------------------------------- */
+#container-data .pageList {
+	text-align: center;
+}
+
+#container-data .pageList div {
+	display: inline-block;
+}
+
+#container-data .pageList a {
+	background: #333;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0 10px;
+	padding: 10px 0 9px;
+	text-decoration: none;
+	width: 196px;
+	position: relative;
+}
+
+#container-data .pageList .next a,
+#container-data .pageList .back a {
+	width: 96px;
+}
+
+#container-data .pageList .next a:before,
+#container-data .pageList .back a:before {
+	background: url(../images/arw_01.png) no-repeat 0 50%;
+	content: "";
+	height: 10px;
+	margin-top: -6px;
+	width: 6px;
+	position: absolute;
+	top: 50%;
+}
+
+#container-data .pageList .back a {
+	padding-left: 10px;
+}
+
+#container-data .pageList .next a {
+	padding-right: 10px;
+}
+
+#container-data .pageList .back a:before {
+	left: 18px;
+}
+
+#container-data .pageList .next a:before {
+	right: 18px;
+	transform: rotate(180deg);
+}
+
+#container-data .pageList a:hover {
+	background: #eaeaea;
+	color: #000;
+}
+
+#container-data .pageList .next a:hover:before,
+#container-data .pageList .back a:hover:before {
+	background-image: url(../images/arw_02.png);
+}
+
+/* ---------------------------------------------------------
+
+■■■ SP ■■■■■■■■■■
+
+--------------------------------------------------------- */
+@media screen and (max-width: 667px) {
+	#container {
+		padding: 0;
+	}
+
+	#container img {
+		height: auto;
+		width: 100%;
+	}
+
+	/* main
+	-------------------------------------------------- */
+	#main-data {
+		background-position: 100% 50%;
+	}
+
+	#main-data .wrap {
+		height: 125px;
+	}
+
+	#footer .wrap {
+		margin: 0 10px;
+	}
+
+	#main-data h2 {
+		font-size: 20px;
+		text-align: center;
+		width: 100%;
+	}
+
+	#main-data h2 span {
+		font-size: 10px;
+		margin-top: 8px;
+	}
+
+	/* catch
+	-------------------------------------------------- */
+	.catch {
+		font-size: 11px;
+		line-height: 1.5;
+		padding: 11px 10px 9px;
+	}
+
+	/* localNav
+	-------------------------------------------------- */
+	#container-data #localNav {
+		border-bottom: 0;
+		margin-bottom: 15px;
+	}
+
+	#container-data #localNav li {
+		width: 50%;
+	}
+
+	#container-data #localNav li:first-child {
+		width: 50%;
+	}
+
+	#container-data #localNav li a {
+		border-bottom: 1px solid #e2e2e2;
+		font-size: 12px;
+		height: 47px;
+	}
+
+	/* detail
+	-------------------------------------------------- */
+	#container-data #detail h3.ttl {
+		border-bottom: 1px solid #e0e0e0;
+		border-top: 2px solid #734638;
+		font-size: 17px;
+		line-height: 1.3;
+		margin-bottom: 10px;
+		padding: 16px 0 13px;
+	}
+
+	/* pageList
+	-------------------------------------------------- */
+	#container-data .pageList {
+		margin-bottom: 15px;
+	}
+
+	#container-data .pageList a {
+		font-size: 10px;
+		margin: 0 5px;
+		padding: 9px 0 8px;
+		text-decoration: none;
+		width: 38%;
+		position: relative;
+	}
+
+	#container-data .pageList div {
+		margin: 0 5px;
+		width: 21%;
+	}
+
+	#container-data .pageList .next a,
+	#container-data .pageList .back a {
+		margin: 0;
+		width: 100%;
+	}
+
+	#container-data .pageList .next a:before,
+	#container-data .pageList .back a:before {
+		background: url(../images/arw_01.png) no-repeat 0 50%;
+		content: "";
+		height: 10px;
+		margin-top: -6px;
+		width: 6px;
+		position: absolute;
+		top: 50%;
+	}
+
+	#container-data .pageList .back a {
+		padding-left: 5px;
+	}
+
+	#container-data .pageList .next a {
+		padding-right: 5px;
+	}
+
+	#container-data .pageList .back a:before {
+		left: 10px;
+	}
+
+	#container-data .pageList .next a:before {
+		right: 10px;
+		transform: rotate(180deg);
+	}
+
+	#container-data .pageList a:hover {
+		background: #eaeaea;
+		color: #000;
+	}
+
+	#container-data .pageList .next a:hover:before,
+	#container-data .pageList .back a:hover:before {
+		background-image: url(../images/arw_02.png);
+	}
+
+	/* pager
+	-------------------------------------------------- */
+	#container-data .pager {
+		margin: 20px 0 40px;
+	}
+
+	#container-data .pager span,
+	#container-data .pager a {
+		font-size: 12px;
+		height: 22px;
+		line-height: 22px;
+		min-width: 22px;
+	}
+}

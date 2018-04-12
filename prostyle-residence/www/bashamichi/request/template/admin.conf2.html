@@ -1,0 +1,475 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.imeoff { ime-mode:disabled;}
+	.ListHeader2	{
+		BACKGROUND: #888855;
+		BORDER-BOTTOM: #555533 1px solid;
+		BORDER-LEFT: #FFFF99 1px solid;
+		BORDER-RIGHT: #555533 1px solid;
+		BORDER-TOP: #FDF5E8 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 2px;
+	}
+</STYLE>
+<script language="JavaScript">
+<!--//
+	function ReplyFlagChange() {
+		var selectedNum = document.form.REPLY_FLAG.selectedIndex;
+		if(selectedNum == 1) {
+			document.form.FROM_ADDR_FOR_REPLY.disabled = false;
+			document.form.FROM_ADDR_FOR_REPLY.style.backgroundColor='#FFFFFF';
+			document.form.SENDER_NAME_FOR_REPLY.disabled = false;
+			document.form.SENDER_NAME_FOR_REPLY.style.backgroundColor='#FFFFFF';
+			document.form.SUBJECT_FOR_REPLY.disabled = false;
+			document.form.SUBJECT_FOR_REPLY.style.backgroundColor='#FFFFFF';
+			document.form.REPLY_CC_OPTION.disabled = false;
+			document.form.REPLY_CC_OPTION.style.backgroundColor='#FFFFFF';
+		} else {
+			document.form.FROM_ADDR_FOR_REPLY.disabled = true;
+			document.form.FROM_ADDR_FOR_REPLY.style.backgroundColor='#D4D0C8';
+			document.form.SENDER_NAME_FOR_REPLY.disabled = true;
+			document.form.SENDER_NAME_FOR_REPLY.style.backgroundColor='#D4D0C8';
+			document.form.SUBJECT_FOR_REPLY.disabled = true;
+			document.form.SUBJECT_FOR_REPLY.style.backgroundColor='#D4D0C8';
+			document.form.REPLY_CC_OPTION.disabled = true;
+			document.form.REPLY_CC_OPTION.style.backgroundColor='#D4D0C8';
+		}
+	}
+	function LogingFlagChange() {
+		var selectedNum = document.form.LOGING_FLAG.selectedIndex;
+		if(selectedNum == 1) {
+			document.form.LOTATION.disabled = false;
+			document.form.LOTATION.style.backgroundColor='#FFFFFF';
+			var selectedNum2 = document.form.LOTATION.selectedIndex;
+			if(selectedNum2 == 3) {
+				document.form.LOTATION_SIZE.disabled = false;
+				document.form.LOTATION_SIZE.style.backgroundColor='#FFFFFF';
+			} else {
+				document.form.LOTATION_SIZE.disabled = true;
+				document.form.LOTATION_SIZE.style.backgroundColor='#D4D0C8';
+			}
+			document.form.LOG_FORMAT.disabled = false;
+			document.form.LOG_FORMAT.style.backgroundColor='#FFFFFF';
+			document.form.DELIMITER.disabled = false;
+			document.form.DELIMITER.style.backgroundColor='#FFFFFF';
+			document.form.DATE_FORMAT.disabled = false;
+			document.form.DATE_FORMAT.style.backgroundColor='#FFFFFF';
+			document.form.RETURN_CODE_CONV.disabled = false;
+			document.form.RETURN_CODE_CONV.style.backgroundColor='#FFFFFF';
+		} else {
+			document.form.LOTATION.disabled = true;
+			document.form.LOTATION.style.backgroundColor='#D4D0C8';
+			document.form.LOTATION_SIZE.disabled = true;
+			document.form.LOTATION_SIZE.style.backgroundColor='#D4D0C8';
+			document.form.LOG_FORMAT.disabled = true;
+			document.form.LOG_FORMAT.style.backgroundColor='#D4D0C8';
+			document.form.DELIMITER.disabled = true;
+			document.form.DELIMITER.style.backgroundColor='#D4D0C8';
+			document.form.DATE_FORMAT.disabled = true;
+			document.form.DATE_FORMAT.style.backgroundColor='#D4D0C8';
+			document.form.RETURN_CODE_CONV.disabled = true;
+			document.form.RETURN_CODE_CONV.style.backgroundColor='#D4D0C8';
+		}
+	}
+	function LotationChange() {
+		var selectedNum = document.form.LOTATION.selectedIndex;
+		if(selectedNum == 3) {
+			document.form.LOTATION_SIZE.disabled = false;
+			document.form.LOTATION_SIZE.style.backgroundColor='#FFFFFF';
+		} else {
+			document.form.LOTATION_SIZE.disabled = true;
+			document.form.LOTATION_SIZE.style.backgroundColor='#D4D0C8';
+		}
+	}
+	function help(target){
+		var SWA
+		SWA = window.open(target,"help","WIDTH=500,HEIGHT=300,toolbar=no,location=no,status=no,menubar=no,directories=no,scrollbars=yes");
+		SWA.focus();
+	}
+//-->
+</script>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="ReplyFlagChange();LogingFlagChange();LotationChange();">
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ 機能設定 ■</font></div></td>      
+</table>
+
+<form method="POST" action="admin.cgi"  name="form">
+  <input type="hidden" name="action" value="setconf2">
+
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td class="ListHeader2" nowrap colspan="2">
+        ▼ メール設定                   
+      </td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">確認画面表示</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=CONFIRM_FLAG')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="CONFIRM_FLAG">
+          <option value="0"$CONFIRM_FLAG0$>しない</option>
+          <option value="1"$CONFIRM_FLAG1$>する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">メールフォーマット</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=FORMAT_CUSTOM_FLAG')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="FORMAT_CUSTOM_FLAG">
+          <option value="0" $FORMAT_CUSTOM_FLAG0$>オートフォーマット</option>
+          <option value="1" $FORMAT_CUSTOM_FLAG1$>カスタマイズ</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">自動返信メール</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=REPLY_FLAG')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="REPLY_FLAG"  onChange="ReplyFlagChange();">
+          <option value="0"$REPLY_FLAG0$>しない</option>
+          <option value="1"$REPLY_FLAG1$>する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">自動返信メール用送信元メールアドレス</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=FROM_ADDR_FOR_REPLY')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="FROM_ADDR_FOR_REPLY" size="40" value="$FROM_ADDR_FOR_REPLY$" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">自動返信メールの差出人名</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=SENDER_NAME_FOR_REPLY')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="SENDER_NAME_FOR_REPLY" size="40" value="$SENDER_NAME_FOR_REPLY$"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">自動返信メールのサブジェクト</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=SUBJECT_FOR_REPLY')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="SUBJECT_FOR_REPLY" size="40" value="$SUBJECT_FOR_REPLY$"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">自動返信メールの CC オプション</font></td>                               
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=REPLY_CC_OPTION')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="REPLY_CC_OPTION">
+          <option value="0" $REPLY_CC_OPTION0$>なし</option>
+          <option value="1" $REPLY_CC_OPTION1$>CC で管理者にも送信</option>
+          <option value="2" $REPLY_CC_OPTION2$>BCC で管理者にも送信</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">添付ファイルの削除</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=ATTACHMENT_DEL_FLAG')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="ATTACHMENT_DEL_FLAG">
+          <option value="0"$ATTACHMENT_DEL_FLAG0$>サーバに残す</option>
+          <option value="1"$ATTACHMENT_DEL_FLAG1$>削除する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">添付ファイルのサイズ上限(バイト）</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=ATTACHMENT_MAX_SIZE')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="ATTACHMENT_MAX_SIZE" size="10" value="$ATTACHMENT_MAX_SIZE$" class="imeoff"> 
+        バイト</td> 
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">添付ファイルの拡張子限定</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=EXT_RESTRICT')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><textarea rows="2" name="EXT_RESTRICT" cols="27" class="imeoff">$EXT_RESTRICT$</textarea></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">英文ワードラップ・禁則処理折返文字数</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=WRAP')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap>半角 <input type="text" name="WRAP" size="2" value="$WRAP$" class="imeoff"> 
+        文字分で折り返し</td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">追加メールヘッダー</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=MAIL_HEADER_PLUS')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="MAIL_HEADER_PLUS" size="40" value="$MAIL_HEADER_PLUS$" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">エラーメールの宛先アドレス</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=ERRORS_TO')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="ERRORS_TO" size="40" value="$ERRORS_TO$" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">シリアル番号の生成</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=SIRIAL_FLAG')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="SIRIAL_FLAG">
+          <option value="0"$SIRIAL_FLAG0$>しない</option>
+          <option value="1"$SIRIAL_FLAG1$>する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader2" nowrap colspan="2">
+        ▼ ログ設定                   
+      </td> 
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">ログ出力</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=LOGING_FLAG')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="LOGING_FLAG"  onChange="LogingFlagChange();">
+          <option value="0"$LOGING_FLAG0$>しない</option>
+          <option value="1"$LOGING_FLAG1$>する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">ログローテーション</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=LOTATION')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="LOTATION" onChange="LotationChange();">
+          <option value="0"$LOTATION0$>しない</option>
+          <option value="1"$LOTATION1$>日ごと</option>
+          <option value="2"$LOTATION2$>月ごと</option>
+          <option value="9"$LOTATION9$>サイズ指定</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">ログローテーションサイズ</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=LOTATION_SIZE')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="LOTATION_SIZE" size="10" value="$LOTATION_SIZE$" class="imeoff"> 
+        バイト</td>  
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">ログファイルフォーマット</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=LOG_FORMAT')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="LOG_FORMAT">
+          <option value="0"$LOG_FORMAT0$>値</option>
+          <option value="1" $LOG_FORMAT1$>name属性=値</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">ログファイルの区切り文字</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=DELIMITER')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="DELIMITER">
+          <option value="1"$DELIMITER1$>カンマ</option>
+          <option value="2"$DELIMITER2$>スペース</option>
+          <option value="3"$DELIMITER3$>タブ</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">ログファイルの日付フォーマット</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=DATE_FORMAT')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="DATE_FORMAT">
+          <option value="1" $DATE_FORMAT1$>20031229121351</option>
+          <option value="2"$DATE_FORMAT2$>2003/12/29 12:31:51</option>
+          <option value="3"$DATE_FORMAT3$>Dec 29 12:31:51 2003</option>
+          <option value="4" $DATE_FORMAT4$>12/29/2003 
+          12:31:51（US：月/日/年）</option>
+          <option value="5" $DATE_FORMAT5$>29/12/2003 
+          12:31:51（European：日/月/年）</option>
+          <option value="6" $DATE_FORMAT6$>2003-12-29 
+          12:31:51（ISO：年-月-日）</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">テキストエリアの改行</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=RETURN_CODE_CONV')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="RETURN_CODE_CONV" size="4" class="imeoff" value="$RETURN_CODE_CONV$"> に変換する</td> 
+    </tr>
+    <tr>
+      <td class="ListHeader2" nowrap colspan="2">
+        ▼ アクセス制限設定                   
+      </td> 
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">利用禁止ホスト</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=REJECT_HOSTS')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><textarea rows="2" name="REJECT_HOSTS" cols="27" class="imeoff">$REJECT_HOSTS$</textarea></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">利用禁止ホストからのアクセス時に<br>
+        出力するエラーメッセージ</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=REJECT_ERR_MSG')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="REJECT_ERR_MSG" size="40" value="$REJECT_ERR_MSG$"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">外部サーバからの利用禁止設定</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=ALLOW_FROM_URLS')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><textarea rows="2" name="ALLOW_FROM_URLS" cols="27" class="imeoff">$ALLOW_FROM_URLS$</textarea></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC">
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#555533">連続投稿禁止</font><font color="#555533">設定</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=REPEATED_POST_FORBIDDEN')"><b><font color="#996600">？</font></b></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="REPEATED_POST_FORBIDDEN" size="4" value="$REPEATED_POST_FORBIDDEN$" class="imeoff"> 
+        秒間、次の投稿を禁止する&nbsp;</td>
+    </tr>
+  </table>
+</td></tr></table>
+
+
+<p>
+<input type="submit" value="　設　定　" name="B1">
+</p>
+
+</form>
+<hr>
+$COPYRIGHT2$
+</center>
+</body>
+</html>
+
+

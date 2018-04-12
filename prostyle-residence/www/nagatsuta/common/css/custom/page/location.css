@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+/*  clearfix  */
+.clearfix:after {
+	content: "."; /* 新しい要素を作る */
+	display: block; /* ブロックレベル要素に */
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	min-height: 1px;
+}
+* html .clearfix {
+	height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+.pc-hide {
+	display: none;
+}
+#location {
+	color: #2F2F2F;
+}
+#location p {
+	color: #2F2F2F;
+	line-height: 1.7;
+	font-size: 14px;
+}
+h3.pagetitle {
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+#location .recommend {
+	padding: 0 30px;
+	margin-bottom: 30px;
+}
+#location .life-info {
+	padding: 0;
+}
+#location section.recommend h4 {
+	color: #007072;
+	font-size: 22px;
+	line-height: 1.2;
+	font-family: "ＭＳ Ｐ明朝","MS PMincho","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro",serif;
+	font-weight: normal;
+	margin-bottom: 1em;
+}
+.recommend .row {
+	margin-top: 30px;
+}
+.recommend .row .inner {
+	float: left;
+	width: 32%;
+	margin-left: 2%;
+}
+.recommend .row .inner:first-child {
+	margin-left: 0px;
+}
+.recommend.life-info .row h4 + .inner {
+	margin-left: 0px;
+}
+
+.recommend .row.reverse .inner {
+	float: right;
+	margin-right: 2%;
+	margin-left: 0;
+}
+.recommend .row.reverse .inner:first-child {
+	margin-right: 0px;
+}
+.recommend .reverse h4 {
+	text-align: right;
+}
+.recommend .row .inner img {
+	max-width: 100%;
+}
+
+#location .recommend.spot .row {
+	background: #D5E0E6;
+	padding: 20px;
+}
+#location section.recommend.spot h4 {
+	color: #5D6164;
+}
+.spot .row .inner {
+	width: 56.9767442%;
+	margin-left: 3%;
+}
+.spot .row .inner:first-child {
+	width: 39.5348837%;
+}
+.spot .left {
+	float: left;
+	width: 48%;
+	text-align: left;
+}
+.spot .right {
+	float: right;
+	width: 48%;
+	text-align: left;
+}
+.spot .left img,
+.spot .right img {
+	max-width: 100%;
+}
+
+#location .map {
+	text-align: center;
+}
+#location .map img {
+	max-width: 100%;
+}
+
+#location .life-info table {
+	width: 100%;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+#location .life-info thead th {
+	color: #fff;
+	/*font-family: "ＭＳ Ｐ明朝","MS PMincho","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro",serif;*/
+	font-size: 16px;
+	padding: 8px 10px;
+	/*font-weight: normal;*/
+	text-align: left;
+}
+#location .life-info01 thead th {
+	background: #426169;
+}
+#location .life-info02 thead th {
+	background: #FBCA4D;
+}
+#location .life-info03 thead th {
+	background: #9DC291;
+}
+#location .life-info04 thead th {
+	background: #BFA26B;
+}
+#location .life-info05 thead th {
+	background: #F29B91;
+}
+#location .life-info06 thead th {
+	background: #8991A0;
+}
+#location .life-info tbody tr:first-child th {
+	padding-top: 6px;
+}
+#location .life-info tbody th {
+	font-weight: normal;
+	text-align: left;
+	padding: 3px 3px 3px 0px;
+	line-height: 1.5;
+}
+#location .life-info tbody td {
+	text-align: right;
+	white-space: nowrap;
+	line-height: 1.5;
+}
+#location .attention {
+	text-align: right;
+	font-size: 10px;
+	line-height: 1.5;
+}
+#location .caption {
+	font-size: 12px;
+	margin-top: 5px;
+	line-height: 1.2;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+	.recommend.life-info .row .inner {
+		margin-left: 0px;
+		width: 100%;
+		float: none;
+	}
+	#location .life-info table {
+		margin: 0 0.5% 20px 0.5%;
+		width: 48%;
+		float: left;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 640px) {
+	#location .sp-hide {
+		display: none;
+	}
+	#location .pc-hide {
+		display: inline;
+	}
+	#location .recommend {
+		padding: 0;
+	}
+
+	.recommend .row .inner {
+		float: none;
+		margin-left: 0;
+		margin-bottom: 20px;
+		width: 100%;
+		text-align: center;
+	}
+	.recommend .row .inner p {
+		text-align: left;
+	}
+	.recommend .reverse h4 {
+		text-align: left;
+	}
+	.spot .row .inner:first-child {
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	#location .life-info table {
+		width: 100%;
+		float: none;
+	}
+	#location .attention {
+		text-align: left;
+	}
+
+}

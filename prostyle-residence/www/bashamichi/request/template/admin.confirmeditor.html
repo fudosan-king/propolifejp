@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.ListHeader	{
+		BACKGROUND: #FFCC00;
+		BORDER-BOTTOM: #CC9900 1px solid;
+		BORDER-LEFT: #FFFF99 1px solid;
+		BORDER-RIGHT: #CC9900 1px solid;
+		BORDER-TOP: #FFFF99 1px solid;
+		COLOR: #000000;
+		PADDING-LEFT: 2px;
+	}
+</STYLE>
+<title>$COPYRIGHT$</title>
+</head>
+
+<body>
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ 確認画面編集 ■</font></div></td>               
+</table>
+　
+<table border="0" width="500">
+  <tr>
+    <td width="100%">　確認画面のHTMLを編集します。<font color="#333399">$name属性$</font> 
+      と記述すると、その部分がフォームに入力もしくは選択された値に置き換わって確認画面が表示されます。たとえば、name  
+      属性が &quot;<font color="#333399">name</font>&quot; とすると、<font color="#333399">$name$</font>  
+      と記述します。該当欄に、&quot;太郎&quot;  
+      と入力されたとすると、<font color="#333399">$name$</font>  
+      の部分が &quot;太郎&quot; に置き換わります。確認画面の form    
+      タグ内の action 属性の値には、例のように必ず &quot;<font color="#333399">$cgiurl$</font>&quot;  
+      と指定して下さい。また、form タグの次の行に、&quot;<font color="#333399">$hidden$</font>&quot;  
+      を必ず入れて下さい。
+      <p>▼formタグの例</p>
+      <p>    &lt;form action=&quot;<font color="#333399">$cgiurl$</font>&quot; method="post"><br>  
+      <font color="#333399">      $hidden$</font><br>
+      &lt;p>&lt;input type="submit" name="send" value="　決　定　&quot;&gt;&lt;/p><br> 
+    &lt;/form></p>
+    </td>
+  </tr>
+</table>
+<form method="POST" action="admin.cgi">
+  <input type="hidden" name="action" value="confirmedit">
+
+
+<p>
+<textarea rows="24" name="HTML" cols="73">$HTML$</textarea>
+</p>
+
+
+<p>
+<input type="submit" value="　設　定　" name="B1">
+</p>
+
+</form>
+<hr>
+$COPYRIGHT2$
+</center>
+</body>
+</html>
+
+

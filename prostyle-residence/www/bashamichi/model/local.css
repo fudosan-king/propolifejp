@@ -1,0 +1,26 @@
+
+/* ------------------------------------------------ */
+/* -- サイト 個別設定用CSS -- */
+/* ------------------------------------------------ */
+
+
+
+#gNavi li#gNav05 a {margin-top:-50px;}
+
+#second p{ _font-size:12px; }
+
+.caps {
+	font-size:10px;
+	_font-size:10px;
+	text-align:right;
+}
+
+.mt100 { margin-top:100px;}
+.ml70 { margin-left:70px;}
+
+.ie6 { _font-size:12px;}
+
+
+#price_banner{
+	display:none;
+	}

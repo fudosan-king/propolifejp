@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<title>$COPYRIGHT$</title>
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.imeoff { ime-mode:disabled;}
+</STYLE>
+<script language="JavaScript">
+<!--//
+	function ReplyFlagChange() {
+		var selectedNum = document.form.REPLY_FLAG.selectedIndex;
+		if(selectedNum == 1) {
+			document.form.FROM_ADDR_FOR_REPLY.disabled = false;
+			document.form.FROM_ADDR_FOR_REPLY.style.backgroundColor='#FFFFFF';
+			document.form.SENDER_NAME_FOR_REPLY.disabled = false;
+			document.form.SENDER_NAME_FOR_REPLY.style.backgroundColor='#FFFFFF';
+			document.form.SUBJECT_FOR_REPLY.disabled = false;
+			document.form.SUBJECT_FOR_REPLY.style.backgroundColor='#FFFFFF';
+			document.form.MAIL_FORMAT.disabled = false;
+			document.form.MAIL_FORMAT.style.backgroundColor='#FFFFFF';
+			document.form.B1.disabled = false;
+		} else {
+
+			document.form.FROM_ADDR_FOR_REPLY.disabled = true;
+			document.form.FROM_ADDR_FOR_REPLY.style.backgroundColor='#D4D0C8';
+			document.form.SENDER_NAME_FOR_REPLY.disabled = true;
+			document.form.SENDER_NAME_FOR_REPLY.style.backgroundColor='#D4D0C8';
+			document.form.SUBJECT_FOR_REPLY.disabled = true;
+			document.form.SUBJECT_FOR_REPLY.style.backgroundColor='#D4D0C8';
+			document.form.MAIL_FORMAT.disabled = true;
+			document.form.MAIL_FORMAT.style.backgroundColor='#D4D0C8';
+			document.form.B1.disabled = true;
+		}
+	}
+//-->
+</script>
+</head>
+
+<body onload="ReplyFlagChange()">
+<center>
+<table border="0"><tr>
+  <td><div class="size4"><font color="#555533">■ 自動返信メール編集 ■</font></div></td>                 
+</table>
+<br>
+<table border="0" width="500">
+  <tr>
+    <td width="100%">　自動返信されるメールのフォーマットをカスタマイズすることができます。カスタマイズする場合には、以下の自動返信機能の各設定をすべて指定してから、メールフォーマットを編集してください。尚、「自動返信メール」設定を「しない」と設定すると、編集できませんのでご注意ください。<p><font color="#333399"><tt>$name属性$</tt></font> 
+      と記述すると、その部分がフォームに入力もしくは選択された値に置き換わってメールが送信されます。たとえば、name                 
+      属性が「<font color="#333399"><tt>name</tt></font>」とすると、<font color="#333399"><tt>$name$</tt></font> 
+      と記述します。入力フォームの該当欄に「太郎」と入力されたとすると、<font color="#333399"><tt>$name$</tt></font>               
+      の部分が「太郎」に置き換わります。</p>                
+    </td>
+  </tr>
+</table>
+<form method="POST" action="admin.cgi" name="form">
+  <input type="hidden" name="action" value="replyedit">
+
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#444422">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td class="ListHeader" nowrap bgcolor="#F5F5DC"><font color="#555533">自動返信メール</font></td>
+      <td bgcolor="#F8F8FF" nowrap><select size="1" name="REPLY_FLAG" onchange="ReplyFlagChange()">
+          <option value="0"$REPLY_FLAG0$>しない</option>
+          <option value="1"$REPLY_FLAG1$>する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">自動返信メール用送信元メールアドレス</font></td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="FROM_ADDR_FOR_REPLY" size="40" value="$FROM_ADDR_FOR_REPLY$" class="imeoff"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">自動返信メールの差出人名</font></td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="SENDER_NAME_FOR_REPLY" size="40" value="$SENDER_NAME_FOR_REPLY$"></td>
+    </tr>
+    <tr>
+      <td nowrap bgcolor="#F5F5DC"><font color="#555533">自動返信メールのサブジェクト</font></td> 
+      <td bgcolor="#F8F8FF" nowrap><input type="text" name="SUBJECT_FOR_REPLY" size="40" value="$SUBJECT_FOR_REPLY$"></td>
+    </tr>
+  </table>
+</td></tr></table>
+
+
+<p>
+<textarea rows="22" name="MAIL_FORMAT" cols="62">$MAIL_FORMAT$</textarea>
+</p>
+
+
+<p>
+<input type="submit" value="設定" name="B1">
+</p>
+
+</form>
+<hr>
+$COPYRIGHT2$
+</center>
+</body>
+</html>
+
+

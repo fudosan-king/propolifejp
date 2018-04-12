@@ -1,0 +1,606 @@
+@charset "utf-8";
+
+#gnav {
+	background-color:#FFF;
+	width:100%;
+	height:51px;
+	background:url(../../img/element/nav/page_gnav_bg.png) repeat-x;
+	background-position:0px 0px;
+	position: relative;
+	z-index:99999;
+}
+
+#gnav ul {
+	width:960px;
+	height:51px;
+	padding:0;
+	margin:0 auto;
+	overflow:hidden;
+	padding:0px 0 0 0;
+	background:url(../../img/element/nav/gnav.jpg) repeat-x;
+	/* background-position:0px -51px; */
+}
+#gnav ul li,
+#gnav ul li a {
+	position:relative;
+	text-indent:100%;
+	overflow:hidden;
+	white-space:nowrap;
+	margin:0px 0px 0 0px;
+	padding:0;
+	height:51px;
+	width:137px;
+	display:block;
+	float:left;
+	background:url(../../img/element/nav/gnav.jpg) no-repeat;
+	background-position:0px 0px;
+}
+
+
+
+#gnav ul li.top {background-position:0px 0px;}
+#gnav ul li.concept {background-position:-137px 0px;}
+#gnav ul li.equipment {background-position:-274px 0px;}
+#gnav ul li.plan {background-position:-411px 0px;}
+#gnav ul li.model {background-position:-548px 0px;}
+#gnav ul li.location {background-position:-685px 0px;}
+#gnav ul li.access {background-position:-822px 0px;}
+
+
+
+#gnav ul li.top a {background-position:0px -51px;}
+#gnav ul li.concept a {background-position:-137px -51px;}
+#gnav ul li.equipment a {background-position:-274px -51px;}
+#gnav ul li.plan a {background-position:-411px -51px;}
+#gnav ul li.model a {background-position:-548px -51px;}
+#gnav ul li.location a {background-position:-685px -51px;}
+#gnav ul li.access a {background-position:-822px -51px;}
+
+#gnav ul li.map {display:none;}
+#gnav ul li.outline {display:none;}
+#gnav ul li.request {display:none;}
+#gnav ul li.reserve {display:none;}
+
+#gnav ul li.top a:hover {background-position:0px -102px;}
+#gnav ul li.concept a:hover {background-position:-137px -102px;}
+#gnav ul li.equipment a:hover {background-position:-274px -102px;}
+#gnav ul li.plan a:hover {background-position:-411px -102px;}
+#gnav ul li.model a:hover {background-position:-548px -102px;}
+#gnav ul li.location a:hover {background-position:-685px -102px;}
+#gnav ul li.access a:hover {background-position:-822px -102px;}
+
+
+body#top #gnav ul li.top a {background-position: 0px -102px;}
+body#concept #gnav ul li.concept a {background-position:-137px -102px;}
+body#equipment #gnav ul li.equipment a {background-position:-274px -102px;}
+body#plan #gnav ul li.plan a {background-position:-411px -102px;}
+body#model #gnav ul li.model a {background-position:-548px -102px;}
+body#location #gnav ul li.location a {background-position:-685px -102px;}
+body#access #gnav ul li.access a {background-position:-822px -102px;}
+
+
+@media (max-width: 900px) {
+#gnav {
+	width:100%;
+	margin: 0 1px;
+	height:auto;
+	overflow:hidden;
+	background-image:none;
+	/*background-color:#92693B;*/
+	/*display:block !important;*/
+
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8e6b42, #82613c);
+background-image: -ms-linear-gradient(top, #8e6b42, #82613c);
+background-image: -o-linear-gradient(top, #8e6b42, #82613c);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8e6b42), to(#82613c));
+background-image: -webkit-linear-gradient(top, #8e6b42, #82613c);
+background-image: linear-gradient(top, #8e6b42, #82613c);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+
+}
+
+#gnav ul {
+	width:100%;
+	background-image:none;
+	height:auto;
+	overflow:hidden;
+	vertical-align: baseline;
+	/*padding:3px 0 0 4px;*/
+	margin:0 auto;
+}
+
+#gnav ul li{
+	color:#C59554;
+	text-indent: 0px;
+	font-size: 14px;
+	height:45px;
+	line-height: 35px;
+	padding: 10px 0 0;
+	text-align:center;
+	/*margin:3px 2px 3px 2px;*/
+	display: inline;
+	float: left;
+	width: 24.8%;
+	text-align:center;
+	background-image:none;
+	border-bottom: 2px solid #B28500;
+	border-right: 1px solid #594228;
+}
+
+#gnav ul li:nth-of-type(4n){
+		border-right: none;
+}
+#gnav ul li a {
+	width:100%;
+	height:35px;
+	display:block;
+	line-height:inherit;
+	background-image:none;
+	font-size:14px;
+	text-indent:0px;
+	white-space:normal;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+	-webkit-text-size-adjust: 100%;
+	/*background:#5F462C;*/
+	font-family: "ＭＳ Ｐ明朝","MS PMincho","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro",serif;
+	/*padding: 5px 0;*/
+	}
+
+#gnav ul li.map {display:none;}
+/* #gnav ul li.outline {display:none;} */
+#gnav ul li.outline {display:block;}
+#gnav ul li.request {display:none;}
+#gnav ul li.reserve {display:none;}
+#gnav ul li:hover{
+	/*background-color:#E9E2CF;*/
+}
+
+}
+
+@media (max-width: 640px) {
+#gnav {
+	margin: 0px;
+	padding:0px 0px 0px 0px;
+	background-image:none;
+	width:100%;
+	/*background-color:#92693B;*/
+	position:relative;
+	display:none;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8e6b42, #82613c);
+background-image: -ms-linear-gradient(top, #8e6b42, #82613c);
+background-image: -o-linear-gradient(top, #8e6b42, #82613c);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8e6b42), to(#82613c));
+background-image: -webkit-linear-gradient(top, #8e6b42, #82613c);
+background-image: linear-gradient(top, #8e6b42, #82613c);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+
+}
+
+#gnav ul {
+	width:100%;
+	background-image:none;
+	vertical-align: baseline;
+	padding:0;
+	margin:0;
+}
+
+#gnav ul li{
+	border-bottom: 1px solid #594228;
+	height:45px;
+	line-height: 45px;
+	text-align:center;
+	margin:0px;
+	display: inline;
+	float: left;
+	width: 49.842% !important;
+	text-align:center;
+	/*background:#fff url(../../img/element/nav/allow.png) 95% 50% no-repeat;/*/
+	border-right:none;
+padding:0;
+	
+	
+	
+}
+#gnav ul li span {
+	display:block;
+	width:100%;
+	margin:0 auto;
+}
+#gnav ul li a {
+	height:40px;
+	display:block;
+	background-image:none;
+	font-size:14px;
+	text-indent:0px;
+	white-space:normal;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+	-webkit-text-size-adjust: 100%;
+	/*background:#5F462C url(../../img/element/nav/allow.png) 95% 50% no-repeat;*/
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8e6b42, #82613c);
+background-image: -ms-linear-gradient(top, #8e6b42, #82613c);
+background-image: -o-linear-gradient(top, #8e6b42, #82613c);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8e6b42), to(#82613c));
+background-image: -webkit-linear-gradient(top, #8e6b42, #82613c);
+background-image: linear-gradient(top, #8e6b42, #82613c);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+	padding: 2px 0;
+
+
+}
+
+
+#gnav ul li:nth-of-type(2n) {
+	border-left: 1px solid #594228;
+	border-right: none;
+	
+}
+
+#gnav ul li:last-of-type(1) {
+	border-bottom: none;
+}
+#gnav ul li:last-of-type(2) {
+	border-bottom: none;
+}
+
+
+#gnav ul li.top a ,#gnav ul li.top a:hover{background-position:95% 50%;}
+#gnav ul li.concept a ,#gnav ul li.concept a:hover{background-position:95% 50%;}
+#gnav ul li.equipment a ,#gnav ul li.equipment a:hover{background-position:95% 50%;}
+#gnav ul li.plan a ,#gnav ul li.plan a:hover{background-position:95% 50%;}
+#gnav ul li.model a ,#gnav ul li.model a:hover{background-position:95% 50%;}
+#gnav ul li.location a ,#gnav ul li.location a:hover{background-position:95% 50%;}
+#gnav ul li.access a ,#gnav ul li.access a:hover{background-position:95% 50%;}
+
+
+
+#gnav ul li.map a {display:block;}
+#gnav ul li.outline a {display:block;}
+#gnav ul li.request a {display:block;}
+#gnav ul li.reserve {display:block;}
+#gnav ul li a:hover{
+	border-bottom:none;
+}
+#gnav ul li:hover{
+	/*background-color:#E9E2CF;*/
+}
+
+
+
+#gnav ul li.request a {
+	/*border: 1px solid #92693B;*/
+	height:45px;
+	display:block;
+	background-image:none;
+	background-color:#840E00;
+	text-indent:0px;
+	white-space:normal;
+	text-align:center;
+	color:#FFF;
+	text-decoration:none;
+	-webkit-text-size-adjust: 100%
+}
+
+#gnav ul li.request a:hover{
+	background-color:#BF2710;
+}
+
+#gnav ul li.reserve a {
+	/*border: 1px solid #92693B;*/
+	height:45px;
+	display:block;
+	background-image:none;
+	background-color:#840E00;
+	text-indent:0px;
+	white-space:normal;
+	text-align:center;
+	color:#FFF;
+	text-decoration:none;
+	-webkit-text-size-adjust: 100%
+}
+
+#gnav ul li.reserve a:hover{
+	background-color:#BF2710;
+}
+
+
+}
+
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+#fnav {
+	text-align: center; 
+	position: relative; 
+	z-index: 100; 
+	background:#fff url(../../img/element/content_bg.jpg) repeat; 
+	border-top: 1px solid #C19302; 
+	border-bottom: 1px solid #fff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8c6941', endColorstr = '#6c5032');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8c6941', endColorstr = '#6c5032')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8c6941, #6c5032);
+background-image: -ms-linear-gradient(top, #8c6941, #6c5032);
+background-image: -o-linear-gradient(top, #8c6941, #6c5032);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8c6941), to(#6c5032));
+background-image: -webkit-linear-gradient(top, #8c6941, #6c5032);
+background-image: linear-gradient(top, #8c6941, #6c5032);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+}
+
+#fnav ul {
+ letter-spacing: -0.4em;
+ margin: 2px 0px; 
+}
+
+#fnav ul li{
+	 letter-spacing: normal; 
+	 border-right: 1px solid #cdc1ae; 
+	 display: inline-block; 
+	 *display: inline; 
+	 *zoom: 1; 
+	 height: 30px; 
+	 line-height: 30px; 
+	 }
+#fnav ul li:nth-child(1){
+	border-left: 1px solid #cdc1ae;
+}
+#fnav ul li span {
+	display:block;
+	margin:0 auto;
+}
+#fnav ul li a {
+	 line-height: 30px; 
+	display: block; 
+	padding: 0 30px; 
+	text-decoration: none; 
+	font-style: normal;
+	color:#fff;
+	font-size:10px;
+	font-weight:bold;
+	font-family: "ＭＳ Ｐ明朝","MS PMincho","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro",serif;
+	font-weight:normal;
+
+
+}
+#fnav ul li a:hover{
+	text-decoration:underline;
+}
+@media (max-width: 900px) {
+#fnav {
+	text-align: center; 
+	position: relative; 
+	overflow:hidden;
+	z-index: 100; 
+	background-color: #fff !important;
+	background-image:none;
+	border-top: 1px solid #C19302; 
+	border-bottom: 1px solid #fff;
+	min-width:inherit;
+	width:100%;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8e6b42, #82613c);
+background-image: -ms-linear-gradient(top, #8e6b42, #82613c);
+background-image: -o-linear-gradient(top, #8e6b42, #82613c);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8e6b42), to(#82613c));
+background-image: -webkit-linear-gradient(top, #8e6b42, #82613c);
+background-image: linear-gradient(top, #8e6b42, #82613c);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+}
+
+
+#fnav ul {
+	width:100%;
+	background-image:none;
+	height:auto;
+	overflow:hidden;
+	vertical-align: baseline;
+	padding:0;
+	 margin: 0px 2px; 
+}
+
+#fnav ul li{
+	border:none;
+	height:30px;
+	line-height: 30px;
+	text-align:center;
+	/*margin:1px 3px 3px 3px;*/
+	display: inline;
+	float: left;
+	width: 24.8%;
+	text-align:center;
+	border-bottom: 1px solid #594228;
+	border-right: 1px solid #594228;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8e6b42, #82613c);
+background-image: -ms-linear-gradient(top, #8e6b42, #82613c);
+background-image: -o-linear-gradient(top, #8e6b42, #82613c);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8e6b42), to(#82613c));
+background-image: -webkit-linear-gradient(top, #8e6b42, #82613c);
+background-image: linear-gradient(top, #8e6b42, #82613c);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+}
+
+#fnav ul li:nth-child(1){
+	border-left:none;
+}
+
+#fnav ul li:nth-of-type(4n){
+		border-right: none;
+}
+
+#fnav ul li a {
+	/*border: 1px solid #BC8F58;
+	background-color:#FFF;*/
+	line-height:inherit;
+	width:100%;
+	padding:0;
+	background-image:none;
+	font-size:10px;
+	text-indent:0px;
+	white-space:normal;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+	-webkit-text-size-adjust: 100%;
+	font-weight:normal;
+}
+#fnav ul li a:hover{
+	text-decoration:underline;
+}
+
+	{
+		
+}
+
+
+
+
+
+}
+
+@media (max-width: 640px) {
+#fnav {
+	min-width:inherit;
+	margin: 0;
+	height:auto;
+	overflow:hidden;
+	width:100%;
+	background:#fff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8c6941', endColorstr = '#6c5032');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8c6941', endColorstr = '#6c5032')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8c6941, #6c5032);
+background-image: -ms-linear-gradient(top, #8c6941, #6c5032);
+background-image: -o-linear-gradient(top, #8c6941, #6c5032);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8c6941), to(#6c5032));
+background-image: -webkit-linear-gradient(top, #8c6941, #6c5032);
+background-image: linear-gradient(top, #8c6941, #6c5032);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+
+}
+
+#fnav ul {
+	width:100%;
+	background-image:none;
+	vertical-align: baseline;
+	padding:0;
+	margin:0;	
+}
+
+#fnav ul li{
+	border-bottom: 1px solid #594228;
+	height:40px;
+	line-height: 35px;
+	text-align:center;
+	/*padding:2px;*/
+	margin:0;
+	display: inline;
+	float: left;
+	width: 49.84% !important;
+	text-align:center;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#8e6b42', endColorstr = '#82613c')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8e6b42, #82613c);
+background-image: -ms-linear-gradient(top, #8e6b42, #82613c);
+background-image: -o-linear-gradient(top, #8e6b42, #82613c);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8e6b42), to(#82613c));
+background-image: -webkit-linear-gradient(top, #8e6b42, #82613c);
+background-image: linear-gradient(top, #8e6b42, #82613c);
+/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+border-right:none;
+	
+}
+/*#fnav ul li:nth-child(1){
+	border-left:none;
+}*/
+
+#fnav ul li:nth-of-type(2n) {
+	border-left: 1px solid #594228;
+}
+
+#fnav ul li:last-of-type(1) {
+	border-bottom: none;
+}
+#fnav ul li:last-of-type(2) {
+	border-bottom: none;
+}
+
+
+#fnav ul li a {
+	line-height:inherit;
+	width:100%;
+	background-image:none;
+	font-size:12px;
+	text-indent:0px;
+	white-space:normal;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+	-webkit-text-size-adjust: 100%;
+	font-family: "ＭＳ Ｐ明朝","MS PMincho","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro",serif;
+	font-weight: normal;
+	padding: 2px 0;
+
+
+}
+#fnav ul li a:hover{
+	text-decoration:underline;
+}
+#gnav ul li.map {display:block;}
+#gnav ul li.outline {display:block;}
+#gnav ul li.request {display:block;}
+
+
+}

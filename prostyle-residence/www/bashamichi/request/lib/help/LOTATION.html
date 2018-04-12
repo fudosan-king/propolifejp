@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=Shift_JIS">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>ログローテーション</title>
+		<style type="text/css" media="screen"><!--
+table	{font-size: 12px}
+span	{font-size: 14px; font-weight: bold;}--></style>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<span>ログローテーション</span>
+		<hr>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<p>ログ出力を &quot;する&quot; にすると、フォームから送信されるたびにログファイルに書き込まれ、どんどん大きくなってしまいます。あまり大きすぎると、ログファイルが破損したり処理に時間がかかったりして弊害が大きくなります。そのために、ログはこまめにローテーションをして別名に保存すべきです。ログ出力を &quot;する&quot; にしている場合には、ログローテーションをすることをお勧めします。&quot;サイズ指定&quot; を選択した場合には、&quot;ログローテーションサイズ&quot; を必ず設定してください。</p>
+					<p>ログローテーションには、&quot;日ごと&quot;, &quot;月ごと&quot;, &quot;サイズ指定&quot;があります。フォームの利用度に応じて適切なモードを選択してください。概ね ログサイズが 1MB を超えないようにすることをお勧めします。</p>
+					<p>ログファイルのファイル名とローテーション後のファイル名は、モードによって異なります。
+</p>
+					<p><u>&quot;しない&quot; の場合</u></p>
+					<blockquote>
+						<p>&quot;maillog.cgi&quot; で生成されます。</p>
+					</blockquote>
+					<p><u>&quot;日ごと&quot; の場合</u></p>
+					<blockquote>
+						<p>&quot;maillog.YYYYMMDD.cgi&quot; で生成されます。YYYY は西暦、MM は 月、DD は日を意味します。たとえば、西暦 2002 年 5 月 10 日に生成されるログは &quot;maillog.20020510.cgi&quot; となります。</p>
+					</blockquote>
+					<p><u>&quot;月ごと&quot; の場合</u></p>
+					<blockquote>
+						<p>&quot;maillog.YYYYMM.cgi&quot; で生成されます。YYYY は西暦、MM は 月を意味します。たとえば、西暦 2002 年 5 月に生成されるログは&quot;maillog.200205.cgi&quot; となります。</p>
+					</blockquote>
+					<p><u>&quot;サイズ指定&quot; の場合</u></p>
+					<blockquote>
+						<p>&quot;maillog.cgi&quot; で生成されます。ローテーションされる場合には、その日付を元に &quot;maillog.YYYYMMDD.cgi&quot; にリネームされます。もし、同じ日に 2 度ローテーションされる場合には、2 度目からは &quot;maillog.YYMMDD-N.cgi&quot; となります。N は、ローテーションの回数となります。たとえば、西暦 2002 年 5 月 10 日に 3 度ローテーションが発生した場合には、以下のファイルが残ることになります。</p>
+						<ul>
+							<li>maillog.cgi
+							<li>maillog.20020510.cgi
+							<li>maillog.20020510-2.cgi
+							<li>maillog.20020510-3.cgi
+						</ul>
+					</blockquote>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<button name="buttonName" type="button" onclick="javascript:window.close()">閉じる</button>
+	</body>
+
+</html>

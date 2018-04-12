@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+/* main
+-------------------------------------------------- */
+#main {
+	background: no-repeat 50%;
+	background-size: cover;
+	line-height: 1;
+	margin-top: 55px;
+}
+
+#main .wrap {
+	height: 220px;
+}
+
+#main h2 {
+	color: #333;
+	font-size: 35px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#main h2 a {
+	color: #333;
+	text-decoration: none;
+}
+
+#main h2 span {
+	color: #734638;
+	display: block;
+	font-family: Loto;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+/* detail
+-------------------------------------------------- */
+#detail h3.ttl {
+	background: #f5f5f5;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 5px solid #734638;
+	font-size: 30px;
+	line-height: 1;
+	margin-bottom: 50px;
+	padding: 34px 0 30px;
+}
+
+/* pageList
+-------------------------------------------------- */
+.pageList {
+	text-align: center;
+}
+
+.pageList div {
+	display: inline-block;
+}
+
+.pageList a {
+	background: #333;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0 10px;
+	padding: 10px 0 9px;
+	text-decoration: none;
+	width: 196px;
+	position: relative;
+}
+
+.pageList .next a,
+.pageList .back a {
+	width: 96px;
+}
+
+.pageList .next a:before,
+.pageList .back a:before {
+	background: url(../images/arw_01.png) no-repeat 0 50%;
+	content: "";
+	height: 10px;
+	margin-top: -6px;
+	width: 6px;
+	position: absolute;
+	top: 50%;
+}
+
+.pageList .back a {
+	padding-left: 10px;
+}
+
+.pageList .next a {
+	padding-right: 10px;
+}
+
+.pageList .back a:before {
+	left: 18px;
+}
+
+.pageList .next a:before {
+	right: 18px;
+	transform: rotate(180deg);
+}
+
+.pageList a:hover {
+	background: #eaeaea;
+	color: #000;
+}
+
+.pageList .next a:hover:before,
+.pageList .back a:hover:before {
+	background-image: url(../images/arw_02.png);
+}
+
+/* ---------------------------------------------------------
+
+■■■ SP ■■■■■■■■■■
+
+--------------------------------------------------------- */
+@media screen and (max-width: 667px) {
+	#container {
+		padding: 0;
+	}
+
+	#container img {
+		height: auto;
+		width: 100%;
+	}
+
+	/* main
+	-------------------------------------------------- */
+	#main {
+		background-position: 100% 50%;
+	}
+
+	#main .wrap {
+		height: 125px;
+	}
+
+	#footer .wrap {
+		margin: 0 10px;
+	}
+
+	#main h2 {
+		font-size: 20px;
+		text-align: center;
+		width: 100%;
+	}
+
+	#main h2 span {
+		font-size: 10px;
+		margin-top: 8px;
+	}
+
+	/* detail
+	-------------------------------------------------- */
+	#detail h3.ttl {
+		border-bottom: 1px solid #e0e0e0;
+		border-top: 2px solid #734638;
+		font-size: 17px;
+		line-height: 1.3;
+		margin-bottom: 10px;
+		padding: 16px 0 13px;
+	}
+
+	/* pageList
+	-------------------------------------------------- */
+	.pageList {
+		margin-bottom: 15px;
+	}
+
+	.pageList a {
+		font-size: 10px;
+		margin: 0 5px;
+		padding: 9px 0 8px;
+		text-decoration: none;
+		width: 38%;
+		position: relative;
+	}
+
+	.pageList div {
+		margin: 0 5px;
+		width: 21%;
+	}
+
+	.pageList .next a,
+	.pageList .back a {
+		margin: 0;
+		width: 100%;
+	}
+
+	.pageList .next a:before,
+	.pageList .back a:before {
+		background: url(../images/arw_01.png) no-repeat 0 50%;
+		content: "";
+		height: 10px;
+		margin-top: -6px;
+		width: 6px;
+		position: absolute;
+		top: 50%;
+	}
+
+	.pageList .back a {
+		padding-left: 5px;
+	}
+
+	.pageList .next a {
+		padding-right: 5px;
+	}
+
+	.pageList .back a:before {
+		left: 10px;
+	}
+
+	.pageList .next a:before {
+		right: 10px;
+		transform: rotate(180deg);
+	}
+
+	.pageList a:hover {
+		background: #eaeaea;
+		color: #000;
+	}
+
+	.pageList .next a:hover:before,
+	.pageList .back a:hover:before {
+		background-image: url(../images/arw_02.png);
+	}
+}

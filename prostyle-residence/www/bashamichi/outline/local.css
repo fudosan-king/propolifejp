@@ -1,0 +1,68 @@
+
+/* ------------------------------------------------ */
+/* -- サイト 個別設定用CSS -- */
+/* ------------------------------------------------ */
+
+#btn8 {background:url(../common/img/menu.jpg) -786px -50px no-repeat;}
+
+h2 {
+	font-size:14px;
+	color:#333;
+	font-weight:bold;
+	width:880px;
+	margin:0 0 10px 0;
+	padding-top:2px;
+}
+
+#outline {
+	width:880px;
+	padding:20px 0 20px 0;
+	margin:0 auto;
+}
+
+#outline table {
+	background:#CCC;
+	width:880px;
+	margin:0 auto;
+}
+
+#outline th {
+	background:url(img/th_bg.jpg) top no-repeat;
+	text-align:left;
+	font-weight:normal;
+	color:#333;
+	padding:5px;
+	width:200px;
+	vertical-align:top;
+}
+
+#outline td {
+	background:#FFF;
+	padding:5px;
+	vertical-align:top;
+}
+
+#outline td a {
+	color:#666;
+	text-decoration:underline;
+}
+
+.tit {
+	border-left:#d0c644 3px solid;
+	padding-left:8px;
+}
+
+#outline p {
+	margin:20px 0 0 0;
+}
+
+.font-w {
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+}
+
+
+#price_banner{
+	display:none;
+	}

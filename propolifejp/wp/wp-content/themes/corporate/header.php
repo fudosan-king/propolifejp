@@ -201,12 +201,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<span><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></span>
 					</li>
 					<li>
-						<a href="https://www.prostyle-villa.com/" target="_blank">
-							<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link04.jpg" width="356" height="98" alt="PROSTYLE VILLA">
-						</a>
-						<span><a href="https://www.prostyle-villa.com/" target="_blank">株式会社プロスタイルヴィラ</a></span>
-					</li>
-					<li>
 						<a href="http://chinokanri.co.jp/" target="_blank">
 							<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link05.jpg" width="356" height="98" alt="CHINO 千野建物管理">
 						</a>
@@ -328,7 +322,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a href="https://www.chronicle-web.com/">株式会社クロニクル</a></li>
 					<li><a href="http://www.chronicle-kensetsu.co.jp/">株式会社クロニクル建設</a></li>
 					<li><a href="https://www.prostyle-residence.com/">株式会社プロスタイル</a></li>
-					<li><a href="https://www.prostyle-villa.com/">株式会社プロスタイルヴィラ</a></li>
 					<li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
 					<li><span>煙台提案生活木業有限公司</span></li>
 					<li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>

@@ -40,7 +40,6 @@
                     <li><a href="https://www.chronicle-web.com/" target="_blank">株式会社クロニクル</a></li>
                     <li><a href="https://www.chronicle-web.com/reform/" target="_blank">株式会社クロニクル建設</a></li>
                     <li><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></li>
-                    <li><a href="https://www.prostyle-villa.com/" target="_blank">株式会社プロスタイルヴィラ</a></li>
                     <li><a href="http://chinokanri.co.jp/" target="_blank">千野建物管理株式会社</a></li>
                     <li><span>煙台提案生活木業有限公司</span></li>
                     <li><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></li>

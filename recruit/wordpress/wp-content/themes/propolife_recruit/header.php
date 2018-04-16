@@ -121,12 +121,6 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                             <span><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></span>
                         </li>
                         <li>
-                            <a href="https://www.prostyle-villa.com/" target="_blank">
-                                <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link04.jpg" width="356" height="98" alt="PROSTYLE VILLA">
-                            </a>
-                            <span><a href="https://www.prostyle-villa.com/" target="_blank">株式会社プロスタイルヴィラ</a></span>
-                        </li>
-                        <li>
                             <a href="http://chinokanri.co.jp/" target="_blank">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link05.jpg" width="356" height="98" alt="CHINO 千野建物管理">
                             </a>
@@ -247,14 +241,13 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <li><a href="https://www.chronicle-web.com/">株式会社クロニクル</a></li>
                         <li><a href="https://www.chronicle-web.com/reform/">株式会社クロニクル建設</a></li>
                         <li><a href="https://www.prostyle-residence.com/">株式会社プロスタイル</a></li>
-                        <li><a href="https://www.prostyle-villa.com/">株式会社プロスタイルヴィラ</a></li>
                         <li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
                         <li><span>煙台提案生活木業有限公司</span></li>
                         <li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
                         <li><span>PROPOLIFE SINGAPORE</span></li>
                         <li><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></li>
 			<li><a href="http://www.propolifehotels.com/" target="_blank">PROPOLIFE HOTELS</a></li>
-			<li><a>株式会社沖縄イゲトー</a></li>
+                        <li><a>株式会社沖縄イゲトー</a></li>
                     </ul>
                 </li>
                 <li>

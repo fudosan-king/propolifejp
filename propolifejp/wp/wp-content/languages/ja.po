@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.7.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-05-02 05:13:51+0000\n"
+"PO-Revision-Date: 2018-03-12 03:15:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,19 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ja_JP\n"
 "Project-Id-Version: WordPress - 4.7.x\n"
+
+#. translators: 1: number of placeholders, 2: number of arguments passed
+#: wp-includes/wp-db.php:1364
+msgid "The query does not contain the correct number of placeholders (%1$d) for the number of arguments passed (%2$d)."
+msgstr "渡された引数の数 (%2$d) に対する適正なプレースホルダー数 (%1$d) がクエリーに含まれていません。"
+
+#: wp-includes/wp-db.php:1353
+msgid "The query only expected one placeholder, but an array of multiple placeholders was sent."
+msgstr "クエリーには1つのプレースホルダーのみが必要でしたが、複数のプレースホルダーの配列が送信されました。"
+
+#: wp-includes/wp-db.php:1316
+msgid "Unsupported value type (%s)."
+msgstr "サポートされていない値のタイプ (%s) です。"
 
 #: wp-trackback.php:125
 msgid "We already have a ping from that URL for this post."
@@ -473,71 +486,71 @@ msgstr "%s へのリンク"
 
 #. translators: 1: WordPress version number, 2: Minimum required MySQL version
 #. number
-#: wp-includes/wp-db.php:3221
+#: wp-includes/wp-db.php:3345
 msgid "<strong>ERROR</strong>: WordPress %1$s requires MySQL %2$s or higher"
 msgstr "<strong>エラー</strong>: WordPress %1$s には MySQL %2$s 以上が必要です。"
 
-#: wp-includes/wp-db.php:1801 wp-includes/wp-db.php:1807
+#: wp-includes/wp-db.php:1866 wp-includes/wp-db.php:1872
 msgid "Unable to retrieve the error message from MySQL"
 msgstr "MySQL からエラーメッセージを取得できません。"
 
-#: wp-includes/wp-db.php:1699
+#: wp-includes/wp-db.php:1764
 msgid "Are you sure that the database server is not under particularly heavy load?"
 msgstr "データベースサーバーに特に重い負荷がかかっていないことを確認してください。"
 
 #. translators: %s: database host
-#: wp-includes/wp-db.php:1693
+#: wp-includes/wp-db.php:1758
 msgid "This means that we lost contact with the database server at %s. This could mean your host&#8217;s database server is down."
 msgstr "これは %s のデータベースサーバーとの接続が切断されたことを意味しています。ホスティングサービスのデータベースサーバーがダウンしている可能性もあります。"
 
-#: wp-includes/wp-db.php:1689
+#: wp-includes/wp-db.php:1754
 msgid "Error reconnecting to the database"
 msgstr "データベース接続エラー"
 
 #. translators: %s: support forums URL
-#: wp-includes/wp-db.php:1600 wp-includes/wp-db.php:1704
+#: wp-includes/wp-db.php:1665 wp-includes/wp-db.php:1769
 msgid "If you&#8217;re unsure what these terms mean you should probably contact your host. If you still need help you can always visit the <a href=\"%s\">WordPress Support Forums</a>."
 msgstr "こうした用語が何を意味しているのか分からない場合は、ホスティングサービスに連絡するべきでしょう。助けが必要であればいつでも <a href=\"%s\">WordPress サポートフォーラム</a>を訪れることができます。"
 
-#: wp-includes/wp-db.php:1595 wp-includes/wp-db.php:1698
+#: wp-includes/wp-db.php:1660 wp-includes/wp-db.php:1763
 msgid "Are you sure that the database server is running?"
 msgstr "データベースサーバーは稼働していますか ?"
 
-#: wp-includes/wp-db.php:1594
+#: wp-includes/wp-db.php:1659
 msgid "Are you sure that you have typed the correct hostname?"
 msgstr "正しいホスト名を入力しましたか ?"
 
-#: wp-includes/wp-db.php:1593
+#: wp-includes/wp-db.php:1658
 msgid "Are you sure you have the correct username and password?"
 msgstr "ユーザー名とパスワードに間違いはありませんか ?"
 
 #. translators: 1: wp-config.php. 2: database host
-#: wp-includes/wp-db.php:1587
+#: wp-includes/wp-db.php:1652
 msgid "This either means that the username and password information in your %1$s file is incorrect or we can&#8217;t contact the database server at %2$s. This could mean your host&#8217;s database server is down."
 msgstr "これは、%1$s ファイルのユーザー名とパスワードが正しくないか、あるいは %2$s のデータベースサーバーに接続できないかのどちらかを意味します。ホスティングサービスのデータベースサーバーがダウンしているかもしれません。"
 
-#: wp-includes/wp-db.php:1385 wp-includes/wp-db.php:1402
+#: wp-includes/wp-db.php:1450 wp-includes/wp-db.php:1467
 msgid "WordPress database error:"
 msgstr "WordPress データベースエラー:"
 
 #. translators: 1: Database error message, 2: SQL query
-#: wp-includes/wp-db.php:1372
+#: wp-includes/wp-db.php:1437
 msgid "WordPress database error %1$s for query %2$s"
 msgstr "WordPress データベースエラー: %1$s for query %2$s"
 
 #. translators: 1: Database error message, 2: SQL query, 3: Name of the calling
 #. function
-#: wp-includes/wp-db.php:1369
+#: wp-includes/wp-db.php:1434
 msgid "WordPress database error %1$s for query %2$s made by %3$s"
 msgstr "WordPress データベースエラー: %1$s for query %2$s made by %3$s"
 
-#: wp-includes/wp-db.php:1297
+#: wp-includes/wp-db.php:1300
 msgid "The query argument of %s must have a placeholder."
 msgstr "%s のクエリー引数にはプレースホルダーが必要です。"
 
 #. translators: %s: database access abstraction class, usually wpdb or a class
 #. extending wpdb
-#: wp-includes/wp-db.php:1180
+#: wp-includes/wp-db.php:1179
 msgid "%s must set a database connection for use with escaping."
 msgstr "エスケープして使うには %s にデータベース接続の設定をする必要があります。"
 
@@ -1657,15 +1670,15 @@ msgstr "無効なショートコード名: %1$s。空白スペースや予約文
 msgid "Invalid shortcode name: Empty name given."
 msgstr "無効ショートコード名: 空の名前が指定されています。"
 
-#: wp-includes/script-loader.php:980
+#: wp-includes/script-loader.php:984
 msgid "Previous"
 msgstr "前"
 
-#: wp-includes/script-loader.php:979 wp-signup.php:559
+#: wp-includes/script-loader.php:983 wp-signup.php:559
 msgid "Next"
 msgstr "次へ"
 
-#: wp-includes/script-loader.php:976
+#: wp-includes/script-loader.php:980
 msgid "Today"
 msgstr "今日"
 
@@ -3516,7 +3529,7 @@ msgstr "このコメントを読む権限がありません。"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:156
 msgid "Query parameter not permitted: %s"
-msgstr "クエリパラメータが許可されていません: %s"
+msgstr "クエリー変数が許可されていません: %s"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:134
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:354
@@ -4188,13 +4201,13 @@ msgstr "%1$s %2$s, %3$s前 (%4$s)"
 #. translators: %s: revision date with author avatar
 #: wp-includes/post-template.php:1704 wp-includes/post-template.php:1756
 msgid "%s [Current Revision]"
-msgstr "%1$s [現在のリビジョン]"
+msgstr "%s [現在のリビジョン]"
 
 #. translators: %s: revision date
 #. translators: %s: revision date with author avatar
 #: wp-includes/post-template.php:1702 wp-includes/post-template.php:1754
 msgid "%s [Autosave]"
-msgstr "%1$s [自動保存]"
+msgstr "%s [自動保存]"
 
 #. translators: revision date format, see https://secure.php.net/date
 #: wp-includes/post-template.php:1700 wp-includes/post-template.php:1736
@@ -5808,51 +5821,51 @@ msgctxt "translations"
 msgid "Installed"
 msgstr "インストール済み"
 
-#: wp-includes/general-template.php:3472
+#: wp-includes/general-template.php:3474
 msgctxt "admin color scheme"
 msgid "Coffee"
 msgstr "コーヒー"
 
-#: wp-includes/general-template.php:3466
+#: wp-includes/general-template.php:3468
 msgctxt "admin color scheme"
 msgid "Ocean"
 msgstr "オーシャン"
 
-#: wp-includes/general-template.php:3460
+#: wp-includes/general-template.php:3462
 msgctxt "admin color scheme"
 msgid "Ectoplasm"
 msgstr "エクトプラズム"
 
-#: wp-includes/general-template.php:3454
+#: wp-includes/general-template.php:3456
 msgctxt "admin color scheme"
 msgid "Sunrise"
 msgstr "サンライズ"
 
-#: wp-includes/general-template.php:3448
+#: wp-includes/general-template.php:3450
 msgctxt "admin color scheme"
 msgid "Midnight"
 msgstr "ミッドナイト"
 
-#: wp-includes/general-template.php:3442
+#: wp-includes/general-template.php:3444
 msgctxt "admin color scheme"
 msgid "Blue"
 msgstr "ブルー"
 
-#: wp-includes/general-template.php:3436
+#: wp-includes/general-template.php:3438
 msgctxt "admin color scheme"
 msgid "Light"
 msgstr "ライト"
 
-#: wp-includes/general-template.php:3425
+#: wp-includes/general-template.php:3427
 msgctxt "admin color scheme"
 msgid "Default"
 msgstr "デフォルト"
 
-#: wp-includes/general-template.php:3259
+#: wp-includes/general-template.php:3261
 msgid "Next &raquo;"
 msgstr "次へ &raquo;"
 
-#: wp-includes/general-template.php:3258
+#: wp-includes/general-template.php:3260
 msgid "&laquo; Previous"
 msgstr "&laquo; 前へ"
 
@@ -6136,81 +6149,81 @@ msgstr "%1$s タグを %2$s に渡さないでください。"
 msgid "Scripts and styles should not be registered or enqueued until the %1$s, %2$s, or %3$s hooks."
 msgstr "スクリプトおよびスタイルは %1$s、%2$s、%3$s フック以降のみに登録・キュー追加できます。"
 
-#: wp-includes/functions.php:5272
+#: wp-includes/functions.php:5273
 msgid "The login page will open in a new window. After logging in you can close it and return to this page."
 msgstr "新しい画面でログインページを開きます。ログイン後、そちらを閉じてこのページに戻ってください。"
 
-#: wp-includes/functions.php:5271 wp-includes/user.php:280
+#: wp-includes/functions.php:5272 wp-includes/user.php:280
 msgid "Please log in again."
 msgstr "もう一度ログインしてください。"
 
-#: wp-includes/functions.php:5270 wp-includes/script-loader.php:470
+#: wp-includes/functions.php:5271 wp-includes/script-loader.php:470
 msgid "Session expired"
 msgstr "セッションの有効期限が切れました"
 
-#: wp-includes/functions.php:5259
+#: wp-includes/functions.php:5260
 msgid "Close dialog"
 msgstr "ダイアログを閉じる"
 
-#: wp-includes/functions.php:4673
+#: wp-includes/functions.php:4674
 msgid "Manual Offsets"
 msgstr "時差を直接設定"
 
-#: wp-includes/functions.php:4665 wp-includes/functions.php:4669
+#: wp-includes/functions.php:4666 wp-includes/functions.php:4670
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:4620
+#: wp-includes/functions.php:4621
 msgid "Select a city"
 msgstr "町を選択してください"
 
 #. translators: Developer debugging message. 1: PHP function name, 2:
 #. Explanatory message, 3: Version information message
-#: wp-includes/functions.php:4138
+#: wp-includes/functions.php:4139
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s が<strong>誤って</strong>呼び出されました。%2$s %3$s"
 
-#: wp-includes/functions.php:4135
+#: wp-includes/functions.php:4136
 msgid "https://codex.wordpress.org/Debugging_in_WordPress"
 msgstr "http://wpdocs.osdn.jp/Debugging_in_WordPress"
 
 #. translators: %s: Codex URL
-#: wp-includes/functions.php:4134
+#: wp-includes/functions.php:4135
 msgid "Please see <a href=\"%s\">Debugging in WordPress</a> for more information."
 msgstr "詳しくは <a href=\"%s\">WordPress のデバッグ</a>をご覧ください。"
 
 #. translators: %s: version number
-#: wp-includes/functions.php:4131
+#: wp-includes/functions.php:4132
 msgid "(This message was added in version %s.)"
 msgstr "(このメッセージはバージョン %s で追加されました)"
 
 #. translators: 1: PHP function name, 2: version number
-#: wp-includes/functions.php:4025
+#: wp-includes/functions.php:4026
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s がバージョン %2$s から<strong>非推奨</strong>になった引数付きで呼び出されました。代替は用意されていません。"
 
 #. translators: 1: PHP function name, 2: version number, 3: optional message
 #. regarding the change
-#: wp-includes/functions.php:4022
+#: wp-includes/functions.php:4023
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s がバージョン %2$s から<strong>非推奨</strong>になった引数付きで呼び出されました。%3$s"
 
 #. translators: 1: PHP class name, 2: version number, 3: __construct() method
-#: wp-includes/functions.php:3896
+#: wp-includes/functions.php:3897
 msgid "The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "呼び出された %1$s のコンストラクターメソッドはバージョン %2$s から<strong>非推奨</strong>になっています! 代わりに %3$s を使ってください。"
 
 #. translators: 1: PHP class name, 2: PHP parent class name, 3: version number,
 #. 4: __construct() method
-#: wp-includes/functions.php:3892
+#: wp-includes/functions.php:3893
 msgid "The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead."
 msgstr "%2$s で呼び出された %1$s のコンストラクターメソッドはバージョン %3$s から<strong>非推奨</strong>になっています。代わりに %4$s を使ってください。"
 
 #. translators: 1: PHP function name, 2: version number
 #. translators: 1: PHP file name, 2: version number
 #. translators: 1: WordPress hook name, 2: version number
-#: wp-includes/functions.php:3833 wp-includes/functions.php:3961
-#: wp-includes/functions.php:4084
+#: wp-includes/functions.php:3834 wp-includes/functions.php:3962
+#: wp-includes/functions.php:4085
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s の使用はバージョン %2$s から<strong>非推奨</strong>になりました。代替は用意されておりません。"
 
@@ -6219,43 +6232,43 @@ msgstr "%1$s の使用はバージョン %2$s から<strong>非推奨</strong>�
 #. translators: 1: PHP file name, 2: version number, 3: alternative file name
 #. translators: 1: WordPress hook name, 2: version number, 3: alternative hook
 #. name
-#: wp-includes/functions.php:3830 wp-includes/functions.php:3958
-#: wp-includes/functions.php:4081
+#: wp-includes/functions.php:3831 wp-includes/functions.php:3959
+#: wp-includes/functions.php:4082
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s の使用はバージョン %2$s から<strong>非推奨</strong>になっています! 代わりに %3$s を使ってください。"
 
-#: wp-includes/functions.php:3769 wp-includes/ms-load.php:462
-#: wp-includes/wp-db.php:1583
+#: wp-includes/functions.php:3770 wp-includes/ms-load.php:462
+#: wp-includes/wp-db.php:1648
 msgid "Error establishing a database connection"
 msgstr "データベース接続確立エラー"
 
-#: wp-includes/functions.php:3765
+#: wp-includes/functions.php:3766
 msgid "Database Error"
 msgstr "データベースエラー"
 
-#: wp-includes/functions.php:2738 wp-load.php:92
+#: wp-includes/functions.php:2739 wp-load.php:92
 msgid "WordPress &rsaquo; Error"
 msgstr "WordPress &rsaquo; エラー"
 
-#: wp-includes/functions.php:2726
+#: wp-includes/functions.php:2727
 msgid "&laquo; Back"
 msgstr "&laquo; 戻る"
 
-#: wp-includes/functions.php:2606
+#: wp-includes/functions.php:2607
 msgid "WordPress Failure Notice"
 msgstr "WordPress エラー通知"
 
-#: wp-includes/functions.php:2601 wp-includes/ms-functions.php:1970
+#: wp-includes/functions.php:2602 wp-includes/ms-functions.php:1970
 msgid "Please try again."
 msgstr "もう一度お試しください。"
 
 #. translators: %s: logout URL
-#: wp-includes/functions.php:2592
+#: wp-includes/functions.php:2593
 msgid "Do you really want to <a href=\"%s\">log out</a>?"
 msgstr "本当に<a href=\"%s\">ログアウト</a>しますか ?"
 
 #. translators: %s: site name
-#: wp-includes/functions.php:2585
+#: wp-includes/functions.php:2586
 msgid "You are attempting to log out of %s"
 msgstr "%s からログアウトしようとしています"
 
@@ -6341,7 +6354,7 @@ msgctxt "Word count type. Do not translate!"
 msgid "words"
 msgstr "characters_including_spaces"
 
-#: wp-includes/formatting.php:3344 wp-includes/general-template.php:3344
+#: wp-includes/formatting.php:3344 wp-includes/general-template.php:3346
 msgid "&hellip;"
 msgstr "&hellip;"
 
@@ -6490,41 +6503,41 @@ msgstr "%1$s へのコメント: %2$s 上の検索"
 msgid "Comments on %s"
 msgstr "%s へのコメント"
 
-#: wp-includes/embed.php:1019
+#: wp-includes/embed.php:1025
 msgid "Close sharing dialog"
 msgstr "共有ダイアログを閉じる"
 
-#: wp-includes/embed.php:1014
+#: wp-includes/embed.php:1020
 msgid "Copy and paste this code into your site to embed"
 msgstr "埋め込むにはこのコードをコピーしてサイトに貼り付けてください"
 
-#: wp-includes/embed.php:1007
+#: wp-includes/embed.php:1013
 msgid "Copy and paste this URL into your WordPress site to embed"
 msgstr "埋め込むにはこの URL をコピーして WordPress サイトに貼り付けてください。"
 
-#: wp-includes/embed.php:1000
+#: wp-includes/embed.php:1006
 msgid "HTML Embed"
 msgstr "HTML での埋め込み"
 
-#: wp-includes/embed.php:997
+#: wp-includes/embed.php:1003
 msgid "WordPress Embed"
 msgstr "WordPress への埋め込み"
 
-#: wp-includes/embed.php:992
+#: wp-includes/embed.php:998
 msgid "Sharing options"
 msgstr "共有オプション"
 
-#: wp-includes/embed.php:975
+#: wp-includes/embed.php:981
 msgid "Open sharing dialog"
 msgstr "共有ダイアログを開く"
 
-#: wp-includes/embed.php:951
+#: wp-includes/embed.php:957
 msgid "%s <span class=\"screen-reader-text\">Comment</span>"
 msgid_plural "%s <span class=\"screen-reader-text\">Comments</span>"
 msgstr[0] "%s <span class=\"screen-reader-text\">コメント</span>"
 
 #. translators: %s: Name of current post
-#: wp-includes/embed.php:797 wp-includes/post-template.php:270
+#: wp-includes/embed.php:803 wp-includes/post-template.php:270
 msgid "Continue reading %s"
 msgstr "続きを読む %s"
 
@@ -6547,7 +6560,7 @@ msgstr "GD イメージライブラリがインストールされていません
 msgid "File &#8220;%s&#8221; doesn&#8217;t exist?"
 msgstr "ファイル &#8220;%s&#8221; は存在しますか ?"
 
-#: wp-includes/deprecated.php:3122 wp-includes/functions.php:2596
+#: wp-includes/deprecated.php:3122 wp-includes/functions.php:2597
 msgid "Are you sure you want to do this?"
 msgstr "本当に実行していいですか ?"
 
@@ -9198,7 +9211,7 @@ msgstr "ビジュアルエイド"
 
 #: wp-includes/class-wp-editor.php:879 wp-includes/class-wp-editor.php:1445
 #: wp-includes/script-loader.php:269 wp-includes/script-loader.php:351
-#: wp-includes/script-loader.php:466 wp-includes/script-loader.php:975
+#: wp-includes/script-loader.php:466 wp-includes/script-loader.php:979
 msgid "Close"
 msgstr "閉じる"
 
@@ -10375,7 +10388,7 @@ msgid "Menus"
 msgstr "メニュー"
 
 #: wp-includes/admin-bar.php:783 wp-includes/class-wp-customize-widgets.php:421
-#: wp-includes/functions.php:3706
+#: wp-includes/functions.php:3707
 msgid "Widgets"
 msgstr "ウィジェット"
 
@@ -10498,8 +10511,8 @@ msgstr "フィードバック"
 
 #: wp-includes/admin-bar.php:164 wp-includes/update.php:127
 #: wp-includes/update.php:317 wp-includes/update.php:497
-#: wp-includes/wp-db.php:1129 wp-includes/wp-db.php:1601
-#: wp-includes/wp-db.php:1705 wp-login.php:793
+#: wp-includes/wp-db.php:1129 wp-includes/wp-db.php:1666
+#: wp-includes/wp-db.php:1770 wp-login.php:793
 msgid "https://wordpress.org/support/"
 msgstr "https://ja.wordpress.org/support/"
 

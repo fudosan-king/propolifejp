@@ -88,14 +88,6 @@ get_header(); ?>
 						<span><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></span>
 				    </li>
 					<li>
-						<a href="https://www.prostyle-villa.com/" target="_blank">
-							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/group/link04.jpg" width="356" height="101" alt="PROSTYLE VILLA">
-							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/group/sp_link04.jpg" width="100%" alt="PROSTYLE VILLA">
-						</a>
-						<span><a href="https://www.prostyle-villa.com/" target="_blank">株式会社プロスタイルヴィラ</a></span>
-				    </li>
-
-					<li>
 						<a href="http://chinokanri.co.jp/" target="_blank">
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/group/link05.jpg" width="356" height="101" alt="CHINO 千野建物管理">
 							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/group/sp_link05.jpg" width="100%" alt="CHINO 千野建物管理">

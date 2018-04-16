@@ -1,4 +1,4 @@
-echo '\n### ### [LYS Box - K Group] ### ###\n'
+echo '\n### ### [FGM Group - KN] ### ###\n'
 echo 'Parameters Description:  change_env.sh [param]\n' ;
 
 case $1 in 
@@ -6,6 +6,9 @@ case $1 in
         if [ -f "wp-config.golive.php" ] ; then
             mv wp-config.php wp-config.dev.php
             mv wp-config.golive.php wp-config.php
+
+            mv .htaccess .htaccess.dev
+            mv .htaccess.golive .htaccess
             echo 'Config mode changed to GOLIVE MODE !!!\n'
         else
             echo 'Config GOLIVE MODE is running ...\n'
@@ -15,6 +18,9 @@ case $1 in
         if [ -f "wp-config.dev.php" ] ; then
             mv wp-config.php wp-config.golive.php
             mv wp-config.dev.php wp-config.php
+
+            mv .htaccess .htaccess.golive
+            mv .htaccess.dev .htaccess
             echo 'Config mode changed to DEV MODE !!!\n'
         else
             echo 'Config DEV MODE is running ...\n'

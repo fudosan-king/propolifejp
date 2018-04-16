@@ -26,7 +26,7 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'propolife_jp');
+define('DB_NAME', 'chronicle_web');
 
 /** MySQL データベースのユーザー名 */
 define('DB_USER', 'root');
@@ -61,8 +61,8 @@ define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 
-define('WP_SITEURL', 'http://propolife.dev');
-define('WP_HOME', 'http://propolife.dev');
+define('WP_SITEURL', 'http://chronicle-web.localhost');
+define('WP_HOME', 'http://chronicle-web.localhost');
 
 /**#@-*/
 

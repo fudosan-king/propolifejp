@@ -208,6 +208,10 @@ $dir_name = 'home';
                         <a href="https://www.chronicle-web.com/line/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/bnr-chronicle-line.jpg" alt="" class="img-responsive line-pc"></a>
                         <a href="https://www.chronicle-web.com/line/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/bnr-chronicle-line-sp.jpg" alt="" class="img-responsive line-sp"></a>
                     </div>
+                    <div align="left">
+                        <a href="https://www.prostyle-villa.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/villa-bannerPC.png" alt="" class="img-responsive line-pc"></a>
+                        <a href="https://www.prostyle-villa.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/villa-bannnerSP.png" alt="" class="img-responsive line-sp"></a>
+                    </div>
                     <ul>
                         <?php foreach($home_post as $post) : setup_postdata($post); ?>
                         <?php

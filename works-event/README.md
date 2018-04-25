@@ -18,7 +18,7 @@ Pass : dasp13*dran
 Domain : http://works-event.chronicle-web.com/
 WP Admin URL: Domain : http://works-event.chronicle-web.com/wp-admin
 WP Acc: admin
-WP Pass: cc_Can2017
+WP Pass: 7eADL5rW6QidwmK8yRMC)q8O
 DB Name: ae160g8cwm_cwp
 
 ```

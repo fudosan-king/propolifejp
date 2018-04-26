@@ -311,8 +311,15 @@ body.scroll-fix{padding-top:5rem;}
 .site-footer .bottom-content .fp-tableCell{height:auto !important;display:block !important;}
 .site-footer .bottom-content .bottom-info{max-width:88rem;width:50%;font-size:0;float:left;}
 .site-footer .bottom-content .bottom-info dt{width:9.09091%;font-size:1.4rem;color:#b48856;display:inline-block;vertical-align:middle;}
-.site-footer .bottom-content .bottom-info .scroll{width:90.90909%;height:12rem;display:inline-block;vertical-align:middle;overflow:auto;}
+.site-footer .bottom-content .bottom-info .scroll{width:90.90909%;height:18rem;display:inline-block;vertical-align:middle;overflow:auto;}
 .site-footer .bottom-content .bottom-info .scroll ul li{font-size:2.4rem;color:#fff;line-height:2.4;}
+
+.site-footer .bottom-content .bottom-info .scroll img{width:98%;height:auto;vertical-align:top;}
+
+@media screen and (max-width: 767px) {
+	.site-footer .bottom-content .bottom-info .scroll img{width:100%;height:auto;vertical-align:top;}
+}
+
 .site-footer .bottom-content .buttons{/*max-width:18.2rem;width:13.227%;*/width:50%;font-size:0;float:right;}
 .site-footer .bottom-content .buttons li{/*width:47.258%;margin-left:5.494%;*/display:inline-block;}
 .site-footer .bottom-content .buttons li:first-child {margin-left: 0;}
@@ -779,9 +786,8 @@ body.scroll-fix{padding-top:5rem;}
 .home .section07 .inner {width: 85.2552%;margin: 0 auto 25px;}
 .home .section07 .campaign-banners {width: 100%;margin-bottom: 15px;}
 .home .section07 .campaign-banners::after {content:'\0020';display: block;visibility: hidden;clear: both;}
-.home .section07 .campaign-banners li:nth-child(1) {width: 100%;margin-bottom: 2%;}
-.home .section07 .campaign-banners li:nth-child(2) {width: 48%;float: left;}
-.home .section07 .campaign-banners li:last-child {width: 48%;float: right;}
+.home .section07 .campaign-banners li {width: 48%;float: left;}
+.home .section07 .campaign-banners li:last-child {float: right;}
 .home .section07 .campaign-banners li img {max-width: none;width: 100%;height: auto;}
 .home .section07 .notice {font-size: 12px;}
 .home .section07 .notice sup {font-size: 9px;vertical-align: 0;}

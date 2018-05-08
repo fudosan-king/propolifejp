@@ -311,13 +311,13 @@ body.scroll-fix{padding-top:5rem;}
 .site-footer .bottom-content .fp-tableCell{height:auto !important;display:block !important;}
 .site-footer .bottom-content .bottom-info{max-width:88rem;width:50%;font-size:0;float:left;}
 .site-footer .bottom-content .bottom-info dt{width:9.09091%;font-size:1.4rem;color:#b48856;display:inline-block;vertical-align:middle;}
-.site-footer .bottom-content .bottom-info .scroll{width:90.90909%;height:18rem;display:inline-block;vertical-align:middle;overflow:auto;}
+.site-footer .bottom-content .bottom-info .scroll{width:90.90909%;height:6rem;display:inline-block;vertical-align:middle;overflow:auto;}
 .site-footer .bottom-content .bottom-info .scroll ul li{font-size:2.4rem;color:#fff;line-height:2.4;}
 
 .site-footer .bottom-content .bottom-info .scroll img{width:98%;height:auto;vertical-align:top;}
 
 @media screen and (max-width: 767px) {
-	.site-footer .bottom-content .bottom-info .scroll img{width:100%;height:auto;vertical-align:top;}
+	.site-footer .bottom-content .bottom-info .scroll img{width:100%;height:12rem;vertical-align:top;}
 }
 
 .site-footer .bottom-content .buttons{/*max-width:18.2rem;width:13.227%;*/width:50%;font-size:0;float:right;}

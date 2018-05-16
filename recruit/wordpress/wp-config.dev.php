@@ -61,8 +61,14 @@ define('LOGGED_IN_SALT',   'lzi-Hg7-(_~cPQl+5Z%uR^ySW1@% 2_,{:a ~&}L+4XcSvFYcv:@
 define('NONCE_SALT',       'g&$Fc9$W&iZA4}+v@zI*`8[_.-rt`g 8,GN&M]`:GNVbpP-,zRCO3/0J<*g&4_I9');
 
 define('FS_METHOD', 'direct');
-define('WP_SITEURL', 'http://propolifejprecruit.demo');
-define('WP_HOME', 'http://propolifejprecruit.demo');
+// define('WP_SITEURL', 'http://c979ec25.ngrok.io/');
+// define('WP_HOME', 'http://c979ec25.ngrok.io/');
+
+define('WP_SITEURL', 'http://propolifejprecruit.test/');
+define('WP_HOME', 'http://propolifejprecruit.test/');
+
+// define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
+// define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST']);
 
 /**#@-*/
 
@@ -84,7 +90,7 @@ $table_prefix  = 'wp_';
  *
  * @link http://wpdocs.osdn.jp/WordPress%E3%81%A7%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 

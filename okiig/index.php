@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <div class="se-pre-con"></div>
+  <!-- <div class="se-pre-con"></div> -->
     <div id="page">
       <?php require 'header.php'; ?>
 
@@ -43,6 +43,36 @@
               </div>
             </div>
           </div>
+        </section>
+
+        <section class="section_orderMade">
+          <div class="swiper-container swiper_orderMade">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/1x/bar.png" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/1x/bed.png" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/1x/sanitary.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <!-- <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div> -->
+          </div>
+
+          <div class="orderMade_content">
+            <h2 class="title">Order Made</h2>
+            <p class="subtext">オーダー家具</p>
+            <p>リゾートホテルでご利用いただける家具を<br>
+            オーダーメイドで制作いたします。</p>
+            <a href="/オーダー家具/" class="btn btnOrder">家具のオーダーはこちら</a>
+          </div>
+
+          <h4 class="brands d-none d-md-block">Kanucha Bay Hotel & Villas</h4>
+
         </section>
 
         <section class="section_fittingMaterials">
@@ -110,7 +140,7 @@
           </div>
         </section>
 
-         <section class="section_Contents">
+        <section class="section_Contents">
           <div class="container">
             <div class="row">
               <div class="col col-12 col-sm-12">
@@ -146,5 +176,22 @@
         <?php require 'footer.php'; ?>
     </div>
     <?php require 'js-footer.php'; ?>
+
+    <script>
+    var swiper_orderMade = new Swiper('.swiper-container', {
+      loop: true,
+      effect: 'fade',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      }
+
+    });
+  </script>
+
 </body>
 </html>

@@ -134,6 +134,8 @@
   .results_madeOrder_item a {
     height: 135px;
   }
+
+  
 }
 
 
@@ -154,6 +156,26 @@
 @media (max-width: 414px) {
   .navbar-nav > li:first-child > a {
     padding-left: 10px;
+  }
+
+  .orderMade_content .title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .orderMade_content {
+    width: auto;
+    height: auto;
+    padding: 10px;
+  }
+  .orderMade_content p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .orderMade_content .subtext {
+    margin-bottom: 0;
+  }
+  .btnOrder {
+    margin-top: 0;
   }
 }
 

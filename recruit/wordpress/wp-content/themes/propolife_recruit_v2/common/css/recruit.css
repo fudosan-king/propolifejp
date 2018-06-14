@@ -34,6 +34,8 @@
     height: 180px;
     position: relative;
 
+    background-image: url(../img/bg_block.png);
+
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;

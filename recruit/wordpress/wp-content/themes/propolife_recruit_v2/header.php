@@ -61,6 +61,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                 <h1><a href="https://www.propolife.co.jp/recruit/"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo02.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
                 <nav id="gNavi" class="gNavi">
 					<div class="link"><a href="https://page.line.me/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_0302_on.png" width="20" height="20" alt="LINE"></a></div>
+                    <div class="link"><a href="https://twitter.com/proporecruit" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/../../uploads/2018/07/657459_animal_512x512.png" width="16" height="16" alt="Twitter"></a></div>
 					<div class="link"><a href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_0202_on.png" width="16" height="16" alt="Instagram"></a></div>
 					<div class="link"><a href="https://ja-jp.facebook.com/propolifegroup.recruit" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_on.png" width="8" height="16" alt="Facebook"></a></div>
                     <ul class="clearfix">

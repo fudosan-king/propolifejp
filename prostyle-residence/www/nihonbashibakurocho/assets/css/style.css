@@ -310,8 +310,8 @@ body.scroll-fix{padding-top:5rem;}
 .site-footer .bottom-content:after{content:"\0020";display:block;height:0;clear:both;overflow:hidden;visibility:hidden;}
 .site-footer .bottom-content .fp-tableCell{height:auto !important;display:block !important;}
 .site-footer .bottom-content .bottom-info{max-width:88rem;width:50%;font-size:0;float:left;}
-.site-footer .bottom-content .bottom-info dt{width:9.09091%;font-size:1.4rem;color:#b48856;display:inline-block;vertical-align:middle;}
-.site-footer .bottom-content .bottom-info .scroll{width:90.90909%;height:6rem;display:inline-block;vertical-align:middle;overflow:auto;}
+.site-footer .bottom-content .bottom-info dt{width:9.09091%;font-size:1.4rem;color:#b48856;display:inline-block;vertical-align: top;margin-top: 19px;}
+.site-footer .bottom-content .bottom-info .scroll{width:90.90909%;height:25rem;display:inline-block;vertical-align:middle;overflow:auto;}
 .site-footer .bottom-content .bottom-info .scroll ul li{font-size:2.4rem;color:#fff;line-height:2.4;}
 
 .site-footer .bottom-content .bottom-info .scroll img{width:98%;height:auto;vertical-align:top;}
@@ -820,7 +820,7 @@ body.scroll-fix{padding-top:5rem;}
 }
 @media screen and (max-width:768px){
 	.section05{height: auto; min-height: 430px;}
-	.home .section07.section {min-height: 231px;}
+	.home .section07.section {min-height: 171px;}
 	.home .notice.panorama {
 		text-align: left;
 	}
@@ -1610,6 +1610,25 @@ body.page.page-plan .window::before{background:url(../images/plan/bg-main.jpg) n
 	margin-bottom: 10px;
 	display: block;
 }
+
+.page-madori #vr{
+    position: relative;
+    width: 88.5%;
+    height: 0;
+    padding-top: 60%;
+    margin-bottom: 20px;
+    margin: 0 auto 70px;
+    max-width: 1645px;
+}
+.page-madori #vr iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+
 @media screen and (max-width:959px) {
 	.page-plan #sec01 .type_box {
 		margin: 0 20px 35px 20px;
@@ -1626,6 +1645,8 @@ body.page.page-plan .window::before{background:url(../images/plan/bg-main.jpg) n
 	.page-plan #sec01 .type_box .text {
 		margin-bottom: 20px;
 		margin-right: 0;
+		float: right;
+		width: 75%;
 	}
 	.page-plan #sec01 .type_box .btn {
 		width: 100%;
@@ -1637,6 +1658,10 @@ body.page.page-plan .window::before{background:url(../images/plan/bg-main.jpg) n
 		width: 40%;
 		box-sizing: border-box;
 	}
+	.page-plan article.content .type_box .name{
+	    float: left;
+    width: 20%;}
+
 }
 
 

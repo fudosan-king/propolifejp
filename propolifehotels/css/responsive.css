@@ -400,7 +400,7 @@
 	}
 	.topics_list .thumb img {
 		max-width: inherit;
-		width: auto;
+		width: 172px;
 		height: 100%;
 	}
 	.topics_content {

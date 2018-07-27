@@ -683,11 +683,13 @@ body.scroll-fix{padding-top:5rem;}
 .loader-bg .loader{font-size:4rem;color:#fff;display:inline-block;vertical-align:middle;}
 .loader-bg .loader .fa{margin-bottom:1rem;font-size:3rem;}
 .main-visual{text-align:center;position:relative;}
+.main-visual .sp_layout{display:none;}
 .main-visual .icon-scroll,.main-visual .view{width:100%;position:absolute;bottom:5rem;z-index:100;}
 .main-visual .icon-scroll img{width:3rem;}
 .main-visual .view{position:absolute;bottom: 13rem;right: -28%;}
 .main-visual .view img{max-width: 380px;width: 100%;}
-@media screen and (max-width:900px){.main-visual .view{bottom: 13rem;right: -20%;}.main-visual .view img{max-width: 340px;width: 100%;}}
+@media screen and (max-width:900px){.main-visual .view{bottom: 13rem;right: -20%;}.main-visual .view img{max-width: 340px;width: 100%;}.main-visual .sp_layout{display:inline;width:100%;}.main-visual .pc_layout{display:none;}
+}
 @media screen and (max-width:767px){.main-visual .view{bottom: 8rem;right: -20%;}}
 @media screen and (max-width:600px){.main-visual .view{bottom: 8rem;right: -15%;}.main-visual .view img{max-width: 260px;width: 90%;}}
 @media screen and (max-width:430px){.main-visual .view{bottom: 8rem;right: -10%;}.main-visual .view img{max-width: 240px;width: 90%;}}
@@ -725,6 +727,11 @@ body.scroll-fix{padding-top:5rem;}
 .home .section00 .notice {width: 90%;max-width: 1645px;margin: 0 auto;font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;font-size: 1rem;color: #231f20;}
 .home .section00 .notice p {margin-bottom: 1rem;}
 .home .section00 .notice p:last-child {margin-bottom: 0;}
+.home .section00 .notice  {    margin: 0 auto 20px;
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+    max-width: 1622px;
+    width: 85%;}
 @media screen and (max-width:767px){
 .home .section.section00{min-height: 350px;padding-top: 0;padding-bottom: 15px;background:#fff;}
 .section00.layout02{background-size:auto auto;}

@@ -29,10 +29,10 @@
 define('DB_NAME', 'corporaterec');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'propoliferec');
+define('DB_USER', 'root');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'M7rRxeyHXHQPUkaB');
+define('DB_PASSWORD', '');
 
 /** MySQL のホスト名 */
 define('DB_HOST', 'localhost');
@@ -59,6 +59,16 @@ define('AUTH_SALT',        'G|=yx^-Km%zTg_g2CGv3!jnY5lVUZ>#y)yM;usF02!8@HvAUX7/!
 define('SECURE_AUTH_SALT', 'ERI[Qn52v[:?NJWn1)x|BnrZpNo`lH<X%GN366JaxHAPHMn-WYuZ{33-%!rbbt$%');
 define('LOGGED_IN_SALT',   'lzi-Hg7-(_~cPQl+5Z%uR^ySW1@% 2_,{:a ~&}L+4XcSvFYcv:@N@^_1kj0Cq7x');
 define('NONCE_SALT',       'g&$Fc9$W&iZA4}+v@zI*`8[_.-rt`g 8,GN&M]`:GNVbpP-,zRCO3/0J<*g&4_I9');
+
+define('FS_METHOD', 'direct');
+// define('WP_SITEURL', 'http://c979ec25.ngrok.io/');
+// define('WP_HOME', 'http://c979ec25.ngrok.io/');
+
+define('WP_SITEURL', 'http://propolifejprecruit.test/');
+define('WP_HOME', 'http://propolifejprecruit.test/');
+
+// define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
+// define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST']);
 
 /**#@-*/
 

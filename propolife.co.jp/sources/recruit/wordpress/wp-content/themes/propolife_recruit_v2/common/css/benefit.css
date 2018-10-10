@@ -1,0 +1,211 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2016
+*   PROPOLIFE_RECRUIT
+*
+*   /benefit/
+*   benefit.css
+*
+--------------------------------------------------------------------------------*/
+#page_benefit .benefit_content p a:hover{
+    text-decoration: none;
+}
+
+.clearfix {
+    zoom: 1; }
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block; }
+
+@media screen and (min-width: 769px) {
+/* -------------------------------------------------------
+    common overwrite
+ ------------------------------------------------------- */
+#contents_inner{ padding-bottom: 210px;}
+.img_btm_animal{
+    width: 317px;
+    height: 218px;
+    background-image:url(../images/benefit/img_btm_animal.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    bottom: -20px;
+    right: 30px;
+}
+/* ------------------------------------------------------- */
+
+#page_benefit{
+    text-align: left;
+    padding: 30px;
+    background-color: #ece9e4;
+}
+
+#page_benefit .benefit_content{
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 2.125em;
+}
+
+#page_benefit .benefit_content p{
+    padding: 10px 40px;
+}
+
+    #page_benefit .benefit_content p:nth-child(odd){
+        background-color: #fff;
+    }
+
+#page_benefit .benefit_content p:nth-child(even){
+    background-color: #e3e0d9;
+}
+    
+
+    #page_benefit .benefit_content a {
+        text-decoration: none;
+    }
+
+    #page_benefit .benefit_content a:hover {
+        text-decoration: underline;
+    }
+
+#page_benefit .img_slider{
+    font-size: 14px;
+    letter-spacing: .05em;
+    position: relative;
+}
+
+#page_benefit .img_slider ul.img_inner{
+    margin: 0 auto 20px auto;
+    position: relative;
+}
+
+#page_benefit .img_slider .img_inner li{
+    opacity: 0;
+    padding: 0 15px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#page_benefit .img_slider .img_inner li .pic{
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+#page_benefit .img_slider .img_inner li img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#page_benefit .img_slider_nav{
+    clear: both;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+#page_benefit .img_slider_nav .nav_dot{
+    width: 100%;
+    text-align: center;
+    height: 12px;
+}
+
+#page_benefit .img_slider_nav .nav_dot li{
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    border-radius: 21px;
+    border: 9px solid #ece9e4;
+    display: inline-block;
+    background-color: #d2cec5;
+    cursor: pointer;
+    position: relative;
+}
+
+#page_benefit .img_slider_nav .nav_dot li.current,
+#page_benefit .img_slider_nav .nav_dot li:hover{
+    background-color: #b7b1a2;
+}
+
+#page_benefit .img_slider_nav .slide_arrow_left{
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 0;
+    background-image:url(../images/parts_img_slider_arrow_left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: -28px;
+    top: 0;
+    cursor: pointer;
+    transition: background .1s ease;
+}
+
+#page_benefit .img_slider_nav .slide_arrow_right{
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 0;
+    background-image:url(../images/parts_img_slider_arrow_right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: -28px;
+    top: 0;
+    cursor: pointer;
+    transition: background .1s ease;
+}
+
+#page_benefit .img_slider_nav .slide_arrow_left:hover{ background-position: -5px;}
+#page_benefit .img_slider_nav .slide_arrow_right:hover{ background-position: 5px;}
+
+    #employ {
+        padding-top: 70px;
+    }
+    #benefit_list{
+        margin: -50px 0 10px 0;
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+    #benefit_list li{
+        padding: 0 15px;
+        clear: both;
+        overflow: hidden;
+        text-align: left;
+        background-color: #ece9e4;
+        font-size: 14px;
+        line-height: 1.71em;
+        letter-spacing: .05em;
+    }
+
+    #benefit_list .col_left{
+        width: 300px;
+        float: left;
+    }
+
+    #benefit_list .col_right{
+        width: 324px;
+        float: right;
+        line-height: 0;
+    }
+
+    #benefit_list .col_right img{
+        width: 100%;
+        height: auto;
+    }
+
+    #benefit_list h4{
+        padding: 0 0 10px 0;
+        margin: 0 0 15px 0;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1em;
+        border-bottom: 1px solid #fff;
+    }
+}

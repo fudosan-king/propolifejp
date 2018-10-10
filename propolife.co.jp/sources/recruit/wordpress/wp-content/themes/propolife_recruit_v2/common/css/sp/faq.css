@@ -1,0 +1,148 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2016
+*   PROPOLIFE_RECRUIT
+*
+*   /faq/ (SP)
+*   faq.css
+*
+--------------------------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+/* -------------------------------------------------------
+    common overwrite
+ ------------------------------------------------------- */
+#contents_inner{ padding-bottom: 120px;}
+.img_btm_animal{
+    width: 200px;
+    height: 125px;
+    background-image:url(../../images/faq/img_btm_animal.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 200px;
+    position: absolute;
+    bottom: 110px;
+    right: 70px;
+}
+/* ------------------------------------------------------- */
+#page_faq{
+    padding: 0 25px;
+}
+
+#page_faq .section{
+    clear: both;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: .05em;
+    line-height: 1.71em;
+}
+
+#page_faq li{
+    clear: both;
+    margin: 0 0 30px 0;
+    overflow: hidden;
+}
+
+#page_faq li dt{
+    width: 73px;
+    font-size: 23px;
+    text-indent: 25px;
+    font-weight: bold;
+    clear: both;
+    float: left;
+}
+
+#page_faq li dt .num{ line-height: 1em;}
+.for_ie #page_faq li dt .num{padding: 3px 0 0 0; line-height: 1em;}
+
+#page_faq li dd{
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    float: left;
+    text-align: left;
+}
+
+#page_faq li dd .img{
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+#page_faq li dd .img img{ width: 100%; max-width: 640px; height: auto;}
+
+#page_faq li dt.ques{
+    width: 100%;
+    margin: 0 0 10px 0;
+    min-height: auto;
+    display: table;
+}
+
+#page_faq li dt.ques .num{ width: 73px; position: relative;}
+#page_faq li dt.ques .title{
+    padding: 8px 15px;
+    text-align: left;
+    font-size: 14px;
+    text-indent: 0;
+    font-weight: normal;
+    color: #000;
+    background-color: #ece9e4;
+}
+
+#page_faq li dt.ques p{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#page_faq li dt.ques{ background-color: #fff; color: #777;}
+#page_faq li dd.ques{ background-color: #ece9e4;}
+#page_faq li dt.ans{ padding: 5px 0; margin: 0 0 10px 0; color: #fff; position: relative;}
+
+#page_faq li dt.ques{
+    background-image:url(../../images/faq/parts_title_q.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 20px;
+}
+
+#page_faq li dt.ans{
+    background-image:url(../../images/faq/parts_title_a.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 20px;
+}
+
+#page_faq li .o10 dt .num{
+    letter-spacing: -.1em;
+    text-indent: 20px;
+}
+
+#page_faq li .o10 dt.ques{
+    background-position: 12px center;
+}
+
+#page_faq li .o10 dt.ans{
+    background-position: 12px center;
+}
+
+}
+
+
+/* --------------------------------------------------------------------------------
+*
+    @media screen and (max-width: 480px) 
+*
+-------------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+#page_faq .section{
+    font-size: 11px;
+    letter-spacing: .05em;
+    line-height: 1.45em;
+}
+
+#page_faq li dt.ques .title{
+    font-size: 11px;
+}
+
+}

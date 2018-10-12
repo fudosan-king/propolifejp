@@ -1,0 +1,208 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2015
+*   PROPOLIFE
+*
+*   media.css
+*
+--------------------------------------------------------------------------------*/
+#topic_path{
+    margin-bottom: 35px;
+}
+
+#contents{
+    padding-bottom: 170px;
+    background-image:url(../images/media/img_bg_contents.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+#section_title .sns{
+    margin: -20px 0 0 148px;
+}
+
+#section_title h2{
+    padding: 0 80px !important;
+    text-align: center;
+    line-height: 1em;
+    position: relative;
+}
+
+#section_title h2 img{
+    width: 100%;
+    max-width: 185px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#section_title .ruby{ margin: 14px 0 10px 0; font-size: 18px;}
+@media screen and (max-width: 768px){ #section_title .ruby{ margin: 15px 0; font-size: 16px;} }
+@media screen and (max-width: 480px){ #section_title .ruby{ margin: 10px 0; font-size: 11px;} }
+
+.ico_new{
+    padding: 4px 12px 4px 13px;
+    margin: 0 0 0 10px;
+    font-size: 13px;
+    background-color: #f20000;
+    color: #fff;
+    letter-spacing: .005em;
+}
+
+.for_ie #section_estate .ico_new{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+/* ---------- #section_media ---------- */
+#section_media{
+    max-width: 880px;
+    margin: 0 auto;
+    letter-spacing: 0;
+}
+
+#section_media dl{
+    margin: 0 0 80px 0;
+    overflow: hidden;
+}
+
+#section_media dt{
+    padding: 3px 0 10px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px dotted #222;
+    line-height: 1em;
+}
+
+#section_media dd{
+    margin: 0 0 50px 0;
+    overflow: hidden;
+}
+
+#section_media dd h3{
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+#section_media dd p{
+    min-height: 80px;
+}
+
+#section_media dd .img{
+    float: right;
+    margin: 0 0 5px 20px;
+    overflow: hidden;
+}
+
+#section_media dd img{
+    margin: 0 0 5px 0;
+    display: block;
+}
+
+#section_media dd .img br{
+    margin: 0;
+}
+
+/* -------------------------------------------------------
+*
+    for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+#contents{
+    padding-bottom: 125px;
+    background-image:url(../images/media/img_bg_contents.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 90px;
+}
+
+#section_title .sns{
+    margin: 0 0 60px 0;
+    position: relative;
+}
+
+#section_title .sns a{
+    display: inline-block;
+}
+
+#section_title .line{
+    margin-bottom: 0;
+}
+
+#section_media dl{
+    margin: 0 0 5px 0;
+    overflow: hidden;
+}
+
+#footer .btn_pagetop{
+    margin-bottom: 35px;
+}
+
+#section_media dd .img{
+    margin: 0 0 0 10px;
+}
+
+}
+
+/* -------------------------------------------------------
+*
+    for 480px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+.ico_new{
+    padding: 3px 9px 3px 10px;
+    margin: 0 0 0 10px;
+    font-size: 11px;
+    background-color: #f20000;
+    color: #fff;
+    letter-spacing: .005em;
+}
+
+#section_title .sns{
+    margin: 0 0 45px 0;
+    position: relative;
+}
+
+#section_title .sns img{
+    width: 30px;
+    height: auto;
+}
+
+#section_title .line{
+    margin-bottom: -15px;
+}
+
+#section_media dt{
+    padding: 5px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px dotted #222;
+    line-height: 1em;
+}
+
+#section_media dd{
+    margin: 0 0 30px 0;
+}
+
+#section_media dd h3{
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+#section_media dd p img{
+    width: 120px;
+    height: auto;
+}
+
+#section_media dd .img{
+    margin: 0 0 0 10px;
+}
+
+}

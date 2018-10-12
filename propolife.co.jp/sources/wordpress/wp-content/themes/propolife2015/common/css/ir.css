@@ -1,0 +1,176 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2015
+*   PROPOLIFE
+*
+*   ir.css
+*
+--------------------------------------------------------------------------------*/
+#topic_path{
+    margin-bottom: 35px;
+}
+
+#contents{
+    padding-bottom: 215px;
+    background-image:url(../images/ir/img_bg_contents.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+#section_title h2{
+    padding: 0 60px !important;
+    text-align: center;
+    line-height: 1em;
+    position: relative;
+}
+
+#section_title h2 img{
+    width: 50px;
+    max-width: 260px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#section_title .ruby{ margin: 14px 0 10px 0; font-size: 18px;}
+@media screen and (max-width: 768px){ #section_title .ruby{ margin: 15px 0; font-size: 16px;} }
+@media screen and (max-width: 480px){ #section_title .ruby{ margin: 10px 0; font-size: 11px;} }
+
+#footer .btn_pagetop{
+    margin-top: -20px;
+    margin-bottom: 104px;
+}
+
+#section_title .line{
+    margin-bottom: 45px;
+}
+
+#contents_inner table{
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+#contents_inner tr{
+    overflow: hidden;
+}
+
+#contents_inner th{
+    clear: both;
+    min-width: 130px;
+    padding: 13px 35px 0 0;
+    text-align: left;
+}
+
+#contents_inner td{
+    width: 630px;
+    padding: 13px 40px;
+    position: relative;
+}
+
+#contents_inner dd:before{
+    content: '';
+    background-color: #c0c0c0;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: 0;
+}
+
+#contents_inner .bg{
+    background-color: #e1e1e1;
+}
+
+#contents_inner .p-box {
+    max-width: 880px;
+    margin: 15px auto;
+}
+
+#contents_inner .p-box a {
+    text-decoration: none;
+}
+
+#contents_inner .p-box:first-child {
+    margin-top: 25px;
+}
+
+.p-title01,.p-title02 {
+    padding: 5px 10px;
+    font-weight: 700;
+    border-bottom: 1px dotted #000;
+}
+
+.p-box .p-container {
+    padding: 25px 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.p-text {
+    text-decoration: underline;
+}
+
+.p-text:hover {
+    text-decoration: none;
+}
+
+.p-inline-block {
+    display: inline-block;
+}
+
+/* -------------------------------------------------------
+*
+for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    #contents{
+        padding-bottom: 215px;
+        background-image:url(../images/ir/img_bg_contents.png);
+        background-repeat: no-repeat;
+        background-position: -45px bottom;
+        background-size: 170px;
+    }
+
+    #footer .btn_pagetop{
+        margin-top: -10px;
+        margin-bottom: 51px;
+    }
+
+    #contents_inner table{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto ;
+    }
+
+    #contents_inner th{
+        clear: both;
+        max-width: 170px;
+        padding: 13px 10px;
+        text-align: right;
+        letter-spacing: 0;
+    }
+
+    #contents_inner td{
+        width: auto;
+        padding: 13px 10px;
+        position: relative;
+    }
+
+}
+
+
+/* -------------------------------------------------------
+*
+for 480px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+    #contents_inner th{
+        clear: both;
+        max-width: 75px;
+    }
+
+}

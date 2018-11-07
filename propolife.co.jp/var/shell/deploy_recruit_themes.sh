@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -rlpcgoDvz --delete --exclude-from=./var/shell/exclude_wp ./sources/recruit/wordpress/wp-content/themes/ blog.intra.fudosan-king.jp:/var/www/propolifejp/recruit/wordpress/wp-content/themes

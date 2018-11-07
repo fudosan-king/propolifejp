@@ -138,12 +138,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                             </a>
                             <span><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></span>
                         </li>
-                        <li>
 
-                            <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link09.jpg" width="356" height="98" alt="PROPOLIFE SINGAPORE">
-
-                            <span>PROPOLIFE SINGAPORE</span>
-                        </li>
                         <li>
                             <a href="http://kotakino.wpblog.jp" target="_blank">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link10.jpg" width="356" height="98" alt="株式会社小滝野">

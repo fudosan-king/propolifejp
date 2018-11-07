@@ -219,12 +219,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<span><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></span>
 					</li>
 					<li>
-
-							<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link09.jpg" width="356" height="98" alt="PROPOLIFE SINGAPORE">
-
-						<span>PROPOLIFE SINGAPORE</span>
-					</li>
-					<li>
 						<a href="http://kotakino.wpblog.jp" target="_blank">
 							<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link10.jpg" width="356" height="98" alt="株式会社小滝野">
 						</a>
@@ -325,7 +319,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
 					<li><span>煙台提案生活木業有限公司</span></li>
 					<li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
-					<li><span>PROPOLIFE SINGAPORE</span></li>
 					<li><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></li>
 <li><a href="http://www.propolifehotels.com">PROPOLIFE HOTELS</a></li>
 <li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>

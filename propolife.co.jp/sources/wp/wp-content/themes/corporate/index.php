@@ -109,13 +109,6 @@ get_header(); ?>
 						</a>
 						<span><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></span>
 				    </li>
-					<li>
-
-							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/group/link09.jpg" width="356" height="101" alt="PROPOLIFE SHINGAPORE">
-							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/group/sp_link09.jpg" width="100%" alt="PROPOLIFE SHINGAPORE">
-
-						<span>PROPOLIFE SINGAPORE</span>
-				    </li>
 
 					<li>
 						<a href="http://kotakino.wpblog.jp" target="_blank">

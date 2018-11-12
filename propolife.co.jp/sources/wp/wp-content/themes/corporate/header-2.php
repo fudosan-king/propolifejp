@@ -40,7 +40,7 @@ if(is_page(array('top'))){
 ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/access.css">
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js'></script>
-<script src="https://www.propolife.co.jp/wp/wp-content/themes/corporate/common/js/access.js"></script>
+<!-- <script src="https://www.propolife.co.jp/wp/wp-content/themes/corporate/common/js/access.js"></script> -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj--CqL_63WJXEcQBWzu6bgDcsOv6O7DA&sensor=true"></script>
 <?php
 }elseif(is_page('news')){

@@ -167,7 +167,11 @@ $recruit_entry_url = get_field('recruit_entry_url');
                         <p class="btn_entry"><a href="<?php echo $recruit_entry_url; ?>" target="_blank"><img src="<?php echo $temp_dir; ?>/common/images/recruit/btn_entry_pc.png" alt="エントリーフォーム" class="pc"><img src="<?php echo $temp_dir; ?>/common/images/recruit/btn_entry_sp.png" alt="エントリーフォーム" class="sp"></a></p>
                         <div class="entry_address">
                             <p>応募先</p>
-                            <?php echo get_field('recruit_entry_address'); ?>
+                            <?php //echo get_field('recruit_entry_address'); ?>
+                            <p>※仮移転期間中(2018年11⽉12⽇〜2019年3⽉予定) <br>
+                            〒103-0028 <br>
+                            東京都中央区⼋重洲1-5-17 ⼋重洲⾹川ビル <br>
+                            株式会社プロポライフグループ 採用担当宛</p>
                         </div>
                         <div class="entry_caution">
                             <?php echo get_field('recruit_entry_caution'); ?>

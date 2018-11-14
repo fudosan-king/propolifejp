@@ -239,7 +239,6 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
                         <li><span>煙台提案生活木業有限公司</span></li>
                         <li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
-                        <li><span>PROPOLIFE SINGAPORE</span></li>
                         <li><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></li>
 			<li><a href="http://www.propolifehotels.com/" target="_blank">PROPOLIFE HOTELS</a></li>
                         <li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>

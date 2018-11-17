@@ -151,9 +151,13 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                             </a>
                             <span><a href="http://www.propolifehotels.com" target="_blank">株式会社プロポライフホテルズ</a></span>
                         </li>
-			<li>
+			            <li>
                             <a href="https://www.oki-ig.com"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー"></a>
                             <span><a href="https://www.oki-ig.com" >株式会社沖縄イゲトー</a></span>
+                        </li>
+                        <li>
+                            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link_yokohama.jpg" width="356" height="98" alt="株式会社プロスタイル横浜"></a>
+                            <span><a href="#" >株式会社プロスタイル横浜</a></span>
                         </li>
                     </ul>
                 </div>
@@ -236,6 +240,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <li><a href="https://www.chronicle-web.com/">株式会社クロニクル</a></li>
                         <li><a href="https://www.chronicle-web.com/reform/">株式会社クロニクル建設</a></li>
                         <li><a href="https://www.prostyle-residence.com/">株式会社プロスタイル</a></li>
+                        <li><span>株式会社プロスタイル横浜</span></li>
                         <li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
                         <li><span>煙台提案生活木業有限公司</span></li>
                         <li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>

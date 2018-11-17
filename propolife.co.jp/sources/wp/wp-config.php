@@ -24,21 +24,11 @@
 // (http://wpdocs.sourceforge.jp/Codex:%E8%AB%87%E8%A9%B1%E5%AE%A4 参照)
 // を使用し、必ず UTF-8 の BOM なし (UTF-8N) で保存してください。
 
-// ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
-/** WordPress のためのデータベース名 */
+/* DEVELOPMENT */
 define('DB_NAME', 'wp_corporate2017');
-
-/** MySQL データベースのユーザー名 */
-// define('DB_USER', 'root');
-define('DB_USER', 'fdk');
-
-/** MySQL データベースのパスワード */
-// define('DB_PASSWORD', '5fZ7mcBSZ2L:s![p');
-// define('DB_PASSWORD', 'dasp13*dran');
-define('DB_PASSWORD', 't05nth5ng_-');
-
-/** MySQL のホスト名 */
-define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'root');
+define('DB_HOST', 'localhost:3307');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
 define('DB_CHARSET', 'utf8');
@@ -64,8 +54,8 @@ define('LOGGED_IN_SALT',   'lzi-Hg7-(_~cPQl+5Z%uR^ySW1@% 2_,{:a ~&}L+4XcSvFYcv:@
 define('NONCE_SALT',       'g&$Fc9$W&iZA4}+v@zI*`8[_.-rt`g 8,GN&M]`:GNVbpP-,zRCO3/0J<*g&4_I9');
 
 define('FS_METHOD', 'direct');
-define('WP_SITEURL', 'https://www.propolife.co.jp/wp/');
-define('WP_HOME', 'https://www.propolife.co.jp/');
+define('WP_SITEURL', 'http://propolifejp.test/wp/');
+define('WP_HOME', 'http://propolifejp.test/');
 
 // define('WP_SITEURL', 'http://www.propolife-co.ga/wp/');
 // define('WP_HOME', 'http://www.propolife-co.ga/');

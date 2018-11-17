@@ -234,6 +234,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<a href="https://www.oki-ig.com"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー"></a>
 						<span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
 					</li>
+					<li>
+						<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link_yokohama.jpg" width="356" height="98" alt="株式会社プロスタイル横浜">
+						<span>株式会社プロスタイル横浜</span>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -316,6 +320,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a href="https://www.chronicle-web.com/">株式会社クロニクル</a></li>
 					<li><a href="http://www.chronicle-kensetsu.co.jp/">株式会社クロニクル建設</a></li>
 					<li><a href="https://www.prostyle-residence.com/">株式会社プロスタイル</a></li>
+					<li><span>株式会社プロスタイルヨコハマ</span></li>
 					<li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
 					<li><span>煙台提案生活木業有限公司</span></li>
 					<li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>

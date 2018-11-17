@@ -397,11 +397,11 @@ msgstr "これはサイトネットワーク上の全サイトのメインテー
 msgid "Add New takes you to the Add New Site screen. You can search for a site by Name, ID number, or IP address. Screen Options allows you to choose how many sites to display on one page."
 msgstr "「新規追加」をクリックすると、「新規サイトを追加」画面へ移動します。サイト名、ID、IP アドレスのいずれかでサイトを検索できます。表示オプションを使って、1ページに表示されるサイト数を選択できます。"
 
-#: wp-admin/network/site-users.php:332 wp-admin/network/user-new.php:117
+#: wp-admin/network/user-new.php:117 wp-admin/network/site-users.php:332
 msgid "A password reset link will be sent to the user via email."
 msgstr "ユーザーにパスワードリセット用リンクがメールで送信されます。"
 
-#: wp-admin/network/site-users.php:300 wp-admin/network/user-new.php:129
+#: wp-admin/network/user-new.php:129 wp-admin/network/site-users.php:300
 msgid "Add User"
 msgstr "ユーザーを追加"
 
@@ -449,25 +449,25 @@ msgstr "サイトのユーザー一覧を絞り込み"
 msgid "Network enabled themes are not shown on this screen."
 msgstr "ネットワークで有効化されたテーマはこの画面には表示されていません。"
 
-#: wp-admin/network/site-themes.php:197 wp-admin/network/themes.php:284
+#: wp-admin/network/themes.php:284 wp-admin/network/site-themes.php:197
 msgid "No theme selected."
 msgstr "テーマが選択されていません。"
 
-#: wp-admin/network/site-themes.php:193 wp-admin/network/themes.php:272
+#: wp-admin/network/themes.php:272 wp-admin/network/site-themes.php:193
 msgid "%s theme disabled."
 msgid_plural "%s themes disabled."
 msgstr[0] "%s個のテーマが無効化されました。"
 
-#: wp-admin/network/site-themes.php:191 wp-admin/network/themes.php:270
+#: wp-admin/network/themes.php:270 wp-admin/network/site-themes.php:191
 msgid "Theme disabled."
 msgstr "%s 個のテーマを無効化しました。"
 
-#: wp-admin/network/site-themes.php:185 wp-admin/network/themes.php:264
+#: wp-admin/network/themes.php:264 wp-admin/network/site-themes.php:185
 msgid "%s theme enabled."
 msgid_plural "%s themes enabled."
 msgstr[0] "%s個のテーマが有効化されました。"
 
-#: wp-admin/network/site-themes.php:183 wp-admin/network/themes.php:262
+#: wp-admin/network/themes.php:262 wp-admin/network/site-themes.php:183
 msgid "Theme enabled."
 msgstr "%s 個のテーマを有効化しました。"
 
@@ -589,8 +589,8 @@ msgid "Attributes"
 msgstr "属性"
 
 #. translators: %s: site name
-#: wp-admin/network/site-info.php:131 wp-admin/network/site-settings.php:84
-#: wp-admin/network/site-themes.php:163 wp-admin/network/site-users.php:193
+#: wp-admin/network/site-info.php:131 wp-admin/network/site-users.php:193
+#: wp-admin/network/site-themes.php:163 wp-admin/network/site-settings.php:84
 msgid "Edit Site: %s"
 msgstr "サイトを編集: %s"
 
@@ -598,49 +598,49 @@ msgstr "サイトを編集: %s"
 msgid "Site info updated."
 msgstr "サイト情報を更新しました。"
 
-#: wp-admin/network/site-info.php:42 wp-admin/network/site-settings.php:40
-#: wp-admin/network/site-themes.php:63 wp-admin/network/site-users.php:56
+#: wp-admin/network/site-info.php:42 wp-admin/network/site-users.php:56
+#: wp-admin/network/site-themes.php:63 wp-admin/network/site-settings.php:40
 msgid "The requested site does not exist."
 msgstr "お探しのサイトが存在しません。"
 
-#: wp-admin/network/site-info.php:37 wp-admin/network/site-settings.php:36
-#: wp-admin/network/site-themes.php:57 wp-admin/network/site-users.php:52
+#: wp-admin/network/site-info.php:37 wp-admin/network/site-users.php:52
+#: wp-admin/network/site-themes.php:57 wp-admin/network/site-settings.php:36
 msgid "Invalid site ID."
 msgstr "無効なサイト ID です。"
 
-#: wp-admin/network/site-info.php:30 wp-admin/network/site-new.php:29
-#: wp-admin/network/site-settings.php:29 wp-admin/network/site-themes.php:29
-#: wp-admin/network/site-users.php:32 wp-admin/network/sites.php:42
+#: wp-admin/network/site-info.php:30 wp-admin/network/site-users.php:32
+#: wp-admin/network/site-new.php:29 wp-admin/network/site-themes.php:29
+#: wp-admin/network/site-settings.php:29 wp-admin/network/sites.php:42
 msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Sites_Screen\">Documentation on Site Management</a>"
 msgstr "<a href=\"https://wpdocs.osdn.jp/Network_Admin_Sites_Screen\" target=\"_blank\">サイトネットワーク管理画面の解説</a>"
 
-#: wp-admin/network/site-info.php:25 wp-admin/network/site-settings.php:24
-#: wp-admin/network/site-themes.php:24 wp-admin/network/site-users.php:27
+#: wp-admin/network/site-info.php:25 wp-admin/network/site-users.php:27
+#: wp-admin/network/site-themes.php:24 wp-admin/network/site-settings.php:24
 msgid "<strong>Settings</strong> &mdash; This page shows a list of all settings associated with this site. Some are created by WordPress and others are created by plugins you activate. Note that some fields are grayed out and say Serialized Data. You cannot modify these values due to the way the setting is stored in the database."
 msgstr "<strong>設定</strong> - このページでは、このサイトに関連する設定をすべて表示しています。WordPress が作成したものもあれば、有効化したプラグインが作成したものもあります。一部のフィールドはシリアライズ化データのためグレーの背景になっていることにご注意ください。これらの設定をデータベースに保管している形式の関係で、ここで値を変更することはできません。"
 
-#: wp-admin/network/site-info.php:24 wp-admin/network/site-settings.php:23
-#: wp-admin/network/site-themes.php:23 wp-admin/network/site-users.php:26
+#: wp-admin/network/site-info.php:24 wp-admin/network/site-users.php:26
+#: wp-admin/network/site-themes.php:23 wp-admin/network/site-settings.php:23
 msgid "<strong>Themes</strong> &mdash; This area shows themes that are not already enabled across the network. Enabling a theme in this menu makes it accessible to this site. It does not activate the theme, but allows it to show in the site&#8217;s Appearance menu. To enable a theme for the entire network, see the <a href=\"%s\">Network Themes</a> screen."
 msgstr "<strong>テーマ</strong> - ここではまだネットワーク全体で有効化されていないテーマを表示します。このメニューでテーマを有効化するとサイトからアクセスできるようになります。テーマの利用を開始するわけではなく、サイトの「外観」メニューに表示されるだけです。ネットワーク全体でテーマを有効化するには、<a href=\"%s\">ネットワークテーマ</a>画面をご覧ください。"
 
-#: wp-admin/network/site-info.php:23 wp-admin/network/site-settings.php:22
-#: wp-admin/network/site-themes.php:22 wp-admin/network/site-users.php:25
+#: wp-admin/network/site-info.php:23 wp-admin/network/site-users.php:25
+#: wp-admin/network/site-themes.php:22 wp-admin/network/site-settings.php:22
 msgid "<strong>Users</strong> &mdash; This displays the users associated with this site. You can also change their role, reset their password, or remove them from the site. Removing the user from the site does not remove the user from the network."
 msgstr "<strong>ユーザー</strong> - このサイトに関連したユーザーを表示します。ユーザーの権限グループを変更したり、パスワードをリセットしたり、ユーザーをサイトから削除したりもできます。ユーザーをサイトから削除しても、ネットワークからは削除されません。"
 
-#: wp-admin/network/site-info.php:22 wp-admin/network/site-settings.php:21
-#: wp-admin/network/site-themes.php:21 wp-admin/network/site-users.php:24
+#: wp-admin/network/site-info.php:22 wp-admin/network/site-users.php:24
+#: wp-admin/network/site-themes.php:21 wp-admin/network/site-settings.php:21
 msgid "<strong>Info</strong> &mdash; The site URL is rarely edited as this can cause the site to not work properly. The Registered date and Last Updated date are displayed. Network admins can mark a site as archived, spam, deleted and mature, to remove from public listings or disable."
 msgstr "<strong>情報</strong> - サイト URL を変更するとサイトが正しく動作しないため、変更することはほとんどないでしょう。登録日と最終更新日が表示されます。ネットワーク管理者はサイトをアーカイブ化、スパム、削除済み、アダルトとして指定して公開リストから除外したり利用を停止させたりできます。"
 
-#: wp-admin/network/site-info.php:21 wp-admin/network/site-settings.php:20
-#: wp-admin/network/site-themes.php:20 wp-admin/network/site-users.php:23
+#: wp-admin/network/site-info.php:21 wp-admin/network/site-users.php:23
+#: wp-admin/network/site-themes.php:20 wp-admin/network/site-settings.php:20
 msgid "The menu is for editing information specific to individual sites, particularly if the admin area of a site is unavailable."
 msgstr "このメニューは各サイトに特定の情報を編集するためのものです。特に、サイトの管理画面が使えない場合に利用できます。"
 
-#: wp-admin/network/site-info.php:14 wp-admin/network/site-settings.php:14
-#: wp-admin/network/site-users.php:14
+#: wp-admin/network/site-info.php:14 wp-admin/network/site-users.php:14
+#: wp-admin/network/site-settings.php:14
 msgid "Sorry, you are not allowed to edit this site."
 msgstr "このサイトを編集する権限がありません。"
 
@@ -870,11 +870,11 @@ msgstr "運用設定には、ネットワーク名と管理者メールアドレ
 msgid "This screen sets and changes options for the network as a whole. The first site is the main site in the network and network options are pulled from that original site&#8217;s options."
 msgstr "この画面でネットワーク全体の設定を指定、変更できます。最初のサイトはネットワーク上のメインサイトであり、ネットワークの設定は元のサイトの設定が適用されます。"
 
-#: wp-admin/network/menu.php:55 wp-admin/network/settings.php:19
+#: wp-admin/network/settings.php:19 wp-admin/network/menu.php:55
 msgid "Network Settings"
 msgstr "ネットワークの設定"
 
-#: wp-admin/network/menu.php:41 wp-admin/network/themes.php:250
+#: wp-admin/network/themes.php:250 wp-admin/network/menu.php:41
 msgctxt "theme"
 msgid "Add New"
 msgstr "新規追加"
@@ -891,8 +891,8 @@ msgstr "テーマ %s"
 msgid "All Sites"
 msgstr "すべてのサイト"
 
-#: wp-admin/network/menu.php:22 wp-admin/network/upgrade.php:15
-#: wp-admin/network/upgrade.php:39 wp-admin/network/upgrade.php:130
+#: wp-admin/network/upgrade.php:15 wp-admin/network/upgrade.php:39
+#: wp-admin/network/upgrade.php:130 wp-admin/network/menu.php:22
 msgid "Upgrade Network"
 msgstr "サイトネットワークをアップグレード"
 
@@ -900,11 +900,11 @@ msgstr "サイトネットワークをアップグレード"
 msgid "Updates"
 msgstr "更新"
 
-#: wp-admin/network/index.php:51 wp-admin/network/site-info.php:31
-#: wp-admin/network/site-new.php:30 wp-admin/network/site-settings.php:30
-#: wp-admin/network/site-themes.php:30 wp-admin/network/site-users.php:33
-#: wp-admin/network/sites.php:43 wp-admin/network/user-new.php:27
-#: wp-admin/network/users.php:180
+#: wp-admin/network/site-info.php:31 wp-admin/network/user-new.php:27
+#: wp-admin/network/index.php:51 wp-admin/network/site-users.php:33
+#: wp-admin/network/users.php:180 wp-admin/network/site-new.php:30
+#: wp-admin/network/site-themes.php:30 wp-admin/network/site-settings.php:30
+#: wp-admin/network/sites.php:43
 msgid "<a href=\"https://wordpress.org/support/forum/multisite/\">Support Forums</a>"
 msgstr "<a href=\"https://ja.wordpress.org/support/forum/multisite/\">サポートフォーラム</a>"
 
@@ -987,10 +987,6 @@ msgstr "ユニーク認証キーが %s ファイルに見つかりません。"
 msgid "This unique authentication key is also missing from your %s file."
 msgstr "ユニーク認証キーが %s ファイルに見つかりません。"
 
-#. translators: This string should only be translated if wp-config-sample.php
-#. is localized. You can check the localized release package or
-#. https://i18n.svn.wordpress.org/<locale code>/branches/<wp
-#. version>/dist/wp-config-sample.php
 #: wp-admin/includes/network.php:427
 msgid "That&#8217;s all, stop editing! Happy blogging."
 msgstr "編集が必要なのはここまでです ! WordPress でブログをお楽しみください。"

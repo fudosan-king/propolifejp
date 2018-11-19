@@ -2,18 +2,23 @@
 /**
  * WordPress の基本設定
  *
- * このファイルは、MySQL、テーブル接頭辞、秘密鍵、言語、ABSPATH の設定を含みます。
- * より詳しい情報は {@link http://wpdocs.sourceforge.jp/wp-config.php_%E3%81%AE%E7%B7%A8%E9%9B%86 
- * wp-config.php の編集} を参照してください。MySQL の設定情報はホスティング先より入手できます。
+ * このファイルは、インストール時に wp-config.php 作成ウィザードが利用します。
+ * ウィザードを介さずにこのファイルを "wp-config.php" という名前でコピーして
+ * 直接編集して値を入力してもかまいません。
  *
- * このファイルはインストール時に wp-config.php 作成ウィザードが利用します。
- * ウィザードを介さず、このファイルを "wp-config.php" という名前でコピーして直接編集し値を
- * 入力してもかまいません。
+ * このファイルは、以下の設定を含みます。
+ *
+ * * MySQL 設定
+ * * 秘密鍵
+ * * データベーステーブル接頭辞
+ * * ABSPATH
+ *
+ * @link http://wpdocs.sourceforge.jp/wp-config.php_%E3%81%AE%E7%B7%A8%E9%9B%86
  *
  * @package WordPress
  */
 
-// 注意: 
+// 注意:
 // Windows の "メモ帳" でこのファイルを編集しないでください !
 // 問題なく使えるテキストエディタ
 // (http://wpdocs.sourceforge.jp/Codex:%E8%AB%87%E8%A9%B1%E5%AE%A4 参照)
@@ -21,7 +26,7 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'wordpress_reform');
+define('DB_NAME', 'wp_reform');
 
 /** MySQL データベースのユーザー名 */
 define('DB_USER', 'root');
@@ -33,7 +38,7 @@ define('DB_PASSWORD', 'dasp13*dran');
 define('DB_HOST', 'localhost');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
 define('DB_COLLATE', '');
@@ -47,15 +52,17 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'wM&|p)ECpkn|d#O88Y:oI-Q-1DcD?x#XKST9faz%So~/E.+[P>RP<JxbD{{9U]P>');
-define('SECURE_AUTH_KEY',  'sXo-;|y>{Ha_W92];Lk}/]|RRR&I,,/oH4;:>#OdP.FFD1s!L+Q41fjAeK.?L;ed');
-define('LOGGED_IN_KEY',    '(#&{gazr|IHJiwU1hN]Uc)M6MmXS:M|u_NRz7aUM_lA-`Kr|W<BQEZdaNKP[SQq]');
-define('NONCE_KEY',        '=_?oiY}QB0E:*{yL^tazFF5ixWfn|d=`x2MU%#tc10M,EoHJs=_bo}XUF2H.O2*p');
-define('AUTH_SALT',        ',{ME~TTo,mp4DPk8yKmsT&yrf<1O#pClo!a)P+,N~/`q.a}W6]K(:@{[!VEUMdoq');
-define('SECURE_AUTH_SALT', 'x9)!f/)*}ffO#&gR! -+[L8UpdFpT&=-LK);HEE1 7tg(ho$>MS@78:V(7W7KaI]');
-define('LOGGED_IN_SALT',   'uz.2EQ3-6h~QRjX#rtZVp:UMllP.`%GJnR`+n<>yyJu|[HbE5wZE}vh3QZ(6WcOP');
-define('NONCE_SALT',       '$;xKHx]m&NzEZO|$hCRP#fV1i>&:A+&(-V4lhy8p0!NP/._+L:xIJ-95!KXSdV7N');
+define('AUTH_KEY',         'Nj<P/]+TM.+;7-`D>2n2Xk=FjLN.l<N<>9Gl+ZD4kn~.+*3wW3lVESGSKM@(fBN|');
+define('SECURE_AUTH_KEY',  'w>Bhu.)A|Qop=-J./98o57K4Zhz}5?Jsi+SpoqcX782.}NZMe[,a,`hyjX>8t0Pk');
+define('LOGGED_IN_KEY',    'jIKrW#+*Bz+%?wI%auhL1i3Z*Pc+KoBlJcSi|`t9T*G^K3!xF;wlj+1k4hY r$$h');
+define('NONCE_KEY',        '(=w`FaxP>n=;V97?(gCygz=;`cX`>rN-}wC--0`.I+UYN3_B.Tb$tf9>#a*^lKwQ');
+define('AUTH_SALT',        '.,$NF?e(lrLN;t -:Q)^6$EDK7ZiW5(#vM`G~oXe}^y?`+U4*OfGj PF}kOfNvm|');
+define('SECURE_AUTH_SALT', 'G5KgAf{)Q<m|:H{Dbq]M4]D@&H^187c3-o_l/:=5{-(]EDLH?:eWT_k+ eeelMZ_');
+define('LOGGED_IN_SALT',   '[BHhmg2-$I7$P1-1Fpc;dd;Hhd-F?Ixw#]*=zpec4t#v3 C3p]._0c~-yd-LfG)>');
+define('NONCE_SALT',       'GiY]|(Aw%>>|na+Ol1G[8.|zIR%Aiq{>JH_vx3] eH7gTETZ{ )RnhYpI <xn?-:');
+
 define('FS_METHOD', 'direct');
+
 /**#@-*/
 
 /**
@@ -71,6 +78,10 @@ $table_prefix  = 'wp_';
  *
  * この値を true にすると、開発中に注意 (notice) を表示します。
  * テーマおよびプラグインの開発者には、その開発環境においてこの WP_DEBUG を使用することを強く推奨します。
+ *
+ * その他のデバッグに利用できる定数については Codex をご覧ください。
+ *
+ * @link http://wpdocs.osdn.jp/WordPress%E3%81%A7%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0
  */
 define('WP_DEBUG', false);
 

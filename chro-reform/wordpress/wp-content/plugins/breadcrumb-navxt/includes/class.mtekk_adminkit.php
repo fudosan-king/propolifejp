@@ -1,6 +1,6 @@
 <?php
-/*  
-	Copyright 2009-2014  John Havlik  (email : john.havlik@mtekk.us)
+/*
+	Copyright 2015-2018  John Havlik  (email : john.havlik@mtekk.us)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,10 +17,14 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 require_once(dirname(__FILE__) . '/block_direct_access.php');
+//Include admin base class
+if(!class_exists('mtekk_adminKit_message'))
+{
+	require_once(dirname(__FILE__) . '/class.mtekk_adminkit_message.php');
+}
 abstract class mtekk_adminKit
 {
-	const __version = '1.2';
-	protected $version;
+	const version = '2.0.2';
 	protected $full_name;
 	protected $short_name;
 	protected $plugin_basename;
@@ -28,17 +32,19 @@ abstract class mtekk_adminKit
 	protected $identifier;
 	protected $unique_prefix;
 	protected $opt = array();
+	protected $messages;
 	protected $message;
 	protected $support_url;
 	protected $allowed_html;
 	function __construct()
 	{
+		$this->message = array();
+		$this->messages = array();
 		//Admin Init Hook
 		add_action('admin_init', array($this, 'init'));
 		//WordPress Admin interface hook
 		add_action('admin_menu', array($this, 'add_page'));
 		//Installation Script hook
-		//register_activation_hook($this->plugin_basename, array($this, 'install'));
 		add_action('activate_' . $this->plugin_basename, array($this, 'install'));
 		//Initilizes l10n domain
 		$this->local();
@@ -56,7 +62,7 @@ abstract class mtekk_adminKit
 	 */
 	function get_admin_class_version()
 	{
-		return self::__version;
+		return mtekk_adminKit::version;
 	}
 	/**
 	 * Return the URL of the settings page for the plugin
@@ -85,15 +91,15 @@ abstract class mtekk_adminKit
 	 * @param mixed $value (optional) The value to place in the query string 
 	 * @param string $title (optional) The text to use in the title portion of the anchor
 	 * @param string $text (optional) The text that will be surrounded by the anchor tags
-	 * @param string $extras (optional) This text is placed within the opening anchor tag, good for adding id, classe, rel field
+	 * @param string $anchor_extras (optional) This text is placed within the opening anchor tag, good for adding id, classe, rel field
 	 * @return string the assembled anchor
 	 */
-	function nonced_anchor($uri, $mode, $value = 'true', $title = '', $text = '', $extras = '')
+	function nonced_anchor($uri, $mode, $value = 'true', $title = '', $text = '', $anchor_extras = '')
 	{
 		//Assemble our url, nonce and all
-		$url = wp_nonce_url($uri . '&' . $this->unique_prefix . '_' . $mode . '=' . $value, $this->unique_prefix . '_' . $mode);
+		$url = wp_nonce_url(add_query_arg($this->unique_prefix . '_' . $mode, $value, $uri), $this->unique_prefix . '_' . $mode);
 		//Return a valid anchor
-		return ' <a title="' . $title . '" href="' . $url . '" '. $extras . '>' . $text . '</a>';
+		return ' <a title="' . esc_attr($title) . '" href="' . $url . '" '. $anchor_extras . '>' . esc_html($text) . '</a>';
 	}
 	/**
 	 * Abstracts the check_admin_referer so that all the end user has to supply is the mode
@@ -103,6 +109,17 @@ abstract class mtekk_adminKit
 	function check_nonce($mode)
 	{
 		check_admin_referer($this->unique_prefix . '_' . $mode);
+	}
+	/**
+	 * Makes sure the current user can manage options to proceed
+	 */
+	function security()
+	{
+		//If the user can not manage options we will die on them
+		if(!current_user_can($this->access_level))
+		{
+			wp_die(__('Insufficient privileges to proceed.', $this->identifier));
+		}
 	}
 	function init()
 	{
@@ -150,16 +167,29 @@ abstract class mtekk_adminKit
 		}
 		//Add in the nice "settings" link to the plugins page
 		add_filter('plugin_action_links', array($this, 'filter_plugin_actions'), 10, 2);
+		if(defined('SCRIPT_DEBUG') && SCRIPT_DEBUG)
+		{
+			$suffix = '';
+		}
+		else
+		{
+			$suffix = '.min';
+		}
+		//Register JS for more permanently dismissing messages
+		wp_register_script('mtekk_adminkit_messages', plugins_url('/mtekk_adminkit_messages' . $suffix . '.js', dirname(__FILE__) . '/mtekk_adminkit_messages' . $suffix . '.js'), array('jquery'), self::version, true);
+		//Register JS for enable/disable settings groups
+		wp_register_script('mtekk_adminkit_engroups', plugins_url('/mtekk_adminkit_engroups' . $suffix . '.js', dirname(__FILE__) . '/mtekk_adminkit_engroups' . $suffix . '.js'), array('jquery'), self::version, true);
 		//Register JS for tabs
-		wp_register_script('mtekk_adminkit_tabs', plugins_url('/mtekk_adminkit_tabs.js', dirname(__FILE__) . '/mtekk_adminkit_tabs.js'), array('jquery-ui-tabs'));
+		wp_register_script('mtekk_adminkit_tabs', plugins_url('/mtekk_adminkit_tabs' . $suffix . '.js', dirname(__FILE__) . '/mtekk_adminkit_tabs' . $suffix . '.js'), array('jquery-ui-tabs'), self::version, true);
 		//Register CSS for tabs
-		wp_register_style('mtekk_adminkit_tabs', plugins_url('/mtekk_adminkit_tabs.css', dirname(__FILE__) . '/mtekk_adminkit_tabs.css'));
+		wp_register_style('mtekk_adminkit_tabs', plugins_url('/mtekk_adminkit_tabs' . $suffix . '.css', dirname(__FILE__) . '/mtekk_adminkit_tabs' . $suffix . '.css'));
 		//Register options
 		register_setting($this->unique_prefix . '_options', $this->unique_prefix . '_options', '');
 		//Synchronize up our settings with the database as we're done modifying them now
-		$this->opt = $this->parse_args($this->get_option($this->unique_prefix . '_options'), $this->opt);
+		$this->opt = $this::parse_args($this->get_option($this->unique_prefix . '_options'), $this->opt);
 		//Run the opts fix filter
 		$this->opts_fix($this->opt);
+		add_action('wp_ajax_mtekk_admin_message_dismiss', array($this, 'dismiss_message'));
 	}
 	/**
 	 * Adds the adminpage the menu and the nice little settings link
@@ -168,7 +198,7 @@ abstract class mtekk_adminKit
 	function add_page()
 	{
 		//Add the submenu page to "settings" menu
-		$hookname = add_submenu_page('options-general.php', __($this->full_name, $this->identifier), $this->short_name, $this->access_level, $this->identifier, array($this, 'admin_page'));
+		$hookname = add_submenu_page('options-general.php', $this->full_name, $this->short_name, $this->access_level, $this->identifier, array($this, 'admin_page'));
 		// check capability of user to manage options (access control)
 		if(current_user_can($this->access_level))
 		{
@@ -214,7 +244,7 @@ abstract class mtekk_adminKit
 		if($file == $this->plugin_basename)
 		{ 
 			//Add our link to the end of the array to better integrate into the WP 2.8 plugins page
-			$links[] = '<a href="' . $this->admin_url() . '">' . __('Settings') . '</a>';
+			$links[] = '<a href="' . $this->admin_url() . '">' . esc_html__('Settings') . '</a>';
 		}
 		return $links;
 	}
@@ -245,18 +275,18 @@ abstract class mtekk_adminKit
 			$this->add_option($this->unique_prefix . '_options', $opts);
 			$this->add_option($this->unique_prefix . '_options_bk', $opts, '', 'no');
 			//Add the version, no need to autoload the db version
-			$this->add_option($this->unique_prefix . '_version', $this->version, '', 'no');
+			$this->update_option($this->unique_prefix . '_version', $this::version, 'no');
 		}
 		else
 		{
 			//Retrieve the database version
 			$db_version = $this->get_option($this->unique_prefix . '_version');
-			if($this->version !== $db_version)
+			if($this::version !== $db_version)
 			{
 				//Run the settings update script
 				$this->opts_upgrade($opts, $db_version);
 				//Always have to update the version
-				$this->update_option($this->unique_prefix . '_version', $this->version);
+				$this->update_option($this->unique_prefix . '_version', $this::version);
 				//Store the options
 				$this->update_option($this->unique_prefix . '_options', $this->opt);
 			}
@@ -280,20 +310,28 @@ abstract class mtekk_adminKit
 	 */
 	function version_check($version)
 	{
+		//If we didn't get a version, setup
+		if($version === false)
+		{
+			//Add the version, no need to autoload the db version
+			$this->add_option($this->unique_prefix . '_version', $this::version, '', 'no');
+		}
 		//Do a quick version check
-		if(version_compare($version, $this->version, '<') && is_array($this->opt))
+		if($version && version_compare($version, $this::version, '<') && is_array($this->opt))
 		{
 			//Throw an error since the DB version is out of date
-			$this->message['error'][] = __('Your settings are out of date.', $this->identifier) . $this->admin_anchor('upgrade', __('Migrate the settings now.', $this->identifier), __('Migrate now.', $this->identifier));
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Your settings are for an older version of this plugin and need to be migrated.', $this->identifier)
+				. $this->admin_anchor('upgrade', __('Migrate the settings now.', $this->identifier), __('Migrate now.', $this->identifier)), 'warning');
 			//Output any messages that there may be
 			$this->messages();
 			return false;
 		}
 		//Do a quick version check
-		else if(version_compare($version, $this->version, '>') && is_array($this->opt))
+		else if($version && version_compare($version, $this::version, '>') && is_array($this->opt))
 		{
-			//Throw an error since the DB version is out of date
-			$this->message['error'][] = __('Your settings are for a newer version.', $this->identifier) . $this->admin_anchor('upgrade', __('Migrate the settings now.', $this->identifier), __('Migrate now.', $this->identifier));
+			//Let the user know that their settings are for a newer version
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Your settings are for a newer version of this plugin.', $this->identifier)
+				. $this->admin_anchor('upgrade', __('Migrate the settings now.', $this->identifier), __('Attempt back migration now.', $this->identifier)), 'warning');
 			//Output any messages that there may be
 			$this->messages();
 			return true;
@@ -301,7 +339,8 @@ abstract class mtekk_adminKit
 		else if(!is_array($this->opt))
 		{
 			//Throw an error since it appears the options were never registered
-			$this->message['error'][] = __('Your plugin install is incomplete.', $this->identifier) . $this->admin_anchor('upgrade', __('Load default settings now.', $this->identifier), __('Complete now.', $this->identifier));
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Your plugin install is incomplete.', $this->identifier)
+				. $this->admin_anchor('upgrade', __('Load default settings now.', $this->identifier), __('Complete now.', $this->identifier)), 'error');
 			//Output any messages that there may be
 			$this->messages();
 			return false;
@@ -309,7 +348,8 @@ abstract class mtekk_adminKit
 		else if(!$this->opts_validate($this->opt))
 		{
 			//Throw an error since it appears the options contain invalid data
-			$this->message['error'][] = __('Your plugin settings are invalid.', $this->identifier) . $this->admin_anchor('fix', __('Attempt to fix settings now.', $this->identifier), __('Fix now.', $this->identifier));
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('One or more of your plugin settings are invalid.', $this->identifier)
+				. $this->admin_anchor('fix', __('Attempt to fix settings now.', $this->identifier), __('Fix now.', $this->identifier)), 'error');
 			//Output any messages that there may be
 			$this->messages();
 			return false;
@@ -371,7 +411,7 @@ abstract class mtekk_adminKit
 						break;
 					//Handle the absolute integer options
 					case 'a':
-						$opts[$option] = absint($input[$option]);
+						$opts[$option] = (int) abs($input[$option]);
 						break;
 					//Handle the floating point options
 					case 'f':
@@ -379,7 +419,6 @@ abstract class mtekk_adminKit
 						break;
 					//Handle the HTML options
 					case 'h':
-						//May be better to use wp_kses here
 						$opts[$option] = wp_kses(stripslashes($input[$option]), $this->allowed_html);
 						break;
 					//Handle the HTML options that must not be null
@@ -400,6 +439,10 @@ abstract class mtekk_adminKit
 					case 's':
 						$opts[$option] = esc_html($input[$option]);
 						break;
+					//Deal with enumerated types
+					case 'E':
+						$opts[$option] = $this->opts_sanitize_enum($input[$option], $option);
+						break;
 					//By default we have nothing to do, allows for internal settings
 					default:
 						break;
@@ -408,13 +451,25 @@ abstract class mtekk_adminKit
 		}
 	}
 	/**
+	 * Simple sanitization function for enumerated types, end users should overload this
+	 * with something more usefull
+	 * 
+	 * @param string $value The input value from the form
+	 * @param string $option The option name
+	 * @return string The sanitized enumerated string
+	 */
+	private function opts_sanitize_enum($value, $option)
+	{
+		return esc_html($value);
+	}
+	/**
 	 * A better version of parse_args, will recrusivly follow arrays
 	 * 
 	 * @param mixed $args The arguments to be parsed
 	 * @param mixed $defaults (optional) The default values to validate against
 	 * @return mixed
 	 */
-	function parse_args($args, $defaults = '')
+	static function parse_args($args, $defaults = '')
 	{
 		if(is_object($args))
 		{
@@ -477,32 +532,43 @@ abstract class mtekk_adminKit
 		//Do a nonce check, prevent malicious link/form problems
 		check_admin_referer($this->unique_prefix . '_options-options');
 		//Update local options from database
-		$this->opt = $this->parse_args($this->get_option($this->unique_prefix . '_options'), $this->opt);
+		$this->opt = $this::parse_args($this->get_option($this->unique_prefix . '_options'), $this->opt);
 		$this->opts_update_prebk($this->opt);
 		//Update our backup options
 		$this->update_option($this->unique_prefix . '_options_bk', $this->opt);
+		$opt_prev = $this->opt;
 		//Grab our incomming array (the data is dirty)
 		$input = $_POST[$this->unique_prefix . '_options'];
 		//Run the update loop
 		$this->opts_update_loop($this->opt, $input);
 		//Commit the option changes
-		$this->update_option($this->unique_prefix . '_options', $this->opt);
+		$updated = $this->update_option($this->unique_prefix . '_options', $this->opt);
 		//Check if known settings match attempted save
-		if(count(array_diff_key($input, $this->opt)) == 0)
+		if($updated && count(array_diff_key($input, $this->opt)) == 0)
 		{
 			//Let the user know everything went ok
-			$this->message['updated fade'][] = __('Settings successfully saved.', $this->identifier) . $this->admin_anchor('undo', __('Undo the options save.', $this->identifier), __('Undo', $this->identifier));
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Settings successfully saved.', $this->identifier)
+				. $this->admin_anchor('undo', __('Undo the options save.', $this->identifier), __('Undo', $this->identifier)), 'success');
+		}
+		else if(!$updated && count(array_diff_key($opt_prev, $this->opt)) == 0)
+		{
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Settings did not change, nothing to save.', $this->identifier), 'info');
+		}
+		else if(!$updated)
+		{
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Settings were not saved.', $this->identifier), 'error');
 		}
 		else
 		{
 			//Let the user know the following were not saved
-			$this->message['updated fade'][] = __('Some settings were not saved.', $this->identifier) . $this->admin_anchor('undo', __('Undo the options save.', $this->identifier), __('Undo', $this->identifier));
-			$temp = __('The following settings were not saved:', $this->identifier);
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Some settings were not saved.', $this->identifier)
+				. $this->admin_anchor('undo', __('Undo the options save.', $this->identifier), __('Undo', $this->identifier)), 'warning');
+			$temp = esc_html__('The following settings were not saved:', $this->identifier);
 			foreach(array_diff_key($input, $this->opt) as $setting => $value)
 			{
 				$temp .= '<br />' . $setting;
 			}
-			$this->message['updated fade'][] = $temp . '<br />' . sprintf(__('Please include this message in your %sbug report%s.', $this->identifier),'<a title="' . sprintf(__('Go to the %s support post for your version.', $this->identifier), $this->short_name) . '" href="' . $this->support_url . $this->version . '/#respond">', '</a>');
+			$this->messages[] = new mtekk_adminKit_message($temp . '<br />' . sprintf(esc_html__('Please include this message in your %sbug report%s.', $this->identifier), '<a title="' . sprintf(esc_attr__('Go to the %s support forum.', $this->identifier), $this->short_name) . '" href="' . $this->support_url . '">', '</a>'), 'info');
 		}
 		add_action('admin_notices', array($this, 'messages'));
 	}
@@ -529,7 +595,7 @@ abstract class mtekk_adminKit
 		$plugnode = $parnode->appendChild($node);
 		//Add some attributes that identify the plugin and version for the options export
 		$plugnode->setAttribute('name', $this->short_name);
-		$plugnode->setAttribute('version', $this->version);
+		$plugnode->setAttribute('version', $this::version);
 		//Change our headder to text/xml for direct save
 		header('Cache-Control: public');
 		//The next two will cause good browsers to download instead of displaying the file
@@ -601,12 +667,13 @@ abstract class mtekk_adminKit
 			//Commit the loaded options to the database
 			$this->update_option($this->unique_prefix . '_options', $this->opt);
 			//Everything was successful, let the user know
-			$this->message['updated fade'][] = __('Settings successfully imported from the uploaded file.', $this->identifier) . $this->admin_anchor('undo', __('Undo the options import.', $this->identifier), __('Undo', $this->identifier));
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Settings successfully imported from the uploaded file.', $this->identifier)
+				. $this->admin_anchor('undo', __('Undo the options import.', $this->identifier), __('Undo', $this->identifier)), 'success');
 		}
 		else
 		{
 			//Throw an error since we could not load the file for various reasons
-			$this->message['error'][] = __('Importing settings from file failed.', $this->identifier);
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Importing settings from file failed.', $this->identifier), 'error');
 		}
 		//Reset to the default error handler after we're done
 		restore_error_handler();
@@ -625,7 +692,8 @@ abstract class mtekk_adminKit
 		//Load in the hard coded default option values
 		$this->update_option($this->unique_prefix . '_options', $this->opt);
 		//Reset successful, let the user know
-		$this->message['updated fade'][] = __('Settings successfully reset to the default values.', $this->identifier) . $this->admin_anchor('undo', __('Undo the options reset.', $this->identifier), __('Undo', $this->identifier));
+		$this->messages[] = new mtekk_adminKit_message(esc_html__('Settings successfully reset to the default values.', $this->identifier)
+			. $this->admin_anchor('undo', __('Undo the options reset.', $this->identifier), __('Undo', $this->identifier)), 'success');
 		add_action('admin_notices', array($this, 'messages'));
 	}
 	/**
@@ -642,7 +710,8 @@ abstract class mtekk_adminKit
 		//Set the backup options to the undone options
 		$this->update_option($this->unique_prefix . '_options_bk', $opt);
 		//Send the success/undo message
-		$this->message['updated fade'][] = __('Settings successfully undid the last operation.', $this->identifier) . $this->admin_anchor('undo', __('Undo the last undo operation.', $this->identifier), __('Undo', $this->identifier));
+		$this->messages[] = new mtekk_adminKit_message(esc_html__('Settings successfully undid the last operation.', $this->identifier)
+			. $this->admin_anchor('undo', __('Undo the last undo operation.', $this->identifier), __('Undo', $this->identifier)), 'success');
 		add_action('admin_notices', array($this, 'messages'));
 	}
 	/**
@@ -654,7 +723,7 @@ abstract class mtekk_adminKit
 	function opts_upgrade($opts, $version)
 	{
 		//We don't support using newer versioned option files in older releases
-		if(version_compare($this->version, $version, '>='))
+		if(version_compare($this::version, $version, '>='))
 		{
 			$this->opt = $opts;
 		}
@@ -673,18 +742,18 @@ abstract class mtekk_adminKit
 			//Feed the just read options into the upgrade function
 			$this->opts_upgrade($opts, $this->get_option($this->unique_prefix . '_version'));
 			//Always have to update the version
-			$this->update_option($this->unique_prefix . '_version', $this->version);
+			$this->update_option($this->unique_prefix . '_version', $this::version);
 			//Store the options
 			$this->update_option($this->unique_prefix . '_options', $this->opt);
 			//Send the success message
-			$this->message['updated fade'][] = __('Settings successfully migrated.', $this->identifier);
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Settings successfully migrated.', $this->identifier), 'success');
 		}
 		else
 		{
 			//Run the install script
 			$this->install();
 			//Send the success message
-			$this->message['updated fade'][] = __('Default settings successfully installed.', $this->identifier);
+			$this->messages[] = new mtekk_adminKit_message(esc_html__('Default settings successfully installed.', $this->identifier), 'success');
 		}
 		add_action('admin_notices', array($this, 'messages'));
 	}
@@ -703,24 +772,41 @@ abstract class mtekk_adminKit
 			
 		}
 	}
+	function dismiss_message()
+	{
+		//Grab the submitted UID
+		$uid = esc_attr($_POST['uid']);
+		//Create a dummy message, with the discovered UID
+		$message = new mtekk_adminKit_message('', '', true, $uid);
+		//Dismiss the message
+		$message->dismiss();
+		wp_die();
+	}
 	/**
 	 * Prints to screen all of the messages stored in the message member variable
 	 */
 	function messages()
 	{
+		foreach($this->messages as $message)
+		{
+			$message->render();
+		}
+		//Old deprecated messages
 		if(count($this->message))
 		{
+			_deprecated_function( __FUNCTION__, '2.0.0', __('adminKit::message is deprecated, use new adminkit_messages instead.', $this->identifier) );
 			//Loop through our message classes
 			foreach($this->message as $key => $class)
 			{
 				//Loop through the messages in the current class
 				foreach($class as $message)
 				{
-					printf('<div class="%s"><p>%s</p></div>', $key, $message);	
+					printf('<div class="%s"><p>%s</p></div>', esc_attr($key), $message);	
 				}
 			}
+			$this->message = array();
 		}
-		$this->message = array();
+		$this->messages = array();
 	}
 	/**
 	 * Function prototype to prevent errors
@@ -734,21 +820,21 @@ abstract class mtekk_adminKit
 	 */
 	function admin_scripts()
 	{
-	
+
 	}
 	/**
 	 * Function prototype to prevent errors
 	 */
 	function admin_head()
 	{
-		
+
 	}
 	/**
 	 * Function prototype to prevent errors
 	 */
 	function admin_page()
 	{
-	    
+
 	}
 	/**
 	 * Function prototype to prevent errors
@@ -759,11 +845,10 @@ abstract class mtekk_adminKit
 	}
 	/**
 	 * Returns a valid xHTML element ID
-	 * 
+	 *
 	 * @param object $option
-	 * @return 
 	 */
-	function get_valid_id($option)
+	static public function get_valid_id($option)
 	{
 		if(is_numeric($option[0]))
 		{
@@ -777,147 +862,172 @@ abstract class mtekk_adminKit
 	function import_form()
 	{
 		$form = '<div id="mtekk_admin_import_export_relocate">';
-		$form .= sprintf('<form action="options-general.php?page=%s" method="post" enctype="multipart/form-data" id="%s_admin_upload">', $this->identifier, $this->unique_prefix);
+		$form .= sprintf('<form action="options-general.php?page=%s" method="post" enctype="multipart/form-data" id="%s_admin_upload">', esc_attr($this->identifier), esc_attr($this->unique_prefix));
 		$form .= wp_nonce_field($this->unique_prefix . '_admin_import_export', '_wpnonce', true, false);
-		$form .= sprintf('<fieldset id="import_export" class="%s_options">', $this->unique_prefix);
-		$form .= '<p>' . __('Import settings from a XML file, export the current settings to a XML file, or reset to the default settings.', $this->identifier) . '</p>';
+		$form .= sprintf('<fieldset id="import_export" class="%s_options">', esc_attr($this->unique_prefix));
+		$form .= '<p>' . esc_html__('Import settings from a XML file, export the current settings to a XML file, or reset to the default settings.', $this->identifier) . '</p>';
 		$form .= '<table class="form-table"><tr valign="top"><th scope="row">';
-		$form .= sprintf('<label for="%s_admin_import_file">', $this->unique_prefix);
-		$form .= __('Settings File', $this->identifier);
+		$form .= sprintf('<label for="%s_admin_import_file">', esc_attr($this->unique_prefix));
+		$form .= esc_html__('Settings File', $this->identifier);
 		$form .= '</label></th><td>';
-		$form .= sprintf('<input type="file" name="%s_admin_import_file" id="%s_admin_import_file" size="32" /><p class="description">', $this->unique_prefix, $this->unique_prefix);
-		$form .= __('Select a XML settings file to upload and import settings from.', 'breadcrumb_navxt');
+		$form .= sprintf('<input type="file" name="%1$s_admin_import_file" id="%1$s_admin_import_file" size="32" /><p class="description">', esc_attr($this->unique_prefix));
+		$form .= esc_html__('Select a XML settings file to upload and import settings from.', 'breadcrumb_navxt');
 		$form .= '</p></td></tr></table><p class="submit">';
-		$form .= sprintf('<input type="submit" class="button" name="%s_admin_import" value="' . __('Import', $this->identifier) . '"/>', $this->unique_prefix, $this->unique_prefix);
-		$form .= sprintf('<input type="submit" class="button" name="%s_admin_export" value="' . __('Export', $this->identifier) . '"/>', $this->unique_prefix);
-		$form .= sprintf('<input type="submit" class="button" name="%s_admin_reset" value="' . __('Reset', $this->identifier) . '"/>', $this->unique_prefix, $this->unique_prefix);
+		$form .= sprintf('<input type="submit" class="button" name="%1$s_admin_import" value="%2$s"/>', $this->unique_prefix, esc_attr__('Import', $this->identifier));
+		$form .= sprintf('<input type="submit" class="button" name="%1$s_admin_export" value="%2$s"/>', $this->unique_prefix, esc_attr__('Export', $this->identifier));
+		$form .= sprintf('<input type="submit" class="button" name="%1$s_admin_reset" value="%2$s"/>', $this->unique_prefix, esc_attr__('Reset', $this->identifier));
 		$form .= '</p></fieldset></form></div>';
 		return $form;
 	}
 	/**
 	 * This will output a well formed hidden option
-	 * 
+	 *
 	 * @param string $option
-	 * @return 
 	 */
 	function input_hidden($option)
 	{
-		$optid = $this->get_valid_id($option);?>
-		<input type="hidden" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" id="<?php echo $optid;?>" value="<?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?>"/>
-	<?php
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$opt_name = $this->unique_prefix . '_options[' . $option . ']';
+		printf('<input type="hidden" name="%1$s" id="%2$s" value="%3$s" />', esc_attr($opt_name), esc_attr($opt_id), esc_attr($this->opt[$option]));
+	}
+	/**
+	 * This will output a well formed option label
+	 *
+	 * @param string $opt_id
+	 * @param string $label
+	 */
+	function label($opt_id, $label)
+	{
+		printf('<label for="%1$s">%2$s</label>', esc_attr($opt_id), $label);
 	}
 	/**
 	 * This will output a well formed table row for a text input
-	 * 
+	 *
 	 * @param string $label
 	 * @param string $option
-	 * @param string $class [optional]
-	 * @param bool $disable [optional]
-	 * @param string $description [optional]
-	 * @return 
+	 * @param string $class (optional)
+	 * @param bool $disable (optional)
+	 * @param string $description (optional)
 	 */
 	function input_text($label, $option, $class = 'regular-text', $disable = false, $description = '')
 	{
-		$optid = $this->get_valid_id($option);
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$opt_name = $this->unique_prefix . '_options[' . $option . ']';
 		if($disable)
-		{?>
-			<input type="hidden" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" value="<?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?>" />
-		<?php } ?>
+		{
+			$this->input_hidden($option);
+			$class .= ' disabled';
+		}?>
 		<tr valign="top">
 			<th scope="row">
-				<label for="<?php echo $optid;?>"><?php echo $label;?></label>
+				<?php $this->label($opt_id, $label);?>
 			</th>
 			<td>
-				<input type="text" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" id="<?php echo $optid;?>" <?php if($disable){echo 'disabled="disabled"'; $class .= ' disabled';}?> value="<?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?>" class="<?php echo $class;?>" /><br />
-					<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
+				<?php printf('<input type="text" name="%1$s" id="%2$s" value="%3$s" class="%4$s" %5$s/><br />', esc_attr($opt_name), esc_attr($opt_id), esc_attr($this->opt[$option]), esc_attr($class), disabled($disable, true, false));?>
+				<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
 			</td>
 		</tr>
 	<?php
 	}
 	/**
 	 * This will output a well formed table row for a HTML5 number input
-	 * 
+	 *
 	 * @param string $label
 	 * @param string $option
-	 * @param string $class [optional]
-	 * @param bool $disable [optional]
-	 * @param string $description [optional]
-	 * @param int|string $min [optional] 
-	 * @param int|string $max [optional]
-	 * @param int|string $step [optional]
-	 * @return 
+	 * @param string $class (optional)
+	 * @param bool $disable (optional)
+	 * @param string $description (optional)
+	 * @param int|string $min (optional) 
+	 * @param int|string $max (optional)
+	 * @param int|string $step (optional)
 	 */
 	function input_number($label, $option, $class = 'small-text', $disable = false, $description = '', $min = '', $max = '', $step = '')
 	{
-		$optid = $this->get_valid_id($option);
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$opt_name = $this->unique_prefix . '_options[' . $option . ']';
 		$extras = '';
 		if($min !== '')
 		{
-			$extras .= 'min="' . $min . '" ';
+			$extras .= 'min="' . esc_attr($min) . '" ';
 		}
 		if($max !== '')
 		{
-			$extras .= 'max="' . $max . '" ';
+			$extras .= 'max="' . esc_attr($max) . '" ';
 		}
 		if($step !== '')
 		{
-			$extras .= 'step="' . $step . '" ';
+			$extras .= 'step="' . esc_attr($step) . '" ';
 		}
 		if($disable)
-		{?>
-			<input type="hidden" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" value="<?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?>" />
-		<?php } ?>
+		{
+			$this->input_hidden($option);
+			$class .= ' disabled';
+		}?>
 		<tr valign="top">
 			<th scope="row">
-				<label for="<?php echo $optid;?>"><?php echo $label;?></label>
+				<?php $this->label($opt_id, $label);?>
 			</th>
 			<td>
-				<input type="number" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" id="<?php echo $optid;?>" <?php echo $extras;?><?php if($disable){echo 'disabled="disabled"'; $class .= ' disabled';}?> value="<?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?>" class="<?php echo $class;?>" /><br />
-					<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
+				<?php printf('<input type="number" name="%1$s" id="%2$s" value="%3$s" class="%4$s" %6$s%5$s/><br />', esc_attr($opt_name), esc_attr($opt_id), esc_attr($this->opt[$option]), esc_attr($class), disabled($disable, true, false), $extras);?>
+				<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
 			</td>
 		</tr>
 	<?php
 	}
 	/**
 	 * This will output a well formed textbox
-	 * 
+	 *
 	 * @param string $label
 	 * @param string $option
-	 * @param string $rows [optional]
-	 * @param bool $disable [optional]
-	 * @param string $description [optional]
+	 * @param string $rows (optional)
+	 * @param bool $disable (optional)
+	 * @param string $description (optional)
 	 */
-	function textbox($label, $option, $height = '3', $disable = false, $description = '')
+	function textbox($label, $option, $height = '3', $disable = false, $description = '', $class = '')
 	{
-		$optid = $this->get_valid_id($option);?>
-		<p>
-			<label for="<?php echo $optid;?>"><?php echo $label;?></label>
-		</p>
-		<textarea rows="<?php echo $height;?>" <?php if($disable){echo 'disabled="disabled" class="large-text code disabled"';}else{echo 'class="large-text code"';}?> id="<?php echo $optid;?>" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]"><?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?></textarea><br />
-		<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$opt_name = $this->unique_prefix . '_options[' . $option . ']';
+		$class .= ' large-text';
+		if($disable)
+		{
+			$this->input_hidden($option);
+			$class .= ' disabled';
+		}?>
+		<tr valign="top">
+			<th scope="row">
+				<?php $this->label($opt_id, $label);?>
+			</th>
+			<td>
+				<?php printf('<textarea rows="%6$s" name="%1$s" id="%2$s" class="%4$s" %5$s/>%3$s</textarea><br />', esc_attr($opt_name), esc_attr($opt_id), esc_textarea($this->opt[$option]), esc_attr($class), disabled($disable, true, false), esc_attr($height));?>
+					<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
+			</td>
+		</tr>
+		<?php
 	}
 	/**
 	 * This will output a well formed tiny mce ready textbox
-	 * 
+	 *
 	 * @param string $label
 	 * @param string $option
-	 * @param string $rows [optional]
-	 * @param bool $disable [optional]
-	 * @param string $description [optional]
+	 * @param string $rows (optional)
+	 * @param bool $disable (optional)
+	 * @param string $description (optional)
 	 */
 	function tinymce($label, $option, $height = '3', $disable = false, $description = '')
 	{
-		$optid = $this->get_valid_id($option);
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$class = 'mtekk_mce';
 		if($disable)
-		{?>
-			<input type="hidden" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" value="<?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?>" />
-		<?php } ?>
+		{
+			$this->input_hidden($option);
+			$class .= ' disabled';
+		}?>
 		<tr valign="top">
 			<th scope="row">
-				<label for="<?php echo $optid;?>"><?php echo $label;?></label>
+				<?php $this->label($opt_id, $label);?>
 			</th>
 			<td>
-				<textarea rows="<?php echo $height;?>" <?php if($disable){echo 'disabled="disabled" class="mtekk_mce disabled"';}else{echo 'class="mtekk_mce"';}?> id="<?php echo $optid;?>" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]"><?php echo htmlentities($this->opt[$option], ENT_COMPAT, 'UTF-8');?></textarea><br />
+				<?php printf('<textarea rows="%6$s" name="%1$s" id="%2$s" class="%4$s" %5$s/>%3$s</textarea><br />', esc_attr($opt_name), esc_attr($opt_id), esc_textarea($this->opt[$option]), esc_attr($class), disabled($disable, true, false), esc_attr($height));?>
 				<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
 			</td>
 		</tr>
@@ -925,25 +1035,31 @@ abstract class mtekk_adminKit
 	}
 	/**
 	 * This will output a well formed table row for a checkbox input
-	 * 
+	 *
 	 * @param string $label
 	 * @param string $option
 	 * @param string $instruction
-	 * @param bool $disable [optional]
-	 * @param string $description [optional]
-	 * @return 
+	 * @param bool $disable (optional)
+	 * @param string $description (optional)
+	 * @param string $class (optional)
 	 */
-	function input_check($label, $option, $instruction, $disable = false, $description = '')
+	function input_check($label, $option, $instruction, $disable = false, $description = '', $class = '')
 	{
-		$optid = $this->get_valid_id($option);?>
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$opt_name = $this->unique_prefix . '_options[' . $option . ']';
+		if($disable)
+		{
+			$this->input_hidden($option);
+			$class .= ' disabled';
+		}?>
 		<tr valign="top">
 			<th scope="row">
-				<label for="<?php echo $optid;?>"><?php echo $label;?></label>
+				<?php $this->label($opt_id, $label);?>
 			</th>
 			<td>	
 				<label>
-					<input type="checkbox" name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" id="<?php echo $optid;?>" <?php if($disable){echo 'disabled="disabled" class="disabled"';}?> value="true" <?php checked(true, $this->opt[$option]);?> />
-						<?php echo $instruction; ?>				
+					<?php printf('<input type="checkbox" name="%1$s" id="%2$s" value="%3$s" class="%4$s" %5$s %6$s/>', esc_attr($opt_name), esc_attr($opt_id), esc_attr($this->opt[$option]), esc_attr($class), disabled($disable, true, false), checked($this->opt[$option], true, false));?>
+					<?php echo $instruction; ?>
 				</label><br />
 				<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
 			</td>
@@ -952,47 +1068,60 @@ abstract class mtekk_adminKit
 	}
 	/**
 	 * This will output a singular radio type form input field
-	 * 
+	 *
 	 * @param string $option
 	 * @param string $value
 	 * @param string $instruction
-	 * @param object $disable [optional]
-	 * @return 
+	 * @param object $disable (optional)
+	 * @param string $class (optional)
 	 */
-	function input_radio($option, $value, $instruction, $disable = false)
-	{?>
+	function input_radio($option, $value, $instruction, $disable = false, $class = '')
+	{
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$opt_name = $this->unique_prefix . '_options[' . $option . ']';
+		$class .= ' togx';
+		if($disable)
+		{
+			$this->input_hidden($option);
+			$class .= ' disabled';
+		}?>
 		<label>
-			<input name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" type="radio" <?php if($disable){echo 'disabled="disabled" class="disabled togx"';}else{echo 'class="togx"';}?> value="<?php echo $value;?>" <?php checked($value, $this->opt[$option]);?> />
+			<?php printf('<input type="radio" name="%1$s" id="%2$s" value="%3$s" class="%4$s" %5$s %6$s/>', esc_attr($opt_name), esc_attr($opt_id), esc_attr($value), esc_attr($class), disabled($disable, true, false), checked($value, $this->opt[$option], false));?>
 			<?php echo $instruction; ?>
 		</label><br/>
 	<?php
 	}
 	/**
 	 * This will output a well formed table row for a select input
-	 * 
+	 *
 	 * @param string $label
 	 * @param string $option
 	 * @param array $values
-	 * @param bool $disable [optional]
-	 * @param string $description [optional]
-	 * @return 
+	 * @param bool $disable (optional)
+	 * @param string $description (optional)
+	 * @param array $titles (optional) The array of titiles for the options, if they should be different from the values
+	 * @param string $class (optional) Extra class to apply to the elements
 	 */
-	function input_select($label, $option, $values, $disable = false, $description = '', $titles = false)
+	function input_select($label, $option, $values, $disable = false, $description = '', $titles = false, $class = '')
 	{
 		//If we don't have titles passed in, we'll use option names as values
 		if(!$titles)
 		{
 			$titles = $values;
 		}
-		$optid = $this->get_valid_id($option);?>
+		$opt_id = mtekk_adminKit::get_valid_id($option);
+		$opt_name = $this->unique_prefix . '_options[' . $option . ']';
+		if($disable)
+		{
+			$this->input_hidden($option);
+			$class .= ' disabled';
+		}?>
 		<tr valign="top">
 			<th scope="row">
-				<label for="<?php echo $optid;?>"><?php echo $label;?></label>
+				<?php $this->label($opt_id, $label);?>
 			</th>
 			<td>
-				<select name="<?php echo $this->unique_prefix . '_options[' . $option;?>]" id="<?php echo $optid;?>" <?php if($disable){echo 'disabled="disabled" class="disabled"';}?>>
-					<?php $this->select_options($option, $titles, $values); ?>
-				</select><br />
+				<?php printf('<select name="%1$s" id="%2$s" class="%4$s" %5$s>%3$s</select><br />', esc_attr($opt_name), esc_attr($opt_id), $this->select_options($option, $titles, $values), esc_attr($class), disabled($disable, true, false));?>
 				<?php if($description !== ''){?><p class="description"><?php echo $description;?></p><?php }?>
 			</td>
 		</tr>
@@ -1003,23 +1132,28 @@ abstract class mtekk_adminKit
 	 *
 	 * @param string $optionname name of wordpress options store
 	 * @param array $options array of names of options that can be selected
-	 * @param array $exclude[optional] array of names in $options array to be excluded
+	 * @param array $values array of the values of the options that can be selected
+	 * @param array $exclude(optional) array of names in $options array to be excluded
+	 * 
+	 * @return string The assembled HTML for the select options
 	 */
 	function select_options($optionname, $options, $values, $exclude = array())
 	{
+		$options_html = '';
 		$value = $this->opt[$optionname];
 		//Now do the rest
 		foreach($options as $key => $option)
 		{
 			if(!in_array($option, $exclude))
 			{
-				printf('<option value="%s" %s>%s</option>', $values[$key], selected(true, ($value == $values[$key]), false), $option);
+				$options_html .= sprintf('<option value="%1$s" %2$s>%3$s</option>', esc_attr($values[$key]), selected($value, $values[$key], false), $option);
 			}
 		}
+		return $options_html;
 	}
 	/**
 	 * A local pass through for get_option so that we can hook in and pick the correct method if needed
-	 * 
+	 *
 	 * @param string $option The name of the option to retrieve
 	 * @return mixed The value of the option
 	 */
@@ -1029,10 +1163,9 @@ abstract class mtekk_adminKit
 	}
 	/**
 	 * A local pass through for update_option so that we can hook in and pick the correct method if needed
-	 * 
+	 *
 	 * @param string $option The name of the option to update
 	 * @param mixed $newvalue The new value to set the option to
-	 * 
 	 */
 	function update_option($option, $newvalue)
 	{
@@ -1040,12 +1173,11 @@ abstract class mtekk_adminKit
 	}
 	/**
 	 * A local pass through for add_option so that we can hook in and pick the correct method if needed
-	 * 
+	 *
 	 * @param string $option The name of the option to update
 	 * @param mixed $value The new value to set the option to
 	 * @param null $deprecated Deprecated parameter
 	 * @param string $autoload Whether or not to autoload the option, it's a string because WP is special
-	 * 
 	 */
 	function add_option($option, $value = '', $deprecated = '', $autoload = 'yes')
 	{
@@ -1053,7 +1185,7 @@ abstract class mtekk_adminKit
 	}
 	/**
 	 * A local pass through for delete_option so that we can hook in and pick the correct method if needed
-	 * 
+	 *
 	 * @param string $option The name of the option to delete
 	 */
 	function delete_option($option)

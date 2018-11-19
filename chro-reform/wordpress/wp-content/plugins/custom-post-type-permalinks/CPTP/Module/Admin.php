@@ -1,182 +1,217 @@
 <?php
-
-
-
 /**
- *
- * Admin Page.
+ * Admin Page View.
  *
  * @package Custom_Post_Type_Permalinks
  * @since 0.9.4
- *
  * */
 
+/**
+ * Admin Page Class.
+ *
+ * @since 0.9.4
+ * */
 class CPTP_Module_Admin extends CPTP_Module {
 
+	/**
+	 * Add actions.
+	 */
 	public function add_hook() {
-		add_action( 'admin_init', array( $this,'settings_api_init'), 30 );
-		add_action( 'admin_enqueue_scripts', array( $this,'enqueue_css_js') );
-		add_action( 'admin_footer', array( $this,'pointer_js') );
+		add_action( 'admin_init', array( $this, 'settings_api_init' ), 30 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_css_js' ) );
+		add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 	}
 
 	/**
-	 *
 	 * Setting Init
-	 * @since 0.7
 	 *
+	 * @since 0.7
 	 */
 	public function settings_api_init() {
-		add_settings_section('cptp_setting_section',
-			__("Permalink Setting for custom post type",'cptp'),
-			array( $this,'setting_section_callback_function'),
+		add_settings_section( 'cptp_setting_section',
+			__( 'Permalink Settings for Custom Post Types', 'custom-post-type-permalinks' ),
+			array( $this, 'setting_section_callback_function' ),
 			'permalink'
 		);
 
 		$post_types = CPTP_Util::get_post_types();
-		foreach ($post_types as $post_type):
-			if(isset($_POST['submit']) and isset($_POST['_wp_http_referer'])){
-				if( strpos($_POST['_wp_http_referer'],'options-permalink.php') !== FALSE ) {
 
-					$structure = trim(esc_attr($_POST[$post_type.'_structure']));#get setting
+		foreach ( $post_types as $post_type ) {
 
-					#default permalink structure
-					if( !$structure )
-						$structure = CPTP_DEFAULT_PERMALINK;
-
-					$structure = str_replace('//','/','/'.$structure);# first "/"
-
-					#last "/"
-					$lastString = substr(trim(esc_attr($_POST['permalink_structure'])),-1);
-					$structure = rtrim($structure,'/');
-
-					if ( $lastString == '/')
-						$structure = $structure.'/';
-
-					update_option($post_type.'_structure', $structure );
-				}
-			}
-
-			add_settings_field($post_type.'_structure',
+			add_settings_field(
+				$post_type . '_structure',
 				$post_type,
-				array( $this,'setting_structure_callback_function'),
+				array( $this, 'setting_structure_callback_function' ),
 				'permalink',
 				'cptp_setting_section',
-				$post_type.'_structure'
+				array(
+					'label_for' => $post_type . '_structure',
+					'post_type' => $post_type,
+				)
 			);
-
-			register_setting('permalink',$post_type.'_structure');
-		endforeach;
+			register_setting( 'permalink', $post_type . '_structure' );
+		}
 
 		add_settings_field(
 			'no_taxonomy_structure',
-			__("Use custom permalink of custom taxonomy archive.",'cptp'),
-			array( $this,'setting_no_tax_structure_callback_function'),
+			__( 'Use custom permalink of custom taxonomy archive.', 'custom-post-type-permalinks' ),
+			array( $this, 'setting_no_tax_structure_callback_function' ),
 			'permalink',
-			'cptp_setting_section'
+			'cptp_setting_section',
+			array(
+				'label_for' => 'no_taxonomy_structure',
+			)
 		);
 
-		register_setting('permalink','no_taxonomy_structure');
+		register_setting( 'permalink', 'no_taxonomy_structure' );
 
-		if(isset($_POST['submit']) && isset($_POST['_wp_http_referer']) && strpos($_POST['_wp_http_referer'],'options-permalink.php') !== false ) {
+		add_settings_field(
+			'add_post_type_for_tax',
+			__( 'Add <code>post_type</code> query for custom taxonomy archive.', 'custom-post-type-permalinks' ),
+			array( $this, 'add_post_type_for_tax_callback_function' ),
+			'permalink',
+			'cptp_setting_section',
+			array(
+				'label_for' => 'add_post_type_for_tax',
+			)
+		);
 
-			if(!isset($_POST['no_taxonomy_structure'])){
-				$set = true;
-			}else {
-				$set = false;
-			}
-			update_option('no_taxonomy_structure', $set);
-		}
+		register_setting( 'permalink', 'no_taxonomy_structure' );
 	}
 
+	/**
+	 * Setting section view.
+	 */
 	public function setting_section_callback_function() {
+		$sptp_link = admin_url( 'plugin-install.php?s=simple-post-type-permalinks&tab=search&type=term' );
+		// translators: %s simple post type permalinks install page.
+		$sptp_template = __( 'If you need post type permalink only, you should use <a href="%s">Simple Post Type Permalinks</a>.', 'custom-post-type-permalinks' );
 		?>
-			<p><?php _e("Setting permalinks of custom post type.",'cptp');?><br />
-			<?php _e("The tags you can use is WordPress Structure Tags and '%\"custom_taxonomy_slug\"%'. (e.g. %actors%)",'cptp');?><br />
-			<?php _e("%\"custom_taxonomy_slug\"% is replaced the taxonomy's term.'.",'cptp');?></p>
+		<p>
+			<strong>
+				<?php
+				$allowed_html = array(
+					'a' => array(
+						'href' => true,
+					),
+				);
+				echo wp_kses( sprintf( $sptp_template, esc_url( $sptp_link ) ), $allowed_html );
+				?>
+			</strong>
+		</p>
+		<?php
+		$allowed_html_code_tag = array(
+			'code' => array(),
+		);
+		?>
 
-			<p><?php _e("Presence of the trailing '/' is unified into a standard permalink structure setting.",'cptp');?>
-			<p><?php _e("If <code>has_archive</code> is true, add permalinks for custom post type archive.",'cptp');?>
-			<?php _e("If you don't entered permalink structure, permalink is configured /%postname%/'.",'cptp');?>
-			</p>
+		<p><?php echo wp_kses( __( 'The tags you can use are WordPress Structure Tags and <code>%"custom_taxonomy_slug"%</code> (e.g. <code>%actors%</code> or <code>%movie_actors%</code>).', 'custom-post-type-permalinks' ), $allowed_html_code_tag ); ?>
+			<?php echo wp_kses( __( '<code>%"custom_taxonomy_slug"%</code> is replaced by the term of taxonomy.', 'custom-post-type-permalinks' ), $allowed_html_code_tag ); ?></p>
+
+		<p><?php esc_html_e( "Presence of the trailing '/' is unified into a standard permalink structure setting.", 'custom-post-type-permalinks' ); ?>
+		<p><?php echo wp_kses( __( 'If <code>has_archive</code> is true, add permalinks for custom post type archive.', 'custom-post-type-permalinks' ), $allowed_html_code_tag ); ?></p>
+
 		<?php
 	}
 
-	public function setting_structure_callback_function(  $option  ) {
-		$post_type = str_replace('_structure',"" ,$option);
-		$pt_object = get_post_type_object($post_type);
-		$slug = $pt_object->rewrite['slug'];
+	/**
+	 * Show setting structure input.
+	 *
+	 * @param array $option {
+	 *     Callback option.
+	 *     @type string 'post_type' post type name.
+	 *     @type string 'label_for' post type label.
+	 * }
+	 */
+	public function setting_structure_callback_function( $option ) {
+
+		$post_type  = $option['post_type'];
+		$name       = $option['label_for'];
+		$pt_object  = get_post_type_object( $post_type );
+		$slug       = $pt_object->rewrite['slug'];
 		$with_front = $pt_object->rewrite['with_front'];
 
-		$value = get_option($option);
-		if( !$value )
+		$value = CPTP_Util::get_permalink_structure( $post_type );
+
+		$disabled = false;
+		if ( isset( $pt_object->cptp_permalink_structure ) && $pt_object->cptp_permalink_structure ) {
+			$disabled = true;
+		}
+
+		if ( ! $value ) {
 			$value = CPTP_DEFAULT_PERMALINK;
+		}
 
 		global $wp_rewrite;
 		$front = substr( $wp_rewrite->front, 1 );
-		if( $front and $with_front ) {
-			$slug = $front.$slug;
+		if ( $front && $with_front ) {
+			$slug = $front . $slug;
 		}
-
-		echo '<p><code>'.home_url().'/'.$slug.'</code> <input name="'.$option.'" id="'.$option.'" type="text" class="regular-text code" value="' . $value .'" /></p>';
-		echo '<p>has_archive: <code>';
-		echo $pt_object->has_archive ? "true" : "false";
-		echo '</code> / ';
-		echo 'with_front: <code>';
-		echo $pt_object->rewrite['with_front'] ? "true" : "false";
-		echo '</code></p>';
-
+		?>
+		<p>
+			<code><?php echo esc_html( home_url() . ( $slug ? '/' : '' ) . $slug ); ?></code>
+			<input name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $name ); ?>" type="text" class="regular-text code " value="<?php echo esc_attr( $value ); ?>" <?php disabled( $disabled, true, true ); ?> />
+		</p>
+		<p>has_archive: <code><?php echo esc_html( $pt_object->has_archive ? 'true' : 'false' ); ?></code> / with_front:
+			<code><?php echo esc_html( $pt_object->rewrite['with_front'] ? 'true' : 'false' ); ?></code></p>
+		<?php
 	}
 
-	public function setting_no_tax_structure_callback_function(){
-		echo '<input name="no_taxonomy_structure" id="no_taxonomy_structure" type="checkbox" value="1" class="code" ' . checked( false, get_option('no_taxonomy_structure'),false) . ' /> ';
-		$txt = __("If you check,The custom taxonomy's permalinks is <code>%s/post_type/taxonomy/term</code>.","cptp");
-		printf($txt , home_url());
+	/**
+	 * Show checkbox no tax.
+	 */
+	public function setting_no_tax_structure_callback_function() {
+		$no_taxonomy_structure = CPTP_Util::get_no_taxonomy_structure();
+		echo '<input name="no_taxonomy_structure" id="no_taxonomy_structure" type="checkbox" value="1" class="code" ' . checked( false, $no_taxonomy_structure, false ) . ' /> ';
+		$txt = __( "If you check this, the custom taxonomy's permalinks will be <code>%s/post_type/taxonomy/term</code>.", 'custom-post-type-permalinks' );
+		echo sprintf( wp_kses( $txt, array( 'code' => array() ) ), esc_html( home_url() ) );
 	}
 
+	/**
+	 * Show checkbox for post type query.
+	 */
+	public function add_post_type_for_tax_callback_function() {
+		echo '<input name="add_post_type_for_tax" id="add_post_type_for_tax" type="checkbox" value="1" class="code" ' . checked( true, get_option( 'add_post_type_for_tax' ), false ) . ' /> ';
+		esc_html_e( 'Custom taxonomy archive also works as post type archive. ', 'custom-post-type-permalinks' );
+		esc_html_e( 'There are cases when the template to be loaded is changed.', 'custom-post-type-permalinks' );
+	}
 
 
 	/**
+	 * Enqueue css and js
 	 *
-	 * enqueue CSS and JS
 	 * @since 0.8.5
-	 *
 	 */
 	public function enqueue_css_js() {
-		wp_enqueue_style('wp-pointer');
-		wp_enqueue_script('wp-pointer');
+		$pointer_name = 'custom-post-type-permalinks-settings';
+		if ( ! is_network_admin() ) {
+			$dismissed = explode( ',', get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
+			if ( false === array_search( $pointer_name, $dismissed, true ) ) {
+				$content = '';
+				$content .= '<h3>' . __( 'Custom Post Type Permalinks', 'custom-post-type-permalinks' ) . '</h3>';
+				$content .= '<p>' . __( 'You can setting permalink for post type in <a href="options-permalink.php">Permalinks</a>.', 'custom-post-type-permalinks' ) . '</p>';
+
+				wp_enqueue_style( 'wp-pointer' );
+				wp_enqueue_script( 'wp-pointer' );
+				wp_enqueue_script( 'custom-post-type-permalinks-pointer', plugins_url( 'assets/settings-pointer.js', CPTP_PLUGIN_FILE ), array( 'wp-pointer' ), CPTP_VERSION );
+
+				wp_localize_script( 'custom-post-type-permalinks-pointer', 'CPTP_Settings_Pointer', array(
+					'content' => $content,
+					'name'    => $pointer_name,
+				) );
+			}
+		}
 	}
 
-
-
 	/**
-	 *
-	 * add js for pointer
-	 * @since 0.8.5
+	 * Admin notice for update permalink settings!
 	 */
-	public function pointer_js() {
-		if(!is_network_admin()) {
-			$dismissed = explode(',', get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ));
-			if(array_search('cptp_pointer0871', $dismissed) === false){
-				$content = __("<h3>Custom Post Type Permalinks</h3><p>From <a href='options-permalink.php'>Permalinks</a>, set a custom permalink for each post type.</p>", "cptp");
-			?>
-				<script type="text/javascript">
-				jQuery(function($) {
-
-					$("#menu-settings .wp-has-submenu").pointer({
-						content: "<?php echo $content;?>",
-						position: {"edge":"left","align":"center"},
-						close: function() {
-							$.post('admin-ajax.php', {
-								action:'dismiss-wp-pointer',
-								pointer: 'cptp_pointer0871'
-							})
-
-						}
-					}).pointer("open");
-				});
-				</script>
-			<?php
-			}
+	public function admin_notices() {
+		if ( version_compare( get_option( 'cptp_permalink_checked' ), '3.0.0', '<' ) ) {
+			// translators: %s URL.
+			$format  = __( '[Custom Post Type Permalinks] <a href="%s"><strong>Please check your permalink settings!</strong></a>', 'custom-post-type-permalinks' );
+			$message = sprintf( $format, admin_url( 'options-permalink.php' ) );
+			echo sprintf( '<div class="notice notice-warning"><p>%s</p></div>', wp_kses( $message, wp_kses_allowed_html( 'post' ) ) );
 		}
 	}
 }

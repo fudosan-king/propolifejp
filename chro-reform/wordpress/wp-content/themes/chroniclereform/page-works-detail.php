@@ -49,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/tablet.css">
 <!-- Works JS start-->
 <script src="https://works-event.chronicle-web.com/wp-content/themes/chronicle/common/js/jquery.bxslider.js"></script>
-<script src="https://works-event.chronicle-web.com/wp-content/themes/chronicle/works/js/script.js"></script>
+<!-- <script src="https://works-event.chronicle-web.com/wp-content/themes/chronicle/works/js/script.js"></script> -->
 <!-- //Works JS end-->
 
 </head>
@@ -142,6 +142,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	                }
 	            });
 
+	            $('#slider ul').bxSlider({
+					auto: false,
+					pause: 5000,
+					speed: 1000,
+					mode: 'horizontal',
+					pager: true,
+					pagerCustom: '#thumbs'
+				});
+
 	        });
 
 	    }
@@ -172,4 +181,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
+
 

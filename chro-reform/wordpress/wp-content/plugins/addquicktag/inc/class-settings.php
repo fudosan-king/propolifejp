@@ -1,11 +1,11 @@
 <?php
 /**
  * AddQuicktag - Settings
- * @license    GPLv2
+ *
  * @package    AddQuicktag
  * @subpackage AddQuicktag Settings
  * @author     Frank Bueltge <frank@bueltge.de>
- * @version    06/19/2014
+ * @version    2017-02-22
  * @since      2.0.0
  */
 
@@ -21,30 +21,35 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * string for translation
+	 *
 	 * @var string
 	 */
 	static public $textdomain;
 
 	/**
 	 * string for options in table options
+	 *
 	 * @var string
 	 */
 	static private $option_string;
 
 	/**
 	 * string for plugin file
+	 *
 	 * @var string
 	 */
 	static private $plugin;
 
 	/**
 	 * post types for the settings
-	 * @var Array
+	 *
+	 * @var array
 	 */
 	static private $post_types_for_js;
 
 	/**
 	 * string for nonce fields
+	 *
 	 * @var string
 	 */
 	static public $nonce_string;
@@ -56,6 +61,7 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Handler for the action 'init'. Instantiates this class.
+	 *
 	 * @access  public
 	 * @since   2.0.0
 	 * @return  \Add_Quicktag|\Add_Quicktag_Settings $instance
@@ -73,23 +79,26 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Constructor, init on defined hooks of WP and include second class
+	 *
 	 * @access  public
 	 * @since   0.0.2
 	 * @uses    register_activation_hook, register_uninstall_hook, add_action
-	 * @return  \Add_Quicktag_Settings
 	 */
 	private function __construct() {
 
 		if ( ! is_admin() ) {
-			return NULL;
+			return;
 		}
 
-		// textdomain from parent class
-		self::$textdomain        = parent::get_textdomain();
 		self::$option_string     = parent::get_option_string();
 		self::$plugin            = parent::get_plugin_string();
 		self::$post_types_for_js = parent::get_post_types_for_js();
 		self::$nonce_string      = 'addquicktag_nonce';
+
+	// Makes sure the plugin is defined before trying to use it
+	if ( ! function_exists( 'is_plugin_active_for_network' ) ) {
+		require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+	}
 
 		register_uninstall_hook( __FILE__, array( 'Add_Quicktag_Settings', 'unregister_settings' ) );
 		// settings for an active multisite
@@ -98,9 +107,9 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 			// add settings link
 			add_filter(
 				'network_admin_plugin_action_links', array(
-					$this,
-					'network_admin_plugin_action_links'
-				), 10, 2
+				$this,
+				'network_admin_plugin_action_links'
+			), 10, 2
 			);
 			// save settings on network
 			add_action( 'network_admin_edit_' . self::$option_string, array( $this, 'save_network_settings_page' ) );
@@ -135,9 +144,10 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Return allowed post types for include scripts
+	 *
 	 * @since   2.1.1
 	 * @access  public
-	 * @return  Array
+	 * @return  array
 	 */
 	public function get_post_types_for_js() {
 
@@ -145,18 +155,8 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 	}
 
 	/**
-	 * Return Textdomain string
-	 * @access  public
-	 * @since   2.0.0
-	 * @return  string
-	 */
-	public function get_textdomain() {
-
-		return self::$textdomain;
-	}
-
-	/**
 	 * Add settings link on plugins.php in backend
+	 *
 	 * @uses
 	 * @access  public
 	 *
@@ -168,8 +168,10 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 	 */
 	public function plugin_action_links( $links, $file ) {
 
-		if ( parent :: get_plugin_string() == $file ) {
-			$links[ ] = '<a href="options-general.php?page=' . plugin_basename( __FILE__ ) . '">' . __( 'Settings' ) . '</a>';
+		if ( parent::get_plugin_string() === $file ) {
+			$links[] = '<a href="options-general.php?page=' . plugin_basename( __FILE__ ) . '">' . esc_html__(
+					'Settings'
+				) . '</a>';
 		}
 
 		return $links;
@@ -177,6 +179,7 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Add settings link on plugins.php on network admin in backend
+	 *
 	 * @uses
 	 * @access public
 	 * @since  2.0.0
@@ -188,8 +191,10 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 	 */
 	public function network_admin_plugin_action_links( $links, $file ) {
 
-		if ( parent :: get_plugin_string() == $file ) {
-			$links[ ] = '<a href="settings.php?page=' . plugin_basename( __FILE__ ) . '">' . __( 'Settings' ) . '</a>';
+		if ( parent::get_plugin_string() === $file ) {
+			$links[] = '<a href="settings.php?page=' . plugin_basename( __FILE__ ) . '">' . esc_html__(
+					'Settings'
+				) . '</a>';
 		}
 
 		return $links;
@@ -197,267 +202,330 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Add settings page in WP backend
+	 *
 	 * @uses   add_options_page
 	 * @access public
 	 * @since  2.0.0
-	 * @return void
 	 */
 	public function add_settings_page() {
 
 		if ( is_multisite() && is_plugin_active_for_network( self::$plugin ) ) {
 			add_submenu_page(
 				'settings.php',
-				parent :: get_plugin_data( 'Name' ) . ' ' . __( 'Settings', $this->get_textdomain() ),
-				parent :: get_plugin_data( 'Name' ),
+				parent::get_plugin_data( 'Name' ) . ' ' . esc_html__( 'Settings', 'addquicktag' ),
+				parent::get_plugin_data( 'Name' ),
 				'manage_options',
 				plugin_basename( __FILE__ ),
 				array( $this, 'get_settings_page' )
 			);
 		} else {
 			add_options_page(
-				parent :: get_plugin_data( 'Name' ) . ' ' . __( 'Settings', $this->get_textdomain() ),
-				parent :: get_plugin_data( 'Name' ),
+				parent::get_plugin_data( 'Name' ) . ' ' . esc_html__( 'Settings', 'addquicktag' ),
+				parent::get_plugin_data( 'Name' ),
 				'manage_options',
 				plugin_basename( __FILE__ ),
 				array( $this, 'get_settings_page' )
 			);
-			add_action( 'contextual_help', array( $this, 'contextual_help' ), 10, 3 );
 		}
 	}
 
 	/**
 	 * Return form and markup on settings page
+	 *
 	 * @uses   settings_fields, normalize_whitespace, is_plugin_active_for_network, get_site_option, get_option
 	 * @access public
 	 * @since  0.0.2
-	 * @return void
 	 */
 	public function get_settings_page() {
 
 		?>
 		<div class="wrap">
-		<h2><?php echo parent :: get_plugin_data( 'Name' ); ?></h2>
+			<h2><?php echo parent::get_plugin_data( 'Name' ); ?></h2>
 
-		<h3><?php _e( 'Add or delete Quicktag buttons', $this->get_textdomain() ); ?></h3>
+			<h3><?php esc_html_e( 'Add or delete Quicktag buttons', 'addquicktag' ); ?></h3>
 
-		<p><?php _e( 'Fill in the fields below to add or edit the quicktags. Fields with * are required. To delete a tag simply empty all fields.', $this->get_textdomain() ); ?></p>
+			<p><?php esc_html_e(
+					'Fill in the fields below to add or edit the quicktags. Fields with * are required. To delete a tag simply empty all fields.',
+					'addquicktag'
+				); ?></p>
+			<p><?php esc_html_e( 'Leave the Button Label to don\'t add the button to the quicktags, html mode.', 'addquicktag' ); ?></p>
 
-		<?php
-		if ( is_multisite() && is_plugin_active_for_network( self::$plugin ) ) {
-			$action = 'edit.php?action=' . self::$option_string;
-		} else {
-			$action = 'options.php';
-		}
-		?>
-		<form method="post" action="<?php echo $action; ?>">
 			<?php
+			$action = 'options.php';
 			if ( is_multisite() && is_plugin_active_for_network( self::$plugin ) ) {
-				wp_nonce_field( self::$nonce_string );
-				$options = get_site_option( self::$option_string );
-			} else {
-				settings_fields( self::$option_string . '_group' );
-				$options = get_option( self::$option_string );
-			}
-
-			if ( ! isset( $options[ 'buttons' ] ) ) {
-				$options[ 'buttons' ] = array();
-			}
-
-			if ( 1 < count( $options[ 'buttons' ] ) ) {
-				// sort array by order value
-				$tmp = array();
-				foreach ( $options[ 'buttons' ] as $order ) {
-					if ( isset( $order[ 'order' ] ) ) {
-						$tmp[ ] = $order[ 'order' ];
-					} else {
-						$tmp[ ] = 0;
-					}
-				}
-				array_multisort( $tmp, SORT_ASC, $options[ 'buttons' ] );
-			}
-
-			// loop about the post types, create html an values for title in table
-			$pt_title    = '';
-			$pt_colgroup = '';
-			foreach ( $this->get_post_types_for_js() as $post_type ) {
-
-				$pt_title .= '<th class="row-title rotate" title="Post Type"><span><code>' . $post_type . '</code></span></th>' . "\n";
-				$pt_colgroup .= '<colgroup></colgroup>' . "\n";
+				$action = 'edit.php?action=' . self::$option_string;
 			}
 			?>
-
-			<table class="widefat form-table rmnlQuicktagSettings">
-				<colgroup></colgroup>
-				<colgroup></colgroup>
-				<colgroup></colgroup>
-				<colgroup></colgroup>
-				<colgroup></colgroup>
-				<?php echo $pt_colgroup; ?>
-				<colgroup></colgroup>
-
-				<tr class="rmnlqsheader">
-					<th class="row-title"><?php _e( 'Button Label* and', $this->get_textdomain() ); ?><br />
-						<?php _e( 'Title Attribute', $this->get_textdomain() ); ?></th>
-					<th class="row-title"><?php _e( 'Start Tag(s)* and', $this->get_textdomain() ); ?><br />
-						<?php _e( 'End Tag(s)', $this->get_textdomain() ); ?></th>
-					<th class="row-title"><?php _e( 'Access Key and', $this->get_textdomain() ); ?><br />
-						<?php _e( 'Order', $this->get_textdomain() ); ?></th>
-					<th class="row-title rotate"><span><?php _e( 'Visual', $this->get_textdomain() ); ?></span></th>
-					<?php echo $pt_title ?>
-					<th class="row-title rotate">&#x2714;</th>
-				</tr>
+			<form method="post" action="<?php echo $action; ?>">
 				<?php
-				if ( empty( $options[ 'buttons' ] ) ) {
+				if ( is_multisite() && is_plugin_active_for_network( self::$plugin ) ) {
+					wp_nonce_field( self::$nonce_string );
+					$options = get_site_option( self::$option_string );
+				} else {
+					settings_fields( self::$option_string . '_group' );
+					$options = get_option( self::$option_string );
+				}
+
+				/** @var array $options */
+				if ( ! isset( $options[ 'buttons' ] ) ) {
 					$options[ 'buttons' ] = array();
 				}
-				$class = '';
-				for ( $i = 0; $i < count( $options[ 'buttons' ] ); $i ++ ) {
-					$class       = ( ' class="alternate"' == $class ) ? '' : ' class="alternate"';
-					$b           = $options[ 'buttons' ][ $i ];
-					$b[ 'text' ] = htmlentities( stripslashes( $b[ 'text' ] ), ENT_COMPAT, get_option( 'blog_charset' ) );
-					if ( isset( $b[ 'title' ] ) ) {
-						$b[ 'title' ] = htmlentities( stripslashes( $b[ 'title' ] ), ENT_COMPAT, get_option( 'blog_charset' ) );
-					}
-					$b[ 'start' ] = htmlentities( $b[ 'start' ], ENT_COMPAT, get_option( 'blog_charset' ) );
-					if ( isset( $b[ 'end' ] ) ) {
-						$b[ 'end' ] = htmlentities( $b[ 'end' ], ENT_COMPAT, get_option( 'blog_charset' ) );
-					}
-					if ( ! isset( $b[ 'access' ] ) ) {
-						$b[ 'access' ] = '';
-					}
-					$b[ 'access' ] = htmlentities( $b[ 'access' ], ENT_COMPAT, get_option( 'blog_charset' ) );
-					if ( ! isset( $b[ 'order' ] ) ) {
-						$b[ 'order' ] = 0;
-					}
-					$b[ 'order' ] = intval( $b[ 'order' ] );
-					if ( ! isset( $b[ 'visual' ] ) ) {
-						$b[ 'visual' ] = 0;
-					}
-					$b[ 'visual' ] = intval( $b[ 'visual' ] );
-					if ( 1 == $b[ 'visual' ] ) {
-						$checked = ' checked="checked"';
-					} else {
-						$checked = '';
-					}
-					// loop about the post types, create html an values
-					$pt_checkboxes = '';
-					foreach ( $this->get_post_types_for_js() as $post_type ) {
 
+				if ( 1 < count( $options[ 'buttons' ] ) ) {
+					// sort array by order value
+					$tmp = array();
+					foreach ( (array) $options[ 'buttons' ] as $order ) {
+						if ( isset( $order[ 'order' ] ) ) {
+							$tmp[] = $order[ 'order' ];
+						} else {
+							$tmp[] = 0;
+						}
+					}
+					array_multisort( $tmp, SORT_ASC, $options[ 'buttons' ] );
+				}
+
+				// loop about the post types, create html an values for title in table
+				$pt_title    = '';
+				$pt_colgroup = '';
+				foreach ( $this->get_post_types_for_js() as $post_type ) {
+
+					$pt_title .= '<th class="row-title rotate" title="Post Type"><span><code>' . $post_type . '</code></span></th>' . "\n";
+					$pt_colgroup .= '<colgroup></colgroup>' . "\n";
+				}
+				?>
+
+				<table class="widefat form-table rmnlQuicktagSettings">
+					<colgroup></colgroup>
+					<colgroup></colgroup>
+					<colgroup></colgroup>
+					<colgroup></colgroup>
+					<colgroup></colgroup>
+					<?php echo $pt_colgroup; ?>
+					<colgroup></colgroup>
+					<thead>
+					<tr class="rmnlqsheader">
+						<th class="row-title"><?php esc_html_e( 'Button Label, Dashicon', 'addquicktag' ); ?>
+							<br />
+							<?php esc_html_e( 'Title Attribute', 'addquicktag' ); ?></th>
+						<th class="row-title"><?php esc_html_e( 'Start Tag(s)* and', 'addquicktag' ); ?><br />
+							<?php esc_html_e( 'End Tag(s)', 'addquicktag' ); ?></th>
+						<th class="row-title"><?php esc_html_e( 'Access Key and', 'addquicktag' ); ?><br />
+							<?php esc_html_e( 'Order', 'addquicktag' ); ?></th>
+						<th class="row-title rotate">
+							<span><?php esc_html_e( 'Visual', 'addquicktag' ); ?></span></th>
+						<?php echo $pt_title ?>
+						<th class="row-title rotate">&#x2714;</th>
+					</tr>
+					</thead>
+					<tbody>
+					<?php
+					if ( empty( $options[ 'buttons' ] ) ) {
+						$options[ 'buttons' ] = array();
+					}
+					$class = '';
+					$imax = count( $options[ 'buttons' ] );
+					for ( $i = 0; $i < $imax; $i ++ ) {
+						$class       = ( ' class="alternate"' === $class ) ? '' : ' class="alternate"';
+						$b           = $options[ 'buttons' ][ $i ];
+						$b[ 'text' ] = htmlentities(
+							stripslashes( $b[ 'text' ] ), ENT_COMPAT, get_option( 'blog_charset' )
+						);
+						if ( ! isset( $b[ 'dashicon' ] ) ) {
+							$b[ 'dashicon' ] = '';
+						}
+						$b[ 'dashicon' ] = htmlentities(
+							stripslashes( $b[ 'dashicon' ] ), ENT_COMPAT, get_option( 'blog_charset' )
+						);
+						if ( isset( $b[ 'title' ] ) ) {
+							$b[ 'title' ] = htmlentities(
+								stripslashes( $b[ 'title' ] ), ENT_COMPAT, get_option( 'blog_charset' )
+							);
+						}
+						$b[ 'start' ] = htmlentities( $b[ 'start' ], ENT_COMPAT, get_option( 'blog_charset' ) );
+						if ( isset( $b[ 'end' ] ) ) {
+							$b[ 'end' ] = htmlentities( $b[ 'end' ], ENT_COMPAT, get_option( 'blog_charset' ) );
+						}
+						if ( ! isset( $b[ 'access' ] ) ) {
+							$b[ 'access' ] = '';
+						}
+						$b[ 'access' ] = htmlentities( $b[ 'access' ], ENT_COMPAT, get_option( 'blog_charset' ) );
+						if ( ! isset( $b[ 'order' ] ) ) {
+							$b[ 'order' ] = 0;
+						}
+						$b[ 'order' ] = (int) $b[ 'order' ];
+						if ( ! isset( $b[ 'visual' ] ) ) {
+							$b[ 'visual' ] = 0;
+						}
+						$b[ 'visual' ] = (int) $b[ 'visual' ];
+						$checked = '';
+						if ( 1 === $b[ 'visual' ] ) {
+							$checked = ' checked="checked"';
+						}
+
+						// loop about the post types, create html an values
+						$pt_checkboxes = '';
+						foreach ( $this->get_post_types_for_js() as $post_type ) {
+
+							if ( ! isset( $b[ $post_type ] ) ) {
+								$b[ $post_type ] = 0;
+							}
+
+							$b[ $post_type ] = (int) $b[ $post_type ];
+
+							$pt_checked = '';
+							if ( 1 === $b[ $post_type ] ) {
+								$pt_checked = ' checked="checked"';
+							}
+
+							$pt_checkboxes .= '<td class="num"><input type="checkbox" name="' .
+								self::$option_string . '[buttons][' .
+								$i . '][' . $post_type . ']" value="1" ' .
+								$pt_checked . '/></td>' . "\n";
+						}
+
+						echo '
+					<tr id="rmqtb' . $i . '">
+						<td>
+						<input type="text" placeholder="' . esc_html__( 'Button Label', 'addquicktag' )
+							. '" name="' . self::$option_string . '[buttons][' . $i
+							. '][text]" value="' . $b[ 'text' ] . '" /><br />
+						<input class="small" id="dashicons_picker_icon_' . $i
+							. '" type="text" placeholder="' . esc_html__( 'Dashicon', 'addquicktag' )
+							. '" name="' . self::$option_string . '[buttons][' . $i
+							. '][dashicon]" value="' . $b[ 'dashicon' ] . '" />
+						<button type="button" data-target="#dashicons_picker_icon_'
+							. $i . '"class="button dashicons-picker dashicons dashicons-dashboard"></button>
+						<br />
+						<input type="text" placeholder="' . esc_html__( 'Title Attribute', 'addquicktag' )
+							. '" name="' . self::$option_string . '[buttons][' . $i . '][title]" value="'
+							. $b[ 'title' ] . '" />
+						</td>
+						<td>
+						<textarea placeholder="' . esc_html__( 'Start Tag(s)*', 'addquicktag' )
+							. '" class="code" name="' . self::$option_string . '[buttons][' . $i
+							. '][start]" rows="2" cols="25" >' . $b[ 'start' ] . '</textarea><br />
+						<textarea placeholder="' . esc_html__( 'End Tag(s)', 'addquicktag' )
+							. '" class="code" name="' . self::$option_string . '[buttons][' . $i
+							. '][end]" rows="2" cols="25" >' . $b[ 'end' ] . '</textarea>
+						</td>
+						<td>
+						<input placeholder="' . esc_html__( 'Access Key', 'addquicktag' )
+							. '" class="small-text" type="text" name="' . self::$option_string . '[buttons][' . $i
+							. '][access]" value="' . $b[ 'access' ] . '" /><br />
+						<input placeholder="' . esc_html__( 'Order', 'addquicktag' )
+							. '" class="small-text" type="text" name="' . self::$option_string . '[buttons][' . $i
+							. '][order]" value="' . $b[ 'order' ] . '" />
+						</td>
+						<td class="num">
+						<input type="checkbox" name="' . self::$option_string . '[buttons][' . $i
+							. '][visual]" value="1"' . $checked . '/>' .
+						'</td>' .
+						$pt_checkboxes . '
+						<td class="num">
+						<input type="checkbox" class="toggle" id="select_all_' . $i . '" value="' . $i . '" />
+						</td>' . '
+					</tr>
+					';
+					}
+
+					// loop about the post types, create html an values for empty new checkboxes
+					$pt_new_boxes = '';
+					foreach ( $this->get_post_types_for_js() as $post_type ) {
 						if ( ! isset( $b[ $post_type ] ) ) {
 							$b[ $post_type ] = 0;
 						}
 
-						$b[ $post_type ] = intval( $b[ $post_type ] );
+						$b[ $post_type ] = (int) $b[ $post_type ];
 
-						if ( 1 == $b[ $post_type ] ) {
-							$pt_checked = ' checked="checked"';
-						} else {
-							$pt_checked = '';
-						}
-
-						$pt_checkboxes .= '<td class="num"><input type="checkbox" name="' .
-						                  self::$option_string . '[buttons][' .
-						                  $i . '][' . $post_type . ']" value="1"' .
-						                  $pt_checked . '/></td>' . "\n";
+						$pt_new_boxes .= '<td class="num"><input type="checkbox" name="' .
+							self::$option_string . '[buttons][' .
+							$i . '][' . $post_type . ']" value="1" /></td>' . "\n";
 					}
-
-					echo '
-					<tr id="rmqtb' . $i . '">
-						<td><input type="text" name="' . self::$option_string . '[buttons][' . $i
-					     . '][text]" value="' . $b[ 'text' ] . '" /><br />
-						<input type="text" name="' . self::$option_string . '[buttons][' . $i . '][title]" value="'
-					     . $b[ 'title' ] . '" /></td>
-						<td><textarea class="code" name="' . self::$option_string . '[buttons][' . $i
-					     . '][start]" rows="2" cols="25" >' . $b[ 'start' ] . '</textarea><br />
-						<textarea class="code" name="' . self::$option_string . '[buttons][' . $i
-					     . '][end]" rows="2" cols="25" >' . $b[ 'end' ] . '</textarea></td>
-						<td><input class="small-text" type="text" name="' . self::$option_string . '[buttons][' . $i
-					     . '][access]" value="' . $b[ 'access' ] . '" /><br />
-						<input class="small-text" type="text" name="' . self::$option_string . '[buttons][' . $i
-					     . '][order]" value="' . $b[ 'order' ] . '" /></td>
-						<td class="num"><input type="checkbox" name="' . self::$option_string . '[buttons][' . $i
-					     . '][visual]" value="1"' . $checked . '/></td>' .
-					     $pt_checkboxes . '
-						<td class="num"><input type="checkbox" class="toggle" id="select_all_' . $i . '" value="' . $i . '" /></td>' . '
+					?>
+					<tr id="rmqtb<?php echo $i ?>">
+						<td>
+							<input type="text" placeholder="<?php esc_html_e(
+								'Button Label*', 'addquicktag'
+							); ?>"
+								name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][text]" value="" /><br />
+							<input type="text" class="small" id="dashicons_picker_icon_new" placeholder="<?php
+							esc_html_e( 'Dashicon', 'addquicktag' ); ?>" name="<?php
+							echo self::$option_string; ?>[buttons][<?php echo $i; ?>][dashicon]" value="" />
+							<button type="button" data-target="#dashicons_picker_icon_new"
+								class="button dashicons-picker dashicons dashicons-dashboard"></button>
+							<br />
+							<input type="text" placeholder="<?php esc_html_e(
+								'Title Attribute', 'addquicktag'
+							); ?>"
+								name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][title]" value="" />
+						</td>
+						<td>
+							<textarea placeholder="<?php esc_html_e( 'Start Tag(s)*', 'addquicktag' ); ?>"
+								class="code" name="<?php echo self::$option_string; ?>[buttons][<?php
+							echo $i; ?>][start]" rows="2" cols="25"></textarea><br />
+							<textarea placeholder="<?php esc_html_e( 'End Tag(s)', 'addquicktag' ); ?>"
+								class="code" name="<?php echo self::$option_string; ?>[buttons][<?php
+							echo $i; ?>][end]" rows="2" cols="25"></textarea>
+						</td>
+						<td>
+							<input type="text" placeholder="<?php esc_html_e(
+								'Access Key', 'addquicktag'
+							); ?>"
+								title="<?php esc_html_e( 'Access Key', 'addquicktag' ); ?>"
+								class="small-text" name="<?php echo self::$option_string; ?>[buttons][<?php
+							echo $i; ?>][access]" value="" /><br />
+							<input type="text" placeholder="<?php esc_html_e( 'Order', 'addquicktag' ); ?>"
+								title="<?php esc_html_e( 'Order', 'addquicktag' ); ?>" class="small-text"
+								name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][order]" value="" />
+						</td>
+						<td class="num">
+							<label>
+								<input type="checkbox" name="<?php echo self::$option_string; ?>[buttons][<?php
+								echo $i; ?>][visual]" value="1" />
+							</label>
+						</td>
+						<?php echo $pt_new_boxes; ?>
+						<td class="num">
+							<label for="select_all_<?php echo $i ?>">
+								<input type="checkbox" class="toggle" id="select_all_<?php echo $i ?>" value="<?php echo $i ?>" />
+							</label>
+						</td>
 					</tr>
-					';
-				}
+					</tbody>
+				</table>
 
-				// loop about the post types, create html an values for empty new checkboxes
-				$pt_new_boxes = '';
-				foreach ( $this->get_post_types_for_js() as $post_type ) {
-					if ( ! isset( $b[ $post_type ] ) ) {
-						$b[ $post_type ] = 0;
-					}
+				<p class="submit">
+					<input type="submit" class="button-primary" value="<?php esc_html_e( 'Save Changes' ) ?>" />
+				</p>
 
-					$b[ $post_type ] = intval( $b[ $post_type ] );
+				<?php do_action( 'addquicktag_settings_form_page', $options ); ?>
 
-					if ( 1 == $b[ $post_type ] ) {
-						$pt_checked = ' checked="checked"';
-					} else {
-						$pt_checked = '';
-					}
+				<p class="submit">
+					<input type="submit" class="button-primary" value="<?php esc_html_e( 'Save Changes' ) ?>" />
+				</p>
 
-					$pt_new_boxes .= '<td class="num"><input type="checkbox" name="' .
-					                 self::$option_string . '[buttons][' .
-					                 $i . '][' . $post_type . ']" value="1" /></td>' . "\n";
-				}
-				?>
-				<tr id="rmqtb<?php echo $i ?>">
-					<td>
-						<input type="text" placeholder="<?php _e( 'Button Label*', $this->get_textdomain() ); ?>" name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][text]" value="" /><br />
-						<input type="text" placeholder="<?php _e( 'Title Attribute', $this->get_textdomain() ); ?>" name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][title]" value="" />
-					</td>
-					<td>
-						<textarea placeholder="<?php _e( 'Start Tag(s)*', $this->get_textdomain() ); ?>" class="code" name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][start]" rows="2" cols="25"></textarea><br />
-						<textarea placeholder="<?php _e( 'End Tag(s)', $this->get_textdomain() ); ?>" class="code" name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][end]" rows="2" cols="25"></textarea>
-					</td>
-					<td>
-						<input type="text" placeholder="<?php _e( 'Access Key', $this->get_textdomain() ); ?>" title="<?php _e( 'Access Key', $this->get_textdomain() ); ?>" class="small-text" name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][access]" value="" /><br />
-						<input type="text" placeholder="<?php _e( 'Order', $this->get_textdomain() ); ?>" title="<?php _e( 'Order', $this->get_textdomain() ); ?>" class="small-text" name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][order]" value="" />
-					</td>
-					<td class="num">
-						<input type="checkbox" name="<?php echo self::$option_string; ?>[buttons][<?php echo $i; ?>][visual]" value="1" />
-					</td>
-					<?php echo $pt_new_boxes; ?>
-					<td class="num">
-						<input type="checkbox" class="toggle" id="select_all_<?php echo $i ?>" value="<?php echo $i ?>" />
-					</td>
-				</tr>
-			</table>
+			</form>
 
-			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' ) ?>" />
-			</p>
+			<div class="metabox-holder has-right-sidebar">
 
-			<?php do_action( 'addquicktag_settings_form_page', $options ); ?>
-
-			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' ) ?>" />
-			</p>
-
-		</form>
-
-		<div class="metabox-holder has-right-sidebar">
-
-			<div class="inner-sidebar">
-				<?php do_action( 'addquicktag_settings_page_sidebar' ); ?>
-			</div>
-			<!-- .inner-sidebar -->
-
-			<div id="post-body">
-				<div id="post-body-content">
-					<?php do_action( 'addquicktag_settings_page', $options ); ?>
+				<div class="inner-sidebar">
+					<?php do_action( 'addquicktag_settings_page_sidebar' ); ?>
 				</div>
-				<!-- #post-body-content -->
+				<!-- .inner-sidebar -->
+
+				<div id="post-body">
+					<div id="post-body-content">
+						<?php do_action( 'addquicktag_settings_page', $options ); ?>
+					</div>
+					<!-- #post-body-content -->
+				</div>
+				<!-- #post-body -->
+
 			</div>
-			<!-- #post-body -->
+			<!-- .metabox-holder -->
 
 		</div>
-		<!-- .metabox-holder -->
-
-		</div>
-	<?php
+		<?php
 	}
 
 	/*
@@ -473,34 +541,52 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 		?>
 		<div class="postbox">
 
-			<h3><span><?php _e( 'Like this plugin?', $this->get_textdomain() ); ?></span></h3>
+			<h3><span><?php esc_html_e( 'Like this plugin?', 'addquicktag' ); ?></span></h3>
 
 			<div class="inside">
-				<p><?php _e( 'Here\'s how you can give back:', $this->get_textdomain() ); ?></p>
+				<p><?php esc_html_e( 'Here\'s how you can give back:', 'addquicktag' ); ?></p>
 				<ul>
 					<li>
-						<a href="http://wordpress.org/support/view/plugin-reviews/addquicktag" title="<?php esc_attr_e( 'The Plugin on the WordPress plugin repository', $this->get_textdomain() ); ?>"><?php esc_attr_e( 'Give the plugin a good rating.', $this->get_textdomain() ); ?></a>
+						<a href="http://wordpress.org/support/view/plugin-reviews/addquicktag" title="<?php esc_html_e(
+							'The Plugin on the WordPress plugin repository', 'addquicktag'
+						); ?>"><?php esc_html_e( 'Give the plugin a good rating.', 'addquicktag' ); ?></a>
 					</li>
 					<li>
-						<a href="http://wordpress.org/support/plugin/addquicktag" title="<?php esc_attr_e( 'Help inside the community other useres and write answer to this plugin questions.', $this->get_textdomain() ); ?>"><?php esc_attr_e( 'Help other users in the Support Forum.', $this->get_textdomain() ); ?></a>
+						<a href="http://wordpress.org/support/plugin/addquicktag" title="<?php esc_html_e(
+							'Help inside the community other useres and write answer to this plugin questions.',
+							'addquicktag'
+						); ?>"><?php esc_html_e(
+								'Help other users in the Support Forum.', 'addquicktag'
+							); ?></a>
 					</li>
 					<li>
-						<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=6069955" title="<?php esc_attr_e( 'Donate via PayPal', $this->get_textdomain() ); ?>"><?php esc_attr_e( 'Donate a few euros.', $this->get_textdomain() ); ?></a>
+						<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=6069955" title="<?php esc_html_e(
+							'Donate via PayPal', 'addquicktag'
+						); ?>"><?php esc_html_e( 'Donate a few euros.', 'addquicktag' ); ?></a>
 					</li>
 					<li>
-						<a href="http://www.amazon.de/gp/registry/3NTOGEK181L23/ref=wl_s_3" title="<?php esc_attr_e( 'Frank Bültge\'s Amazon Wish List', $this->get_textdomain() ); ?>"><?php esc_attr_e( 'Get me something from my wish list.', $this->get_textdomain() ); ?></a>
+						<a href="http://www.amazon.de/gp/registry/3NTOGEK181L23/ref=wl_s_3" title="<?php esc_html_e(
+							'Frank Bültge\'s Amazon Wish List', 'addquicktag'
+						); ?>"><?php esc_html_e(
+								'Get me something from my wish list.', 'addquicktag'
+							); ?></a>
 					</li>
 					<li>
-						<a href="https://github.com/bueltge/AddQuicktag" title="<?php esc_attr_e( 'Please give me feedback, contribute and file technical bugs on this GitHub Repo, use Issues.', $this->get_textdomain() ); ?>"><?php esc_attr_e( 'Github Repo for Contribute, Issues & Bugs', $this->get_textdomain() ); ?></a>
+						<a href="https://github.com/bueltge/AddQuicktag" title="<?php esc_html_e(
+							'Please give me feedback, contribute and file technical bugs on this GitHub Repo, use Issues.',
+							'addquicktag'
+						); ?>"><?php esc_html_e(
+								'Github Repo for Contribute, Issues & Bugs', 'addquicktag'
+							); ?></a>
 					</li>
 				</ul>
 			</div>
 		</div>
-	<?php
+		<?php
 	}
 
 	/*
-	 * Return informations about the plugin
+	 * Return information about the plugin
 	 * 
 	 * @uses   _e,esc_attr_e
 	 * @access public
@@ -512,22 +598,22 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 		?>
 		<div class="postbox">
 
-			<h3><span><?php _e( 'About this plugin', $this->get_textdomain() ); ?></span></h3>
+			<h3><span><?php esc_html_e( 'About this plugin', 'addquicktag' ); ?></span></h3>
 
 			<div class="inside">
 				<p>
-					<strong><?php _e( 'Version:', $this->get_textdomain() ); ?></strong>
-					<?php echo parent :: get_plugin_data( 'Version' ); ?>
+					<strong><?php esc_html_e( 'Version:', 'addquicktag' ); ?></strong>
+					<?php echo parent::get_plugin_data( 'Version' ); ?>
 				</p>
 
 				<p>
-					<strong><?php _e( 'Description:', $this->get_textdomain() ); ?></strong>
-					<?php echo parent :: get_plugin_data( 'Description' ); ?>
+					<strong><?php esc_html_e( 'Description:', 'addquicktag' ); ?></strong>
+					<?php echo parent::get_plugin_data( 'Description' ); ?>
 				</p>
 			</div>
 
 		</div>
-	<?php
+		<?php
 	}
 
 	/*
@@ -570,10 +656,12 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 	public function get_network_admin_notices() {
 
 		// if updated and the right page
-		if ( isset( $_GET[ 'updated' ] ) &&
-		     'settings_page_addquicktag/inc/class-settings-network' === $GLOBALS[ 'current_screen' ] ->id
+		if ( array_key_exists(
+				'updated', $_GET
+			)
+			&& 'settings_page_addquicktag/inc/class-settings-network' === $GLOBALS[ 'current_screen' ]->id
 		) {
-			$message = __( 'Options saved.', $this->get_textdomain() );
+			$message = esc_html__( 'Options saved.', 'addquicktag' );
 			$notice  = '<div id="message" class="updated"><p>' . $message . '</p></div>';
 			echo $notice;
 		}
@@ -581,6 +669,7 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Validate settings for options
+	 *
 	 * @uses   normalize_whitespace
 	 * @access public
 	 *
@@ -592,61 +681,65 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 	public function validate_settings( $value ) {
 
 		// Save core buttons changes
-		if ( isset( $value[ 'core_buttons' ] ) ) {
+		if ( array_key_exists( 'core_buttons', $value ) ) {
 			$core_buttons = $value[ 'core_buttons' ];
 		}
 
 		// Save Code buttons
-		if ( isset( $value[ 'code_buttons' ] ) ) {
+		if ( array_key_exists( 'code_buttons', $value ) ) {
 			$code_buttons = $value[ 'code_buttons' ];
 		}
 
 		// set allowed values for import, only the defaults of plugin and custom post types
 		$allowed_settings = (array) array_merge(
 			$this->get_post_types_for_js(),
-			array( 'text', 'title', 'start', 'end', 'access', 'order', 'visual' )
+			array( 'text', 'dashicon', 'title', 'start', 'end', 'access', 'order', 'visual' )
 		);
 
-		$buttons = '';
+		$buttons = array();
 		// filter for allowed values
-		foreach ( $value[ 'buttons' ] as $key => $button ) {
+		foreach ( (array) $value[ 'buttons' ] as $key => $button ) {
 
-			foreach ( $button as $label => $val ) {
+			foreach ( (array) $button as $label => $val ) {
 
-				if ( ! in_array( $label, $allowed_settings ) ) {
+				if ( ! in_array( $label, $allowed_settings, TRUE ) ) {
 					unset( $button[ $label ] );
 				}
 			}
 
-			$buttons[ ] = $button;
+			$buttons[] = $button;
 		}
 
 		// return filtered array
 		$filtered_values[ 'buttons' ] = $buttons;
 		$value                        = $filtered_values;
 
-		$buttons = array();
-		for ( $i = 0; $i < count( $value[ 'buttons' ] ); $i ++ ) {
+		$buttons   = array();
+		$c_buttons = count( $value[ 'buttons' ] );
+		for ( $i = 0; $i < $c_buttons; $i ++ ) {
 
 			$b = $value[ 'buttons' ][ $i ];
-			if ( ! empty( $b[ 'text' ] ) && ! empty( $b[ 'start' ] ) ) {
+			if ( ! empty( $b[ 'start' ] ) ) {
 
-				$b[ 'text' ]  = esc_html( $b[ 'text' ] );
-				$b[ 'title' ] = esc_html( $b[ 'title' ] );
-				$b[ 'start' ] = stripslashes( $b[ 'start' ] );
-				$b[ 'end' ]   = stripslashes( $b[ 'end' ] );
+				//preg_replace( '~[^\p{L}]~u', '', $string );
 
-				if ( isset( $b[ 'access' ] ) ) {
+				$b[ 'text' ]     = sanitize_text_field( $b[ 'text' ] );
+				$b[ 'dashicon' ] = sanitize_text_field( $b[ 'dashicon' ] );
+				$b[ 'title' ]    = sanitize_text_field( $b[ 'title' ] );
+				$b[ 'start' ]    = wp_kses_stripslashes( $b[ 'start' ] );
+				$b[ 'end' ]      = wp_kses_stripslashes( $b[ 'end' ] );
+
+				if ( array_key_exists( 'access', $b ) ) {
 					$b[ 'access' ] = esc_html( $b[ 'access' ] );
 				}
 
-				if ( isset( $b[ 'order' ] ) ) {
-					$b[ 'order' ] = intval( $b[ 'order' ] );
+				if ( array_key_exists( 'order', $b ) ) {
+					$b[ 'order' ] = (int) $b[ 'order' ];
 				}
 
 				// visual settings
-				if ( isset( $b[ 'visual' ] ) ) {
-					$b[ 'visual' ] = intval( $b[ 'visual' ] );
+				if ( array_key_exists( 'visual', $b ) ) {
+					$b[ 'visual' ] = (int) $b[ 'visual' ];
 				} else {
 					$b[ 'visual' ] = 0;
 				}
@@ -654,19 +747,19 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 				// post types
 				foreach ( $this->get_post_types_for_js() as $post_type ) {
 
-					if ( isset( $b[ $post_type ] ) ) {
-						$b[ $post_type ] = intval( $b[ $post_type ] );
+					if ( array_key_exists( $post_type, $b ) ) {
+						$b[ $post_type ] = (int) $b[ $post_type ];
 					} else {
 						$b[ $post_type ] = 0;
 					}
 
 				}
 
-				$buttons[ ] = $b;
+				$buttons[] = $b;
 			}
 
 		}
-
+		$value[ 'buttons' ] = $buttons;
 		// Check for wrong empty values and kill
 		foreach ( $value[ 'buttons' ] as $key => $b ) {
 
@@ -683,18 +776,18 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 			/**
 			 * $key is core-string
 			 * 'core_buttons' =>
-					array (size=1)
-					'strong' =>
-					array (size=2)
-					'post' => string '1' (length=1)
-					'page' => string '1' (length=1)
-			*/
+			 * array (size=1)
+			 * 'strong' =>
+			 * array (size=2)
+			 * 'post' => string '1' (length=1)
+			 * 'page' => string '1' (length=1)
+			 */
 			$filtered_core_buttons = array();
-			foreach ( $core_buttons as $key => $var ) {
+			foreach ( (array) $core_buttons as $key => $var ) {
 
 				$core_button = array();
-				foreach ( $var as $post_type => $val ) {
-					$core_button[ $post_type ] = intval( $val );
+				foreach ( (array) $var as $post_type => $val ) {
+					$core_button[ $post_type ] = (int) $val;
 				}
 
 				$filtered_core_buttons[ $key ] = $core_button;
@@ -709,11 +802,11 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 		if ( ! empty( $code_buttons ) ) {
 
 			$filtered_code_buttons = array();
-			foreach ( $code_buttons as $key => $var ) {
+			foreach ( (array) $code_buttons as $key => $var ) {
 
 				$code_button = array();
-				foreach ( $var as $post_type => $val ) {
-					$code_button[ $post_type ] = intval( $val );
+				foreach ( (array) $var as $post_type => $val ) {
+					$code_button[ $post_type ] = (int) $val;
 				}
 
 				$filtered_code_buttons[ $key ] = $code_button;
@@ -729,6 +822,7 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Register settings for options
+	 *
 	 * @uses    register_setting
 	 * @access  public
 	 * @since   2.0.0
@@ -741,6 +835,7 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Unregister and delete settings; clean database
+	 *
 	 * @uses    unregister_setting, delete_option
 	 * @access  public
 	 * @since   0.0.2
@@ -754,6 +849,7 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 
 	/**
 	 * Enqueue scripts and stylesheets
+	 *
 	 * @since    0.0.2
 	 *
 	 * @internal param $where
@@ -763,13 +859,30 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.dev' : '';
 
 		wp_register_script(
+			self::$option_string . '_dashicon_picker',
+			plugins_url( '/js/dashicons-picker' . $suffix . '.js', parent::get_plugin_string() ),
+			array( 'jquery' ),
+			'',
+			TRUE
+		);
+
+		wp_register_script(
 			self::$option_string . '_admin_script',
 			plugins_url( '/js/settings' . $suffix . '.js', parent::get_plugin_string() ),
 			array( 'jquery', 'quicktags' ),
 			'',
 			TRUE
 		);
+		wp_enqueue_script( self::$option_string . '_dashicon_picker' );
 		wp_enqueue_script( self::$option_string . '_admin_script' );
+
+		wp_register_style(
+			self::$option_string . '_dashicon_picker',
+			plugins_url( '/css/dashicons-picker' . $suffix . '.css', parent::get_plugin_string() ),
+			array( 'dashicons' ),
+			FALSE,
+			'screen'
+		);
 
 		wp_register_style(
 			self::$option_string . '_admin_style',
@@ -778,32 +891,10 @@ class Add_Quicktag_Settings extends Add_Quicktag {
 			FALSE,
 			'screen'
 		);
+		wp_enqueue_style( self::$option_string . '_dashicon_picker' );
 		wp_enqueue_style( self::$option_string . '_admin_style' );
-	}
-
-	/**
-	 * Add help text
-	 * @uses    normalize_whitespace
-	 *
-	 * @param   string $contextual_help
-	 * @param   string $screen_id
-	 * @param   string $screen
-	 *
-	 * @since   2.0.0
-	 * @return  string $contextual_help
-	 */
-	public function contextual_help( $contextual_help, $screen_id, $screen ) {
-
-		if ( 'settings_page_' . self::$option_string . '_group' !== $screen_id ) {
-			return $contextual_help;
-		}
-
-		$contextual_help =
-			'<p>' . __( '' ) . '</p>';
-
-		return normalize_whitespace( $contextual_help );
 	}
 
 }
 
-$add_quicktag_settings = Add_Quicktag_Settings :: get_object();
+$add_quicktag_settings = Add_Quicktag_Settings::get_object();

@@ -1,6 +1,6 @@
 <?php
 if (!$_SERVER['HTTP_X_CUSTOM_REFERRER']) {
-	echo '<script>window.location = "http://www.chronicle-web.com/reform/";</script>';
+	// echo '<script>window.location = "http://www.chronicle-web.com/reform/";</script>';
 }
 ?>
 <header id="header">

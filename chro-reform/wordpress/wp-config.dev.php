@@ -26,16 +26,16 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'wordpress_reform');
+define('DB_NAME', 'wp_reform');
 
 /** MySQL データベースのユーザー名 */
 define('DB_USER', 'root');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'root');
 
 /** MySQL のホスト名 */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost:3307');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
 define('DB_CHARSET', 'utf8mb4');
@@ -61,8 +61,9 @@ define('SECURE_AUTH_SALT', 'G5KgAf{)Q<m|:H{Dbq]M4]D@&H^187c3-o_l/:=5{-(]EDLH?:eW
 define('LOGGED_IN_SALT',   '[BHhmg2-$I7$P1-1Fpc;dd;Hhd-F?Ixw#]*=zpec4t#v3 C3p]._0c~-yd-LfG)>');
 define('NONCE_SALT',       'GiY]|(Aw%>>|na+Ol1G[8.|zIR%Aiq{>JH_vx3] eH7gTETZ{ )RnhYpI <xn?-:');
 
-define('WP_HOME', 'http://reform.dev');
-define('WP_SITEURL', 'http://reform.dev');
+define('WP_HOME', 'http://chro-reform.test');
+define('WP_SITEURL', 'http://chro-reform.test');
+define('FS_METHOD', 'direct');
 
 /**#@-*/
 

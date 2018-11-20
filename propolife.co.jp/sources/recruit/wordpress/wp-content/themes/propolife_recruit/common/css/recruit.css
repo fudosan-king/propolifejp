@@ -59,13 +59,13 @@
 
 #page_recruit .page_recruit_content .recruit_region section h3 { 
     font-size: 20px;
-    background-color: initial;
-    color: initial;
-    line-height: initial;
-    letter-spacing: initial;
-    padding: initial;
-    font-weight: initial;
-    clear: initial;
+    background-color: inherit;
+    color: #000;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: inherit;
+    font-weight: normal;
+    clear: none;
     margin-bottom: 15px;
 }
 #page_recruit .page_recruit_content .recruit_region section .description { font-size: 19px; }

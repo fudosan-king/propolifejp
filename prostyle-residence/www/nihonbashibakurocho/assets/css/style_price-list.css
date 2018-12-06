@@ -29,6 +29,7 @@
 #price-list .price-list-box{
 	margin: 40px auto 0;
 	width: 885px;
+	padding-bottom: 4rem;
 }
 
 
@@ -219,11 +220,15 @@
 }
 #price-list .page-contents {
 	width: 1200px;
-	/*background: #EAEADE;*/
+	/*background: #EAEADE;
 	padding: 4rem 0;
-	padding: 0;
+	padding: 0;*/
+	padding: 4rem 3rem;
 	margin: 0 auto;
 }
+
+.page-contents{max-width:128rem;width:100%;padding:4rem 3rem;margin:0 auto;background-color:#fff;}
+
 #price-list .page-contents:after {
 	content: ".";
 	display: block;
@@ -474,10 +479,27 @@
 	margin-right: 5px;
 }
 
+/**
 #price-list .page-header{
 	background-color:transparent;
 	height: auto !important;
+}**/
+
+#price-list .page-header{
+	width: 100%;
+	height: 26rem;
+	background-color: #222;
+	text-align: center;
 }
+#price-list .page-header::before{
+	width: 1px;
+	height: 100%;
+	text-align: center;
+	content: '\0020';
+	display: inline-block;
+	vertical-align: middle;
+}
+/**
 #price-list .page-title{
 	margin:0;
 	font-size:3rem;
@@ -486,10 +508,28 @@
 	vertical-align:middle;
 	padding: 3rem 0 0;
 	text-align: center;
+}**/
+
+#price-list .page-title{
+	margin: 0;
+	font-size: 3rem;
+	color: #fff;
+	font-weight: normal;
+	text-shadow: 0 0 6px #000;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-animation: fade-in-down 1.2s ease 0.15s;
+	-moz-animation: fade-in-down 1.2s ease 0.15s;
+	animation: fade-in-down 1.2s ease 0.15s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	animation-fill-mode: both;
 }
+
 #price-list .page-title .sub{
 	font-size:1.6rem;
-	color:#000;
+	/**color:#000;**/
+	color: #b48856;
 }
 
 #price-list h2.panorama{

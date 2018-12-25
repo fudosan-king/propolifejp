@@ -586,7 +586,7 @@ $(window).on('resize orientationchange', function(){
     });
 */
 
-$(window).on('scroll touchmove', function(){
+$(window).on('scroll touchmove DOMMouseScroll', function(){
     scrollPos = {top: $(window).scrollTop(), left: $(window).scrollLeft() }
     SmoothScroll.SetCurrentPos();
     ContentsSection.SetCurrentNum();

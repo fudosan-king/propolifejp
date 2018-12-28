@@ -53,10 +53,10 @@
 	</li>
 	<li>
 		<dl>
-		<dt><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-ohncq-a6256eea8b2bb0ffa3acf846063a435f" target="_blank">お問い合わせ</a></dt>
+		<dt><a href="https://www.chronicle-web.com/contact/" target="_blank">お問い合わせ</a></dt>
 		<dd>
 			<ul>
-			<li><a href="https://www.chronicle-plus.com/showroom/" target="_blank">ショールーム</a></li>
+			<li><a href="https://www.chronicle-web.com/showroom/" target="_blank">ショールーム</a></li>
 			</ul>
 		</dd>
 		</dl>

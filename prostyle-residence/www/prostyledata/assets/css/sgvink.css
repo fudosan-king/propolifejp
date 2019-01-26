@@ -1,0 +1,949 @@
+.freecall { font-size: 2.3125em }
+
+main section.content-page { padding-top: 135px; font-size: 12pt; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+
+main section.content-page .sub_title {
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+    border-bottom: 1px solid #ebebeb;
+    color: #654;
+    background-image: url(../images/1x/ico.png);
+    background-size: 55px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+
+main section.content-page div#main-content { padding: 40px 0 50px; }
+
+
+
+main section.content-page dl.company {
+    clear: both;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    border: 1px solid #000;
+    background-color: #F5F5F5;
+}
+
+main section.content-page dl.company dt {
+    clear: both;
+    float: left;
+    width: 220px;
+    margin: 0;
+    padding: 14px;
+    border-top: 1px solid #999;
+    font-weight: initial;
+}
+main section.content-page dl.company dd {
+    padding: 14px 20px;
+    margin-left: 220px;
+    border-top: 1px solid #999;
+    border-left: 1px dotted #999;
+    background-color: #FFF;
+
+    margin-bottom: 0;
+}
+
+
+main section.content-page dl.company dt:first-child {
+    border: none;
+}
+main section.content-page dl.company dt:first-child + dd {
+    border-top: none;
+}
+
+.section_news .block_news p time { margin-right: 20px; }
+
+/*PURCHASE CSS*/
+/*--------------------------------------------------------------------------------
+*
+*   2018
+*   PROPOLIFE
+*
+*
+--------------------------------------------------------------------------------*/
+
+main section.content-page.purchase .extra-content {
+    background-color: #eee;
+    padding: 40px 0;
+}
+
+main section.content-page.purchase .extra-content ol, ul{
+    list-style: none;
+}
+
+main section.content-page.purchase .extra-content h2{
+
+}
+
+main section.content-page.purchase .extra-content #topic_path{
+    margin-bottom: 15px;
+}
+
+main section.content-page.purchase .extra-content #section_title{
+    clear: both;
+    text-align: center;
+    position: relative;
+}
+
+main section.content-page.purchase .extra-content #section_title h2{
+    background: none;
+    border:none;
+    padding: 0 0 3px;
+    margin: 0 0 25px 0;
+    /*padding: 0 50px !important;*/
+    text-align: center;
+    line-height: 1em;
+    position: relative;
+}
+
+main section.content-page.purchase .extra-content #section_title h2 img{
+    width: 100%;
+    max-width: 513px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+main section.content-page.purchase .extra-content #section_title .ruby{ margin: 14px 0 15px 0; font-size: 20px;}
+@media screen and (max-width: 768px){ main section.content-page.purchase .extra-content #section_title .ruby{ margin: 15px 0; font-size: 16px;} }
+@media screen and (max-width: 480px){ main section.content-page.purchase .extra-content #section_title .ruby{ margin: 10px 0; font-size: 11px;} }
+
+main section.content-page.purchase .extra-content #section_title .line{
+    width: 247px;
+    height: 6px;
+    margin: 0 auto 60px auto;
+    background-color: #fff;
+}
+
+main section.content-page.purchase .extra-content #contents_inner {
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', '游ゴシック','YuGothic', Meiryo,メイリオ,sans-serif;
+    /*padding: 0 30px;*/
+}
+
+/* ---------- #section_telephone ---------- */
+main section.content-page.purchase .extra-content .section_telephone{
+    max-width: 880px;
+    margin: 0 auto 75px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+main section.content-page.purchase .extra-content .section_telephone h3{
+    padding: 0 0 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: .06em;
+    border-bottom: 1px solid #a0a0a0;
+    line-height: 1em;
+}
+
+main section.content-page.purchase .extra-content .section_telephone .telephone_list{
+    padding: 0 0 7px 0;
+    margin: -4px 0 10px 0;
+    border-bottom: 1px solid #a0a0a0;
+    overflow: hidden;
+}
+
+main section.content-page.purchase .extra-content .section_telephone ul{
+    width: 770px;
+    display: inline-block;
+    margin: 0 -30px 0 0;
+}
+
+main section.content-page.purchase .extra-content .section_telephone li{
+    width: 340px;
+    margin: 0 0 7px 0;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+main section.content-page.purchase .extra-content .section_telephone h4{
+    color: #771116;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: .065em;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 0;
+}
+
+main section.content-page.purchase .extra-content .section_telephone span{
+    margin: 6px 0 0 -5px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: .065em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+main section.content-page.purchase .extra-content .sp .section_telephone li p{
+    border-bottom: 1px solid #000;
+}
+
+main section.content-page.purchase .extra-content .sp .section_telephone li p a{
+    text-decoration: none;
+}
+
+main section.content-page.purchase .extra-content .sp .section_telephone li p a:hover{
+    color: #777;
+}
+
+main section.content-page.purchase .extra-content .section_telephone .hours{
+    clear: both;
+    margin: 0 0 21px 0;
+    padding: 0 0 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .065em;
+    border-bottom: 1px solid #a0a0a0;
+}
+
+main section.content-page.purchase .extra-content .section_telephone .btn_request{
+    width: 380px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 3px solid #1f1f1f;
+    text-align: center;
+    font-family:'游ゴシック','YuGothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0;
+    transition: background .1s ease;
+}
+
+main section.content-page.purchase .extra-content .section_telephone .btn_request a{
+    width: 380px;
+    padding: 19px 0;
+    text-decoration: none;
+    display: block;
+}
+
+main section.content-page.purchase .extra-content .section_telephone .btn_request a:visited,
+main section.content-page.purchase .extra-content .section_telephone .btn_request a:link{
+    color: #000;
+    text-decoration: none;
+}
+
+main section.content-page.purchase .extra-content .section_telephone .btn_request:hover{
+    background-color: #f5f5f5;
+}
+
+main section.content-page.purchase .extra-content .section_telephone .txt{
+    margin: 85px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: .06em;
+    white-space: nowrap;
+}
+
+
+/* ---------- #section_buy ---------- */
+main section.content-page.purchase .extra-content #section_buy{
+    margin: 0 auto;
+}
+
+main section.content-page.purchase .extra-content #purchase_list{
+    width: 50%;
+    max-width: 880px;
+    margin: 0 auto 100px auto;
+    text-align: center;
+}
+
+main section.content-page.purchase .extra-content #purchase_list ul{
+    width: 100%;
+    letter-spacing: -.40em;
+    overflow: hidden;
+    padding: 0;
+}
+
+main section.content-page.purchase .extra-content #purchase_list li{
+    width: 50%;
+    float: left;
+    letter-spacing: 0;
+    vertical-align: top;
+}
+
+main section.content-page.purchase .extra-content #purchase_list li p{ background-color: #f8f8f8;}
+/*main section.content-page.purchase .extra-content #purchase_list li:nth-child(2n) p{ background-color: #fff;}*/
+
+main section.content-page.purchase .extra-content #purchase_list li:nth-child(4n + 2) p{ background-color: #fff;}
+    main section.content-page.purchase .extra-content #purchase_list li:nth-child(4n + 3) p{ background-color: #fff;}
+
+main section.content-page.purchase .extra-content #purchase_list li h3{
+    width: 292px;
+    height: 90px;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: #771116;
+    font-size: 21px;
+    line-height: 1.2em;
+    color: #fff;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-right: 1px solid #fff;
+}
+
+main section.content-page.purchase .extra-content #purchase_list li.border_none h3{
+    border: none;
+}
+
+main section.content-page.purchase .extra-content #purchase_list li p{
+    height: 130px;
+    padding: 0 10px;
+    display: table;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+main section.content-page.purchase .extra-content #purchase_list li span{
+    width: 292px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+main section.content-page.purchase .extra-content #point{
+    clear: both;
+    text-align: center;
+    margin: 0 0 120px 0;
+}
+
+main section.content-page.purchase .extra-content #point h3{
+    margin: 0 0 50px 0;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+main section.content-page.purchase .extra-content #point ul{
+    width: auto;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+}
+
+@media screen and (max-width: 960px) {
+    main section.content-page.purchase .extra-content #point ul{
+        width: 420px;
+        /*padding: 0 0 0 20px;*/
+        margin: 0 0 -20px 0;
+    }
+
+    main section.content-page.purchase .extra-content #point li{
+        height: 210px;
+    }
+}
+
+main section.content-page.purchase .extra-content #point li{
+    width: 190px;
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+main section.content-page.purchase .extra-content #point li:last-child{
+    margin: 0;
+}
+
+main section.content-page.purchase .extra-content #purchase_area{
+    clear: both;
+    text-align: center;
+    margin: 0 0 135px 0;
+}
+
+main section.content-page.purchase .extra-content #purchase_area .pc{ display: block;}
+main section.content-page.purchase .extra-content #purchase_area .sp{ display: none;}
+
+main section.content-page.purchase .extra-content #purchase_area h3{
+    margin: 0 0 25px 0;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+main section.content-page.purchase .extra-content #purchase_area .area{
+    margin: 0 0 40px 0;
+    font-size: 18px;
+}
+
+main section.content-page.purchase .extra-content #purchase_area .map{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section.content-page.purchase .extra-content #purchase_area .map img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+main section.content-page.purchase .extra-content #estate_list{
+    max-width: 880px;
+    margin: 0 auto 70px auto;
+    text-align: center;
+}
+
+main section.content-page.purchase .extra-content #estate_list h3{
+    margin: 0 0 30px 0;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+main section.content-page.purchase .extra-content #estate_list ul{
+    margin: 0 0 0 -20px;
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: -.40em;
+    padding: 0;
+}
+
+main section.content-page.purchase .extra-content #estate_list li{
+    width: 205px;
+    display: inline-block;
+    margin: 0 0 40px 20px;
+    text-align: left;
+    letter-spacing: normal;
+    vertical-align: top;
+}
+
+main section.content-page.purchase .extra-content #estate_list li .pic{
+    margin: 0 0 15px 0;
+}
+
+main section.content-page.purchase .extra-content #estate_list li h4{
+    height: 50px;
+    margin: 0 0 5px 0;
+    display: table;
+    font-weight: bold;
+    line-height: 1.3em;
+    letter-spacing: .165em;
+}
+
+main section.content-page.purchase .extra-content #estate_list li h4 span{
+    display: table-cell;
+    vertical-align: top;
+}
+
+main section.content-page.purchase .extra-content #estate_list li p{
+    font-size: 12px;
+    line-height: 1.3em;
+    letter-spacing: .1em;
+}
+
+/* INFO */
+main section.content-page.info #section_title { 
+    text-align: center; 
+    color: #A5753F; 
+    font-size: 16pt;
+    margin-bottom: 50px;
+}
+main section.content-page.info #section_title .line {
+    border: #b3b1b1 1px solid;
+    width: 85px;
+    margin: 0 auto;
+}
+
+main section.content-page.info article.docItem { 
+    margin: 10px 0; 
+    text-align: center;
+}
+
+main section.content-page.info article.docItem a > img {
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+main section.content-page.info article.docItem a > img:hover {
+    transform: scale(1.1);
+}
+
+main section.content-page.info article.docItem .title { font-weight: bold; margin-top: 20px; }
+main section.content-page.info article.docItem .caption,
+main section.content-page.info article.docItem .description {  }
+
+main section.content-page.info .loginRequire {text-align: center; margin-bottom: 100px;}
+main section.content-page.info .loginRequire .form-inline.info {justify-content: center;}
+main section.content-page.info .loginRequire .form-inline.info > * { margin: 0 10px; }
+main section.content-page.info .loginRequire .form-inline.info .btn.btn-primary { 
+    background-color: #A5753F; 
+    border: #000 1px solid;
+    color: #FFF; 
+    font-size: 12pt; 
+    transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+}
+
+main section.content-page.info .loginRequire .form-inline.info .btn.btn-primary:hover {
+    background-color: #000; 
+}
+
+main section.content-page.info .loginRequire .txt { margin-top: 20px; }
+
+/*-------------------------------------------------------
+*
+for 900px;
+*
+-------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+
+    main section.content-page.purchase .extra-content #purchase_list li p{
+        font-size: 14px;
+        padding: 0;
+    }
+
+}
+
+/* -------------------------------------------------------
+*
+    for 820px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 820px) {
+    main section.content-page.purchase .extra-content .section_telephone .telephone_list{
+        margin: 0 0 7px 0;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone ul{
+        width: inherit;
+        padding: 0;
+        margin: 0;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone li{
+        width: 100%;
+        margin: 0 0 20px 0;
+        float: none;
+        text-align: center;
+    }
+}
+
+/* -------------------------------------------------------
+*
+    for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    #contents{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    main section.content-page.purchase .extra-content #section_title h2{
+        padding: 0 15px;
+    }
+
+    main section.content-page.purchase .extra-content #topic_path{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone{
+        max-width: inherit;
+        margin: -10px 0 65px 0;
+        padding: 0 20px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone.btm{
+        margin: 0 0 25px 0;
+        padding-top: 70px;
+        background-color: #e3e3e3;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone h3{
+        padding: 0 0 25px 0;
+        line-height: 1em;
+        white-space: nowrap;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone .txt{
+        margin: 70px 0 80px 0;
+    }
+
+    @media screen and (max-width: 520px) {
+        main section.content-page.purchase .extra-content .section_telephone h3{
+            font-size: 24px;
+        }
+
+        main section.content-page.purchase .extra-content .section_telephone .txt{
+            font-size: 20px !important;
+        }
+
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list{
+        margin: 0 auto 90px auto;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list li{
+        width: 50%;
+        display: inline-block;
+    }
+
+    /*main section.content-page.purchase .extra-content #purchase_list li:nth-child(2n) p{ background-color: #f8f8f8;}
+    main section.content-page.purchase .extra-content #purchase_list li:nth-child(4n + 2) p{ background-color: #fff;}
+    main section.content-page.purchase .extra-content #purchase_list li:nth-child(4n + 3) p{ background-color: #fff;}*/
+
+
+    main section.content-page.purchase .extra-content #purchase_list li h3{
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        background-color: #771116;
+        font-size: 16px;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list li h3 span{
+        width: 400px;
+        height: 90px;
+        display: table-cell;
+        border-right: 1px solid #fff;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list .sp_border_none h3 span{ border: none;}
+
+
+    main section.content-page.purchase .extra-content #purchase_list li span{
+        width: 400px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    main section.content-page.purchase .extra-content #point{
+        margin-bottom: 50px;
+    }
+
+    main section.content-page.purchase .extra-content #point h3{
+        font-size: 28px;
+    }
+
+    main section.content-page.purchase .extra-content #point ul{
+        width: 420px;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    main section.content-page.purchase .extra-content #point li{
+        width: 190px;
+        margin: 0 20px 0 0;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_area{
+        padding: 70px 0 100px 0;
+        margin-bottom: 80px;
+        background-color: #e3e3e3;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_area .map{
+        padding: 0 30px;
+    }
+    main section.content-page.purchase .extra-content #purchase_area .pc{ display: none;}
+    main section.content-page.purchase .extra-content #purchase_area .sp{ display: block;}
+
+
+    main section.content-page.purchase .extra-content #estate_list{
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* -------------------------------------------------------
+*
+    for 480px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+
+    main section.content-page.purchase .extra-content #section_title h2{
+        margin-bottom: 0;
+        padding: 0 30px;
+    }
+
+    main section.content-page.purchase .extra-content #section_title .line{
+        width: 120px;
+        height: 3px;
+        margin: 0 auto 30px auto;
+        background-color: #fff;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone{
+        margin: 10px 0 33px 0;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone.btm{
+        padding-top: 35px;
+        margin: 0 0 20px 0;
+        background-color: #e3e3e3;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone h3{
+        margin: 0 0  0;
+        padding: 0 0 14px 0;
+        font-size: 17px;
+        line-height: 1em;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone .telephone_list{
+        padding: 5px 0;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone ul{
+        margin: 0 0 7px 0;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone li{
+        margin: 0 0 11px 0;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone li h4{
+        font-size: 10px;
+        min-width: 80px;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone li p{
+        font-size: 15px;
+        border-bottom: 1px solid #000;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone .hours{
+        margin: 0 0 13px 0;
+        padding: 0 0 8px 0;
+        font-size: 8px;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone .btn_request{
+        width: 200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border: 2px solid #1f1f1f;
+        font-size: 11px;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone .btn_request a{
+        width: 200px;
+        padding: 11px 0;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone .txt{
+        margin: 35px 0 40px 0;
+        font-size: 14px !important;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list{
+        margin: 0 0 40px 0;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list li h3{
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        background-color: #771116;
+        font-size: 11px;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list li h3 span{
+        width: 400px;
+        height: 45px;
+        display: table-cell;
+        border-right: 1px solid #fff;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list li p{
+        height: 75px;
+        font-size: 9px;
+        padding: 0 15px;
+        display: table;
+        vertical-align: middle;
+    }
+
+    main section.content-page.purchase .extra-content #point{
+        margin: 0 0 15px 0;
+    }
+
+    main section.content-page.purchase .extra-content #point h3{
+        margin: 0 0 22px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    main section.content-page.purchase .extra-content #point ul{
+        width: 280px;
+        margin: 0 ;
+        display: inline-block;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    main section.content-page.purchase .extra-content #point li{
+        width: 130px;
+        height: auto;
+        margin: 0 10px 10px 0;
+    }
+
+    main section.content-page.purchase .extra-content #point li img{
+        width: 130px;
+        height: auto;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_area{
+        clear: both;
+        text-align: center;
+        padding: 35px 0 45px 0;
+        margin: 0 0 35px 0;
+        background-color: #e3e3e3;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_area h3{
+        margin: 0 0 5px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_area .area{
+        margin: 0 0 30px 0;
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list{
+        margin: 0;
+        text-align: center;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list h3{
+        margin: 0 0 15px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list ul{
+        margin: 0 0 -10px -10px;
+        display: inline-block;
+        overflow: hidden;
+        letter-spacing: -.40em;
+        padding: 0;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list li{
+        width: 140px;
+        display: inline-block;
+        margin: 0 0 20px 10px;
+        text-align: left;
+        letter-spacing: normal;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list li .pic{
+        margin: 0 0 10px 0;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list li .pic img{
+        width: 100%;
+        height: auto;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list li h4{
+        height: 30px;
+        margin: -5px 0 5px 0;
+        display: table;
+        font-size: 10px;
+        letter-spacing: .165em;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list li h4 span{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    main section.content-page.purchase .extra-content #estate_list li p{
+        font-size: 9px;
+        line-height: 1.3em;
+        letter-spacing: 0;
+    }
+
+
+}
+
+main section.content-page #main-content .link-more {text-align: right;}
+main section.content-page #main-content .link-more .btn.btnReadmore { font-size: initial; }
+
+main .section_news .block_news time { color: #2c2f65; }
+main .section_news .block_news a:link,
+main .section_news .block_news a:visited,
+main .section_news .block_news a:hover,
+main .section_news .block_news a:active { color: #3c3c3c; }
+
+main .section_news .block_valuable .title { text-align:center; margin-bottom: 25px; }
+main .section_news .block_valuable a.btn.btn_brand_commitment img { width: 400px; height: 41px; }
+main .section_news .block_valuable a.btn.btn_brand_commitment img:hover { opacity: 0.7 }
+
+/*footer .footer_top .container { max-width: 100%; }*/
+
+.navbar-nav.navbar-mobile.mr-0.navbar_custom { padding-left: 20px; }
+
+.bsnav-mobile .navbar .nav-item .social-link { text-align: center; }
+.bsnav-mobile .navbar .nav-item .social-link > * { margin: 0 5px; }
+footer .footer_top .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0px;
+}
+
+footer .footer_top .social-link > * { margin: 0 5px; }
+
+@media screen and (max-width: 420px) {
+    .navbar-nav.navbar-mobile.mr-0.navbar_custom {padding-left: 0;}
+    main .section_news .block_valuable a.btn.btn_brand_commitment img { width: 95%;}
+
+    main section.content-page.purchase .extra-content .section_telephone h4 {
+        font-size: 12px;
+    }
+
+    main section.content-page.purchase .extra-content .section_telephone span {
+        margin: 3px 0 0 -5px;
+        font-size: 14px;
+    }
+
+    main section.content-page.purchase .extra-content #purchase_list{
+        width: 100%;
+    }
+}
+
+
+.frame_video img { width: 730px; }
+
+/* CUSTOMIZE FANCYBOX3 */
+
+.fancybox-container .fancybox-bg { background-color: #000000; opacity: 0.93; }
+.fancybox-container .fancybox-inner > .fancybox-infobar { display: none; }
+.fancybox-container .fancybox-inner > .fancybox-navigation { display: none; }
+
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-infobar {
+    text-align: right;
+    right: 0;
+    top: -37px;
+}
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-navigation .fancybox-button.fancybox-button--arrow_left {
+    left: -50px;
+    background-color: #484848;
+}
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-navigation .fancybox-button.fancybox-button--arrow_right {
+    right: -50px;
+    background-color: #484848;
+}
+
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption { background: none; }
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption.fancybox-caption--separate { margin-bottom: -55px; }

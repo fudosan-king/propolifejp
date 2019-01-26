@@ -1,0 +1,152 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2015
+*   PROPOLIFE
+*
+*   officer.css
+*
+--------------------------------------------------------------------------------*/
+#topic_path{
+    margin-bottom: 35px;
+}
+
+#section_title .line{
+    margin-bottom: 10px;
+}
+
+#contents_inner h3{
+    width: 880px;
+    margin: 0 auto 15px auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#section_title h2{
+    padding: 0 60px !important;
+    text-align: center;
+    line-height: 1em;
+    position: relative;
+}
+
+#section_title h2 img{
+    width: 100%;
+    max-width: 261px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#section_title .ruby{ margin: 14px 0 10px 0; font-size: 18px;}
+@media screen and (max-width: 768px){ #section_title .ruby{ margin: 15px 0; font-size: 16px;} }
+@media screen and (max-width: 480px){ #section_title .ruby{ margin: 10px 0; font-size: 11px;} }
+
+#contents_inner table{
+    max-width: 880px;
+    margin: 0 auto 50px auto;
+}
+
+#contents_inner table:last-child{
+    margin: 0 auto;
+}
+
+#contents_inner tr{
+    overflow: hidden;
+}
+
+#contents_inner th{
+    clear: both;
+    min-width: 150px;
+    padding: 13px 40px;
+    text-align: right;
+    border-right: 1px solid #c0c0c0;
+    line-height: 1.3em;
+}
+
+#contents_inner td{
+    width: 550px;
+    padding: 13px 40px;
+    position: relative;
+}
+
+#contents_inner dd:before{
+    content: '';
+    background-color: #c0c0c0;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: 0;
+}
+
+#contents_inner .bg{
+    background-color: #e1e1e1;
+}
+
+/* -------------------------------------------------------
+*
+    for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+#contents_inner table{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 50px auto;
+}
+
+#contents_inner th{
+    clear: both;
+    width: 24%;
+    padding: 13px 2%;
+    text-align: right;
+    border-right: 1px solid #c0c0c0;
+    letter-spacing: 0;
+}
+
+#contents_inner td{
+    width: 66%;
+    padding: 13px 2%;
+    position: relative;
+}
+
+}
+
+/* -------------------------------------------------------
+*
+    for 480px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+#section_title .line{
+    margin-bottom: 30px;
+}
+
+#contents_inner h3{
+    margin: 0 auto 15px auto;
+    font-size: 12px;
+}
+
+#contents_inner table{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 30px auto;
+}
+
+#contents_inner th{
+    clear: both;
+    max-width: 80px;
+    padding: 13px 10px;
+    text-align: right;
+    border-right: 1px solid #c0c0c0;
+    letter-spacing: 0;
+}
+
+#contents_inner td{
+    width: auto;
+    padding: 13px 10px;
+    position: relative;
+}
+    
+}

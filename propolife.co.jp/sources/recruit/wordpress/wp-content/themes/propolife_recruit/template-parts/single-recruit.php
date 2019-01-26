@@ -1,5 +1,5 @@
 <!-- SE: Khanh Nguyen -->
-<?php 
+<?php
 
 
     $pageType = null;
@@ -32,11 +32,11 @@
         <h2><img src="<?php echo $temp_dir; ?>/common/images/recruit/img_title_h2.png" alt="RECRUIT INFO" class="pc"><img src="<?php echo $temp_dir; ?>/common/images/recruit/img_title_h2_sp.png" alt="RECRUIT INFO" class="sp"></h2>
         <p class="title_sub"><?php echo array_search($post->post_type, array('newgraduate-limit', 'career-limit')) >= 0 ? "【".$page_title."】勤務地限定":$page_title; ?><span class="line"></span></p>
     </div>
-    
+
     <div id="page_recruit">
         <h3><?php the_title(); ?></h3>
         <p class="top_text"><?php echo $recruit_top_text; ?></p>
-        
+
         <div class="recruit_table">
             <table>
 <?php
@@ -73,7 +73,7 @@
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_salary.'</td></tr>';
                     }
                 ?>
-    
+
                 <?php
                     $recruit_info_assessment = get_field('recruit_info_assessment');
                     $fieldObj = get_field_object('recruit_info_assessment');
@@ -113,8 +113,8 @@
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_vacation.'</td></tr>';
                     }
                 ?>
-                
-                
+
+
                 <?php
                     $recruit_info_working_hours = get_field('recruit_info_working_hours');
                     $fieldObj = get_field_object('recruit_info_working_hours');
@@ -122,7 +122,7 @@
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_working_hours.'</td></tr>';
                     }
                 ?>
-                
+
                 <?php
                     $recruit_info_location = get_field('recruit_info_location');
                     $fieldObj = get_field_object('recruit_info_location');
@@ -130,7 +130,7 @@
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_location.'</td></tr>';
                     }
                 ?>
-                
+
                 <?php
                     $recruit_info_welfare = get_field('recruit_info_welfare');
                     $fieldObj = get_field_object('recruit_info_welfare');
@@ -138,7 +138,7 @@
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_welfare.'</td></tr>';
                     }
                 ?>
-                
+
                 <tr>
                     <th>応募方法</th>
                     <td>
@@ -161,7 +161,7 @@
                 </tr>
             </table>
         </div><!-- // .recruit_table -->
-        
+
         <p class="img_process"><img src="<?php echo $recruit_process_image_pc[0]; ?>" alt="" class="pc"><img src="<?php echo $recruit_process_image_sp[0]; ?>" alt="" class="sp"></p>
     </div><!-- // #page_recruit -->
 

@@ -13,10 +13,10 @@
 
 /*SE: Khanh Nguyen*/
 
-#page_recruit .page_recruit_content .recruit_region header { 
-    font-weight: bold; 
-    text-align: center; 
-    font-size: 18px; 
+#page_recruit .page_recruit_content .recruit_region header {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
@@ -55,9 +55,10 @@
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
+    width: 100%;
 }
 
-#page_recruit .page_recruit_content .recruit_region section h3 { 
+#page_recruit .page_recruit_content .recruit_region section h3 {
     font-size: 20px;
     background-color: inherit;
     color: #000;
@@ -121,7 +122,7 @@
 }
 
 #page_recruit .page_recruit_content .recruit_news section button:focus { outline: 0; }
-#page_recruit .page_recruit_content .recruit_news section button:active { 
+#page_recruit .page_recruit_content .recruit_news section button:active {
     transform: scale(0.8);
 }
 

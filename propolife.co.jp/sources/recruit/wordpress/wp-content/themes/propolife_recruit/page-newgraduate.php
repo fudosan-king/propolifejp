@@ -28,11 +28,11 @@ $recruit_entry_url = get_field('recruit_entry_url');
         <h2><img src="<?php echo $temp_dir; ?>/common/images/recruit/img_title_h2.png" alt="RECRUIT INFO" class="pc"><img src="<?php echo $temp_dir; ?>/common/images/recruit/img_title_h2_sp.png" alt="RECRUIT INFO" class="sp"></h2>
         <p class="title_sub"><?php echo $page_title; ?><span class="line"></span></p>
     </div>
-    
+
     <div id="page_recruit">
         <h3>募集要項</h3>
         <p class="top_text"><?php echo $recruit_top_text; ?></p>
-        
+
         <div class="recruit_table">
             <table>
 <?php
@@ -69,7 +69,7 @@ $recruit_entry_url = get_field('recruit_entry_url');
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_salary.'</td></tr>';
                     }
                 ?>
-    
+
                 <?php
                     $recruit_info_assessment = get_field('recruit_info_assessment');
                     $fieldObj = get_field_object('recruit_info_assessment');
@@ -109,8 +109,8 @@ $recruit_entry_url = get_field('recruit_entry_url');
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_vacation.'</td></tr>';
                     }
                 ?>
-                
-                
+
+
                 <?php
                     $recruit_info_working_hours = get_field('recruit_info_working_hours');
                     $fieldObj = get_field_object('recruit_info_working_hours');
@@ -118,7 +118,7 @@ $recruit_entry_url = get_field('recruit_entry_url');
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_working_hours.'</td></tr>';
                     }
                 ?>
-                
+
                 <?php
                     $recruit_info_location = get_field('recruit_info_location');
                     $fieldObj = get_field_object('recruit_info_location');
@@ -126,7 +126,7 @@ $recruit_entry_url = get_field('recruit_entry_url');
                         echo '<tr><th>'.$fieldObj['label'].'</th><td>'.$recruit_info_location.'</td></tr>';
                     }
                 ?>
-                
+
                 <?php
                     $recruit_info_welfare = get_field('recruit_info_welfare');
                     $fieldObj = get_field_object('recruit_info_welfare');
@@ -156,7 +156,7 @@ $recruit_entry_url = get_field('recruit_entry_url');
                 </tr>
             </table>
         </div><!-- // .recruit_table -->
-        
+
         <p class="img_process"><img src="<?php echo $recruit_process_image_pc[0]; ?>" alt="" class="pc"><img src="<?php echo $recruit_process_image_sp[0]; ?>" alt="" class="sp"></p>
     </div><!-- // #page_recruit -->
 

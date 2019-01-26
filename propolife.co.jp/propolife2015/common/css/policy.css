@@ -1,0 +1,154 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2015
+*   PROPOLIFE
+*
+*   policy.css
+*
+--------------------------------------------------------------------------------*/
+#topic_path{
+    margin-bottom: 35px;
+}
+
+#contents{
+    padding-bottom: 135px;
+    background-image:url(../images/policy/img_bg_contents.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#footer .btn_pagetop{
+    margin-top: -25px;
+    margin-bottom: 109px;
+}
+
+#section_title .line{
+    margin-bottom: 60px;
+}
+
+#section_title h2{
+    padding: 0 30px !important;
+    text-align: center;
+    line-height: 1em;
+    position: relative;
+}
+
+#section_title h2 img{
+    width: 100%;
+    max-width: 491px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#section_title .ruby{ margin: 14px 0 10px 0; font-size: 18px;}
+@media screen and (max-width: 768px){ #section_title .ruby{ margin: 15px 0; font-size: 16px;} }
+@media screen and (max-width: 480px){ #section_title .ruby{ margin: 10px 0; font-size: 11px;} }
+
+
+/* ---------- #section_policy ---------- */
+#section_policy{
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+#section_policy .policy{
+    margin: 0 0 80px 0;
+}
+
+#section_policy h3{
+    padding: 0 0 13px 0;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    border-bottom: 1px dotted #000;
+    line-height: 1.3em;
+}
+
+#section_policy p{
+    margin: 0 0 30px 0;
+    text-justfy: inter-ideograph;
+    text-align: justify;
+}
+
+#section_policy p:last-child{
+    margin: 0 0 80px 0;
+}
+
+#section_policy .indent{
+    text-indent: -.5em;
+    display: inline-block;
+}
+
+#section_policy .indent_right{
+    margin-right: -.5em;
+    display: inline-block;
+}
+
+/* -------------------------------------------------------
+*
+    for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+#contents{
+    padding-bottom: 75px;
+    background-image:url(../images/policy/img_bg_contents.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 125px;
+}
+
+#footer .btn_pagetop{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#section_title .line{
+    margin-bottom: 60px;
+}
+
+#section_policy .policy{
+    margin: 0 0 60px 0;
+}
+
+}
+
+
+/* -------------------------------------------------------
+*
+    for 480px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+#section_title .line{
+    margin-bottom: 20px;
+}
+
+#section_policy{
+    margin: 0 0 -10px 0;
+}
+
+#section_policy .policy{
+    margin: 0 0 45px 0;
+}
+
+#section_policy h3{
+    padding: 0 0 13px 0;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    border-bottom: 1px dotted #000;
+    line-height: 1em;
+}
+
+#section_policy p{
+    margin: 0 0 25px 0;
+}
+
+#section_policy p:last-child{
+    margin: 0 0 40px 0;
+}
+
+}

@@ -1,0 +1,93 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2016
+*   PROPOLIFE_RECRUIT
+*
+*   /training/
+*   training.css
+*
+--------------------------------------------------------------------------------*/
+@media screen and (min-width: 769px) {
+/* -------------------------------------------------------
+    common overwrite
+ ------------------------------------------------------- */
+#contents_inner{ padding-bottom: 130px;}
+.img_btm_animal{
+    width: 252px;
+    height: 235px;
+    background-image:url(../images/training/img_btm_animal.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    bottom: -25px;
+    right: 100px;
+}
+/* ------------------------------------------------------- */
+
+
+#page_training h3{
+    margin: 0 0 10px 0;
+}
+
+#page_training .top_txt{
+    margin: 0 0 45px 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#page_training .btm_txt{
+    padding: 0 0 0 5px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 1.5em;
+}
+
+#training_list{
+    margin: 0 0 10px 0;
+    overflow: hidden;
+}
+
+#training_list li{
+    clear: both;
+    padding: 40px 30px;
+    margin: 0 0 12px 0;
+    overflow: hidden;
+    text-align: left;
+    background-color: #ece9e4;
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: .05em;
+}
+
+#training_list .col_left{
+    width: 320px;
+    float: left;
+}
+
+#training_list .col_right{
+    width: 324px;
+    float: right;
+    line-height: 0;
+}
+
+#training_list .col_right img{
+    width: 100%;
+    height: auto;
+}
+
+#training_list h4{
+    padding: 0 0 10px 0;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1em;
+    border-bottom: 1px solid #fff;
+}
+
+}

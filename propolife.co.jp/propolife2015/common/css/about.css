@@ -1,0 +1,124 @@
+@charset "utf-8";
+/*--------------------------------------------------------------------------------
+*
+*   2015
+*   PROPOLIFE
+*
+*   about.css
+*
+--------------------------------------------------------------------------------*/
+#topic_path{
+    margin-bottom: 35px;
+}
+
+#section_title h2{
+    padding: 0 80px !important;
+    text-align: center;
+    line-height: 1em;
+    position: relative;
+}
+
+#section_title h2 img{
+    width: 100%;
+    max-width: 209px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#section_title .ruby{ margin: 14px 0 10px 0; font-size: 18px;}
+@media screen and (max-width: 768px){ #section_title .ruby{ margin: 15px 0; font-size: 16px;} }
+@media screen and (max-width: 480px){ #section_title .ruby{ margin: 10px 0; font-size: 11px;} }
+
+#section_title .line{
+    margin-bottom: 45px;
+}
+
+#contents_inner table{
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+#contents_inner tr{
+    overflow: hidden;
+}
+
+#contents_inner th{
+    clear: both;
+    width: 32%;
+    padding: 13px 4%;
+    text-align: right;
+    border-right: 1px solid #c0c0c0;
+}
+
+#contents_inner td{
+    width: 52%;
+    padding: 13px 4%;
+    position: relative;
+}
+
+#contents_inner dd:before{
+    content: '';
+    background-color: #c0c0c0;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: 0;
+}
+
+#contents_inner td p{
+    margin: 0 0 1em 0;
+}
+
+#contents_inner td p:last-child{
+    margin: 0;
+}
+
+#contents_inner .bg{
+    background-color: #e1e1e1;
+}
+
+/* -------------------------------------------------------
+*
+    for 768px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+#contents_inner table{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#contents_inner th{
+    clear: both;
+    width: 24%;
+    min-width: 75px;
+    padding: 13px 2%;
+    text-align: right;
+    border-right: 1px solid #c0c0c0;
+    letter-spacing: 0;
+}
+
+#contents_inner td{
+    width: 66%;
+    padding: 13px 2%;
+    position: relative;
+}
+
+}
+
+
+/* -------------------------------------------------------
+*
+    for 480px;
+*
+------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+#section_title .line{
+    margin-bottom: 30px;
+}
+
+}

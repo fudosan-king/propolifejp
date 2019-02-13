@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -e 'ssh -i ../../../deployment/fdk-production.pem' -rlpcDvz --exclude-from=excludes ec2-user@54.199.206.243:/var/www/land-creation www/wordpress
+rsync -rlpcDvz --exclude-from=excludes blog.intra.fudosan-king.jp:/var/www/land-creation/wp-content/themes/ www/wordpress/wp-content/themes/

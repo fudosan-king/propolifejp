@@ -101,7 +101,7 @@ $('.menubtn').on({
 
   <h2><img src="http://www.landcreation.co.jp/static/img/h/h_blog.png" height="37" alt="ブログ"/></h2>
   <div class="box blog">
-    <h3><img src="http://www.landcreation.co.jp/blog/wp-content/uploads/2015/04/blog_hdr.png" width="958" height="200" alt="ランドクリエイション　スタッフブログ"></h3>
+    <h3><img src="<?php echo get_template_directory_uri()."/images/blog_hdr.png" ?>" width="958" height="200" alt="ランドクリエイション　スタッフブログ"></h3>
 	<?php
 		if ( is_single() ) :
 			the_post_navigation( array(

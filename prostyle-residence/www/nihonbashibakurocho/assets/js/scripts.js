@@ -2,22 +2,6 @@
 
 $(function() {
 
-	var pathName = window.location.pathname;
-	if (pathName == '/nihonbashibakurocho/' || pathName.indexOf('/nihonbashibakurocho/sumikae/') > -1){
-	}else{
-		window.location = "https://www.prostyle-residence.com/nihonbashibakurocho/";
-	}
-
-	var hrefNav = $('a');
-	$.each(hrefNav, function(i, e){
-		if (e.href.indexOf('sumikae') > -1){
-			console.log(e.href);
-		}else{
-			$(e).css({"cursor": "default"});
-			$(e).click(function(event){ event.preventDefault();});
-		}
-	})
-
 	var fullpage = $('#fullpage'), flg = false, body = $('body'), flg_fullpage = false,
 			fullpage_args = {
 				scrollOverflow: true,
@@ -398,7 +382,7 @@ $(function() {
 			if (0 < $('.mh').length) {
     			$('.mh').matchHeight();
 			}
-			// func_popup();
+			func_popup();
 			// func_section_rate();
 		},
 		resize: function() {

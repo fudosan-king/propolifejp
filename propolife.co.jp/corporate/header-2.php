@@ -168,9 +168,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<div class="hInner clearfix">
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
 			<nav id="gNavi" class="gNavi">
-				<div class="link"><a href="https://page.line.me/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_03.png" width="20" height="20" alt="LINE"></a></div>
-				<div class="link"><a href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_02.png" width="16" height="16" alt="Instagram"></a></div>
-				<div class="link"><a href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link.png" width="8" height="16" alt="Facebook"></a></div>
+				<div class="link"><a style="display: none;" href="https://page.line.me/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_03.png" width="20" height="20" alt="LINE"></a></div>
+				<div class="link"><a style="display: none;" href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_02.png" width="16" height="16" alt="Instagram"></a></div>
+				<div class="link"><a style="display: none;" href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link.png" width="8" height="16" alt="Facebook"></a></div>
 				<ul class="clearfix">
 					<li class="sub01"><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/"
 >企業情報</a></li>
@@ -185,9 +185,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<div class="hInner clearfix">
 				<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo02.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
 				<nav class="gNavi">
-					<div class="link"><a href="https://page.line.me/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_0302_on.png" width="20" height="20" alt="LINE"></a></div>
-					<div class="link"><a href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_0202_on.png" width="16" height="16" alt="Instagram"></a></div>
-					<div class="link"><a href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_on.png" width="8" height="16" alt="Facebook"></a></div>
+					<div class="link"><a style="display: none;" href="https://page.line.me/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_0302_on.png" width="20" height="20" alt="LINE"></a></div>
+					<div class="link"><a style="display: none;" href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_0202_on.png" width="16" height="16" alt="Instagram"></a></div>
+					<div class="link"><a style="display: none;" href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_on.png" width="8" height="16" alt="Facebook"></a></div>
 
 					<ul class="clearfix">
 						<li class="sub01"><a href="<?php echo esc_url( home_url( '/' ) ); ?>company/">企業情報</a></li>

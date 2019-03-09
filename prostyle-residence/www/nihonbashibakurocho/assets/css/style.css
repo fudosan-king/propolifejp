@@ -1915,3 +1915,13 @@ body.home {
         left: 180%;
     }
 }
+
+.site-navigation,
+.home .section00.section,
+.site-footer .bottom-text,
+.site-footer .bottom-content,
+nav.footer-navigation,
+nav.footer-links,
+.site-footer .footer-contact{display: none!important;}
+
+.home .section {min-height: auto;}

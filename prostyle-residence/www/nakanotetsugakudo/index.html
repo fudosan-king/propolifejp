@@ -103,7 +103,7 @@
     </script>
     <style>
         /* 20181220 フロートバナー */
-        
+
         .fixedbnr {
             position: fixed;
             bottom: 120px;
@@ -114,18 +114,18 @@
             padding: 5px;
             border: 2px solid #d9d9d9;
         }
-        
+
         .fixedbnr img {
             width: 100%;
         }
-        
+
         .fixedbnr .btn_close {
             position: absolute;
             top: -20px;
             right: -20px;
             z-index: 99999999;
         }
-        
+
         .fixedbnr a,
         .fixedbnr_sp a {
             -webkit-transition: 0.3s ease-in-out;
@@ -133,17 +133,24 @@
             -o-transition: 0.3s ease-in-out;
             transition: 0.3s ease-in-out;
         }
-        
+
         .fixedbnr a:hover,
         .fixedbnr_sp a:hover {
             opacity: 0.8;
             filter: alpha(opacity=80);
         }
-        
+
         .fixedbnr_sp {
             display: none;
         }
-        
+        .button-plan {
+            width: auto;
+        }
+        .plan-info {
+            margin: auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         @media only screen and (max-width:640px) {
             .fixedbnr {
                 display: none;
@@ -158,6 +165,10 @@
                 margin-left: auto;
                 margin-right: auto;
                 margin-bottom: 30px;
+            }
+            .button-plan {
+                height: auto;
+                width: 90%;
             }
         }
     </style>
@@ -273,7 +284,15 @@
                 <div class="area_info">
 
                     <p class="info"><img src="img/info.png" alt=""></p>
-
+                    <div class="plan-info">
+                        <a href="plan/index.html"><img src="img/button01.jpg" alt="" class="button-plan"></a>
+                    </div>
+                    <div class="plan-info">
+                        <a href="plan/index.html"><img src="img/button02.jpg" alt="" class="button-plan"></a>
+                    </div>
+                    <div class="plan-info">
+                        <a href="plan/index.html"><img src="img/button03.jpg" alt="" class="button-plan"></a>
+                    </div>
                     <div class="under">
                         <h4><img src="img/3point_t.png" alt=""></h4>
                         <div class="flexslider" id="flexslider-simple">

@@ -57,7 +57,7 @@
 					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>privacypolicy/">プライバシーポリシー</a></p>
 				</li>
 				<li class="sp">
-					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>socialpolicy/">ソーシャルメディア・ポリシー</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>socialpolicy/">ソーシャルメディアポリシー</a></p>
 				</li>
 
 			</ul>
@@ -70,7 +70,7 @@
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>terms">利用規約</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>antisocial">反社会的勢力排除に関する基本方針</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>privacypolicy/">プライバシーポリシー</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>socialpolicy/">ソーシャルメディア・ポリシー</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>socialpolicy/">ソーシャルメディアポリシー</a></li>
 
 
 				</ul>

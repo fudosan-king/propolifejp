@@ -41,6 +41,21 @@ $dir_name = 'home';
             </div>
         </div>
 
+        <div id="section04" class="section">
+            <div class="section_inner">
+                <a href="https://www.chronicle-web.com/reform/" target="_blank">
+                    <h3><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_title.png" width="402" height="150" alt="Chronicle Reform"></h3>
+                    <p class="pic">
+                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_pic_<?php echo $current_lang; ?>.jpg" width="370" height="405" alt="" class="pc">
+                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_pic_sp_<?php echo $current_lang; ?>.jpg" width="156" alt="" class="sp">
+                    </p>
+                    <p class="btn_more">
+                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more.png" width="200" height="50" alt="MORE" class="pc"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more_sp.png" width="100" alt="MORE" class="sp">
+                    </p>
+                </a>
+            </div>
+        </div>
+
         <div id="section01" class="section">
             <div class="section_inner">
                 <a href="https://www.chronicle-web.com/logmansion/" target="_blank">
@@ -73,11 +88,11 @@ $dir_name = 'home';
 
         <div id="section03" class="section">
             <div class="section_inner">
-                <a href="https://www.chronicle-plus.com/" target="_blank">
-                    <h3><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_title.png" width="402" height="150" alt="Chronicle Plus"></h3>
+                <a href="https://www.prostyle-villa.com/" target="_blank">
+                    <h3><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec08_title.png" width="375" height="150" alt="Prostyle Villa"></h3>
                     <p class="pic">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_pic_<?php echo $current_lang; ?>.jpg" width="370" height="405" alt="" class="pc">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_pic_sp_<?php echo $current_lang; ?>.jpg" width="156" alt="" class="sp">
+                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec08_pic_<?php echo $current_lang; ?>.jpg" width="370" height="405" alt="" class="pc">
+                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec08_pic_sp_<?php echo $current_lang; ?>.jpg" width="156" alt="" class="sp">
                     </p>
                     <p class="btn_more">
                         <img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more.png" width="200" height="50" alt="MORE" class="pc"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more_sp.png" width="100" alt="MORE" class="sp">
@@ -156,36 +171,36 @@ $dir_name = 'home';
                             <?php wp_reset_postdata(); ?>
                         </ul>
                     </li>
-					<li class="col news">
-						<?php
-						global $posts;
-						$posts = get_posts(array(
-							'post_type' => 'news',
-							'numberposts' => 4
-						));
-						$page = get_page_data(get_page_by_path('news/news'));
-						$page_url = $page['url'];
-						?>
-						<h3><span><?php echo $page['title']; ?></span><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_btm_info_news.png" width="81" height="20" alt="INFORMATION"></h3>
-						<ul>
-							<?php foreach($posts as $post) : setup_postdata($post); ?>
-							<?php
-							$post_id = $post -> ID;
-							$post_name = $post -> post_title;
-							$post_date = date('Y.m.d', strtotime($post -> post_date));
-							$post_content = strip_tags($post->post_content);
-							$post_content = mb_strimwidth($post_content, 0, 94, '...');
-							?>
-							<li>
-								<h4><?php echo $post_date; ?></h4>
-								<a href="<?php echo $page_url; ?>">
-									<p><?php echo $post_content; ?></p>
-								</a>
-							</li>
-							<?php endforeach; ?>
-							<?php wp_reset_postdata(); ?>
-						</ul>
-					</li>
+                    <li class="col news">
+                        <?php
+                        global $posts;
+                        $posts = get_posts(array(
+                            'post_type' => 'news',
+                            'numberposts' => 4
+                        ));
+                        $page = get_page_data(get_page_by_path('news/news'));
+                        $page_url = $page['url'];
+                        ?>
+                        <h3><span><?php echo $page['title']; ?></span><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_btm_info_news.png" width="81" height="20" alt="INFORMATION"></h3>
+                        <ul>
+                            <?php foreach($posts as $post) : setup_postdata($post); ?>
+                            <?php
+                            $post_id = $post -> ID;
+                            $post_name = $post -> post_title;
+                            $post_date = date('Y.m.d', strtotime($post -> post_date));
+                            $post_content = strip_tags($post->post_content);
+                            $post_content = mb_strimwidth($post_content, 0, 94, '...');
+                            ?>
+                            <li>
+                                <h4><?php echo $post_date; ?></h4>
+                                <a href="<?php echo $page_url; ?>">
+                                    <p><?php echo $post_content; ?></p>
+                                </a>
+                            </li>
+                            <?php endforeach; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="col_fb">
                     <div class="fb-page" data-href="https://www.facebook.com/chronicle.web.official/" data-tabs="timeline" data-width="<?php echo $$fbSize; ?>" data-height="403" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chronicle.web.official/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chronicle.web.official/">リノベーションならクロニクル</a></blockquote></div>

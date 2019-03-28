@@ -26,16 +26,16 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'propolife');
+define('DB_NAME', 'wp_chronicleweb');
 
 /** MySQL データベースのユーザー名 */
 define('DB_USER', 'root');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'dasp13*dran');
+define('DB_PASSWORD', 'root');
 
 /** MySQL のホスト名 */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost:3307');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
 define('DB_CHARSET', 'utf8');
@@ -60,6 +60,9 @@ define('AUTH_SALT',        'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
+
+define('WP_SITEURL', 'http://chronicle-web.test');
+define('WP_HOME', 'http://chronicle-web.test');
 
 /**#@-*/
 

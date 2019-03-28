@@ -316,6 +316,10 @@ var ContentsSection = (function(){
                     $section.eq(i).find('h3').stop().animate({top: -_posH3, left: _h3PosLeft * .3}, moveSpeed/1, moveEasing);
                     $section.eq(i).find('.pic').stop().animate({top: -_posPic}, moveSpeed*2, moveEasing);
                     $section.eq(i).find('.btn_more').stop().animate({top: -_posBtn, left: _h3PosLeft * -.2}, moveSpeed, moveEasing);
+
+                    // $section.eq(i).find('h3').css({"transform":"translate(" + (_h3PosLeft * .3) + "," + (-_posH3) +")"});
+                    // $section.eq(i).find('.pic').css({"transform":"translate(0," + (-_posPic) +")"});
+                    // $section.eq(i).find('.btn_more').css({"transform":"translate(" + (_h3PosLeft * -.2) + "," + (-_posBtn) +")"});
                 }
             }else{
                 $section.find('h3').css({top: 0, left: 0});

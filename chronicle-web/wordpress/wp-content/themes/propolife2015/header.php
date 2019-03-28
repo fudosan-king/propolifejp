@@ -217,9 +217,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             ?>
             <?php if($lang): ?><li><p class="parents"><a href="https://www.propolife.co.jp/recruit/" target="_blank"><?php echo $title; ?></a></p></li><?php endif; echo "\n"; ?>
 
-            <li class="lang">
-                <?php switch_language(); ?>
-            </li>
+           <!--  <li class="lang">
+                <?php //switch_language(); ?>
+            </li> -->
 
             <li class="icon-social">
                 <span class="menu-name">公式SNS</span>

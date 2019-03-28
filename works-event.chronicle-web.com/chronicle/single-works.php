@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <script src="<?php bloginfo('template_url') ?>/common/js/jquery.bxslider.js"></script>
 <script src="<?php bloginfo('template_url') ?>/<?php echo get_post_type( $post ); ?>/js/script.js"></script>
 <div id="main">
@@ -61,6 +59,9 @@
 				$voice_name02 = get_post_meta($post->ID,'voice_name02',true);
 				$voice_text02 = get_post_meta($post->ID,'voice_text02',true);
 				$voice_img02 = get_post_custom_values('voice_img02',$post_id);
+
+				$vr360MTP = get_post_meta($post->ID,'vr360_url',true); //VR360マターポートURL
+				$vr360IMG = get_post_meta($post->ID,'vr360_gif',true); //VR360 Gif画像のURL
 		?>
 
 <div id="container">
@@ -90,6 +91,17 @@
 				<?php if(!empty($photo8)) : ?><a data-slide-index="7" href=""><?php echo wp_get_attachment_image($photo8[0], 'thumb'); ?></a><?php endif; ?>
 			</div>
 
+			
+			<?php 
+				if(!empty($vr360MTP)):
+					?>
+					<div class="vr360-bar">
+						<img src="<?php echo get_template_directory_uri()."/common/images/VR_info.jpg" ?>" alt="">
+					</div>
+					<?php
+				endif;
+			 ?>
+
 			<h3 class="subttl"><?php echo $catch; ?></h3>
 			<div class="content clearfix">
 				<h4><?php echo $title01; ?></h4>
@@ -111,6 +123,18 @@
 					<div class="ttl">AFTER</div>
 					<div class="imgBox"><?php echo wp_get_attachment_image($madori02[0], 'madori'); ?></div>
 				</div>
+			</div>
+
+			<div class="vr360-content">
+				<h4>Virtual Reality | <span>VR見学</span></h4>
+				<h3>まるでその場にいるような物件見学を、皆様のご自宅から</h3>
+				<div class="left">
+					<iframe src="<?php echo $vr360MTP; ?>" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="right">
+					<img src="<?php echo $vr360IMG; ?>" alt="">
+				</div>
+				<div style="clear:both;"></div>
 			</div>
 
 			<div class="dataBox">
@@ -211,5 +235,25 @@
 	</div><!-- #detail -->
 </div><!-- #container -->
 		<?php endwhile; ?>
+
+<script>
+	$(document).ready(function() {
+		
+
+		$('.vr360-bar').click(function(){
+			if(isMobile){
+				$('html, body').animate({
+	                scrollTop: $(".vr360-content").offset().top - 70
+	            }, 500);
+			}else{
+				$('html, body').animate({
+	                scrollTop: $(".vr360-content").offset().top - 50
+	            }, 500);
+			}
+			
+		})
+
+	});
+</script>
 
 <?php get_footer(); ?>

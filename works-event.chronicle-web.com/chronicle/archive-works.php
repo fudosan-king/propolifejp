@@ -8,7 +8,8 @@
 
 
 		<?php
-			query_posts($query_string.'&post_type=works&posts_per_page=9');
+			$totalPost = isset($_GET['list-all']) && $_GET['list-all'] == -1 ? -1 : 9;
+			query_posts($query_string.'&post_type=works&posts_per_page='.$totalPost);
 			if ( have_posts() ) :
 		?>
 <div id="container" class="clearfix">
@@ -64,11 +65,23 @@
 					$spec02 = get_post_meta($post->ID,'spec02',true); //間取り
 					$spec04 = get_post_meta($post->ID,'spec04',true); //築年数
 
+					$vr360MTP = get_post_meta($post->ID,'vr360_url',true); //VR360マターポートURL
+					$vr360IMG = get_post_meta($post->ID,'vr360_gif',true); //VR360 Gif画像のURL
+
 					echo $list01;
 			?>
 			<li>
 
-				<div class="imgBox"><a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($photo1[0], 'list'); ?></a></div>
+				<div class="imgBox">
+					<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($photo1[0], 'list'); ?></a>
+					<?php 
+						if(!empty($vr360MTP)):
+							?>
+							<img class="vr360" src="<?php echo get_template_directory_uri()."/common/images/VR_logo.jpg"; ?>" alt="">
+							<?php
+						endif;
+					 ?>
+				</div>
 				<div class="tag">
 				<?php
 					$days = 7; //Newを表示させたい期間の日数

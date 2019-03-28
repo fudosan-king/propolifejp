@@ -125,6 +125,14 @@
 
 #listBox .imgBox {
 	margin-bottom: 15px;
+	position: relative;
+}
+
+#listBox .imgBox .vr360 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 48px!important;
 }
 
 #listBox h4 {
@@ -275,6 +283,31 @@
 	margin-left: 2px;
 	margin-right: 0;
 }
+
+.vr360-bar {
+	text-align: center;
+	padding: 20px 0 0;
+}
+.vr360-bar:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.vr360-content {margin-bottom: 66px;}
+
+.vr360-content h4{
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.vr360-content h4 span {color: #C00000;}
+.vr360-content h3 {margin-bottom: 20px; font-size: 16px;}
+
+.vr360-content .left {float: left; width: 480px;}
+.vr360-content .right {float: right; width: 480px;}
+.vr360-content > div iframe {width: 100%; height: 350px}
+.vr360-content > div img {width: 100%; height: 350px}
+
 
 /* detail
 -------------------------------------------------- */
@@ -487,6 +520,32 @@
 ■■■ SP ■■■■■■■■■■
 
 --------------------------------------------------------- */
+@media screen and (max-width: 812px){
+	.vr360-content .left {width: 420px;}
+	.vr360-content .right {width: 420px;}
+}
+
+@media screen and (max-width: 768px){
+	.vr360-bar {
+		margin: 0 10px;
+	}
+
+	.vr360-content {
+		margin: 0 10px;
+		margin-bottom: 30px;
+	}
+
+	.vr360-content .left {width: 360px;}
+	.vr360-content .right {width: 360px;}
+	.vr360-content > div iframe {width: 100%; height: 250px}
+	.vr360-content > div img {width: 100%; height: 250px}
+}
+
+@media screen and (max-width: 736px) {
+	.vr360-content .left {width: 340px;}
+	.vr360-content .right {width: 340px;}
+}
+
 @media screen and (max-width: 667px) {
 	#footer .wrap {
 		background: url(../images/s_footer.png) no-repeat 100% 0;
@@ -712,6 +771,11 @@
 		vertical-align: middle;
 	}
 
+	/* vr360
+	-------------------------------------------------- */
+	.vr360-content .left {width: 320px;}
+	.vr360-content .right {width: 320px;}
+
 	/* dataBox
 	-------------------------------------------------- */
 	.dataBox {
@@ -821,4 +885,16 @@
 		line-height: 22px;
 		min-width: 22px;
 	}
+}
+
+@media screen and (max-width: 414px){
+	/*---- VR360 ----*/
+	.vr360-bar {
+		padding: 0px;
+	}
+	.vr360-bar img {
+		width: 100%;
+	}
+	.vr360-content .left {float: none; width: 100%;}
+	.vr360-content .right {float: none; width: 100%;}
 }

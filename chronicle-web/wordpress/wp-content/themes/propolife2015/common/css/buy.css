@@ -60,13 +60,13 @@
 }
 
 .section_telephone ul{
-    width: 680px;
+    width: 800px;
     display: inline-block;
     margin: 0 -30px 0 0;
 }
 
 .section_telephone li{
-    width: 340px;
+    width: 400px;
     margin: 0 0 15px 0;
     float: left;
     display: inline-block;
@@ -81,6 +81,8 @@
     letter-spacing: .065em;
     display: inline-block;
     vertical-align: top;
+    width: 170px;
+    text-align: right;
 }
 
 .section_telephone li p{
@@ -549,6 +551,7 @@
 
 .section_telephone li h4{
     font-size: 10px;
+    width: 87px;
 }
 
 .section_telephone li p{

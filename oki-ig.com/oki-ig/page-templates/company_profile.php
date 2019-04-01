@@ -70,6 +70,25 @@ function compinfo_description_content(){
 		echo '</dl>';
 
 	endif;
+
+	if (!empty(get_sub_field('compinfo_branch_table'))):
+
+		echo '<dl class="row mt-5 m-0 company_table">';
+
+		$table = get_sub_field('compinfo_branch_table');
+		$table_body = $table['body'];
+
+		foreach($table_body as $row){
+
+			?>
+				<dt class="col col-2 col-sm-2"><?php echo $row[0]['c']; ?></dt>
+	          	<dd class="col col-10 col-sm-10"><?php echo $row[1]['c']; ?></dd>
+			<?php
+		}
+
+		echo '</dl>';
+
+	endif;
 	
 }
 

@@ -471,7 +471,7 @@ $(document).ready(function(){
             var cfrm_comments = $('textarea[name="iken"]').val();
             $('.cfrm_comments').html(cfrm_comments);
 
-            dataLayer.push({'event': 'inquiry-confirm-nihonbashi-reserve'});
+            dataLayer.push({'event': 'inquiry-confirm-nakanotetsugakudo-reservation'});
 
         }else{
             $('html').animate({scrollTop: 0}, 1000, function(){});

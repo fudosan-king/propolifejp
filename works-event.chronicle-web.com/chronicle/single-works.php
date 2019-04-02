@@ -124,7 +124,8 @@
 					<div class="imgBox"><?php echo wp_get_attachment_image($madori02[0], 'madori'); ?></div>
 				</div>
 			</div>
-
+			
+			<?php if(!empty($vr360MTP)): ?>
 			<div class="vr360-content">
 				<h4>Virtual Reality | <span>VR見学</span></h4>
 				<h3>まるでその場にいるような物件見学を、皆様のご自宅から</h3>
@@ -136,6 +137,7 @@
 				</div>
 				<div style="clear:both;"></div>
 			</div>
+			<?php endif; ?>
 
 			<div class="dataBox">
 				<h4>スペック情報</h4>

@@ -467,7 +467,7 @@ $(document).ready(function(){
             var cfrm_comments = $('textarea[name="iken"]').val();
             $('.cfrm_comments').html(cfrm_comments);
 
-            dataLayer.push({'event': 'inquiry-confirm-nihonbashi-material'});
+            dataLayer.push({'event': 'inquiry-confirm-nakanotetsugakudo-material'});
 
         }else{
             $('html').animate({scrollTop: 0}, 1000, function(){});

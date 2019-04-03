@@ -40,7 +40,7 @@
 
 									        <?php get_template_part('template-parts/purchase/content', 'settlement'); ?>
 
-											<?php get_template_part('template-parts/purchase/content', 'area'); ?>
+											<?php //get_template_part('template-parts/purchase/content', 'area'); ?>
 											
 											<?php get_template_part('template-parts/purchase/content', 'estate-records'); ?>
 									        

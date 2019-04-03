@@ -16,20 +16,28 @@ if(is_page( 'contact' )):
 		<script src="<?php SGVinK::the_js_uri(); ?>/contact/contact.js"></script>
 	<?php
 endif;
-?>
 
-<?php 
 if(is_page( 'contact-purchase' )):
     ?>
         <script src="<?php SGVinK::the_js_uri(); ?>/contact/contact-purchase.js"></script>
     <?php
 endif;
-?>
 
-<?php 
 if(is_page( 'sell' )):
     ?>
         <script src="<?php SGVinK::the_js_uri(); ?>/contact/contact-sell.js"></script>
+    <?php
+endif;
+
+if(is_page('kaitori') || is_page('kaitori-demo')):
+    ?>
+        <script src='https://unpkg.com/packery@2/dist/packery.pkgd.js'></script>
+        <script>
+            $('.grid').packery({
+              itemSelector: '.grid-item',
+              percentPosition: true
+            });
+        </script>
     <?php
 endif;
 ?>

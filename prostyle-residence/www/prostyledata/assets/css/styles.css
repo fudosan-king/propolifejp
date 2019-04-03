@@ -415,6 +415,11 @@ ul.menu_footer li:hover a {
 .statusselling_pro {
   padding: 85px 0 160px;
 }
+
+.statusselling_pro:nth-child(1) {
+  padding: 85px 0 250px;
+}
+
 .img_statusselling {
   border: 5px solid #fff;
   overflow: hidden;
@@ -516,7 +521,9 @@ ul.menu_footer li:hover a {
   display: inline-block;
   margin-left: 15px;
 }
-.btnProperty {
+.btnProperty:link,
+.btnProperty:active,
+.btnProperty:visited {
   background: #ae8148;
   color: #fff;
   display: block;

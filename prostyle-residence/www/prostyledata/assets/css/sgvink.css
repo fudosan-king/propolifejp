@@ -7,7 +7,7 @@
     min-height: 93px;
     height: 100%;
 }
-
+ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 525px;}
 main {text-align: justify;}
 
 
@@ -26,7 +26,7 @@ main section.content-page .sub_title {
 }
 
 main section.content-page div#main-content { padding: 40px 0 50px; }
-
+main section.content-page.company div#main-content { padding: 40px 0 50px; width: 890px; margin: 0 auto;}
 
 
 main section.content-page dl.company {
@@ -34,7 +34,8 @@ main section.content-page dl.company {
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
-    border: 1px solid #b48856;
+    border-top: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
     background-color: #F5F5F5;
 }
 
@@ -44,15 +45,15 @@ main section.content-page dl.company dt {
     width: 220px;
     margin: 0;
     padding: 14px;
-    border-top: 1px solid #b48856;
-    color: #654;
-    font-weight: bold;
+    border-top: 1px solid #D6D6D6;
+    /*color: #654;*/
+    font-weight: normal;
 }
 main section.content-page dl.company dd {
     padding: 14px 20px;
     margin-left: 220px;
-    border-top: 1px solid #b48856;
-    border-left: 1px dotted #b48856;
+    border-top: 1px solid #D6D6D6;
+    border-left: none;
     background-color: #FFF;
 
     margin-bottom: 0;
@@ -826,6 +827,8 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 
 @media screen and (max-width: 992px){
 
+    main section.content-page.company div#main-content { width: 100%; margin: 0 auto;}
+
     /*KAITORI*/
 
     /*new mansory*/
@@ -1104,6 +1107,13 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 }
 
 @media screen and (max-width:420px){
+    main section.content-page dl.company dt {
+        width: 120px;
+    }
+    main section.content-page dl.company dd {
+        margin-left: 120px;
+    }
+
     main.kaitori section {margin: 0 auto 20px;}
     .navbar-nav.navbar-mobile.mr-0.navbar_custom{padding-left:0;}
     main .section_news .block_valuable a.btn.btn_brand_commitment img{width:95%;}

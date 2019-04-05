@@ -333,7 +333,7 @@
 	}
 	.bsnav-mobile .navbar-nav.navbar_custom {
 		position: absolute;
-		top: 131px;
+		bottom: 100px;
 	}
 	.bsnav {
 		padding-top: 20px;

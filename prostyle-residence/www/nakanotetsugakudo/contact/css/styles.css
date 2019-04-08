@@ -226,6 +226,7 @@ ul.naviBox > li > ul > li span {
 
 
 }
+.Rtable-cell--left {height: 50%;}
 /* Table column sizing
 ================================== */
 .Rtable--2cols > .Rtable-cell {
@@ -280,6 +281,14 @@ ul.naviBox > li > ul > li span {
   text-align: center;
   margin: 12% 0;
 }
+
+input#iraijo_ninzu {
+  display: inline-block;
+  width: 95%;
+}
+.txt-describe {display: inline-block;}
+.checkbox.center {text-align: center;}
+
 /* Responsive
 ==================================== */
 @media all and (max-width: 500px) {

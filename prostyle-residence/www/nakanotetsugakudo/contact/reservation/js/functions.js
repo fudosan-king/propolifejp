@@ -65,29 +65,31 @@ function invalidCheck(){
         $('input[name="first-name"]'),
         $('input[name="last-name"]'),
 
-        $('input[name="myouji"]'),
-        $('input[name="namae"]'),
+        // $('input[name="myouji"]'),
+        // $('input[name="namae"]'),
+
+        // $('input[name="age"]'),
 
         $('select[name="pref"]'),
 
         $('input[name="phone-number"]'),
 
         $('input[name="email"]'),
-        $('input[name="email-confirm"]'),
+        // $('input[name="email-confirm"]'),
 
-        $('input[name="job-style"]'),
-        $('input[name="job-style-desc"]'),
+        // $('input[name="job-style"]'),
+        // $('input[name="job-style-desc"]'),
 
-        $('select[name="budget"]'),
+        // $('select[name="budget"]'),
 
-        $('input[name="madori[]"]'),
+        // $('input[name="madori[]"]'),
 
-        $('select[name="width"]'),
+        // $('select[name="width"]'),
 
         $('input[name="first-impression"]'),
         $('input[name="first-impression-etc"]'),
 
-        $('input[name="relation[]"]'),
+        // $('input[name="relation[]"]'),
 
         $('input[name="secret-info"]'),
 
@@ -103,15 +105,15 @@ function invalidCheck(){
                 isValid = false;
 
                 // Set error text
-                if(elem.prop('name') == 'madori[]'){
-                    $('.error-text.madori').html(ERROR_NO_INPUT);
-                    $('.error-text.madori').css('display', 'block');
-                }
+                // if(elem.prop('name') == 'madori[]'){
+                //     $('.error-text.madori').html(ERROR_NO_INPUT);
+                //     $('.error-text.madori').css('display', 'block');
+                // }
 
-                if(elem.prop('name') == 'relation[]'){
-                    $('.error-text.relation').html(ERROR_NO_INPUT);
-                    $('.error-text.relation').css('display', 'block');
-                }
+                // if(elem.prop('name') == 'relation[]'){
+                //     $('.error-text.relation').html(ERROR_NO_INPUT);
+                //     $('.error-text.relation').css('display', 'block');
+                // }
 
                 if(elem.prop('name') == 'secret-info'){
                     $('.error-text.secret-info').html(ERROR_NO_INPUT);
@@ -125,19 +127,19 @@ function invalidCheck(){
         }else{
             if(typeof($(this)) !== 'undefined' && $(this).prop('type')=='radio'){
 
-                if(elem.prop('name') == 'job-style'){
-                    if(!$(this).is(':checked') && $('input[name="job-style-desc"]').val() == ""){
-                        $(this).closest('.radio').css('background-color', invalidColor);
-                        $(this).closest('.radio').css('padding', '2px 4px');
-                        isValid = false;
+                // if(elem.prop('name') == 'job-style'){
+                //     if(!$(this).is(':checked') && $('input[name="job-style-desc"]').val() == ""){
+                //         $(this).closest('.radio').css('background-color', invalidColor);
+                //         $(this).closest('.radio').css('padding', '2px 4px');
+                //         isValid = false;
 
-                        $('.error-text.job-style').html(ERROR_NO_INPUT);
-                        $('.error-text.job-style').css('display', 'block');
-                    }else{
-                        $(this).closest('.radio').css('background-color', 'initial');
-                        $(this).closest('.radio').css('padding', 'initial');
-                    }
-                }
+                //         $('.error-text.job-style').html(ERROR_NO_INPUT);
+                //         $('.error-text.job-style').css('display', 'block');
+                //     }else{
+                //         $(this).closest('.radio').css('background-color', 'initial');
+                //         $(this).closest('.radio').css('padding', 'initial');
+                //     }
+                // }
 
                 if(elem.prop('name') == 'first-impression'){
                     if(!$(this).is(':checked') && $('input[name="first-impression-etc"]').val() == ""){
@@ -155,8 +157,9 @@ function invalidCheck(){
 
             }else{
                 if(typeof(elem.val()) === 'undefined' || elem.val() == "" || elem.val() == "null"){
-
-                    if(elem.prop('name') != 'job-style-desc' && elem.prop('name') != 'first-impression-etc'){
+                    
+                    // if(elem.prop('name') != 'job-style-desc' && elem.prop('name') != 'first-impression-etc'){
+                    if(elem.prop('name') != 'first-impression-etc'){
                         elem.css('background-color', invalidColor);
                         isValid = false;
 
@@ -166,10 +169,15 @@ function invalidCheck(){
                             $('.error-text.name').css('display', 'block');
                         }
 
-                        if(elem.prop('name') == 'myouji' || elem.prop('name') == 'namae'){
-                            $('.error-text.phonetic').html(ERROR_NO_INPUT);
-                            $('.error-text.phonetic').css('display', 'block');
-                        }
+                        // if(elem.prop('name') == 'myouji' || elem.prop('name') == 'namae'){
+                        //     $('.error-text.phonetic').html(ERROR_NO_INPUT);
+                        //     $('.error-text.phonetic').css('display', 'block');
+                        // }
+
+                        // if(elem.prop('name') == 'age'){
+                        //     $('.error-text.age').html(ERROR_NO_INPUT);
+                        //     $('.error-text.age').css('display', 'block');
+                        // }
 
                         if(elem.prop('name') == 'pref'){
                             $('.error-text.address').html(ERROR_NO_INPUT);
@@ -180,36 +188,37 @@ function invalidCheck(){
                             $('.error-text.phone-number').html(ERROR_NO_INPUT);
                             $('.error-text.phone-number').css('display', 'block');
                         }
-
-                        if(elem.prop('name') == 'email' || elem.prop('name') == 'email-confirm'){
+                        
+                        // if(elem.prop('name') == 'email' || elem.prop('name') == 'email-confirm'){
+                        if(elem.prop('name') == 'email'){
                             $('.error-text.email').html(ERROR_NO_INPUT);
                             $('.error-text.email').css('display', 'block');
                         }
 
-                        if(elem.prop('name') == 'budget'){
-                            $('.error-text.budget').html(ERROR_NO_INPUT);
-                            $('.error-text.budget').css('display', 'block');
-                        }
+                        // if(elem.prop('name') == 'budget'){
+                        //     $('.error-text.budget').html(ERROR_NO_INPUT);
+                        //     $('.error-text.budget').css('display', 'block');
+                        // }
 
-                        if(elem.prop('name') == 'width'){
-                            $('.error-text.width').html(ERROR_NO_INPUT);
-                            $('.error-text.width').css('display', 'block');
-                        }
+                        // if(elem.prop('name') == 'width'){
+                        //     $('.error-text.width').html(ERROR_NO_INPUT);
+                        //     $('.error-text.width').css('display', 'block');
+                        // }
                     }else{
 
-                        if(elem.prop('name') == 'job-style-desc'){
+                        // if(elem.prop('name') == 'job-style-desc'){
 
-                            if(!$('input[name="job-style"]').is(':checked')){
-                                elem.css('background-color', invalidColor);
-                                isValid = false;
+                        //     if(!$('input[name="job-style"]').is(':checked')){
+                        //         elem.css('background-color', invalidColor);
+                        //         isValid = false;
 
-                                $('.error-text.job-style').html(ERROR_NO_INPUT);
-                                $('.error-text.job-style').css('display', 'block');
-                            }else{
-                                elem.css('background-color', 'initial');
-                            }
+                        //         $('.error-text.job-style').html(ERROR_NO_INPUT);
+                        //         $('.error-text.job-style').css('display', 'block');
+                        //     }else{
+                        //         elem.css('background-color', 'initial');
+                        //     }
 
-                        }
+                        // }
 
                         if(elem.prop('name') == 'first-impression-etc' ){
 
@@ -282,12 +291,38 @@ function invalidCheck(){
         }
     }
 
+    var isAgeValid = true;
+
+    if($('#iage_year option:selected').val() == 'null'){
+        $('#iage_year').css('background-color', invalidColor);
+        isAgeValid = isValid = false;
+    }else{
+        $('#iage_year').css('background-color', 'initial');
+    }
+    if($('#iage_month option:selected').val() == 'null'){
+        $('#iage_month').css('background-color', invalidColor);
+        isAgeValid = isValid = false;
+    }else{
+        $('#iage_month').css('background-color', 'initial');
+    }
+    if($('#iage_day option:selected').val() == 'null'){
+        $('#iage_day').css('background-color', invalidColor);
+        isAgeValid = isValid = false;
+    }else{
+        $('#iage_day').css('background-color', 'initial');
+    }
+
+    if(!isAgeValid){
+            $('.error-text.age').html(ERROR_NO_INPUT);
+            $('.error-text.age').css('display', 'block');
+        }
+
     // EMAIL CHECK
     var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
     if (!emailPattern.test($('input[name="email"]').val())){
         $('input[name="email"]').css('background-color', invalidColor);
-        $('input[name="email-confirm"]').css('background-color', invalidColor);
+        // $('input[name="email-confirm"]').css('background-color', invalidColor);
         isValid = false;
 
         $('.error-text.email').html(ERROR_MAIL_FORMAT);
@@ -298,16 +333,16 @@ function invalidCheck(){
     }
 
 
-    if($('input[name="email-confirm"]').val() != $('input[name="email"]').val()){
-        $('input[name="email-confirm"]').css('background-color', invalidColor);
-        isValid = false;
+    // if($('input[name="email-confirm"]').val() != $('input[name="email"]').val()){
+    //     $('input[name="email-confirm"]').css('background-color', invalidColor);
+    //     isValid = false;
 
-        $('.error-text.email').html(ERROR_MAIL_NOTSAME);
-        $('.error-text.email').css('display', 'block');
+    //     $('.error-text.email').html(ERROR_MAIL_NOTSAME);
+    //     $('.error-text.email').css('display', 'block');
 
-    }else{
-        $('input[name="email-confirm"]').css('background-color', 'initial');
-    }
+    // }else{
+    //     $('input[name="email-confirm"]').css('background-color', 'initial');
+    // }
 
     return isValid;
 }
@@ -351,6 +386,76 @@ $(document).ready(function(){
 
     });
     // $('#iraijo-date').datepicker('update', 'null');
+
+    // $('#iage').datepicker({
+    //     language: 'ja',
+    //     autoclose: true,
+    //     todayHighlight: true,
+    //     beforeShowDay: function (date){
+    //     var toDay = (new Date());
+    //     toDay.setDate(toDay.getDate() - 1);
+    //     if (date.getTime() >= toDay.getTime()){
+    //                     return false;
+    //             }
+
+    //     // if(date.getDay() == 3)
+    //     //     return false;
+
+    //         // if (date.getMonth() == (new Date()).getMonth())
+    //         //     switch (date.getDate()){
+    //         //         case 4:
+    //         //             return {
+    //         //               tooltip: 'Example tooltip',
+    //         //               classes: 'active'
+    //         //             };
+    //         //         case 8:
+    //         //             return false;
+    //         //         case 12:
+    //         //             return "green";
+    //         // }
+    //     },
+    //     // datesDisabled: ['09/06/2017', '09/21/2017']
+
+    // });
+
+    var today = new Date();
+    var currentYear = today.getFullYear();
+
+    for(var i = currentYear; i>= 1950; i--) { $('#iage_year').append(`<option value="${i}">${i}年</option>`); }
+    for(var i = 1; i<= 12; i++) { $('#iage_month').append(`<option value="${i}">${i}月</option>`); }
+    for(var i = 1; i<= 31; i++) { $('#iage_day').append(`<option value="${i}">${i}日</option>`)};
+    $('#iage_year').val('1980');
+    $('#iage_year').change(function(event) {calculateDay();});
+    $('#iage_month').change(function(event) {calculateDay();});
+    $('#iage_day').change(function(event) {calculateDay();});
+
+    function calculateDay(){
+        var selectedYear = $('#iage_year option:selected').val();
+        var selectMonth = $('#iage_month option:selected').val();
+        var selectDay = $('#iage_day option:selected').val();
+
+
+        $('#iage_day option').not(':first').remove();
+        for(var i = 1; i<= 31; i++) { $('#iage_day').append(`<option value="${i}">${i}日</option>`)};
+        if(!isNaN(selectMonth)){
+            switch(selectMonth){
+                case '4': case '6': case '9': case '11': { $('#iage_day option:last').remove(); }break;
+                case '2': { 
+                    
+                    if (selectedYear % 4 == 0 && selectedYear % 100 != 0){
+                        $('#iage_day option:last').remove();
+                        $('#iage_day option:last').remove();
+                    }else{
+                        $('#iage_day option:last').remove();
+                        $('#iage_day option:last').remove();
+                        $('#iage_day option:last').remove();
+                    }
+                }break;
+            }
+            $('#iage_day').val(selectDay);
+            $('#iage').val(`${selectedYear}/${selectMonth}/${selectDay}`);
+        }
+    }
 
 
     // BUTTON SET SHOW/HIDE DATE/TIME PICKER FORM
@@ -405,24 +510,31 @@ $(document).ready(function(){
                  $('html').scrollTop(0);
             });
 
-            var cfrm_type = '';
-            cfrm_type += typeof($('#iraijo:checked').val()) != 'undefined' ? ($('#iraijo:checked').val() + '  ') : '';
-            cfrm_type += typeof($('#isiryou:checked').val()) != 'undefined' ? ($('#isiryou:checked').val() + '  ') : '';;
-            $('.cfrm_type').html(cfrm_type);
+            // var cfrm_type = '';
+            // cfrm_type += typeof($('#iraijo:checked').val()) != 'undefined' ? ($('#iraijo:checked').val() + '  ') : '';
+            // cfrm_type += typeof($('#isiryou:checked').val()) != 'undefined' ? ($('#isiryou:checked').val() + '  ') : '';;
+            // $('.cfrm_type').html(cfrm_type);
 
             var cfrm_name = $('input[name="first-name"]').val() + $('input[name="last-name"]').val();
             $('.cfrm_name').html(cfrm_name);
 
-            var cfrm_phonetic = $('input[name="myouji"]').val() + $('input[name="namae"]').val();
-            $('.cfrm_phonetic').html(cfrm_phonetic);
+            // var cfrm_phonetic = $('input[name="myouji"]').val() + $('input[name="namae"]').val();
+            // $('.cfrm_phonetic').html(cfrm_phonetic);
 
             var cfrm_raijo_datetime = '';
             cfrm_raijo_datetime += typeof($('input[name="raijo-date"]').val()) != 'undefined' ? ($('input[name="raijo-date"]').val() + '  ') : 'null  ';
             cfrm_raijo_datetime += $('select[name="raijo-time"]').val();
             $('.cfrm_raijo_datetime').html(cfrm_raijo_datetime);
 
-            var cfrm_peoplenum = $('input[name="ninzuu"]').val();
-            $('.cfrm_peoplenum').html(cfrm_peoplenum);
+            var cfrm_raijo_ninzu = $('input[name="raijo_ninzu"]').val() + '名';
+            $('.cfrm_raijo_ninzu').html(cfrm_raijo_ninzu);
+
+            // var cfrm_peopleage = $('input[name="age"]').val();
+            // $('.cfrm_peopleage').html(cfrm_peopleage);
+
+            var cfrm_peopleage = '';
+            cfrm_peopleage += typeof($('input[name="age"]').val()) != 'undefined' ? ($('input[name="age"]').val() + '  ') : 'null  ';
+            $('.cfrm_peopleage').html(cfrm_peopleage);
 
             var cfrm_address = $('input[name="post"]').val() + '<br>' +
                 $('select[name="pref"]').val() + '<br>' + $('input[name="city"]').val() + '<br>' +
@@ -435,26 +547,26 @@ $(document).ready(function(){
             var cfrm_email = $('input[name="email"]').val();
             $('.cfrm_email').html(cfrm_email);
 
-            var cfrm_occupation = $('input[name="job-style"]:checked').val() + '<br>' + $('input[name="job-style-desc"]').val();
-            $('.cfrm_occupation').html(cfrm_occupation);
+            // var cfrm_occupation = $('input[name="job-style"]:checked').val() + '<br>' + $('input[name="job-style-desc"]').val();
+            // $('.cfrm_occupation').html(cfrm_occupation);
 
-            var cfrm_budget = $('select[name="budget"]').val();
-            $('.cfrm_budget').html(cfrm_budget);
+            // var cfrm_budget = $('select[name="budget"]').val();
+            // $('.cfrm_budget').html(cfrm_budget);
 
-            var cfrm_floorplan = '';
-            $('input[name="madori[]"]:checked').each(function(){
-                cfrm_floorplan += $(this).val() + '<br>';
-            });
-            $('.cfrm_floorplan').html(cfrm_floorplan);
+            // var cfrm_floorplan = '';
+            // $('input[name="madori[]"]:checked').each(function(){
+            //     cfrm_floorplan += $(this).val() + '<br>';
+            // });
+            // $('.cfrm_floorplan').html(cfrm_floorplan);
 
-            var cfrm_aincome = $('select[name="nensyu"]').val();
-            $('.cfrm_aincome').html(cfrm_aincome);
+            // var cfrm_aincome = $('select[name="nensyu"]').val();
+            // $('.cfrm_aincome').html(cfrm_aincome);
 
-            var cfrm_oresources = $('select[name="shikin"]').val();
-            $('.cfrm_oresources').html(cfrm_oresources);
+            // var cfrm_oresources = $('select[name="shikin"]').val();
+            // $('.cfrm_oresources').html(cfrm_oresources);
 
-            var cfrm_width = $('select[name="width"]').val();
-            $('.cfrm_width').html(cfrm_width);
+            // var cfrm_width = $('select[name="width"]').val();
+            // $('.cfrm_width').html(cfrm_width);
 
             var cfrm_livingstyle = $('input[name="living-style"]:checked').val();
             $('.cfrm_livingstyle').html(cfrm_livingstyle);
@@ -462,11 +574,11 @@ $(document).ready(function(){
             var cfrm_firstimpression = $('input[name="first-impression"]:checked').val() + '<br>' + $('input[name="first-impression-etc"]').val();
             $('.cfrm_firstimpression').html(cfrm_firstimpression);
 
-            var cfrm_relation = '';
-            $('input[name="relation[]"]:checked').each(function(){
-                cfrm_relation += $(this).val() + '<br>';
-            });
-            $('.cfrm_relation').html(cfrm_relation);
+            // var cfrm_relation = '';
+            // $('input[name="relation[]"]:checked').each(function(){
+            //     cfrm_relation += $(this).val() + '<br>';
+            // });
+            // $('.cfrm_relation').html(cfrm_relation);
 
             var cfrm_comments = $('textarea[name="iken"]').val();
             $('.cfrm_comments').html(cfrm_comments);

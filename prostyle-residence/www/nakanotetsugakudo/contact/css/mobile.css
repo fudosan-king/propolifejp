@@ -184,8 +184,8 @@
 	
 }
 
-@media (max-width: 414px) {
-	
+@media (max-width: 420px) {
+    .content-policy a.btn {white-space: normal; }
 }
 
 @media (max-width: 375px) {

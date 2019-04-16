@@ -186,8 +186,7 @@
 
 @media (max-width: 420px) {
     .content-policy a.btn {white-space: normal; }
-    .telNumber p > a {font-size: 1.6em;}
-    .telNumber { padding: 1px;}
+    .telNumber a {font-size: 1.6em;}
 }
 
 @media (max-width: 375px) {

@@ -293,7 +293,7 @@ input#iraijo_ninzu {
   text-align:center; 
   width: 340px; 
   margin: 0 auto; 
-  padding: 1px; 
+  padding: 5px; 
   background-color: #A47E51;
   border-radius: 5px;
   font-weight: bold;
@@ -306,20 +306,14 @@ input#iraijo_ninzu {
   -webkit-transition: all 0.5s ease;
   
 }
-.telNumber p {
-  /*padding-bottom: 10px;*/
-  line-height: 1.1;
-  /*background-color: #A47E51; */
-  /*border:none;*/
-  
-}
+
 .telNumber:hover {background-color: #c79458; cursor: pointer;}
-.telNumber p > a {font-weight: bold; font-size: 1.8em; color: #fff;}
-.telNumber p > a:hover,
-.telNumber p > a:visited,
-.telNumber p > a:active,
-.telNumber p > a:link {text-decoration: none;}
-.telNumber p > a span {font-weight: bold; font-size: 0.5em; color: #fff;}
+.telNumber a {font-weight: bold; font-size: 1.8em; color: #fff; line-height: 1.2;}
+.telNumber a:hover,
+.telNumber a:visited,
+.telNumber a:active,
+.telNumber a:link {text-decoration: none;}
+.telNumber a > div:nth-child(1) {font-weight: bold; font-size: 0.6em; color: #fff;}
 
 /* Responsive
 ==================================== */

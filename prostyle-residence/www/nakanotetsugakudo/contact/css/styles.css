@@ -289,6 +289,38 @@ input#iraijo_ninzu {
 .txt-describe {display: inline-block;}
 .checkbox.center {text-align: center;}
 
+.telNumber {
+  text-align:center; 
+  width: 340px; 
+  margin: 0 auto; 
+  padding: 1px; 
+  background-color: #A47E51;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1em;
+
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  
+}
+.telNumber p {
+  /*padding-bottom: 10px;*/
+  line-height: 1.1;
+  /*background-color: #A47E51; */
+  /*border:none;*/
+  
+}
+.telNumber:hover {background-color: #c79458; cursor: pointer;}
+.telNumber p > a {font-weight: bold; font-size: 1.8em; color: #fff;}
+.telNumber p > a:hover,
+.telNumber p > a:visited,
+.telNumber p > a:active,
+.telNumber p > a:link {text-decoration: none;}
+.telNumber p > a span {font-weight: bold; font-size: 0.5em; color: #fff;}
+
 /* Responsive
 ==================================== */
 @media all and (max-width: 500px) {
@@ -450,7 +482,7 @@ header h2 img {
   display: none;
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 420px){
 
   .container .table_confirm .row{
     padding: 0;
@@ -464,6 +496,8 @@ header h2 img {
   .Rtable-cell.Rtable-cell--medium {
       text-align: left;
   }
+
+
 }
 
 

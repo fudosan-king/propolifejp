@@ -75,8 +75,13 @@ $(document).ready(function() {
     	})
     }
 	
-	$('.nav__list-item').click(function(e){
-		return toggleClass(document.querySelector('body'), 'nav-active');
+	$('.nav__list-item a').click(function(e){
+        if($(this).attr('data-prevent')=="yes")
+            e.preventDefault();
+        else{
+            return toggleClass(document.querySelector('body'), 'nav-active');
+        }
+		// return toggleClass(document.querySelector('body'), 'nav-active');
 	})
 
 	var toggleClass = function toggleClass(element, stringClass) {

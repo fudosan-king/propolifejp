@@ -19,7 +19,7 @@ $image = wp_get_attachment_image_url( $custom_logo_id , 'full' );
                     $childMenu = get_nav_child_menu($menuTop, $menu->ID);
                     ?>
                     <li class="nav__list-item">
-                        <a href="<?php echo $menu->url; ?>" target="<?php echo $menu->target; ?>"><?php echo $menu->title; ?></a>
+                        <a href="<?php echo $menu->url; ?>" target="<?php echo $menu->target; ?>" data-prevent="<?php echo $menu->url == "#" ? "yes" : "no"; ?>"><?php echo $menu->title; ?></a>
                         <?php 
                         if (count($childMenu)>0){
                             echo '<ul class="nav_sub">';

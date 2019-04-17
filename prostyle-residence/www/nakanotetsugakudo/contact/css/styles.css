@@ -282,11 +282,11 @@ ul.naviBox > li > ul > li span {
   margin: 12% 0;
 }
 
-input#iraijo_ninzu {
+/*input#iraijo_ninzu {
   display: inline-block;
   width: 95%;
 }
-.txt-describe {display: inline-block;}
+.txt-describe {display: inline-block;}*/
 .checkbox.center {text-align: center;}
 
 .telNumber {
@@ -314,6 +314,76 @@ input#iraijo_ninzu {
 .telNumber a:active,
 .telNumber a:link {text-decoration: none;}
 .telNumber a > div:nth-child(1) {font-weight: bold; font-size: 0.6em; color: #fff;}
+
+.step {margin-top: 35px;}
+.step ol {padding-left:0;}
+.step ol li {
+  display: inline-block;
+  width: calc(90%/3.0);
+  font-weight: bold;
+  background-color: #878787;
+  color: #fff;
+  padding: 10px;
+  margin-left: calc(10%/3.0);
+  position: relative;
+}
+
+.step ol li::after{
+    content: " ";
+    position: absolute;
+    right: -41px;
+    top: 0px;
+    border: solid transparent;
+    border-left-color: #878787;
+    border-width: 20.5px;
+}
+.step ol li:nth-child(1) {margin-left: 0px;}
+.step ol li.active {background-color: #0F2791;}
+.step ol li.active::after {border-left-color: #0F2791;}
+
+.form_info {padding: 0 15px; margin-top: 35px;}
+.form_info > .row {border-bottom: #E7E7E7 1px solid;border-left: #E7E7E7 1px solid;border-right: #E7E7E7 1px solid;}
+.form_info > .row.require{background-color: #FED8D5;}
+.form_info > .row:first-child {border-top: #E7E7E7 1px solid;}
+.form_info > .row:last-child {border-bottom:none;border-left:none;border-right:none;}
+
+.form_info .left-side {font-weight: bold; padding: 10px 15px; position: relative;}
+.form_info label.require-flag{ background-color: #F8B102; color: #FFF; padding: 3px 20px; margin-bottom: 0; position: absolute; right: 10px;}
+.form_info .right-side {background-color: #FFF;}
+.form_info .right-side .row {display: flex; align-items: center;}
+.form_info .right-side > .row {padding: 10px 0; }
+.form_info .right-side > .row {border-top: #E7E7E7 1px solid;border-left: #E7E7E7 1px solid;}
+.form_info .right-side > .row:first-child {border-top: none;}
+.form_info .form-group {margin-bottom: 0px;position: relative;}
+.form_info .form-group .date-icon {
+    width: 25px;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+
+.form_info .content-policy-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    background-color: #FED8D5;
+    position: relative;
+    margin-bottom: 10px;
+}
+.form_info .content-policy-title span {font-weight: bold; font-size: 12pt;}
+.form_info .content-policy-title label.require-flag {position: absolute; right: 50px;} 
+
+ul.list_interest {padding-left: 0;}
+ul.list_job {padding-left: 0;}
+.end-form {width: calc(100%/2.5); margin: 30px auto 0; text-align: center;}
+.end-form h5 {font-weight: bold;}
+
+.form_info.confirm .cfr {
+  display: flex;
+  align-items: center;
+  min-height: 34px;
+}
 
 /* Responsive
 ==================================== */
@@ -470,13 +540,93 @@ header h2 img {
 .error-text{
   color: #ff0000;
   display: none;
+/*  position: absolute;
+  font-size: 8pt;
+  background-color: #000;
+  padding: 3px 10px;
+  border-radius: 5px;
+*//*  right: 80px;
+  top: -70px;*/
+
 }
 
+/*.error-text::before{
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    bottom: -12px;
+    right: 13px;
+    border: solid transparent;
+    border-width: 6px;
+    border-top-color: #000;
+}
+*/
 .iraijo-datetime-hidden{
   display: none;
 }
 
 @media screen and (max-width: 420px){
+  .telNumber {
+    margin-top: 10px;
+  }
+  .step {margin-top: 20px;}
+  .step ol li {
+    font-size: 8.5pt;
+    margin-left: calc(20%/3.0);
+    padding: 8px;
+  }
+
+  .step ol li:nth-child(1) {width: 23%}
+  .step ol li:nth-child(2) {width: 32%}
+  .step ol li:nth-child(3) {width: 23%}
+
+
+  .step ol li::after{
+    content: " ";
+    position: absolute;
+    right: -36px;
+    top: 0px;
+    border: solid transparent;
+    border-left-color: #878787;
+    border-width: 18.3px;
+  }
+
+  .form_info {margin-top: 15px;font-size: 9pt}
+  .form_info input, .form_info select {font-size: 9pt; padding: 5px;}
+  .form_info textarea {height: 120px;}
+  .form_info .form-inline .form-control {width: calc(96%/3.0); display: inline-block;}
+  .form_info #goConfirm,
+  .form_info #goBack,
+  .form_info #goSubmit {font-size: 11pt;}
+
+  .form_info #goBack,
+  .form_info #goSubmit {width: 45%}
+
+  .form_info .css-mobile {padding: 0 4px;}
+
+  .form_info label.require-flag {padding: 0 5px; position: static; margin-left: 15px;}
+  .form_info .form-group .date-icon {
+      width: 20px;
+      position: absolute;
+      top: 5px;
+      right: 7px;
+  }
+  
+  .form_info.input > .row {border: none;}
+  .form_info .left-side {padding: 5px 10px; position: relative;}
+  .form_info .right-side > .row {border: none;}
+  .form_info.confirm .right-side > .row {padding: 5px;}
+  .form_info .content-policy-title label.require-flag {right: 23px;}
+  .form_info > .row.non-require {background-color: #D0CFCF;}
+
+  .form_info select#iage_year {text-indent: 12px;}
+  .form_info select#iage_month {text-indent: 18px;}
+  .form_info select#iage_day {text-indent: 18px;}
+  .form_info.confirm .cfr {min-height: 27px;}
+
+  .end-form {width: 100%;}
 
   .container .table_confirm .row{
     padding: 0;

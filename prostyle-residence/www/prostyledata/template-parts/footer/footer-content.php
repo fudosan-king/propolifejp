@@ -53,7 +53,7 @@
 					<div class="col col-12 col-sm-8 offset-sm-2 offset-0">
 						<div class="row">
 							<div class="col col-12 col-sm-12 col-md-3">
-								<a href="index.php" class="logo_footer"><img src="<?php echo $logoCompanyURL; ?>" alt="" class="img-fluid" width="194px"></a>
+								<a href="/" class="logo_footer"><img src="<?php echo $logoCompanyURL; ?>" alt="" class="img-fluid" width="194px"></a>
 							</div>
 							<div class="col col-12 col-sm-12 col-md-9">
 								<?php 

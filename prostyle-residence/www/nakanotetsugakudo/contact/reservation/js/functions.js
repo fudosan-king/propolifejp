@@ -56,6 +56,12 @@ function invalidCheck(){
 
     var isValid = true;
     var invalidColor = 'rgba(255,0,0,0.15)';
+    var validFlagColor = '#F8B102';
+
+    $.each($('.require-flag'), function(index, val) {
+         /* iterate through array or object */
+         $(val).css('background-color', validFlagColor);
+    });
 
     $('.error-text').css('display', 'none');
 
@@ -87,7 +93,7 @@ function invalidCheck(){
         // $('select[name="width"]'),
 
         $('input[name="first-impression"]'),
-        $('input[name="first-impression-etc"]'),
+        // $('input[name="first-impression-etc"]'),
 
         // $('input[name="relation[]"]'),
 
@@ -100,8 +106,8 @@ function invalidCheck(){
 
         if(typeof($(this)) !== 'undefined' && $(this).prop('type')=='checkbox'){
             if(!$(this).is(':checked')){
-                $(this).closest('.checkbox').css('background-color', invalidColor);
-                $(this).closest('.checkbox').css('padding', '2px 4px');
+                $(this).closest('.checkbox').css('color', '#ff0700');
+                // $(this).closest('.checkbox').css('padding', '2px 4px');
                 isValid = false;
 
                 // Set error text
@@ -116,13 +122,14 @@ function invalidCheck(){
                 // }
 
                 if(elem.prop('name') == 'secret-info'){
-                    $('.error-text.secret-info').html(ERROR_NO_INPUT);
-                    $('.error-text.secret-info').css('display', 'block');
+                    // $('.error-text.secret-info').html('選択を確認してください「同意する」');
+                    // $('.error-text.secret-info').css('display', 'block');
+                    $('.require-flag.secret-info').css('background-color', '#ff0700');
                 }
 
             }else{
-                $(this).closest('.checkbox').css('background-color', 'initial');
-                $(this).closest('.checkbox').css('padding', 'initial');
+                $(this).closest('.checkbox').css('color', 'initial');
+                // $(this).closest('.checkbox').css('padding', 'initial');
             }
         }else{
             if(typeof($(this)) !== 'undefined' && $(this).prop('type')=='radio'){
@@ -142,16 +149,18 @@ function invalidCheck(){
                 // }
 
                 if(elem.prop('name') == 'first-impression'){
-                    if(!$(this).is(':checked') && $('input[name="first-impression-etc"]').val() == ""){
-                        $(this).closest('.radio').css('background-color', invalidColor);
-                        $(this).closest('.radio').css('padding', '2px 4px');
+                    // if(!$(this).is(':checked') && $('input[name="first-impression-etc"]').val() == ""){
+                    if(!$(this).is(':checked')){
+                        $(this).closest('.radio').css('color', '#ff0700');
+                        // $(this).closest('.radio').css('padding', '2px 4px');
                         isValid = false;
 
-                        $('.error-text.first-impression').html(ERROR_NO_INPUT);
-                        $('.error-text.first-impression').css('display', 'block');
+                        // $('.error-text.first-impression').html(ERROR_NO_INPUT);
+                        // $('.error-text.first-impression').css('display', 'block');
+                        $('.require-flag.first-impression').css('background-color', '#ff0700');
                     }else{
-                        $(this).closest('.radio').css('background-color', 'initial');
-                        $(this).closest('.radio').css('padding', 'initial');
+                        $(this).closest('.radio').css('color', 'initial');
+                        // $(this).closest('.radio').css('padding', 'initial');
                     }
                 }
 
@@ -160,13 +169,14 @@ function invalidCheck(){
                     
                     // if(elem.prop('name') != 'job-style-desc' && elem.prop('name') != 'first-impression-etc'){
                     if(elem.prop('name') != 'first-impression-etc'){
-                        elem.css('background-color', invalidColor);
+                        elem.css({'background-color': invalidColor, 'border-color': '#ff0700'});
                         isValid = false;
 
                         // Set error text
                         if(elem.prop('name') == 'first-name' || elem.prop('name') == 'last-name'){
-                            $('.error-text.name').html(ERROR_NO_INPUT);
-                            $('.error-text.name').css('display', 'block');
+                            // $('.error-text.name').html(ERROR_NO_INPUT);
+                            // $('.error-text.name').css('display', 'block');
+                            $('.require-flag.name').css('background-color', '#ff0700');
                         }
 
                         // if(elem.prop('name') == 'myouji' || elem.prop('name') == 'namae'){
@@ -180,19 +190,22 @@ function invalidCheck(){
                         // }
 
                         if(elem.prop('name') == 'pref'){
-                            $('.error-text.address').html(ERROR_NO_INPUT);
-                            $('.error-text.address').css('display', 'block');
+                            // $('.error-text.address').html(ERROR_NO_INPUT);
+                            // $('.error-text.address').css('display', 'block');
+                            $('.require-flag.address').css('background-color', '#ff0700');
                         }
 
                         if(elem.prop('name') == 'phone-number'){
-                            $('.error-text.phone-number').html(ERROR_NO_INPUT);
-                            $('.error-text.phone-number').css('display', 'block');
+                            // $('.error-text.phone-number').html(ERROR_NO_INPUT);
+                            // $('.error-text.phone-number').css('display', 'block');
+                            $('.require-flag.phone-number').css('background-color', '#ff0700');
                         }
                         
                         // if(elem.prop('name') == 'email' || elem.prop('name') == 'email-confirm'){
                         if(elem.prop('name') == 'email'){
-                            $('.error-text.email').html(ERROR_NO_INPUT);
-                            $('.error-text.email').css('display', 'block');
+                            // $('.error-text.email').html(ERROR_NO_INPUT);
+                            // $('.error-text.email').css('display', 'block');
+                            $('.require-flag.email').css('background-color', '#ff0700');
                         }
 
                         // if(elem.prop('name') == 'budget'){
@@ -220,23 +233,24 @@ function invalidCheck(){
 
                         // }
 
-                        if(elem.prop('name') == 'first-impression-etc' ){
+                        // if(elem.prop('name') == 'first-impression-etc' ){
 
-                            if(!$('input[name="first-impression"]').is(':checked')){
-                                elem.css('background-color', invalidColor);
-                                isValid = false;
+                        //     if(!$('input[name="first-impression"]').is(':checked')){
+                        //         elem.css('background-color', invalidColor);
+                        //         isValid = false;
 
-                                $('.error-text.first-impression').html(ERROR_NO_INPUT);
-                                $('.error-text.first-impression').css('display', 'block');
-                            }else{
-                                elem.css('background-color', 'initial');
-                            }
+                        //         $('.error-text.first-impression').html(ERROR_NO_INPUT);
+                        //         $('.error-text.first-impression').css('display', 'block');
+                        //     }else{
+                        //         elem.css('background-color', 'initial');
+                        //     }
 
-                        }
+                        // }
                     }
 
                 }else{
-                    elem.css('background-color', 'initial');
+                    elem.css({'background-color': 'initial', 'border-color': '#ccc'});
+
                 }
             }
         }
@@ -244,92 +258,92 @@ function invalidCheck(){
     });
 
     // TYPE CHECK
-    if(!$('#iraijo').is(':checked') && !$('#isiryou').is(':checked')){
+    // if(!$('#iraijo').is(':checked') && !$('#isiryou').is(':checked')){
 
-        $('#iraijo').closest('.checkbox').css('background-color', invalidColor);
-        $('#iraijo').closest('.checkbox').css('padding', '2px 4px');
+    //     $('#iraijo').closest('.checkbox').css('background-color', invalidColor);
+    //     $('#iraijo').closest('.checkbox').css('padding', '2px 4px');
 
-        $('#isiryou').closest('.checkbox').css('background-color', invalidColor);
-        $('#isiryou').closest('.checkbox').css('padding', '2px 4px');
+    //     $('#isiryou').closest('.checkbox').css('background-color', invalidColor);
+    //     $('#isiryou').closest('.checkbox').css('padding', '2px 4px');
 
-        $('.error-text.type').html(ERROR_NO_INPUT);
-        $('.error-text.type').css('display', 'block');
+    //     $('.error-text.type').html(ERROR_NO_INPUT);
+    //     $('.error-text.type').css('display', 'block');
 
-        isValid = false;
+    //     isValid = false;
 
-    }else{
+    // }else{
 
-        $('#iraijo').closest('.checkbox').css('background-color', 'initial');
-        $('#iraijo').closest('.checkbox').css('padding', 'initial');
+    //     $('#iraijo').closest('.checkbox').css('background-color', 'initial');
+    //     $('#iraijo').closest('.checkbox').css('padding', 'initial');
 
-        $('#isiryou').closest('.checkbox').css('background-color', 'initial');
-        $('#isiryou').closest('.checkbox').css('padding', 'initial');
-    }
+    //     $('#isiryou').closest('.checkbox').css('background-color', 'initial');
+    //     $('#isiryou').closest('.checkbox').css('padding', 'initial');
+    // }
 
     // DATE/TIME OF TYPE CHECK
-    if($('#iraijo').is(':checked')){
+    var isLocalValid = true;
 
-        var isLocalValid = true;
+    if(typeof($('input[name="raijo-date"]').val()) === 'undefined' ||  $('input[name="raijo-date"]').val() == '' || $('input[name="raijo-date"]').val() == 'null'){
+        $('input[name="raijo-date"]').css({'background-color': invalidColor, 'border-color': '#ff0700'});
+        isLocalValid = isValid = false;
+    }else{
+        $('input[name="raijo-date"]').css({'background-color': 'initial', 'border-color': '#ccc'});
+    }
 
-        if(typeof($('input[name="raijo-date"]').val()) === 'undefined' ||  $('input[name="raijo-date"]').val() == '' || $('input[name="raijo-date"]').val() == 'null'){
-            $('input[name="raijo-date"]').css('background-color', invalidColor);
-            isLocalValid = isValid = false;
-        }else{
-            $('input[name="raijo-date"]').css('background-color', 'initial');
-        }
+    if(typeof($('select[name="raijo-time"]').val()) === 'undefined' ||  $('select[name="raijo-time"]').val() == '' || $('select[name="raijo-time"]').val() == 'null'){
+        $('select[name="raijo-time"]').css({'background-color': invalidColor, 'border-color': '#ff0700'});
+        isLocalValid = isValid = false;
+    }else{
+        $('select[name="raijo-time"]').css({'background-color': 'initial', 'border-color': '#ccc'});
+    }
 
-        if(typeof($('select[name="raijo-time"]').val()) === 'undefined' ||  $('select[name="raijo-time"]').val() == '' || $('select[name="raijo-time"]').val() == 'null'){
-            $('select[name="raijo-time"]').css('background-color', invalidColor);
-            isLocalValid = isValid = false;
-        }else{
-            $('select[name="raijo-time"]').css('background-color', 'initial');
-        }
-
-        if(!isLocalValid){
-            $('.error-text.raijo-datetime').html(ERROR_NO_INPUT);
-            $('.error-text.raijo-datetime').css('display', 'block');
-        }
+    if(!isLocalValid){
+        // $('.error-text.raijo-datetime').html(ERROR_NO_INPUT);
+        // $('.error-text.raijo-datetime').css('display', 'block');
+        $('.require-flag.raijo-datetime').css('background-color', '#ff0700');
     }
 
     var isAgeValid = true;
 
     if($('#iage_year option:selected').val() == 'null'){
-        $('#iage_year').css('background-color', invalidColor);
+        $('#iage_year').css({'background-color': invalidColor, 'border-color': '#ff0700'});
         isAgeValid = isValid = false;
     }else{
-        $('#iage_year').css('background-color', 'initial');
+        $('#iage_year').css({'background-color': 'initial', 'border-color': '#ccc'});
     }
     if($('#iage_month option:selected').val() == 'null'){
-        $('#iage_month').css('background-color', invalidColor);
+        $('#iage_month').css({'background-color': invalidColor, 'border-color': '#ff0700'});
         isAgeValid = isValid = false;
     }else{
-        $('#iage_month').css('background-color', 'initial');
+        $('#iage_month').css({'background-color': 'initial', 'border-color': '#ccc'});
     }
     if($('#iage_day option:selected').val() == 'null'){
-        $('#iage_day').css('background-color', invalidColor);
+        $('#iage_day').css({'background-color': invalidColor, 'border-color': '#ff0700'});
         isAgeValid = isValid = false;
     }else{
-        $('#iage_day').css('background-color', 'initial');
+        $('#iage_day').css({'background-color': 'initial', 'border-color': '#ccc'});
     }
 
     if(!isAgeValid){
-            $('.error-text.age').html(ERROR_NO_INPUT);
-            $('.error-text.age').css('display', 'block');
+            // $('.error-text.age').html(ERROR_NO_INPUT);
+            // $('.error-text.age').css('display', 'block');
+            $('.require-flag.age').css('background-color', '#ff0700');
         }
 
     // EMAIL CHECK
     var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
     if (!emailPattern.test($('input[name="email"]').val())){
-        $('input[name="email"]').css('background-color', invalidColor);
+        $('input[name="email"]').css({'background-color': invalidColor, 'border-color': '#ff0700'});
         // $('input[name="email-confirm"]').css('background-color', invalidColor);
         isValid = false;
 
-        $('.error-text.email').html(ERROR_MAIL_FORMAT);
-        $('.error-text.email').css('display', 'block');
+        // $('.error-text.email').html(ERROR_MAIL_FORMAT);
+        // $('.error-text.email').css('display', 'block');
+        $('.require-flag.email').css('background-color', '#ff0700');
 
     }else{
-        $('input[name="email"]').css('background-color', 'initial');
+        $('input[name="email"]').css({'background-color': 'initial', 'border-color': '#ccc'});
     }
 
 
@@ -459,18 +473,18 @@ $(document).ready(function(){
 
 
     // BUTTON SET SHOW/HIDE DATE/TIME PICKER FORM
-    $('#iraijo').change(function(){
-        if($(this).is(':checked')){
-            $('input[name="raijo"]').val(true);
-            $('.iraijo-datetime-hidden').fadeIn();
-        }else{
-            $('input[name="raijo"]').val(false);
-            $('.iraijo-datetime-hidden').fadeOut();
+    // $('#iraijo').change(function(){
+    //     if($(this).is(':checked')){
+    //         $('input[name="raijo"]').val(true);
+    //         $('.iraijo-datetime-hidden').fadeIn();
+    //     }else{
+    //         $('input[name="raijo"]').val(false);
+    //         $('.iraijo-datetime-hidden').fadeOut();
 
-            $('#iraijo-date').val('');
-            $('select[name="raijo-time"]').val('null');
-        }
-    });
+    //         $('#iraijo-date').val('');
+    //         $('select[name="raijo-time"]').val('null');
+    //     }
+    // });
 
     $('#isiryou').on('change', function(){
         if($(this).is(':checked')){
@@ -482,7 +496,7 @@ $(document).ready(function(){
 
     // CONDITION TO DISPLAY FORM TYPE
     $('.form-title').html('来場予約');
-    $('#iraijo').prop('checked', true).trigger('change');
+    // $('#iraijo').prop('checked', true).trigger('change');
 
     // if(reservation == '1'){
     //     $('.form-title').html('来場予約');
@@ -505,10 +519,12 @@ $(document).ready(function(){
 
         if(invalidCheck()){
 
-            $('.table_register').fadeOut();
-            $('.table_confirm').fadeIn(function(){
+            $('.form_info.input').fadeOut();
+            $('.form_info.confirm').fadeIn(function(){
                  $('html').scrollTop(0);
             });
+            $($('.step ol li')[0]).removeClass('active');
+            $($('.step ol li')[1]).addClass('active');
 
             // var cfrm_type = '';
             // cfrm_type += typeof($('#iraijo:checked').val()) != 'undefined' ? ($('#iraijo:checked').val() + '  ') : '';
@@ -538,7 +554,7 @@ $(document).ready(function(){
 
             var cfrm_address = $('input[name="post"]').val() + '<br>' +
                 $('select[name="pref"]').val() + '<br>' + $('input[name="city"]').val() + '<br>' +
-                $('input[name="aza"]').val() + '<br>' + $('input[name="building-roomnumber"]').val();
+                $('input[name="building-roomnumber"]').val();
             $('.cfrm_address').html(cfrm_address);
 
             var cfrm_phonenumber = $('input[name="phone-number"]').val();
@@ -571,7 +587,7 @@ $(document).ready(function(){
             var cfrm_livingstyle = $('input[name="living-style"]:checked').val();
             $('.cfrm_livingstyle').html(cfrm_livingstyle);
 
-            var cfrm_firstimpression = $('input[name="first-impression"]:checked').val() + '<br>' + $('input[name="first-impression-etc"]').val();
+            var cfrm_firstimpression = $('input[name="first-impression"]:checked').val();
             $('.cfrm_firstimpression').html(cfrm_firstimpression);
 
             // var cfrm_relation = '';
@@ -592,10 +608,12 @@ $(document).ready(function(){
 
     // BUTTON SET GO BACK ACTION
     $('#goBack').click(function(){
-        $('.table_register').fadeIn(function(){
+        $('.form_info.input').fadeIn(function(){
             $('html').scrollTop(0);
         });
-        $('.table_confirm').fadeOut();
+        $('.form_info.confirm').fadeOut();
+        $($('.step ol li')[1]).removeClass('active');
+        $($('.step ol li')[0]).addClass('active');
     });
 
     // BUTTON SET SUBMIT FORM ACTION

@@ -43,7 +43,7 @@ $dir_name = 'home';
 
         <div id="section04" class="section">
             <div class="section_inner">
-                <a href="https://www.chronicle-web.com/reform/" target="_blank">
+                <a href="https://www.chronicle-web.com/plus/" target="_blank">
                     <h3><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_title.png" width="402" height="150" alt="Chronicle Reform"></h3>
                     <p class="pic">
                         <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec04_pic_<?php echo $current_lang; ?>.jpg" width="370" height="405" alt="" class="pc">

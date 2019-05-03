@@ -1,4 +1,5 @@
-.freecall { font-size: 2.3125em }
+.freecall { font-size: 2.0em; letter-spacing: 0;}
+.hourwoking {font-size: 9pt;}
 .red {color: red!important;}
 
 .w_row_custom.header {border-top:none; font-weight: bold;}
@@ -7,7 +8,7 @@
     min-height: 93px;
     height: 100%;
 }
-ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 525px;}
+ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 500px;}
 main {text-align: justify;}
 
 
@@ -36,7 +37,7 @@ main section.content-page dl.company {
     padding: 0;
     border-top: 1px solid #D6D6D6;
     border-bottom: 1px solid #D6D6D6;
-    background-color: #F5F5F5;
+    /*background-color: #F5F5F5;*/
 }
 
 main section.content-page dl.company dt {
@@ -53,7 +54,7 @@ main section.content-page dl.company dd {
     padding: 14px 20px;
     margin-left: 220px;
     border-top: 1px solid #D6D6D6;
-    border-left: none;
+    border-left: 1px solid #D6D6D6;
     background-color: #FFF;
 
     margin-bottom: 0;

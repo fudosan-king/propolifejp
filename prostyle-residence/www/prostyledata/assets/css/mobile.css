@@ -1,17 +1,18 @@
 @media (max-width: 1024px) {
 	.navbar-nav .freecall {
-		font-size: 13px;
+		font-size: 1.8em;
 	}
 	.navbar-nav .freecall .i_phone {
 		position: relative;
 		top: 7px;
 	}
-}
-
-@media (max-width: 960px) {
 	.navbar-nav .hourwoking {
 		display: none;
 	}
+}
+
+@media (max-width: 960px) {
+	
 }
 
 @media (max-width: 823px) {

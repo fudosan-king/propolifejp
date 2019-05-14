@@ -65,6 +65,11 @@ var AddGoogleMap = function(){
                     var titleJa = $colRight.find('h3').text();
                     var titleEn = $colRight.find('.en').text();
                     titleEn = titleEn.replace('/', '/<br>');
+
+                    var marker = new google.maps.Marker({
+                        position: latlng,
+                        map: map,
+                      });
                     
                     var popupMarker = new google.maps.InfoWindow({
                         content: '<p class="gmap_window">' + titleJa +'<span>' + titleEn + '</span></p>',

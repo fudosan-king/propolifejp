@@ -1,5 +1,11 @@
+<?php 
+/* Template Name: Project - Page Template */
+?>
+
+<?php get_header();?>
+
 <main>
-	<section class="content-page">
+	<section class="content-page project">
 		<div class="container">
 			<div class="row">
 				<div class="col col-12">
@@ -12,7 +18,7 @@
 							<!-- <h2 class="sub_title"><?php //the_title(); ?></h2> -->
 							
 							<div id="main-content">
-								
+								<?php the_content(); ?>
 
 								<section class="extra-content">
 
@@ -26,18 +32,24 @@
 												<img class="spec" src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'-long.png'; ?>">
 							            	<?php endif; ?>
 							            </h2>
-							            <!--<p class="ruby"><?php //echo strtoupper(str_replace('-', ' ', $post->post_name)); ?></p>-->
+							            <!-- <p class="ruby">OUR <?php //echo strtoupper(str_replace('-', ' ', $post->post_name)); ?></p> -->
 							            <!-- <p class="sapphire">株式会社プロスタイルでは、分譲マンション建設用地を募集し購入を積極的に行っております。</p> -->
 							            <p class="line"></p>
 							        </div>
 
 									<div id="contents_inner">
 									    
-									    <?php the_content(); ?>
+									    <?php 
+											get_template_part( 'template-parts/distribution/block', 'distribution' );
+											get_template_part( 'template-parts/distribution/block', 'gallery' );
+										?>
 
 									</div>
 								</section>
 
+								
+
+								
 							</div>
 
 							<?php
@@ -54,3 +66,6 @@
 		</div>
 	</section>
 </main>
+
+
+<?php get_footer();?>

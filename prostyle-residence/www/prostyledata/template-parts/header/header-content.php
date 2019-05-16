@@ -13,16 +13,14 @@
             $topNav = wp_get_nav_menu_items($menuID);
             if (count($topNav)>0){
                 $active = is_front_page() ? 'active' : "";
-                $imgTOP = file_exists(SGVinK::get_images_path().'/navi/TOP.png') ? '<img src="'.SGVinK::get_images_uri().'navi/TOP.png" height="12" class="img-responsive" alt="Image">' : 'TOP';
 
                 echo '<ul class="navbar-nav navbar-mobile mr-0 main_nav">';
-                echo ' <li class="nav-item '.$active.' d-none d-sm-block"><a class="nav-link" href="/">'.$imgTOP.'</a></li>';
+                echo ' <li class="nav-item '.$active.' d-none d-sm-block"><a class="nav-link" href="/">TOP</a></li>';
                 foreach ($topNav as $nav){
                     /* Action here */
-                    $imgMenu = file_exists(SGVinK::get_images_path().'/navi/'.$nav->title.'.png') ? '<img src="'.SGVinK::get_images_uri().'navi/'.$nav->title.'.png" height="13" class="img-responsive" alt="Image">' : $nav->title;
 
                     $active = $nav->object_id == $post->ID ? 'active' : "";
-                    echo ' <li class="nav-item '.$active.'"><a class="nav-link" href="'.$nav->url.'" target="'.$nav->target.'">'.$imgMenu.'</a></li>';
+                    echo ' <li class="nav-item '.$active.'"><a class="nav-link" href="'.$nav->url.'" target="'.$nav->target.'">'.$nav->title.'</a></li>';
                 }
                 echo '</ul>';
             }

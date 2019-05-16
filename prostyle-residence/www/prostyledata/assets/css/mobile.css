@@ -1,6 +1,7 @@
 @media (max-width: 1024px) {
 	.navbar-nav .freecall {
 		font-size: 1.8em;
+		display: none;
 	}
 	.navbar-nav .freecall .i_phone {
 		position: relative;
@@ -263,9 +264,6 @@
 		margin-top: 20px;
 		padding-bottom: 30px;
 	}
-	.w_section_distribution_record {
-		padding-top: 50px;
-	}
 	.w_section_distribution_record .headline {
 		margin-bottom: 0;
 	}
@@ -352,6 +350,8 @@
 		margin-left: 0;
 		margin-right: 0;
 	}
+
+	.section_distribution_record {margin-top: -40px;}
 }
 
 @media (max-width: 360px) {

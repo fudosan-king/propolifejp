@@ -79,8 +79,8 @@ p {margin-bottom: 10px;}
   padding-left: 15px;
 }
 .navbar-expand-sm .navbar-nav .nav-link {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
   position: relative;
 }
 .navbar-nav .nav-item.active>.nav-link, .navbar-nav .nav-item:active:focus>.nav-link, .navbar-nav .nav-item:active>.nav-link, .navbar-nav .nav-item:focus>.nav-link, .navbar-nav .nav-item:hover>.nav-link {
@@ -88,7 +88,7 @@ p {margin-bottom: 10px;}
 }
 .navbar-expand-lg .navbar-nav .nav-link, .navbar-nav .nav-link {
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
   color: #3c3c3c;
@@ -553,6 +553,7 @@ ul.menu_footer li:hover a {
   padding: 110px 0;
   background: #fff;
 }
+.section_gallerys.project .w_section_gallerys {padding: 0;}
 .owl_gallerys .photo {
   margin: 10px;
   display: block;
@@ -648,12 +649,13 @@ figure.photo.hover i {
 }
 
 .section_distribution_record {
-  padding-top: 50px;
   padding-bottom: 100px;
+  font-size: 13px;
 }
+.section_distribution_record.project {padding-bottom: : 50px;}
 .w_section_distribution_record {
   background: #fff;
-  padding: 100px 0;
+  /*padding: 100px 0;*/
 }
 
 .section_video {
@@ -822,7 +824,7 @@ ul.list_row li h4 {
   display: block;
   padding: 15px 0;
   height: 100%;
-  font-size: 16px;
+  font-size: 15px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;

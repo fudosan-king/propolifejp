@@ -15,16 +15,24 @@
                             $thumnailImage = wp_get_attachment_image_url( get_post_thumbnail_id(), $size = 'large', $icon = false );
                             ?>
 
-                            <h2 class="sub_title"><?php the_title(); ?></h2>
+                            <!-- <h2 class="sub_title"><?php //the_title(); ?></h2> -->
                             
                             <div id="main-content">
                                 <?php the_content(); ?>
 
                                 <section class="extra-content">
                                     <div id="section_title">
-                                        <!-- <h2><img src="<?php //SGVinK::the_images_uri(); ?>/img_title_h2.png" alt="仕入不動産募集"></h2> -->
-                                        <p class="ruby"><?php the_title(); ?></p>
-                                        <p class="line"></p>
+                                        <h2>
+							            	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'.png')): ?>
+												<img src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'.png'; ?>">
+											<?php endif; ?>
+
+							            	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'-long.png')): ?>
+												<img class="spec" src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'-long.png'; ?>">
+							            	<?php endif; ?>
+							            </h2></h2>
+                                        <!-- <p class="ruby"><?php //the_title(); ?></p> -->
+                                        <!-- <p class="line"></p> -->
                                     </div>
                                     <div id="contents_inner">
                                     <?php

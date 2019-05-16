@@ -15,18 +15,27 @@
 							$thumnailImage = wp_get_attachment_image_url( get_post_thumbnail_id(), $size = 'large', $icon = false );
 							?>
 
-							<h2 class="sub_title"><?php the_title(); ?></h2>
+							<!-- <h2 class="sub_title"><?php //the_title(); ?></h2> -->
 							
 							<div id="main-content">
 								<?php the_content(); ?>
 								
 								
 								
-								<section class="extra-content">
+								<section class="extra-content" style="padding-top: 60px;">
 
 									<div id="section_title">
-							            <h2><img src="<?php SGVinK::the_images_uri(); ?>/img_title_h2.png" alt="仕入不動産募集"></h2>
-							            <p class="ruby">PURCHASE</p>
+							            <h2>
+							            	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'.png')): ?>
+												<img src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'.png'; ?>">
+											<?php endif; ?>
+
+							            	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'-long.png')): ?>
+												<img class="spec" src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'-long.png'; ?>">
+							            	<?php endif; ?>
+							            </h2>
+							            <!--<p class="ruby"><?php //echo strtoupper(str_replace('-', ' ', $post->post_name)); ?></p>-->
+							            <p class="sapphire">分譲マンション建設用地を募集し購入を積極的に行っております。</p>
 							            <p class="line"></p>
 							        </div>
 

@@ -12,7 +12,9 @@ ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 500px;}
 main {text-align: justify;}
 
 
-main section.content-page { padding-top: 135px; font-size: 12pt; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+main section.content-page { padding-top: 74px; font-size: 12pt; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+
+/*main section.content-page.project {padding-top: 74px;}*/
 
 main section.content-page .sub_title {
 	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
@@ -26,8 +28,8 @@ main section.content-page .sub_title {
     padding-bottom: 10px;
 }
 
-main section.content-page div#main-content { padding: 40px 0 50px; }
-main section.content-page.company div#main-content { padding: 40px 0 50px; width: 890px; margin: 0 auto;}
+main section.content-page div#main-content { padding: 0 0 50px; }
+main section.content-page.company div#main-content { width: 890px; margin: 0 auto;}
 
 
 main section.content-page dl.company {
@@ -79,8 +81,8 @@ main section.content-page dl.company dt:first-child + dd {
 *
 --------------------------------------------------------------------------------*/
 
-main section.content-page.purchase .extra-content {
-    padding: 40px 0;
+main section.content-page .extra-content {
+    padding-top: 60px;
 }
 
 main section.content-page.purchase .extra-content ol, ul{
@@ -95,13 +97,13 @@ main section.content-page.purchase .extra-content #topic_path{
     margin-bottom: 15px;
 }
 
-main section.content-page.purchase .extra-content #section_title{
+main section.content-page .extra-content #section_title{
     clear: both;
     text-align: center;
     position: relative;
 }
 
-main section.content-page.purchase .extra-content #section_title h2{
+main section.content-page .extra-content #section_title h2{
     background: none;
     border:none;
     padding: 0 0 3px;
@@ -112,18 +114,27 @@ main section.content-page.purchase .extra-content #section_title h2{
     position: relative;
 }
 
-main section.content-page.purchase .extra-content #section_title h2 img{
-    width: 100%;
-    max-width: 513px;
-    height: auto;
+main section.content-page .extra-content #section_title h2 img{
+    max-height: 50px;
+    height: 2em;
+    width: auto;
     position: relative;
     z-index: 1;
 }
 
-main section.content-page.purchase .extra-content #section_title .ruby{ margin: 14px 0 15px 0; font-size: 20px;}
+main section.content-page .extra-content #section_title h2 img.spec {max-height: 100px; height: 4em;}
 
+main section.content-page .extra-content #section_title .ruby{ margin: 14px 0 15px 0; font-size: 20px;}
+main section.content-page .extra-content #section_title .sapphire{
+    font-size: 16pt;
+    line-height: 1.3;
+    font-family: 'hiragino_kaku_gothic_prow6', Helvetica, Arial, sans-serif;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
 
-main section.content-page.purchase .extra-content #section_title .line{
+main section.content-page .extra-content #section_title .line{
     width: 247px;
     height: 6px;
     margin: 0 auto 60px auto;
@@ -143,13 +154,13 @@ main section.content-page.purchase .extra-content .section_telephone{
     overflow: hidden;
 }
 
-main section.content-page.purchase .extra-content .section_telephone h3{
+main section.content-page .extra-content .section_telephone h3{
     padding: 0 0 20px 0;
     font-size: 28px;
     font-weight: bold;
     letter-spacing: .06em;
     border-bottom: 1px solid #a0a0a0;
-    line-height: 1em;
+    line-height: 1.5em;
 }
 
 main section.content-page.purchase .extra-content .section_telephone .telephone_list{
@@ -769,6 +780,7 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 /* @media RESPONSIVE STYLESHEET*/
 
 @media screen and (max-width: 1366px) {
+    .freecall { font-size: 1.7em; }
 
     /*KAITORI*/
     
@@ -781,6 +793,13 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
     main.kaitori .mansory-list .grid-xl-item--1st-row { height: 220px; }
     main.kaitori .mansory-list .grid-xl-item--2nd-row { height: 260px; }
     main.kaitori .mansory-list .grid-xl-item--3rd-row { height: 260px; }
+}
+
+@media screen and (max-width: 1280px) {
+    .hourwoking {font-size: 8pt;}
+    .freecall {
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (max-width: 1199px){
@@ -915,7 +934,9 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 @media screen and (max-width: 768px){
     #contents{padding-left:0;padding-right:0;}
 
-    main section.content-page.purchase .extra-content #section_title h2{padding:0 15px;}
+    main section.content-page .extra-content #section_title h2{padding:0 15px;}
+    main section.content-page .extra-content #section_title h2 img{height: 1em;}
+    main section.content-page .extra-content #section_title h2 img.spec {height: 2em;}
     main section.content-page.purchase .extra-content #topic_path{padding-left:15px;padding-right:15px;}
     main section.content-page.purchase .extra-content .section_telephone{max-width:inherit;margin:-10px 0 65px 0;padding:0 20px;text-align:center;overflow:hidden;}
     main section.content-page.purchase .extra-content .section_telephone.btm{margin:0 0 25px 0;padding-top:70px;background-color:#e3e3e3;}
@@ -936,7 +957,8 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
     main section.content-page.purchase .extra-content #purchase_area .pc{display:none;}
     main section.content-page.purchase .extra-content #purchase_area .sp{display:block;}
     main section.content-page.purchase .extra-content #estate_list{margin-bottom:10px;}
-    main section.content-page.purchase .extra-content #section_title .ruby{ margin: 15px 0; font-size: 16px;}
+    main section.content-page .extra-content #section_title .ruby{ margin: 15px 0; font-size: 16px;}
+    main section.content-page .extra-content #section_title .sapphire{ width: 100%; font-size: 15px}
 
 
     /*KAITORI*/
@@ -1048,9 +1070,9 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 }
 
 @media screen and (max-width: 480px){
-    main section.content-page.purchase .extra-content #section_title .ruby{margin:10px 0;font-size:11px;}
-    main section.content-page.purchase .extra-content #section_title h2{margin-bottom:0;padding:0 30px;}
-    main section.content-page.purchase .extra-content #section_title .line{width:120px;height:3px;margin:0 auto 30px auto;background-color:#fff;}
+    main section.content-page .extra-content #section_title .ruby{margin:10px 0;font-size:11px;}
+    main section.content-page .extra-content #section_title h2{margin-bottom:0;}
+    main section.content-page .extra-content #section_title .line{width:120px;height:3px;margin:0 auto 30px auto;background-color:#fff;}
     main section.content-page.purchase .extra-content .section_telephone{margin:10px 0 33px 0;}
     main section.content-page.purchase .extra-content .section_telephone.btm{padding-top:35px;margin:0 0 20px 0;background-color:#e3e3e3;}
     main section.content-page.purchase .extra-content .section_telephone h3{margin:0 0 0;padding:0 0 14px 0;font-size:17px;line-height:1em;}
@@ -1108,6 +1130,8 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 }
 
 @media screen and (max-width:420px){
+    main section.content-page .extra-content #section_title h2 img{height: 0.8em;}
+    main section.content-page .extra-content #section_title h2 img.spec {height: auto; width: 100%;}
     main section.content-page dl.company dt {
         width: 120px;
     }

@@ -1130,6 +1130,7 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 }
 
 @media screen and (max-width:420px){
+    ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 100%;}
     main section.content-page .extra-content #section_title h2 img{height: 0.8em;}
     main section.content-page .extra-content #section_title h2 img.spec {height: auto; width: 100%;}
     main section.content-page dl.company dt {

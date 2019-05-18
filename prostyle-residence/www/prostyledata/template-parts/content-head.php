@@ -26,7 +26,8 @@
 <!-- <link rel="stylesheet" href="<?php //SGVinK::the_css_uri(); ?>/styles.css" type="text/css">
 <link rel="stylesheet" href="<?php //SGVinK::the_css_uri(); ?>/mobile.css" type="text/css"> -->
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.8/SmoothScroll.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.9/SmoothScroll.min.js"></script>
+
 
 <?php 
 if(is_page( 'contact' ) || is_page( 'contact-purchase' ) || is_page( 'sell' )):

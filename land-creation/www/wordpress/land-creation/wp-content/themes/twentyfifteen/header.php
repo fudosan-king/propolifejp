@@ -49,7 +49,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="wrapper">
 <div class="logo"><span style="display:none;">さいたま市の新築一戸建て・中古一戸建て・マンション・土地の不動産情報はランドクリエイションにお任せ下さい。</span>
-  <h1 style="padding-left:8px;">浦和の新築戸建て・不動産情報はランドクリエイションにお任せ下さい</h1>
+  <h1 style="padding-left:8px;">浦和の中古マンション・新築戸建て・不動産情報はランドクリエイションにお任せください</h1>
   <a href="/"><img src="http://www.landcreation.co.jp/static/img/common/logo.png" width="296" height="57" alt="株式会社ランドクリエイション　不動産総合情報サービス"/></a></div>
 <div class="freedial"><img class="tel-link" src="http://www.landcreation.co.jp/static/img/common/freedial.png" width="276" height="52" alt="0120-15-3718"/></div>
 <a href="/contact" class="mail not_print"><img src="http://www.landcreation.co.jp/static/img/common/btn_mail.png" width="82" height="41" alt="お問い合せ"/></a>

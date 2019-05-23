@@ -807,14 +807,14 @@ ul.list_row li h4 {
 }
 
 .w_row_custom {
-  border-bottom: 1px solid #b48856;
+  border-bottom: 1px solid #D6D6D6;
 }
 .w_row_custom:first-child {
-  border-top: 1px solid #b48856;
+  border-top: 1px solid #D6D6D6;
 }
 .row_custom {
   padding: 15px 0;
-  border-bottom: 1px solid #b48856;
+  border-bottom: 1px solid #D6D6D6;
 }
 .row_custom:last-child {
   border-bottom: none;

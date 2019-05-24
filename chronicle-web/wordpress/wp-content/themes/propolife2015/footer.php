@@ -99,8 +99,10 @@
                                         <?php endwhile; ?>
                                         <?php
                                             $pagebuy_data = get_page_data(get_page_by_path('buy'));
+                                            $pagesell_data = get_page_data(get_page_by_path('perspective'));
                                          ?>
                                         <li><a href="<?php echo  $pagebuy_data['url']; ?>" target="_blank"><?php echo  $pagebuy_data['title']; ?></a></li>
+                                        <li><a href="<?php echo  $pagesell_data['url']; ?>" target="_blank"><?php echo  $pagesell_data['title']; ?></a></li>
                                     </ul>
                                 </li>
 
@@ -152,6 +154,6 @@
         </div>
     </div><!-- // #footer_inner -->
 </div><!-- // #footer -->
-
+<?php wp_footer(); ?>
 </body>
 </html>

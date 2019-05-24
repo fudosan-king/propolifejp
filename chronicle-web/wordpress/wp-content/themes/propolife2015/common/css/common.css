@@ -154,9 +154,9 @@ em{ font-style: italic;}
     z-index: 10;
 }
 
-body.en #gnav #gnav_list li:first-child {
+/*body.en #gnav #gnav_list li:first-child {
     width: 180px;
-}
+}*/
 
 #gnav li.sp{ display: none;}
 
@@ -242,6 +242,7 @@ body.en #gnav #gnav_list li:first-child {
     padding: 10px 0;
     background-color: #fff;
     visibility: hidden;
+    height: auto!important;
 }
 
 #gnav li ul li{
@@ -1490,4 +1491,104 @@ body{
         display: initial;
         margin-right: 10px;
     }
+}
+
+/*NEW PAGE CSS FOR PERSPECTIVE*/
+#perspective .content .btn,#perspective .content .navbar-nav li,#perspective .content .navbar ul li ul, 
+#perspective .content .jssora20l, #perspective .content .jssora20r,
+#perspective .content .optical.logo {-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;}
+#perspective .content a:link, #perspective .content a:hover, #perspective .content a:visited, #perspective .content a:active {text-decoration: none;}
+#perspective .content h3 {color: #41BDCE!important;font-size: 24px;line-height: 44px;margin-top: 30px;font-family: 'Lato', Arial, sans-serif;}
+#perspective .content h3.subtitle {font-size: 40px; font-weight: bold;}
+#perspective .content .btn-big { color: #f20; font-size: 35px; }
+#perspective .content .btn-big:hover {color: #fff;}
+#perspective #header h1 {margin-top: 4px;}
+#perspective #footer {margin: 0;}
+#perspective ul, #perspective p {margin-bottom: 0;}
+
+
+.sildermain {line-height: 1.5; font-family: arial!important;}
+
+.effect .thumbnail{padding: 0px;border-radius: 0px;border:none;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);}
+.effect .thumbnail.interior {
+  /*padding:40px;*/
+  height: 270px;
+  position: relative;
+}
+
+.effect .thumbnail.interior img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    display: block;
+
+    transition: all 0.03s ease;
+    -moz-transition: all 0.03s ease;
+    -o-transition: all 0.03s ease;
+    -webkit-transition: all 0.03s ease;
+}
+
+.effect .thumbnail.interior:hover img {
+  cursor: pointer;
+  opacity: 0.5;
+  /*-webkit-filter: grayscale(100%);*/
+  /*filter: grayscale(100%);*/
+}
+
+.effect .thumbnail.interior a {
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+/*----------Jssor Slider-------------*/
+.jssora20l, .jssora20r {display: block;position: absolute;padding: 15px 30px;cursor: pointer;overflow: hidden;background-color:#000000;top:420px;}
+.jssora20l .fa, .jssora20r .fa{color:#ffffff}
+.jssora20l:hover,.jssora20r:hover {background-color:#734638}
+.jssora20l.jssora20ldn { background-position: -243px -33px; }
+.jssora20r.jssora20rdn { background-position: -303px -33px; }
+.jssorb03 {position: absolute;}
+.jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {position: absolute;width: 21px;height: 21px;text-align: center;line-height: 21px;color: white;font-size: 12px;background: url(images/controls/b03.png) no-repeat;overflow: hidden;cursor: pointer;}
+.jssorb03 div { background-position: -5px -4px; }
+.jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+.jssorb03 .av { background-position: -65px -4px; }
+.jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px;}
+.textBig{position:absolute;font-size:30px;color:#ffffff;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;}
+.captionOrange, .captionBlack{color: #fff;font-size:30px;text-align: center;padding:10px 15px;position:absolute;}
+.captionOrange{background: #EB5100;background-color: rgba(235, 81, 0, 0.6);}
+.captionBlack{background: #000;background-color: rgba(0, 0, 0, 0.4);}
+a.captionOrange, A.captionOrange:active, A.captionOrange:visited{color: #ffffff;text-decoration: none;}
+a.captionOrange:hover{color: #eb5100;text-decoration: underline;background-color: #eeeeee;background-color: rgba(238, 238, 238, 0.7);}
+.title-slide{font-size:60px;color: #C6FF00;font-weight: bold;}
+
+.jssorb05 {position: absolute;}
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {position: absolute;width: 16px;height: 16px;background: url(images/controls/b05.png) no-repeat;overflow: hidden;cursor: pointer;}
+.jssorb05 div { background-position: -7px -7px; }
+.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+.jssorb05 .av { background-position: -67px -7px; }
+.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+.jssora12l, .jssora12r {display: block;position: absolute;width: 30px;height: 46px;cursor: pointer;background: url(images/controls/a12.png) no-repeat;overflow: hidden;}
+.jssora12l { background-position: -16px -37px; }
+.jssora12r { background-position: -75px -37px; }
+.jssora12l:hover { background-position: -136px -37px; }
+.jssora12r:hover { background-position: -195px -37px; }
+.jssora12l.jssora12ldn { background-position: -256px -37px; }
+.jssora12r.jssora12rdn { background-position: -315px -37px; }
+
+@media (max-width: 768px) {
+    #perspective #footer {margin: -80px 0 0 0;}
+    #perspective .content .btn-big { font-size: 18px !important; }
+}
+
+@media (max-width: 420px) {
+    
+    #perspective .content h3 {font-size: 18px; line-height: 33px;}
+    #perspective .content h3.subtitle {font-size: 26px; font-weight: bold; line-height: 26px;}
 }

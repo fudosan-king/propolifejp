@@ -2,6 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<?php if (get_post_type() == 'page' && get_post_status() != 'publish'){
+    echo '<meta http-equiv="refresh" content="0;url=/" />';
+    exit;
+}?>
+
 <link rel="apple-touch-icon" sizes="152x152" href="<?php SGVinK::the_assets_uri(); ?>/favicon_package_v0.16/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="<?php SGVinK::the_assets_uri(); ?>/favicon_package_v0.16/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php SGVinK::the_assets_uri(); ?>/favicon_package_v0.16/favicon-16x16.png">

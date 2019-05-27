@@ -49,6 +49,10 @@ if (isset($_REQUEST['type']) && isset($_REQUEST['_name'])){
             break;
     }
     
+}else{
+    header("HTTP/1.1 301 Moved Permanently"); 
+    header("Location: /"); 
+    exit();
 }
 
 echo json_encode($jsonRes);

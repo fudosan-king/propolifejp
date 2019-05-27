@@ -20,7 +20,6 @@
                     /* Action here */
 
                     $active = $nav->object_id == $post->ID ? 'active' : "";
-
                     $hideOnSP = get_page($nav->object_id)->post_name == 'contact' ? 'd-none d-sm-block' : '';
 
                     echo ' <li class="nav-item '.$hideOnSP.' '.$active.'"><a class="nav-link" href="'.$nav->url.'" target="'.$nav->target.'">'.$nav->title.'</a></li>';

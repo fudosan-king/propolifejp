@@ -41,10 +41,11 @@ setcookie("qtrans_front_language", $current_lang, time() - 3600, '/');
 <meta name="google-site-verification" content="TRYiZFxGSFvEkT9-ikzQnUGlITjcNkzllS1RuBWxW1M" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/common/css/common.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/common/css/<?php echo $dir_name; ?>.css" />
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery.transit.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery.smarttouch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.9/SmoothScroll.min.js"></script>
 <?php if($dir_name == 'home'): ?><script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery.mousewheel.min.js"></script><?php endif; print "\n"; ?>
     <?php if($dir_name == 'access'): ?><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwiqaQu5zYrnVkSkfG9XfyXXcHRqbgLIk"></script><?php endif; print "\n"; ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/common.js"></script>
@@ -79,9 +80,18 @@ if ($post->post_name == 'event' || $post->post_name == 'event-detail'
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri().'/common/candy/event/css/style.css'; ?>">
     <?php
 }
+
+if ($post->post_name == 'perspective'){
+    ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri().'/assets/bootstrap/css/bootstrap.css'; ?>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <?php
+}
+
 ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.8/SmoothScroll.min.js"></script>
+<?php wp_head(); ?>
 
 </head>
 
@@ -199,8 +209,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <li><a href="https://www.propolife.co.jp/group/" target="_blank">グループ企業</a></li>
                     <?php
                         $pagebuy_data = get_page_data(get_page_by_path('buy'));
+                        $pagesell_data = get_page_data(get_page_by_path('perspective'));
                      ?>
                     <li><a href="<?php echo  $pagebuy_data['url']; ?>" target="_blank"><?php echo  $pagebuy_data['title']; ?></a></li>
+                    <li><a href="<?php echo  $pagesell_data['url']; ?>" target="_blank"><?php echo  $pagesell_data['title']; ?></a></li>
                 </ul>
             </li>
             <?php endif; ?>

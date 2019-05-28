@@ -236,8 +236,8 @@ body.en #gnav #gnav_list li:first-child {
 
 #gnav .parents,
 #gnav a{
-	padding: 20px 0;
-	display: block;
+	/*padding: 20px 0;*/
+	/*display: block;*/
 	color: #3c3c3c;
 	text-decoration: none;
 }

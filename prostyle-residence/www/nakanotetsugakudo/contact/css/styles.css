@@ -245,9 +245,10 @@ ul.naviBox > li > ul > li span {
   width: 16.6%;
 }
 .contact-finish {
-  padding-top: 150px;
+  padding-top: 20px;
   background-color: #222;
   text-align: center;
+  margin-top: 100px;
 }
 .contact-finish .page-title {
   margin: auto;
@@ -271,10 +272,10 @@ ul.naviBox > li > ul > li span {
 .contact-finish .page-contents{
   max-width: 128rem;
   width: 100%;
-  padding: 4rem 3rem;
+  padding: 1rem 3rem;
   margin: 0 auto;
   background-color: #fff;
-  margin-top: 190px;
+  margin-top: 40px;
 }
 .contact-finish .page-contents .text {
   font-size: 16pt;

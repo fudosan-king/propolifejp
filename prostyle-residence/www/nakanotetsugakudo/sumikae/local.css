@@ -10,7 +10,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
+header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -65,6 +65,8 @@ h2{
 .sumikae-sec {
     margin-top: 85px;
 }
+
+ul.buttons {list-style: none;}
 
 ul.icon3{
 	max-width: 580px;
@@ -134,7 +136,7 @@ ul.sec-top li:last-child p{
 .sumikae-sec #sec-loan .kids .sec-loantitle{
 	font-size:  2.0rem;
 	background-color: #787574;
-	padding: 12px;
+	padding: 26px;
 	color: #fff;
 	text-align: center;
 }
@@ -143,6 +145,7 @@ ul.sec-top li:last-child p{
 	margin: 20px 0 30px;
 	display: inline-block;
 	width: 100%;
+	list-style: none;
 }
 
 .sumikae-sec #sec-loan .kids ul li{
@@ -165,6 +168,7 @@ ul.sec-top li:last-child p{
 #merit ul {
 	margin-top: 30px;
 	display: inline-block;
+	list-style: none;
 }
 
 #merit ul li{
@@ -189,13 +193,14 @@ ul.sec-top li:last-child p{
 
 .sumikae-sec #sec-merit .sec-merittop{
 	text-align: center;
-	padding: 12px;
+	padding: 26px;
 	background-color: #DFEBC2;
 	font-size: 2rem;
 }
 
 .sumikae-sec #sec-merit ul.illust{
 	width: 100%;
+	list-style: none;
 }
 
 .sumikae-sec #sec-merit ul.illust li{
@@ -221,6 +226,7 @@ ul.sec-top li:last-child p{
 
 .sumikae-sec #sec-merit ul.text{
 	margin: 30px 0;
+	list-style: none;
 }
 
 .sumikae-sec #sec-merit ul.text01,
@@ -231,6 +237,7 @@ ul.sec-top li:last-child p{
 
 .sumikae-sec #sec-merit ul.text01{
 	margin-right: 6%;
+
 }
 
 .sumikae-sec #sec-merit ul.text li:first-child{
@@ -249,6 +256,7 @@ ul.sec-top li:last-child p{
 .sumikae-sec ul.icon5{
 	display: inline-block;
 	padding-bottom: 90px;
+	list-style: none;
 }
 
 .sumikae-sec ul.icon5 li{
@@ -274,18 +282,18 @@ ul.sec-top li:last-child p{
 	padding-top: 150px;
 }
 .col-images {
-	max-width: 580px;
+	/*max-width: 580px;*/
 	margin: auto;
 }
 .col-images li {
-	width: 29.3%;
-	display: inline-block;
-	margin-right: 3%;
+    width: 16.3%;
+    display: inline-block;
+    padding: 1%;
 }
 .catch {
 	font-size: 2.5em;
     margin-top: 70px;
-    padding: 12px 0;
+    padding: 26px 0;
     background-image: url(imgs/bk_yellow.jpg);
     background-position: bottom;
     text-align: center;

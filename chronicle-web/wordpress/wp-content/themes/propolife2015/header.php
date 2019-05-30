@@ -85,8 +85,8 @@ if ($post->post_name == 'perspective'){
     ?>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri().'/assets/bootstrap/css/bootstrap.css'; ?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
     <?php
+    include 'include/perspective/theme_script.php';
 }
 
 ?>

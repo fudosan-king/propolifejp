@@ -428,6 +428,11 @@ ul.topbanner_footer li p {
   position: relative;
   top: 4px;
   margin-left: 15px;
+
+  -ms-writing-mode: tb-rl; 
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
 }
 .price_stand {
   font-size: 40px;
@@ -2055,6 +2060,43 @@ iframe {
     }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .owl_topbanner .item img {
+    height: auto;
+  }
+  .section_topbanner {
+    overflow: hidden;
+  }
+  .main_label_stand {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: -36px;
+    width: 40px;
+  }
+
+  ul.topbanner_footer li {
+    position: relative;
+    border: none;
+  }
+  ul.topbanner_footer li::after {
+    content: '';
+    width: 1px;
+    height: 43px;
+    position: absolute;
+    right: -20px;
+    top: -7px;
+    background: #fff;
+  }
+  ul.topbanner_footer li:last-child::after {
+    display: none;
+  }
+  ul.topbanner_footer li:nth-child(2)::after {
+    right: -30px;
+  }
+
+}
+
 
 .note {
   margin-bottom: 60px;
@@ -2209,3 +2251,5 @@ iframe {
 .section_lastbottom {
   padding: 15px 0;
 }
+
+

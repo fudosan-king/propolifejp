@@ -46,7 +46,7 @@ a {color: #ae8148;} button:focus {outline: none;}
 ::-moz-selection{background:#2aabe1;color:#FFF;text-shadow:none;}
 ::-webkit-selection{background:#2aabe1;color:#FFF;text-shadow:none;}
 html{width:100%;height:100%;}
-body{width:100%;height:100%;background:#fff; 
+body{width:100%;height:100%;background:#fff;
 font-family: "a-otf-ryumin-pr6n", serif, "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
 line-height: 1.5em; font-size: 14px; font-weight:400;-webkit-font-smoothing:subpixel-antialiased;-webkit-font-smoothing:antialiased!important;
 /*-moz-osx-font-smoothing:grayscale;*/
@@ -429,7 +429,7 @@ ul.topbanner_footer li p {
   top: 4px;
   margin-left: 15px;
 
-  -ms-writing-mode: tb-rl; 
+  -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   -moz-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
@@ -957,12 +957,12 @@ ul.menu_footer li:hover a {
 .w_img_landmarks img {
   height: 452px;
   width: 100%;
-  object-fit: cover;
+  /*object-fit: cover;
    -webkit-transition: all .3s ;
   -moz-transition: all .3s ;
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
-  transition: all .3s ;
+  transition: all .3s ;*/
 }
 .w_img_landmarks_small {
   height: 226px;
@@ -988,9 +988,6 @@ ul.menu_footer li:hover a {
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
   transition: all .3s ;
-}
-.w_img_landmarks:hover img, .w_img_landmarks_small:hover img { 
-  transform: scale(1.5);
 }
 .info_landmarks {
   font-family: "ヒラギノ角ゴ ProN";
@@ -1037,14 +1034,11 @@ ul.menu_footer li:hover a {
 }
 .box_lifeinfo_img img {
   width: 100%;
-   -webkit-transition: all .3s ;
+  /* -webkit-transition: all .3s ;
   -moz-transition: all .3s ;
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
-  transition: all .3s ;
-}
-.box_lifeinfo:hover img { 
-  transform: scale(1.5);
+  transition: all .3s ;*/
 }
 .box_lifeinfo:hover {
   box-shadow: 0 -15px 15px -15px #777, 0 15px 15px -15px #777;
@@ -1098,9 +1092,6 @@ ul.menu_footer li:hover a {
   text-align: center;
   margin-bottom: 30px;
 }
-.list_projects_item:hover img {
-  transform: scale(1.5);
-}
 .list_projects_item p {
   margin-bottom: 0;
   font-weight: bold;
@@ -1111,17 +1102,17 @@ ul.menu_footer li:hover a {
 .img_list_projects {
   margin-bottom: 15px;
   height: 220px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .img_list_projects img {
-  object-fit: cover;
+  /*object-fit: cover;*/
   height: 221px;
   width: 100%;
-  -webkit-transition: all .3s ;
+  /*-webkit-transition: all .3s ;
   -moz-transition: all .3s ;
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
-  transition: all .3s ;
+  transition: all .3s ;*/
 }
 
 .utilities {
@@ -1588,9 +1579,6 @@ ul.list_stations li small {
   -o-transition: all .3s ;
   transition: all .3s ;
 }
-.box_equipment_item:hover img, .box_equipment_storage_bigimg:hover img, .box_equipment_storage_smallimg:hover img, .security_item_img:hover img, .structure_item_img:hover img, .amenity_item_img:hover img {
-  transform: scale(1.5);
-}
 .box_equipment_item_special {
   padding: 15px;
   border: 1px solid #000;
@@ -1620,12 +1608,12 @@ ul.list_stations li small {
 .box_equipment_storage_bigimg img {
   height: 690px;
   width: 100%;
-  object-fit: cover;
+  /*object-fit: cover;
    -webkit-transition: all .3s ;
   -moz-transition: all .3s ;
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
-  transition: all .3s ;
+  transition: all .3s ;*/
 }
 .box_equipment_storage_bigimg span, .box_equipment_storage_smallimg span {
   display: inline-block;
@@ -1747,12 +1735,12 @@ ul.list_tebrakey li span {
 .security_item_img img {
   height: 263px;
   width: 100%;
-  object-fit: cover;
+  /*object-fit: cover;
   -webkit-transition: all .3s ;
   -moz-transition: all .3s ;
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
-  transition: all .3s ;
+  transition: all .3s ;*/
 }
 .structure_item ul {
   list-style: none;
@@ -1778,12 +1766,12 @@ ul.list_tebrakey li span {
 .structure_item_img img, .amenity_item_img img {
   width: auto;
   height: 263px;
-  object-fit: contain;
+  /*object-fit: contain;
    -webkit-transition: all .3s ;
   -moz-transition: all .3s ;
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
-  transition: all .3s ;
+  transition: all .3s ;*/
 }
 .back-to-top {
   visibility: hidden;
@@ -2039,7 +2027,7 @@ iframe {
     .nav-tabs {
         display: flex;
     }
-    
+
     .card {
         border: none;
     }

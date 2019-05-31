@@ -47,8 +47,8 @@
 			                    <span class="topnav_text">資料請求</span>
 			                </a>
 			            </li>
-			             <li class="d-block d-md-none">
-			                <a href="">
+			            <li class="d-block d-md-none">
+			                <a href="tel:0120965297">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 			                    </span>
@@ -71,7 +71,7 @@
 			    </div>
 			</header>
 
-			
+
 			<section class="section_topbanner">
 				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 
@@ -105,7 +105,7 @@
 							<ul class="topbanner_footer">
 								<li>
 									<p>
-										<span class="meter_number">64</span><span class="meter_label">㎡超</span> 
+										<span class="meter_number">64</span><span class="meter_label">㎡超</span>
 										<span class="price_yen">5,290</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">13</span>
 										<span class="label_stand">万円<span class="sub_label_stand">台<span class="last_text">〜</span></span></span>
@@ -113,7 +113,7 @@
 								</li>
 								<li>
 									<p>
-										<span class="meter_number">54</span><span class="meter_label">㎡超</span> 
+										<span class="meter_number">54</span><span class="meter_label">㎡超</span>
 										<span class="price_yen">4,790</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">12</span>
 										<span class="label_stand">万円<span class="sub_label_stand">台<span class="last_text">〜</span></span></span>
@@ -121,7 +121,7 @@
 								</li>
 								<li>
 									<p>
-										<span class="meter_number">39</span><span class="meter_label">㎡超</span> 
+										<span class="meter_number">39</span><span class="meter_label">㎡超</span>
 										<span class="price_yen">3,890</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">9</span>
 										<span class="label_stand">万円<span class="sub_label_stand">台<span class="last_text">〜</span></span></span>
@@ -186,7 +186,7 @@
       											</a>
 	      									</div>
 	      								</div>
-	      								
+
 	      							</div>
 	      						</div>
 	      					</div>
@@ -246,7 +246,7 @@
 	      		</section>
 	      	</main>
 
-	      	<?php require 'footer.php'; ?>        
+	      	<?php require 'footer.php'; ?>
     </div>
 
     <?php require 'js-footer.php'; ?>

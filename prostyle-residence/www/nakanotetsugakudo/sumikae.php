@@ -13,7 +13,7 @@
 
 <body>
     <div id="page">
-    		
+
 	      	<main>
 	      		<div class="header_outline">
 	      			<h2><a href="index.php"><img src="images/1x/logo_white.svg" alt="" class="img-fluid" width="300"></h2></a>
@@ -55,7 +55,7 @@
 				                </a>
 				            </li>
 				             <li class="d-block d-md-none">
-				                <a href="">
+				                <a href="tel:0120965297">
 				                    <span class="i_topnav">
 				                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 				                    </span>
@@ -82,7 +82,7 @@
 	      			<div class="container">
 	      				<div class="row">
 	      					<div class="col-12">
-	      						
+
 	      						<div class="txtC image-header">
 										<img class="img-fluid" src="sumikae/imgs/image01.jpg">
 									</div>
@@ -203,7 +203,7 @@
 	      					</div>
 	      				</div>
 	      			</div>
-	      			
+
 
 	      		</div>
 	      	</main>

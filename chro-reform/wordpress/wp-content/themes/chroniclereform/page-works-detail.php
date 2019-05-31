@@ -123,22 +123,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	    if (typeof getQueryStr()['p'] !== 'undefined'){
 	        var pID = getQueryStr()['p'];
+	        var baseTags, baseURI;
+          	baseURI = document.baseURI;
 
+          	if (!baseURI) {
+	            baseTags = document.getElementsByTagName("base");
+	            baseURI = baseTags.length ? baseTags[0].href : document.URL;
+          	}
 	        $.get('https://works-event.chronicle-web.com/works/' + pID, function(data){
 
 	            $('#main-data').html($(data).find('#main').html());
 	            $('#container-data').html($(data).find('#container').html());
 
 	            $('#main-data').find('a').each(function(){
-	               $(this).attr('href', $(this).prop('baseURI').substring(0, $(this).prop('baseURI').indexOf('.com/') + 5) + 'reform/works/');
+	               $(this).attr('href', baseURI.substring(0, baseURI.indexOf('.com/') + 5) + 'reform/works/');
 	            });
 
 	            $('#container-data').find('.pageList  a').each(function(){
 	                var pID = $(this).prop('pathname').split('/')[2];
 	                if (typeof pID !== 'undefined' && pID != ''){
-	                    $(this).attr('href', $(this).prop('baseURI').substring(0, $(this).prop('baseURI').indexOf('.com/') + 5) + 'reform/works-detail/?p=' + pID);
+	                    $(this).attr('href', baseURI.substring(0, baseURI.indexOf('.com/') + 5) + 'reform/works-detail/?p=' + pID);
 	                }else{
-	                    $(this).attr('href', $(this).prop('baseURI').substring(0, $(this).prop('baseURI').indexOf('.com/') + 5) + 'reform/works/');
+	                    $(this).attr('href', baseURI.substring(0, baseURI.indexOf('.com/') + 5) + 'reform/works/');
 	                }
 	            });
 

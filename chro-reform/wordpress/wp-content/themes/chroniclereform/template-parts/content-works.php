@@ -35,14 +35,20 @@
         }
 
         $.get('https://works-event.chronicle-web.com/works/' + numPage, function(data){
+          var baseTags, baseURI;
+          baseURI = document.baseURI;
 
+          if (!baseURI) {
+            baseTags = document.getElementsByTagName("base");
+            baseURI = baseTags.length ? baseTags[0].href : document.URL;
+          }
           $('#container-data').html($(data).find('#container').html());
 
           $('#container-data').find('.imgBox > a').each(function(){
             var pID = $(this).prop('pathname').split('/')[2];
 
             $('#container-data').find('a[href="'+ $(this).attr('href') +'"]').each(function(){
-               $(this).attr('href', $(this).prop('baseURI').substring(0, $(this).prop('baseURI').indexOf('.com/') + 5) +'reform/works-detail/?p=' + pID);
+               $(this).attr('href', baseURI.substring(0, baseURI.indexOf('.com/') + 5) +'reform/works-detail/?p=' + pID);
                $(this).attr('target', '_blank');
             });
 

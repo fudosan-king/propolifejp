@@ -16,7 +16,7 @@ $(function($) {
       items: 1,
       autoplay: true,
       autoplayTimeout: 4000,
-      autoplayHoverPause: true,
+      autoplayHoverPause: false,
       animateOut: 'fadeOut'
   });
 

@@ -48,7 +48,7 @@
 			                </a>
 			            </li>
 			             <li class="d-block d-md-none">
-			                <a href="">
+			                <a href="tel:0120965297">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 			                    </span>
@@ -70,7 +70,7 @@
 			        </div>
 			    </div>
 			</header>
-			
+
 			<section class="section_topbanner bg_toplocation">
 				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 			</section>
@@ -113,7 +113,7 @@
 							      				</div>
 						      				</div>
 					      				</div>
-					      				
+
 					      				<div class="box_nakano_left">
 					      					<div class="box_nakano five_chome">
 						      					<div class="box_nakano_content">
@@ -136,7 +136,7 @@
 					      						<img src="images/1x/img24.jpg" alt="" class="img-fluid">
 					      					</div>
 					      				</div>
-					      				
+
 					      			</div>
 					      			<div class="row">
 					      				<div class="col-12 col-sm-7">
@@ -377,7 +377,7 @@
 						      						</div>
 					      						</div>
 					      					</div>
-					      					
+
 					      				</div>
 				      				</div>
 				      				<p class="text-center"><img src="images/1x/img11.jpg" alt="" class="img-fluid w-50"></p>
@@ -508,7 +508,7 @@
 			      						<div class="box_utilities box_commercial">
 			      							<h2>商業施設</h2>
 			      							<ul>
-			      								<li>セブンイレブン中野江古田1丁目店 
+			      								<li>セブンイレブン中野江古田1丁目店
 			      									<span class="float-right">
 				      									<span>徒歩  4分</span> <span>（約  280m）</span>
 				      								</span>
@@ -585,14 +585,14 @@
 		      					</div>
 		      				</div>
 
-		      				
+
 
 		      			</div>
 					</section>
 	      		</div>
 	      	</main>
 
-	      	<?php require 'footer.php'; ?>        
+	      	<?php require 'footer.php'; ?>
     </div>
 
     <?php require 'js-footer.php'; ?>

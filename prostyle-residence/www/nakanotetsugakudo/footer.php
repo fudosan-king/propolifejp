@@ -40,7 +40,7 @@
 						<li><a href="outline.php">物件概要</a></li>
 					</ul>
 					<p class="mb-0">お問い合わせは「プレシス中野哲学堂パークフロント」現地販売センター</p>
-					<p class="freecall"><i class="i_freecall"></i> 0120-965-297</p>
+					<a href="tel:0120965297"><p class="freecall"><i class="i_freecall"></i> 0120-965-297</p></a>
 					<p>営業時間/10：00～19：00  定休日/水曜日（祝日除く）</p>
 				</div>
 			</div>

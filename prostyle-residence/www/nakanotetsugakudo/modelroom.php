@@ -48,7 +48,7 @@
 			                </a>
 			            </li>
 			             <li class="d-block d-md-none">
-			                <a href="">
+			                <a href="tel:0120965297">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 			                    </span>
@@ -70,7 +70,7 @@
 			        </div>
 			    </div>
 			</header>
-			
+
 			<section class="section_topbanner bg_topmodelroom">
 				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 			</section>
@@ -130,7 +130,7 @@
 										      	<div class="modal-body">
 										      		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 											          	<span aria-hidden="true">&times;</span>
-											        </button>  
+											        </button>
 											        <div class="embed-responsive embed-responsive-16by9">
 											        	<!-- <iframe class="embed-responsive-item" src="video/プレシス中野哲学堂パークフロント.mp4" id="video" frameborder="0" allowfullscreen></iframe> -->
 
@@ -147,7 +147,7 @@
 		      			</div>
 		      		</section>
 
-					
+
 
 	      		</div>
 	      	</main>
@@ -161,17 +161,17 @@
 		    /* Get iframe src attribute value i.e. YouTube video url
 		    and store it in a variable */
 		    var url = $("#video").attr('src');
-		    
+
 		    /* Remove iframe src attribute on page load to
 		    prevent autoplay in background */
 		    $("#video").attr('src', '');
-			
+
 			/* Assign the initially stored url back to the iframe src
 		    attribute when modal is displayed */
 		    $("#videoModal").on('shown.bs.modal', function(){
 		        $("#video").attr('src', url);
 		    });
-		    
+
 		    /* Assign empty url value to the iframe src attribute when
 		    modal hide, which stop the video playing */
 		    $("#videoModal").on('hide.bs.modal', function(){

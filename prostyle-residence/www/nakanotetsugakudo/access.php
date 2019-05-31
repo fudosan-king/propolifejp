@@ -48,7 +48,7 @@
 			                </a>
 			            </li>
 			             <li class="d-block d-md-none">
-			                <a href="">
+			                <a href="tel:0120965297">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 			                    </span>
@@ -70,7 +70,7 @@
 			        </div>
 			    </div>
 			</header>
-			
+
 			<section class="section_topbanner bg_topaccess">
 				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 			</section>
@@ -558,7 +558,7 @@
 	      		</div>
 	      	</main>
 
-	      	<?php require 'footer.php'; ?>        
+	      	<?php require 'footer.php'; ?>
     </div>
 
     <?php require 'js-footer.php'; ?>

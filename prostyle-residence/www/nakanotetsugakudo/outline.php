@@ -10,7 +10,7 @@
 
 <body>
     <div id="page">
-    		
+
 	      	<main>
 	      		<div class="header_outline">
 	      			<h2><a href="index.php"><img src="images/1x/logo_white.svg" alt="" class="img-fluid" width="300"></h2></a>
@@ -52,7 +52,7 @@
 				                </a>
 				            </li>
 				             <li class="d-block d-md-none">
-				                <a href="">
+				                <a href="tel:0120965297">
 				                    <span class="i_topnav">
 				                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 				                    </span>
@@ -293,14 +293,14 @@
 					      			</tr>
 					      		</table>
 
-					      		
+
 
 					      		<p class="mb-5 text-center">情報提供日：<span>2019/5/27</span>　次回更新予定日：<span>2019/6/26</span></p>
 
 	      					</div>
 	      				</div>
 	      			</div>
-	      			
+
 
 	      		</div>
 	      	</main>

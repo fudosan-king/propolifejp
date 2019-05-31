@@ -380,7 +380,7 @@
 
 					      				</div>
 				      				</div>
-				      				<p class="text-center"><img src="images/1x/img11.jpg" alt="" class="img-fluid w-50"></p>
+				      				<p class="text-center"><a href="https://tokyo.itot.jp/tetsugakudo/"><img src="images/1x/img11.jpg" alt="" class="img-fluid w-50"></a>></p>
 
 		      					</div>
 		      				</div>
@@ -390,7 +390,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img12.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img12.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">新井薬師</p>
 			      							<p class="about">徒歩14分・約1,080m</p>
@@ -399,7 +399,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img13.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img13.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">新井薬師公園</p>
 			      							<p class="about">徒歩12分・約960m</p>
@@ -408,7 +408,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img14.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img14.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">みずのとう公園</p>
 			      							<p class="about">徒歩5分・約340m</p>
@@ -418,7 +418,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img15.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img15.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">コモディイイダ 沼袋店</p>
 			      							<p class="about">徒歩8分・約580m</p>
@@ -427,7 +427,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img16.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img16.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">マルエツ 新井薬師前店</p>
 			      							<p class="about">徒歩13分・約980m</p>
@@ -436,7 +436,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img17.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img17.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">アリススポーツクラブ</p>
 			      							<p class="about">徒歩3分・約180m</p>
@@ -446,7 +446,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img18.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img18.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">セブンイレブン中野江古田1丁目店</p>
 			      							<p class="about">徒歩4分・約280m</p>
@@ -455,7 +455,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img19.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img19.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">総合東京病院</p>
 			      							<p class="about">徒歩14分・約1,100m</p>
@@ -464,7 +464,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img20.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img20.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">豊島区立南長崎スポーツセンター</p>
 			      							<p class="about">徒歩14分・約1,050m</p>
@@ -474,7 +474,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img21.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img21.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">中野区立第七中学校</p>
 			      							<p class="about">徒歩9分・約680m</p>
@@ -483,7 +483,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img22.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img22.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">中野区役所</p>
 			      							<p class="about">徒歩26分・約2,060m</p>
@@ -492,7 +492,7 @@
 		      						<div class="col-6 col-sm-4">
 		      							<div class="list_projects_item">
 			      							<div class="img_list_projects">
-			      								<a href="#"><img src="images/1x/img23.jpg" alt="" class="img-fluid"></a>
+			      								<img src="images/1x/img23.jpg" alt="" class="img-fluid">
 			      							</div>
 			      							<p class="name">中野区上高田運動施設</p>
 			      							<p class="about">徒歩13分・約990m</p>

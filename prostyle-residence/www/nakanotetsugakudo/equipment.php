@@ -89,7 +89,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen01.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen01.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>天然石天板</h3>
 						      						<p>キッチンカウンタートップは、美しく風格のある天然石を使用。自然の素材ですので食材を加工する際でも安全です。</p>
@@ -98,7 +98,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen02.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen02.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>ハイパーガラストップコンロ</h3>
 						      						<p>熱に強く、ガラス特有の美しさを持つトッププレートです。凹凸の少ないフラットトップなので、拭き掃除も簡単。清潔さをキープできます。</p>
@@ -107,7 +107,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen03.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen03.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>食器洗い乾燥機</h3>
 						      						<p>食器の片付けに便利な食器洗い乾燥機を標準装備しました。スライド収納式なので、すっきり納まり、場所をとりません。</p>
@@ -117,7 +117,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen04.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen04.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>浄水器一体型シャワー水栓</h3>
 						      						<p>水・お湯の切り替えが簡単で、デザイン性にも優れた混合水栓。浄水カートリッジをシンク下に設置しているので、いつまでも清潔で美味しい水が楽しめます。</p>
@@ -126,7 +126,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen05.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen05.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>静音仕様のワイドシンク</h3>
 						      						<p>シンクに当たる水や食器の音を軽減。大きい鍋を置くことが出来る形状と、排水を妨げない排水口の工夫もうれしい配慮です。</p>
@@ -135,7 +135,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen06.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen06.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>ホーローキッチンパネル</h3>
 						      						<p>お手入れが簡単で汚れが付きにくいホーローパネルを採用。マグネット対応で調理小物を掛けることができ便利です。</p>
@@ -145,7 +145,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen07.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen07.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>ステンレス製レンジフード</h3>
 						      						<p>スタイリッシュなステンレス製のレンジフードを採用。ホーロー整流板付きですのでお手入れも簡単です。</p>
@@ -155,7 +155,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/kitchen08.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/kitchen08.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>スライドキャビネット（ブルモーション機能付）</h3>
 						      						<p>引き出しが閉まる直前にスピードをゆるめ、ゆっくりと静かに閉まるソフトクローズ機能付きです</p>
@@ -170,7 +170,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/bathroom01.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/bathroom01.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>保温機能付浴槽</h3>
 						      						<p>※浴室テレビはオプションになります。</p>
@@ -179,7 +179,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/bathroom02.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/bathroom02.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>浴室換気暖房乾燥機</h3>
 						      						<p>入浴後の換気や乾燥により、浴室を清潔に保ちます。寒い時期には入浴前の暖房、雨の日は洗濯物の乾燥にも使用できます</p>
@@ -188,7 +188,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/bathroom03.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/bathroom03.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>オートバス（セミオート）</h3>
 						      						<p>ボタンひとつでお湯張り、追い炊きができる便利なオートバス。寛ぎのバスタイムをお楽しみください。</p>
@@ -198,7 +198,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/bathroom04.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/bathroom04.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>シャワースライドバー</h3>
 					      						</div>
@@ -206,7 +206,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/bathroom05.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/bathroom05.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>スクエア壁付水栓</h3>
 					      						</div>
@@ -214,7 +214,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/bathroom06.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/bathroom06.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>ヘアキャッチャー</h3>
 						      						<p>髪の毛が集まりやすく、捨てやすい形状の排水口。毎日のお手入れや、お掃除も簡単です。</p>
@@ -224,7 +224,7 @@
 					      					<div class="col-6 col-md-4">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/img_misty.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/img_misty.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>
 							      						<div class="row no-gutters">
@@ -242,7 +242,7 @@
 					      					<div class="col-6 col-md-4 d-block d-md-none">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/img_flagstone_floor.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/img_flagstone_floor.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>フラッグストーンフロア</h3>
 						      						<p>切り出した石をそろえたような表面パターンにより水はけをする加工を施した床。水の表面張力を壊す効果により、乾きやすくお手入れも簡単です。</p>
@@ -255,7 +255,7 @@
 					      								<div class="col-12 col-md-7 align-self-center">
 					      									<h4 class="d-block d-md-none">ぬるめ約39℃のお湯で、ぽっかぽか。酸素美泡湯で始める新入浴スタイル。</h4>
 					      									<div class="img_equipment mb-2 mb-md-0">
-								      							<a href="#"><img src="images/1x/img_warmwater.png" alt="" class="img-fluid"></a>
+								      							<img src="images/1x/img_warmwater.png" alt="" class="img-fluid">
 								      						</div>
 					      								</div>
 					      								<div class="col-12 col-md-5 align-self-center">
@@ -269,7 +269,7 @@
 					      					<div class="col-6 col-md-4 d-none d-md-block">
 					      						<div class="box_equipment_item">
 						      						<div class="img_equipment">
-						      							<a href="#"><img src="images/1x/img_flagstone_floor.jpg" alt="" class="img-fluid"></a>
+						      							<img src="images/1x/img_flagstone_floor.jpg" alt="" class="img-fluid">
 						      						</div>
 						      						<h3>フラッグストーンフロア</h3>
 						      						<p>切り出した石をそろえたような表面パターンにより水はけをする加工を施した床。水の表面張力を壊す効果により、乾きやすくお手入れも簡単です。</p>
@@ -286,7 +286,7 @@
 					      				<div class="row no-gutters">
 					      					<div class="col-6 col-md-5">
 					      						<div class="box_img_powderoom">
-						      						<a href="#"><img src="images/1x/powderroom01.png" alt="" class="img-fluid"></a>
+						      						<img src="images/1x/powderroom01.png" alt="" class="img-fluid">
 						      					</div>
 					      					</div>
 					      					<div class="col-6 col-md-7">
@@ -294,7 +294,7 @@
 					      							<div class="col-12 col-md-6">
 					      								<div class="box_equipment_item">
 								      						<div class="img_equipment">
-								      							<a href="#"><img src="images/1x/powderroom02.jpg" alt="" class="img-fluid"></a>
+								      							<img src="images/1x/powderroom02.jpg" alt="" class="img-fluid">
 								      						</div>
 								      						<h3>天然石カウンター天板</h3>
 								      						<p>洗面台のカウンター天板には重厚な質感と美しい風合いの天然石を使用し、空間にホテルライクな高級感を演出します。</p>
@@ -303,7 +303,7 @@
 					      							<div class="col-12 col-md-6">
 					      								<div class="box_equipment_item">
 								      						<div class="img_equipment">
-								      							<a href="#"><img src="images/1x/powderroom03.jpg" alt="" class="img-fluid"></a>
+								      							<img src="images/1x/powderroom03.jpg" alt="" class="img-fluid">
 								      						</div>
 								      						<h3>シングルレバー水栓</h3>
 								      						<p>シンプルで実用性に優れた使い勝手のよい、シングルレバー洗髪シャワー混合水栓を採用しました。ヘッドが引き出せるので、ボウルのお手入れに便利です。</p>
@@ -315,7 +315,7 @@
 							      							<div class="col-12 col-md-6">
 							      								<div class="box_equipment_item">
 										      						<div class="img_equipment">
-										      							<a href="#"><img src="images/1x/powderroom04.jpg" alt="" class="img-fluid"></a>
+										      							<img src="images/1x/powderroom04.jpg" alt="" class="img-fluid">
 										      						</div>
 										      						<h3>三面鏡裏収納</h3>
 										      						<p>ワイドな三面鏡の裏には、キャビネットタイプの収納スペースを設けました。豊富な収納力で洗面まわりをすっきりと整理できます。</p>
@@ -324,7 +324,7 @@
 							      							<div class="col-12 col-md-6">
 							      								<div class="box_equipment_item">
 										      						<div class="img_equipment">
-										      							<a href="#"><img src="images/1x/powderroom05.jpg" alt="" class="img-fluid"></a>
+										      							<img src="images/1x/powderroom05.jpg" alt="" class="img-fluid">
 										      						</div>
 										      						<h3>ヘルスメーター収納スペース</h3>
 										      						<p>洗面化粧台の足元を活用して、ヘルスメーターを収納するスペースを確保しました。</p>
@@ -341,7 +341,7 @@
 							      					<div class="col-6 col-md-6">
 					      								<div class="box_equipment_item">
 								      						<div class="img_equipment">
-								      							<a href="#"><img src="images/1x/powderroom04.jpg" alt="" class="img-fluid"></a>
+								      							<img src="images/1x/powderroom04.jpg" alt="" class="img-fluid">
 								      						</div>
 								      						<h3>三面鏡裏収納</h3>
 								      						<p>ワイドな三面鏡の裏には、キャビネットタイプの収納スペースを設けました。豊富な収納力で洗面まわりをすっきりと整理できます。</p>
@@ -350,7 +350,7 @@
 					      							<div class="col-6 col-md-6">
 					      								<div class="box_equipment_item">
 								      						<div class="img_equipment">
-								      							<a href="#"><img src="images/1x/powderroom05.jpg" alt="" class="img-fluid"></a>
+								      							<img src="images/1x/powderroom05.jpg" alt="" class="img-fluid">
 								      						</div>
 								      						<h3>ヘルスメーター収納スペース</h3>
 								      						<p>洗面化粧台の足元を活用して、ヘルスメーターを収納するスペースを確保しました。</p>
@@ -367,7 +367,7 @@
 					      				<div class="row no-gutters">
 					      					<div class="col-12 col-md-5">
 					      						<div class="restroom_big_img">
-						      						<a href="#"><img src="images/1x/restroom01.jpg" alt="" class="img-fluid"></a>
+						      						<img src="images/1x/restroom01.jpg" alt="" class="img-fluid">
 						      					</div>
 					      					</div>
 					      					<div class="col-12 col-md-7">
@@ -375,7 +375,7 @@
 					      							<div class="col-6 col-md-6">
 					      								<div class="box_equipment_item">
 								      						<div class="img_equipment">
-								      							<a href="#"><img src="images/1x/restroom02.jpg" alt="" class="img-fluid"></a>
+								      							<img src="images/1x/restroom02.jpg" alt="" class="img-fluid">
 								      						</div>
 								      						<h3>手洗いカウンター</h3>
 								      						<p>高齢者やお子様に使いやすい独立タイプの手洗いカウンター。鏡付きでちょっとした身だしなみも確認できます。</p>
@@ -384,7 +384,7 @@
 					      							<div class="col-6 col-md-6">
 					      								<div class="box_equipment_item">
 								      						<div class="img_equipment">
-								      							<a href="#"><img src="images/1x/restroom03.jpg" alt="" class="img-fluid"></a>
+								      							<img src="images/1x/restroom03.jpg" alt="" class="img-fluid">
 								      						</div>
 								      						<h3>吊戸棚</h3>
 								      						<p>小物の収納に便利な吊戸棚を設置。整理された空間を保てます。</p>
@@ -404,7 +404,7 @@
 					      				<div class="row no-gutters">
 					      					<div class="col-6 col-md-5">
 					      						<div class="box_equipment_storage_bigimg">
-						      						<a href="#"><img src="images/1x/storage01.jpg" alt="" class="img-fluid w-100"></a>
+						      						<img src="images/1x/storage01.jpg" alt="" class="img-fluid w-100">
 						      						<span>A</span>
 						      						<span class="d-block d-md-none">ウォークインクローゼット</span>
 						      					</div>
@@ -413,7 +413,7 @@
 					      						<div class="row no-gutters">
 					      							<div class="col-12 col-md-6">
 					      								<div class="box_equipment_storage_smallimg mb-2">
-					      									<a href="#"><img src="images/1x/storage02.jpg" alt="" class="img-fluid"></a>
+					      									<img src="images/1x/storage02.jpg" alt="" class="img-fluid">
 					      									<span>B</span>
 					      									<span class="d-block d-md-none">洗面台下収納</span>
 					      								</div>
@@ -421,7 +421,7 @@
 
 					      							<div class="col-12 col-md-6">
 					      								<div class="box_equipment_storage_smallimg mb-2">
-						      								<a href="#"><img src="images/1x/storage03.jpg" alt="" class="img-fluid"></a>
+						      								<img src="images/1x/storage03.jpg" alt="" class="img-fluid">
 						      								<span>C</span>
 						      								<span class="d-block d-md-none">トール型下足入</span>
 						      							</div>
@@ -430,21 +430,21 @@
 					      							<div class="row d-none d-md-flex no-gutters">
 						      							<div class="col-4 col-md-4">
 						      								<div class="box_equipment_storage_smallimg">
-							      								<a href="#"><img src="images/1x/storage04.jpg" alt="" class="img-fluid"></a>
+							      								<img src="images/1x/storage04.jpg" alt="" class="img-fluid">
 							      								<span>D</span>
 							      								<span class="d-block d-md-none">クローゼット</span>
 							      							</div>
 						      							</div>
 						      							<div class="col-4 col-md-4">
 						      								<div class="box_equipment_storage_smallimg">
-							      								<a href="#"><img src="images/1x/storage05.jpg" alt="" class="img-fluid"></a>
+							      								<img src="images/1x/storage05.jpg" alt="" class="img-fluid">
 							      								<span>E</span>
 							      								<span class="d-block d-md-none">物入</span>
 							      							</div>
 						      							</div>
 						      							<div class="col-4 col-md-4">
 						      								<div class="box_equipment_storage_smallimg">
-							      								<a href="#"><img src="images/1x/storage06.jpg" alt="" class="img-fluid"></a>
+							      								<img src="images/1x/storage06.jpg" alt="" class="img-fluid">
 							      								<span>F</span>
 							      								<span class="d-block d-md-none">リネン庫</span>
 							      							</div>
@@ -457,21 +457,21 @@
 					      					<div class="row no-gutters d-flex d-md-none">
 				      							<div class="col-4 col-md-4">
 				      								<div class="box_equipment_storage_smallimg">
-					      								<a href="#"><img src="images/1x/storage04.jpg" alt="" class="img-fluid"></a>
+					      								<img src="images/1x/storage04.jpg" alt="" class="img-fluid">
 					      								<span>D</span>
 					      								<span class="d-block d-md-none">クローゼット</span>
 					      							</div>
 				      							</div>
 				      							<div class="col-4 col-md-4">
 				      								<div class="box_equipment_storage_smallimg">
-					      								<a href="#"><img src="images/1x/storage05.jpg" alt="" class="img-fluid"></a>
+					      								<img src="images/1x/storage05.jpg" alt="" class="img-fluid">
 					      								<span>E</span>
 					      								<span class="d-block d-md-none">物入</span>
 					      							</div>
 				      							</div>
 				      							<div class="col-4 col-md-4">
 				      								<div class="box_equipment_storage_smallimg">
-					      								<a href="#"><img src="images/1x/storage06.jpg" alt="" class="img-fluid"></a>
+					      								<img src="images/1x/storage06.jpg" alt="" class="img-fluid">
 					      								<span>F</span>
 					      								<span class="d-block d-md-none">リネン庫</span>
 					      							</div>
@@ -626,13 +626,13 @@
 						      					</div>
 						      				</div>
 						      				<div class="col-12 col-md-7 mb-5">
-						      					<a href="#"><img src="images/1x/structure01.png" alt="" class="img-fluid"></a>
+						      					<img src="images/1x/structure01.png" alt="" class="img-fluid">
 						      				</div>
 						      				<div class="col-12 col-md-4">
 						      					<div class="row no-gutters">
 						      						<div class="col-6 col-md-12">
 						      							<div class="structure_item_img">
-						      								<a href="#"><img src="images/1x/structure02.png" alt="" class="img-fluid w-100"></a>
+						      								<img src="images/1x/structure02.png" alt="" class="img-fluid w-100">
 						      							</div>
 						      						</div>
 						      						<div class="col-6 col-md-12">
@@ -644,13 +644,13 @@
 						      				</div>
 						      				<div class="col-6 col-md-4">
 						      					<div class="structure_item_img">
-							      					<a href="#"><img src="images/1x/structure03.png" alt="" class="img-fluid"></a>
+							      					<img src="images/1x/structure03.png" alt="" class="img-fluid">
 							      				</div>
 						      					<h3>二重床＋二重天井（一部除く）</h3>
 						      				</div>
 						      				<div class="col-6 col-md-4">
 						      					<div class="structure_item_img">
-							      					<a href="#"><img src="images/1x/structure04.png" alt="" class="img-fluid"></a>
+							      					<img src="images/1x/structure04.png" alt="" class="img-fluid">
 							      				</div>
 						      					<h3>構造強度を高める『ダブル配筋』</h3>
 						      				</div>
@@ -673,7 +673,7 @@
 						      				<div class="col-6 col-md-3">
 						      					<div class="box_amenity_item">
 							      					<div class="amenity_item_img">
-							      						<a href="#"><img src="images/1x/amenity01.png" alt="" class="img-fluid"></a>
+							      						<img src="images/1x/amenity01.png" alt="" class="img-fluid">
 							      					</div>
 							      					<h3>複層ガラス</h3>
 							      					<p>2枚のガラスの間に空気層を設けた複層ガラスを採用。高い断熱性を発揮し省エネにも貢献します。</p>
@@ -682,7 +682,7 @@
 						      				<div class="col-6 col-md-3">
 						      					<div class="box_amenity_item">
 							      					<div class="amenity_item_img">
-							      						<a href="#"><img src="images/1x/amenity02.png" alt="" class="img-fluid"></a>
+							      						<img src="images/1x/amenity02.png" alt="" class="img-fluid">
 							      					</div>
 							      					<h3>TES温水式床暖房</h3>
 							      					<p>リビング・ダイニングには、床暖房を採用。お部屋全体を足先からムラなく暖めます。</p>
@@ -691,7 +691,7 @@
 						      				<div class="col-6 col-md-3">
 						      					<div class="box_amenity_item">
 							      					<div class="amenity_item_img">
-							      						<a href="#"><img src="images/1x/amenity03.png" alt="" class="img-fluid"></a>
+							      						<img src="images/1x/amenity03.png" alt="" class="img-fluid">
 							      					</div>
 							      					<h3>ペット共生マンション</h3>
 							      					<p>※ペットの種類や大きさ、数など制限があります。詳しくは、係員にお尋ねください。</p>
@@ -700,7 +700,7 @@
 						      				<div class="col-6 col-md-3">
 						      					<div class="box_amenity_item">
 							      					<div class="amenity_item_img">
-							      						<a href="#"><img src="images/1x/amenity04.png" alt="" class="img-fluid"></a>
+							      						<img src="images/1x/amenity04.png" alt="" class="img-fluid">
 							      					</div>
 							      					<h3>宅配ボックス</h3>
 							      				</div>

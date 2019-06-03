@@ -143,56 +143,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="東京表参道" onchange=""> 東京表参道
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル表参道本店ショールーム" onchange=""> クロニクル表参道本店ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="東京日本橋" onchange=""> 東京日本橋
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル東京日本橋ショールーム" onchange=""> クロニクル東京日本橋ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="横浜" onchange=""> 横浜
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル横浜西口ショールーム" onchange=""> クロニクル横浜西口ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="名古屋" onchange=""> 名古屋
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル名古屋伏見ショールーム" onchange=""> クロニクル名古屋伏見ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="京都" onchange=""> 京都
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル京都四条ショールーム" onchange=""> クロニクル京都四条ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="大阪" onchange=""> 大阪
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル大阪梅田ショールーム" onchange=""> クロニクル大阪梅田ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="神戸" onchange=""> 神戸
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル神戸元町ショールーム" onchange=""> クロニクル神戸元町ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
                                                                         <li>
                                                                             <div class="radio">
                                                                                 <label>
-                                                                                    <input type="radio" name="showroom" id="" value="福岡" onchange=""> 福岡
+                                                                                    <input type="radio" name="showroom" id="" value="クロニクル福岡天神ショールーム" onchange=""> クロニクル福岡天神ショールーム
                                                                                 </label>
                                                                             </div>
                                                                         </li>
@@ -357,7 +357,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </div>
                                                     
                                                     <p>弊社の個人情報に関する取り扱いについては「プライバシーポリシー」をご一読ください。上記事項をご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
-                                                    <p class="content-policy"><a class="btn btn-link" target="_blank" href="https://www.chronicle-web.com/policy/">▶「プライバシーポリシー」を開く（売主：株式会社クロニクル）</a></p>
+                                                    <p class="content-policy"><a class="btn btn-link" target="_blank" href="https://www.chronicle-web.com/policy/">▶「プライバシーポリシー」を開く（株式会社クロニクル）</a></p>
                                                     <div class="checkbox center">
                                                         <label>
                                                             <input name="secret-info" type="checkbox" id="" value="同意する" onchange=""> 同意する

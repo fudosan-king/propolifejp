@@ -38,7 +38,7 @@ main section.content-page .sub_title {
 }
 
 main section.content-page div#main-content { padding: 0 0 50px; }
-main section.content-page.company div#main-content { width: 890px; margin: 0 auto;}
+main section.content-page.company div#main-content { width: 890px; margin: 0 auto; font-family: '游ゴシック','YuGothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif;}
 
 
 main section.content-page dl.company {
@@ -1139,8 +1139,13 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 }
 
 @media screen and (max-width:420px){
-    .navbar-nav .nav-item > .dropdown-toggle::after{border: none;}
-    .navbar-nav .nav-item .dropdown-item {text-align: center; padding: 0 1.5rem; font-size: 12px;}
+    .navbar-nav .nav-item > .dropdown-toggle::before{border: none;}
+    .navbar-nav .nav-item .dropdown-menu {border-top: none; padding: 0;}
+    .navbar-nav .nav-item .dropdown-item {text-align: center; padding: 0.5em 1.5rem; font-size: 15px;}
+    
+    .navbar-nav .nav-item .dropdown-item {border-top: #cccc 1px dotted;}
+    .navbar-nav .nav-item .dropdown-item:nth-child(1) {border-top: none;}
+
     ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 100%;}
     main section.content-page .extra-content #section_title h2 img{height: 0.8em;}
     main section.content-page .extra-content #section_title h2 img.spec {height: auto; width: 100%;}

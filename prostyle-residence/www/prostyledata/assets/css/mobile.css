@@ -95,11 +95,11 @@
 	}
 	.bsnav-mobile .navbar-nav .nav-item .nav-link {
 		display: block;
-		padding: 20px 15px;
+		padding: 18px 15px;
 		border-bottom: 1px solid #ccc;
 		text-align: center;
 	}	
-	.navbar-nav .nav-item:hover > .nav-link::after, .navbar-nav .nav-item.active>.nav-link::after {
+	.navbar-nav .nav-item:hover > .nav-link::before, .navbar-nav .nav-item.active>.nav-link::before {
 		display: none;
 	}
 	.bsnav-mobile .navbar-nav.navbar_custom {
@@ -318,14 +318,14 @@
 		padding-bottom: 15px;
 	}
 	.bsnav-mobile.in .navbar {
-		transform: translate3d(0,74px,0)
+		transform: translate3d(0,57px,0)
 	}
 }
 @media (max-width: 414px) {
 	.navbar-nav .hourwoking {
 		display: block;
 	}
-	.navbar-nav .nav-item .nav-link::after {
+	.navbar-nav .nav-item .nav-link::before {
 		content: url('../images/1x/i_right.png');
 		width: 7px;
 		height: 12px;

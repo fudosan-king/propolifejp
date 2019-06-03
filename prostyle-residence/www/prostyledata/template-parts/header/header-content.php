@@ -18,11 +18,36 @@
                 echo ' <li class="nav-item '.$active.' d-none d-sm-block"><a class="nav-link" href="/">TOP</a></li>';
                 foreach ($topNav as $nav){
                     /* Action here */
-
                     $active = $nav->object_id == $post->ID ? 'active' : "";
                     $hideOnSP = get_page($nav->object_id)->post_name == 'contact' ? 'd-none d-sm-block' : '';
 
-                    echo ' <li class="nav-item '.$hideOnSP.' '.$active.'"><a class="nav-link" href="'.$nav->url.'" target="'.$nav->target.'">'.$nav->title.'</a></li>';
+                    if ($nav->menu_item_parent == 0){
+                        $childMenu = get_nav_child_menu($topNav, $nav->ID);
+
+                        $isDropdown = (count($childMenu)>0) ? 'dropdown': '';
+                        $signDropdown = (count($childMenu)>0) ? 'dropdown-toggle': '';
+                        ?>
+                            <li class="nav-item <?php echo $hideOnSP.' '.$active.' '.$isDropdown; ?>" >
+                                <a class="nav-link <?php echo $signDropdown; ?>" href="<?php echo $nav->url; ?>" target="<?php echo $nav->target; ?>" id="navbarDropdown-<?php echo $nav->ID; ?>" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $nav->title; ?></a>
+                                <?php 
+                                    if (count($childMenu)>0){
+                                
+
+                                        echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown-'.$nav->ID.'">';
+                                            foreach($childMenu as $cmenu){
+                                                ?>
+                                                <a class="dropdown-item" href="<?php echo $cmenu->url; ?>" target="<?php echo $cmenu->target; ?>"><?php echo $cmenu->title; ?></a>
+                                                <?php
+                                            }
+                                        echo '</div>';
+                                    }
+                                ?>
+                            </li>
+                        <?php
+                    }else{
+                        
+                    }                    
+                    
                 }
                 echo '</ul>';
             }

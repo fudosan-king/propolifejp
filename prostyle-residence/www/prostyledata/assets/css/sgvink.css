@@ -1,3 +1,11 @@
+.navbar-nav .nav-item:hover > .dropdown-toggle::after, .navbar-nav .nav-item.active>.dropdown-toggle::after {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    margin-left: 0;
+}
+
 .freecall { font-size: 2.0em; letter-spacing: 0;}
 .hourwoking {font-size: 9pt;}
 .red {color: red!important;}
@@ -1131,6 +1139,8 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 }
 
 @media screen and (max-width:420px){
+    .navbar-nav .nav-item > .dropdown-toggle::after{border: none;}
+    .navbar-nav .nav-item .dropdown-item {text-align: center; padding: 0 1.5rem; font-size: 12px;}
     ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 100%;}
     main section.content-page .extra-content #section_title h2 img{height: 0.8em;}
     main section.content-page .extra-content #section_title h2 img.spec {height: auto; width: 100%;}

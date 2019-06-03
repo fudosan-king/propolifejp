@@ -202,7 +202,15 @@ function dynamictime() {
     return $mytimestamp;
 }
 
-
+function get_nav_child_menu($menus, $parent_menu){
+    $child_menus = array();
+    foreach($menus as $menu){
+        if($menu->menu_item_parent == $parent_menu){
+            array_push($child_menus, $menu);
+        }
+    }
+    return $child_menus;
+}
 
 function sgvink_pagination(){
 	global $wp_query;

@@ -105,6 +105,8 @@ p {margin-bottom: 10px;}
   bottom: 0;
 }
 
+.dropdown-menu {margin-top: 0px; border-radius: 0;}
+
 body {
   position:relative;
   overflow-y: scroll;

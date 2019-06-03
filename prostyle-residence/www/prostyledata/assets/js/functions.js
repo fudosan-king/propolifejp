@@ -13,7 +13,7 @@ $(function($) {
         });
     }
 
-    $('.nav-link.dropdown-toggle').click(function(event) {
+    $('.nav-link').click(function(event) {
         /* Act on the event */
         $target = $(this).attr('target') == '_blank' ? '_blank' : '_self';
         window.open($(this).attr('href'), $target);

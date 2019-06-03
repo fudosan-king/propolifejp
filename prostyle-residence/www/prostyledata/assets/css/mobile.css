@@ -23,6 +23,10 @@
 	.navbar-nav .freecall {
 		margin-top: -10px;
 	}
+	.bg_common::after {
+        background: url(../images/1x/top-image-prostyle_sp.jpg);
+        background-size: 100%;
+    }
 }
 @media (max-width: 812px) {
 	.hourwoking {
@@ -101,14 +105,14 @@
 	.bsnav-mobile .navbar-nav.navbar_custom {
 		flex-direction: column-reverse;
 	}
-	.banner {
+	/*.banner {
 		height: 82%;
-	}
-	.banner::before {
+	}*/
+	/*.banner::before {
 		height: 80%;
 		background: url('../images/1x/top-image-prostyle_sp.jpg') no-repeat;
 		background-position: center 20px;
-	}
+	}*/
 	.bg_common::before {
 		top: 0;
 		background: url('../images/1x/top-image-prostyle_sp.jpg') no-repeat;
@@ -335,8 +339,8 @@
 		bottom: 85px;
 	}
 	.bsnav {
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 11px;
+		padding-bottom: 11px;
 		border-bottom: 1px solid #ccc;
 	}
 	.main_nav {
@@ -349,6 +353,11 @@
 	.navbar-nav .btnInquiries {
 		margin-left: 0;
 		margin-right: 0;
+	}
+
+	.bg_common::after {
+	    background-position: 0 -40px;
+	    background-size: 100%;
 	}
 
 	.section_distribution_record {margin-top: -40px;}

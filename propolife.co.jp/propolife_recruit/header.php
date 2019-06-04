@@ -160,7 +160,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         </li>
                         <li>
                             <a href="http://www.propolifehotels.com" target="_blank">
-                                <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpeg" width="356" height="98" alt="株式会社プロスタイル旅館">
+                                <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpg" width="356" height="98" alt="株式会社プロスタイル旅館">
                             </a>
                             <span><a href="http://www.propolifehotels.com" target="_blank">株式会社プロスタイル旅館</a></span>
                         </li>

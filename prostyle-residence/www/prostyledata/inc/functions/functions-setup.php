@@ -215,25 +215,41 @@ function get_nav_child_menu($menus, $parent_menu){
 function sgvink_pagination(){
 	global $wp_query;
 	if ($wp_query->max_num_pages >= 2) {
-		echo '<nav class="pagination pagination_type2 pagination_type3 pagination_custom">';
-		echo '<ol class="pagination__list">';
-		if (get_query_var('paged') >= 2)
-			echo '<li class="pagination__group"><a href="'.get_pagenum_link(0).'" class="pagination__item pagination__control pagination__control_prev">prev</a></li>';
+		echo '<nav class="pagination__custom">';
+        echo '<ul class="pagination pagination-sm">';
+        
+        $firstDisabled = (get_query_var('paged') >= 2) ? '' : 'disabled';
+        $previousUrl = (get_query_var('paged') >= 2) ? get_pagenum_link(0) : '#';
 
-		for($i = 1; $i <= $wp_query->max_num_pages; $i++){
-			$tmpPage = get_query_var('paged') != 0 ? get_query_var('paged') : 1;
+        $endDisabled = (get_query_var('paged') < 2) ? '' : 'disabled';
+        $nextUrl = (get_query_var('paged') < 2) ? get_pagenum_link($wp_query->max_num_pages) : '#';
 
-			if ($tmpPage == $i)
-				echo '<li class="pagination__group"><span class="pagination__item pagination__item_active">'.$i.'</span></li>';
-			else
-				echo '<li class="pagination__group"><a href="'.get_pagenum_link($i).'" class="pagination__item">'.$i.'</a></li>';
-		}
+        echo '<li class="page-item '.$firstDisabled.'">
+        <a class="page-link" href="'.$previousUrl.'" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+        </a>
+        </li>';
 
-		if (get_query_var('paged') < 2)
-			echo '<li class="pagination__group"><a href="'.get_pagenum_link($wp_query->max_num_pages).'" class="pagination__item pagination__control pagination__control_next">next</a></li>';
+        for($i = 1; $i <= $wp_query->max_num_pages; $i++){
+            $tmpPage = get_query_var('paged') != 0 ? get_query_var('paged') : 1;
 
-		echo '</ol>';
-		echo '</nav>';
+            if ($tmpPage == $i)
+                echo '<li class="page-item active"><a class="page-link" href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
+            else
+                echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
+        }
+
+
+        echo '<li class="page-item '.$endDisabled.'">
+        <a class="page-link" href="'.$nextUrl.'" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+        </a>
+        </li>';
+
+        echo '</ul>';
+        echo '</nav>';
 	}
 }
 

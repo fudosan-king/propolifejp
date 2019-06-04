@@ -5,7 +5,7 @@ if (is_archive()){
 	?>
 
 	<main>
-		<section class="content-page">
+		<section class="content-page archive-<?php echo $post->post_type; ?>">
 			<div class="container">
 				<div class="row">
 					<div class="col col-12">
@@ -22,7 +22,9 @@ if (is_archive()){
 										<a href="#" class="date_post"><?php the_time(); ?></a>
 									</div>
 									<div class="img_feature">
-										<img class="img-fluid" src="<?php echo $thumnailImage; ?>"></img>
+										<?php if(!empty($thumnailImage)): ?>
+											<img class="img-fluid" src="<?php echo $thumnailImage; ?>"></img>
+										<?php endif; ?>
 									</div>
 									<?php the_excerpt(); ?>
 									
@@ -30,7 +32,10 @@ if (is_archive()){
 
 								<?php
 							endwhile;
-							sgvink_pagination();
+							
+							?>
+							<div class="d-flex justify-content-center"><?php sgvink_pagination(); ?></div>
+							<?php
 						else:
 							?>
 								<p>Posts not found.</p>

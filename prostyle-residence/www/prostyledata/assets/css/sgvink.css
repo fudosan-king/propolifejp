@@ -22,6 +22,10 @@ main {text-align: justify;}
 
 main section.content-page { padding-top: 74px; font-size: 12pt; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
 main section.content-page.access #contents_inner h1 {margin-bottom: 0;}
+main section.content-page.news,main section.content-page.archive-news { padding-top: 104px; }
+main section.content-page.archive-news div#main-content { padding: 0 0 20px; }
+main section.content-page.archive-news div#main-content .img_feature,
+main section.content-page.archive-news div#main-content .img_feature {margin-top: 10px;}
 
 /*main section.content-page.project {padding-top: 74px;}*/
 
@@ -30,9 +34,9 @@ main section.content-page .sub_title {
     border-bottom: 1px solid #ebebeb;
     color: #654;
     background-image: url(../images/1x/ico.png);
-    background-size: 55px;
+    background-size: 35px;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: 0px 7px;
     padding-left: 70px;
     padding-bottom: 10px;
 }
@@ -786,6 +790,11 @@ main.kaitori section.outline .compName {font-weight: bold;font-size:16px;}
 main.kaitori section.outline .outlineTitle{color: #654;font-size: 36px; margin: 30px auto 30px;}
 main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 
+/*pagination*/
+nav.pagination__custom {margin-bottom: 30px;}
+nav.pagination__custom .page-link {color: #333333;}
+nav.pagination__custom  .page-item.active .page-link {background-color: #333333; border-color: #333333;}
+
 /* @media RESPONSIVE STYLESHEET*/
 
 @media screen and (max-width: 1366px) {
@@ -1079,6 +1088,10 @@ main.kaitori section.outline .outlineTitle span{font-size: 20px;}
 }
 
 @media screen and (max-width: 480px){
+    main section.content-page.archive-news .sub_title,
+    main section.content-page.news .sub_title {font-size: 18px; background-size: 32px; background-position: 0px 0px; padding-bottom: 12px; padding-left: 45px;}
+    main section.content-page #main-content .link-more {margin-bottom: 0;}
+    main section.content-page #main-content .link-more .btn.btnReadmore {font-size: 10pt;}
     main section.content-page .extra-content #section_title .ruby{margin:10px 0;font-size:11px;}
     main section.content-page .extra-content #section_title h2{margin-bottom:0;}
     main section.content-page .extra-content #section_title .line{width:120px;height:3px;margin:0 auto 30px auto;background-color:#fff;}

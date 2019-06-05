@@ -17,6 +17,11 @@
     height: 100%;
 }
 ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 500px;}
+.navbar-nav .nav-item .dropdown-menu {min-width: auto;width: 100%;}
+.navbar-nav .nav-item .dropdown-menu .dropdown-item {padding: 0 0.5rem; font-size: 0.9em;}
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:focus, 
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {background-color: #d8d8d8;}
+
 main {text-align: justify;}
 
 

@@ -121,7 +121,7 @@ get_header(); ?>
 <li>
 						<a href="http://www.propolifehotels.com" target="_blank">
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpg" width="356" height="101" alt="プロスタイル旅館">
-							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link11.jpg" width="100%" alt="プロスタイル旅館">
+							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link11.jpeg" width="100%" alt="プロスタイル旅館">
 						</a>
 						<a href="http://www.propolifehotels.com" target="_blank"><span>株式会社プロスタイル旅館</span></a>
 				    </li>

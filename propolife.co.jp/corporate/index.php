@@ -111,17 +111,17 @@ get_header(); ?>
 				    </li>
 
 					<li>
-						<a href="http://kotakino.wpblog.jp" target="_blank">
+						<a href="http://nikuan-kotakino.com/" target="_blank">
 							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link10.jpg" width="356" height="98" alt="株式会社小滝野">
 							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link10.jpg" width="100%" alt="株式会社小滝野">
 						</a>
-						<span><a href="http://kotakino.wpblog.jp" target="_blank">株式会社小滝野</a></span>
+						<span><a href="http://nikuan-kotakino.com/" target="_blank">株式会社小滝野</a></span>
 					</li>
 
 <li>
 						<a href="http://www.propolifehotels.com" target="_blank">
-							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpeg" width="356" height="101" alt="プロスタイル旅館">
-							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link11.jpeg" width="100%" alt="プロスタイル旅館">
+							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpg" width="356" height="101" alt="プロスタイル旅館">
+							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link11.jpg" width="100%" alt="プロスタイル旅館">
 						</a>
 						<a href="http://www.propolifehotels.com" target="_blank"><span>株式会社プロスタイル旅館</span></a>
 				    </li>

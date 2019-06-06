@@ -11,7 +11,7 @@
 <title><?php wp_title(''); ?></title>
 <?php wp_head(); ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
-<?php
+<?php 
 if(is_page(array('top'))){
 ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/index.css">
@@ -183,7 +183,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</ul>
 			</div>
 		</div>
-		<div class="hBox hBox02">
+		<div class="hBox2 hBox02">
 			<div class="subBox">
 				<ul class="clearfix">
 					<li>

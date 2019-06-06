@@ -348,6 +348,7 @@ body {
 	top: 80px;
 	left:0 ;
 	width: 100%;
+	background: url(../../common/img/bg01.png) repeat left top;
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.5s linear;

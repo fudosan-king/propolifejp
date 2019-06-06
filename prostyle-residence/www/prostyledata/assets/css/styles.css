@@ -148,7 +148,7 @@ body {
 }
 .fullheight.bg_common::before {height: 100vh;}
 .btnInquiries {
-  padding: 10px 15px;
+  padding: 23px 15px;
   background: #ae8148;
   color: #fff;
   display: block;

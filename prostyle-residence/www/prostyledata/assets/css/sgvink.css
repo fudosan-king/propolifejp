@@ -1157,6 +1157,7 @@ nav.pagination__custom  .page-item.active .page-link {background-color: #333333;
 }
 
 @media screen and (max-width:420px){
+    .btnInquiries { padding: 10px 15px; }
     .navbar-nav .nav-item > .dropdown-toggle::before{border: none;}
     .navbar-nav .nav-item .dropdown-menu {border-top: none; padding: 0;}
     .navbar-nav .nav-item .dropdown-item {text-align: center; padding: 0.5em 1.5rem; font-size: 15px;}

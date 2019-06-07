@@ -37,6 +37,143 @@
 	background-color: #fff;
 }
 
+/* start css remove mark for menu グループ企業*/
+#header .hBox2 {
+	position: fixed;
+	top: 74px;
+	left:0 ;
+	width: 100%;
+    padding-bottom: 4px;
+	background: url(../../common/img/bg01.png) repeat left top;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s linear;
+	-webkit-transition: opacity 0.5s linear;
+}
+
+#header .hBox2.on {
+	opacity: 1;
+	visibility: visible;
+}
+
+#header .hBox2 .subBox {
+	margin: 0 auto;
+	padding: 38px 0 17px;
+	width: 1100px;
+}
+
+#header .hBox2 .subBox .txtbanner li {
+    width: 32% !important;
+    display: inline-block;
+    margin-right: 2%;
+}
+#header .hBox2 .subBox .txtbanner a {
+    padding: 12px 10px 9px 10px;
+    display: block;
+    color: #fff;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    text-decoration: none;
+    border: 2px solid #fff;
+}
+#header .hBox2 .subBox .txtbanner {
+    padding-bottom: 10px;
+}
+#header .hBox2 .subBox .txtbanner a:hover {
+    color: #67181d;
+    text-decoration: none;
+}
+#header .hBox2 .subBox .txtbanner a:before,
+#header .hBox2 .subBox .txtbanner a:after {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    content: '';
+    z-index: -1;
+    opacity: 0;
+    background-color: #FFF;
+}
+
+#header .hBox2 .subBox .txtbanner a:before {
+    right: 50%;
+}
+
+#header .hBox2 .subBox .txtbanner a:after {
+    left: 50%;
+}
+
+#header .hBox2 .subBox .txtbanner a:hover:before,
+#header .hBox2 .subBox .txtbanner a:hover:after {
+    width: 50%;
+    opacity: 1;
+}
+
+#header .hBox2 .subBox .txtbanner a,
+#header .hBox2 .subBox .txtbanner a:before,
+#header .hBox2 .subBox .txtbanner a:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+#header .hBox2 .subBox .txtbanner a span {
+    display: block;
+    background: url(../../common/img/icon08.png) no-repeat right center;
+    margin: 0 !important;
+}
+#header .hBox2 .subBox .txtbanner a:hover span {
+    background: url(../../common/img/icon0602.png) no-repeat right center;
+    background-size: 6px 10px;
+    color: #67181d;
+}
+
+#header .hBox2 .subBox li {
+	margin: 0 16px 7px 0;
+	width: 356px;
+	float: left;
+}
+
+#header .hBox2 .subBox li a {
+	display: block;
+	/*background-color: #fff;*/
+}
+
+#header .hBox2 .subBox li:nth-child(3n) {
+	margin-right: 0;
+}
+
+#header .hBox2 .subBox li a:hover img {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+#header .hBox2 .subBox li a {
+	color: #fff;
+    text-decoration: none;
+}
+
+#header .hBox2 .subBox li a:hover {
+    text-decoration: underline;
+}
+
+#header .hBox2 .subBox li span {
+	margin: 7px 0 5px 10px;
+	display: block;
+}
+
+#header .hBox2 .subBox li span  {
+	padding-left: 15px;
+	display: inline-block;
+	font-size: 0.75rem;
+	color: #fff;
+	font-weight: bold;
+}
+/*end css remove mark for menu グループ企業*/
+
 #header .hBox {
 	position: fixed;
 	top: 74px;

@@ -116,7 +116,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                 </div>
             </div>
 
-            <div class="hBox hBox02">
+            <div class="hBox2 hBox02">
                 <div class="subBox">
                     <ul class="clearfix">
                         <li>

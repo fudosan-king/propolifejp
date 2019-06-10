@@ -10,7 +10,7 @@
 
 <body>
     <div id="page">
-
+    		
 	      	<main>
 	      		<div class="header_outline">
 	      			<h2><a href="index.php"><img src="images/1x/logo_white.svg" alt="" class="img-fluid" width="300"></h2></a>
@@ -36,7 +36,7 @@
 				                </a>
 				            </li>
 				            <li>
-				                <a href="contact/reservation/">
+				                <a href="reservation.php">
 				                    <span class="i_topnav">
 				                        <img src="images/1x/i_reservation.svg" alt="" class="img-fluid">
 				                    </span>
@@ -44,7 +44,7 @@
 				                </a>
 				            </li>
 				            <li>
-				                <a href="contact/material/">
+				                <a href="material.php">
 				                    <span class="i_topnav">
 				                        <img src="images/1x/i_request.svg" alt="" class="img-fluid">
 				                    </span>
@@ -52,7 +52,7 @@
 				                </a>
 				            </li>
 				             <li class="d-block d-md-none">
-				                <a href="tel:0120965297">
+				                <a href="">
 				                    <span class="i_topnav">
 				                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 				                    </span>
@@ -62,7 +62,7 @@
 				        </ul>
 		      			<div class="collapse navbar-collapse flex-row justify-content-end align-items-end">
 				            <ul class="navbar-nav navbar-mobile mr-sm-4">
-				                <li class="nav-item"><a class="nav-link" href="/nakanotetsugakudo/">Top</a></li>
+				                <li class="nav-item"><a class="nav-link" href="index.php">Top</a></li>
 				                <li class="nav-item"><a class="nav-link" href="design.php">Design</a></li>
 				                <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
 				                <li class="nav-item"><a class="nav-link" href="access.php">Access</a></li>
@@ -94,7 +94,7 @@
 					      			<tr>
 					      				<th>交通</th>
 					      				<td>西武新宿線「新井薬師前」駅徒歩10分 <br>
-					      				都営地下鉄大江戸線「落合南長崎」駅（A1出口）徒歩13分 <br>JR総武・中央線・東京メトロ東西線「中野」駅よりバス7分、「哲学堂下」バス停より徒歩1分<br>JR山手線「新宿」駅よりバス25分、バス停「江古田一丁目」より徒歩3分<br>JR山手線「池袋」駅よりバス14分、バス停「江古田一丁目」より徒歩3分<br>西武池袋線「練馬」駅よりバス16分、バス停「江古田一丁目」より徒歩3分</td>
+					      				都営地下鉄大江戸線「落合南長崎」駅（A1出口）徒歩13分 <br>JR総武・中央線・東京メトロ東西線「中野」駅よりバス7分、「哲学堂下」バス停より徒歩1分<br>JR山手線「新宿」駅よりバス25分、バス停「江古田一丁目」より徒歩2分<br>JR山手線「池袋」駅よりバス14分、バス停「江古田一丁目」より徒歩2分<br>西武池袋線「練馬」駅よりバス16分、バス停「江古田一丁目」より徒歩2分</td>
 					      			</tr>
 					      			<tr>
 					      				<th>地域・地区</th>
@@ -159,7 +159,7 @@
 					      				<td>株式会社プロスタイル<br>
 					      				東京都知事(1)第100343号<br>
 					      				（公社） 東京都宅地建物取引業協会<br>
-					      				〒107-0061 東京都港区北⻘⼭3-6-23</td>
+					      				〒103-0028　東京都中央区⼋重洲1-5-17 ⼋重洲⾹川ビルディング8F（受付2階）</td>
 					      			</tr>
 					      			<tr>
 					      				<th>設計・監理</th>
@@ -248,18 +248,6 @@
 					      			<tr>
 					      				<th>ローン概要</th>
 					      				<td>
-					      					<div class="mb-4">
-						      					<p>■支払い例 Bgタイプ [2LDK+S+WIC（54.86㎡）] 4790万円の場合</p>
-												<p>毎月の支払い額／12万3707円</p>
-												<p>ボーナス時加算額／0円</p>
-												<p>頭金／0円</p>
-												<p>借入金の月々の元本／4790万円</p>
-												<p>借入金のボーナス払いの元本／0円</p>
-												<p>ローン金利・種別／年利0.47％（変動金利）</p>
-												<p>返済期間／35年</p>
-												<p>※金利は年2回見直しされますが、返済額は適用金利が変わっても5年間一定で、5年ごとに調整されます（ただし、前返済額の1.25倍が限度）</p>
-											</div>
-
 											<div class="mb-4">
 												<p>■支払い例 Aタイプ [3LDK（64.07㎡）] 5290万円の場合</p>
 												<p>毎月の支払い額／134,037円</p>
@@ -293,14 +281,14 @@
 					      			</tr>
 					      		</table>
 
+					      		
 
-
-					      		<p class="mb-5 text-center">情報提供日：<span>2019/5/27</span>　次回更新予定日：<span>2019/6/26</span></p>
+					      		<p class="mb-5 text-center">情報提供日：<span>2019/6/10</span>　次回更新予定日：<span>2019/7/1</span></p>
 
 	      					</div>
 	      				</div>
 	      			</div>
-
+	      			
 
 	      		</div>
 	      	</main>

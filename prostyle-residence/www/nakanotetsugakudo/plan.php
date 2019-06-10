@@ -32,7 +32,7 @@
 			                </a>
 			            </li>
 			            <li>
-			                <a href="contact/reservation/">
+			                <a href="reservation.php">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_reservation.svg" alt="" class="img-fluid">
 			                    </span>
@@ -40,7 +40,7 @@
 			                </a>
 			            </li>
 			            <li>
-			                <a href="contact/material/">
+			                <a href="material.php">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_request.svg" alt="" class="img-fluid">
 			                    </span>
@@ -48,7 +48,7 @@
 			                </a>
 			            </li>
 			             <li class="d-block d-md-none">
-			                <a href="tel:0120965297">
+			                <a href="">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_tel.svg" alt="" class="img-fluid">
 			                    </span>
@@ -58,7 +58,7 @@
 			        </ul>
 			        <div class="collapse navbar-collapse flex-row justify-content-end align-items-end">
 			            <ul class="navbar-nav navbar-mobile mr-sm-4">
-			                <li class="nav-item"><a class="nav-link" href="/nakanotetsugakudo/">Top</a></li>
+			                <li class="nav-item"><a class="nav-link" href="index.php">Top</a></li>
 			                <li class="nav-item"><a class="nav-link" href="design.php">Design</a></li>
 			                <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
 			                <li class="nav-item"><a class="nav-link" href="access.php">Access</a></li>
@@ -70,7 +70,7 @@
 			        </div>
 			    </div>
 			</header>
-
+			
 			<section class="section_topbanner bg_topplan">
 				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 			</section>
@@ -149,7 +149,7 @@
 		      									</div>
 		      								</div>
 
-		      								<!-- <div class="col-12 col-md-6">
+		      								<div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
@@ -177,9 +177,9 @@
 		      											<a href="plan_detail_b.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
-		      								</div> -->
+		      								</div>
 
-		      								<div class="col-12 col-md-6">
+		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
@@ -207,7 +207,7 @@
 		      											<a href="plan_detail_bg.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
-		      								</div>
+		      								</div> -->
 
 		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
@@ -402,7 +402,7 @@
 		      							<h3 class="title mb-5"><span>2LDK</span></h3>
 
 		      							<div class="row">
-		      								<div class="col-12 col-md-6">
+		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
@@ -430,7 +430,7 @@
 		      											<a href="plan_detail_dg.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
-		      								</div>
+		      								</div> -->
 
 		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
@@ -463,7 +463,7 @@
 		      									</div>
 		      								</div> -->
 
-		      								<!-- <div class="col-12 col-md-6">
+		      								<div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
@@ -493,7 +493,7 @@
 		      											<a href="plan_detail_f.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
-		      								</div> -->
+		      								</div>
 
 		      							</div>
 		      						</div>
@@ -535,7 +535,7 @@
 		      						</div>
 
 		      						<p class="gray mt-5 mb-5"><small>※ＷＩＣ：ウォークインクローゼット、ＦＣ：ファミリークローク、ＳＩＣ：シューズインクローゼット、Ｓ：サービスルーム(納戸)</small></p>
-
+		      						
 		      					</div>
 		      				</div>
 		      			</div>

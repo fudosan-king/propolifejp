@@ -147,7 +147,8 @@
 		text-align: center;
 	}
 	.price_yen, .price_stand {
-		font-size: 40px;
+		font-size: 28px;
+		letter-spacing: -.1em;
 	}
 	.meter_number {
 		font-size: 28px;
@@ -1001,6 +1002,10 @@
 		display: inherit;
 	}
 
+	.meter_label {
+		font-size: 18px;
+	}
+
 }
 @media (min-width: 576px) {
 	.modal_detail .modal-dialog {
@@ -1046,7 +1051,13 @@
 	    height: 332px;
 	}
 	.price_yen, .price_stand {
-		font-size: 35px;
+		font-size: 28px;
+	}
+	.meter_label {
+		font-size: 16px;
+	}
+	.label_stand {
+		font-size: 15px;
 	}
 }
 

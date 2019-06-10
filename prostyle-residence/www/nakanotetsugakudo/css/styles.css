@@ -371,7 +371,7 @@ ul.topnav li a img {
   margin: auto auto 5px;
 }
 .w_topbanner_footer {
-  padding: 22px 0 21px;
+  padding: 31px 0 21px;
   margin: 0;
   background: #000;
   width: 100%;
@@ -387,9 +387,7 @@ ul.topbanner_footer {
 }
 ul.topbanner_footer li {
   display: inline-block;
-  border-right: 1px solid #fff;
   padding: 0 15px;
-  width: 30.3333%;
   text-align: center;
 }
 ul.topbanner_footer li:first-child {
@@ -401,19 +399,18 @@ ul.topbanner_footer li:last-child {
 }
 ul.topbanner_footer li p {
   margin-bottom: 0;
-  font-family: adobe-garamond-pro, serif;
   color : #FFFFFF;
 }
 .meter_number {
   font-size: 35px;
 }
 .meter_label {
-  font-size: 20px;
+  font-size: 26px;
   font-family: 'a-otf_ryumin_pror-kl';
 }
 .price_yen {
-  font-size: 40px;
-  margin-left: 5px;
+  font-size: 50px;
+  font-family: adobe-garamond-pro, serif;
 }
 .label_yen {
   font-size: 18px;
@@ -423,31 +420,15 @@ ul.topbanner_footer li p {
   font-size: 18px;
   line-height: .8em;
   font-family: 'a-otf_ryumin_pror-kl';
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  position: relative;
-  top: 4px;
-  margin-left: 15px;
-
-  -ms-writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-  -moz-writing-mode: vertical-rl;
-  -ms-writing-mode: vertical-rl;
+  letter-spacing: -.1em;
 }
 .price_stand {
-  font-size: 40px;
+  font-size: 50px;
+  font-family: adobe-garamond-pro, serif;
 }
 .label_stand {
   font-size: 18px;
   font-family: 'a-otf_ryumin_pror-kl';
-  position: relative;
-  top: -15px;
-}
-.sub_label_stand {
-  display: block;
-  position: absolute;
-  bottom: -20px;
-  left: 0;
 }
 
 .section_infomations {

@@ -99,32 +99,24 @@
 
 			</section>
 			<div class="w_topbanner_footer">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">
 							<ul class="topbanner_footer">
 								<li>
 									<p>
-										<span class="meter_number">64</span><span class="meter_label">㎡超</span>
-										<span class="price_yen">5,290</span><span class="label_yen">万円〜</span>
-										<span class="monthly">月々</span> <span class="price_stand">13</span>
-										<span class="label_stand"><span class="main_label_stand">万円</span><span class="sub_label_stand">台<span class="last_text">〜</span></span></span>
-									</p>
-								</li>
-								<li>
-									<p>
-										<span class="meter_number">54</span><span class="meter_label">㎡超</span>
-										<span class="price_yen">4,790</span><span class="label_yen">万円〜</span>
-										<span class="monthly">月々</span> <span class="price_stand">12</span>
-										<span class="label_stand"><span class="main_label_stand">万円</span><span class="sub_label_stand">台<span class="last_text">〜</span></span></span>
-									</p>
-								</li>
-								<li>
-									<p>
-										<span class="meter_number">39</span><span class="meter_label">㎡超</span>
+										<span class="meter_label">2DK(39㎡超)</span>
 										<span class="price_yen">3,890</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">9</span>
-										<span class="label_stand"><span class="main_label_stand">万円</span><span class="sub_label_stand">台<span class="last_text">〜</span></span></span>
+										<span class="label_stand">万円台～</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span class="meter_label">3LDK(64㎡超)</span>
+										<span class="price_yen">5,290</span><span class="label_yen">万円〜</span>
+										<span class="monthly">月々</span> <span class="price_stand">13</span>
+										<span class="label_stand">万円台～</span>
 									</p>
 								</li>
 							</ul>

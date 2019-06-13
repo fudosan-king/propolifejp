@@ -99,6 +99,19 @@ $(function($) {
             }
         }
     });
+
+    $('#footer .naviUl li:has(ul) p').click(function(e){
+        if($(window).width() < 768){
+            $(this).children('a').toggleClass('on');
+            $(this).next('ul').slideToggle();
+            return false;
+        }
+    });
+
+    $('a.none-href').click(function(event) {
+        /* Act on the event */
+        event.preventDefault();
+    });
 });
 
 $(document).ready(function() {

@@ -2,7 +2,7 @@
     $logoCompanyURL = wp_get_attachment_image_url( get_field('site_logo', 'option')['ID'], $size = 'origin', $icon = false );
 ?>
 
-<div class="navbar navbar-expand-sm bsnav bsnav-sticky">
+<div class="navbar navbar-expand-sm bsnav bsnav-sticky bsnav-sticky-slide">
     <a class="navbar-brand" href="/"><img src="<?php echo $logoCompanyURL; ?>" alt="" class="img-fluid" width="194px"></a>
     <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse justify-content-md-between">
@@ -14,7 +14,7 @@
             if (count($topNav)>0){
                 $active = is_front_page() ? 'active' : "";
 
-                echo '<ul class="navbar-nav navbar-mobile mr-0 main_nav pc_menu">';
+                echo '<ul class="navbar-nav navbar-mobile mr-0 main_nav">';
                 echo ' <li class="nav-item '.$active.' d-none d-sm-block"><a class="nav-link" href="/">TOP</a></li>';
                 foreach ($topNav as $nav){
                     /* Action here */
@@ -52,67 +52,24 @@
                 echo '</ul>';
             }
         ?>
-        <?php 
-            $menuLocations = get_nav_menu_locations();
-            $menuID = $menuLocations['top-mobile'];
-            $topNav = wp_get_nav_menu_items($menuID);
-            if (count($topNav)>0){
-                $active = is_front_page() ? 'active' : "";
 
-                echo '<ul class="navbar-nav navbar-mobile mr-0 main_nav sp_menu">';
-                echo ' <li class="nav-item '.$active.'"><a class="nav-link" href="/">TOP</a></li>';
-                foreach ($topNav as $nav){
-                    /* Action here */
-                    $active = $nav->object_id == $post->ID ? 'active' : "";
-
-                    if ($nav->menu_item_parent == 0){
-                        $childMenu = get_nav_child_menu($topNav, $nav->ID);
-
-                        $isDropdown = (count($childMenu)>0) ? 'dropdown': '';
-                        $signDropdown = (count($childMenu)>0) ? 'dropdown-toggle': '';
-                        ?>
-                            <li class="nav-item <?php echo $active.' '.$isDropdown; ?>" >
-                                <a class="nav-link <?php echo $signDropdown; ?>" href="<?php echo $nav->url; ?>" target="<?php echo $nav->target; ?>" id="navbarDropdown-<?php echo $nav->ID; ?>" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $nav->title; ?></a>
-                                <?php 
-                                    if (count($childMenu)>0){
-                                
-
-                                        echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown-'.$nav->ID.'">';
-                                            foreach($childMenu as $cmenu){
-                                                ?>
-                                                <a class="dropdown-item" href="<?php echo $cmenu->url; ?>" target="<?php echo $cmenu->target; ?>"><?php echo $cmenu->title; ?></a>
-                                                <?php
-                                            }
-                                        echo '</div>';
-                                    }
-                                ?>
-                            </li>
-                        <?php
-                    }                    
-                    
-                }
-                ?>
-                
-                <li class="nav-item d-block d-sm-none" style="margin-top: 20px;">
-                    <?php 
-                        $socialLinked = get_field('social_linked', 'option');
-                        
-                        if(!empty($socialLinked)):
-                            echo '<div class="social-link">';
-                            foreach($socialLinked as $name => $link){
-                                ?>
-                                    <a href="<?php echo $link; ?>" target="_blank"><img src="<?php echo SGVinK::get_images_uri()."/social/icon-".$name.".png"; ?>" class="img-responsive" alt="<?php echo 'social-'.$name; ?>" width="40"></a>
-                                <?php
-                            }
-                            echo '</div>';
-                        endif; 
-                    ?>
-                </li>
-                <?php
-                echo '</ul>';
-            }
-        ?>
         <ul class="navbar-nav navbar-mobile mr-0 navbar_custom">
+             <li class="nav-item d-block d-sm-none">
+                <?php 
+                    $socialLinked = get_field('social_linked', 'option');
+                    
+                    if(!empty($socialLinked)):
+                        echo '<div class="social-link">';
+                        foreach($socialLinked as $name => $link){
+                            ?>
+                                <a href="<?php echo $link; ?>" target="_blank"><img src="<?php echo SGVinK::get_images_uri()."/social/icon-".$name.".png"; ?>" class="img-responsive" alt="<?php echo 'social-'.$name; ?>" width="40"></a>
+                            <?php
+                        }
+                        echo '</div>';
+                    endif; 
+                ?>
+            </li>
+            
             <?php 
                 /*WORKING HOUR PART*/
                 $working_hour = get_field('working_hour', 'option');
@@ -121,11 +78,19 @@
                     $working_hour = get_field('working_hour');
                 }
             ?>
-            <li class="nav-item d-none d-md-block">
+            <li class="nav-item">
                 <p class="hourwoking mr-0 mr-sm-3"><?php echo  $working_hour; ?></p>
             </li>
-            <li class="nav-item d-none d-md-block">
+            <li class="nav-item">
                 <p class="freecall"><i class="i_phone"></i> <a href="tel:<?php echo get_field('phone_number', 'option') ?>"><?php echo get_field('phone_number', 'option') ?></a></p>
+            </li>
+            <li class="nav-item d-block d-sm-none mb-3">
+                <?php 
+                    $inquiryContact = get_field('inquiry_contact', 'option');
+                    if(!empty($inquiryContact)):
+                ?>
+                    <a class="btn btnInquiries" href="<?php echo $inquiryContact['url']; ?>" target="<?php echo $inquiryContact['target']; ?>"><?php echo $inquiryContact['title']; ?></a>
+                <?php endif; ?>
             </li>
         </ul>
     </div>

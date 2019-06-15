@@ -23,6 +23,7 @@ if (!function_exists('sgvink_setup_theme')):
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
 			'top'    => __( 'Top Menu', 'sgvink' ),
+            'top-mobile'    => __( 'Top Mobile Menu', 'sgvink' ),
             'footer' => __( 'Footer Menu', 'sgvink' ),
 			'bottom' => __( 'Bottom Menu', 'sgvink' ),
 		) );

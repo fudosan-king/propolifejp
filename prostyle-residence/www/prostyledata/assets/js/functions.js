@@ -7,9 +7,16 @@ $(function($) {
     }
 
     if(isMobile){
-        $.each($('.nav-item .dropdown-menu'), function(index, val) {
-             /* iterate through array or object */
-             $(val).addClass('show');
+        $('a.nav-link.dropdown-toggle').on('click touch touchstart', function(event) {
+            event.preventDefault();
+
+            if(!$(this).hasClass('show')){
+                $(this).addClass('show');
+                $(this).closest('.nav-item').find('.dropdown-menu').slideDown(300);
+            }else{
+                $(this).removeClass('show');
+                $(this).closest('.nav-item').find('.dropdown-menu').slideUp(300);
+            }
         });
     }
 

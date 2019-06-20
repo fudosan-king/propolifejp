@@ -30,26 +30,64 @@ ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 500px;}
 .back-to-top {z-index: 10;}
 main {text-align: justify;}
 
+div#crumbs {font-size: 11pt; margin-top: 20px;}
+div#crumbs a {color: #000;}
+div#crumbs a:hover {text-decoration: underline;}
+
 
 main section.content-page { padding-top: 74px; font-size: 12pt; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
 main section.content-page.access #contents_inner h1 {margin-bottom: 0;}
-main section.content-page.news,main section.content-page.archive-news { padding-top: 104px; }
+main section.content-page.news { padding-top: 104px; }
 main section.content-page.archive-news div#main-content { padding: 0 0 20px; }
 main section.content-page.archive-news div#main-content .img_feature,
 main section.content-page.archive-news div#main-content .img_feature {margin-top: 10px;}
+
+main section.content-page.archive-news div#main-content .news-content {margin: 0 auto; width: 900px;}
+main section.content-page.archive-news div#main-content .news-data a {color: #000;}
+main section.content-page.archive-news div#main-content .news-data a:hover {text-decoration: underline;}
+main section.content-page.archive-news div#main-content .news-data {padding: 10px 0; border-bottom: 1px #EAEAEA solid;}
+main section.content-page.archive-news div#main-content .news-data .xcol {display: inline-block;}
+main section.content-page.archive-news div#main-content .news-data .xcol.dt-2 {margin: 0 20px;}
+main section.content-page.archive-news div#main-content .news-data .news-tag {    
+    background-color: #B1875A;
+    color: #fff;
+    font-size: 9pt;
+    min-width: 100px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    height: 19px;
+    line-height: 1.5;}
+main section.content-page.archive-news div#main-content .news-data .news-tag.empty {background: none;}
+
+main section.content-page.news .more-info {width: 100px; padding: 8px 0;}
+main section.content-page.news .more-info .date-post {position: relative;}
+main section.content-page.news .more-info .news-tag {    
+    background-color: #B1875A;
+    color: #fff;
+    font-size: 9pt;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    height: 19px;
+    line-height: 1.5;
+    position: absolute;
+    top: 2px;
+    right: -110px;
+    min-width: 100px;
+    }
+main section.content-page.news .more-info .news-tag.empty {background: none;}
+
+main section.content-page.news .back-page {text-align: center;margin-bottom: 30px;}
 
 /*main section.content-page.project {padding-top: 74px;}*/
 
 main section.content-page .sub_title {
 	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
     border-bottom: 1px solid #ebebeb;
-    color: #654;
-    background-image: url(../images/1x/ico.png);
-    background-size: 35px;
-    background-repeat: no-repeat;
-    background-position: 0px 7px;
-    padding-left: 70px;
-    padding-bottom: 10px;
+    color: #000;
+    font-size: 1.5rem;
+    padding-bottom: 3px;
 }
 
 main section.content-page div#main-content { padding: 0 0 50px; }
@@ -1096,6 +1134,7 @@ footer {
 
 @media screen and (max-width: 768px){
     #contents{padding-left:0;padding-right:0;}
+    main section.content-page.archive-news div#main-content .news-content {width: 100%;}
 
     main section.content-page .extra-content #section_title h2{padding:0 15px;}
     main section.content-page .extra-content #section_title h2 img{height: 1em;}
@@ -1404,6 +1443,11 @@ footer {
     main section.content-page.purchase .extra-content .section_telephone h3{font-size: 24px;}
     main section.content-page.purchase .extra-content .section_telephone .txt{font-size: 20px !important;}
 
+    main section.content-page.archive-news div#main-content .news-data .xcol {display: block;}
+    main section.content-page.archive-news div#main-content .news-data .xcol.dt-1 {float: left;}
+    main section.content-page.archive-news div#main-content .news-data .xcol.dt-2 {margin: 0 0 0 15px; float: left;}
+    main section.content-page.archive-news div#main-content .news-data .xcol.dt-3 {width: 100%; clear: both;}
+
     /*KAITORI*/
 
     /*new mansory*/
@@ -1439,7 +1483,7 @@ footer {
 
 @media screen and (max-width: 480px){
     main section.content-page.archive-news .sub_title,
-    main section.content-page.news .sub_title {font-size: 18px; background-size: 32px; background-position: 0px 0px; padding-bottom: 12px; padding-left: 45px;}
+    main section.content-page.news .sub_title {font-size: 18px;}
     main section.content-page #main-content .link-more {margin-bottom: 0;}
     main section.content-page #main-content .link-more .btn.btnReadmore {font-size: 10pt;}
     main section.content-page .extra-content #section_title .ruby{margin:10px 0;font-size:11px;}

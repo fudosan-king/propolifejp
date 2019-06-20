@@ -117,4 +117,33 @@ function news_register() {
 	register_post_type( 'news', $args );
 }
 add_action( 'init', 'news_register' );
+
+function news_register_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Categories', 'taxonomy general name', 'sgvink' ),
+		'singular_name'     => _x( 'Category', 'taxonomy singular name', 'sgvink' ),
+		'search_items'      => __( 'Search Categories', 'sgvink' ),
+		'all_items'         => __( 'All Categories', 'sgvink' ),
+		'parent_item'       => __( 'Parent Category', 'sgvink' ),
+		'parent_item_colon' => __( 'Parent Category:', 'sgvink' ),
+		'edit_item'         => __( 'Edit Category', 'sgvink' ),
+		'update_item'       => __( 'Update Category', 'sgvink' ),
+		'add_new_item'      => __( 'Add New Category', 'sgvink' ),
+		'new_item_name'     => __( 'New Category Name', 'sgvink' ),
+		'menu_name'         => __( 'Categories', 'sgvink' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'news-cat' ),
+	);
+
+	register_taxonomy( 'news-cat', array( 'news' ), $args );
+}
+add_action( 'init', 'news_register_taxonomy', 0 );
+
 ?>

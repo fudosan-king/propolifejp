@@ -511,7 +511,7 @@
 			      											</div>
 			      											<div class="col-7">
 			      												<div class="roomplan_item_info">
-				      												<h3>2LDK <span>+SIC</span></h3>
+				      												<h3>2DK <span>+SIC</span></h3>
 				      												<p>住戸専有面積/</p>
 				      												<h2>39.<span class="uint">44㎡</span> <span class="approximately">（約11.93坪）</span></h2>
 				      												<p>バルコニー面積/ 4.20㎡（約1.27坪）</p>

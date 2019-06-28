@@ -10,7 +10,7 @@
 
 <body>
     <div id="page">
-    		
+
 	      	<main>
 	      		<div class="header_outline">
 	      			<h2><a href="index.php"><img src="images/1x/logo_white.svg" alt="" class="img-fluid" width="300"></h2></a>
@@ -159,7 +159,7 @@
 					      				<td>株式会社プロスタイル<br>
 					      				東京都知事(1)第100343号<br>
 					      				（公社） 東京都宅地建物取引業協会<br>
-					      				〒103-0028　東京都中央区⼋重洲1-5-17 ⼋重洲⾹川ビルディング8F（受付2階）</td>
+					      				〒107-0061 東京都港区北⻘⼭3-6-23</td>
 					      			</tr>
 					      			<tr>
 					      				<th>設計・監理</th>
@@ -281,14 +281,14 @@
 					      			</tr>
 					      		</table>
 
-					      		
+
 
 					      		<p class="mb-5 text-center">情報提供日：<span>2019/6/10</span>　次回更新予定日：<span>2019/7/1</span></p>
 
 	      					</div>
 	      				</div>
 	      			</div>
-	      			
+
 
 	      		</div>
 	      	</main>

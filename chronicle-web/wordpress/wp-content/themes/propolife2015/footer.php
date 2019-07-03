@@ -154,6 +154,16 @@
         </div>
     </div><!-- // #footer_inner -->
 </div><!-- // #footer -->
+<?php 
+    if(is_page( 'contact' )):
+        ?>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.ja.min.js"></script>
+            <script src="<?php bloginfo('template_directory'); ?>/common/js/contact/contact.js"></script>
+
+        <?php
+    endif;
+ ?>
 <?php wp_footer(); ?>
 </body>
 </html>

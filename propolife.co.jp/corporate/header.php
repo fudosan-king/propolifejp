@@ -10,8 +10,23 @@
     ?>
 <title><?php wp_title(''); ?></title>
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
+
 <?php 
+if(is_page( 'contact' )):
+	?>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/contact/styles.css" type="text/css">
+    	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/contact/mobile.css" type="text/css">
+
+		<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+	<?php
+endif;
+?>
+
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
+<?php
 if(is_page(array('top'))){
 ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/index.css">
@@ -123,6 +138,8 @@ if (has_post_thumbnail()){
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/common/img/favicon.png" type="image/x-icon" />
 <!--favicon-->
 
+
+
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WZZMNF"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -183,7 +200,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</ul>
 			</div>
 		</div>
-		<div class="hBox2 hBox02">
+		<div class="hBox hBox02">
 			<div class="subBox">
 				<ul class="clearfix">
 					<li>
@@ -219,10 +236,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<span><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></span>
 					</li>
 					<li>
-						<a href="http://nikuan-kotakino.com/" target="_blank">
+						<a href="http://nikuan-kotakino.com" target="_blank">
 							<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link10.jpg" width="356" height="98" alt="株式会社小滝野">
 						</a>
-						<span><a href="http://nikuan-kotakino.com/" target="_blank">株式会社小滝野</a></span>
+						<span><a href="http://nikuan-kotakino.com" target="_blank">株式会社小滝野</a></span>
 					</li>
 					<li>
 						<a href="http://www.propolifehotels.com" target="_blank">
@@ -324,7 +341,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
 					<li><span>煙台提案生活木業有限公司</span></li>
 					<li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
-					<li><a href="http://nikuan-kotakino.com/" target="_blank">株式会社小滝野</a></li>
+					<li><a href="http://nikuan-kotakino.com" target="_blank">株式会社小滝野</a></li>
 <li><a href="http://www.propolifehotels.com">株式会社プロスタイル旅館</a></li>
 <li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>
 				</ul>

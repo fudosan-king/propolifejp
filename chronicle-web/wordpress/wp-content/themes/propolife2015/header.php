@@ -39,6 +39,24 @@ setcookie("qtrans_front_language", $current_lang, time() - 3600, '/');
 <meta property="og:description" content="<?php echo $current_page_data['meta_desc']; ?>" />
 <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/common/images/ogimg_<?php echo $current_lang; ?>.jpg" />
 <meta name="google-site-verification" content="TRYiZFxGSFvEkT9-ikzQnUGlITjcNkzllS1RuBWxW1M" />
+
+<?php 
+if(is_page( 'contact' )):
+    ?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css">
+
+
+
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/contact/styles.css" type="text/css">
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/contact/mobile.css" type="text/css">
+
+        <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <?php
+endif;
+?>
+
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/common/css/common.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/common/css/<?php echo $dir_name; ?>.css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -247,4 +265,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <?php include_once('sub_globalnav.php'); ?>
 
-<div id="wrap">
+<?php if(is_page('finish')): ?>
+    <div id="wrap" class="wrap-force">
+<?php else: ?>
+    <div id="wrap">
+<?php endif; ?>

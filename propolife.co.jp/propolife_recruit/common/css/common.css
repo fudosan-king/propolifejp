@@ -230,6 +230,24 @@ li.sp {
     margin: -5px 0 5px 0;
 }
 
+/*------------------------------------------------------------
+    箇条書き
+------------------------------------------------------------*/
+#mainVisual {
+    min-height: 392px;
+    background: url(../../common/img/com_bg01.jpg) no-repeat center bottom;
+    background-size: cover;
+}
+
+#mainVisual .headLine01 {
+    padding-top: 220px;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 2.5px;
+    text-align: center;
+}
+
 
 /* ----------------------------------------------------------------------
 *
@@ -458,6 +476,18 @@ body{
 
 }
 
+#wrap.wrap-force { padding: 0 0 30px 0;   background-color: #fff!important;}
+
+.wrap-force #main {padding: 50px 0 30px;
+    max-width: 1000px;
+    margin: 0 auto;}
+.wrap-force #main .content-inner h2 { font-size: 2.2em; font-weight: bold; text-align: center; padding-bottom: 60px; }
+.wrap-force #main .content-inner {
+    line-height: 1.5;
+    padding: 10px;
+ }
+ .wrap-force #main .content-inner p {font-size: 14pt;}
+
 /* -------------------------------------------------------
 *
     for 480px;
@@ -467,6 +497,9 @@ body{
 #wrap{
     z-index: 2;
 }
-
+.wrap-force section.sp-force {display: none;}
+.wrap-force #main .content-inner h2 {font-size: 1.6em; padding-bottom: 30px;}
+.wrap-force #main .content-inner p {font-size: 12pt;}
 
 }
+

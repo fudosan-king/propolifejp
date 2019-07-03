@@ -70,7 +70,7 @@ $(function(){
 	
 	
 	//header scroll
-    /*
+    
 	$(window).scroll(function(){
 		if($(window).scrollTop() > 80){
 			$('#header .header').fadeIn();
@@ -78,7 +78,7 @@ $(function(){
 			$('#header .header').fadeOut();
 		}
 	});
-    */
+    
 	
 
 	//hover subNavi

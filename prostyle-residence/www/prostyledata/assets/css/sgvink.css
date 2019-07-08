@@ -1576,6 +1576,8 @@ footer {
     main section.content-page.purchase .extra-content .section_telephone h4{font-size:12px;}
     main section.content-page.purchase .extra-content .section_telephone span{margin:3px 0 0 -5px;font-size:14px;}
     main section.content-page.purchase .extra-content #purchase_list{width:100%;}
+    main section.content-page.purchase .extra-content #point .linkRef {margin-bottom: 30px;}
+    main section.content-page.purchase .extra-content #point .linkRef a {font-size: 12px;}
 
     /*new mansory*/
     main.kaitori .mansory-list .grid-item--1st-col.item-1st {height: 75px;}

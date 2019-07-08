@@ -1,6 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="-NgZueRpwQ_FEk9-_pOpcl41WoeRpVMz2eysQgUIZBE" />
 
 <?php if (get_post_type() == 'page' && get_post_status() != 'publish'){
     echo '<meta http-equiv="refresh" content="0;url=/" />';

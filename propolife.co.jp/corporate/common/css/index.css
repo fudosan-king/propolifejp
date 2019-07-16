@@ -517,8 +517,9 @@
 	position: absolute;
 	left: 0;
 	top: 50%;
-	background-size: 6px 9px;
-	content: "";
+	/*background: url(../../common/img/icon03.png) no-repeat;*/
+	/*background-size: 6px 9px;*/
+	/*content: "";*/
 }
 
 

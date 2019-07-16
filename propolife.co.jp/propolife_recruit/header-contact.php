@@ -81,16 +81,33 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
         <div class="menuBg"></div>
-        
-        <header id="header">
+                
+        <header id="header" class="contact">
+        <div class="hInner clearfix">
+            <h1><a href="http://propolifejp.test/"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo02.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
+            <nav id="gNavi" class="gNavi">
+                <div class="link"><a style="display: none;" href="https://page.line.me/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_03.png" width="20" height="20" alt="LINE"></a></div>
+                <div class="link"><a style="display: none;" href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_02.png" width="16" height="16" alt="Instagram"></a></div>
+                <div class="link"><a style="display: none;" href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link.png" width="8" height="16" alt="Facebook"></a></div>
+                <ul class="clearfix">
+                    <li class="sub01"><a href="http://propolifejp.test/company/">企業情報</a></li>
+                    <li class="sub02"><a href="http://propolifejp.test/group/">グループ企業</a></li>
+                    <li class="sub03"><a href="http://propolifejp.test/news/">ニュース</a></li>
+                    <li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
+                    <li><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-ockdr-75c9de3a9898c4710f57741e460fedab" target="_blank">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header" style="display: none;">
             <div class="hInner clearfix">
-                <h1><a href="http://propolifejp.test/"><img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/logo.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
-                <nav id="gNavi" class="gNavi">
-                    <div class="link"><a style="display: none;" href="https://page.line.me/propolifegroup" target="_blank"><img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link_03.png" width="20" height="20" alt="LINE"></a></div>
-                    <div class="link"><a style="display: none;" href="#" target="_blank"><img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link_02.png" width="16" height="16" alt="Instagram"></a></div>
-                    <div class="link"><a style="display: none;" href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link.png" width="8" height="16" alt="Facebook"></a></div>
+                <h1><a href="http://propolifejp.test/"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo02.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
+                <nav class="gNavi">
+                    <div class="link"><a style="display: none;" href="https://page.line.me/propolifegroup
+" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_03_on.png" width="20" height="20" alt="LINE"></a></div>
+                    <div class="link"><a style="display: none;" href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_0202_on.png" width="16" height="16" alt="Instagram"></a></div>
+                    <div class="link"><a style="display: none;" href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_on.png" width="8" height="16" alt="Facebook"></a></div>
                     <ul class="clearfix">
-                        <li class="sub01"><a href="http://propolifejp.test/company/" class="">企業情報</a></li>
+                        <li class="sub01"><a href="http://propolifejp.test/company/">企業情報</a></li>
                         <li class="sub02"><a href="http://propolifejp.test/group/">グループ企業</a></li>
                         <li class="sub03"><a href="http://propolifejp.test/news/">ニュース</a></li>
                         <li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
@@ -98,119 +115,119 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                     </ul>
                 </nav>
             </div>
-            
-            <div class="menu sp"><a href="javascript:void(0);"><img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/menu.png" width="18" height="14" alt=""></a></div>
-            <div class="hBox hBox03">
-                <div class="subBox">
-                    <ul class="clearfix txtbanner">
-                        <li><a href="http://propolifejp.test/news/information/"><span>企業からのお知らせ</span></a></li>
-                        <li><a href="http://propolifejp.test/news/pressrelease/"><span>プレスリリース</span></a></li>
-                        <li><a href="http://propolifejp.test/news/media/"><span>メディア掲載情報</span></a></li>
-                    </ul>
-                </div>
+            <div class="menu sp"><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory'); ?>/common/img/menu.png" width="18" height="14" alt=""></a></div>
+        </div>
+        <div class="menu sp"><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory'); ?>/common/img/menu.png" width="18" height="14" alt=""></a></div>
+        <div class="hBox hBox03">
+            <div class="subBox">
+                <ul class="clearfix txtbanner">
+                    <li><a href="http://propolifejp.test/news/information/"><span>企業からのお知らせ</span></a></li>
+                    <li><a href="http://propolifejp.test/news/pressrelease/"><span>プレスリリース</span></a></li>
+                    <li><a href="http://propolifejp.test/news/media/"><span>メディア掲載情報</span></a></li>
+                </ul>
             </div>
-            <div class="hBox hBox02">
-                <div class="subBox">
-                    <ul class="clearfix">
-                        <li>
-                            <a href="https://www.chronicle-web.com/" target="_blank">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link01.jpg" width="356" height="101" alt="CHRONICLE リノベーションならクロニクル">
-                            </a>
-                            <span><a href="https://www.chronicle-web.com/" target="_blank">株式会社クロニクル</a></span>
-                        </li>
-                        <li>
-                            <a href="http://www.chronicle-kensetsu.co.jp" target="_blank"><img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link02.jpg" width="356" height="101" alt="CHRONICLE"></a><span><a href="https://www.chronicle-web.com/reform/" target="_blank">株式会社クロニクル建設</a></span></li>
-                        <li>
-                            <a href="https://www.prostyle-residence.com/" target="_blank">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link03.jpg" width="356" height="101" alt="PROSTYLE">
-                            </a>
-                            <span><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></span>
-                        </li>
-                        <li>
-                            <a href="http://chinokanri.co.jp/" target="_blank">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link05.jpg" width="356" height="98" alt="CHINO 千野建物管理">
-                            </a>
-                            <span><a href="http://chinokanri.co.jp/" target="_blank">千野建物管理株式会社</a></span>
-                        </li>
-                        <li>
+        </div>
+        <div class="hBox hBox02">
+            <div class="subBox">
+                <ul class="clearfix">
+                    <li>
+                        <a href="https://www.chronicle-web.com/" target="_blank">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link01.jpg" width="356" height="101" alt="CHRONICLE リノベーションならクロニクル">
+                        </a>
+                        <span><a href="https://www.chronicle-web.com/" target="_blank">株式会社クロニクル</a></span>
+                    </li>
+                    <li>
+                        <a href="http://www.chronicle-kensetsu.co.jp" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link02.jpg" width="356" height="101" alt="CHRONICLE"></a><span><a href="https://www.chronicle-web.com/reform/" target="_blank">株式会社クロニクル建設</a></span></li>
+                    <li>
+                        <a href="https://www.prostyle-residence.com/" target="_blank">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link03.jpg" width="356" height="101" alt="PROSTYLE">
+                        </a>
+                        <span><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></span>
+                    </li>
+                    <li>
+                        <a href="http://chinokanri.co.jp/" target="_blank">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link05.jpg" width="356" height="98" alt="CHINO 千野建物管理">
+                        </a>
+                        <span><a href="http://chinokanri.co.jp/" target="_blank">千野建物管理株式会社</a></span>
+                    </li>
+                    <li>
 
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link06.jpg" width="356" height="98" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link06.jpg" width="356" height="98" alt="">
 
-                            <span>煙台提案生活木業有限公司</span>
-                        </li>
-                        <li>
-                            <a href="http://www.propolifevietnam.com/" target="_blank">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link07.jpg" width="356" height="94" alt="">
-                            </a>
-                            <span><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></span>
-                        </li>
-                        <li>
-                            <a href="http://nikuan-kotakino.com" target="_blank">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link10.jpg" width="356" height="98" alt="株式会社小滝野">
-                            </a>
-                            <span><a href="http://nikuan-kotakino.com" target="_blank">株式会社小滝野</a></span>
-                        </li>
-                        <li>
-                            <a href="http://www.propolifehotels.com" target="_blank">
-                            <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link11.jpg" width="356" height="98" alt="株式会社プロスタイル旅館">
-                            </a>
-                            <span><a href="http://www.propolifehotels.com" target="_blank">株式会社プロスタイル旅館</a></span>
-                        </li>
-                        <li>
-                            <a href="https://www.oki-ig.com"><img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー"></a>
-                            <span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
-                        </li>
-                        <li>
-                            <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/com_link_yokohama.jpg" width="356" height="98" alt="株式会社プロスタイル横浜">
-                            <span>株式会社プロスタイル横浜</span>
-                        </li>
-                    </ul>
-                </div>
+                        <span>煙台提案生活木業有限公司</span>
+                    </li>
+                    <li>
+                        <a href="http://www.propolifevietnam.com/" target="_blank">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link07.jpg" width="356" height="94" alt="">
+                        </a>
+                        <span><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></span>
+                    </li>
+                    <li>
+                        <a href="http://nikuan-kotakino.com" target="_blank">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link10.jpg" width="356" height="98" alt="株式会社小滝野">
+                        </a>
+                        <span><a href="http://nikuan-kotakino.com" target="_blank">株式会社小滝野</a></span>
+                    </li>
+                    <li>
+                        <a href="http://www.propolifehotels.com" target="_blank">
+                        <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpg" width="356" height="98" alt="株式会社プロスタイル旅館">
+                        </a>
+                        <span><a href="http://www.propolifehotels.com" target="_blank">株式会社プロスタイル旅館</a></span>
+                    </li>
+                    <li>
+                        <a href="https://www.oki-ig.com"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー"></a>
+                        <span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
+                    </li>
+                    <li>
+                        <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link_yokohama.jpg" width="356" height="98" alt="株式会社プロスタイル横浜">
+                        <span>株式会社プロスタイル横浜</span>
+                    </li>
+                </ul>
             </div>
-            <div class="hBox hBox01">
-                <div class="subBox">
-                    <ul class="clearfix">
-                        <li>
-                            <a href="http://propolifejp.test/company/president/">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link01.jpg" width="356" height="133" alt="">
-                            </a>
-                            <span><a href="http://propolifejp.test/company/president/">代表者挨拶</a></span>
-                        </li>
-                        <li>
-                            <a href="http://propolifejp.test/company/philosophy/">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link02.jpg" width="356" height="133" alt="">
-                            </a>
-                            <span><a href="http://propolifejp.test/company/philosophy/">企業理念</a></span>
-                        </li>
-                        <li>
-                            <a href="http://propolifejp.test/company/">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link03.jpg" width="356" height="133" alt="">
-                            </a>
-                            <span><a href="http://propolifejp.test/company/">会社概要</a></span>
-                        </li>
-                        <li>
-                            <a href="http://propolifejp.test/company/history/">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link04.jpg" width="356" height="133" alt="">
-                            </a>
-                            <span><a href="http://propolifejp.test/company/history/">沿革</a></span>
-                        </li>
-                        <li>
-                            <a href="http://propolifejp.test/company/officer/">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link05.jpg" width="356" height="133" alt="">
-                            </a>
-                            <span><a href="http://propolifejp.test/company/officer/">役員一覧</a></span>
-                        </li>
-                        <li>
-                            <a href="http://propolifejp.test/company/access/">
-                                <img src="http://propolifejp.test/wp/wp-content/themes/corporate/common/img/h_link06.jpg" width="356" height="133" alt="">
-                            </a>
-                            <span><a href="http://propolifejp.test/company/access/">アクセス</a></span>
-                        </li>
-                    </ul>
-                </div>
+        </div>
+        <div class="hBox hBox01">
+            <div class="subBox">
+                <ul class="clearfix">
+                    <li>
+                        <a href="http://propolifejp.test/company/president/">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link01.jpg" width="356" height="133" alt="">
+                        </a>
+                        <span><a href="http://propolifejp.test/company/president/">代表者挨拶</a></span>
+                    </li>
+                    <li>
+                        <a href="http://propolifejp.test/company/philosophy/">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link02.jpg" width="356" height="133" alt="">
+                        </a>
+                        <span><a href="http://propolifejp.test/company/philosophy/">企業理念</a></span>
+                    </li>
+                    <li>
+                        <a href="http://propolifejp.test/company/">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link03.jpg" width="356" height="133" alt="">
+                        </a>
+                        <span><a href="http://propolifejp.test/company/">会社概要</a></span>
+                    </li>
+                    <li>
+                        <a href="http://propolifejp.test/company/history/">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link04.jpg" width="356" height="133" alt="">
+                        </a>
+                        <span><a href="http://propolifejp.test/company/history/">沿革</a></span>
+                    </li>
+                    <li>
+                        <a href="http://propolifejp.test/company/officer/">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link05.jpg" width="356" height="133" alt="">
+                        </a>
+                        <span><a href="http://propolifejp.test/company/officer/">役員一覧</a></span>
+                    </li>
+                    <li>
+                        <a href="http://propolifejp.test/company/access/">
+                            <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link06.jpg" width="356" height="133" alt="">
+                        </a>
+                        <span><a href="http://propolifejp.test/company/access/">アクセス</a></span>
+                    </li>
+                </ul>
             </div>
-        </header>
-        
+        </div>
+    </header>
         <div class="menuBox">
             <div class="close"><img src="<?php bloginfo('template_directory'); ?>/common/img/close.png" width="16" height="16" alt=""></div>
             <ul>

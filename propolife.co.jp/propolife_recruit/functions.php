@@ -5,11 +5,10 @@
     アップデート通知非表示
 *
 */
-
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 add_filter('pre_site_transient_update_core', create_function('$a', "return  null;"));
-
+show_admin_bar( false );
 
 /*
 
@@ -143,5 +142,6 @@ function dynamictime() {
     $mytimestamp = date(get_option('date_format'), strtotime($date));
   return $mytimestamp;
 }
+
 
 ?>

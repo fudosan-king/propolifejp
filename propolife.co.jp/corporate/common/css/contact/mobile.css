@@ -1,0 +1,9 @@
+@media screen and (max-width: 420px){
+	ul.list_interest {
+		padding: 0;
+	}
+
+	ul.list_interest li {
+		width: 100%;
+	}
+}

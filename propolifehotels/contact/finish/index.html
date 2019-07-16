@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>プロポライフホテルズ</title>
+        <meta name="description" content="東京都千代田区にあるプロポライフホテルズは「旅先の我が家をつくる」をコンセプトとしてホテル運営やコンサルティング業務などを行う会社です">
+        <meta name="keywords" content="ホテル,旅館,旅行,レストラン,バー,スポーツ施設,コンサルティング">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../css/responsive.css">
+        <link rel="stylesheet" href="../../css/jquery.jscrollpane.css">
+        <script src="//maps.google.com/maps/api/js?sensor=true&key=AIzaSyAffKlhXHZXYWehQzLKHGMFmJVb7Nvgi0Y"></script>
+    </head>
+    <body>
+        <header id="top">
+            <div id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header_wrap">
+                <div class="overlay"></div>
+                <div class="header_inner">
+                    <h1 class="logo"><a href="./"><img src="../../images/logo.png" alt="PROPOLIFE HOTEL's プロポライフホテルズ"></a></h1>
+                    <ul class="sns_list">
+                        <li><a href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="../../images/fb_ico.png" width="8px" alt="facebook"></a></li>
+                        <li><a href="https://www.instagram.com/chronicle_web.official/" target="_blank"><img src="../../images/insta_ico.png" width="16px" alt="Instagram"></a></li>
+                        <li><a href="https://page.line.me/propolifegroup" target="_blank"><img src="../../images/line_ico.png" width="19px" alt="LINE"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav id="gnav">
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#concept">CONCEPT</a></li>
+                    <li><a href="#topics">TOPICS</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#map">ACCESS</a></li>
+                    <li class="sp_only"><a href="#map">CONTACT</a></li>
+                </ul>
+                <p class="rsv_btn"><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-tgqeq-207666f3211628391e810c5e70cc90f2">CONTACT　お問合わせ</a></p>
+            </nav>
+            <a class="pagetop" href="#"><img src="../../images/pagetop.jpg" alt="ページトップへ"></a>
+        </header>
+
+        <div id="wrapper" style="background-color: #fff;">         
+            <div id="container">
+                <section class="sc contact finish">
+                    <h2>ありがとうございます。<br> お問い合わせをお受けしました。</h2>
+                    <div class="content-inner">
+                        <p>確認後、追って担当者よりご連絡させていただきます。<br>
+※当社指定休⽇を挟んだ場合、ご連絡までに⽇数がかかる場合があります。<br>
+あらかじめご了承ください。</p>
+                    </div>
+                </section>
+            </div>
+            <div class="overlay"></div>
+        </div>
+
+
+
+        <footer>
+            <nav id="footer_nav">
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#concept">CONCEPT</a></li>
+                    <li><a href="#topics">TOPICS</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#map">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="footer_inner float_wrap">
+                <div class="left_clm"><p class="logo"><img src="../../images/logo.png" alt="PROPOLIFE HOTEL's プロポライフホテルズ"></p></div>
+                <div class="right_clm footer_info">
+                    <p class="rsv_btn"><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-tgqeq-207666f3211628391e810c5e70cc90f2">CONTACT　お問合わせ</a></p>
+                </div>
+                <ul class="sns_list sp_only">
+                    <li><a href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="../../images/fb_ico.png" width="8px" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/chronicle_web.official/" target="_blank"><img src="../../images/insta_ico.png" width="16px" alt="Instagram"></a></li>
+                    <li><a href="https://page.line.me/propolifegroup" target="_blank"><img src="../../images/line_ico.png" width="19px" alt="LINE"></a></li>
+                </ul>
+            </div>
+            <p class="copy"><small>Copyright &copy; PROSTYLE RYOKAN All Rights Reserved.</small></p>
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/jquery.easing.1.3.js"></script>
+        <script src="../../js/google_map.js"></script>
+        <script src="../../js/jquery.mousewheel.js"></script>
+        <script src="../../js/jquery.jscrollpane.min.js"></script>
+        <script>
+            jQuery(function($) {
+                var nav    = $('header'),
+                    offset = nav.offset();
+
+                $(window).scroll(function () {
+                  if($(window).scrollTop() > offset.top) {
+                    nav.addClass('fixed');
+                  } else {
+                    nav.removeClass('fixed');
+                  }
+                });
+
+                $('#burger').click(function(){
+                    $('.overlay, #gnav, #burger').toggleClass('open');
+                });
+                $('#gnav li a').click(function(){
+                    $('.overlay, #gnav, #burger').removeClass('open');
+                });
+
+                $('#acMenu dt').on('click', function() {
+                    $(this).next().slideToggle();
+                    $(this).toggleClass('active');
+                });
+
+                var topBtn=$('.pagetop');
+                topBtn.hide();
+
+                $(window).scroll(function(){
+                  if($(window).scrollTop() > 400){
+                    topBtn.fadeIn();
+                  }else{
+                    topBtn.fadeOut();
+                  }
+                });
+
+                topBtn.click(function(){
+                  $('body,html').animate({
+                  scrollTop: 0},2000, "easeInOutQuint");
+                  return false;
+                });
+
+                $(window).scroll(function(e){
+                    var bottomY = 24,
+                      $window = $(e.currentTarget),
+                      height = $window.height(),
+                      scrollTop = $window.scrollTop(),
+                      scrollPosition = $window.height() + $window.scrollTop(),
+                      documentHeight = $(document).height(),
+                      footerHeight = $("footer").height();
+                      bottomHeight = footerHeight + height + scrollTop + bottomY - documentHeight;
+                    if(documentHeight - scrollPosition  <= footerHeight){
+                      $('.pagetop').css({ bottom: bottomHeight - bottomY });
+                    }else{
+                      $('.pagetop').css({ bottom: bottomY });
+                    }
+                });
+
+                if(window.matchMedia('(max-width:968px)').matches){
+                    $('a[href^=#]').click(function() {
+                        var href= $(this).attr("href");
+                        var target = $(href == "#" || href == "" ? 'html' : href);
+                        var position = target.offset().top;
+                        var headerHight = 74;
+                        var position = target.offset().top-headerHight;
+                        $('body,html').animate({scrollTop:position }, 2000, 'easeInOutQuint');
+                        return false;
+                    });
+                } else {
+                    $('a[href^=#]').not('.pagetop').click(function() {
+                        var href= $(this).attr("href");
+                        var target = $(href == "#" || href == "" ? 'html' : href);
+                        var position = target.offset().top;
+                        $('body,html').animate({scrollTop:position + 100 }, 2000, 'easeInOutQuint');
+                        return false;
+                    });
+                }
+            });
+        </script>
+        <script>
+            if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+              $(function() {
+                $('.tel_link').each(function() {
+                  var str = $(this).html();
+                  if ($(this).children().is('img')) {
+                    $(this).html($('<a>').attr('href', 'tel:' + $(this).children().attr('alt').replace(/-/g, '')).append(str + '</a>'));
+                  } else {
+                    $(this).html($('<a>').attr('href', 'tel:' + $(this).text().replace(/-/g, '')).append(str + '</a>'));
+                  }
+                });
+              });
+            }
+        </script>
+
+<script>
+    $(function(){
+        $(window).load(function() {
+            $('.scroll-pane').jScrollPane();
+        });
+        $(window).resize(function() {
+            $('.scroll-pane').jScrollPane();
+        });
+    });
+</script>
+    </body>
+</html>

@@ -565,6 +565,6 @@ GL_Propolife.func = {};
 
         Run();
 
-
     });
+    
 })(jQuery);

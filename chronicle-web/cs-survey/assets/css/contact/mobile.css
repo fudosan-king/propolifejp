@@ -1,0 +1,54 @@
+@media all and (max-width: 500px) {
+
+	.Rtable--collapse {
+		display: block;
+	}
+	.Rtable--collapse > .Rtable-cell {
+		width: 100% !important;
+		padding: 15px 0;
+	}
+	.Rtable--collapse > .Rtable-cell--foot {
+		margin-bottom: 1em;
+	}
+
+	.Rtable--collapse {
+		display: block;
+	}
+	.Rtable--collapse > .Rtable-cell {
+		width: 100% !important;
+	}
+	.Rtable--collapse > .Rtable-cell--foot {
+		margin-bottom: 1em;
+	}
+	.Rtable-cell--rowEnd {
+		margin-bottom: 1em;
+	}
+}
+
+@media screen and (max-width: 414px){
+	.frm_contact .contact_tel {overflow-y: auto; height: 200px;}
+	.frm_contact .checkbox.secret {text-align: center;}
+
+	.frm_contact .Rtable-cell.Rtable-cell--rowEnd.div-line {border-top: none;}
+
+	.frm_contact .table_confirm .row{
+		padding: 0;
+		margin: 0;
+	}
+
+	.frm_contact .table_confirm .btnForm{
+		width: 45%;
+	}
+
+	.Rtable-cell.Rtable-cell--medium {
+		text-align: left;
+	}
+	
+	ul.list_interest {
+		padding: 0;
+	}
+
+	ul.list_interest li {
+		width: 100%;
+	}
+}

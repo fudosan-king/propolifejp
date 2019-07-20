@@ -304,8 +304,9 @@ $(document).ready(function() {
                 return false;
             }
 
-            if (date.getDay() == 3)
+            if (date.getDay() == 2 || date.getDay() == 3) {
                 return false;
+            }
 
         },
 

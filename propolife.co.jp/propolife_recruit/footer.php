@@ -38,7 +38,7 @@
                     <p><a href="https://www.propolife.co.jp/group/">グループ企業</a></p>
                     <ul>
                         <li><a href="https://www.chronicle-web.com/" target="_blank">株式会社クロニクル</a></li>
-                        <li><a href="https://www.chronicle-kensetsu.co.jp/" target="_blank">株式会社クロニクル建設</a></li>
+                        <li><a href="http://www.chronicle-kensetsu.co.jp/" target="_blank">株式会社クロニクル建設</a></li>
                         <li><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></li>
                         <li><span>株式会社プロスタイル横浜</span></li>
                         <li><a href="https://www.chinokanri.co.jp/" target="_blank">千野建物管理株式会社</a></li>

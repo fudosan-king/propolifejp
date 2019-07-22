@@ -36,7 +36,7 @@
 				                </a>
 				            </li>
 				            <li>
-				                <a href="reservation.php">
+				                <a href="contact/reservation/">
 				                    <span class="i_topnav">
 				                        <img src="images/1x/i_reservation.svg" alt="" class="img-fluid">
 				                    </span>
@@ -44,7 +44,7 @@
 				                </a>
 				            </li>
 				            <li>
-				                <a href="material.php">
+				                <a href="contact/material/">
 				                    <span class="i_topnav">
 				                        <img src="images/1x/i_request.svg" alt="" class="img-fluid">
 				                    </span>

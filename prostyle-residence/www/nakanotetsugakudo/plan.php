@@ -32,7 +32,7 @@
 			                </a>
 			            </li>
 			            <li>
-			                <a href="reservation.php">
+			                <a href="contact/reservation/">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_reservation.svg" alt="" class="img-fluid">
 			                    </span>
@@ -40,7 +40,7 @@
 			                </a>
 			            </li>
 			            <li>
-			                <a href="material.php">
+			                <a href="contact/material/">
 			                    <span class="i_topnav">
 			                        <img src="images/1x/i_request.svg" alt="" class="img-fluid">
 			                    </span>
@@ -70,7 +70,7 @@
 			        </div>
 			    </div>
 			</header>
-			
+
 			<section class="section_topbanner bg_topplan">
 				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 			</section>
@@ -535,7 +535,7 @@
 		      						</div>
 
 		      						<p class="gray mt-5 mb-5"><small>※ＷＩＣ：ウォークインクローゼット、ＦＣ：ファミリークローク、ＳＩＣ：シューズインクローゼット、Ｓ：サービスルーム(納戸)</small></p>
-		      						
+
 		      					</div>
 		      				</div>
 		      			</div>

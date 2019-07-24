@@ -34,7 +34,7 @@ function invalidCheck(){
     // EMPTY CHECK
 
     var elemsChk = [
-
+        $('input[name="email"]'),
     ];
 
     $.each(elemsChk, function(key, elem){
@@ -67,19 +67,18 @@ function invalidCheck(){
 
     });
 
-    // // EMAIL CHECK
-    // var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    // if (!emailPattern.test($('input[name="email"]').val())){
-    //     $('input[name="email"]').css('background-color', invalidColor);
-    //     $('input[name="email-confirm"]').css('background-color', invalidColor);
-    //     isValid = false;
+    // EMAIL CHECK
+    var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    if (!emailPattern.test($('input[name="email"]').val())){
+        $('input[name="email"]').css('background-color', invalidColor);
+        isValid = false;
 
-    //     $('.error-text.email').html(ERROR_MAIL_FORMAT);
-    //     $('.error-text.email').css('display', 'block');
+        $('.error-text.email').html(ERROR_MAIL_FORMAT);
+        $('.error-text.email').css('display', 'block');
 
-    // }else{
-    //     $('input[name="email"]').css('background-color', 'initial');
-    // }
+    }else{
+        $('input[name="email"]').css('background-color', 'initial');
+    }
 
 
     // if($('input[name="email-confirm"]').val() != $('input[name="email"]').val()){
@@ -191,6 +190,9 @@ $(document).ready(function(){
 
             var cfrm_question7c = $('textarea[name="question7c"]').val();
             $('.cfrm_question7c').html(cfrm_question7c);
+
+            var cfrm_email = $('input[name="email"]').val();
+            $('.cfrm_email').html(cfrm_email);
 
             var cfrm_mailmagazine = $('input[name="mailmagazine[]"]:checked').val();
             $('.cfrm_mailmagazine').html(cfrm_mailmagazine);

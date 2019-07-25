@@ -139,6 +139,7 @@ ul.sec-top li:last-child p{
 	padding: 26px;
 	color: #fff;
 	text-align: center;
+	line-height: 1.3em;
 }
 
 .sumikae-sec #sec-loan .kids ul{
@@ -291,12 +292,13 @@ ul.sec-top li:last-child p{
     padding: 1%;
 }
 .catch {
-	font-size: 2.5em;
+	font-size: 2em;
     margin-top: 70px;
     padding: 26px 0;
     background-image: url(imgs/bk_yellow.jpg);
     background-position: bottom;
     text-align: center;
+    line-height: 1.3em;
 }
 .catch-txt {
 	font-size: 1.5em;

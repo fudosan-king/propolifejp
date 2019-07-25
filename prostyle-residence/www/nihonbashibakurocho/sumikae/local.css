@@ -295,7 +295,8 @@ ul.sec-top li:last-child p{
     padding-top: 85px;
 }
 	#sumikae .logo-area .catch{
-		font-size: 2.5rem;
+		font-size: 2rem;
+		line-height: 1.5em;
 }
 	.sumikae-sec #sec-loan .kids ul{
 		margin-bottom: 0;
@@ -371,5 +372,12 @@ ul.sec-top li:last-child p{
 #btn-area ul.buttons li:first-child {
     margin-right: -20px;
 }
+
+.sumikae-sec #sec-loan .kids .sec-loantitle {
+	font-size: 2em;
+	line-height: 1.5em;
+}
 	
 }
+
+

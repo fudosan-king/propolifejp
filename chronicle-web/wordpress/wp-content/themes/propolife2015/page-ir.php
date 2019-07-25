@@ -101,6 +101,11 @@ $post_id = $post -> ID;
                             <a href="https://www.chronicle-web.com/wordpress/wp-content/uploads/1207.pdf" target="_blank"> <span class="p-text">平成30年3月期</span> <img src="<?php echo get_template_directory_uri(); ?>/common/images/ir/img_pdf.png" alt="PDF"> （55.0 KB）</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td id="post-3307">
+                            <a href="https://www.chronicle-web.com/wordpress/wp-content/uploads/Chronicle-13th-Financial-Report.pdf" target="_blank"> <span class="p-text">平成31年3月期</span> <img src="<?php echo get_template_directory_uri(); ?>/common/images/ir/img_pdf.png" alt="PDF"> （170.0 KB ）</a>
+                        </td>
+                    </tr>
 				</table>
 			</div>
         </div>

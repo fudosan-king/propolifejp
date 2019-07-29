@@ -413,14 +413,14 @@ ul.menu_footer li:hover a {
   border-color: #b48856;
 }
 
-.statusselling_pro {
+/*.statusselling_pro {
   padding: 85px 0 160px;
 }
 
 .statusselling_pro:nth-child(1) {
   padding: 85px 0 250px;
 }
-
+*/
 .img_statusselling {
   border: 5px solid #fff;
   overflow: hidden;
@@ -536,7 +536,7 @@ ul.menu_footer li:hover a {
   background: #000;
   color: #fff;
 }
-.statusselling_pro.custom {
+/*.statusselling_pro.custom {
   padding: 0 0 60px;
 }
 .statusselling_pro_item.custom {
@@ -546,7 +546,7 @@ ul.menu_footer li:hover a {
 .statusselling_pro_item.custom2 {
   position: relative;
   top: -85px;
-}
+}*/
 .section_gallerys {
   padding-bottom: 50px;
 }

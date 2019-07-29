@@ -35,7 +35,19 @@
 			$divRightClass = $index % 2 != 0 ? 'right' : '';
 
 			$thumbnailURL = wp_get_attachment_image_url( get_post_thumbnail_id($post->ID), $size = 'origin', $icon = false );
-			$soldoutText = get_field('status') == 'sale' ? __('販売中', 'sgvink') : __('完売御礼', 'sgvink') ;
+
+			$soldoutText = '' ;
+			switch (get_field('status')) {
+				case 'sale':
+					$soldoutText = __('販売中', 'sgvink');
+					break;
+				case 'predict':
+					$soldoutText = __('販売予告', 'sgvink');
+					break;
+				default:
+					$soldoutText = __('完売御礼', 'sgvink');
+					break;
+			}
 			$soldoutClass = get_field('status') == 'sold' ? 'soldout' : '' ;
 
 			
@@ -65,9 +77,9 @@
 										<div class="infoproducts_content">
 											<?php 
 												if (have_rows('description')):
-													$requestLink = !empty(get_field('request_link')) ? get_field('request_link') : '#';
-													$visitLink = !empty(get_field('visit_link')) ? get_field('visit_link') : '#';
-													$websiteURL = !empty(get_field('website_url')) ? get_field('website_url') : '#';
+													$requestLink = !empty(get_field('request_link')) ? get_field('request_link') : '';
+													$visitLink = !empty(get_field('visit_link')) ? get_field('visit_link') : '';
+													$websiteURL = !empty(get_field('website_url')) ? get_field('website_url') : '';
 
 													echo '<div class="row">';
 													while(have_rows('description')): the_row();
@@ -84,14 +96,29 @@
 												endif;
 											?>
 											
-											<?php if (get_field('status') == 'sale'): ?>
-												<div class="text-center">
-													<a href="<?php echo $requestLink; ?>" class="btn btnDocument">資料請求 <i class="i_right"></i></a>
-													<a href="<?php echo $visitLink; ?>" class="btn btnDocument">来場予約 <i class="i_right"></i></a>
-												</div>
+											<?php if (get_field('status') == 'sale' || get_field('status') == 'predict'): 
+												echo '<div class="text-center">';
+
+												if (!empty($requestLink)){
+													echo '<a href="'.$requestLink.'" class="btn btnDocument">資料請求 <i class="i_right"></i></a>';
+												}
+
+												if (!empty($visitLink)){
+													echo '<a href="'.$visitLink.'" class="btn btnDocument">来場予約 <i class="i_right"></i></a>';
+												}											
+
+												echo '</div>'
+
+											?>											
+													
 											<?php endif; ?>
 										</div>
-										<a href="<?php echo $websiteURL; ?>" target="_blank" class="btn btnProperty">物件公式サイトへ <i class="i_right_white"></i></a>
+
+										<?php 
+											if (!empty($websiteURL)){
+												echo '<a href="'.$websiteURL.'" target="_blank" class="btn btnProperty">物件公式サイトへ <i class="i_right_white"></i></a>';
+											}	
+										?>
 									</div>
 								</div>
 							</div>

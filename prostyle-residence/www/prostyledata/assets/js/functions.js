@@ -119,6 +119,8 @@ $(function($) {
         /* Act on the event */
         event.preventDefault();
     });
+
+
 });
 
 $(document).ready(function() {
@@ -193,4 +195,22 @@ $(function() {
             })
         })
     })
+    if($('.section_statusselling').length > 0){
+        $.each($('.statusselling_pro.bg_common'), function(index, val) {
+             /* iterate through array or object */
+            var statusselling_pro_item = $(val).find('.statusselling_pro_item');
+
+            var box_infoproducts = $(val).find('.box_infoproducts');
+            var box_infoproductsTop = parseInt(box_infoproducts.css('top'));
+            var box_infoproductsHeight = box_infoproducts.outerHeight();
+
+            if(!isMobile){
+                var totalElemHeight = parseInt(box_infoproductsHeight + box_infoproductsTop);
+                $(statusselling_pro_item).css({'height': totalElemHeight + 'px'});
+                $(val).css({'padding': '60px 0'});
+            }
+
+        });
+    }
+    console.log(isMobile);
 });

@@ -51,4 +51,12 @@
 	ul.list_interest li {
 		width: 100%;
 	}
+
+	.frm_contact .finish_message {
+	  margin: 100px auto;
+	  max-width: 600px;
+	  border-radius: 10px;
+	  padding: 60px 20px;
+	  font-size: 1.3rem;
+	}
 }

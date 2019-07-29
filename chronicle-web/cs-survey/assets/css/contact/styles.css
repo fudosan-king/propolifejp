@@ -79,6 +79,20 @@
   text-align: left;
 }
 
+.frm_contact .finish_message {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 600px;
+  border: #ccc 1px solid;
+  border-radius: 10px;
+  padding: 60px 20px;
+  font-size: 1.5rem;
+}
+
+.frm_contact .finish_message p {
+  margin-bottom: 0;
+}
+
 .btnForm {
   background: #67181D;
   color: #fff;

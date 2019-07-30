@@ -5,7 +5,7 @@ global $temp_dir, $dir_name, $dir_category;
 <div id="sub_global_nav">
 
     <h2><img src="<?php echo $temp_dir; ?>/common/images/img_logo_sub_nav.png" alt="PROPO LAND" class="pc"><img src="<?php echo $temp_dir; ?>/common/images/img_logo_sub_nav_sp.png" alt="PROPO LAND" class="sp"></h2>
-    <p class="btn_entry"><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-odkap-274e494d5fffdd615a8b6234aafe76ae" target="_blank"><span><img src="<?php echo $temp_dir; ?>/common/images/parts_sub_nav_txt_entry.png" alt="ENTRY"></span></a></p>
+    <p class="btn_entry"><a href="https://www.propolife.co.jp/recruit/contact/" target="_blank"><span><img src="<?php echo $temp_dir; ?>/common/images/parts_sub_nav_txt_entry.png" alt="ENTRY"></span></a></p>
 <?php if($dir_name == 'home'): ?>
     <p class="home_sub_nav_title">採用ページMENU</p>
 <?php endif; ?>

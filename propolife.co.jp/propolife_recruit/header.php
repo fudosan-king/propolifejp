@@ -94,7 +94,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <li class="sub02"><a href="https://propolife.co.jp/group/">グループ企業</a></li>
                         <li class="sub03"><a href="https://propolife.co.jp/news/">ニュース</a></li>
                         <li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
-                        <li><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-ockdr-75c9de3a9898c4710f57741e460fedab" target="_blank">お問い合わせ</a></li>
+                        <li><a href="https://www.propolife.co.jp/contact/" target="_blank">お問い合わせ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -256,7 +256,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                     </ul>
                 </li>
                 <li>
-                    <p><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-ockdr-75c9de3a9898c4710f57741e460fedab" target="_blank">お問い合わせ</a></p>
+                    <p><a href="https://www.propolife.co.jp/contact/" target="_blank">お問い合わせ</a></p>
                 </li>
                 <li>
                     <p><a href="https://www.propolife.co.jp/privacypolicy/">プライバシーポリシー</a></p>

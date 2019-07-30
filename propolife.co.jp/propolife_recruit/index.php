@@ -35,7 +35,7 @@ $dir_name = 'home';
                 <p class="btn_benefit"><a href="<?php echo home_url(); ?>/benefit/"><img src="<?php echo $temp_dir; ?>/common/images/home/btn_home_benefit.png" alt="福利厚生"></a></p>
             </div><!-- #btn_list -->
 
-            <p class="btn_entry"><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-odkap-274e494d5fffdd615a8b6234aafe76ae" target="_blank"></a></p>
+            <p class="btn_entry"><a href="https://www.propolife.co.jp/recruit/contact/" target="_blank"></a></p>
     
         </div><!-- // #main_visual_inner -->
     </div><!-- // #main_visual -->

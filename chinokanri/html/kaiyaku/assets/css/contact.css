@@ -1,0 +1,238 @@
+.frm_contact .table_confirm {display: none;}
+
+.frm_contact .error-required {
+	background-color: rgba(255,0,0,0.15);
+	border: #fd0000 1px solid;
+}
+
+.frm_contact section.error-box {
+    padding: 10px;
+    background-color: #fff8de;
+    border-radius: 10px;
+    width: auto;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+
+    background-image: url(../images/warning.png);
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: left;
+}
+
+.frm_contact section.error-box p {
+	font-size: 7.5pt;
+	margin-bottom: 0;
+	margin-left: 25px;
+    font-weight: 350;
+    color: #fd0000;
+}
+
+.frm_contact section.error-box::after {
+    content: " ";
+    border-top: 12px #fff8de solid;
+    position: absolute;
+    bottom: -10px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: none;
+    left: 10%;
+}
+
+.section_header {
+	padding: 15px 0;
+}
+.section_header .container {
+	max-width: 800px;
+}
+.text_top_info {
+	font-size: 12px;
+	text-align: right;
+	margin-bottom: 0;
+}
+.section_header h1 {
+	margin-top: 0;
+}
+.text-danger {
+	color: #FF5F5F;
+}
+.contact p.text-danger {
+	color: #FF5F5F;
+	font-weight: 500;
+}
+.pl30 {padding-left: 30px;}
+.mt10 {margin-top: 10px;}
+.mt0 {margin-top: 0 !important;}
+.mb0 {margin-bottom: 0 !important;;}
+.contact {
+	margin-top: 20px;
+}
+.contact p {
+	font-size: 16px;
+	font-weight: 300;
+}
+.btn_cancel {
+	margin: 20px 0 40px;
+	font-size: 23px;
+	font-weight: 300;
+	width: 100%;
+	padding: 8px 10px;
+	background: #2A81CC;
+	color: #fff;
+	border-radius: 0;
+}
+.text_gray {
+	color: #707070;
+}
+.text_red {
+	color: #B12525;
+	font-size: 18px;
+}
+.frm_contact {
+	font-size: 15px;
+}
+.frm_contact label {
+	margin-top: 14px;
+	padding-left: 20px;
+	font-size: 15px;
+	font-weight: 500;
+}
+.frm_contact label.cfrm-data {
+	font-weight: normal;
+}
+.frm_contact h3 {
+	font-size: 25px;
+	border-bottom: 1px solid #000;
+	padding-bottom: 10px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.frm_contact h3 span {
+	font-size: 16px;
+}
+.frm_contact h4 {
+	margin-bottom: 30px;
+	font-size: 25px;
+	font-weight: 300;
+}
+.frm_contact .form-control {
+	border-radius: 0;
+	height: 50px;
+	line-height: 60;
+}
+.date_picker {
+	position: relative;
+}
+.i_date {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: url('../images/calendar.png') no-repeat;
+	width: 16px;
+	height: 16px;
+}
+.frm_contact .note_date.form-control {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	box-shadow: none;
+	padding-left: 0;
+	line-height: 3;
+}
+.frm_contact select.form-control {
+	border-radius: 0;
+}
+.frm_contact textarea.form-control {
+	height: 136px;
+	margin-bottom: 10px;
+	line-height: 1em;
+}
+.frm_contact .form-group {
+	margin-bottom: 30px;
+	position: relative;
+}
+.room_num {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+.btnSearch_address {
+	background: #B12525;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #fff;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: 7px;
+}
+.btnSearch_address:hover {
+	color: #fff;
+	background: #730707;
+}
+.btn_CheckEntries {
+	background: #3B4043;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: 500;
+	padding: 10px 70px;
+	margin-top: 150px;
+	margin-bottom: 100px;
+}
+.btn_CheckEntries:focus{
+	color: #fff;
+}
+.btn_CheckEntries:hover {
+	color: #fff;
+	background: #2A81CC;
+}
+ul.list_contact {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+ul.list_contact li {
+	position: relative;
+	padding-left: 15px;
+	margin-bottom: 5px;
+	color: #FF0000;
+}
+ul.list_contact li::before {
+	content: '※';
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.box_date {
+	border-top: 1px dotted #000;
+	padding-top: 30px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.footer {
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+	.frm_contact h3 {
+		font-size: 19px;
+	}
+	.frm_contact h4 {
+		font-size: 18px;
+	}
+	.frm_contact .form-group {
+		margin-bottom: 10px;
+	}
+	.frm_contact label {
+		padding-left: 0;
+	}
+	.frm_contact .checkbox label, .frm_contact .radio label {
+		padding-left: 30px;
+	}
+	.btn_CheckEntries {
+		margin: 15px 0;
+	}
+	.text_top_info {
+		text-align: center;
+		margin-top: 10px;
+	}
+}

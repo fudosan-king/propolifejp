@@ -139,7 +139,7 @@
 
         <div id="footer_nav">
             <ul class="foot_menu">
-                <li><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=lgqh-ockdr-75c9de3a9898c4710f57741e460fedab&_ga=1.169896675.272080297.1488867878" target="_blank">お問い合わせ</a></li>
+                <li><a href="https://www.propolife.co.jp/contact/" target="_blank">お問い合わせ</a></li>
                 <li><a href="https://www.propolife.co.jp/terms/" target="_blank">利用規約</a></li>
                 <li><a href="https://www.propolife.co.jp/antisocial/" target="_blank">反社会的勢力排除に関する基本方針</a></li>
                 <li><a href="https://www.chronicle-web.com/policy/" target="_blank">プライバシーポリシー</a></li>
@@ -154,7 +154,7 @@
         </div>
     </div><!-- // #footer_inner -->
 </div><!-- // #footer -->
-<?php 
+<?php
     if(is_page( 'contact' )):
         ?>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>

@@ -45,7 +45,7 @@
 					</ul>
 				</li>
 				<li class="sp">
-					<p><a href=<?php echo esc_url( home_url( '/' ) ); ?>contact/">お問い合わせ</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact/">お問い合わせ</a></p>
 				</li>
 				<li class="sp">
 					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>terms/">利用規約</a></p>
@@ -66,7 +66,7 @@
 			<div class="subBox clearfix">
 				<p>Copyright &copy; PROPOLIFE GROUP INC. All Rights Reserved.</p>
 				<ul class="clearfix">
-					<li><a href=<?php echo esc_url( home_url( '/' ) ); ?>contact/">お問い合わせ</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact/">お問い合わせ</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>terms">利用規約</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>antisocial">反社会的勢力排除に関する基本方針</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>privacypolicy/">プライバシーポリシー</a></li>
@@ -117,7 +117,7 @@
 
 	});
 </script>
-<?php 
+<?php
 	if(is_page( 'contact' )):
 		?>
 			<script src="<?php bloginfo('template_directory'); ?>/common/js/contact/contact.js"></script>

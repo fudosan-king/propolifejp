@@ -194,7 +194,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<li class="sub02"><a href="<?php echo esc_url( home_url( '/' ) ); ?>group/">グループ企業</a></li>
 						<li class="sub03"><a href="<?php echo esc_url( home_url( '/' ) ); ?>news/">ニュース</a></li>
 						<li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
-						<li><a href=<?php echo esc_url( home_url( '/' ) ); ?>contact/" target="_blank">お問い合わせ</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact/" target="_blank">お問い合わせ</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -358,7 +358,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</ul>
 			</li>
 			<li>
-				<p><a href=<?php echo esc_url( home_url( '/' ) ); ?>contact/" target="_blank">お問い合わせ</a></p>
+				<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact/" target="_blank">お問い合わせ</a></p>
 			</li>
 			<li>
 				<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>privacypolicy/">プライバシーポリシー</a></p>

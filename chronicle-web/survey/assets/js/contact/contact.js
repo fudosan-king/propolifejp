@@ -38,6 +38,7 @@ function invalidCheck(){
         $('input[name="first-name"]'),
         $('input[name="last-name"]'),
 
+        $('select[name="brand_type"]'),
         $('select[name="age"]'),
         $('select[name="number_people"]'),
 
@@ -97,6 +98,11 @@ function invalidCheck(){
                 isValid = false;
 
                 // Set error text
+
+                if(elem.prop('name') == 'brand_type'){
+                    $('.error-text.brand_type').html(ERROR_NO_INPUT);
+                    $('.error-text.brand_type').css('display', 'block');
+                }
                 
                 if(elem.prop('name') == 'first-name' || elem.prop('name') == 'last-name'){
                     $('.error-text.name').html(ERROR_NO_INPUT);
@@ -252,6 +258,9 @@ $(document).ready(function(){
             $('.table_confirm').fadeIn(function(){
                  $('body').scrollTop(0);
             });
+
+            var cfrm_brand_type =  $('select[name="brand_type"]').val();
+            $('.cfrm_brand_type').html(cfrm_brand_type);
 
             var cfrm_name = $('input[name="last-name"]').val() + $('input[name="first-name"]').val();
             $('.cfrm_name').html(cfrm_name);

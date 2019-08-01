@@ -35,8 +35,10 @@ function invalidCheck(){
 
     var elemsChk = [
 
+        $('input[name="estate_name"]'),
+
         $('input[name="first-name"]'),
-        $('input[name="last-name"]'),
+        $('input[name="last-name"]'),   
 
         $('select[name="brand_type"]'),
         $('select[name="age"]'),
@@ -99,11 +101,16 @@ function invalidCheck(){
 
                 // Set error text
 
+                if(elem.prop('name') == 'estate_name'){
+                    $('.error-text.estate_name').html(ERROR_NO_INPUT);
+                    $('.error-text.estate_name').css('display', 'block');
+                }
+
                 if(elem.prop('name') == 'brand_type'){
                     $('.error-text.brand_type').html(ERROR_NO_INPUT);
                     $('.error-text.brand_type').css('display', 'block');
                 }
-                
+
                 if(elem.prop('name') == 'first-name' || elem.prop('name') == 'last-name'){
                     $('.error-text.name').html(ERROR_NO_INPUT);
                     $('.error-text.name').css('display', 'block');
@@ -259,6 +266,9 @@ $(document).ready(function(){
                  $('body').scrollTop(0);
             });
 
+            var cfrm_estate_name = $('input[name="estate_name"]').val();
+            $('.cfrm_estate_name').html(cfrm_estate_name);
+            
             var cfrm_brand_type =  $('select[name="brand_type"]').val();
             $('.cfrm_brand_type').html(cfrm_brand_type);
 

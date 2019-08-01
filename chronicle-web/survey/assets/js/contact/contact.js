@@ -321,7 +321,7 @@ $(document).ready(function(){
             var cfrm_business_station = $('input[name="business_station"]').val();
             $('.cfrm_business_station').html(cfrm_business_station);
 
-            var cfrm_income = `世帯主：${$('select[name="income_1"]').val()} 、配偶者${$('select[name="income_2"]').val()}` ;
+            var cfrm_income = `世帯主：${$('select[name="income_1"]').val()} 、配偶者：${$('select[name="income_2"]').val()}` ;
             $('.cfrm_income').html(cfrm_income);
 
             var cfrm_move_in_date = $('select[name="move_in_date"]').val();
@@ -389,15 +389,6 @@ $(document).ready(function(){
         if(invalidCheck()){
 
             // RE-SET VALUE ON FINAL TURN
-            $('form input[type="text"]').each(function(){
-                if($(this).val() == '')
-                    $(this).val('null');
-            });
-
-            $('form textarea').each(function(){
-                if($(this).val() == '')
-                    $(this).val('null');
-            });
 
             var job = `職種: ${$('select[name="job_type"]').val()}、業種: ${$('select[name="job_industry"]').val()}` ;
             $('input[name="job"]').val(job);
@@ -405,7 +396,7 @@ $(document).ready(function(){
             var length_service = `約${$('input[name="length_service_year"]').val()}年${$('input[name="length_service_month"]').val()}ヶ月` ;
             $('input[name="length_service"]').val(length_service);
 
-            var income = `世帯主：${$('select[name="income_1"]').val()} 、配偶者${$('select[name="income_2"]').val()}` ;
+            var income = `世帯主：${$('select[name="income_1"]').val()} 、配偶者：${$('select[name="income_2"]').val()}` ;
             $('input[name="income"]').val(income);
 
             var railway_station1 = `${$('input[name="RwLine1"]').val()}線${$('input[name="RwStation1"]').val()}駅` ;
@@ -434,3 +425,20 @@ $(document).ready(function(){
         console.log(queryString['reservation']);
     });
 });
+
+/* SCRIPT GENERATE DATA TO TEST FORM CONTACT 
+
+var collectInputText = $('input[type="text"]');
+$.each(collectInputText, function(i, e){
+    var cfrmPrefix = `#cfrm_${$(e).attr('name')}`;
+    $(e).val(`TEST ${cfrmPrefix}`);
+});
+
+$('input[name="email"]').val('khanh@fudosan-king.jp');
+$('input[name="email-confirm"]').val('khanh@fudosan-king.jp');
+$('#post').val('1000005');
+$('#post').keyup();
+$('input[name="phone-number"]').val('0974226440');
+
+*/
+

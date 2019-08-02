@@ -441,10 +441,10 @@ ul.menu_footer li:hover a {
 }
 .proname {
   background: #857a6b;
-  padding: 18px 25px;
+  padding: 20px 25px;
 }
 .proname h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   margin-bottom: 0;
 }
@@ -841,4 +841,324 @@ ul.list_row li h4 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+}
+
+/* purchase */
+p {font-size: 15px;}
+.section_purchase {
+  padding-top: 120px;
+}
+.section_purchase h2 {
+  text-align: center;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #777;
+  margin-bottom: 0;
+}
+.section_purchase h2 img {
+  max-height: 50px;
+  height: 2em;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+.border_left {
+  border-left: 2px solid #b48856;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+.box_checkout {
+  background: #b48856;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.box_checkout h3 {
+  color: #fff;
+  font-weight: bold;
+}
+.box_checkout p {
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  display: block;
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.box_line {
+  border: 2px solid #b48856;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0;
+}
+.box_line p {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #b48856;
+}
+.card.card_buy {
+  border: 2px solid #b48856;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+.card_buy .card-header {
+  background: #b48856;
+  color: #fff;
+  border-bottom: none;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.card_buy .card-header:first-child {
+  border-radius: 0;
+}
+.card_buy .card-text {
+  /*color: #b48856;*/
+  font-size: 14px;
+}
+.bg_notbuy {
+  background: url('../images/1x/i_o.png') no-repeat center center;
+}
+.bg_willbuy {
+  background: url('../images/1x/i_x.png') no-repeat center center;
+}
+.section_cate {
+  padding: 60px 0;
+}
+.box_cate_img *,
+.box_cate_img *:before {
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.box_cate_img {
+  display: block;
+  position: relative;
+  height: 416px;
+  overflow: hidden;
+}
+.box_cate_img:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.box_cate_img img {
+  width: 100%;
+  height: 416px;
+  object-fit: cover;
+}
+.box_cate_img.img_haft, .box_cate_img.img_haft img {
+  height: 208px;
+}
+.box_cate_img figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  color: #fff;
+}
+.box_cate_img figcaption span {
+  z-index: 1;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+.box_cate_img figcaption::before {
+  background-color: #343a40ad;
+  bottom: -5px;
+  content: '';
+  left: -5px;
+  position: absolute;
+  right: 100%;
+  top: -5px;
+  z-index: 0;
+}
+.box_cate_img:hover figcaption::before {
+  right: -5px;
+}
+.section_map {
+  padding: 60px 0;
+}
+.section_map h5 {
+  background: #b48856;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+.table_purchase th, .table_purchase td {
+  font-size: 16px;
+  border-color: #614d3f;
+}
+.table_purchase.table thead th, .table_purchase.table-bordered thead td {
+  border-color: #614d3f;
+  border-width: 1px;
+  vertical-align: middle;
+}
+.table_purchase td {
+  background: #f7f3ea;
+}
+.section_devproject h2 {
+  font-size: 22px;
+  font-weight: 300;
+  border-bottom: 1px solid #595857;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.section_devproject h2 img {
+  margin-right: 10px;
+}
+.section_devproject h1.devproject_title {
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 1em;
+}
+.section_devproject h1.devproject_title span {
+  font-size: 13px;
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1em;
+  display: inline-block;
+}
+.box_cate_img.box_cate_img_50p {
+  height: 310px;
+}
+.box_devproject {
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #595857;
+}
+.footer_devproject {
+  padding-bottom: 60px;
+}
+.footer_devproject_content {
+  position: relative;
+}
+.footer_devproject_content::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 1px;
+  min-height: 745px;
+  background: #595857;
+}
+.footer_devproject .col-12:nth-child(1) .footer_devproject_content::before {
+  content: none;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 1px;
+  min-height: 745px;
+  background: #595857;
+}
+.sub_title {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+.w_request {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.btn_request {
+  background-color: #fff;
+  border: 3px solid #1f1f1f;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 30px;
+  color: #000;
+  min-width: 380px;
+}
+.btn_request:hover {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+.table_purchase_head {
+  font-weight: 600;
+  font-size: 16px;
+}
+.box_table_purchase {
+  padding: .75rem;
+  border: 1px solid #614d3f;
+  min-height: 51px;
+}
+.table_purchase_sm {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section_purchase h2 {
+    font-size: 20px;
+  }
+  .box_line p {
+    font-size: 14px;
+    letter-spacing: -1.5px;
+  }
+  .box_line {
+    padding: 10px;
+  }
+  .box_checkout {
+    padding: 15px;
+  }
+  .box_checkout h3 {
+    font-size: 16px;
+    line-height: 1.8em;
+    font-weight: bold;
+  }
+  .box_checkout p {
+    margin-bottom: 15px;
+  }
+  .box_cate_img, .box_cate_img img, .box_cate_img.box_cate_img_50p {
+    height: 259px;
+  }
+  .box_cate_img.img_haft, .box_cate_img.img_haft img {
+    height: 129px;
+  }
+  .footer_devproject_content::before {
+    display: none;
+  }
+  .btn_request {
+    min-width: 90%;
+    padding: 15px;
+  }
+  .border_left {
+    letter-spacing: -1px;
+  }
+  .text_conditions {
+    letter-spacing: -0.5px;
+  }
+  .table_purchase th, .table_purchase td {
+    font-size: 13px;
+    letter-spacing: -1px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .table_purchase_md {
+    display: none;
+  }
+  .table_purchase_sm {
+    display: inline-table;
+  }
+  .table_purchase_sm thead tr th:first-child {
+    background: #f7f3ea;
+  }
+  .footer_devproject {
+    padding-bottom: 0;
+  }
+  .section_devproject h1.devproject_title {
+    margin-top: 20px;
+  }
+  .text_left_sm {
+    text-align: left;
+  }
+  .line_break {
+    display: block;
+  }
+  .f14 {font-size: 14px;}
+  .spacing {letter-spacing: -0.5px;}
+
 }

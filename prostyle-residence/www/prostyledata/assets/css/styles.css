@@ -844,7 +844,7 @@ ul.list_row li h4 {
 }
 
 /* purchase */
-p {font-size: 15px;}
+.section_purchase p {font-size: 15px;}
 .section_purchase {
   padding-top: 120px;
 }

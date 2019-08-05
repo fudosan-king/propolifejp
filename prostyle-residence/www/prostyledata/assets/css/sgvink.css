@@ -28,7 +28,7 @@ ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 500px;}
 
 .navbar-nav.navbar-mobile.mr-0.main_nav.sp_menu {display: none;}
 .back-to-top {z-index: 10;}
-main {text-align: justify;}
+/*main {text-align: justify;}*/
 
 div#crumbs {font-size: 11pt; margin-top: 20px;}
 div#crumbs a {color: #000;}

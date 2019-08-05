@@ -145,7 +145,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <h2><img src="<?php SGVinK::the_images_uri(); ?>/modal02.png" width="75%" class="img-responsive" alt="Image"></h2>
-            <a href="#" class="btn btnClose" data-dismiss="modal" aria-label="Close"><img src="<?php SGVinK::the_images_uri(); ?>/1x/i_close.png" alt=""></a>
+            <a href="#" class="btn btnClose" data-dismiss="modal" aria-label="Close"><img src="<?php SGVinK::the_images_uri(); ?>/1x/i_close_white.png" alt=""></a>
             <ul class="list_row">
 
                 <?php 
@@ -181,7 +181,7 @@
         <div class="modal-content">
             <h2><img src="<?php SGVinK::the_images_uri(); ?>/kodawari.png" height="35" class="img-responsive" alt="Image"></h2>
             <h3><img src="<?php SGVinK::the_images_uri(); ?>/mukuzai.png" height="25" class="img-responsive" alt="Image"></h3>
-            <a href="#" class="btn btnClose" data-dismiss="modal" aria-label="Close"><img src="<?php SGVinK::the_images_uri(); ?>/1x/i_close.png" alt=""></a>
+            <a href="#" class="btn btnClose" data-dismiss="modal" aria-label="Close"><img src="<?php SGVinK::the_images_uri(); ?>/1x/i_close_white.png" alt=""></a>
             <ul class="list_row">
 
                 <?php 
@@ -218,7 +218,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <h2>MOVIE</h2>
-            <a href="#" class="btn btnClose" data-dismiss="modal" aria-label="Close"><img src="<?php SGVinK::the_images_uri(); ?>/1x/i_close.png" alt=""></a>
+            <a href="#" class="btn btnClose" data-dismiss="modal" aria-label="Close"><img src="<?php SGVinK::the_images_uri(); ?>/1x/i_close_white.png" alt=""></a>
             <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
                 <iframe id="video" class="embed-responsive-item" src="" allowfullscreen></iframe>
             </div>

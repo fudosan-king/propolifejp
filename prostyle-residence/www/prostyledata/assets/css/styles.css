@@ -677,6 +677,7 @@ figure.photo.hover i {
   border: none;
   border-radius: 0;
   padding: 60px 70px;
+  margin-top: 60px; /*thêm*/
 }
 .modal-lg {
   max-width: 1000px;
@@ -716,8 +717,8 @@ ul.list_row li h4 {
 }
 .btnClose {
   position: absolute;
-  right: 25px;
-  top: 25px;
+  right: 0;
+  top: -55px;
 }
 .btnClose:hover img, .btnClose_footer:hover img {
   opacity: .8;
@@ -746,6 +747,7 @@ ul.list_row li h4 {
 
 .img_row {
   margin-bottom: 15px;
+  width: 100%;
 }
 .back-to-top {
   visibility:hidden;

@@ -87,7 +87,7 @@
 				</div> -->
 
 				<!-- <div class="owl-carousel owl-theme owl_topbanner"> -->
-				<div class="owl-carousel owl-theme">
+				<div class="owl-carousel owl-theme owl_topbanner">
 				    <div class="item">
 				    	<img class="d-none d-md-block img-fluid" src="images/1x/bg_top_pc2.jpg">
 				    	<img class="d-block d-md-none img-fluid" src="images/1x/bg_top_sp2.jpg">

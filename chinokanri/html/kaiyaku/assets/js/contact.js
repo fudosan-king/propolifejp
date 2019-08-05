@@ -29,6 +29,16 @@ $(function() {
     $('#icancellation_notice_date').datepicker('setDate', today);
     $('#icancellation_notice_date_display').html($('#icancellation_notice_date').val());
 
+    $('#ibtnSearch_address_1').click(function(event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('#ipost').keyup();
+    });
+    $('#ibtnSearch_address_2').click(function(event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('#imoved_post').keyup();
+    });
     $('#ibtnSearch_address').click(function(event) {
     	/* Act on the event */
     	event.preventDefault();
@@ -273,6 +283,10 @@ $.each(collectTextArea, function(i, e){
     $(e).val(`TEST ${cfrmPrefix}`);
 });
 $('input[name="email"]').val('khanh@fudosan-king.jp');
+$('#ipost').val('1000003');
+$('#ipost').keyup();
+$('#imoved_post').val('1000004');
+$('#imoved_post').keyup();
 $('#iemergency_post').val('1000005');
 $('#iemergency_post').keyup();
 var date = new Date();

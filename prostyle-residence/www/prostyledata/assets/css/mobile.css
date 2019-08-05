@@ -232,6 +232,7 @@
 	}
 	ul.list_row li h4 {
         font-family: '游ゴシック','YuGothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif; 
+    	font-weight: normal;
     }
 	.logo_brands {
 		margin-top: 0;

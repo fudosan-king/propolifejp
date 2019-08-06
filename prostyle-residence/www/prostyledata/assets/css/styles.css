@@ -1074,6 +1074,13 @@ ul.list_row li h4 {
   color: #000;
   min-width: 380px;
 }
+
+.section_devproject .btn_request {
+  background-color: #b48856;
+  color: #fff;
+  border-color: #92704a;
+}
+
 .btn_request:hover {
   background: #000;
   border-color: #000;

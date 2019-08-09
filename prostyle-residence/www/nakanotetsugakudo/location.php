@@ -380,7 +380,6 @@
 
 					      				</div>
 				      				</div>
-				      				<p class="text-center"><a href="https://tokyo.itot.jp/tetsugakudo/"><img src="images/1x/img11.jpg" alt="" class="img-fluid w-50"></a>></p>
 
 		      					</div>
 		      				</div>

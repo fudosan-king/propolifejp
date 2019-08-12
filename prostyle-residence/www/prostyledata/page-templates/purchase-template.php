@@ -264,22 +264,34 @@
                 		endif;
                 	?>
 
-                	<?php 
-                		if(!empty(get_field('contact_link'))):
-                			$linkContact = get_field('contact_link');
-                			?>
-                			<div class="w_request">
-		                        <div class="row">
-		                            <div class="col-12 text-center">
-		                                <a href="<?php echo $linkContact['url']; ?>" class="btn btn_request" target="<?php echo $linkContact['target']; ?>"><?php echo $linkContact['title']; ?></a>
-		                            </div>
-		                        </div>
-		                    </div>
-                			<?php
-                		endif;
-                	?>
+                    <div class="w_request">
+                        <div class="row">
+                            
+                            	<?php 
+                            		if(!empty(get_field('contact_link'))):
+                            			$linkContact = get_field('contact_link');                                      
+                            			?>
+                                            <div class="col-sm-12 col-md-6 text-right">
+                            			
+                                                <a href="<?php echo $linkContact['url']; ?>" class="btn btn_request" target="<?php echo $linkContact['target']; ?>"><?php echo $linkContact['title']; ?></a>
+                                            </div>           		                            
+                            			<?php
+                            		endif;
+                            	?>
 
-                    
+                                <?php 
+                                    if(!empty(get_field('mail_to_link'))):
+                                        $linkMailTo = get_field('mail_to_link');                                        
+                                        ?>
+                                            <div class="col-sm-12 col-md-6">
+                                                <a href="<?php echo $linkMailTo['url']; ?>" class="btn btn_request" target="<?php echo $linkMailTo['target']; ?>"><?php echo $linkMailTo['title']; ?></a>
+                                            </div>                                                
+                                        <?php
+                                    endif;
+                                ?>
+                            
+                        </div>
+                    </div>
 
                 </div>
             </div>

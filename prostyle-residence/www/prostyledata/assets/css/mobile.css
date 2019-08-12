@@ -365,6 +365,8 @@
 	}
 
 	.section_distribution_record {margin-top: -40px;}
+
+	.section_devproject .btn_request {margin: 10px auto; width: 100%}
 }
 
 @media (max-width: 360px) {

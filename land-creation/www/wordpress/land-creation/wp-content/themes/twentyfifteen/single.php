@@ -28,8 +28,8 @@ get_header(); ?>
 
 			// Previous/next post navigation.
 			the_post_navigation( array(
-				'next_text' => '<img src="http://www.landcreation.co.jp/static/img/blog/btn_next_ontxt.png" width="57" height="24" alt="next"> %title',
-				'prev_text' => '%title <img src="http://www.landcreation.co.jp/static/img/blog/btn_prev_ontxt.png" width="57" height="24" alt="next">',
+				'next_text' => '<img src="https://www.landcreation.co.jp/static/img/blog/btn_next_ontxt.png" width="57" height="24" alt="next"> %title',
+				'prev_text' => '%title <img src="https://www.landcreation.co.jp/static/img/blog/btn_prev_ontxt.png" width="57" height="24" alt="next">',
 			) );
 
 		// End the loop.

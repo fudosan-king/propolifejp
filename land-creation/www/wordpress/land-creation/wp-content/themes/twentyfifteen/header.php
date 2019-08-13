@@ -20,16 +20,16 @@
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
 	<script>(function(){document.documentElement.className='js'})();</script>
-<link href="http://www.landcreation.co.jp/static/common/css/reset.css" rel="stylesheet" type="text/css">
-<link href="http://www.landcreation.co.jp/static/common/css/clearfix.css" rel="stylesheet" type="text/css">
-<link href="http://www.landcreation.co.jp/static/common/css/common.css" rel="stylesheet" type="text/css">
-<link href="http://www.landcreation.co.jp/static/common/css/table.css" rel="stylesheet" type="text/css">
-<link href="http://www.landcreation.co.jp/static/common/css/contents.css" rel="stylesheet" type="text/css">
+<link href="https://www.landcreation.co.jp/static/common/css/reset.css" rel="stylesheet" type="text/css">
+<link href="https://www.landcreation.co.jp/static/common/css/clearfix.css" rel="stylesheet" type="text/css">
+<link href="https://www.landcreation.co.jp/static/common/css/common.css" rel="stylesheet" type="text/css">
+<link href="https://www.landcreation.co.jp/static/common/css/table.css" rel="stylesheet" type="text/css">
+<link href="https://www.landcreation.co.jp/static/common/css/contents.css" rel="stylesheet" type="text/css">
 <link href="/wp-content/themes/twentyfifteen/style.css" rel="stylesheet" type="text/css">
-<link href="http://www.landcreation.co.jp/static/common/css/dropdownmenu.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://www.landcreation.co.jp/static/common/js/jquery-1.11.2.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="http://www.landcreation.co.jp/static/common/js/tell_link.js"></script>
+<link href="https://www.landcreation.co.jp/static/common/css/dropdownmenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://www.landcreation.co.jp/static/common/js/jquery-1.11.2.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="https://www.landcreation.co.jp/static/common/js/tell_link.js"></script>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -50,21 +50,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="wrapper">
 <div class="logo"><span style="display:none;">さいたま市の新築一戸建て・中古一戸建て・マンション・土地の不動産情報はランドクリエイションにお任せ下さい。</span>
   <h1 style="padding-left:8px;">浦和の中古マンション・新築戸建て・不動産情報はランドクリエイションにお任せください</h1>
-  <a href="/"><img src="http://www.landcreation.co.jp/static/img/common/logo.png" width="296" height="57" alt="株式会社ランドクリエイション　不動産総合情報サービス"/></a></div>
-<div class="freedial"><img class="tel-link" src="http://www.landcreation.co.jp/static/img/common/freedial.png" width="276" height="52" alt="0120-15-3718"/></div>
-<a href="/contact" class="mail not_print"><img src="http://www.landcreation.co.jp/static/img/common/btn_mail.png" width="82" height="41" alt="お問い合せ"/></a>
+  <a href="/"><img src="https://www.landcreation.co.jp/static/img/common/logo.png" width="296" height="57" alt="株式会社ランドクリエイション　不動産総合情報サービス"/></a></div>
+<div class="freedial"><img class="tel-link" src="https://www.landcreation.co.jp/static/img/common/freedial.png" width="276" height="52" alt="0120-15-3718"/></div>
+<a href="/contact" class="mail not_print"><img src="https://www.landcreation.co.jp/static/img/common/btn_mail.png" width="82" height="41" alt="お問い合せ"/></a>
 
-<a href="#toggle" class="menubtn sp"><img src="http://www.landcreation.co.jp/static/img/common/sp/menu_open.png"></a>
+<a href="#toggle" class="menubtn sp"><img src="https://www.landcreation.co.jp/static/img/common/sp/menu_open.png"></a>
 
 <ul class="dropdown-menu">
-  <li><a href="http://www.landcreation.co.jp/"><img src="http://www.landcreation.co.jp/static/img/common/menu_home.png" width="28" height="63" alt=""/></a></li>
-  <li><a href="http://www.landcreation.co.jp/search"><img src="http://www.landcreation.co.jp/static/img/common/menu_search.png" width="60" height="63" alt=""/></a></li>
-  <li><a href="http://www.landcreation.co.jp/renovation/index.html"><img src="http://www.landcreation.co.jp/static/img/common/menu_renovation.png" width="146" height="63" alt=""/></a></li>
-  <li><a href="http://www.landcreation.co.jp/knowledge/index.html"><img src="http://www.landcreation.co.jp/static/img/common/menu_knowledge.png" width="132" height="63" alt=""/></a></li>
-  <li><a href="http://www.landcreation.co.jp/rental/index.html"><img src="http://www.landcreation.co.jp/static/img/common/menu_rental_management.png" width="60" height="63" alt=""/></a></li>
-  <li><a href="http://www.landcreation.co.jp/conference/index.html"><img src="http://www.landcreation.co.jp/static/img/common/menu_conference.png" width="162" height="63" alt=""/></a></li>
-  <li><a href="http://www.landcreation.co.jp/blog" class="now"><img src="http://www.landcreation.co.jp/static/img/common/menu_blog.png" width="46" height="63" alt=""/></a></li>
-  <li><a href="http://www.landcreation.co.jp/company/index.html" class="last"><img src="http://www.landcreation.co.jp/static/img/common/menu_company.png" width="62" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/"><img src="https://www.landcreation.co.jp/static/img/common/menu_home.png" width="28" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/search"><img src="https://www.landcreation.co.jp/static/img/common/menu_search.png" width="60" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/renovation/index.html"><img src="https://www.landcreation.co.jp/static/img/common/menu_renovation.png" width="146" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/knowledge/index.html"><img src="https://www.landcreation.co.jp/static/img/common/menu_knowledge.png" width="132" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/rental/index.html"><img src="https://www.landcreation.co.jp/static/img/common/menu_rental_management.png" width="60" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/conference/index.html"><img src="https://www.landcreation.co.jp/static/img/common/menu_conference.png" width="162" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/blog" class="now"><img src="https://www.landcreation.co.jp/static/img/common/menu_blog.png" width="46" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/company/index.html" class="last"><img src="https://www.landcreation.co.jp/static/img/common/menu_company.png" width="62" height="63" alt=""/></a></li>
 </ul>
 <script>
 $('.menubtn').on({
@@ -86,27 +86,27 @@ $('.menubtn').on({
 </header>
 <div class="menubar clearfix">
   <ul>
-  <li><a class="home" href="http://www.landcreation.co.jp/"></a></li>
-  <li><a class="search" href="http://www.landcreation.co.jp/search"></a></li>
-  <li><a class="renova" href="http://www.landcreation.co.jp/renovation/index.html"></a></li>
-  <li><a class="know" href="http://www.landcreation.co.jp/knowledge/index.html"></a></li>
-  <li><a class="manage" href="http://www.landcreation.co.jp/rental/index.html"></a></li>
-  <li><a class="conf" href="http://www.landcreation.co.jp/conference/index.html"></a></li>
-  <li><a class="blog now" href="http://www.landcreation.co.jp/blog"></a></li>
+  <li><a class="home" href="https://www.landcreation.co.jp/"></a></li>
+  <li><a class="search" href="https://www.landcreation.co.jp/search"></a></li>
+  <li><a class="renova" href="https://www.landcreation.co.jp/renovation/index.html"></a></li>
+  <li><a class="know" href="https://www.landcreation.co.jp/knowledge/index.html"></a></li>
+  <li><a class="manage" href="https://www.landcreation.co.jp/rental/index.html"></a></li>
+  <li><a class="conf" href="https://www.landcreation.co.jp/conference/index.html"></a></li>
+  <li><a class="blog now" href="https://www.landcreation.co.jp/blog"></a></li>
   <li class="last"><a class="company" href="/company/index.html"></a></li>
   </ul>
 </div>
-<div class="pankuzu wrapper"><a href="http://www.landcreation.co.jp/">トップ</a>　＞　ブログ</div>
+<div class="pankuzu wrapper"><a href="https://www.landcreation.co.jp/">トップ</a>　＞　ブログ</div>
 <div class="contents wrapper">
 
-  <h2><img src="http://www.landcreation.co.jp/static/img/h/h_blog.png" height="37" alt="ブログ"/></h2>
+  <h2><img src="https://www.landcreation.co.jp/static/img/h/h_blog.png" height="37" alt="ブログ"/></h2>
   <div class="box blog">
     <h3><img src="<?php echo get_template_directory_uri()."/images/blog_hdr.png" ?>" width="958" height="200" alt="ランドクリエイション　スタッフブログ"></h3>
 	<?php
 		if ( is_single() ) :
 			the_post_navigation( array(
-				'next_text' => '<img src="http://www.landcreation.co.jp/static/img/blog/btn_next_ontxt.png" width="57" height="24" alt="next"> %title',
-                               	'prev_text' => '%title <img src="http://www.landcreation.co.jp/static/img/blog/btn_prev_ontxt.png" width="57" height="24" alt="next">', ) );
+				'next_text' => '<img src="https://www.landcreation.co.jp/static/img/blog/btn_next_ontxt.png" width="57" height="24" alt="next"> %title',
+                               	'prev_text' => '%title <img src="https://www.landcreation.co.jp/static/img/blog/btn_prev_ontxt.png" width="57" height="24" alt="next">', ) );
 		else :
 			the_posts_pagination( array(
 				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),

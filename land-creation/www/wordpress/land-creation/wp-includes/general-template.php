@@ -217,6 +217,7 @@ function get_search_form( $echo = true ) {
 	$format = apply_filters( 'search_form_format', $format );
 
 	$search_form_template = locate_template( 'searchform.php' );
+	$icon_search = get_stylesheet_directory_uri().'/images/icon_seach.png';
 	if ( '' != $search_form_template ) {
 		ob_start();
 		require( $search_form_template );
@@ -225,12 +226,12 @@ function get_search_form( $echo = true ) {
 		if ( 'html5' == $format ) {
 			$form = '<form role="search" method="get" class="blg_searchform search-form clearfix" action="' . esc_url( home_url( '/' ) ) . '">
 				<input type="search" class="blg_searchform txt search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />
-				<input type="image" class="blg_searchform btn search-submit" src="/blog/wp-content/uploads/2015/03/icon_seach.png" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
+				<input type="image" class="blg_searchform btn search-submit" src="'.$icon_search.'" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
 			</form>';
 		} else {
 			$form = '<form role="search" method="get" id="blg_searchform searchform" class="clearfix searchform" action="' . esc_url( home_url( '/' ) ) . '">
 				<input type="text" class="blg_searchform txt" value="' . get_search_query() . '" name="s" id="s" />
-				<input type="image" src="/blog/wp-content/uploads/2015/03/icon_seach.png" class="blg_searchform btn" id="searchsubmit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
+				<input type="image" src="'.$icon_search.'" class="blg_searchform btn" id="searchsubmit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
 			</form>';
 		}
 	}
@@ -2654,9 +2655,9 @@ function paginate_links( $args = '' ) {
 		 *
 		 * @param string $link The paginated link URL.
 		 */
-		$page_links[] = '<a href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '"><img src="http://www.landcreation.co.jp/static/img/common/btn_prev.png" width="37" height="24" alt="prev"></a>';
+		$page_links[] = '<a href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '"><img src="https://www.landcreation.co.jp/static/img/common/btn_prev.png" width="37" height="24" alt="prev"></a>';
 	else :
-            	$page_links[] = '<img src="http://www.landcreation.co.jp/static/img/common/btn_prev.png" width="37" height="24" alt="prev">';
+            	$page_links[] = '<img src="https://www.landcreation.co.jp/static/img/common/btn_prev.png" width="37" height="24" alt="prev">';
 	endif;
 	for ( $n = 1; $n <= $total; $n++ ) :
 		if ( $n == $current ) :
@@ -2687,9 +2688,9 @@ function paginate_links( $args = '' ) {
 		$link .= $args['add_fragment'];
 
 		/** This filter is documented in wp-includes/general-template.php */
-		$page_links[] = '<a href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '"><img src="http://www.landcreation.co.jp/static/img/common/btn_next.png" width="37" height="24" alt="next"></a>';
+		$page_links[] = '<a href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '"><img src="https://www.landcreation.co.jp/static/img/common/btn_next.png" width="37" height="24" alt="next"></a>';
 	else :
-		$page_links[] = '<img src="http://www.landcreation.co.jp/static/img/common/btn_next.png" width="37" height="24" alt="prev">';
+		$page_links[] = '<img src="https://www.landcreation.co.jp/static/img/common/btn_next.png" width="37" height="24" alt="prev">';
 	endif;
 	switch ( $args['type'] ) {
 		case 'array' :

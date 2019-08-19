@@ -1172,3 +1172,34 @@ ul.list_row li h4 {
   .spacing {letter-spacing: -0.5px;}
 
 }
+
+.w_footer_sns {
+  padding-top: 25px;
+  font-size: 16px;
+}
+.w_footer_sns p {
+  font-size: 15px;
+}
+.footer_sns {
+  border-top: 1px solid #C8C8C8;
+  border-bottom: 1px solid #C8C8C8;
+  padding: 15px 0;
+}
+.footer_sns a, .footer_sns p {
+  color: #707070;
+}
+
+@media (max-width: 768px) {
+  .w_footer_sns {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #C8C8C8;
+  }
+  .w_footer_sns p {
+    font-size: 12px;
+  }
+  .footer_sns {
+    border: none;
+    padding: 0;
+  }
+}

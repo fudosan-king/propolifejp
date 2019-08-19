@@ -3,6 +3,43 @@
 ?>
 	<footer id="footer">
 
+		<div class="w_footer_sns">
+			<div class="container">
+				<div class="footer_sns d-none d-md-block">
+					<div class="row">
+						<div class="col-12 col-md-9 mx-auto">
+							<div class="row text-center">
+								<div class="col-md-3 align-self-center">
+									<a href="https://www.facebook.com/prostyleresidence/"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/f_logo_RGB-Blue_58@2x.png" alt=""> <span class="ml-1">公式Facebook</span></a>
+								</div>
+								<div class="col-md-3 align-self-center">
+									<a href="http://line.me/R/ti/p/@vqs2771x"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/LINE_APP@2x.png" alt=""> <span class="ml-1">公式LINE</span></a>
+								</div>
+								<div class="col-md-6 align-self-center">
+									<p class="mb-0 text-left">新規物件情報や販売中物件のイベント情報など <br>随時公開中</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer_sns d-block d-md-none">
+					<div class="row">
+						<div class="col-7 align-self-center">
+							<p class="mb-0 text-left">株式会社プロスタイル公式SNS</p>
+						</div>
+						<div class="col-2 align-self-center">
+							<a href="https://www.facebook.com/prostyleresidence/"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/f_logo_RGB-Blue_58@2x.png" alt=""></a>
+						</div>
+						<div class="col-3 align-self-center">
+							<a href="http://line.me/R/ti/p/@vqs2771x"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/LINE_APP@2x.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 	    <?php 
             $menuLocations = get_nav_menu_locations();
             $menuID = $menuLocations['footer'];

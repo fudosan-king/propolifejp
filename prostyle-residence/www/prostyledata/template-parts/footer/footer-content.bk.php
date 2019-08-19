@@ -2,6 +2,7 @@
 	$logoCompanyURL = wp_get_attachment_image_url( get_field('site_logo', 'option')['ID'], $size = 'medium', $icon = false );
 ?>
 	<footer>
+
 		<div class="footer_top">
 			<div class="container">
 				<div class="row">

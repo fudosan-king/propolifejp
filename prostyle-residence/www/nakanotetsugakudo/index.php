@@ -155,10 +155,10 @@
 			      									<div class="box_informations_content">
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
-			      												<p>2019.05.27</p>
+			      												<p>2019.08.19</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">
-			      												<p>ホームページをリニューアル致しました。</p>
+			      												<p>3タイプモデルルーム公開中/ ご来場キャンペーン開催</p>
 			      											</div>
 			      										</div>
 			      									</div>

@@ -283,7 +283,7 @@
 
 
 
-					      		<p class="mb-5 text-center">情報提供日：<span>2019/7/1</span>　次回更新予定日：<span>2019/8/1</span></p>
+					      		<p class="mb-5 text-center">情報提供日：<span>2019/8/1</span>　次回更新予定日：<span>2019/9/30</span></p>
 
 	      					</div>
 	      				</div>

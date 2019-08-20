@@ -317,7 +317,7 @@ ul.naviBox > li > ul > li span {
 .telNumber a:link {text-decoration: none;}
 .telNumber a > div:nth-child(1) {font-weight: bold; font-size: 0.6em; color: #fff;}
 
-.news {background-color:#FF644E; color:#ffffff; text-align: center; padding: 10px;}
+.news {background-color:#FF644E; color:#ffffff; text-align: center; padding: 10px; font-weight: bold; font-size: 16px;}
 .notice {padding: 20px 0 5px;}
 
 .step {margin-top: 35px;}

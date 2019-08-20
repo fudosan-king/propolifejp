@@ -317,6 +317,9 @@ ul.naviBox > li > ul > li span {
 .telNumber a:link {text-decoration: none;}
 .telNumber a > div:nth-child(1) {font-weight: bold; font-size: 0.6em; color: #fff;}
 
+.news {background-color:#FF644E; color:#ffffff; text-align: center; padding: 10px;}
+.notice {padding: 20px 0 5px;}
+
 .step {margin-top: 35px;}
 .step ol {padding-left:0;}
 .step ol li {
@@ -343,7 +346,7 @@ ul.naviBox > li > ul > li span {
 .step ol li.active {background-color: #0F2791;}
 .step ol li.active::after {border-left-color: #0F2791;}
 
-.form_info {padding: 0 15px; margin-top: 35px;}
+.form_info {padding: 0 15px;}
 .form_info > .row {border-bottom: #E7E7E7 1px solid;border-left: #E7E7E7 1px solid;border-right: #E7E7E7 1px solid;}
 .form_info > .row.require{background-color: #FED8D5;}
 .form_info > .row:first-child {border-top: #E7E7E7 1px solid;}

@@ -74,14 +74,14 @@ function invalidCheck() {
         $('input[name="last-name"]'),
 
 
-        $('select[name="pref"]'),
+        // $('select[name="pref"]'),
 
         $('input[name="phone-number"]'),
 
         $('input[name="email"]'),
 
 
-        $('input[name="first-impression"]'),
+        // $('input[name="first-impression"]'),
 
         $('input[name="secret-info"]'),
 
@@ -111,21 +111,21 @@ function invalidCheck() {
 
 
 
-                if (elem.prop('name') == 'first-impression') {
+                // if (elem.prop('name') == 'first-impression') {
 
-                    if (!$(this).is(':checked')) {
-                        $(this).closest('.radio').css('color', '#ff0700');
+                //     if (!$(this).is(':checked')) {
+                //         $(this).closest('.radio').css('color', '#ff0700');
 
-                        isValid = false;
+                //         isValid = false;
 
 
 
-                        $('.require-flag.first-impression').css('background-color', '#ff0700');
-                    } else {
-                        $(this).closest('.radio').css('color', 'initial');
+                //         $('.require-flag.first-impression').css('background-color', '#ff0700');
+                //     } else {
+                //         $(this).closest('.radio').css('color', 'initial');
 
-                    }
-                }
+                //     }
+                // }
 
             } else {
                 if (typeof(elem.val()) === 'undefined' || elem.val() == "" || elem.val() == "null") {
@@ -147,11 +147,11 @@ function invalidCheck() {
 
 
 
-                        if (elem.prop('name') == 'pref') {
+                        // if (elem.prop('name') == 'pref') {
 
 
-                            $('.require-flag.address').css('background-color', '#ff0700');
-                        }
+                        //     $('.require-flag.address').css('background-color', '#ff0700');
+                        // }
 
                         if (elem.prop('name') == 'phone-number') {
 
@@ -216,50 +216,50 @@ function invalidCheck() {
         $('.require-flag.raijo-datetime').css('background-color', '#ff0700');
     }
 
-    var isAgeValid = true;
+    // var isAgeValid = true;
 
-    if ($('#iage_year option:selected').val() == 'null') {
-        $('#iage_year').css({
-            'background-color': invalidColor,
-            'border-color': '#ff0700'
-        });
-        isAgeValid = isValid = false;
-    } else {
-        $('#iage_year').css({
-            'background-color': 'initial',
-            'border-color': '#ccc'
-        });
-    }
-    if ($('#iage_month option:selected').val() == 'null') {
-        $('#iage_month').css({
-            'background-color': invalidColor,
-            'border-color': '#ff0700'
-        });
-        isAgeValid = isValid = false;
-    } else {
-        $('#iage_month').css({
-            'background-color': 'initial',
-            'border-color': '#ccc'
-        });
-    }
-    if ($('#iage_day option:selected').val() == 'null') {
-        $('#iage_day').css({
-            'background-color': invalidColor,
-            'border-color': '#ff0700'
-        });
-        isAgeValid = isValid = false;
-    } else {
-        $('#iage_day').css({
-            'background-color': 'initial',
-            'border-color': '#ccc'
-        });
-    }
+    // if ($('#iage_year option:selected').val() == 'null') {
+    //     $('#iage_year').css({
+    //         'background-color': invalidColor,
+    //         'border-color': '#ff0700'
+    //     });
+    //     isAgeValid = isValid = false;
+    // } else {
+    //     $('#iage_year').css({
+    //         'background-color': 'initial',
+    //         'border-color': '#ccc'
+    //     });
+    // }
+    // if ($('#iage_month option:selected').val() == 'null') {
+    //     $('#iage_month').css({
+    //         'background-color': invalidColor,
+    //         'border-color': '#ff0700'
+    //     });
+    //     isAgeValid = isValid = false;
+    // } else {
+    //     $('#iage_month').css({
+    //         'background-color': 'initial',
+    //         'border-color': '#ccc'
+    //     });
+    // }
+    // if ($('#iage_day option:selected').val() == 'null') {
+    //     $('#iage_day').css({
+    //         'background-color': invalidColor,
+    //         'border-color': '#ff0700'
+    //     });
+    //     isAgeValid = isValid = false;
+    // } else {
+    //     $('#iage_day').css({
+    //         'background-color': 'initial',
+    //         'border-color': '#ccc'
+    //     });
+    // }
 
-    if (!isAgeValid) {
+    // if (!isAgeValid) {
 
 
-        $('.require-flag.age').css('background-color', '#ff0700');
-    }
+    //     $('.require-flag.age').css('background-color', '#ff0700');
+    // }
 
     // EMAIL CHECK
     var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -314,67 +314,67 @@ $(document).ready(function() {
     });
 
 
-    var today = new Date();
-    var currentYear = today.getFullYear();
+    // var today = new Date();
+    // var currentYear = today.getFullYear();
 
-    for (var i = currentYear; i >= 1950; i--) {
-        $('#iage_year').append(`<option value="${i}">${i}年</option>`);
-    }
-    for (var i = 1; i <= 12; i++) {
-        $('#iage_month').append(`<option value="${i}">${i}月</option>`);
-    }
-    for (var i = 1; i <= 31; i++) {
-        $('#iage_day').append(`<option value="${i}">${i}日</option>`)
-    };
-    $('#iage_year').val('1980');
-    $('#iage_year').change(function(event) {
-        calculateDay();
-    });
-    $('#iage_month').change(function(event) {
-        calculateDay();
-    });
-    $('#iage_day').change(function(event) {
-        calculateDay();
-    });
+    // for (var i = currentYear; i >= 1950; i--) {
+    //     $('#iage_year').append(`<option value="${i}">${i}年</option>`);
+    // }
+    // for (var i = 1; i <= 12; i++) {
+    //     $('#iage_month').append(`<option value="${i}">${i}月</option>`);
+    // }
+    // for (var i = 1; i <= 31; i++) {
+    //     $('#iage_day').append(`<option value="${i}">${i}日</option>`)
+    // };
+    // $('#iage_year').val('1980');
+    // $('#iage_year').change(function(event) {
+    //     calculateDay();
+    // });
+    // $('#iage_month').change(function(event) {
+    //     calculateDay();
+    // });
+    // $('#iage_day').change(function(event) {
+    //     calculateDay();
+    // });
 
-    function calculateDay() {
-        var selectedYear = $('#iage_year option:selected').val();
-        var selectMonth = $('#iage_month option:selected').val();
-        var selectDay = $('#iage_day option:selected').val();
+    // function calculateDay() {
+    //     var selectedYear = $('#iage_year option:selected').val();
+    //     var selectMonth = $('#iage_month option:selected').val();
+    //     var selectDay = $('#iage_day option:selected').val();
 
 
-        $('#iage_day option').not(':first').remove();
-        for (var i = 1; i <= 31; i++) {
-            $('#iage_day').append(`<option value="${i}">${i}日</option>`)
-        };
-        if (!isNaN(selectMonth)) {
-            switch (selectMonth) {
-                case '4':
-                case '6':
-                case '9':
-                case '11':
-                    {
-                        $('#iage_day option:last').remove();
-                    }
-                    break;
-                case '2':
-                    {
+    //     $('#iage_day option').not(':first').remove();
+    //     for (var i = 1; i <= 31; i++) {
+    //         $('#iage_day').append(`<option value="${i}">${i}日</option>`)
+    //     };
+    //     if (!isNaN(selectMonth)) {
+    //         switch (selectMonth) {
+    //             case '4':
+    //             case '6':
+    //             case '9':
+    //             case '11':
+    //                 {
+    //                     $('#iage_day option:last').remove();
+    //                 }
+    //                 break;
+    //             case '2':
+    //                 {
 
-                        if (selectedYear % 4 == 0 && selectedYear % 100 != 0) {
-                            $('#iage_day option:last').remove();
-                            $('#iage_day option:last').remove();
-                        } else {
-                            $('#iage_day option:last').remove();
-                            $('#iage_day option:last').remove();
-                            $('#iage_day option:last').remove();
-                        }
-                    }
-                    break;
-            }
-            $('#iage_day').val(selectDay);
-            $('#iage').val(`${selectedYear}/${selectMonth}/${selectDay}`);
-        }
-    }
+    //                     if (selectedYear % 4 == 0 && selectedYear % 100 != 0) {
+    //                         $('#iage_day option:last').remove();
+    //                         $('#iage_day option:last').remove();
+    //                     } else {
+    //                         $('#iage_day option:last').remove();
+    //                         $('#iage_day option:last').remove();
+    //                         $('#iage_day option:last').remove();
+    //                     }
+    //                 }
+    //                 break;
+    //         }
+    //         $('#iage_day').val(selectDay);
+    //         $('#iage').val(`${selectedYear}/${selectMonth}/${selectDay}`);
+    //     }
+    // }
 
 
     $('#isiryou').on('change', function() {
@@ -391,10 +391,10 @@ $(document).ready(function() {
 
 
     // BUTTON SET AJAXZIP2ADDRESS
-    $('.mt5').click(function() {
+    // $('.mt5').click(function() {
 
-        $('input[name="post"]').keyup();
-    });
+    //     $('input[name="post"]').keyup();
+    // });
 
     // BUTTON SET CONFIRM ACTION
     $('#goConfirm').click(function() {
@@ -425,14 +425,14 @@ $(document).ready(function() {
 
 
 
-            var cfrm_peopleage = '';
-            cfrm_peopleage += typeof($('input[name="age"]').val()) != 'undefined' ? ($('input[name="age"]').val() + '  ') : 'null  ';
-            $('.cfrm_peopleage').html(cfrm_peopleage);
+            // var cfrm_peopleage = '';
+            // cfrm_peopleage += typeof($('input[name="age"]').val()) != 'undefined' ? ($('input[name="age"]').val() + '  ') : 'null  ';
+            // $('.cfrm_peopleage').html(cfrm_peopleage);
 
-            var cfrm_address = $('input[name="post"]').val() + '<br>' +
-                $('select[name="pref"]').val() + '<br>' + $('input[name="city"]').val() + '<br>' +
-                $('input[name="building-roomnumber"]').val();
-            $('.cfrm_address').html(cfrm_address);
+            // var cfrm_address = $('input[name="post"]').val() + '<br>' +
+            //     $('select[name="pref"]').val() + '<br>' + $('input[name="city"]').val() + '<br>' +
+            //     $('input[name="building-roomnumber"]').val();
+            // $('.cfrm_address').html(cfrm_address);
 
             var cfrm_phonenumber = $('input[name="phone-number"]').val();
             $('.cfrm_phonenumber').html(cfrm_phonenumber);
@@ -441,16 +441,16 @@ $(document).ready(function() {
             $('.cfrm_email').html(cfrm_email);
 
 
-            var cfrm_livingstyle = $('input[name="living-style"]:checked').val();
-            $('.cfrm_livingstyle').html(cfrm_livingstyle);
+            // var cfrm_livingstyle = $('input[name="living-style"]:checked').val();
+            // $('.cfrm_livingstyle').html(cfrm_livingstyle);
 
-            var cfrm_firstimpression = $('input[name="first-impression"]:checked').val();
-            $('.cfrm_firstimpression').html(cfrm_firstimpression);
+            // var cfrm_firstimpression = $('input[name="first-impression"]:checked').val();
+            // $('.cfrm_firstimpression').html(cfrm_firstimpression);
 
 
 
-            var cfrm_comments = $('textarea[name="iken"]').val();
-            $('.cfrm_comments').html(cfrm_comments);
+            // var cfrm_comments = $('textarea[name="iken"]').val();
+            // $('.cfrm_comments').html(cfrm_comments);
 
             dataLayer.push({
                 'event': 'inquiry-confirm-nakanotetsugakudo-reservation'

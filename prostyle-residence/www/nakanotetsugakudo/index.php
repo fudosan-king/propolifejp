@@ -161,6 +161,14 @@
 			      												<p>3タイプモデルルーム公開中/ ご来場キャンペーン開催</p>
 			      											</div>
 			      										</div>
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2019.05.27</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>ホームページをリニューアル致しました。</p>
+			      											</div>
+			      										</div>
 			      									</div>
 			      								</div>
 	      									</div>

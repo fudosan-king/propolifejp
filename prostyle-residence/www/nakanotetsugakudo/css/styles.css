@@ -432,7 +432,7 @@ ul.topbanner_footer li p {
 }
 
 .section_infomations {
-  padding: 46px 0 100px;
+  padding: 46px 0 20px;
 }
 .section_infomations .container {
   min-width: 1280px;
@@ -686,7 +686,7 @@ footer h5 {
 .box_changelife {
   background: #fff;
   padding: 20px 30px;
-  margin: 35px auto;
+  margin: 20px auto 35px;
   width: 60%;
 }
 .box_changelife p {
@@ -2220,5 +2220,7 @@ iframe {
 .section_lastbottom {
   padding: 15px 0;
 }
+
+.campaign {margin: 30px auto 10px; text-align: center;}
 
 

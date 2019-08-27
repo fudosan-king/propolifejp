@@ -35,7 +35,7 @@
                                             ';
                                             foreach($row as $index => $col){
 
-                                                $colClass = 'col col-4 col-sm-2';
+                                                $colClass = 'col col-4 col-sm-3';
                                                 switch ($index + 1) {
 
                                                     case 2:
@@ -47,7 +47,7 @@
                                                         break;
 
                                                     case 4:
-                                                        $colClass = 'col col-3 col-sm-2';
+                                                        $colClass = 'col col-3 col-sm-1';
                                                         break;
                                                 }
 

@@ -651,9 +651,9 @@ figure.photo.hover i {
 
 .section_distribution_record {
   padding-bottom: 100px;
-  font-size: 13px;
+  font-size: 14px;
 }
-.section_distribution_record.project {padding-bottom: : 50px;}
+.section_distribution_record.project {padding-bottom: 50px;}
 .w_section_distribution_record {
   background: #fff;
   /*padding: 100px 0;*/

@@ -215,6 +215,9 @@ ul.list_contact li::before {
 	position: relative;
 	top: -45px;
 }
+.disable-box {
+	font-size: 12.8px;
+}
 @media (max-width: 768px) {
 	.frm_contact h3 {
 		font-size: 19px;
@@ -240,5 +243,8 @@ ul.list_contact li::before {
 	}
 	.no-padding {
 		top: -20px;
+	}
+	.disable-box {
+		font-size: 14px;
 	}
 }

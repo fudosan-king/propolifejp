@@ -12,7 +12,7 @@ $(function() {
 	var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
     var strToday = `${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`;
 
-    
+
 
     $('#icancellation_notice_date').datepicker({
         language: 'ja',
@@ -138,7 +138,16 @@ $(function() {
 
         var requireInputText = $('input[type="text"][required]');
         $.each(requireInputText, function(i, e){
-            if(typeof($(e).val()) === 'undefined' || $(e).val() == "" || $(e).val() == "null"){
+            var disable_bukkenmei = $('input[name="disable_bukkenmei"]');
+            var disable_living = $('input[name="disable_living"]');
+            if (disable_bukkenmei.is(":checked") && ($(e).attr('name') == 'bukkenmei' || $(e).attr('name') == 'roomnumber')) {
+                removeErrorClass($(e));
+                removeErrorMessage($(e));
+            } else if (disable_living.is(":checked") && ($(e).attr('name') == 'name_living') || $(e).attr('name') == 'kana_living') {
+                removeErrorClass($(e));
+                removeErrorMessage($(e));
+            }
+            else if(typeof($(e).val()) === 'undefined' || $(e).val() == "" || $(e).val() == "null"){
                 setErrorClass(e);
                 callErrorMessage($(e), ERROR_NO_INPUT);
                 isValid = false;
@@ -262,15 +271,15 @@ $(function() {
                     $(e).fadeOut('400', function() {
                         $(e).remove();
                     });
-                }   
+                }
             }, 0);
-                     
+
         });
     });
-    
+
 });
 
-/* SCRIPT GENERATE DATA TO TEST FORM CONTACT 
+/* SCRIPT GENERATE DATA TO TEST FORM CONTACT
 
 var collectInputText = $('input[type="text"]');
 $.each(collectInputText, function(i, e){

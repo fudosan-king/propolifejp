@@ -76,6 +76,18 @@
                                                 <input type="text" name="bukkenmei" class="form-control" placeholder="入力してください" required>
                                             </div>
                                         </div>
+                                        <div class="col-xs-12 col-md-3 no-padding">
+                                        </div>
+                                        <div class="col-xs-12 col-md-7 no-padding">
+                                            <div class="form-group mb0">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input class="text-danger" type="checkbox" name="disable_bukkenmei"><span class="text-danger">一戸建てを契約されているお客様はこちらにチェックを入れて下さい。物件名は省略頂けます。
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="row">
@@ -205,9 +217,21 @@
                                         <div class="col-xs-12 col-md-9">
                                             <div class="form-group">
                                                 <input type="text" name="kana_contractor" class="form-control" placeholder="入力してください" required>
-                                                <p class="text-danger mt10">※ご契約者様と入居者様が異なる場合は、入居者様の氏名もご入力下さい。</p>
                                             </div>
 
+                                        </div>
+                                        <div class="col-xs-12 col-md-3 no-padding">
+                                        </div>
+                                        <div class="col-xs-12 col-md-7 no-padding">
+                                            <div class="form-group mb0">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input class="text-danger" type="checkbox" name="disable_living"><span class="text-danger">ご契約者様と入居者様が同じ場合は、こちらにチェックを入れて下さい。
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <p class="text-danger mt10">※ご契約者様と入居者様が異なる場合は、入居者様の氏名もご入力下さい。</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -636,10 +660,10 @@
                                                 <div class="form-group mb0">
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input type="checkbox" name="hope_attend[]" value="無し" checked> 無し
+                                                            <input type="radio" name="hope_attend[]" value="無し" checked> 無し
                                                         </label>
                                                          <label>
-                                                            <input type="checkbox" name="hope_attend[]" value="有り"> 有り
+                                                            <input type="radio" name="hope_attend[]" value="有り"> 有り
                                                         </label>
                                                     </div>
                                                 </div>
@@ -669,7 +693,7 @@
                                 </p>
 
                             </section>
-							
+
 							<!-- ------------------ -->
 							<!-- TABLE CONFIRM FLAG -->
 							<!-- ------------------ -->
@@ -707,7 +731,7 @@
                                             <label class="cfrm-data" id="cfrm_post"></label>
                                         </div>
                                         <div class="col-xs-12 col-md-5">
-                                            
+
                                         </div>
                                     </div>
 
@@ -828,7 +852,7 @@
                                             <label class="cfrm-data" id="cfrm_moved_post"></label>
                                         </div>
                                         <div class="col-xs-12 col-md-5">
-                                            
+
                                         </div>
                                     </div>
 
@@ -932,7 +956,7 @@
 											<label class="cfrm-data" id="cfrm_emergency_post"></label>
                                         </div>
                                         <div class="col-xs-12 col-md-5">
-											
+
                                         </div>
                                     </div>
 
@@ -1024,7 +1048,7 @@
 
 
                                     <p class="cfrm-data mt10 mb10" id="cfrm_comment"></p>
-                                    
+
                                     <p><small>解約通知受理後、弊社よりお電話またはメールにてご連絡させていただきます。連絡が1週間経っても来ない場合はお手数ですが 045-581-9556までご連絡下さい。</small></p>
                                 </div>
 

@@ -211,6 +211,10 @@ ul.list_contact li::before {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+.no-padding {
+	position: relative;
+	top: -45px;
+}
 @media (max-width: 768px) {
 	.frm_contact h3 {
 		font-size: 19px;
@@ -233,5 +237,8 @@ ul.list_contact li::before {
 	.text_top_info {
 		text-align: center;
 		margin-top: 10px;
+	}
+	.no-padding {
+		top: -20px;
 	}
 }

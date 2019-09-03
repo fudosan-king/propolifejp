@@ -10,9 +10,7 @@ $(function() {
 	// Bootstrap Datepicker configuration
 	var date = new Date();
 	var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    var strToday = `${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`;
-
-
+ //    var strToday = ${date.getFullYear()} + '/' + ${date.getMonth()} + '/' + ${date.getDate()};
 
     $('#icancellation_notice_date').datepicker({
         language: 'ja',
@@ -57,19 +55,19 @@ $(function() {
 
             var collectInputText = $('input[type="text"]');
             $.each(collectInputText, function(i, e){
-                var cfrmPrefix = `#cfrm_${$(e).attr('name')}`;
+                var cfrmPrefix = '#cfrm_' + $(e).attr('name');
                 $(cfrmPrefix).html($(e).val());
             });
 
             var collectSelect = $('select');
             $.each(collectSelect, function(i, e){
-                var cfrmPrefix = `#cfrm_${$(e).attr('name')}`;
+                var cfrmPrefix = '#cfrm_' + $(e).attr('name');
                 $(cfrmPrefix).html($(e).val());
             });
 
             var collectTextArea = $('textarea');
             $.each(collectTextArea, function(i, e){
-                var cfrmPrefix = `#cfrm_${$(e).attr('name')}`;
+                var cfrmPrefix = '#cfrm_' + $(e).attr('name');
                 $(cfrmPrefix).html($(e).val());
             });
 
@@ -111,10 +109,7 @@ $(function() {
 
     // VALIDATE FORM DATA
     function callErrorMessage(elem, message){
-        var htmlError = `<section class="error-box">
-            <div class="icon"></div>
-            <p>${message}</p>
-        </section>`
+        var htmlError = '<section class="error-box"><div class="icon"></div><p>' + message + '</p></section>';
         var formGroup = $(elem).closest('.form-group');
         formGroup.append(htmlError);
     }
@@ -283,13 +278,13 @@ $(function() {
 
 var collectInputText = $('input[type="text"]');
 $.each(collectInputText, function(i, e){
-    var cfrmPrefix = `#cfrm_${$(e).attr('name')}`;
-    $(e).val(`TEST ${cfrmPrefix}`);
+    var cfrmPrefix = '#cfrm_' + $(e).attr('name');
+    $(e).val('TEST ' + cfrmPrefix);
 });
 var collectTextArea = $('textarea');
 $.each(collectTextArea, function(i, e){
-    var cfrmPrefix = `#cfrm_${$(e).attr('name')}`;
-    $(e).val(`TEST ${cfrmPrefix}`);
+    var cfrmPrefix = '#cfrm_' + $(e).attr('name');
+    $(e).val('TEST ' + cfrmPrefix);
 });
 $('input[name="email"]').val('khanh@fudosan-king.jp');
 $('#ipost').val('1000003');

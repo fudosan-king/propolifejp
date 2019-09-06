@@ -15,7 +15,7 @@
 					</a>
 				</div>
 			</div>
-			
+
 			<div class="col-12">
 				<div class="box_changelife">
 					<div class="row">
@@ -51,8 +51,13 @@
 <section class="section_lastbottom">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 text-center">
-				<img src="images/1x/logo_prostyle.svg" alt="" class="img-fluid" width="250">
+			<div class="col-2 text-center">
+			</div>
+			<div class="col-4 text-center">
+				<売主> <img src="images/1x/logo_prostyle.svg" alt="" class="img-fluid" width="250">
+			</div>
+			<div class="col-4 text-center">
+				<販売代理> <img src="images/1x/fastoria-logo.png" alt="" class="img-fluid" width="250">
 			</div>
 		</div>
 	</div>

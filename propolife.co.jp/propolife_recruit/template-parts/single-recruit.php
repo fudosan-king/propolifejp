@@ -150,7 +150,8 @@
                             <p>応募先</p>
                             <?php //echo get_field('recruit_entry_address'); ?>
                             <p>〒107-0061 <br>
-                            東京都港区北⻘⼭3-6-23</p>
+                            東京都港区北⻘⼭3-6-23 <br>
+                            プロポライフグループ採用担当宛</p>
                         </div>
                         <div class="entry_caution">
                             <?php echo get_field('recruit_entry_caution'); ?>

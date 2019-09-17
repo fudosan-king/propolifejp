@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>アンケート｜digima連動アンケートフォーム</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="shortcut icon" href="img/common/favicon.ico" type="image/vnd.microsoft.ico"/>
+	<link rel="stylesheet" href="css/validationEngine.jquery.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<h1><img src="./img/logo.png"></h1>
+
+	<dl class="description">
+		<dt>
+		新サービスについてアンケートにご協力お願いします。<br />
+		</dt>
+		<dd>
+			<img src="./img/photo.png">
+		</dd>
+	</dl>	
+
+	<section id="contact">
+		<form id="form" action="send.php" method="post">
+			<input type="hidden" name="_mode" value="conf" />
+			<div class="recruitTable">
+				<dl class="">
+					<dt>質問1.現状の状況を教えてください。<span class="require">必須</span></dt>
+					<dd>
+						<select name="contact_field_14" class="validate[required]">
+							<option value=""></option>
+							<option value="お店に行って相談したい">お店に行って相談したい</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="branch-01">
+					<dt>質問2.ご希望される情報をお選びください。<span class="require">必須</span></dt>
+					<dd>
+						<select name="contact_field_15" class="validate[required]">
+							<option value=""></option>
+							<option value="おすすめ物件情報">おすすめ物件情報</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="no-display">
+					<dt>質問3.懸念される情報を教えてください。</dt>
+					<dd>
+						<select name="contact_field_16" class="validate[required]">
+							<option value=""></option>
+							<option value="対応">対応</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>ご質問があれば入力ください。</dt>
+					<dd>
+						<textarea class="" name="contact_field_70"></textarea>
+					</dd>
+				</dl>
+				<dl>
+					<dt>メールアドレス<span class="require">必須</span></dt>
+					<dd>
+						<input class="validate[required,custom[email]] text-input" type="text" name="email" value="" placeholder="">
+					</dd>
+				</dl>
+				<div id="MyMailForm_button">
+					<button type="submit" id="button_default">送信する</button>
+				</div>
+			</div>
+		</form>
+	</section>
+</div>
+
+<script src="js/jquery.validationEngine.js"></script>
+<script src="js/jquery.validationEngine-ja.js"></script>
+
+<script type="text/javascript">
+    var isShowFlag = false;
+	var currentShowImage = "";
+
+    $(function() {
+        $("#form").validationEngine('attach', {
+    	promptPosition:"bottomLeft"
+  		});
+    });
+</script>
+
+<script async src="https://beacon.digima.com/v2/bootstrap/d0b-MUs3UjhUTEJIM3x3RmpjZE81MkFJUjBaVHBEZWJvcA"></script>
+
+</body>
+</html>

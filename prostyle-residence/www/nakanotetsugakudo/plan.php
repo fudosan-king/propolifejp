@@ -498,7 +498,7 @@
 		      							</div>
 		      						</div>
 
-		      						<div class="boxroomplan mt-5">
+		      						<!-- <div class="boxroomplan mt-5">
 		      							<h3 class="title mb-5"><span>2DK</span></h3>
 
 		      							<div class="row">
@@ -532,7 +532,7 @@
 		      									</div>
 		      								</div>
 		      							</div>
-		      						</div>
+		      						</div> -->
 
 		      						<p class="gray mt-5 mb-5"><small>※ＷＩＣ：ウォークインクローゼット、ＦＣ：ファミリークローク、ＳＩＣ：シューズインクローゼット、Ｓ：サービスルーム(納戸)</small></p>
 

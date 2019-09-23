@@ -200,7 +200,7 @@
 						      			</div>
 						      			<div class="schedule_stations">
 						      				<h4>■「落合南長崎」駅より</h4>
-						      				<img src="images/1x/img_arai_yakushimae_station.jpg" alt="" class="img-fluid d-none d-md-block">
+						      				<img src="images/1x/img_ochiaiminaminagasaki_station.jpg" alt="" class="img-fluid d-none d-md-block">
 						      				<img src="images/1x/img_weekend_sp.png" alt="" class="img-fluid d-block d-md-none">
 						      				<img src="images/1x/img_closeday_sp.png" alt="" class="img-fluid d-block d-md-none mt-3">
 						      				<p class="gray mt-3"><small>※発着時間は交通機関の諸事情により変わることがありますのでご了承ください。</small></p>

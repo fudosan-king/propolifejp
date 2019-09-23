@@ -102,6 +102,14 @@
 							<ul class="topbanner_footer">
 								<li>
 									<p>
+										<span class="meter_label">2DK(39㎡超)</span>
+										<span class="price_yen">3,890</span><span class="label_yen">万円〜</span>
+										<span class="monthly">月々</span> <span class="price_stand">9</span>
+										<span class="label_stand">万円台～</span>
+									</p>
+								</li>
+								<li>
+									<p>
 										<span class="meter_label">3LDK(64㎡超)</span>
 										<span class="price_yen">5,290</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">13</span>

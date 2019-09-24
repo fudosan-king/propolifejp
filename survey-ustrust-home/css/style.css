@@ -1,0 +1,422 @@
+body{
+  background-color:#fff;
+  margin:50px 0 0;
+}
+a{
+  text-decoration: none;
+}
+h1{
+  width: 100%;
+  text-align: center;
+  margin-bottom:20px;
+}
+
+.wrapper{
+  width:900px;
+  margin:0 auto 50px;
+  text-align: center;
+  border:10px solid #dfdfdf;
+  padding:60px 50px 30px;
+  background-color:#fff;
+}
+.description{
+  display: inline-block;
+  font-size:18px;
+}
+.description dt, .description dd{
+  display:inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.description dt{
+  margin-right:20px;
+}
+.description dd{
+  width:120px;
+  overflow: hidden;
+}
+.description dd img{
+  width:100%;
+}
+.no-display{
+  display: none;
+}
+
+/*#contact*/
+/******
+Footer
+*******/
+.copyright{
+  text-align: center;
+  display:block;
+  padding: 20px 0;
+  background-color: #444;
+  color:#fff;
+  font-size:12px;
+}
+form{
+  max-width:100%;
+  margin:30px auto 0;
+}
+form dd{
+  margin-bottom:30px;
+}
+form dd:last-child{
+  border-bottom:none;
+}
+form dt{
+  vertical-align: middle;
+  text-align:left;
+  width:100%;
+  font-size:18px;
+  line-height:1.3em;
+  margin-bottom:10px;
+}
+form dd{
+  vertical-align: middle;
+  text-align: left;
+  line-height:1.5em;
+}
+form dd.conf{
+  border-bottom: 1px solid #ddd;
+  padding-bottom:30px;
+}
+select{
+  width:100%;
+}
+input[type="text"], textarea, select{
+  border:1px solid #aaa;
+  padding:8px;
+}
+input[type="text"], textarea{
+  width:100%;
+}
+textarea{
+  height:150px;
+}
+input[type=checkbox] {
+  /*transform: scale(1.8);*/
+  margin-right:10px;
+  width:26px;
+  height:26px;
+  vertical-align: middle;
+}
+input[type=radio] {
+  width:26px;
+  height:26px;
+  vertical-align: middle;
+}
+input[type=radio]+label{
+  margin-right:20px;
+}
+.btnGroup{
+  width:100%;
+  text-align: center;
+}
+#MyMailForm_button{
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+}
+button[type="submit"]{
+  font-family: "Meiryo","MS Gothic", Helvetica, sans-serif, Georgia, Myriad, "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","メイリオ","ＭＳ ゴシック";
+  display:inline-block;
+  width:250px!important;
+  font-size: 20px;
+  padding:17px 70px 15px;
+  background-color: #0099cc;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  color:#fff;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor:pointer;
+  width:100%;
+  margin:30px auto;
+  border:0;
+
+}
+#MyMailForm_button #send{
+  font-family: "Meiryo","MS Gothic", Helvetica, sans-serif, Georgia, Myriad, "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","メイリオ","ＭＳ ゴシック";
+  display:inline-block;
+  width:250px!important;
+  font-size: 20px;
+  padding:17px 70px 15px;
+  background-color: #0099cc;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  color:#fff;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor:pointer;
+  width:100%;
+  margin:30px auto;
+  border:0;
+}
+#MyMailForm_button #send:hover{
+  background-color: #666;
+  color:#fff;
+}
+#MyMailForm_button #back{
+  font-family: "Meiryo","MS Gothic", Helvetica, sans-serif, Georgia, Myriad, "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","メイリオ","ＭＳ ゴシック";
+  display:inline-block;
+  width:250px!important;
+  font-size: 20px;
+  padding:17px 70px 15px;
+  background-color: #aaa;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  color:#fff;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor:pointer;
+  width:100%;
+  margin:30px 20px 30px 0;
+  border:0;
+}
+#MyMailForm_button #back:hover{
+  background-color: #666;
+  color:#fff;
+}
+button[type="submit"]:hover{
+  background-color: #666;
+  color:#fff;
+}
+.back{
+  display:inline-block;
+  width:250px;
+  margin-right:20px;
+}
+.require{
+  vertical-align: middle;
+  display:inline-block;
+  background-color:#f00;
+  color:#fff;
+  font-size:12px;
+  font-weight:bold;
+  padding:5px;
+  line-height: 1em;
+  margin-left:10px;
+}
+.option{
+  vertical-align: middle;
+  display:inline-block;
+  background-color:#000;
+  color:#fff;
+  font-size:12px;
+  font-weight:bold;
+  padding:5px;
+  line-height: 1em;
+  margin-left:10px;
+}
+.emargency{
+  text-align: center;
+  font-size:22px;
+  font-weight:bold;
+  line-height:1.5em;
+}
+input[type="text"].name, input[type="text"].kana{
+  width:35%;
+}
+input[type="text"].phone{
+  width:25%;  
+}
+.errorMessageTitle{
+  color:#ff0000;
+  font-size:18px;
+  display:block;
+  padding:0;
+  line-height: 1.5em;
+  margin-top:10px;
+  text-align:center;
+  font-weight:bold;
+}
+.errorMessage{
+  color:#ff0000;
+  font-size:14px;
+  display:block;
+  padding:0;
+  line-height: 1.0em;
+  margin-top:10px;
+}
+.confirmHide{
+  display:none;
+  color:red;
+}
+.thankText{
+  font-size:20px;
+  line-height:1.5em;
+  text-align: center;
+  margin-bottom:50px;
+}
+.download_btn a{
+  font-family: "Meiryo","MS Gothic", Helvetica, sans-serif, Georgia, Myriad, "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","メイリオ","ＭＳ ゴシック";
+  display:block;
+  width:350px!important;
+  font-size: 20px;
+  padding:17px 30px 15px;
+  background-color: #0099cc;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  color:#fff;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor:pointer;
+  width:100%;
+  margin:30px auto 50px;;
+  border:0;
+  text-align: center;
+}
+.download_btn a:hover{
+  background-color: #666;
+  color:#fff;
+}
+#thanks .footer{
+  position: fixed;
+  bottom:0;
+  width:100%;
+}
+
+p.description{
+  width:700px;
+  text-align: center;
+  margin:0 auto 40px;
+  line-height: 1.5em;
+}
+
+#privacy{
+  overflow: auto;
+  width:100%;
+  height:250px;
+  border:1px solid #aaa;
+  background-color:#fff;
+  padding:20px;
+}
+#privacy h2{
+  font-size:22px;
+  font-weight:bold;
+  margin:0.5em 0;
+  padding-bottom:0.5em;
+}
+#privacy .form_btm_inner{
+  font-size: 14px;
+  line-height:1.5em;
+}
+#privacy h3{
+  margin:30px 0 10px;
+  font-size:18px;
+}
+#privacy dt.bold{
+  font-weight:bold;
+  border-left:5px solid #326496;
+  padding-left:10px;
+  font-size:16px;
+  margin-bottom:10px;
+}
+#privacy dd{
+  margin-left:30px;
+  margin-bottom:20px;
+}
+#privacy .attention{
+  border-top:1px solid #ccc;
+  padding-top:20px;
+}
+#privacy .attention li{
+  text-indent: -1em;
+  margin-left:1em;
+}
+.agree {
+    text-align: center;
+    margin-top: 20px;
+}
+.disable{
+  background-color:#aaa!important;
+}
+.not-dl{
+  width:500px;
+  margin:0 auto;
+  padding:20px 15px;
+  font-size:22px;
+  border:1px solid #aaa;
+  text-align: center;
+}
+
+@media only screen and (max-width:767px){
+  .wrapper{
+    border:0;
+    padding:0;
+    width:100%;
+  }
+  .description dt, .description dd {
+    display:block;
+  }
+  .description dt{
+    margin:20px auto;
+    width:95%;
+  }
+  .description dd{
+    width:30%;
+    margin:0 auto;
+    text-align: center;
+  }
+  .recruitTable .checkbox{
+    width: 10%;
+  }
+  .recruitTable .lb{
+    display: inline-block;
+    text-align: left;
+  }
+  h1 img {
+      max-height: auto;
+      display: block;
+      margin: 0 auto;
+      width:70%;
+  }
+  th,td{
+    display:block;
+    width:100%;
+    padding:15px!important;
+  }
+  th{
+    padding-bottom: 0px!important;
+    text-align: left!important; 
+  }
+  .name, .kana{
+    width:38%!important;
+  }
+  input[type="text"].phone{
+    width:27%!important;
+  }
+  #header-contents{
+    padding:5px 0;
+  }
+  .titleBlock{
+    margin-bottom:5px;
+  }
+  h2{
+    font-size:24px;
+  }
+  section#contact{
+    padding: 0 2% 20px;
+    margin-top:30px;
+  }
+  #MyMailForm_button #back{
+    margin:10px 0 0 0!important;
+  }
+  .note{
+    padding:20px;
+  }
+  p.description{
+    width:95%;
+  }
+  .sp-display{
+    display: block;
+  }
+  #privacy {
+    height:200px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アンケート｜digima連動アンケートフォーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="shortcut icon" href="img/common/favicon.ico" type="image/vnd.microsoft.ico"/>
+  <link rel="stylesheet" href="css/validationEngine.jquery.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    var url = 'http://www.comvex.co.jp/';
+    var val = getCookie('_dgmt');
+    var param;
+
+    if(val){
+      param = '?__dgmt_ccd=' + val;
+    }else{
+      param = '';
+    }
+
+    setTimeout(function(){
+      window.location.href = url + param;
+    }, 5*1000);
+  </script>
+
+</head>
+<body>
+<div class="wrapper">
+  <h1><img src="./img/logo.png"></h1>
+
+  <dl class="description">
+    <dt>
+    ご回答いただき、ありがとうございました。<br>
+    5秒後に弊社HPに自動的にページが移動いたします。
+    </dt>
+    <dd>
+      <img src="./img/photo.png">
+    </dd>
+  </dl> 
+</div>
+
+<script async src="https://beacon.digima.com/v2/bootstrap/d0b-MUs3UjhUTEJIM3x3RmpjZE81MkFJUjBaVHBEZWJvcA"></script>
+
+</body>
+</html>

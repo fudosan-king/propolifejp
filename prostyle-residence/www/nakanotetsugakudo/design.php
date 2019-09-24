@@ -89,14 +89,14 @@
 				      				<span>外観完成予想CG</span>
 				      			</div>
 				      			<div class="m-auto w_img">
-				      				<img src="images/1x/プレシス哲学堂公園_エントランスC_0426.jpg" alt="" class="img-fluid">
+				      				<img src="images/1x/park_entrance_C_0426.jpg" alt="" class="img-fluid">
 				      				<p class="text-right mt-1 text_entrace">エントランス完成予想CG</p>
 				      			</div>
 
 				      			<h2 class="headline mt_66">Architecture Design</h2>
 				      			<h3 class="subheadline mb_72">帰るたびに誇らしくなる、<span class="line_break">デザイン邸宅。</span></h3>
 				      			<div class="m-auto w_architecture_img">
-				      				<img src="images/1x/プレシス哲学堂公園_ホール_0426.jpg" alt="" class="img-fluid">
+				      				<img src="images/1x/park_hall_0426.jpg" alt="" class="img-fluid">
 				      				<p class="text-right mt-1 text_entrace">エントランス完成予想CG</p>
 				      			</div>
 				      			<p class="mt_40 text-left gray">※外観完成予想図は、図面を基に描き起こしたものに、周辺環境を撮影した写真（平成29年3月撮影※一部CG加工をしております）を合成したもので、実際とは異なります。一部の周辺建物は白線で表記しております。<br>

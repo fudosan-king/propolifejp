@@ -1203,3 +1203,249 @@ ul.list_row li h4 {
     padding: 0;
   }
 }
+
+/* update good design page */
+.section_ryokan h1 {
+  font-size: 131px;
+  text-align: center;
+  margin: 130px 0 30px;
+  font-family: yu-mincho-pr6n, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.section_ryokan h1 img {
+  max-width: 633px;
+}
+.section_ryokan h1 span {
+  position: relative;
+  top: 15px;
+}
+.section_ryokan h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 70px;
+  font-weight: 300;
+  font-family: 'Libian SC';
+}
+.section_ryokan h2 .name {
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 400;
+}
+.box_ryokan_topimg {
+  position: relative;
+}
+.box_ryokan_topimg {
+  max-width: 680px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.topimg_small {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.box_ryokan_topimg p {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  right: 50px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 20px;
+  text-shadow: 0px 3px 6px #00000091;
+  line-height: 1.8em;
+}
+.section_concetp {
+  margin: 100px 0 0;
+  background: url('../images/1x/asetto2@2x.png') repeat;
+  padding: 130px 0;
+}
+.section_concetp h2 {
+  color: #B48857;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  font-family: ubuntu-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 50px;
+}
+.section_concetp h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: #B48857;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.section_concetp h1 {
+  font-size: 44px;
+  color: #231815;
+  text-align: center;
+  font-family: '游ゴシック','YuGothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+.section_concetp h1 span {
+  font-size: 14px;
+  font-weight: 300;
+}
+.w_big_imgconcept p {
+  margin-top: 35px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+}
+.w_big_imgconcept p::before {
+  content: '※ ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+}
+.big_imgconcept {
+  margin-bottom: 10px;
+}
+.w_concept_item {
+  padding: 0 40px;
+}
+.section_concetp .description {
+  font-size: 17px;
+  line-height: 1.8em;
+}
+.concept_item {
+  margin-bottom: 30px;
+}
+.concept_item p {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.concept_item .concept_item_img {
+  width: 100%;
+  height: 276px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+.concept_item .concept_item_img img {
+  width: 100%;
+  height: 276px;
+  object-fit: cover;
+}
+.concept_item_img .num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #a90010;
+  color: #fff;
+  text-align: center;
+  padding: 0 7px;
+}
+.section_outline {
+  padding: 68px 0 110px;
+}
+.section_outline h2 {
+  color: #C19C73;
+  font-size: 20px;
+  font-family: '游ゴシック','YuGothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif;
+  text-align: center;
+  margin-top: 65px;
+  margin-bottom: 30px;
+}
+.col_custom {
+  border-top: 1px solid #909090;
+  padding: 20px 0;
+}
+.col_custom p {
+  margin-bottom: 0;
+}
+.link_custom {
+  color: #000;
+}
+
+
+@media (max-width: 768px) {
+  .box_ryokan_topimg {
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
+  .box_ryokan_topimg p {
+    font-size: 9px;
+    top: 30px;
+    right: 40px;
+    left: 40px;
+  }
+  .section_ryokan h1 {
+    font-size: 47px;
+    margin: 100px 0 15px;
+  }
+  .section_ryokan h1 img {
+    max-width: 230px;
+  }
+  .section_ryokan h1 span {
+    top: 5px;
+  }
+  .section_ryokan h2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+  .section_ryokan h2 .name {
+    font-size: 21px;
+  }
+  .section_ryokan h2 .hotel {
+    font-size: 27px;
+  }
+  .topimg_small {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .section_concetp {
+    padding: 90px 0;
+  }
+  .section_concetp h1 {
+    letter-spacing: -1px;
+  }
+  .section_concetp h1 span {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -20px;
+  }
+  .section_concetp .description {
+    margin-bottom: 30px;
+  }
+  .w_concept_item {
+    padding: 0;
+  }
+  .concept_item p {
+    font-size: 13px;
+    line-height: 1.5em;
+  }
+  .section_outline {
+    padding-top: 0;
+  }
+  .table_outline {
+    padding: 15px;
+  }
+  .col_custom {
+    padding: 5px 0;
+    border-top: none;
+  }
+  .label_custom {
+    background: #C19C73;
+    color: #fff;
+    padding: 0 5px;
+    margin-top: 10px;
+  }
+  .col_custom p {
+    word-break: break-all;
+  }
+  .link_custom {
+    font-size: 12px;
+  }
+  
+
+}

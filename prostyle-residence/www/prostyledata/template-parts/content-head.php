@@ -47,6 +47,7 @@ endif;
 
 if(is_page('gooddesign')):
 	?>
+	<meta name="robots" content="noindex, nofollow">
 	<script>
 	  (function(d) {
 	    var config = {

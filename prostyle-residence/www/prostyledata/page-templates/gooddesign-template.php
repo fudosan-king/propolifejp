@@ -15,11 +15,23 @@ if (have_posts()):
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1><img src="<?php echo SGVinK::get_images_uri();?>/1x/g_type2019_f@2x.png" alt="" class="img-fluid"> <span>受賞</span></h1>
+                    <h1><img src="<?php echo SGVinK::get_images_uri();?>1x/g_type2019_f@2x.png" alt="" class="img-fluid"> <span>受賞</span></h1>
                     <h2><span class="name">PROSTYLE</span> <span class="hotel">旅館</span> 横浜馬車道</h2>
-                    <div class="box_ryokan_topimg mx-auto text-center">
-                        <img src="<?php echo SGVinK::get_images_uri();?>/1x/fasade@2x.png" alt="" class="img-fluid">
-                        <p>当社が神奈川県横浜市中区常盤町で開発を行った 「プロスタイル旅館横浜馬車道」が、2019年度グッドデザイン賞 （主催：公益財団法人日本デザイン振興会）を受賞しました。</p>
+                    <div class="box_ryokan_topimg mx-auto text-left">
+                        <img src="<?php echo SGVinK::get_images_uri();?>1x/fasade@2x.jpg" alt="" class="img-fluid">
+                        <p class="d-none d-md-block" style="text-align: left;">
+                            おかげさまで、プロスタイルは2019年「グッドデザイン賞」を受賞いたしました。 <br>
+                            グッドデザイン賞は、日本で唯一の総合的なデザイン評価・推奨の仕組みです。人が何らかの理想や目的を果たすために築いたものごとをデザインととらえ、その質を評価・顕彰している評価制度です。
+                            今回受賞いたしました「プロスタイル旅館横浜馬車道」を
+                            ご紹介いたします。
+                        </p>
+                        <p class="d-block d-md-none" style="text-align: left;">
+                            おかげさまで、プロスタイルは2019年「グッドデザイン賞」を <br>
+                            受賞いたしました。 <br>
+                            グッドデザイン賞は、日本で唯一の総合的なデザイン評価・推奨の仕組みです。人が何らかの理想や目的を果たすために築いたものごとをデザインととらえ、その質を評価・顕彰している評価制度です。<br>
+                            今回受賞いたしました「プロスタイル旅館横浜馬車道」を <br>
+                            ご紹介いたします。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -30,7 +42,7 @@ if (have_posts()):
             <div class="row">
                 <div class="col-12">
                     <div class="text-center">
-                        <img src="<?php echo SGVinK::get_images_uri();?>/1x/asetto1@2x.png" alt="" class="img-fluid">
+                        <img src="<?php echo SGVinK::get_images_uri();?>1x/asetto1@2x.png" alt="" class="img-fluid">
                         <h2>Concept</h2>
                         <h1>「まちなか旅館」<span>※ </span></h1>
                     </div>
@@ -40,7 +52,7 @@ if (have_posts()):
         </div>
         <div class="w_big_imgconcept">
             <div class="big_imgconcept">
-                <img src="<?php echo SGVinK::get_images_uri();?>/1x/tatami@2x.png" alt="" class="img-fluid">
+                <img src="<?php echo SGVinK::get_images_uri();?>1x/tatami@2x.png" alt="" class="img-fluid">
             </div>
             <div class="container">
                 <div class="row">
@@ -57,7 +69,7 @@ if (have_posts()):
                         <div class="concept_item">
                             <a href="#" class="concept_item_img">
                                 <span class="num">1</span>
-                                <img src="<?php echo SGVinK::get_images_uri();?>/1x/gazoo11@2x.png" alt="" class="img-fluid">
+                                <img src="<?php echo SGVinK::get_images_uri();?>1x/gazoo11@2x.png" alt="" class="img-fluid">
                             </a>
                             <p>横浜馬車道の煉瓦舗装された道から引用したレンガ、 横浜馬車道が日本の近代街路樹の発祥地とされる ことから 引用した木を工夫しつつ用いた、周辺への調和だけでなく、新しさも融合させた外観。</p>
                         </div>
@@ -66,7 +78,7 @@ if (have_posts()):
                         <div class="concept_item">
                             <a href="#" class="concept_item_img">
                                 <span class="num">2</span>
-                                <img src="<?php echo SGVinK::get_images_uri();?>/1x/gazoo13@2x.png" alt="" class="img-fluid">
+                                <img src="<?php echo SGVinK::get_images_uri();?>1x/gazoo13@2x.png" alt="" class="img-fluid">
                             </a>
                             <p>日旅人を静かに迎え入れる、半屋外の小径空問。馬車を連想するオブジェや、ガス灯をイメージさせる明かりを持つ。</p>
                         </div>
@@ -75,7 +87,7 @@ if (have_posts()):
                         <div class="concept_item">
                             <a href="#" class="concept_item_img">
                                 <span class="num">3</span>
-                                <img src="<?php echo SGVinK::get_images_uri();?>/1x/gazoo12@2x.png" alt="" class="img-fluid">
+                                <img src="<?php echo SGVinK::get_images_uri();?>1x/gazoo12@2x.png" alt="" class="img-fluid">
                             </a>
                             <p>アプローチを抜けると、港町の路地裏にあるバ一を思わせるノスタルジックな空間。JAZZやBLUESの音色がやさしく包み込む。</p>
                         </div>
@@ -86,7 +98,7 @@ if (have_posts()):
                                 <div class="concept_item">
                                     <a href="#" class="concept_item_img">
                                         <span class="num">4</span>
-                                        <img src="<?php echo SGVinK::get_images_uri();?>/1x/gazoo14@2x.png" alt="" class="img-fluid">
+                                        <img src="<?php echo SGVinK::get_images_uri();?>1x/gazoo14@2x.png" alt="" class="img-fluid">
                                     </a>
                                     <p>横浜馬車道の歴史的建造物の石造りをイメ ージする内装カラ一を用い、照度を抑えた明かりは横浜馬車道に日本初の ガス灯が灯った当時をほのかに感じられる空間。</p>
                                 </div>
@@ -95,7 +107,7 @@ if (have_posts()):
                                 <div class="concept_item">
                                     <a href="#" class="concept_item_img">
                                         <span class="num">5</span>
-                                        <img src="<?php echo SGVinK::get_images_uri();?>/1x/gazoo15@2x.png" alt="" class="img-fluid">
+                                        <img src="<?php echo SGVinK::get_images_uri();?>1x/gazoo15@2x.png" alt="" class="img-fluid">
                                     </a>
                                     <p>くつを脱ぎ寛ぐことを誘発する小上がり、やさしく光や視線を通す格子や障子、ゆっくりと入浴できる洗い場付き浴槽などの日本文化の設えに、西洋文化のベッドや最新設備機器の利便性をなじませることで情緒的な価値を担保した空間。</p>
                                 </div>

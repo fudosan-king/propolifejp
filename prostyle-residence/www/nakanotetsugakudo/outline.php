@@ -205,11 +205,11 @@
 					      		<table class="table table-bordered table_outline">
 					      			<tr>
 					      				<th>販売戸数</th>
-					      				<td>5戸</td>
+					      				<td>6戸</td>
 					      			</tr>
 					      			<tr>
 					      				<th>販売価格</th>
-					      				<td>3,890万円〜5,790万円</td>
+					      				<td>3,890万円〜6,190万円</td>
 					      			</tr>
 					      			<tr>
 					      				<th>間取り</th>
@@ -253,7 +253,7 @@
 					      			</tr>
 					      			<tr>
 					      				<th>備考</th>
-					      				<td>※記載の販売価格は消費税率8％での税込み表示となります。</td>
+					      				<td>※記載の販売価格は消費税率10％での税込み表示となります。</td>
 					      			</tr>
 					      			<tr>
 					      				<th>ローン概要</th>
@@ -293,7 +293,7 @@
 
 
 
-					      		<p class="mb-5 text-center">情報提供日：<span>2019/8/1</span>　次回更新予定日：<span>2019/9/30</span></p>
+					      		<p class="mb-5 text-center">情報提供日：<span>2019/8/1</span>　次回更新予定日：<span>2019/10/31</span></p>
 
 	      					</div>
 	      				</div>

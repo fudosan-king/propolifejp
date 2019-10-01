@@ -191,13 +191,6 @@
       											</a>
 	      									</div>
 	      								</div>
-
-	      								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	      									<div class="campaign">
-	      										<a href="contact/reservation/"><img class="img-fluid" src="images/1x/nakano-campaign.jpg" alt=""></a>
-	      									</div>
-	      								</div>
-
 	      							</div>
 	      						</div>
 	      					</div>

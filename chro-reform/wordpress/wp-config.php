@@ -32,7 +32,7 @@ define('DB_NAME', 'wp_reform');
 define('DB_USER', 'root');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'dasp13*dran');
+define('DB_PASSWORD', 'root');
 
 /** MySQL のホスト名 */
 define('DB_HOST', 'localhost');
@@ -61,7 +61,12 @@ define('SECURE_AUTH_SALT', 'G5KgAf{)Q<m|:H{Dbq]M4]D@&H^187c3-o_l/:=5{-(]EDLH?:eW
 define('LOGGED_IN_SALT',   '[BHhmg2-$I7$P1-1Fpc;dd;Hhd-F?Ixw#]*=zpec4t#v3 C3p]._0c~-yd-LfG)>');
 define('NONCE_SALT',       'GiY]|(Aw%>>|na+Ol1G[8.|zIR%Aiq{>JH_vx3] eH7gTETZ{ )RnhYpI <xn?-:');
 
+define('WP_HOME', 'http://chro-reform.test');
+define('WP_SITEURL', 'http://chro-reform.test/wordpress');
 define('FS_METHOD', 'direct');
+
+//define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'].'/wordpress');
+//define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
 
 /**#@-*/
 

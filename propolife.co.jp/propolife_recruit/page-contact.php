@@ -194,6 +194,7 @@ get_template_part( 'header', 'contact' );
                                     <input type="hidden" name="resume_url" id="resume_url" class="form-control" value="">
                                 </div>
                             </dd>
+                            <p class="rireki_yamada">※PDFファイルは、ファイル名を半角英数で設定して登録してください（例：rireki_yamada-taro.pdf)</p>
 
                             <dt class="Rtable-cell Rtable-cell--medium"><strong>職務経歴書（PDFにてご登録ください）</strong></dt>
                             <dd class="Rtable-cell Rtable-cell--highlight Rtable-cell--2of3 Rtable-cell--rowEnd">
@@ -202,7 +203,7 @@ get_template_part( 'header', 'contact' );
                                     <input type="hidden" name="curriculum_vitae_url" id="curriculum_vitae_url" class="form-control" value="">
                                 </div>
                             </dd>
-
+                            <p class="keireki_yamada">※PDFファイルは、ファイル名を半角英数で設定して登録してください（例：keireki_yamada-hanako.pdf)</p>
 
 
                             <dt class="Rtable-cell Rtable-cell--medium">

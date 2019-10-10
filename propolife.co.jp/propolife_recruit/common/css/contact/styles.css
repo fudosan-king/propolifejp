@@ -148,6 +148,26 @@
   .Rtable--collapse > .Rtable-cell--foot {
     margin-bottom: 1em;
   }
+  .rireki_yamada {
+    position: static; 
+  }
+  .keireki_yamada {
+    position: static; 
+  }
+}
+
+.rireki_yamada {
+  position: absolute; 
+  bottom: 772px; 
+  font-size: 13px !important; 
+  left: 187px;
+}
+
+.keireki_yamada {
+  position: absolute; 
+  bottom: 670px; 
+  font-size: 13px !important; 
+  left: 187px;
 }
 
 /* Zebra striping

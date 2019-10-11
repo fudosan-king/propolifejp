@@ -155,6 +155,16 @@
 			      									<div class="box_informations_content">
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2019.10.11</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>誠に勝手ながら、台風19号接近に伴い、10/12(土)は臨時休業とさせていただきます。<br>
+尚、10/13(日)の営業についてはお電話にてマンションギャラリーへお問合せください。<br>
+お手数をお掛けいたしますが、ご理解のほどよろしくお願い申し上げます。</p>
+			      											</div>
+			      										</div>
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2019.09.30</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">

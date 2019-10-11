@@ -4,9 +4,18 @@
 
     $result['status'] = 'OK';
 
+    $result['resume_link'] = '';
+    $result['record_link'] = '';
 
-    $result['resume_link'] = isset($_FILES['resume']) ? wp_upload_media_file($_FILES['resume']) : '';
-    $result['record_link'] = isset($_FILES['record']) ? wp_upload_media_file($_FILES['record']) : '';
+    if (isset($_FILES['resume'])){
+    	$_FILES['resume']['name'] = str_replace(" ", "-", $_FILES['resume']['name']);
+    	$result['resume_link'] = wp_upload_media_file($_FILES['resume']);
+    }
+
+    if (isset($_FILES['record'])){
+    	$_FILES['record']['name'] = str_replace(" ", "-", $_FILES['record']['name']);
+    	$result['record_link'] = wp_upload_media_file($_FILES['record']);
+    }
 
 	echo json_encode($result);
 

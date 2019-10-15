@@ -24,7 +24,15 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/mobile.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/contact.css" type="text/css">
     
-    <!-- Global site tag (gtag.js) - Google Ads: 844745329 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-844745329"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-844745329'); </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12788873-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-12788873-6');
+        gtag('config', 'AW-844745329'); 
+    </script>
 
     <!-- Event snippet for 無垢材体験会予約（ショールーム予約） conversion page --> 
     <script> gtag('event', 'conversion', {'send_to': 'AW-844745329/t558CIjqz68BEPGU55ID'}); </script>

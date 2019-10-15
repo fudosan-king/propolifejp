@@ -42,6 +42,20 @@ $(function() {
         $('#w_visit').fadeIn();
         $('#w_visit_cfrm').removeClass('force-hide');
 
+        var requireInput = $('input[type="text"][required], textarea[required], select[required]');
+        $.each(requireInput, function(i, e){
+            $(e).on('mouseover mouseenter focus touchmove touchstart', function(event) {
+                /* Act on the event */
+                var formGroup = $(e).closest('.form-group');
+                var errorBox = formGroup.find('.error-box');
+                if (errorBox.length > 0){
+                    errorBox.fadeOut('400', function() {
+                        $(this).remove();
+                    });
+                }
+            });
+        });
+
         
     }else{
         $('textarea[name="free_detail_contact"]').attr('required',true);
@@ -72,6 +86,20 @@ $(function() {
             $('select[name="show_room"]').attr('required',true);
             $('#w_visit').fadeIn();
             $('#w_visit_cfrm').removeClass('force-hide');
+
+            var requireInput = $('input[type="text"][required], textarea[required], select[required]');
+            $.each(requireInput, function(i, e){
+                $(e).on('mouseover mouseenter focus touchmove touchstart', function(event) {
+                    /* Act on the event */
+                    var formGroup = $(e).closest('.form-group');
+                    var errorBox = formGroup.find('.error-box');
+                    if (errorBox.length > 0){
+                        errorBox.fadeOut('400', function() {
+                            $(this).remove();
+                        });
+                    }
+                });
+            });
 
             
         }else{

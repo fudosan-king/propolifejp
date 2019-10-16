@@ -513,12 +513,12 @@
                                         </div>
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
-                                                <input name="first_name" type="text" class="form-control" placeholder="姓" required>
+                                                <input name="last_name" type="text" class="form-control" placeholder="姓" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
-                                                <input name="last_name" type="text" class="form-control" placeholder="名" required>
+                                                <input name="first_name" type="text" class="form-control" placeholder="名" required>
                                             </div>
                                         </div>
                                     </div>

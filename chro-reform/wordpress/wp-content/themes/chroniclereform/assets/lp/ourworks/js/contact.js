@@ -106,7 +106,7 @@ $(function() {
                 $(cfrmPrefix).html($(e).val());
             });
 
-            var cfrm_name =  $('input[name="first_name"]').val() + $('input[name="last_name"]').val();
+            var cfrm_name =  $('input[name="last_name"]').val() + $('input[name="first_name"]').val();
             $('#cfrm_name').html(cfrm_name);
 
             var cfrm_visit_info =  $('input[name="visit_date"]').val() + ' '  + $('select[name="visit_hour"]').val()+ '</br>'  + $('select[name="show_room"]').val();

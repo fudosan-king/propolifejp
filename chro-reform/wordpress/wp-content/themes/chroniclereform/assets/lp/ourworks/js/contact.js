@@ -28,51 +28,21 @@ $(function() {
         $(idpk).data('DateTimePicker').toggle();
     })
 
-    if ($('input[name="category_contact[]"]:checked').val() == 'ショールーム来場予約')
-    {
-        $('textarea[name="free_detail_contact"]').removeAttr('required')
-        $('textarea[name="free_detail_contact"]').val('');
-        $('#w_inquiry').fadeOut();
-        $('#w_inquiry_cfrm').addClass('force-hide');
-
-        
-        $('#datepicker').attr('required',true);
-        $('select[name="visit_hour"]').attr('required',true);
-        $('select[name="show_room"]').attr('required',true);
-        $('#w_visit').fadeIn();
-        $('#w_visit_cfrm').removeClass('force-hide');
-
-        var requireInput = $('input[type="text"][required], textarea[required], select[required]');
-        $.each(requireInput, function(i, e){
-            $(e).on('mouseover mouseenter focus touchmove touchstart', function(event) {
-                /* Act on the event */
-                var formGroup = $(e).closest('.form-group');
-                var errorBox = formGroup.find('.error-box');
-                if (errorBox.length > 0){
-                    errorBox.fadeOut('400', function() {
-                        $(this).remove();
-                    });
-                }
-            });
+    var requireInput = $('input[type="text"][required], textarea[required], select[required]');
+    $.each(requireInput, function(i, e){
+        $(e).on('mouseover mouseenter focus touchmove touchstart', function(event) {
+            /* Act on the event */
+            var formGroup = $(e).closest('.form-group');
+            var errorBox = formGroup.find('.error-box');
+            if (errorBox.length > 0){
+                errorBox.fadeOut('400', function() {
+                    $(this).remove();
+                });
+            }
         });
+    });
 
-        
-    }else{
-        $('textarea[name="free_detail_contact"]').attr('required',true);
-        $('#w_inquiry').fadeIn();
-        $('#w_inquiry_cfrm').removeClass('force-hide');
-
-        $('#datepicker').removeAttr('required');
-        $('select[name="visit_hour"]').removeAttr('required');
-        $('select[name="show_room"]').removeAttr('required');
-        $('#datepicker').val('');
-        $('select[name="visit_hour"]').val('');
-        $('select[name="show_room"]').val('');
-        $('#w_visit').hide();
-        $('#w_visit_cfrm').addClass('force-hide');
-    }
-
-    $('input[name="category_contact[]"]').on('change', function(){
+    function requireCondition(){
         if ($('input[name="category_contact[]"]:checked').val() == 'ショールーム来場予約')
         {
             $('textarea[name="free_detail_contact"]').removeAttr('required')
@@ -86,21 +56,6 @@ $(function() {
             $('select[name="show_room"]').attr('required',true);
             $('#w_visit').fadeIn();
             $('#w_visit_cfrm').removeClass('force-hide');
-
-            var requireInput = $('input[type="text"][required], textarea[required], select[required]');
-            $.each(requireInput, function(i, e){
-                $(e).on('mouseover mouseenter focus touchmove touchstart', function(event) {
-                    /* Act on the event */
-                    var formGroup = $(e).closest('.form-group');
-                    var errorBox = formGroup.find('.error-box');
-                    if (errorBox.length > 0){
-                        errorBox.fadeOut('400', function() {
-                            $(this).remove();
-                        });
-                    }
-                });
-            });
-
             
         }else{
             $('textarea[name="free_detail_contact"]').attr('required',true);
@@ -116,9 +71,13 @@ $(function() {
             $('#w_visit').fadeOut();
             $('#w_visit_cfrm').addClass('force-hide');
         }
-    })
+    }
 
-    
+    requireCondition();
+
+    $('input[name="category_contact[]"]').on('change', function(){
+        requireCondition();
+    })
 
     // BUTTON HANDLER
     $('#ibtnConfirm').click(function(event){
@@ -288,20 +247,6 @@ $(function() {
 
         return isValid;
     }
-
-    var requireInput = $('input[type="text"][required], textarea[required], select[required]');
-    $.each(requireInput, function(i, e){
-        $(e).on('mouseover mouseenter focus touchmove touchstart', function(event) {
-            /* Act on the event */
-            var formGroup = $(e).closest('.form-group');
-            var errorBox = formGroup.find('.error-box');
-            if (errorBox.length > 0){
-                errorBox.fadeOut('400', function() {
-                    $(this).remove();
-                });
-            }
-        });
-    });
 
     // $(window).scroll(function(event) {
     //     /* Act on the event */

@@ -576,14 +576,14 @@
                                                 <div class="col-12 col-md-6">
                                                     <div class="form-group">
                                                         <div class="box_datepicker">
-                                                            <input id="datepicker" type="text" class="form-control dpk" name="visit_date">
+                                                            <input id="datepicker" type="text" class="form-control dpk" name="visit_date" required>
                                                             <i class="fal fa-calendar-alt fa-lg i_calendar"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-6">
                                                     <div class="form-group">
-                                                        <select name="visit_hour" class="form-control">
+                                                        <select name="visit_hour" class="form-control" required>
                                                             <option value="">時間を選択</option>
                                                             <option value="10:00">10:00</option>
                                                             <option value="11:00">11:00</option>
@@ -602,7 +602,7 @@
                                             <div class='row'>
                                                 <div class="col-12 col-md-6">
                                                     <div class="form-group">
-                                                        <select name="show_room" class="form-control">
+                                                        <select name="show_room" class="form-control" required>
                                                             <option value="">ショールームを選択</option>
                                                             <option value="表参道本店">表参道本店</option>
                                                             <option value="東京日本橋">東京日本橋</option>

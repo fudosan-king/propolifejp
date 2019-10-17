@@ -5,9 +5,9 @@ $dir_category = 'business';
 ?>
 <?php get_header(); ?>
 <div id="contents">
-    
+
 <?php show_topicpath(); ?>
-    
+
     <div id="section_title">
         <h2><img src="<?php bloginfo('template_directory'); ?>/common/images/main/img_title_h2.png" alt="BUSINESS"></h2>
         <p class="ruby"><?php the_title(); ?></p>
@@ -15,7 +15,7 @@ $dir_category = 'business';
     </div>
 
     <div id="contents_inner">
-        
+
         <?php
             $loop_num = 0;
             while(the_repeater_field('business_table')):
@@ -53,6 +53,9 @@ $dir_category = 'business';
                             </div>
                         <?php endif; echo "\n"; ?>
                     </div>
+                    <div class="more_link">
+                    <?php if(!empty($more_link)): ?><p class="btn_more_sp hidden"><a href="<?php echo $more_link; ?>" target="_blank">MORE</a></p><?php endif; echo "\n"; ?>
+                    </div>
                 </li>
                 <?php $row_num += 1; $loop_num += 1; endwhile; ?>
             </ul>
@@ -66,7 +69,7 @@ $dir_category = 'business';
                     $row_num = 0;
                     while(the_repeater_field('business_table_etc')):
                     $etc_title = get_sub_field('etc_title');
-                    $etc_title02 = get_sub_field('etc_title02');    
+                    $etc_title02 = get_sub_field('etc_title02');
                     $etc_description = get_sub_field('etc_description');
                     $more_link = get_sub_field('more_link');
                 ?>
@@ -78,13 +81,13 @@ $dir_category = 'business';
                             <?php if(!empty($more_link)): ?><p class="btn_more"><a href="<?php echo $more_link; ?>" target="_blank">MORE</a></p><?php endif; echo "\n"; ?>
                         </div>
                     <?php endif; echo "\n"; ?>
-                    
+
                 </li>
                 <?php $row_num += 1; $loop_num += 1; endwhile; ?>
             </ul>
         </div>
         -->
-        
+
     </div>
  </div><!-- // #contents -->
 <?php get_footer(); ?>

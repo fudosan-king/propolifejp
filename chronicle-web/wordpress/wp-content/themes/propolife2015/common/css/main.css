@@ -80,6 +80,13 @@
     vertical-align: top;
 }
 
+#contents_inner .section li .more_link {
+    background-color: #ccc;
+    margin: 0px 15px 0 15px;
+    position: relative;
+    top: -30px;
+}
+
 #contents_inner .section h3.type{
     padding: 19px 0;
     margin: 0 0 120px 0;
@@ -132,6 +139,10 @@
     border: 2px solid #000;
     display: inline-block;
     transition: background .1s ease;
+}
+
+#contents_inner .section li .btn_more_sp.hidden {
+    display: none;
 }
 
 #contents_inner .section li .btn_more:hover{
@@ -341,12 +352,27 @@
 }
 
 #contents_inner .section li .btn_more{
-    margin: 15px 0 5px 0;
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #000;
+    display: none;
+}
+
+#contents_inner .section li .btn_more_sp{
+    width: 60%;
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 3em;
+    border: 2px solid #000;
     display: inline-block;
     transition: background .1s ease;
+    background-color: #ffffff;
+}
+
+#contents_inner .section li .btn_more_sp a {
+    font-size: 12px;
+    text-decoration: none;
+    display:inline-block;
+    width: 100%;
 }
 
 #contents_inner .section li .btn_more a{

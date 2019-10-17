@@ -20,6 +20,17 @@ $(function() {
     $('#datepicker').datetimepicker({
         format: 'YYYY-MM-DD',
         locale: 'ja',
+        minDate: today,
+        daysOfWeekDisabled: [2, 3],
+        icons: {
+            time: 'fa fa-clock-o',
+            date: 'fa fa-calendar',
+            up: 'fa fa-arrow-up',
+            down: 'fa fa-arrow-down',
+            previous: 'fa fa-arrow-left',
+            next: 'fa fa-arrow-right',
+            close: 'fa fa-times'
+        }
     });
     $('#datepicker').data("DateTimePicker").dayViewHeaderFormat('YYYY年 MMM');
     $('.i_calendar').click(function(){

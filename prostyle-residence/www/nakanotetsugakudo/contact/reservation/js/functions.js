@@ -309,7 +309,7 @@ $(document).ready(function() {
             // }
 
             if (date.getDay() == 2 ) {
-                if((date.getMonth()+1) ==10 && date.getDate() == 22 ){
+                if((date.getMonth()+1) ==10 && date.getDate() == 22 && date.getFullYear() == 2019 ){
                     return true;
                 }else{
                     return false;

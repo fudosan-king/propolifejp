@@ -115,22 +115,6 @@ $dir_name = 'home';
                 </a>
             </div>
         </div>
-
-        <div id="section05" class="section">
-            <div class="section_inner">
-                <a href="http://www.chro-residence.com/aobadai/" target="_blank">
-                    <h3><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec05_title.png" width="426" height="151" alt="Chronicle Residencs"></h3>
-                    <p class="pic">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec05_pic_<?php echo $current_lang; ?>.jpg" width="370" height="405" alt="" class="pc">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec05_pic_sp_<?php echo $current_lang; ?>.jpg" width="156" alt="" class="sp">
-                    </p>
-                    <p class="btn_more">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more.png" width="200" height="50" alt="MORE" class="pc"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more_sp.png" width="100" alt="MORE" class="sp">
-                    </p>
-                </a>
-            </div>
-        </div>
-
     </div><!-- // #contents_inner -->
 
 

@@ -20,13 +20,14 @@ if (have_posts()):
                     <div class="box_ryokan_topimg mx-auto text-left">
                         <img src="<?php echo SGVinK::get_images_uri();?>1x/fasade@2x.jpg" alt="" class="img-fluid">
                         <p class="d-none d-md-block" style="text-align: left;">
-                            おかげさまで、プロスタイルは2019年「グッドデザイン賞」を受賞いたしました。 <br>
-                            グッドデザイン賞は、日本で唯一の総合的なデザイン評価・推奨の仕組みです。人が何らかの理想や目的を果たすために築いたものごとをデザインととらえ、その質を評価・顕彰している評価制度です。
-                            今回受賞いたしました「プロスタイル旅館横浜馬車道」を
+                            おかげさまで、プロスタイル旅館は2019年「グッドデザイン賞」を <br>
+                            受賞いたしました。 <br>
+                            グッドデザイン賞は、日本で唯一の総合的なデザイン評価・推奨の仕組みです。人が何らかの理想や目的を果たすために築いたものごとをデザインととらえ、その質を評価・顕彰している評価制度です。<br>
+                            今回受賞いたしました「プロスタイル旅館横浜馬車道」を <br>
                             ご紹介いたします。
                         </p>
                         <p class="d-block d-md-none" style="text-align: left;">
-                            おかげさまで、プロスタイルは2019年「グッドデザイン賞」を <br>
+                            おかげさまで、プロスタイル旅館は2019年「グッドデザイン賞」を <br>
                             受賞いたしました。 <br>
                             グッドデザイン賞は、日本で唯一の総合的なデザイン評価・推奨の仕組みです。人が何らかの理想や目的を果たすために築いたものごとをデザインととらえ、その質を評価・顕彰している評価制度です。<br>
                             今回受賞いたしました「プロスタイル旅館横浜馬車道」を <br>
@@ -135,13 +136,13 @@ if (have_posts()):
                                 <p>受賞企業</p>
                             </div>
                             <div class="col-12 col-md-10 col_custom">
-                                <p>株式会社プロスタイル（東京都）</p>
+                                <p>株式会社プロスタイル旅館</p>
                             </div>
                             <div class="col-12 col-md-2 col_custom label_custom">
                                 <p>事業主体名</p>
                             </div>
                             <div class="col-12 col-md-10 col_custom">
-                                <p>株式会社プロポライフグループ</p>
+                                <p>株式会社プロスタイル</p>
                             </div>
                             <div class="col-12 col-md-2 col_custom label_custom">
                                 <p>分類</p>
@@ -159,19 +160,13 @@ if (have_posts()):
                                 <p>プロデューサー</p>
                             </div>
                             <div class="col-12 col-md-10 col_custom">
-                                <p>株式会社プロスタイル</p>
+                                <p>野澤泰之</p>
                             </div>
                             <div class="col-12 col-md-2 col_custom label_custom">
                                 <p>ディレクター</p>
                             </div>
                             <div class="col-12 col-md-10 col_custom">
-                                <p>株式会社プロスタイル</p>
-                            </div>
-                            <div class="col-12 col-md-2 col_custom label_custom">
-                                <p>デザイナー</p>
-                            </div>
-                            <div class="col-12 col-md-10 col_custom">
-                                <p>株式会社グリフォン</p>
+                                <p>野澤泰之</p>
                             </div>
                             <div class="col-12 col-md-2 col_custom label_custom">
                                 <p>詳細情報</p>

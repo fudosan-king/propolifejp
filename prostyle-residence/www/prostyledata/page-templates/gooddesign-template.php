@@ -20,11 +20,9 @@ if (have_posts()):
                     <div class="box_ryokan_topimg mx-auto text-left">
                         <img src="<?php echo SGVinK::get_images_uri();?>1x/fasade@2x.jpg" alt="" class="img-fluid">
                         <p class="d-none d-md-block" style="text-align: left;">
-                            おかげさまで、プロスタイル旅館は2019年「グッドデザイン賞」を <br>
-                            受賞いたしました。 <br>
+                            おかげさまで、プロスタイル旅館は2019年「グッドデザイン賞」を受賞いたしました。 <br>
                             グッドデザイン賞は、日本で唯一の総合的なデザイン評価・推奨の仕組みです。人が何らかの理想や目的を果たすために築いたものごとをデザインととらえ、その質を評価・顕彰している評価制度です。<br>
-                            今回受賞いたしました「プロスタイル旅館横浜馬車道」を <br>
-                            ご紹介いたします。
+                            今回受賞いたしました「プロスタイル旅館横浜馬車道」をご紹介いたします。
                         </p>
                         <p class="d-block d-md-none" style="text-align: left;">
                             おかげさまで、プロスタイル旅館は2019年「グッドデザイン賞」を <br>

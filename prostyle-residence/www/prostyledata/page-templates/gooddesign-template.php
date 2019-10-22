@@ -16,7 +16,7 @@ if (have_posts()):
             <div class="row">
                 <div class="col-12">
                     <h1><img src="<?php echo SGVinK::get_images_uri();?>1x/g_type2019_f@2x.png" alt="" class="img-fluid"> <span>受賞</span></h1>
-                    <h2><span class="name">PROSTYLE</span> <span class="hotel">旅館</span> 横浜馬車道</h2>
+                    <h2><span class="name">PROSTYLE</span> <span class="hotel">旅舘</span> 横濱馬車道</h2>
                     <div class="box_ryokan_topimg mx-auto text-left">
                         <img src="<?php echo SGVinK::get_images_uri();?>1x/fasade@2x.jpg" alt="" class="img-fluid">
                         <p class="d-none d-md-block" style="text-align: left;">
@@ -128,7 +128,7 @@ if (have_posts()):
                                 <p>受賞対象名</p>
                             </div>
                             <div class="col-12 col-md-10 col_custom">
-                                <p>ホテル [プロスタイル旅館 横浜馬車道]</p>
+                                <p>ホテル [プロスタイル旅舘 横濱馬車道]</p>
                             </div>
                             <div class="col-12 col-md-2 col_custom label_custom">
                                 <p>受賞企業</p>

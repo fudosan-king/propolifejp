@@ -1,15 +1,3 @@
-<?php 
-/* Template Name: Good Design - Page Template */
-?>
-
-<?php get_header(); ?>
-
-<?php 
-
-if (have_posts()):
-    while (have_posts()): the_post();
-?>
-
 <main>
     <section class="section_ryokan">
         <div class="container">
@@ -237,12 +225,3 @@ if (have_posts()):
     </section>
 
 </main>
-
-<?php 
-        
-    endwhile;
-endif;
-
-?>
-
-<?php get_footer(); ?>

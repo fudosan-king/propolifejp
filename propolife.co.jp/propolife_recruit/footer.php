@@ -17,7 +17,7 @@
                         <li><a href="https://www.propolife.co.jp/news/pressrelease/">プレスリリース</a></li>
                         <li><a href="https://www.propolife.co.jp/news/media/">メディア掲載情報</a></li>
                         <li><a href="https://www.propolife.co.jp/ir/">電子公告</a></li>
-
+                        <li><a href="https://www.propolife.co.jp/group/ir/">グループ企業 電子公告</a></li>
                     </ul>
                 </li>
                 <li class="heightLine-a" style="height: 372px;">

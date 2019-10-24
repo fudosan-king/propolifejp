@@ -327,6 +327,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>news/pressrelease/">プレスリリース</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>news/media/">メディア掲載情報</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>ir/">電子公告</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>group/ir/">グループ企業 電子公告</a></li>
 				</ul>
 			</li>
 			<li>

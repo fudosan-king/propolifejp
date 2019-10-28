@@ -85,7 +85,7 @@
                 </div>
             </section>
 
-            <section class="section_contruction bgGrey">
+            <!-- <section class="section_contruction bgGrey">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="section_material bgGrey">
                 <div class="container">

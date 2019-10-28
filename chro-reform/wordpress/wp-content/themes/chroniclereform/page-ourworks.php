@@ -31,7 +31,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-12788873-6');
-    gtag('config', 'AW-844745329'); 
+    gtag('config', 'AW-844745329');
     </script>
 </head>
 
@@ -60,7 +60,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h1>無垢材リノベーションならクロニクル</h1>
+                            <h1>天然無垢材リノベーションならクロニクル</h1>
                             <p class="lead">私たちクロニクルリフォームの強みは
                                 <br>「天然無垢材の自社生産」にあります。
                                 <br>自社調達のメリットを生かし、<br class="sp-break">無垢材フローリングを
@@ -77,6 +77,46 @@
                                 <br>一般的に難しいとされる無垢材の施工実績は
                                 <br>累計1,600件以上にも及んでいます。
                             </p>
+                        </div>
+                         <div class="col-12 text-center">
+                                        <a href="#section_contact" class="btn btnContact">ショールームを予約する</a>
+                                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_contruction bgGrey">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <div class="title">無垢フローリングの魅力とは</div>
+                            </div>
+                            <div class="box_contruction">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contruction_item" style="box-shadow:none">
+                                            <div class="contruction_item_img" style="height: auto;">
+                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/description_1.png" alt="" class="img-fluid" style="height: auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="contruction_item" style="box-shadow:none">
+                                            <div class="contruction_item_img" style="height: auto;">
+                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/description_2.png" alt="" class="img-fluid" style="height: auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="contruction_item" style="box-shadow:none">
+                                            <div class="contruction_item_img" style="height: auto;">
+                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/description_3.png" alt="" class="img-fluid" style="height: auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,12 +194,12 @@
                                     <div class="col-12">
                                         <div class="contruction_item">
                                             <div class="contruction_item_img">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/sample_1.jpg" alt="" class="img-fluid">
+                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/construction_samples_1.jpg" alt="" class="img-fluid">
                                             </div>
                                             <div class="contruction_item_content">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6 align-self-center">
-                                                        <h2>大好きなインテリアにも合わせやすい、ナチュラルカラーのオーク材とこだわりの設計</h2>
+                                                        <h2>大好きなインテリアにも合わせやすい、<br class="sp-break">ナチュラルカラーのオーク材とこだわりの設計</h2>
                                                     </div>
                                                     <div class="col-12 col-md-6 align-self-center">
                                                         <p class="d-flex box_info">
@@ -176,19 +216,19 @@
                                     <div class="col-12">
                                         <div class="contruction_item">
                                             <div class="contruction_item_img">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/sample_2.jpg" alt="" class="img-fluid">
+                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/construction_samples_2.jpg" alt="" class="img-fluid">
                                             </div>
                                             <div class="contruction_item_content">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6 align-self-center">
-                                                        <h2>ウォルナットのフローリングで<br class="sp-break">高級感のある仕上がりに</h2>
+                                                        <h2>ウォルナットのフローリングと<br class="sp-break">明るくて広いリビングがお気に入り</h2>
                                                     </div>
                                                     <div class="col-12 col-md-6 align-self-center">
                                                         <p class="d-flex box_info">
                                                             <span class="flex-fill">物件面積</span>
-                                                            <span class="flex-fill">76.23㎡</span>
+                                                            <span class="flex-fill">88.26㎡</span>
                                                             <span class="flex-fill"> 築年数</span>
-                                                            <span class="flex-fill">築31年</span>
+                                                            <span class="flex-fill">築23年</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -198,19 +238,19 @@
                                     <div class="col-12">
                                         <div class="contruction_item">
                                             <div class="contruction_item_img">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/sample_3.jpg" alt="" class="img-fluid">
+                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/construction_samples_3.jpg" alt="" class="img-fluid">
                                             </div>
                                             <div class="contruction_item_content">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6 align-self-center">
-                                                        <h2>ナチュラルカラーのオーク材と<br class="sp-break">明るいLDKがお気に入り</h2>
+                                                        <h2>子供たちにも優しい天然無垢材<br class="sp-break">「チーク」のフローリングと日当たりのいいリビングダイニング</h2>
                                                     </div>
                                                     <div class="col-12 col-md-6 align-self-center">
                                                         <p class="d-flex box_info">
                                                             <span class="flex-fill">物件面積</span>
-                                                            <span class="flex-fill">82.47㎡</span>
+                                                            <span class="flex-fill">93.6㎡</span>
                                                             <span class="flex-fill"> 築年数</span>
-                                                            <span class="flex-fill">築31年</span>
+                                                            <span class="flex-fill">築47年</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -242,7 +282,7 @@
                                 <br>もちろん物件探しからのお手伝いも<br class="sp-break">可能です。
                                 <br>気になるご予算のことも含め<br class="sp-break">お気軽にご相談ください。
                             </p>
-                            
+
                             <a href="#section_contact" class="btn btnContact">ショールームを予約する</a>
                         </div>
                     </div>
@@ -726,7 +766,7 @@
 
     </div>
 
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

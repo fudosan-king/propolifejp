@@ -523,7 +523,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <form action="http://go.pardot.com/l/185822/2019-10-08/l7grjd" class="frm_contact">
+                            <form action="https://go.pardot.com/l/185822/2019-10-08/l7grjd" class="frm_contact">
                                 <h2>お問い合わせ</h2>
                                 <p class="text-center">必要事項をご入力の上、「入力内容を確認する」ボタンを押してください。
                                     <br>

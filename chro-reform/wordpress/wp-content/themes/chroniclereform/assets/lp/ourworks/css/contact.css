@@ -235,6 +235,16 @@ ul.list_contact li::before {
 .disable-box {
 	font-size: 12.8px;
 }
+.frm_contact .box_location_title {margin: 0;}
+.frm_contact .box_location_title h3 {
+	font-size: initial;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.frm_contact .box_location_info {font-size: 10pt;}
+#showRoomInfo, #cfrm_showRoomInfo {padding: 0;}
 @media (max-width: 768px) {
 	.frm_contact h3 {
 		font-size: 19px;

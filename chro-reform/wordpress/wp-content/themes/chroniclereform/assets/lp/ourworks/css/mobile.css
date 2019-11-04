@@ -98,6 +98,28 @@
 	footer{
 	  font-size: 9pt;
 	}
+
+	.intro h2 { font-size: 1.5em; }
+
+	.intro .data-block {margin-bottom: 30px;}
+	.intro .data-block.right {display: block;}
+
+	.intro .data-block .img-bg {
+		width: 100%;
+	}
+	.intro .data-block article{
+	    position: static;
+	    width: 100%;
+	}
+
+	.intro .data-block article .content{
+		position: static;
+		transform: none;
+		padding: 10px 15px;
+	}
+	.intro .data-block article .content h3 {
+		font-size: 1.3em;
+	}
 }
 @media (max-width: 375px) {
 	

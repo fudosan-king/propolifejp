@@ -24,6 +24,11 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/mobile.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/contact.css" type="text/css">
 
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12788873-6"></script>
     <script>
@@ -59,9 +64,19 @@
 
         <main>
             <section class="section_top">
-                <div class="top_bg">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top.jpg" alt="" class="img-fluid w-100">
-                </div>
+                <!-- <div class="top_bg">
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_1.jpg" alt="" class="img-fluid w-100">
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_2.jpg" alt="" class="img-fluid w-100">
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_3.jpg" alt="" class="img-fluid w-100">
+                </div> -->
+
+<div class="top-slider">
+  <div><div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_1.jpg)" alt="" class="img-fluid"></div></div>
+  <div><div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_2.jpg)" alt="" class="img-fluid"></div></div>
+  <div><div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_3.jpg)" alt="" class="img-fluid"></div></div>
+</div>
+
+
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -71,17 +86,39 @@
                                 <br>自社調達のメリットを生かし、<br class="sp-break">無垢材フローリングを
                                 <br>贅沢に使ったリノベーションを
                                 <br>納得感あるプライスでご提案できるのです。
-                                <br>
-                                <br>取り扱う無垢材は、<br class="sp-break">節の少ない上級素材に限定。
-                                <br>自社で原木選びからデザイン、加工まで実施することで
-                                <br>高品質の無垢材を適正価格でご提供できるのも自慢です。
-                                <br>
-                                <br>さらに、リノベーションの打合せから設計、施工、
-                                <br>アフターサービスまで自社一貫で行うのも特徴。
-                                <br>無垢材のレベルと、施工のクオリティが評判を呼び、
-                                <br>一般的に難しいとされる無垢材の施工実績は
-                                <br>累計1,600件以上にも及んでいます。
                             </p>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1 intro">
+                            <h2>無垢フローリングの魅力とは</h2>
+                            <section class="data-block left">
+                                <div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_1.jpg)"></div>
+                                <article>
+                                    <div class="content">
+                                        <h3>1. 気持ちの良い自然な肌触り</h3>
+                                        <p><span class="color-orange">無垢フローリングを体験されたお客様は、口をそろえて「気持ち良い」と仰います。</span>素足でも気持ち良い肌触りや、冬でも感じる木のぬくもりは無垢フローリングでないと味わえないものです。</p>
+                                        </div>
+                                </article>
+                            </section>
+                            <section class="data-block right">
+                                <div class='img-bg d-block d-md-none' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_2.jpg)"></div>
+                                <article>
+                                    <div class="content">
+                                        <h3>2. 天然の空調効果と木の香り</h3>
+                                        <p><span class="color-orange">無垢の木は呼吸します。</span>空気が湿っているときは湿気を吸収し、乾燥しているときは放出する天然の調湿機能によってお部屋の中を快適に保ちます。<br>
+                                        無垢の木そのものが持つ香りの成分には、<span class="color-orange">気持ちを落ち着かせるリラックス効果があります。</span></p>
+                                        </div>
+                                </article>
+                                <div class='img-bg d-md-block d-none' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_2.jpg)"></div>
+                            </section>
+                            <section class="data-block left">
+                                <div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_3.jpg)"></div>
+                                <article>
+                                    <div class="content">
+                                        <h3>3. 時と共に味わいが深まる</h3>
+                                        <p>合板フローリングの寿命は10年〜20年と言われています。年月が経ち表面の薄い化粧材が剥がれてしまうと、修復できず張替が必要になるケースも多いではないでしょうか？一枚板である無垢フローリングは、表面が傷んだとしても補修できるので、張替のコストを考えたら結果的に安かったといったことも珍しくありません。<span class="color-orange">使えば使うほど馴染み、味わいが増していくことは無垢フローリングの楽しみの一つ</span>です。</p>
+                                    </div>
+                                </article>
+                            </section>
                         </div>
                          <div class="col-12 text-center">
                                         <a href="#section_contact" class="btn btnContact">ショールームを予約する</a>
@@ -131,10 +168,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h2 class="title">天然無垢材を贅沢に使用</h2>
-                            <p>私たちがリノベーションに使用する天然無垢材は原木の選定から加工まで自社グループで<br class="sp-break">一貫して行っています。
-                                <br> そのためハイクオリティかつ<br class="sp-break">高いコストパフォーマンスが実現するのです。
-                            </p>
                             <h2>５種類の天然無垢材</h2>
                             <p>厳選された５種類のフローリングをご用意しています。樹種によってお部屋の雰囲気も<br class="sp-break">がらりと変わります。</p>
 
@@ -282,238 +315,11 @@
                             </div>
                             <p class="lead">「天然無垢材」の良さを知るには、<br class="sp-break">実際に見て触れてみるのがいちばん。
                                 <br>全国10か所のクロニクル・ショールーム（予約制）で、無垢材リノベーションを“体験”してみませんか？
-                                <br>無垢材が持つ<br class="sp-break">温かさ、風合い、心地よさに加え、
-                                <br>クロニクルリフォームならではの<br class="sp-break">無垢材のレベル感、デザインや<br class="sp-break">施工技術の高さも実感できるはず。
                                 <br>もちろん物件探しからのお手伝いも<br class="sp-break">可能です。
                                 <br>気になるご予算のことも含め<br class="sp-break">お気軽にご相談ください。
                             </p>
 
                             <a href="#section_contact" class="btn btnContact">ショールームを予約する</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section_showroom bgGrey">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="text-center">
-                                <div class="title">ショールーム</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?m=kADWBSviwid&brand=0" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="http://www.chronicle-web.com/showroom/tokyo_omotesando/">クロニクル<br>表参道本店ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="http://www.chronicle-web.com/showroom/tokyo_omotesando/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：東京都港区北⻘⼭3-6-23
-                                            <br> フリーコール：0120-991-658
-                                            <br> 営業時間：10:00~19:00（⽕・⽔曜⽇定休 祝⽇を除く）</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item no_border">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?m=VHEQdZ6QNAh" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="http://www.chronicle-web.com/showroom/tokyo_yaesu/">クロニクル<br>東京日本橋ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="http://www.chronicle-web.com/showroom/tokyo_yaesu/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：東京都中央区八重洲1-5-17
-                                            <br> 八重洲香川ビルディング2F
-                                            <br> フリーコール：0120-602-423
-                                            <br> 営業時間：10:00~19:00（火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item no_border">
-                                        <div class="box_location_vr">
-                                            <img src="https://www.chronicle-web.com/showroom/static/assets/pc/images/pic_kichijoji-omiya.jpg" alt="" class="img-fluid" height="200">
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="http://www.chronicle-web.com/showroom/kichijoji/">クロニクル<br>吉祥寺ショールーム</a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="http://www.chronicle-web.com/showroom/kichijoji/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：東京都武蔵野市吉祥寺本町 1 丁目 4 -18
-                                            <br> ジョージフォーラムビル 3F
-                                            <br> フリーコール：0120-974-694
-                                            <br> 営業時間：10:00~19:00（火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item">
-                                        <div class="box_location_vr">
-                                            <img src="https://www.chronicle-web.com/showroom/static/assets/pc/images/pic_kichijoji-omiya.jpg" alt="" class="img-fluid" height="200">
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="http://www.chronicle-web.com/showroom/saitama_omiya/">クロニクル<br>埼玉大宮ショールーム</a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="http://www.chronicle-web.com/showroom/saitama_omiya/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：埼玉県さいたま市大宮区桜木町 1-7-5
-                                            <br> ソニックシティビル 16F
-                                            <br> フリーコール：0120-990-566
-                                            <br> 営業時間：10:00~19:00（火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item no_border">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?m=RoX8y5q3BS4" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="http://www.chronicle-web.com/showroom/yokohama/">クロニクル<br>横浜⻄⼝ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="http://www.chronicle-web.com/showroom/yokohama/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：神奈川県横浜市神奈川区鶴屋町2-23-2 TSプラザビルディング4F
-                                            <br> フリーコール：0120-964-582
-                                            <br> 営業時間：10:00~19:00（⽕・⽔曜⽇定休 祝⽇を除く）</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item no_border">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?model=StMUHsrBco9&brand=0" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="http://www.chronicle-web.com/showroom/nagoya_fushimi/">クロニクル<br>名古屋伏見ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="http://www.chronicle-web.com/showroom/nagoya_fushimi/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：愛知県名古屋市中区錦⼀丁⽬17番26号ラウンドテラス伏⾒ビル1F
-                                            <br> フリーコール：0800-111-2758
-                                            <br> 営業時間：10:00~19:00（火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?model=1pQPahYhq7p" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="https://www.chronicle-web.com/showroom/kyoto/">クロニクル<br>京都四条ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="https://www.chronicle-web.com/showroom/kyoto/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：京都府京都市下京区四条通柳馬場西入立売中之町99 四条SETビル1F
-                                            <br> フリーコール：0120-917-697
-                                            <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item no_border">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?model=utuVeEZ8giT" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="http://www.chronicle-web.com/showroom/osaka/">クロニクル<br>大阪梅田ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="http://www.chronicle-web.com/showroom/osaka/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：大阪府大阪市北区曽根崎2-12-7
-                                            <br> 清和梅田ビル5F
-                                            <br> フリーコール：0120-957-953
-                                            <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="box_location_item no_border">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?m=iQfNoNcSASx&brand=0" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="https://www.chronicle-web.com/showroom/kobe/">クロニクル<br>神戸元町ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" class="btnMap" href="https://www.chronicle-web.com/showroom/kobe/">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">〒650-0024
-                                            <br> 神戸市中央区海岸通3 シップ神戸海岸ビル1F
-                                            <br> フリーコール：0120-948-301
-                                            <br> 営業時間: 10:00~19:00（火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 mx-auto">
-                                    <div class="box_location_item">
-                                        <div class="box_location_vr">
-                                            <iframe src="https://my.matterport.com/show/?m=PGFv4MSTTLw&brand=0" frameborder="0" width="100%" height="200"></iframe>
-                                        </div>
-                                        <div class="box_location_title">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8 align-self-center">
-                                                    <h3><a target="_blank" href="https://www.chronicle-web.com/showroom/fukuoka_tenjin/">クロニクル<br>福岡天神ショールーム </a></h3>
-                                                </div>
-                                                <div class="col-12 col-md-4 align-self-center">
-                                                    <a target="_blank" href="https://www.chronicle-web.com/showroom/fukuoka_tenjin/" class="btnMap">Map <i class="fal fa-angle-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="box_location_info">住所：福岡県福岡市中央区天神2-4-11
-                                            <br> パシフィーク天神2F
-                                            <br> フリーコール：0120-981-779
-                                            <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）</p>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -663,6 +469,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <section id="showRoomInfo"></section>
                                         </div>
                                     </div>
 
@@ -749,7 +556,9 @@
                                         </div>
                                         <div class="col-12 col-md-8">
                                             <label class="cfrm-data" id="cfrm_visit_info" required></label>
+                                            <section id="cfrm_showRoomInfo"></section>
                                         </div>
+
                                     </div>
 
                                     <div class="text-center">
@@ -782,6 +591,9 @@
 
     <script src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/js/functions.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/js/contact.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
     <script>
         (function(d) {
             var config = {
@@ -811,6 +623,23 @@
             };
             s.parentNode.insertBefore(tk, s)
         })(document);
+
+        $(function() {
+            $('.top-slider').slick({
+                arrows: true,
+                fade: true,
+                speed: 1000,
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 2000,
+              });
+        });
+
+        
     </script>
 
 </body>

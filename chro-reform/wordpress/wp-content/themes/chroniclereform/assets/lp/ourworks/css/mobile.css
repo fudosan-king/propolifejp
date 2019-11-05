@@ -87,7 +87,7 @@
 		height: 200px;
 	}
 	.section_top .top_bg img{display: none;}
-	.section_top h1 {font-size: 19px;}
+	.section_top h1 {font-size: 17px; margin-top: 30px;}
 	.section_top .lead {font-size: 13px;}
 	.section_consultation .lead {font-size: 14px;}
 	.contruction_item h2 {font-size: 15px;}
@@ -119,6 +119,9 @@
 	}
 	.intro .data-block article .content h3 {
 		font-size: 1.3em;
+	}
+	.top-slider .slick-slide .img-bg {
+		height: 250px;
 	}
 }
 @media (max-width: 375px) {

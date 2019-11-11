@@ -8,8 +8,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 require 'digima/vendor/autoload.php';
 require_once 'digima/src/Client.php';
 
-$client = new \Digima\Client('1K7R8TLBH3');
-$form = $client->makeForm('QatnK2IQdxZzB8ut20wK');
+$client = new \Digima\Client('DOAMPS86UN');
+$form = $client->makeForm('vBXOwTk8VuWHcunYWxlK');
 
 $form->setPageTitle('アンケートフォーム');
 
@@ -24,12 +24,10 @@ function replaceStr($subject){
 	$result = str_replace($search, $replace, $subject);
 	return $result;
 }
-
 /* メール送信 */
-$to = "suzuki@comvex.co.jp";
-//$to = "maco@funnypro.net";
-$from_mail = "suzuki@comvex.co.jp";
-$from_name = "企業名";
+$to = "mizonokuchi@ustrust.co.jp,miyamaedaira@ustrust.co.jp";
+$from_mail = "mizonokuchi@ustrust.co.jp";
+$from_name = "株式会社USTRUST";
 
 //メール
 $admin_subject ="メールフォームよりお問合せがありました";
@@ -37,38 +35,31 @@ $customer_subject ="お問合せいただき、ありがとうございます";
 $header = "From: ".mb_encode_mimeheader($from_name)."<".$from_mail.">";
 
 //配列
-$cf1='contact_field_14';
-$cf2='contact_field_15';
-$cf3='contact_field_16';
-$cf4='contact_field_70';
+
+$cf1='purchase_considerations';
+$cf2='hope_question';
 
 $q1 = $_POST[$cf1];
 $q2 = $_POST[$cf2];
-$q3 = $_POST[$cf3];
 $email = $_POST['email'];
-$note = $_POST[$cf4];
 
 $inputArray = array(
 	'q1' => $q1,
 	'q2' => $q2,
-	'q3' => $q3,
 	'email' => $email,
-	'note' => $note
 );
 
 $itemArray = array(
-	'q1' => 'Q1',
-	'q2' => 'Q2',
-	'q3' => 'Q3',
+	'q1' => 'マイホーム購入のご検討状況について',
+	'q2' => 'ご希望・ご質問',
 	'email' => 'Eメールアドレス',
-	'note' => 'ご質問'
 );
 
 //メール本文
 $body="";
 foreach ($inputArray as $key => $value){
 	if($value !== null){
-		$body .= $itemArray[$key]."： ".$value."\n";
+		$body .= $itemArray[$key]."：\n ".$value."\n";
 	}
 }
 
@@ -85,21 +76,10 @@ $customer_body .= "お気軽におたずねください。\n";
 $customer_body .= "なお、このメールは送信専用アドレスよりお送りしております。\n";
 $customer_body .= "ご返信いただいてもメールを受け取ることができませんのでご注意ください。\n\n";
 
-
-if($q1=="詳細を聞きたい"){
-	$form->contact()->groups()->push('グループ1');
-}else if($q1=="将来検討したい"){
-	$form->contact()->groups()->push('グループ2');
-}else if($q1=="今は必要ない"){
-	$form->contact()->groups()->push('グループ3');
-}
-
 $form->contact()->staticFields()->set('email', $email);
 $form->contact()->customFields()->setMany(array(
 	$cf1 => $q1,
 	$cf2 => $q2,
-	$cf3 => $q3,
-	$cf4 => $note
 ));
 
 $form->submit();

@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<title>アンケート｜digima連動アンケートフォーム</title>
+	<title>アンケートフォーム</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/script.js"></script>
+    <script async src="https://beacon.digima.com/v2/bootstrap/d0b-RE9BTVBTODZVTnxLaURFSDdLeFpKaThmNVpCU2h6bg"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -19,7 +20,9 @@
 
 	<dl class="description">
 		<dt>
-		新サービスについてアンケートにご協力お願いします。<br />
+            以前はお問い合わせ、誠にありがとうございました。<br />
+            アンケートにご協力をお願いいたします。<br />
+            Amazonギフトカード500円差し上げております！<br />
 		</dt>
 		<dd>
 			<img src="./img/photo.png">
@@ -28,45 +31,29 @@
 
 	<section id="contact">
 		<form id="form" action="send.php" method="post">
-			<input type="hidden" name="_mode" value="conf" />
 			<div class="recruitTable">
 				<dl class="">
-					<dt>質問1.現状の状況を教えてください。<span class="require">必須</span></dt>
+					<dt>マイホーム購入のご検討状況についてお聞かせください。
+                        <span class="require">必須</span></dt>
 					<dd>
-						<select name="contact_field_14" class="validate[required]">
-							<option value=""></option>
-							<option value="お店に行って相談したい">お店に行って相談したい</option>
+						<select name="purchase_considerations" class="validate[required]">
+                            <option value=""></option>
+							<option value="すでにきめた">すでにきめた</option>
+							<option value="引き続き検討している">引き続き検討している</option>
+                            <option value="検討はやめた">検討はやめた</option>
 						</select>
 					</dd>
 				</dl>
-				<dl class="branch-01">
-					<dt>質問2.ご希望される情報をお選びください。<span class="require">必須</span></dt>
-					<dd>
-						<select name="contact_field_15" class="validate[required]">
-							<option value=""></option>
-							<option value="おすすめ物件情報">おすすめ物件情報</option>
-						</select>
-					</dd>
-				</dl>
-				<dl class="no-display">
-					<dt>質問3.懸念される情報を教えてください。</dt>
-					<dd>
-						<select name="contact_field_16" class="validate[required]">
-							<option value=""></option>
-							<option value="対応">対応</option>
-						</select>
-					</dd>
-				</dl>
-				<dl>
-					<dt>ご質問があれば入力ください。</dt>
-					<dd>
-						<textarea class="" name="contact_field_70"></textarea>
-					</dd>
-				</dl>
-				<dl>
+                <dl>
 					<dt>メールアドレス<span class="require">必須</span></dt>
 					<dd>
 						<input class="validate[required,custom[email]] text-input" type="text" name="email" value="" placeholder="">
+					</dd>
+				</dl>
+				<dl>
+					<dt>ご希望・ご質問があればご入力ください。</dt>
+					<dd>
+						<textarea class="" name="hope_question"></textarea>
 					</dd>
 				</dl>
 				<div id="MyMailForm_button">
@@ -90,8 +77,6 @@
   		});
     });
 </script>
-
-<script async src="https://beacon.digima.com/v2/bootstrap/d0b-MUs3UjhUTEJIM3x3RmpjZE81MkFJUjBaVHBEZWJvcA"></script>
 
 </body>
 </html>

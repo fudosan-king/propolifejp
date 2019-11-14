@@ -22,15 +22,7 @@
 
                                 <section class="extra-content">
                                     <div id="section_title">
-                                        <h2>
-							            	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'.png')): ?>
-												<img src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'.png'; ?>">
-											<?php endif; ?>
-
-							            	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'-long.png')): ?>
-												<img class="spec" src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'-long.png'; ?>">
-							            	<?php endif; ?>
-							            </h2></h2>
+                                        <h2><?php the_title(); ?></h2>
                                         <!-- <p class="ruby"><?php //the_title(); ?></p> -->
                                         <!-- <p class="line"></p> -->
                                     </div>

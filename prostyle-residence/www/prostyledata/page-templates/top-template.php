@@ -36,7 +36,24 @@ if (have_posts()):
 					<img src="<?php SGVinK::the_images_uri(); ?>/kodawari_button.png" class="img-responsive" alt="kodawari">
 				</a>
 			<?php endif; ?>
+
+			<div class="ad-banner-gooddesign">
+				<img src="<?php echo SGVinK::get_images_uri();?>1x/g_type2019_f@2x.png" alt="" class="img-fluid"><br>
+
+				<?php 
+					$newGoodPost = get_post('718');
+					if (isset($newGoodPost)):
+						?>
+							<a href="<?php echo get_the_permalink($newGoodPost); ?>" target="_blank" ><?php echo $newGoodPost->post_title; ?></a>
+						<?php
+					endif;
+				?>
+				
+			</div>
+
 		</div>
+
+
 
 	</section>
 

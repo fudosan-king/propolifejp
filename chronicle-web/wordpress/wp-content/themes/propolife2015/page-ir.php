@@ -43,6 +43,7 @@ $post_id = $post -> ID;
                         'posts_per_page' => -1,
                         'paged' => $paged,
                         'post_status' => 'publish',
+                        'order' => 'ASC',
                     ); ?>
                     <?php $wp_query = new WP_Query( $args ); ?>
                     <?php if( $wp_query->have_posts() ) : ?>
@@ -53,13 +54,13 @@ $post_id = $post -> ID;
                             <?php the_time('Y年n月j日'); ?>
                         </th>
                         <td id="post-<?php the_ID(); ?>">
-                            <a href="<?php echo the_permalink(); ?>" target="_blank">
+                            <a href="<?php echo get_field('link'); ?>" target="_blank">
                                 <span class="p-text"><?php the_title(); ?></span>
                                 <img src="<?php echo get_template_directory_uri(); ?>/common/images/ir/img_pdf.png" alt="PDF">
                                 <?php
                                 $url = get_post_meta($post->ID,'vk-ltc-link',true);
                                 $pdf_url = attachment_url_to_postid($url);
-                                echo "（".size_format(filesize(get_attached_file($pdf_url)))."）";
+                                // echo "（".size_format(filesize(get_attached_file($pdf_url)))."）";
                                 ?>
                             </a>
                         </td>

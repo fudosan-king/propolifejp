@@ -1,15 +1,7 @@
 <div id="main-content">
     <section class="extra-content">
         <div id="section_title">
-            <h2>
-                <?php if (file_exists(SGVinK::get_images_path().'/archive/'.$post->post_type.'.png')): ?>
-                    <img style="height: 30px;" src="<?php echo SGVinK::get_images_uri().'/archive/'.$post->post_type.'.png'; ?>">
-                <?php endif; ?>
-
-                <?php if (file_exists(SGVinK::get_images_path().'/archive/'.$post->post_type.'-long.png')): ?>
-                    <img class="spec" src="<?php echo SGVinK::get_images_uri().'/archive/'.$post->post_type.'-long.png'; ?>">
-                <?php endif; ?>
-            </h2></h2>
+            <h2>NEWS</h2>
             <!-- <p class="ruby"><?php //the_title(); ?></p> -->
             <p class="line"></p>
         </div>

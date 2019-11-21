@@ -21,15 +21,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2>
-                    	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'.png')): ?>
-							<img src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'.png'; ?>">
-						<?php endif; ?>
-
-		            	<?php if (file_exists(SGVinK::get_images_path().'/page/'.$post->post_name.'-long.png')): ?>
-							<img class="spec" src="<?php echo SGVinK::get_images_uri().'/page/'.$post->post_name.'-long.png'; ?>">
-		            	<?php endif; ?>
-                    </h2>
+                    <h2><?php the_title(); ?></h2>
                     <p class="sub_title"><?php echo get_field('purchase_header_subtitle'); ?></p>
                     <p class="text_left_sm"><?php echo get_field('purchase_text_description'); ?></p>
                 </div>

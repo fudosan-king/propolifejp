@@ -179,6 +179,13 @@
 	letter-spacing: 2px;
 }
 
+#pressrelease a, 
+#pressrelease a:link,
+#pressrelease a:visited,
+#pressrelease a:hover,
+#pressrelease a:active {
+	text-decoration: underline;
+}
 
 
 @media all and (min-width: 0px) and (max-width: 640px) {
@@ -211,6 +218,8 @@
 	#pressrelease section {
 		margin-bottom: 50px;
 	}
+
+
 	
 	/*------------------------------------------------------------
 		pageList

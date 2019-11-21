@@ -55,9 +55,10 @@
 
                     if ($nav->menu_item_parent == 0){
                         $childMenu = get_nav_child_menu($footerNav, $nav->ID);
+                        $slug = get_post($nav->object_id)->post_name;
 
                         $isDropdown = (count($childMenu)>0) ? 'dropdown': '';
-                        $signDropdown = (count($childMenu)>0) ? 'dropdown-toggle': '';
+                        $signDropdown = (count($childMenu)>0)  ? 'dropdown-toggle': '';
                         ?>
                         	<li class="heightLine-a <?php echo $isDropdown; ?>">
 								<p><a href="<?php echo $nav->url; ?>" target="<?php echo $nav->target; ?>"><?php echo $nav->title; ?></a></p>
@@ -77,14 +78,23 @@
                                             }
                                         echo '</ul>';
                                     }
+                                    if ($slug == 'contact'){
+                                        $working_hour = get_field('working_hour', 'option');
+                                        $phone_number = get_field('phone_number', 'option')
+                                        ?>
+                                            <address>
+                                                <a href="tel:<?=$phone_number;?>"><?=$phone_number;?></a><span>（無料）</span><br>
+                                                <?=$working_hour;?>
+                                            </address>
+                                        <?php
+                                    }
                                 ?>
                             </li>
                         <?php
-                    }else{
-                        
-                    }                    
+                    }                 
                     
                 }
+
 
                 $menuLocations_sp = get_nav_menu_locations();
 	            $menuID_sp = $menuLocations_sp['bottom'];

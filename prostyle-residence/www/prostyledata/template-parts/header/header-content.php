@@ -112,22 +112,6 @@
                 echo '</ul>';
             }
         ?>
-        <ul class="navbar-nav navbar-mobile mr-0 navbar_custom">
-            <?php 
-                /*WORKING HOUR PART*/
-                $working_hour = get_field('working_hour', 'option');
-
-                if (!empty(get_field('working_hour_define')) && get_field('working_hour_define') == 'custom'){
-                    $working_hour = get_field('working_hour');
-                }
-            ?>
-            <li class="nav-item d-none d-md-block">
-                <p class="hourwoking mr-0 mr-sm-3"><?php echo  $working_hour; ?></p>
-            </li>
-            <li class="nav-item d-none d-md-block">
-                <p class="freecall"><i class="i_phone"></i> <a href="tel:<?php echo get_field('phone_number', 'option') ?>"><?php echo get_field('phone_number', 'option') ?></a></p>
-            </li>
-        </ul>
     </div>
 </div>
 

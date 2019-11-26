@@ -1,0 +1,8 @@
+.acf-field.acf-field-wysiwyg.sm-height iframe {
+	height: 200px!important;
+}
+
+.acf-field.acf-field-image.align-center .image-wrap{
+	float: none;
+	margin: 0 auto;
+}

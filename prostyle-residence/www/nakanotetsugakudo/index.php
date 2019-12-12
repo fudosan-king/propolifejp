@@ -155,6 +155,16 @@
 			      									<div class="box_informations_content">
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2019.12.12</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>年末年始の休業日につきまして、下記のとおりお知らせいたします。<br>
+令和元年12月24日(火）～令和2年1月3日(金）<br>
+1月4日(土）より、通常営業を開始いたします。</p>
+			      											</div>
+			      										</div>
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2019.10.11</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">

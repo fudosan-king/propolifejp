@@ -320,6 +320,16 @@ $(document).ready(function() {
                 return false;
             }
 
+            if ((date.getMonth() + 1) == 12){
+                if(date.getDate() >= 24 &&  date.getDate()<=31)
+                    return false;
+            }
+
+            if ((date.getMonth() + 1) == 1 && date.getFullYear() == 2020){
+                if(date.getDate()<=3)
+                    return false;
+            }
+
         },
 
 

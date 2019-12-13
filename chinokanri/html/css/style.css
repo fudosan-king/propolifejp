@@ -84,6 +84,10 @@ BODY { FONT-SIZE: 9pt; line-height: 140%}
 	border-collapse: collapse;
 }
 
+.summary .hide-recruit{
+	display: none;
+}
+
 .summary td{
 	padding: 6px;
 	background-color: #fff;

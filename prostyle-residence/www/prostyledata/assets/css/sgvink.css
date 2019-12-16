@@ -19,19 +19,19 @@
 }
 ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 500px;}
 .navbar-nav .nav-item {min-width: 114px; text-align: center;}
-.navbar-nav .nav-item .dropdown-menu {min-width: 100%;}
-.navbar-nav .nav-item .dropdown-menu .dropdown-item {padding: 3px 0; font-size: 14px; font-weight: 500; font-family: 'Noto Sans JP', sans-serif; text-align: center;}
+.navbar-nav .nav-item .dropdown-menu {min-width: 100%; padding:15px 0;}
+.navbar-nav .nav-item .dropdown-menu .dropdown-item {padding: 5px 0; font-size: 14px; font-weight: 500; font-family: 'Noto Sans JP', sans-serif; text-align: center;}
 .navbar-nav .nav-item .dropdown-menu .dropdown-item:focus, 
 .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {background-color: #d8d8d8;}
 
 /*.navbar-nav .nav-item.dropdown .nav-link {min-width: 73px;}*/
-.navbar-nav .nav-item.dropdown .dropdown-menu.show:before{
+/*.navbar-nav .nav-item.dropdown .dropdown-menu.show:before{
     border-bottom: 4px solid #ae8148;
     content: '\a0';
     line-height: 1px;
     display: block;
     margin-top: -14px;  
-}
+}*/
 
 
 .bsnav-mobile .navbar {transform: translate3d(950px,57px,0);}
@@ -701,8 +701,23 @@ footer .footer_top .social-link > * { margin: 0 5px; }
     background-color: #484848;
 }
 
-.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption { background: none; }
-.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption.fancybox-caption--separate { margin-bottom: -55px; }
+/*.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption { background: none; }
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption.fancybox-caption--separate { margin-bottom: -55px; }*/
+
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption .fancybox-caption__body { 
+    text-align: left;
+}
+
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption .fancybox-caption__body h2, h3, h4 {
+    font-size: inherit;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption .fancybox-caption__body h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
 
 /* KAITORI */
 
@@ -1056,6 +1071,7 @@ footer {
     background: url(../images/1x/icon02.png) no-repeat left center;
 }
 
+#footer .naviBox .naviUl li address {line-height: 29px;}
 
 /* @media RESPONSIVE STYLESHEET*/
 

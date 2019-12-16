@@ -371,6 +371,12 @@
 	.section_distribution_record {margin-top: -40px;}
 
 	.section_devproject .btn_request {margin: 10px auto; width: 100%}
+
+	.social-banner {padding: 30px 0 10px;}
+
+	.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption .fancybox-caption__body h2 {
+	    font-size: 16px;
+	}
 }
 
 @media (max-width: 360px) {

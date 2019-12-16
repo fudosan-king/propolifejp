@@ -115,7 +115,7 @@ $(function($) {
         }
     });
 
-    $('a.none-href').click(function(event) {
+    $('a.none-href, a.box_cate_img').click(function(event) {
         /* Act on the event */
         event.preventDefault();
     });

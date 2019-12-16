@@ -178,7 +178,7 @@
 		      									</div>
 		      								</div> -->
 
-		      								<!-- <div class="col-12 col-md-6">
+		      								<div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
@@ -207,7 +207,7 @@
 		      											<a href="plan_detail_g.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
-		      								</div> -->
+		      								</div>
 
 		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">

@@ -104,13 +104,13 @@
 				<h4>物件詳細・周辺環境・お住み替え・住宅ローンなどお気軽にご相談ください！</h4>
 				<div class="table">
 					<div class="tel pc"><?php echo $tel; ?></div>
-					<p class="pc">OPEN 10:00-19:00 / <?php echo $pref == "tokyo" ? 'CLOSE 水曜日定休（祝日を除く）' : 'CLOSE 火・水曜日定休（祝日を除く）'; ?><br>
+					<p class="pc">OPEN 10:00-19:00 / CLOSE 火・水曜日定休（祝日を除く）<br>
 					携帯電話・PHSからもご利用いただけます。</p>
 
 					<a href="tel:<?php echo $tel; ?>" class="btn btn02 sp">
 						<span class="tel"><?php echo $tel; ?></span>
 						<span>OPEN 10:00-19:00<br>
-						<?php echo $pref == "tokyo" ? 'CLOSE 水曜日定休（祝日を除く）' : 'CLOSE 火・水曜日定休（祝日を除く）'; ?></span>
+						CLOSE 火・水曜日定休（祝日を除く）</span>
 					</a>
 					<a href="https://www.chronicle-web.com/plus/contact" class="btn"><span>メールフォームからお問い合わせ</span></a>
 				</div>

@@ -241,8 +241,9 @@
                 				<div class="footer_devproject">
                         			<div class="row">';
                 			while(have_rows('list_project_flexible')): the_row();
+                                $colSize = 12%count(get_field('list_project_flexible'))==0 ? 12/count(get_field('list_project_flexible')) : 4;
                 				?>
-	                				<div class="col-12 col-md-4">
+	                				<div class="col-12 col-md-<?php echo $colSize; ?>">
 		                            	<div class="footer_devproject_content">
 			                                <h1 class="devproject_title"><?php echo get_sub_field('title'); ?><span><?php echo get_sub_field('subtitle'); ?></span></h1>
 			                                <?php echo get_sub_field('content'); ?>

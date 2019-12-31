@@ -23,7 +23,7 @@
 	<li class="btnPlan"><a href="/plan/"><span>リフォームプラン</span></a></li>
 	<li class="btnWorks"><a href="/works/"><span>施行事例</span></a></li>
 	<li class="btnContact"><a href="/#contact"><span>お問い合わせ</span></a></li>
-	<li class="btnEvent"><a href="/event/"><span>イベント情報</span></a></li>
+	<li class="btnEvent"><a href="/event/"><span>リノベーション講座</span></a></li>
 	<li class="btnBlog"><a href="/blog/"><span>スタッフブログ</span></a></li>
 	</ul>
 	<p class="btnClose">CLOSE</p>

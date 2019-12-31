@@ -20,6 +20,7 @@
 				$time3 = get_post_meta($post->ID,'time3',true);
 				$time3_1 = get_post_meta($post->ID,'time3_1',true);
 				$access = get_post_meta($post->ID,'access',true);
+				$phone = get_post_meta($post->ID,'phone',true);
 				$photo = get_post_custom_values('photo',$post_id);
 
 				global $wpdb;
@@ -56,24 +57,32 @@
 					$pref = $pref->slug;
 				}
 
-				if( $pref == "tokyo" ):
-					$tel = "0120-602-423";
-				elseif( $pref == "kanagawa" ):
-					$tel = "0120-957-186";
-				elseif( $pref == "nagoya" ):
-					$tel = "0120-964-537";
-				elseif( $pref == "oosaka" ):
-					$tel = "0120-957-953";
-				elseif( $pref == "fukuoka" ):
-					$tel = "0120-981-779";
-				endif;
+				$tel = '';
+				if (!isset($phone) || empty($phone)){
+					if( $pref == "tokyo" ):
+						$tel = "0120-602-423";
+					elseif( $pref == "kanagawa" ):
+						$tel = "0120-957-186";
+					elseif( $pref == "nagoya" ):
+						$tel = "0120-964-537";
+					elseif( $pref == "oosaka" ):
+						$tel = "0120-957-953";
+					elseif( $pref == "fukuoka" ):
+						$tel = "0120-981-779";
+					endif;
+				}else{
+					$tel = $phone;
+				}
+
+				$telLink = isset($tel) && !empty($tel) ? str_replace("-", "", $tel) : '';
+
 		?>
 <div id="container">
 	<div id="detail">
 		<h3 class="ttl"><?php echo $kind; ?></h3>
 		<div class="wrap clearfix">
-			<div class="imgBox mainImg"><?php echo wp_get_attachment_image($photo[0], 'event_main'); ?></div>
-			<div class="dataBox clearfix">
+			<div class="imgBox mainImg"><a href="<?php echo wp_get_attachment_url($photo[0]); ?>" target="_blank"><?php echo wp_get_attachment_image($photo[0], 'event_main'); ?></a></div>
+			<div class="dataBox">
 				<div class="data">
 					<h4><?php the_title(); ?></h4>
 					<dl>
@@ -83,14 +92,15 @@
 						<dd><?php echo $access; ?></dd>
 					</dl>
 				</div>
-				<div class="imgBox"><img src="<?php bloginfo('template_url'); ?>/event/images/img.png" alt=""></div>
+				<!-- <div class="imgBox"><img src="<?php bloginfo('template_url'); ?>/event/images/img.png" alt=""></div> -->
 			</div><!-- .dataBox -->
 
-			<div class="content">
+			<div class="content clearfix">
 			<?php
 				for( $i = 0; $i < $length; $i ++ ) {
 			?>
-				<h4><?php echo $title[$i]; ?></h4>
+				<!-- <h4><?php echo $title[$i]; ?></h4> -->
+				<hr size="5">
 				<div class="textBox clearfix">
 					<div class="imgBox <?php if($i %2 == 0){ echo 'fR'; } else { echo 'fL'; } ?>"><?php echo wp_get_attachment_image($img[$i], 'event'); ?></div>
 					<p><?php echo nl2br($text[$i]); ?></p>
@@ -100,20 +110,9 @@
 			?>
 			</div>
 
-			<div class="contact">
-				<h4>物件詳細・周辺環境・お住み替え・住宅ローンなどお気軽にご相談ください！</h4>
-				<div class="table">
-					<div class="tel pc"><?php echo $tel; ?></div>
-					<p class="pc">OPEN 10:00-19:00 / CLOSE 火・水曜日定休（祝日を除く）<br>
-					携帯電話・PHSからもご利用いただけます。</p>
-
-					<a href="tel:<?php echo $tel; ?>" class="btn btn02 sp">
-						<span class="tel"><?php echo $tel; ?></span>
-						<span>OPEN 10:00-19:00<br>
-						CLOSE 火・水曜日定休（祝日を除く）</span>
-					</a>
-					<a href="https://www.chronicle-web.com/plus/contact" class="btn"><span>メールフォームからお問い合わせ</span></a>
-				</div>
+			<div class="contact" align="center">
+				<a id="linkSubmit" href="https://www.chronicle-web.com/reform/lp/ourworks/#section_contact" target="_blank" class="btn"><span>予約する</span></a><br><br>
+				<p>お電話でのお問い合わせは <a href="tel:<?=$telLink?>"><?=$tel?></a> までご連絡ください。</p>
 			</div>
 
 			<div class="pageList"><a href="<?php echo esc_url( home_url('/') ); ?>event/">一覧に戻る</a></div>

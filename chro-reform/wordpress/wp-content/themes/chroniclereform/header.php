@@ -40,8 +40,8 @@ if (!$_SERVER['HTTP_X_CUSTOM_REFERRER']) {
                 </li>
                 <li>
                     <a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/event/">
-                                      <span class="c3dbbcf">イベント・セミナー</span>
-                                      <span class="c5E5E5E">EVENT</span>
+                                      <span class="c3dbbcf">リノベーション講座</span>
+                                      <span class="c5E5E5E">SEMINAR</span>
                                     </a>
                 </li>
                 <!-- <li>

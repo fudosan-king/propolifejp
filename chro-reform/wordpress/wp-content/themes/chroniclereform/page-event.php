@@ -66,8 +66,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--======== Category Title start ===========-->
 <div class="ttlCategory bgGrey">
 	<div class="boxInner">
-	<h1 class="txtMain">イベント情報</h1>
-	<p class="txtSub">EVENT</p>
+	<h1 class="txtMain">リノベーション講座</h1>
+	<p class="txtSub">SEMINAR</p>
 	</div>
 </div>
 <!--======== //Category Title end ===========-->
@@ -76,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="boxBreadcrumb boxInner">
 	<p>
 	<span><a href ="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>">ホーム</a> » </span>
-	<span>イベント情報</span>
+	<span>リノベーション講座</span>
 	</p>
 </nav>
 <!--======== //Breadcrumb end ===========-->

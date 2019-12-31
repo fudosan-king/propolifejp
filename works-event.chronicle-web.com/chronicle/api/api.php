@@ -1,4 +1,5 @@
 <?php 
+header('Access-Control-Allow-Origin: *');
 
 include_once "template-args.php";
 include_once "template-json.php";

@@ -1,0 +1,192 @@
+@font-face{
+    font-family: ShinGoPro-Medium;
+    src: url('../font/ShinGoPro-Medium.otf');
+}
+
+header {padding: 20px 0 10px;}
+section {margin-bottom: 15px;}
+
+.container {
+    max-width: 800px;
+}
+
+.header-intro {font-size: 9pt; margin-bottom: 5px;}
+.header-logo {width: 210px;}
+.header-contact {margin-bottom: 10px; float: right;}
+.header-contact a {
+    display: flex;
+    align-items: center;
+    background-color: #0075C5;
+    border-radius: 5px;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 14pt;
+    font-weight: lighter;
+    width: 174px;
+    height: 34px;
+
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.header-contact a i {margin-right: 15px; font-size: 18pt;}
+.header-contact a:link, .header-contact a:visited, .header-contact a:active, .header-contact a:hover {text-decoration: none;}
+.header-contact a:hover {opacity: 0.8;}
+
+.header-phone { float: right;}
+.header-phone a {
+    display: flex;
+    align-items: center;
+    color: #737373;
+    font-size: 13pt;
+    font-family: ShinGoPro-Medium;
+    text-align: right;
+
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.header-phone a i {margin-right: 5px; font-size: 18pt;}
+.header-phone a:link, .header-phone a:visited, .header-phone a:active, .header-phone a:hover {text-decoration: none;}
+.header-phone a:hover {opacity: 0.8;}
+
+.banner {
+    background: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center 70%;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+}
+
+.banner-content {position: absolute; right: 0; top: 16%;}
+.banner-content h3 {color: #fff; text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.9); font-weight: bold;}
+
+.intro p {font-size: 22px; line-height: 1.6; border-bottom: #0080cc 2px solid; font-weight: 200;}
+
+.block-title {color: #1592e6; font-weight: bold; font-size: 15pt; margin: 30px auto 12px;}
+.news .content {background-color: #E6F5FD; color: #7d7d7d; width: 100%; border-radius: 10px; padding: 20px 40px; font-size: 13px;}
+.news .content p {margin-bottom: 0;}
+
+.company-info table th, .recruit table th {background-color: #eee; border: 1px solid #b9b9b9; padding: .35rem .75rem;}
+.company-info table td, .recruit table td {border: 1px solid #b9b9b9; padding: .35rem .75rem;}
+.company-info .social {margin-top: 30px;}
+.company-info .social .instagram-page {margin-top: 20px; transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -webkit-transition: all 0.3s ease;}
+.company-info .social .instagram-page:hover {opacity: 0.7;}
+.company-info .social .instagram-page img {width: 500px; height: 130px;}
+
+.cancellation .content { 
+    background-color: #F5F3F0;
+    max-width: 500px;
+    height: 95px;
+    margin: 40px auto 80px;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 3px 1px 2px #C5C5C4;
+
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.cancellation .content:hover {opacity: 0.7;}
+.cancellation .content a:link, .cancellation .content a:visited, .cancellation .content a:active, .cancellation .content a:hover {text-decoration: none;}
+.cancellation h4 {color: #217FC8; font-size: 12pt; font-weight: bold; letter-spacing: 0.3pt;}
+.cancellation .content p { color: #5D5D5D; margin-bottom: 0; font-size: 26pt; font-weight: 200;}
+
+.privacy .content {font-size: 10pt; line-height: 1.8; margin: 50px auto 70px;}
+.privacy .content h3{
+    font-size: 12pt;
+    font-weight: bold;
+    border-bottom: #000 1px dotted;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.privacy .content dt p {font-weight: normal;}
+.privacy .content dd {padding-left: 20px;}
+.privacy .content dd ul {list-style: none;}
+
+.contact .content {margin: 50px auto 70px;}
+.kaiyaku .content {margin: 50px auto 0;}
+.kaiyaku .content p {font-size: 16px; font-weight: 300;}
+
+footer {background-color: #0075C5; color: #fff; min-height: 67px; width: 100%; }
+footer p {margin-bottom: 0; font-weight: 200; font-size: 13px;}
+footer .nav {margin: 10px auto; justify-content: center;}
+footer .nav .nav-item:not(:last-child) {border-right: 1px solid #fff;}
+footer .nav .nav-item .nav-link {color: #fff; padding: 0 1rem;font-weight: 200;font-size: 15px;}
+footer .nav .nav-item .nav-link:hover {text-decoration: underline;}
+
+footer .back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-image: url('../img/arrow_up.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    background-color: #0075c454;
+    border: none;
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 767px){
+    .header-intro {text-align: center;}
+    .header-logo {display: block; margin: 0 auto;}
+    .header-contact {float: left; margin-top: 35px;}
+    .header-phone {float: right; margin-top: 40px;}
+}
+
+@media screen and (max-width: 520px){
+    .cancellation .content p {font-size: 19pt;}
+}
+
+@media screen and (max-width: 414px){
+    
+
+    
+    
+    .banner-content {right: inherit; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;}
+    .banner-content h3 {font-size: 18pt}
+    .intro p {font-size: 17px;}
+    .news .content {padding: 20px;}
+
+    .block-title {margin: 15px auto 12px;}
+
+    .company-info table th, .recruit table th {
+        width: 100px;
+        font-size: 13px;
+    }
+
+    .company-info table td, .recruit table td {
+        font-size: 13px;
+    }
+
+    .company-info .social .instagram-page img {
+        width: 100%;
+        height: auto;
+    }
+    .recruit .content span {font-size: 11pt;}
+    
+    .cancellation .content {margin: 20px auto 40px;}
+    
+
+    footer .nav .nav-item .nav-link { padding: 0 0.6rem; font-size: 11px;}
+}
+
+@media screen and (max-width: 375px){
+    .header-contact a {width: 165px; font-size: 11pt;}
+    .banner-content h3 {font-size: 18pt;}
+    
+    footer .nav .nav-item .nav-link {padding: 0 0.4rem; font-size: 11px;}
+}
+
+

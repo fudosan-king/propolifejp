@@ -58,7 +58,7 @@
 #localNav li {
 	float: left;
 	text-align: center;
-	width: 179px;
+	/*width: 125px;*/
 }
 
 #localNav li:first-child {

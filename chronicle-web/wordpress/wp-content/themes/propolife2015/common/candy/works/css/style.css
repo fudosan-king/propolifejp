@@ -516,11 +516,11 @@
 	}
 
 	#container-data #localNav li {
-		width: 50%;
+		width: 50%!important;
 	}
 
 	#container-data #localNav li:first-child {
-		width: 50%;
+		width: 50%!important;
 	}
 
 	#container-data #localNav li a {

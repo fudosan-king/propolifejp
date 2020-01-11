@@ -74,7 +74,7 @@ footer{
     font-size: 15px;
     line-height: 1.5;
     margin-bottom: 20px;
-    min-height: 170px;
+    min-height: 215px;
     width: 490px;
 }
 
@@ -167,40 +167,40 @@ footer{
     font-weight: bold;
     height: 19px;
     line-height: 20px;
-    margin-right: 6px;
+    margin-right: 3px;
     text-align: center;
     width: 46px;
 }
 
-#container-data .box ul li span.icon01 {
+#container-data .box ul li span.tokyo {
     background: #7989da;
 }
 
-#container-data .box ul li span.icon02 {
+#container-data .box ul li span.kanagawa {
     background: #e08b9f;
 }
 
-#container-data .box ul li span.icon03 {
+#container-data .box ul li span.nagoya {
     background: #76b887;
 }
 
-#container-data .box ul li span.icon04 {
+#container-data .box ul li span.oosaka {
     background: #77bfc6;
 }
 
-#container-data .box ul li span.icon05 {
+#container-data .box ul li span.fukuoka {
     background: #e99e67;
 }
 
-#container-data .box ul li span.icon06 {
+#container-data .box ul li span.hyogo {
     background: #7598a8;
 }
 
-#container-data .box ul li span.icon07 {
+#container-data .box ul li span.saitama {
     background: #c85959;
 }
 
-#container-data .box ul li span.icon08 {
+#container-data .box ul li span.kyoto {
     background: #aba565;
 }
 

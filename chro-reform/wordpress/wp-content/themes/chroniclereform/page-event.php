@@ -114,6 +114,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             return res;
         }
 
+        var linkGetBack = 'event/';
+        if (typeof getQueryStr()['pref'] !== 'undefined'){
+            linkGetBack = 'event_pref/' + getQueryStr()['pref'] + '/';
+        }
+
+        var linkPage = 'event/?';
+        if (typeof getQueryStr()['pref'] !== 'undefined'){
+            linkPage = 'event/?pref=' + getQueryStr()['pref'] + '&';
+        }
+
         var numPage = '';
 
         if (typeof getQueryStr()['page'] !== 'undefined'){
@@ -121,7 +131,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         }
 
-      $.get('https://works-event.chronicle-web.com/event/' + numPage, function(data){
+      $.get('https://works-event.chronicle-web.com/' + linkGetBack + numPage, function(data){
+
         var baseTags, baseURI;
         baseURI = document.baseURI;
 
@@ -152,13 +163,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         $('#container-data #localNav').find('a').each(function(){
             var pathName = $(this).prop('pathname');
             var arrPathName = pathName.substring(1, pathName.length-1).split('/');
-            var strPath = arrPathName[0];
+            var strPath = (arrPathName[0].split('_'))[0]+'/';
             if(arrPathName.length > 1){
               for(var i = 1; i < arrPathName.length; i++){
-                strPath = strPath + '-' + arrPathName[i];
+                strPath = strPath + '?pref=' + arrPathName[i];
               }
             }
-            strPath = strPath + '/';
+            // console.log(strPath);
             $('#container-data').find('a[href="'+ $(this).attr('href') +'"]').each(function(){
                $(this).attr('href', baseURI.substring(0, baseURI.indexOf('.com/') + 5) + 'reform/' + strPath);
                // $(this).attr('target', '_blank');
@@ -167,7 +178,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           $('#container-data').find('.pager a').each(function(){
             var pageNum = $(this).prop('outerText');
-            $(this).attr('href', baseURI.substring(0, baseURI.indexOf('.com/') + 5) + 'reform/event/?page=' + pageNum);
+            $(this).attr('href', baseURI.substring(0, baseURI.indexOf('.com/') + 5) + 'reform/' + linkPage + 'page=' + pageNum);
            });
 
       });

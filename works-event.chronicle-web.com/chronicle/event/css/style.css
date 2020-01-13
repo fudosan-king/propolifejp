@@ -62,7 +62,7 @@
 	font-size: 15px;
 	line-height: 1.5;
 	margin-bottom: 20px;
-	min-height: 170px;
+	min-height: 215px;
 	width: 490px;
 }
 
@@ -150,40 +150,40 @@
 	font-weight: bold;
 	height: 19px;
 	line-height: 20px;
-	margin-right: 6px;
+	margin-right: 3px;
 	text-align: center;
 	width: 46px;
 }
 
-.box ul li span.icon01 {
+.box ul li span.tokyo {
 	background: #7989da;
 }
 
-.box ul li span.icon02 {
+.box ul li span.kanagawa {
 	background: #e08b9f;
 }
 
-.box ul li span.icon03 {
+.box ul li span.nagoya {
 	background: #76b887;
 }
 
-.box ul li span.icon04 {
+.box ul li span.oosaka {
 	background: #77bfc6;
 }
 
-.box ul li span.icon05 {
+.box ul li span.fukuoka {
 	background: #e99e67;
 }
 
-.box ul li span.icon06 {
+.box ul li span.hyogo {
 	background: #7598a8;
 }
 
-.box ul li span.icon07 {
+.box ul li span.saitama {
 	background: #c85959;
 }
 
-.box ul li span.icon08 {
+.box ul li span.kyoto {
 	background: #aba565;
 }
 

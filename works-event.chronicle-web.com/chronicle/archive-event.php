@@ -11,29 +11,26 @@
 	<div class="catch">クロニクルが提供するリノベーションのイベントやセミナーをご覧いただけます。</div>
 	<div id="localNav">
 		<ul class="wrap clearfix">
-			<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>event/"<?php if(get_post_type( $post ) == 'event') echo ' class="on"'; ?>>全て表示</a></li>
+			
 		<?php
 		$tag = get_current_term();
 
-		$catName = $tag->name;
-		if($catName == "東京") {
-			$current[1] = ' class="on"';
-		} else if($catName == "神奈川") {
-			$current[2] = ' class="on"';
-		} else if($catName == "名古屋") {
-			$current[3] = ' class="on"';
-		} else if($catName == "大阪") {
-			$current[4] = ' class="on"';
-		} else if($catName == "福岡") {
-			$current[5] = ' class="on"';
+		$catSlug = $tag->slug;
+		$allTerms = get_terms('event_pref','orderby=id','hide_empty=0');
+		$allTermsIDs = get_terms( 'event_pref', array(
+		    'hide_empty' => 0,
+		    'fields' => 'ids'
+		) );
+		$styleWidth = "width: calc(100%/".(count($allTerms)+1).")";
+		?>
+		<li style="<?php echo $styleWidth; ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>event/"<?php if(get_post_type( $post ) == 'event') echo ' class="on"'; ?>>全て表示</a></li>
+		<?php
+		foreach ( $allTerms as $term ){
+			$classActive = $term->slug == $tag->slug ? ' class="on"' : '';
+			echo '<li style="'.$styleWidth.'"><a href="'.get_term_link($term->slug, 'event_pref').'"'.$classActive.'>'.$term->name.'</a></li>';
 		}
 
-		$n = 1;
-		$terms = get_terms('event_pref','orderby=id','hide_empty=0');
-		foreach ( $terms as $term ){
-			echo '<li><a href="'.get_term_link($term->slug, 'event_pref').'"'.$current[$n].'>'.$term->name.'</a></li>';
-			$n++;
-		}
+		
 		?>
 		</ul>
 	</div>
@@ -59,8 +56,8 @@
 						),
 						array(
 							'taxonomy' => 'event_pref', //タクソノミーを指定
-							'field' => 'slug', //ターム名をスラッグで指定する
-							'terms' => array('tokyo', 'kanagawa', 'nagoya', 'oosaka', 'fukuoka')
+							'field' => 'id', //ターム名をスラッグで指定する
+							'terms' => $allTermsIDs
 						),
 					),
 					'post_type' => 'event', //カスタム投稿名
@@ -80,34 +77,31 @@
 						$photo = get_post_custom_values('photo',$post_id);
 
 						$terms = wp_get_object_terms($post->ID, 'event_pref');
+						$htmlCat = '';
 						foreach ( $terms as $term ){
 							$pref = $term->name;
-
-							if($pref == "東京") {
-								$icon = "icon01";
-							} else if($pref == "神奈川") {
-								$icon = "icon02";
-							} else if($pref == "名古屋") {
-								$icon = "icon03";
-							} else if($pref == "大阪") {
-								$icon = "icon04";
-							} else if($pref == "福岡") {
-								$icon = "icon05";
-							}
+							$htmlCat.='<span class="icon '.$term->slug.'">'.$term->name.'</span>';
 						}
 			?>
 				<li><a href="<?php the_permalink(); ?>">
-					<div class="data sp"><span class="icon <?php echo $icon; ?>"><?php $terms = wp_get_object_terms($post->ID, 'event_pref');
-						foreach ( $terms as $term ){
-							echo $term->name;
-						} ?></span><span class="date"><?php echo $date; ?></span><span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span></div>
+					<div class="data sp">
+						<?php echo $htmlCat; ?>
+						<div>
+							<span class="date"><?php echo $date; ?></span>
+							<span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span>	
+						</div>
+						
+					</div>
 					<div class="table">
 						<div class="imgBox"><?php if(!empty($photo[0])) { echo wp_get_attachment_image($photo[0], 'event_list'); } else { ?><img src="<?php bloginfo('template_url') ?>/common/images/noimg.jpg" alt=""><?php } ?></div>
 						<div class="dataBox">
-						<div class="data pc"><span class="icon <?php echo $icon; ?>"><?php $terms = wp_get_object_terms($post->ID, 'event_pref');
-							foreach ( $terms as $term ){
-								echo $term->name;
-							} ?></span><span class="date"><?php echo $date; ?></span><span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span></div>
+						<div class="data pc">
+							<?php echo $htmlCat; ?>
+							<div>
+								<span class="date"><?php echo $date; ?></span>
+								<span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span>	
+							</div>
+						</div>
 							<?php echo $list; ?>
 							<span class="btn">詳しくはこちら</span>
 						</div>
@@ -164,8 +158,8 @@
 						),
 						array(
 							'taxonomy' => 'event_pref', //タクソノミーを指定
-							'field' => 'slug', //ターム名をスラッグで指定する
-							'terms' => array('tokyo', 'kanagawa', 'nagoya', 'oosaka', 'fukuoka')
+							'field' => 'id', //ターム名をスラッグで指定する
+							'terms' => $allTermsIDs
 						),
 					),
 					'post_type' => 'event', //カスタム投稿名
@@ -185,34 +179,30 @@
 						$photo = get_post_custom_values('photo',$post_id);
 
 						$terms = wp_get_object_terms($post->ID, 'event_pref');
+						$htmlCat = '';
 						foreach ( $terms as $term ){
 							$pref = $term->name;
-
-							if($pref == "東京") {
-								$icon = "icon01";
-							} else if($pref == "神奈川") {
-								$icon = "icon02";
-							} else if($pref == "名古屋") {
-								$icon = "icon03";
-							} else if($pref == "大阪") {
-								$icon = "icon04";
-							} else if($pref == "福岡") {
-								$icon = "icon05";
-							}
+							$htmlCat.='<span class="icon '.$term->slug.'">'.$term->name.'</span>';
 						}
 			?>
 				<li><a href="<?php the_permalink(); ?>">
-					<div class="data sp"><span class="icon <?php echo $icon; ?>"><?php $terms = wp_get_object_terms($post->ID, 'event_pref');
-						foreach ( $terms as $term ){
-							echo $term->name;
-						} ?></span><span class="date"><?php echo $date; ?></span><span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span></div>
+					<div class="data sp">
+						<?php echo $htmlCat; ?>
+						<div>
+							<span class="date"><?php echo $date; ?></span>
+							<span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span>
+						</div>
+					</div>
 					<div class="table">
 						<div class="imgBox"><?php if(!empty($photo[0])) { echo wp_get_attachment_image($photo[0], 'event_list'); } else { ?><img src="<?php bloginfo('template_url') ?>/common/images/noimg.jpg" alt=""><?php } ?></div>
 						<div class="dataBox">
-						<div class="data pc"><span class="icon <?php echo $icon; ?>"><?php $terms = wp_get_object_terms($post->ID, 'event_pref');
-							foreach ( $terms as $term ){
-								echo $term->name;
-							} ?></span><span class="date"><?php echo $date; ?></span><span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span></div>
+						<div class="data pc">
+							<?php echo $htmlCat; ?>
+							<div>
+								<span class="date"><?php echo $date; ?></span>
+								<span class="time"><?php echo $time1; ?>:<?php echo $time1_1; ?>～<?php echo $time2; ?>:<?php echo $time2_1; ?></span>	
+							</div>
+						</div>
 							<?php echo $list; ?>
 							<span class="btn">詳しくはこちら</span>
 						</div>

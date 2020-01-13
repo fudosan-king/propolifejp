@@ -58,7 +58,7 @@
 #container-data #localNav li {
 	float: left;
 	text-align: center;
-	width: 179px;
+	width: 125px;
 }
 
 #container-data #localNav li:first-child {
@@ -257,11 +257,11 @@
 	}
 
 	#container-data #localNav li {
-		width: 50%;
+		width: 50%!important;
 	}
 
 	#container-data #localNav li:first-child {
-		width: 50%;
+		width: 50%!important;
 	}
 
 	#container-data #localNav li a {

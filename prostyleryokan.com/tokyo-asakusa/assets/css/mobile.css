@@ -131,7 +131,7 @@
 	.spacing {
 		padding-top: 67px;
 	}
-	.section_banner_sub, .section_banner_sub img, .box_rooms_detail_img, .box_rooms_detail_img img, .box_twin_img, .box_twin_img img {
+	.section_banner_sub, .section_banner_sub img{
 		height: 176px;
 	}
 	.box_rooms_detail {
@@ -260,6 +260,46 @@
 	section.section_access h4 {margin-top: 0; margin-bottom: 3px;}
 	
 	.section_footer_bottom ul {margin: 0 0 14px;}
+	.kotakino_logo {
+	   width: 120px;
+	}
+
+	.swiper_room .carousel-cell {
+		height: 278px;
+	}
+	.swiper_room .carousel-nav .carousel-cell {
+		height: 92px;
+	}
+	.box_each_menu {
+		padding: 35px 0;
+	}
+	.box_menu_content {
+		text-align: center;
+	}
+	.box_each_menu.box_each_menu_left .box_menu_content {
+		text-align: center;
+	}
+	.box_each_menu h3.menu_name {
+		margin-top: 15px;
+	}
+	.box_menu_info {
+		margin-top: 0;
+		padding: 20px 0;
+	}
+
+	.box_rooms_detail_img img {
+		height: 280px;
+	}
+
+	.box_rooms_detail_img .slick-nav .slick-nav-item {height: 80px;}
+	.box_rooms_detail_img .slick-nav .slick-nav-item img {height: 80px;}
+
+	.box_rooms_detail_img .slick-prev:before, .box_rooms_detail_img .slick-next:before {color: #595656; font-size: 30px; opacity: 0.4;}
+	.box_rooms_detail_img .slick-prev, .box_rooms_detail_img .slick-next {width: 30px; height: 30px; z-index: 1; }
+	.box_rooms_detail_img .slick-prev {left: 5px;}
+	.box_rooms_detail_img .slick-next {right: 5px;}
+
+	.section_footer_bottom ul.sns li a.btn_fb {padding: 10px;}
 }
 
 @media (max-width: 736px) {
@@ -299,13 +339,10 @@
 	}
 	.title, .section_feature h2 {
 		margin-bottom: 20px;
-		font-size: 18px;
+		font-size: 22px;
 		letter-spacing: 1.8px;
 	}
-	.section_relaxing .title {
-		font-size: 20px;
-		letter-spacing: 2px;
-	}
+	.box_each_menu h3.menu_name {font-size: 16px;}
 	.section_booking {
 		padding: 35px 0;
 	}
@@ -416,6 +453,7 @@
 
 	.section_access p, .section_access ul, .section_access td {font-size: 12px;}
 	.box_rooms_content span {font-size: 12px;}
+
 }
 @media (max-width: 375px) {
 	

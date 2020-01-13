@@ -30,7 +30,7 @@ function the_fav_path(){
 	echo ASSETS_FAV_PATH;
 }
 
-show_admin_bar(false);
+// show_admin_bar(false);
 
 function my_acf_init() {
 	// AIzaSyBc5E3kYWk3QVzgzWdBOxOuP7l8lLKmHpE
@@ -62,10 +62,9 @@ function get_nav_lang($isMobile=false){
 		$classNavLink = (!$isMobile) ? '' : 'btnLang';
 
 		echo ' <li class="nav-item dropdown fadeup box_lang '.$classBoxLang.'">';
-		echo '<a class="nav-link '.$classNavLink.'" onclick="return false;">'.$currentLangName.' <i class="fal fa-angle-down fa-lg"></i></a>';
+		echo '<a class="nav-link '.$classNavLink.'" onclick="return false;">Language <i class="fal fa-angle-down fa-lg"></i></a>';
 		echo '<ul class="navbar-nav">';
 		foreach ( qtranxf_getSortedLanguages() as $language ) {
-			if($language == 'zh') continue;
 			$name 	 = strtoupper(qtranxf_getLanguageNameNative( $language ));
 			echo '<li class="nav-item"><a class="nav-link" href="' . qtranxf_convertURL( '', $language, false, true ) . '">' . $name . '</a></li>';
 		}

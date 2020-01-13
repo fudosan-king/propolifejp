@@ -1,15 +1,15 @@
 <footer>
-    <section class="section_footer_top">
+    <!-- <section class="section_footer_top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <a href="<?=home_url();?>">
-                        <img src="<?php the_img_path(); ?>/1x/asakusa-wide_logo_white@2x@2x.png" alt="" class="img-fluld" width="186">
+                    <a href="<?php //echo home_url();?>">
+                        <img src="<?php //the_img_path(); ?>/1x/asakusa-wide_logo_white@2x@2x.png" alt="" class="img-fluld" width="186">
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="section_footer_bottom">
         <div class="container-fluid">
             <?php do_action( 'footer_generate_menus' ); ?>

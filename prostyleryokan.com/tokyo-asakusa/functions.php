@@ -7,7 +7,7 @@ include_once 'inc/acf-object/acf-rooms.php';
 include_once 'inc/acf-object/acf-cpt-rooms.php';
 include_once 'inc/acf-object/acf-table-outline.php';
 include_once 'inc/acf-object/acf-terms.php';
-
+include_once 'inc/acf-object/acf-restaurant.php';
 
 if (!function_exists('uniquek_setup_theme')){
 	function uniquek_setup_theme(){
@@ -134,9 +134,9 @@ if (!function_exists('display_footer_menus')){
 
 				if ($nav->menu_item_parent == 0){
 					$childMenu = get_nav_child_menu($footerMenu, $nav->ID);
-					$classOffset = $count == 0 ? 'offset-md-1' : '';
+					// $classOffset = $count == 0 ? 'offset-md-1' : '';
 					echo '
-					<div class="col-12 col-md-2 '.$classOffset.'">
+					<div class="col-12 col-md-2">
                     	<div class="row">
 		                    <div class="col-4 col-md-12">
 		                        <h6>'.$nav->title.'</h6>
@@ -148,7 +148,7 @@ if (!function_exists('display_footer_menus')){
                             <ul class="list_footer_bottom '.$nav->classes[0].'">';
 							foreach($childMenu as $cmenu){
 								?>
-								<li><a href="<?=$cmenu->url;?>" target="<?=$cmenu->target;?>"><?=$cmenu->title;?></a></li>
+								<li><a href="<?=$cmenu->url;?>" class="<?=implode(" ", $cmenu->classes);?>" target="<?=$cmenu->target;?>"><?=$cmenu->title;?></a></li>
 								<?php
 							}
 
@@ -173,17 +173,17 @@ if (!function_exists('display_footer_menus')){
 add_action( 'footer_generate_menus', 'display_footer_menus');
 
 function uniquek_head_plus_scripts() {
-    printf('<script>%s</script>', _get(get_field('header_scripts', 'option')));
+    print_r(get_field('header_scripts', 'option'));
 }
 add_action( 'wp_head_plus', 'uniquek_head_plus_scripts');
 
 function uniquek_body_plus_scripts() {
-    printf('<script>%s</script>', _get(get_field('body_scripts', 'option')));
+    print_r(get_field('body_scripts', 'option'));
 }
 add_action( 'wp_body_plus', 'uniquek_body_plus_scripts');
 
 function uniquek_footer_plus_scripts() {
-    printf('<script>%s</script>', _get(get_field('footer_scripts', 'option')));
+    print_r(get_field('footer_scripts', 'option'));
 }
 add_action( 'wp_footer_plus', 'uniquek_footer_plus_scripts');
 
@@ -204,8 +204,13 @@ function uniquek_scripts() {
 	    		break;
 
 	    	case 'zh':
+	    		$langRegionStr = '&language=zh-CN&region=CN';
+	    		break;
+
+	    	case 'tw':
 	    		$langRegionStr = '&language=zh-TW&region=CN';
 	    		break;
+	    	
 	    	
 	    	default:
 	    		$langRegionStr = '&language=ja&region=JP';
@@ -218,6 +223,15 @@ function uniquek_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'uniquek_scripts');
 
+function my_custom_fonts() {
+  echo '<style>
+    @media screen and (max-width: 420px){
+	    html {margin-top: 0px!important;}
+	    #wpadminbar {display: none;}
+	}
+  </style>';
+}
+add_action('wp_footer', 'my_custom_fonts'); 
 
 if (!function_exists('set_content_banner')){
 	function set_content_banner(){

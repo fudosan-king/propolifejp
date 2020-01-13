@@ -1,33 +1,47 @@
-<?php get_header(); ?>
-
-<section class="default_page" style="height: auto;">
-    <?php get_template_part( 'template-parts/header/main', 'header' ); ?>
-    <div class="jarallax bg_top">
-        <img class="jarallax-img" src="<?php echo TEMPLATE_DIR; ?>/images/1x/bg_menu.jpg" alt="">
-        <a href="/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_gray.svg" alt="" class="img-fluid" width="150"></a>
-        <div class="page_content">
-            <div class="black_title">
-                <h2><?php the_title(); ?></h2>
+<?php
+get_header();
+?>
+    <div class="visWrap">
+    </div>
+    <div class="vis">
+        <div class="vis_logo">
+            <p class="gNav_logo"><img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/home/PROSTYLERYOKAN_logo.png" width="200" height="148" alt=""></p>
+        </div>
+        <div id="js-vis_slide" class="vis_slide">
+            <div class="vis_imageWrap">
+                <div class="vis_image vis_image-no1"></div>
             </div>
-            <span class="bor_title"></span>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <?php 
-                        if (have_posts()):
-                            while(have_posts()): the_post();
-                                the_content();
-                            endwhile;
-                        endif;
-                        ?>
-                    </div>
-                </div>
+            <div class="vis_imageWrap">
+                <div class="vis_image vis_image-no2"></div>
+            </div>
+            <div class="vis_imageWrap">
+                <div class="vis_image vis_image-no3"></div>
+            </div>
+            <div class="vis_imageWrap">
+                <div class="vis_image vis_image-no5"></div>
+            </div>
+            <div class="vis_imageWrap">
+                <div class="vis_image vis_image-no6"></div>
             </div>
         </div>
     </div>
 
 
-</section>
+    <section class="section_intro" data-aos="fade-up" data-aos-anchor-placement="top-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                   <?php 
+                    if(have_posts()):
+                        while(have_posts()): the_post();
+                            the_content();
+                        endwhile;
+                    endif;
+                   ?>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

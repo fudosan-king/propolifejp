@@ -46,9 +46,11 @@ $(function($) {
     $('#arrival_date').attr('placeholder', today);
     $('#departure_date').attr('placeholder', today);
 
+    var locale = $('#ifrmBooking').length ? (($('#ifrmBooking').find('input[name="lang"]')).val()).toLowerCase() : '';
+
     var departure_config = {
         uiLibrary: 'bootstrap4',
-        locale: 'ja-jp',
+        locale: locale,
         format: 'yyyy-mm-dd',
         value: nextDay,
         minDate: nextDay,
@@ -56,11 +58,13 @@ $(function($) {
             autoCalcDaysTotal();
         },
     }
-    $('#departure_date').datepicker(departure_config);
+
+    if($('#departure_date').length)
+        $('#departure_date').datepicker(departure_config);
 
     var arrival_config = {
         uiLibrary: 'bootstrap4',
-        locale: 'ja-jp',
+        locale: locale,
         format: 'yyyy-mm-dd',
         value: today,
         minDate: today,
@@ -78,6 +82,7 @@ $(function($) {
         },
     }
 
+    if($('#arrival_date').length)
     $('#arrival_date').datepicker(arrival_config);
 
     autoCalcDaysTotal();

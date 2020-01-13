@@ -1,98 +1,99 @@
-<!doctype html>
-<html class="no-js">
-    <?php 
-    $location = get_nav_menu_locations();
-    $page_info = get_page_by_path('general-addition-info');
-    $header_info = get_field('header', $page_info);
-    $body_info = get_field('body', $page_info);
+<!DOCTYPE html>
+<html lang="ja">
 
-    $custom_logo_id = get_theme_mod( 'custom_logo' );
-    $image = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-
-
-
-    // SEO Support
-    $seo_title = !empty(get_field('seo_title', $page_info)) ? get_field('seo_title', $page_info) : sprintf("%s - %s", get_the_title(), get_bloginfo('name'));
-    $seo_description = !empty(get_field('seo_description', $page_info)) ? get_field('seo_description', $page_info) : get_option( 'blogdescription' );
-    $seo_keywords = !empty(get_field('seo_keywords', $page_info)) ? get_field('seo_keywords', $page_info) : '';
-    $seo_image = !empty(get_field('seo_image', $page_info)) ? get_field('seo_image', $page_info)['url'] : $image;
-
-    if (is_page() || is_single()){
-
-        $seo_title = !empty(get_field('seo_title')) ? get_field('seo_title') : $seo_title;
-        $seo_description = !empty(get_field('seo_description')) ? get_field('seo_description'): $seo_description;
-        $seo_keywords = !empty(get_field('seo_keywords')) ? get_field('seo_keywords') : $seo_keywords;
-        $seo_image = !empty(get_field('seo_image')) ? get_field('seo_image') : $seo_image;
-    }
-
-    if (is_archive()){
-        $termObj = get_queried_object();
-        $strPage = "accommodation-".$termObj->slug;
-        $pageObj = get_page_by_path($strPage);
-        
-        $seo_title = !empty(get_field('seo_title', $pageObj)) ? get_field('seo_title', $pageObj) : $seo_title;
-        $seo_description = !empty(get_field('seo_description', $pageObj)) ? get_field('seo_description', $pageObj): $seo_description;
-        $seo_keywords = !empty(get_field('seo_keywords', $pageObj)) ? get_field('seo_keywords', $pageObj) : $seo_keywords;
-        $seo_image = !empty(get_field('seo_image', $pageObj)) ? get_field('seo_image', $pageObj) : $seo_image;
-    }
-
+<head>
+    <meta charset="utf-8">
+    <!-- <title>【富山】日本家屋・一棟貸切宿|和美再美 石動 柏屋（かしわや）</title>
+    <meta name="description" content="「和美再美 石動 柏屋」は富山県小矢部市にある日本家屋。一組様一棟貸しの宿で、鯉が泳ぐ日本庭園を眺めながら、侘び寂びの世界観を深く味わうことができます。">
+    <meta name="keywords" content="富山,日本家屋,一棟貸切宿">
+    <meta property="og:title" content="【富山】日本家屋・一棟貸切宿|和美再美 石動 柏屋（かしわや）">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wabisabi-kashiwaya.jp/">
+    <meta property="og:image" content="https://wabisabi-kashiwaya.jp/assets/img/common/ogp.png">
+    <meta property="og:site_name" content="【富山】日本家屋・一棟貸切宿|和美再美 石動 柏屋（かしわや）">
+    <meta property="og:description" content="「和美再美 石動 柏屋」は富山県小矢部市にある日本家屋。一組様一棟貸しの宿で、鯉が泳ぐ日本庭園を眺めながら、侘び寂びの世界観を深く味わうことができます。"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-    ?>
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css%3Ffamily=Noto+Serif+JP:500,600&amp;display=swap&amp;subset=japanese.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css%3Ffamily=Cinzel&amp;display=swap.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/fonts/icomoon/style.css%3Fdate=191221.css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/normalize.min.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/lib/fancybox/jquery.fancybox.min.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/base.css%3Fdate=191221.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/common.css%3Fdate=191202b.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/lib/slick/slick.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/home.css%3Fdate=191124.css" media="all">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="UTF-8">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/styles.css">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/mobile.css">
 
+    <?php wp_head(); ?>
 
-        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo TEMPLATE_DIR; ?>/favicon_package_v0.16/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo TEMPLATE_DIR; ?>/favicon_package_v0.16/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo TEMPLATE_DIR; ?>/favicon_package_v0.16/favicon-16x16.png">
-        <link rel="manifest" href="<?php echo TEMPLATE_DIR; ?>/favicon_package_v0.16/site.webmanifest">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="<?php echo TEMPLATE_ASSETS_PATH; ?>/gtag/js%3Fid=UA-153074140-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet"> -->
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/ui-darkness/jquery-ui.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.2/aos.css" type="text/css">
+        gtag('config', 'UA-153074140-1');
 
-        <!-- <link rel="stylesheet" type="text/css" href="<?php echo TEMPLATE_DIR; ?>/inc/mCustomScrollbar/jquery.mCustomScrollbar.min.css"/> -->
+    </script>
+</head>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.8/SmoothScroll.min.js"></script>
-       
+<body class="p-home">
 
-        <script src="https://use.typekit.net/krm1frd.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <header id="js-gHeaderWrap" class="gHeaderWrap">
+        <div class="gHeader">
+            <div class="gHeader_inner u-inner">
+                <div class="gHeader_cols">
+                    <div class="gHeader_col gHeader_col-no1">
+                        <p class="gHeader_link"><a href="#" target="_blank">会社概要</a></p>
+                    </div>
+                    <div class="gHeader_col gHeader_col-no3">
+                        <p class="gHeader_link"><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></p>
+                    </div>
+                    <div class="gHeader_col gHeader_col-no3">
+                        <p class="gHeader_link"><a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ); ?>" target="_blank">お問い合わせ</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <meta property="og:title" content="<?php echo $seo_title; ?>">
-        <meta property="og:description" content="<?php echo $seo_description; ?>">
-        <meta property="og:image" content="<?php echo $seo_image; ?>" />
+    <nav id="js-gNav" class="gNav">
+        <div id="js-gNav_inner" class="gNav_inner">
+            <div class="gNav_listWrap">
+                <p class="gNav_logo"><svg>
+                        <title>和美再美 柏屋</title>
+                        <use xlink:href="#SvgLogoNav"></use>
+                    </svg></p>
+                <p class="gNav_title">和美再美｜石動 柏屋</p>
+                <ul class="gNav_list">
+                    <li><a href="index.html#About">和美再美とは</a></li>
+                    <li><a href="index.html#Room">お部屋</a></li>
+                    <li><a href="index.html#Garden">日本庭園</a></li>
+                    <li><a href="index.html#News">お知らせ</a></li>
+                    <li><a href="index.html#Guide">ご案内</a></li>
+                    <li><a href="index.html#Gallery">写真</a></li>
+                    <li><a href="index.html#Access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <meta name="keywords" content="<?php echo $seo_keywords; ?>">
-        <meta name="description" content="<?php echo $seo_description; ?>">
-        <title><?php echo $seo_title; ?></title>
-
-        
-
-        <?php wp_head(); ?>
-
-        <?php print_r($header_info['extra_scripts']); ?>
-    </head>
-
-    <body>
-
-        <?php print_r($body_info['extra_scripts']); ?>
-
-        <div id="page" class="">
-
-        <!-- CONTENT HERE -->
+    <main class="gBody">

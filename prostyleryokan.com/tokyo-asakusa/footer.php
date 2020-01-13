@@ -2,12 +2,11 @@
 
 	      	<?php get_template_part('template-part/footer', 'content'); ?>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -17,13 +16,47 @@
 	<script src="https://unpkg.com/flickity@2.2/dist/flickity.pkgd.js"></script>
 	<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 	<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-	<script src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.ja-jp.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ja.js"></script>
+
+	<?php 
+		$scriptLang = '<script src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.ja-jp.min.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ja.js"></script>';
+
+	    if(function_exists('qtranxf_getLanguage')){
+	    	$currentLanguage = qtranxf_getLanguage();
+
+		    switch ($currentLanguage) {
+		    	case 'en':
+		    		$scriptLang = '';
+		    		break;
+
+		    	case 'zh':
+		    		$scriptLang = '<script src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.zh-cn.min.js" type="text/javascript"></script>
+		    		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/zh-cn.js"></script>';
+		    		break;
+
+		    	case 'tw':
+		    		$scriptLang = '<script src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.zh-tw.min.js" type="text/javascript"></script>
+		    		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/zh-tw.js"></script>';
+		    		break;
+		    	
+		    	default:
+		    		$scriptLang = '<script src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.ja-jp.min.js" type="text/javascript"></script>
+		    		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ja.js"></script>';
+		    		break;
+		    }
+	    }
+	    echo $scriptLang;
+	?>
 
 	<script src="<?php the_script_path(); ?>/bsnav.min.js"></script>
 	<script src="<?php the_script_path(); ?>/functions.js"></script>
 	<script src="<?php the_booking_script_path(); ?>/script.js"></script>
+
+	<?php if(is_page( 'rooms' )): ?>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <?php do_action( 'execute_slick_slider'); ?>
+	<?php endif; ?>
 	
 	<script>
 	  (function(d) {

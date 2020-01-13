@@ -31,16 +31,22 @@
 		<link rel="stylesheet" href="<?php the_css_path(); ?>/styles.css" type="text/css">
 		<link rel="stylesheet" href="<?php the_css_path(); ?>/mobile.css" type="text/css">
 
+		<?php if(is_page( 'rooms' )): ?>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH; ?>/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH; ?>/slick/slick-theme.css"/>
+		<?php endif; ?>
+
 		<?php wp_head(); ?>
-		<?php do_action('wp_head_plus') ?>
+		<?php do_action('wp_head_plus'); ?>
 
 	</head>
 
 	<body <?php body_class(); ?>>
 		<?php wp_body_open(); ?>
-		<?php do_action('wp_body_plus') ?>
+		<?php do_action('wp_body_plus'); ?>
 		
 		<div id="page">
-			<?php get_template_part( 'template-part/nav', 'header' ) ?>
+			<?php get_template_part( 'template-part/nav', 'header' ); ?>
 			<?php do_action('content_banner'); ?>
 			<main>

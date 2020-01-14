@@ -263,11 +263,11 @@
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                     <div class="row">
                                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 css-mobile">
-                                            番地・建物名
+                                            建物名
                                         </div>
                                         <div class="col-10 col-sm-10 col-md-10 col-lg-10 css-mobile">
                                             <div class="form-group">
-                                                <input name="building-roomnumber" type="text" class="form-control" id="" placeholder="例)松が丘2丁目62-1 プレシス中野哲学堂パークフロント101">
+                                                <input name="building-roomnumber" type="text" class="form-control" id="" placeholder="例)プレシス中野哲学堂パークフロント101">
                                             </div>
                                         </div>
                                     </div>
@@ -361,7 +361,7 @@
                                     <label class="require-flag secret-info">必須</label>
                                 </div>
                                 <p>弊社の個人情報に関する取り扱いについては「プライバシーポリシー」をご一読ください。上記事項をご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
-                                <p class="content-policy"><a class="btn btn-link" target="_blank" href="../privacypolicy/">▶「プライバシーポリシー」を開く（千野建物管理株式会社）</a></p>
+                                <p class="content-policy"><a class="btn btn-link" target="_blank" href="<?=base_url();?>privacy-policy/">▶「プライバシーポリシー」を開く（千野建物管理株式会社）</a></p>
                                 <div class="checkbox center">
                                     <label>
                                         <input name="secret-info" type="checkbox" id="" value="同意する" onchange=""> 同意する

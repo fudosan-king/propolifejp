@@ -407,3 +407,5 @@ ul.nav_footer li:hover a {
 }
 
 .form-check.checkbox {padding-left: 34px;}
+
+#gmap {width: 100%; height: 360px;}

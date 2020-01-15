@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/styles.css">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/mobile.css">
 
+    <script src="//maps.google.com/maps/api/js?sensor=true&key=AIzaSyAffKlhXHZXYWehQzLKHGMFmJVb7Nvgi0Y"></script>
+
     <?php wp_head(); ?>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,7 +64,7 @@
             <div class="gHeader_inner u-inner">
                 <div class="gHeader_cols">
                     <div class="gHeader_col gHeader_col-no1">
-                        <p class="gHeader_link"><a href="#" target="_blank">会社概要</a></p>
+                        <p class="gHeader_link"><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>" target="_blank">会社概要</a></p>
                     </div>
                     <div class="gHeader_col gHeader_col-no3">
                         <p class="gHeader_link"><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></p>

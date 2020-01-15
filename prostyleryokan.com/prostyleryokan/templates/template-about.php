@@ -139,6 +139,23 @@ get_header();
                                     </div>
                                 </div>
 
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                          株式会社プロスタイル旅館はどんなホテル（旅館）をつくるのですか。
+                                        </button>
+                                        <span></span>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion_questions">
+                                      <div class="card-body">
+                                        <p>具体的案件については、今後随時お知らせするサイトのトピックをご覧ください。<br>
+                                        株式会社プロスタイル旅館のホテル（旅館）は、旅先でお客様がお感じになられるご不安、ご不便などを極力減らすことを役割とし、空間とサービスを提供させていただきます。</p>
+                                      </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="col-12 col-md-6">
@@ -154,22 +171,6 @@ get_header();
                                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion_questions">
                                       <div class="card-body">
                                         <p>現在は「プロスタイル」ブランドで、3つのカテゴリでの展開を検討しています。新築物件、改装物件にも対応しますが、カテゴリーは「ホテル・旅館」「ゲストハウス」「ヴィラ、スウィート」となります。</p>
-                                      </div>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="headingSeven">
-                                      <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                          株式会社プロスタイル旅館はどんなホテル（旅館）をつくるのですか。
-                                        </button>
-                                        <span></span>
-                                      </h2>
-                                    </div>
-                                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion_questions">
-                                      <div class="card-body">
-                                        <p>ホテル（旅館）経営、運営受委託の場合、ブランドは２つのブランドのみとなりますか。</p>
                                       </div>
                                     </div>
                                 </div>

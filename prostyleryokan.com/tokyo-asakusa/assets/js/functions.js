@@ -7,20 +7,23 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 $(function($) {
 
-  $('.owl_topbanner').owlCarousel({
-      loop: false,
-      margin: 10,
-      nav: false,
-      dots: false,
-      items: 1,
-      autoplay: true,
-      autoplayTimeout: 4000,
-      autoplayHoverPause: false,
-      animateOut: 'fadeOut'
-  });
+  if($('.owl_topbanner').length)
+    $('.owl_topbanner').owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: false,
+        dots: false,
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: false,
+        animateOut: 'fadeOut'
+    });
 
 	AOS.init();
 
+  
+  if($('#timerOlympic').length)
   $('#timerOlympic').yycountdown({
     endDateTime   : '2020/07/24 00:00:00'
   });

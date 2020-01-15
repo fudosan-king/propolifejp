@@ -7,6 +7,7 @@ class ACFRoomsCPTFields
 	function __construct($postID){
 		$_post = get_post( $postID );
 		$this->data['post'] = $_post;
+		$this->data['gallery'] = get_field('gallery', $_post);
 		$this->data['description'] = get_field('description', $_post);
 		$this->data['introduction'] = get_field('introduction', $_post);
 		$this->data['box_content'] = get_field('box_content', $_post);
@@ -25,6 +26,11 @@ class ACFRoomsCPTFields
 	public static function _data($postID){
 		$obj = new self($postID);
 		return json_decode(json_encode($obj->getData()));
+	}
+
+	public static function _gallery($postID){
+		$_post = get_post( $postID );
+		return json_decode(json_encode(get_field('gallery', $_post)));
 	}
 
 	public static function _description($postID){

@@ -13,6 +13,8 @@
     $data = ACFRoomsCPTFields::_data($post->ID);
     $boxContent = ACFRoomsCPTFields::_boxContent($post->ID);
 
+    $gallery = $data->gallery;
+
     function _generateLRBoxContent($repeater, $class=''){
         $html = '';
         if(_isNotNull($repeater)){
@@ -75,6 +77,38 @@
         }
         return $html;
     }
+
+    function _generateGallerySlider($gallery){
+        $html = '';
+        if(_isNotNull($gallery)){
+            $html .= ' <div class="carousel carousel-main" data-flickity=\'{ "pageDots": false, "prevNextButtons": false }\'>';
+            foreach($gallery as $i => $obj){
+                $html .= '
+                <div class="carousel-cell">
+                    <a href="'.$obj->url.'" data-fancybox="images"><img src="'.$obj->url.'" alt="" class="img-fluid"></a>
+                </div>';
+            }
+            $html .= '</div>';
+        }
+
+        return $html;
+    }
+    function _generateGalleryNavSlider($gallery){
+        $html = '';
+        if(_isNotNull($gallery)){
+            $html .= '<div class="carousel carousel-nav"
+                        data-flickity=\'{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }\'>';
+            foreach($gallery as $i => $obj){
+                $html .= '
+                <div class="carousel-cell">
+                    <img src="'.$obj->url.'" alt="" class="img-fluid">
+                </div>';
+            }
+            $html .= '</div>';
+        }
+
+        return $html;
+    }
 ?>
 
 <section class="section_room_detail">
@@ -84,13 +118,23 @@
                 <div class="swiper_room">
                     <div class="box_label">
                         <h3><?=the_title();?></h3>
-                        <!-- <h2>コーナーツイン</h2> -->
                     </div>
-                    <div class="swiper-container gallery-top">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background-image:url('<?php echo $thumbnail->url; ?>')"></div>
-                        </div>
-                    </div>
+                    <?php 
+                        if(_isNotNull($data->gallery)){
+                            _echo(_generateGallerySlider($gallery));
+                            _echo(_generateGalleryNavSlider($gallery));
+                        }else{
+                            ?>
+                            <div class="swiper-container gallery-top">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image:url('<?php echo $thumbnail->url; ?>')"></div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    ?>
+
+                    
                 </div>
             </div>
         </div>

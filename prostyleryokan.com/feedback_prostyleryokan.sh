@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -rlpcDvz php.intra.fudosan-king.jp:/var/www/prostyleryokan/yokohamabashamichi/wp-content/themes/prostyleryokan ./
+rsync -rlpcDvz php.intra.fudosan-king.jp:/var/www/prostyleryokan/main/wp-content/themes/kpropvn/ ./prostyleryokan/

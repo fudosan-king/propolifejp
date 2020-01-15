@@ -8,6 +8,7 @@ include_once 'inc/acf-object/acf-cpt-rooms.php';
 include_once 'inc/acf-object/acf-table-outline.php';
 include_once 'inc/acf-object/acf-terms.php';
 include_once 'inc/acf-object/acf-restaurant.php';
+include_once 'inc/acf-object/acf-gallery.php';
 
 if (!function_exists('uniquek_setup_theme')){
 	function uniquek_setup_theme(){
@@ -68,6 +69,9 @@ if (!function_exists('display_nav_menus')){
 			foreach ($topNav as $nav){
 				/* Action here */
 				$active = $nav->object_id == $post->ID ? 'active' : "";
+				
+				if(strtolower($nav->post_title) == 'gallery' && !is_user_logged_in())
+					continue;
 
 				if ($nav->menu_item_parent == 0){
 					$childMenu = get_nav_child_menu($topNav, $nav->ID);

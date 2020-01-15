@@ -107,7 +107,7 @@ function _generateTag_link($objLink, $class=''){
 function _getTag_image($objImg, $class=''){
 	$html = '';
 	if(_isNotNull($objImg))
-		$html = sprintf('<img src="%s" alt="" class="img-fluid %s">', $objImg->url, $class);
+		$html = sprintf('<img src="%s" alt="%s" class="img-fluid %s">', $objImg->url, $objImg->alt, $class);
 	return $html;
 }
 

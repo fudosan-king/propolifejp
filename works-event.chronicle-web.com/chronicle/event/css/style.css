@@ -6,6 +6,8 @@
 	background-image: url(../images/main.jpg);
 }
 
+.container-margin {margin-top: 55px;}
+
 #footer .wrap {
 	background: url(../images/footer.png) no-repeat 50% 0;
 }

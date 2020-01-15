@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
-<div id="main">
+<!-- <div id="main">
 	<div class="wrap">
-		<h2><a href="<?php echo esc_url( home_url('/') ); ?>event/">イベント・セミナー情報<span>EVENT &amp; SEMINAR</span></a></h2>
+		<h2><a href="<?php //echo esc_url( home_url('/') ); ?>event/">イベント・セミナー情報<span>EVENT &amp; SEMINAR</span></a></h2>
 	</div>
-</div><!-- #main -->
+</div> -->
+<!-- #main -->
 
-
+<div class="container-margin"></div>
 <div id="container" class="clearfix">
 	<div class="catch">クロニクルが提供するリノベーションのイベントやセミナーをご覧いただけます。</div>
 	<div id="localNav">

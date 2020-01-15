@@ -55,7 +55,7 @@ get_header();
                             </div>
                         </div>
                         <div class="col-12 col-md-6 align-self-center">
-                            <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/img_map.jpg" alt="" class="img-fluid">
+                            <div id="gmap" class="left_clm"></div>
                         </div>
                     </div>
                 </div>
@@ -135,23 +135,6 @@ get_header();
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion_questions">
                                       <div class="card-body">
                                         <p>2018年8月にオープンしたプロスタイル旅館 横浜馬車道 (https://www.prostyleryokan.com/yokohamabashamichi/)がございます。2019年には浅草にも開業を予定しています。株式会社プ</p>
-                                      </div>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="headingFive">
-                                      <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                          株式会社プロスタイル旅館はどんなホテル（旅館）をつくるのですか。
-                                        </button>
-                                        <span></span>
-                                      </h2>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion_questions">
-                                      <div class="card-body">
-                                        <p>具体的案件については、今後随時お知らせするサイトのトピックをご覧ください。<br>
-                                        株式会社プロスタイル旅館のホテル（旅館）は、旅先でお客様がお感じになられるご不安、ご不便などを極力減らすことを役割とし、空間とサービスを提供させていただきます。</p>
                                       </div>
                                     </div>
                                 </div>
@@ -257,49 +240,49 @@ get_header();
                     <h2 class="title">グループ企業</h2>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="https://www.chronicle-web.com/" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_chronicle.jpg" alt="" class="img-fluid">
                         <p>株式会社クロニクル</p>
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="https://www.chronicle-kensetsu.co.jp/" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_chronicle_contrustion.jpg" alt="" class="img-fluid">
                         <p>株式会社クロニクル建設</p>
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="https://www.prostyle-residence.com/" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_prostyle.jpg" alt="" class="img-fluid">
                         <p>株式会社プロスタイル</p>
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="https://www.chinokanri.co.jp/" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_chino.jpg" alt="" class="img-fluid">
                         <p>千野建物管理株式会社</p>
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="#" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_yantai.jpg" alt="" class="img-fluid">
                         <p>煙台提案生活木業有限公司</p>
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="https://www.propolifevietnam.com/" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_propolifevn.jpg" alt="" class="img-fluid">
                         <p>PROPOLIFE VIETNAM</p>
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="http://www.nikuan-kotakino.com/" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_kotakino.jpg" alt="" class="img-fluid">
                         <p>株式会社小滝野</p>
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a class="box_logo" href="#">
+                    <a class="box_logo" href="https://www.oki-ig.com/" target="_blank">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/logo_igeto.jpg" alt="" class="img-fluid">
                         <p>株式会社沖縄イゲトー</p>
                     </a>
@@ -307,6 +290,56 @@ get_header();
             </div>
         </div>
     </section>
+    
+    <script>
+        function initialize() {
+            var latlng = new google.maps.LatLng(35.446894, 139.635070);
+            var opts = {
+                zoom: 18,
+                center: latlng,
+                mapTypeControl: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("gmap"), opts);
 
+            var styleOptions = [{
+
+                'stylers': [{
+                    'gamma': 0.8
+                }, {
+                    'saturation': -100
+                }, {
+                    'lightness': 20
+                }]
+            }]
+
+            var styledMapOptions = {
+                name: 'Googlemap'
+            }
+            var monoType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+            map.mapTypes.set('mono', monoType);
+            map.setMapTypeId('mono');
+
+            var image = {
+                url : '<?php echo TEMPLATE_ASSETS_PATH; ?>/img/gmap_marker.png',
+                scaledSize : new google.maps.Size(240, 56)
+            }
+            var Marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                icon: image
+            });
+
+            var contentString = 'プロポライフホテルズMAP';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+            //infowindow.open(map, lopanMarker);
+            google.maps.event.addListener(Marker, 'click', function() {
+                infowindow.open(map, Marker);
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 <?php
 get_footer();

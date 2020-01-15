@@ -3,23 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <title>【富山】日本家屋・一棟貸切宿|和美再美 石動 柏屋（かしわや）</title>
-    <meta name="description" content="「和美再美 石動 柏屋」は富山県小矢部市にある日本家屋。一組様一棟貸しの宿で、鯉が泳ぐ日本庭園を眺めながら、侘び寂びの世界観を深く味わうことができます。">
-    <meta name="keywords" content="富山,日本家屋,一棟貸切宿">
-    <meta property="og:title" content="【富山】日本家屋・一棟貸切宿|和美再美 石動 柏屋（かしわや）">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wabisabi-kashiwaya.jp/">
-    <meta property="og:image" content="https://wabisabi-kashiwaya.jp/assets/img/common/ogp.png">
-    <meta property="og:site_name" content="【富山】日本家屋・一棟貸切宿|和美再美 石動 柏屋（かしわや）">
-    <meta property="og:description" content="「和美再美 石動 柏屋」は富山県小矢部市にある日本家屋。一組様一棟貸しの宿で、鯉が泳ぐ日本庭園を眺めながら、侘び寂びの世界観を深く味わうことができます。"> -->
+
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon_package_v0.16/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/site.webmanifest">
+    <link rel="mask-icon" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 

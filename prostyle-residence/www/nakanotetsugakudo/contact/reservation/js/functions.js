@@ -309,7 +309,7 @@ $(document).ready(function() {
             // }
 
             if (date.getDay() == 2 ) {
-                if((date.getMonth()+1) ==10 && date.getDate() == 22 && date.getFullYear() == 2019 ){
+                if((((date.getMonth()+1) ==2 && date.getDate() == 11) || ((date.getMonth()+1) ==9 && date.getDate() == 22) || ((date.getMonth()+1) ==11 && date.getDate() == 3)) && date.getFullYear() == 2020 ){
                     return true;
                 }else{
                     return false;
@@ -317,7 +317,11 @@ $(document).ready(function() {
             }
 
             if (date.getDay() == 3) {
-                return false;
+                if((date.getMonth()+1) ==4 && date.getDate() == 29 && date.getFullYear() == 2020 ){
+                    return true;
+                }else{
+                    return false;
+                }
             }
 
             if ((date.getMonth() + 1) == 12){

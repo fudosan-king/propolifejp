@@ -52,7 +52,7 @@
 
 <body class="p-home">
 
-    <header id="js-gHeaderWrap" class="gHeaderWrap">
+    <header id="js-gHeaderWrap" class="gHeaderWrap <?php echo !is_front_page() ? 'header_underpage' : ''; ?>">
         <div class="gHeader">
             <div class="gHeader_inner u-inner">
                 <div class="gHeader_cols">

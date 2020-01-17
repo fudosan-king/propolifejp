@@ -1,29 +1,26 @@
-
-
-/* General */
 .btn:focus {
-	outline: none;
+    outline: none;
 }
 .btn {
-	border-radius: 0;
+    border-radius: 0;
 }
 .form-control:focus {
-	box-shadow: none;
+    box-shadow: none;
 }
 .red {
-	color: red;
+    color: red;
 }
 
 /* Top */
 body {
-	background-image: none;
-	background-color: #fff;
-	color: #414141;
+    background-image: none;
+    background-color: #fff;
+    color: #414141;
 }
 .gNav_logo {
     left: -100px;
 }
-.gHeader_cols::before {
+/* .gHeader_cols::before {
     content: '';
     top: 0;
     -webkit-transform: translateY(-101%);
@@ -32,11 +29,11 @@ body {
     transition: all .4s cubic-bezier(.19,1,.22,1);
     -webkit-transition-timing-function: cubic-bezier(.19,1,.22,1);
     transition-timing-function: cubic-bezier(.19,1,.22,1);
-}
+} */
 .gHeader_cols.active {
     position: relative;
 }
-.gHeader_cols.active::before {
+/* .gHeader_cols.active::before {
     content: '';
     background: #fff;
     position: absolute;
@@ -47,15 +44,15 @@ body {
     right: 0;
     -webkit-transform: translateY(0);
     transform: translateY(0);
-}
+} */
 .gHeader_cols.active .gHeader_link > a {
-    color: #595757;
+    /* color: #595757; */
 }
 .gHeader_cols.active .gHeader_link > a:hover {
     color: #fff;
 }
 .gHeader_link > a {
-    background: transparent;
+    background: #595757c7;
     border: none;
     color: #fff;
     font-size: 15px;
@@ -64,6 +61,40 @@ body {
     background-color: #595757;
     color: #fff;
 }
+
+/* .header_underpage .gHeader_link > a {
+    color: #595757;
+}
+.header_underpage .gHeader_cols.active .gHeader_link > a {
+    color: #fff;
+}
+
+.header_underpage .gHeader_cols::before {
+    content: '';
+    top: 0;
+    -webkit-transform: translateY(-101%);
+    transform: translateY(-101%);
+    -webkit-transition: all .4s cubic-bezier(.19,1,.22,1);
+    transition: all .4s cubic-bezier(.19,1,.22,1);
+    -webkit-transition-timing-function: cubic-bezier(.19,1,.22,1);
+    transition-timing-function: cubic-bezier(.19,1,.22,1);
+}
+.header_underpage .gHeader_cols.active::before {
+    content: '';
+    background: #595757;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.header_underpage .gHeader_link > a:hover {
+    background: #656565;
+} */
+
 /* banner top */
 .vis .slick-dots {
 	top: inherit;

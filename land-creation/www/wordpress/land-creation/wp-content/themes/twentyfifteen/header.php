@@ -58,7 +58,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <ul class="dropdown-menu">
   <li><a href="https://www.landcreation.co.jp/"><img src="https://www.landcreation.co.jp/static/img/common/menu_home.png" width="28" height="63" alt=""/></a></li>
-  <li><a href="https://www.landcreation.co.jp/search"><img src="https://www.landcreation.co.jp/static/img/common/menu_search.png" width="60" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/search"><img src="https://www.landcreation.co.jp/static/img/common/menu_search_sale.png" width="60" height="63" alt=""/></a></li>
+  <li><a href="https://www.landcreation.co.jp/search_rent/"><img src="https://www.landcreation.co.jp/static/img/common/menu_search_rent.png" width="60" height="63" alt=""/></a></li>
   <li><a href="https://www.landcreation.co.jp/renovation/index.html"><img src="https://www.landcreation.co.jp/static/img/common/menu_renovation.png" width="146" height="63" alt=""/></a></li>
   <li><a href="https://www.landcreation.co.jp/knowledge/index.html"><img src="https://www.landcreation.co.jp/static/img/common/menu_knowledge.png" width="132" height="63" alt=""/></a></li>
   <li><a href="https://www.landcreation.co.jp/rental/index.html"><img src="https://www.landcreation.co.jp/static/img/common/menu_rental_management.png" width="60" height="63" alt=""/></a></li>
@@ -87,7 +88,8 @@ $('.menubtn').on({
 <div class="menubar clearfix">
   <ul>
   <li><a class="home" href="https://www.landcreation.co.jp/"></a></li>
-  <li><a class="search" href="https://www.landcreation.co.jp/search"></a></li>
+  <li><a href="/search"><img src="https://www.landcreation.co.jp/static/img/common/menu_search_sale.png" width="60" height="63" alt=""/></a></li>
+  <li><a href="/search_rent/"><img src="https://www.landcreation.co.jp/static/img/common/menu_search_rent.png" width="60" height="63" alt=""/></a></li>
   <li><a class="renova" href="https://www.landcreation.co.jp/renovation/index.html"></a></li>
   <li><a class="know" href="https://www.landcreation.co.jp/knowledge/index.html"></a></li>
   <li><a class="manage" href="https://www.landcreation.co.jp/rental/index.html"></a></li>

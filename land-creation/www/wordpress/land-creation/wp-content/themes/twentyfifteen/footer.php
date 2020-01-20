@@ -27,7 +27,7 @@
 
 
 <div class="footer">
-  <p class="fnavi">　<a href="https://www.landcreation.co.jp/">ホーム</a>　|　<a href="https://www.landcreation.co.jp/search">物件検索</a>　|　<a href="https://www.landcreation.co.jp/renovation/index.html">建築・リノベーション</a>　|　<a href="https://www.landcreation.co.jp/knowledge/index.html">住宅購入の基礎知識</a>　|　<a href="https://www.landcreation.co.jp/rental/index.html">賃貸管理</a>　|　<a href="https://www.landcreation.co.jp/conference/index.html">競売代行・任意売却相談</a>　|　<a href="https://www.landcreation.co.jp/blog" class="now">ブログ</a>　|　<a href="/company/index.html">会社概要</a>　</p>
+  <p class="fnavi">　<a href="https://www.landcreation.co.jp/">ホーム</a>　|　<a href="https://www.landcreation.co.jp/search">売買検索</a>　| <a href="https://www.landcreation.co.jp/search_rent/">賃貸検索</a>　|　<a href="https://www.landcreation.co.jp/renovation/index.html">建築・リノベーション</a>　|　<a href="https://www.landcreation.co.jp/knowledge/index.html">住宅購入の基礎知識</a>　|　<a href="https://www.landcreation.co.jp/rental/index.html">賃貸管理</a>　|　<a href="https://www.landcreation.co.jp/conference/index.html">競売代行・任意売却相談</a>　|　<a href="https://www.landcreation.co.jp/blog" class="now">ブログ</a>　|　<a href="/company/index.html">会社概要</a>　</p>
   <div class="wrapper infobar">
     <div class="logo"><a href="https://www.landcreation.co.jp/"><img src="https://www.landcreation.co.jp/static/img/common/logo_mark.png" width="72" height="56" alt=""/></a></div>
     <p class="info">株式会社ランドクリエイション<br>

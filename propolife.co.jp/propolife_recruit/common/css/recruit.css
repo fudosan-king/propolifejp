@@ -24,7 +24,7 @@
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    background-color: #fff;
+    background-color: beige;
     color: #000;
     padding: 10px;
     border: #6C1A16 3px solid;
@@ -34,7 +34,7 @@
     height: 180px;
     position: relative;
 
-    background-image: url(../img/bg_block.png);
+    /*background-image: url(../img/bg_block.png);*/
 
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;

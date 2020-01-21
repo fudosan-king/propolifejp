@@ -1,0 +1,148 @@
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1533px;
+	}
+}
+
+@media (max-width: 1024px) {
+	
+}
+
+@media (max-width: 812px) {
+	
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 768px) {
+	body {
+		font-size: 16px;
+	}
+	header {
+		padding: 20px 0;
+	}
+	.logo img {
+		width: 200px;
+	}
+	.section_banner {
+		height: 552px;
+	}
+	.section_banner h1 {
+		font-size: 38px;
+	}
+	.title {
+		font-size: 28px;
+	}
+	.box_feature_item {
+		margin-top: 60px;
+	}
+	.box_feature_item:last-child {
+	    margin-bottom: 30px;
+	}
+	.box_feature_item h3 {
+		font-size: 26px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.box_feature_item h3 .cap_number {
+		display: block;
+		margin-bottom: 40px;
+		font-size: 116px;
+	}
+	.section_feature .title span {
+		font-size: 35px;
+		line-height: 1.8em;
+	}
+	.feature_title {
+		margin-left: 0;
+	}
+	.section_key {
+		padding: 60px 0;
+	}
+	.btn_contactus {
+		min-width: inherit;
+		margin-top: 30px;
+		padding: 8px 30px;
+		font-size: 20px;
+		border-radius: 5px;
+	}
+	.box_gallery .carousel-cell, .box_gallery .carousel-cell img {
+		height: 380px;
+	}
+	.box_gallery .flickity-button {
+		width: 45px;
+		height: 45px;
+	}
+	.section_solidwood {
+		padding-bottom: 60px;
+	}
+
+	.box_solid {
+		margin-top: 60px;
+	}
+	.box_solid h2 {
+		font-size: 28px;
+		margin-bottom: 30px;
+	}
+	.box_solid h1 {
+		font-size: 30px;
+	}
+	.box_consult_content {
+		padding: 15px;
+		margin: 50px 0;
+	}
+	.box_consult_content h4 {
+		margin-bottom: 30px;
+		font-size: 20px;
+	}
+	.form-check-inline {
+		display: block;
+	}
+	.box_consult_img, .box_consult_img img {
+		height: 264px;
+	}
+}
+
+@media (min-width: 768px) {
+
+}
+@media (max-width: 736px) {
+	
+}
+
+@media (max-width: 667px) {
+	
+}
+
+@media (max-width: 414px) {
+	.section_banner {
+		height: 281px;
+	}
+	.box_gallery .carousel-cell, .box_gallery .carousel-cell img {
+		height: 186px;
+	}
+}
+
+@media (max-width: 375px) {
+	
+}
+
+
+@supports (-webkit-overflow-scrolling: touch) {
+    
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+  /* CSS for other than iOS devices */ 
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body {
+		font-family: "メイリオ",Meiryo,"游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-family: "メイリオ",Meiryo,"游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS PGothic",sans-serif;	
+	}
+}

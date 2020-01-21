@@ -1,0 +1,284 @@
+a {color: #828080;}
+.btn {color: #fff; border-radius: 0;}
+.btn,a,.btn:hover{-webkit-transition:color .25s ease;-moz-transition:color .25s ease;-o-transition:color .25s ease;transition:color .25s ease;}
+.btn:hover, .btn.focus {color:#257996;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear;}
+.btn.focus, .btn:focus {box-shadow: none;}
+::selection{background:#744639;color:#FFF;text-shadow:none}
+::-moz-selection{background:#744639;color:#FFF;text-shadow:none}
+::-webkit-selection{background:#744639;color:#FFF;text-shadow:none}
+html{width:100%;height:100%}
+body{width:100%;height:100%;background:#fff; font-family: "Hiragino Sans", "Hiragino Kaku Gothic Std"; line-height: 2em; font-size: 30px; font-weight: 300;
+-webkit-font-smoothing:subpixel-antialiased;-webkit-font-smoothing:antialiased!important;-moz-osx-font-smoothing:grayscale; color:#828080;}
+.btn-link{color:#828080;word-break:normal;word-break:break-all;word-break:keep-all}
+.btn-link:hover{color:#828080;text-decoration:underline}
+h1,h2,h3,h4,h5,h6 {font-family: "Hiragino Sans", "Hiragino Kaku Gothic Std"; line-height:1.3em; font-weight: 800; text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;color:#828080; margin-bottom: 10px; font-size: 32px;}
+h2{font-size:36px;} h3{font-size:30px;}
+*,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
+html,body{position:relative;height:100%}
+a:hover {text-decoration:none;color:#fff;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear;}
+.form-control:focus {box-shadow: none;}
+.relative {position: relative;} .red {color: red;}
+
+/* top */
+header {
+	text-align: center;
+	padding: 40px 0;
+	box-shadow: 0px 1px 2.79px 0.21px rgba(0, 0, 0, 0.4);
+	position: relative;
+	z-index: 10;
+}
+
+/* section_banner */
+.section_banner {
+	background: url('../images/1x/banner01.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 592px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+	text-align: center;
+	position: relative;
+}
+.section_banner h1 {
+	color: #fff;
+	font-size: 78px;
+	margin: 0;
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+	font-weight: 600;
+	color: #4e4d4d;
+}
+.section_banner::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #f8f9fac7;
+}
+.section_key {
+	padding: 115px 0;
+}
+
+/* section_feature */
+.section_feature {
+	padding: 60px 0;
+	background: #744639;
+	color: #fff;
+}
+.title {
+	font-size: 45px;
+	color: #fff;
+	text-align: center;
+}
+.section_feature .title {
+
+}
+.section_feature .title span {
+	font-size: 95px;
+	position: relative;
+}
+.section_feature .title span::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+	width: 100%;
+	height: 8px;
+	background: #fff;
+}
+.box_feature_item {
+	margin-top: 150px;
+}
+.box_feature_item h3 {
+	color: #fff;
+	font-size: 48px;
+	margin-bottom: 50px;
+}
+.box_feature_item:last-child {
+	margin-bottom: 150px;
+}
+.box_feature_item h3 .cap_number {
+	font-size: 196px;
+	font-family: futura-pt, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+.box_feature_item h3 span {
+	display: inline-block;
+}
+.feature_title {
+	margin-left: 30px;
+}
+.box_feature_item p {
+	color: #fff;
+	line-height: 1.5em;
+	font-weight: 300;
+}
+
+/* section_solidwood */
+.box_solid {
+	margin-top: 150px;
+	text-align: center;
+}
+.box_solid h2 {
+	font-size: 45px;
+	color: #fff;
+	margin-bottom: 90px;
+}
+.box_solid h1 {
+	font-size: 60px;
+	color: #fff;
+}
+.section_solidwood {
+	text-align: center;
+	padding-top: 82px;
+	padding-bottom: 120px;
+}
+.section_solidwood .title {
+	color: #828080;
+	margin-bottom: 45px;
+}
+.btn_contactus {
+	background: #60bd8a;
+	font-size: 52px;
+	border-radius: 10px;
+	font-weight: 600;
+	padding: 40px 30px;
+	margin-top: 135px;
+	min-width: 768px;
+}
+.btn_contactus:hover {
+	background: #379461;
+	color: #fff;
+}
+
+
+footer {
+	background: #744639;
+	text-align: center;
+	padding: 25px 0;
+}
+footer a {
+	color: #fff;
+}
+footer p {
+	margin-bottom: 0;
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #fff;
+}
+
+.box_gallery .carousel-cell {
+  width: 66%;
+  height: 630px;
+  margin-right: 20px;
+  background: #744639;
+  overflow: hidden;
+}
+.box_gallery .carousel-cell img {
+	width: 100%;
+	height: 630px;
+	object-fit: cover;
+}
+.box_gallery .flickity-button {
+	background: transparent;
+	width: 65px;
+	height: 65px;
+	border: 1px solid transparent;
+}
+.box_gallery .flickity-button:hover {
+	border: 1px solid #4b4b4b;
+}
+.box_gallery .flickity-prev-next-button.previous {
+	left: 17%;
+}
+.box_gallery .flickity-prev-next-button.next {
+	right: 17%;
+}
+.box_gallery .flickity-button-icon {
+	color: #4b4b4b;
+}
+.box_gallery .flickity-button:hover {
+	background: #ffffff91;
+}
+
+/* section_consult */
+
+.section_consult .title {
+	color: #828080;
+	line-height: 1.5em;
+}
+.box_consult_content {
+	border-radius: 20px;
+	border: 1px solid #828080;
+	padding: 30px;
+	margin: 100px 0;
+}
+.box_consult_content h4 {
+	font-size: 30px;
+	line-height: 1.5em;
+	font-weight: 600;
+	margin-bottom: 90px;
+}
+.box_consult_img {
+	width: 100%;
+	height: 457px;
+	overflow: hidden;
+}
+.box_consult_img img {
+	width: 100%;
+	height: 457px;
+	object-fit: cover;
+}
+
+/* frm_consult_shoroom */
+.frm_consult_shoroom {
+	font-size: 16px;
+	line-height: 1.8em;
+	color: #000;
+	font-weight: 400;
+}
+.frm_consult_shoroom h3 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.box_consult_row {
+	border-bottom: 1px solid #ccc;
+	padding: 30px 0 15px;
+}
+.text_organge {
+	color: #ef8c3a;
+}
+.text_organge:hover {
+	color: #ef8c3a;
+	text-decoration: underline;
+}
+.text_notify {
+	text-align: center;
+	border-bottom: 2px solid #744639;
+	padding-bottom: 30px;
+	margin-bottom: 0;
+}
+
+.btnSubmit {
+	background: #3dbbcf;
+	color: #fff;
+	border-radius: 100px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 30px 0 150px;
+	font-size: 18px;
+}
+.btnSubmit:hover {
+	background: #2ca1b4;
+	color: #fff;
+}
+.date_input {
+	background: url('../images/1x/i_calendar.jpg') no-repeat 98% 50%;
+}

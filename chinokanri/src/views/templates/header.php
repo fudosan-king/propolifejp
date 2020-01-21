@@ -25,6 +25,8 @@
         <!-- Place your kit's code here -->
         <script src="https://kit.fontawesome.com/426c32e6a9.js" crossorigin="anonymous"></script>
 
+        <!-- monmentjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
         <title><?=$title;?></title>
         <meta name="Description" content="<?=$meta_description;?>">

@@ -6,7 +6,7 @@
         </p>
     </div>
 </section>
-<section class="row news">
+<!-- <section class="row news">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
         <h3 class="block-title text-center">お知らせ</h3>
         <article class="content">
@@ -18,7 +18,7 @@
             </p>
         </article>
     </div>
-</section>
+</section> -->
 <section class="row company-info">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
         <h3 class="block-title text-center">会社概要</h3>

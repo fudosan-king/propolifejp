@@ -13,16 +13,43 @@ $(function() {
  //    var strToday = ${date.getFullYear()} + '/' + ${date.getMonth()} + '/' + ${date.getDate()};
 
     $('#icancellation_notice_date').datepicker({
+        format: 'yyyy/mm/dd',
         language: 'ja',
         autoclose: true,
         todayHighlight: true,
     });
 
+
+    var future = moment(new Date());
+    future.add(1, 'month');
+
     $('#icancellation_date').datepicker({
+        format: 'yyyy/mm/dd',
     	language: 'ja',
         autoclose: true,
-        todayHighlight: true,
+        // defaultDate: moment('2020/02/22'),
+        // setDate: availableDate,
+        // todayHighlight: true,
+        // startDate: '+31d',
+        beforeShowDay: function(date) {
+            var toDay = (new Date());
+            toDay.setDate(toDay.getDate() - 1);
+            if (date.getTime() < toDay.getTime()) {
+                return false;
+            }
+
+            if (date.getTime() <= future) {
+                return false;
+            }
+
+        },
     });
+
+    var availableDate = moment(new Date());
+    availableDate.add(1, 'month');
+    availableDate.add(1, 'day');
+    $('#icancellation_date').val(availableDate.format('YYYY/MM/DD')).datepicker("update");
+
 
     $('#icancellation_notice_date').datepicker('setDate', today);
     $('#icancellation_notice_date_display').html($('#icancellation_notice_date').val());

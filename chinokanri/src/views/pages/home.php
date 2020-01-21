@@ -6,7 +6,7 @@
         </p>
     </div>
 </section>
-<section class="row news">
+<!-- <section class="row news">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
         <h3 class="block-title text-center">お知らせ</h3>
         <article class="content">
@@ -18,7 +18,7 @@
             </p>
         </article>
     </div>
-</section>
+</section> -->
 <section class="row company-info">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
         <h3 class="block-title text-center">会社概要</h3>
@@ -85,10 +85,6 @@
                     <tr>
                         <th>採用HP</th>
                         <td><a href="https://www.propolife.co.jp/recruit/" target="_blank" title="">プロポライフグループ採用ページへ</a></td>
-                    </tr>
-                    <tr>
-                        <th>新卒採用</th>
-                        <td><a href="https://job.mynavi.jp/20/pc/search/corp231546/outline.html" target="_blank" title="">㈱マイナビ運営「マイナビ2020」へ</a></td>
                     </tr>
                     <tr>
                         <th rowspan="2">中途採用</th>

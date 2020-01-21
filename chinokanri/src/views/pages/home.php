@@ -87,10 +87,6 @@
                         <td><a href="https://www.propolife.co.jp/recruit/" target="_blank" title="">プロポライフグループ採用ページへ</a></td>
                     </tr>
                     <tr>
-                        <th>新卒採用</th>
-                        <td><a href="https://job.mynavi.jp/20/pc/search/corp231546/outline.html" target="_blank" title="">㈱マイナビ運営「マイナビ2020」へ</a></td>
-                    </tr>
-                    <tr>
                         <th rowspan="2">中途採用</th>
                         <td><a href="https://www.propolife.co.jp/recruit/%E3%80%90%E4%B8%AD%E9%80%94%E6%8E%A1%E7%94%A8%E3%80%91%E5%8B%A4%E5%8B%99%E5%9C%B0%E9%99%90%E5%AE%9A/%E6%A8%AA%E6%B5%9C%E9%B6%B4%E8%A6%8B%E5%8B%A4%E5%8B%99%e3%80%80%E8%B3%83%E8%B2%B8%E5%96%B6%E6%A5%AD%E8%81%B7%EF%BC%882018%EF%BC%89/" target="_blank" title="">営業職</a></td>
                     </tr>

@@ -86,21 +86,6 @@ $dir_name = 'home';
             </div>
         </div>
 
-        <div id="section03" class="section">
-            <div class="section_inner">
-                <a href="https://www.prostyle-villa.com/" target="_blank">
-                    <h3><img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec08_title.png" width="375" height="150" alt="Prostyle Villa"></h3>
-                    <p class="pic">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec08_pic_<?php echo $current_lang; ?>.jpg" width="370" height="405" alt="" class="pc">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/img_sec08_pic_sp_<?php echo $current_lang; ?>.jpg" width="156" alt="" class="sp">
-                    </p>
-                    <p class="btn_more">
-                        <img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more.png" width="200" height="50" alt="MORE" class="pc"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/btn_more_sp.png" width="100" alt="MORE" class="sp">
-                    </p>
-                </a>
-            </div>
-        </div>
-
         <div id="section04" class="section">
             <div class="section_inner">
                 <a href="https://www.chronicle-web.com/reform/" target="_blank">
@@ -206,10 +191,6 @@ $dir_name = 'home';
                     <div align="left">
                         <a href="https://www.instagram.com/chronicle_web.official/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/bnr-chronicle-Instagram.jpg" alt="" class="img-responsive line-pc"></a>
                         <a href="https://www.instagram.com/chronicle_web.official/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/bnr-chronicle-Instagram-sp.jpg" alt="" class="img-responsive line-sp"></a>
-                    </div>
-                    <div align="left">
-                        <a href="https://www.prostyle-villa.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/villa-bannerPC.png" alt="" class="img-responsive line-pc"></a>
-                        <a href="https://www.prostyle-villa.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/home/villa-bannnerSP.png" alt="" class="img-responsive line-sp"></a>
                     </div>
                     <ul>
                         <?php foreach($home_post as $post) : setup_postdata($post); ?>

@@ -132,15 +132,6 @@ get_header(); ?>
 						</a>
 						<span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
 				    </li>
-				    <li>
-						
-							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/com_link_yokohama.jpg" width="356" height="101" alt="株式会社プロスタイル横浜">
-							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/sp_com_link_yokohama.jpg" width="100%" alt="株式会社プロスタイル横浜">
-						
-						<span>株式会社プロスタイル横浜</span>
-				    </li>
-
-
 			    </ul>
 		    </div>
 			</div>

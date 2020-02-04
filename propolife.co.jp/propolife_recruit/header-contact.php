@@ -31,7 +31,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
         <meta property="og:title" content="PROPOZOO 株式会社プロポライフグループ　採用GUIDE MAP" />
         <meta property="og:description" content="PROPOZOO プロポライフグループ採用GUIDEMAP。それは個性豊かなプロポライフグループの社員達が活躍する島、”PROPOZOO”。島内を巡り、普段どのように仕事をしているのか、どんな会社なのかを、ご体験ください。" />
         <meta property="og:image" content="https://www.propolife.co.jp/recruit/wordpress/wp-content/themes/propolife_recruit/common/ogimage.jpg" />
-        <?php 
+        <?php
         if(is_page( 'contact' )):
             ?>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
@@ -81,7 +81,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
         <div class="menuBg"></div>
-                
+
         <header id="header" class="contact">
         <div class="hInner clearfix">
             <h1><a href="https://propolife.co.jp/"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo02.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
@@ -178,10 +178,6 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <a href="https://www.oki-ig.com"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー"></a>
                         <span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
                     </li>
-                    <li>
-                        <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link_yokohama.jpg" width="356" height="98" alt="株式会社プロスタイル横浜">
-                        <span>株式会社プロスタイル横浜</span>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -264,7 +260,6 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <li><a href="https://www.chronicle-web.com/">株式会社クロニクル</a></li>
                         <li><a href="https://www.chronicle-web.com/reform/">株式会社クロニクル建設</a></li>
                         <li><a href="https://www.prostyle-residence.com/">株式会社プロスタイル</a></li>
-                        <li><span>株式会社プロスタイル横浜</span></li>
                         <li><a href="http://chinokanri.co.jp/">千野建物管理株式会社</a></li>
                         <li><span>煙台提案生活木業有限公司</span></li>
                         <li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
@@ -282,10 +277,10 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
             </ul>
         </div>
         <!-- /#header -->
-        
+
         <?php if(is_page('finish') || is_page('contact')): ?>
             <div id="wrap" class="wrap-force">
         <?php else: ?>
             <div id="wrap">
         <?php endif; ?>
-        
+

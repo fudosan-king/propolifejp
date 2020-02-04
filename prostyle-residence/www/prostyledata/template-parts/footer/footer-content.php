@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$logoCompanyURL = wp_get_attachment_image_url( get_field('site_logo', 'option')['ID'], $size = 'medium', $icon = false );
 ?>
 	<footer id="footer">
@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 mx-auto">
-                         <a href="https://www.facebook.com/prostyleresidence/" target="_blank"> 
+                         <a href="https://www.facebook.com/prostyleresidence/" target="_blank">
                             <img src="<?php SGVinK::the_images_uri(); ?>/1x/banner_fb.jpg" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        
+
 
 		<div class="w_footer_sns">
 			<div class="container">
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 
-	    <?php 
+	    <?php
             $menuLocations = get_nav_menu_locations();
             $menuID = $menuLocations['footer'];
             $footerNav = wp_get_nav_menu_items($menuID);
@@ -76,7 +76,7 @@
                         ?>
                         	<li class="heightLine-a <?php echo $isDropdown; ?>">
 								<p><a href="<?php echo $nav->url; ?>" target="<?php echo $nav->target; ?>"><?php echo $nav->title; ?></a></p>
-                                <?php 
+                                <?php
                                     if (count($childMenu)>0){
                                         echo '<ul>';
                                             foreach($childMenu as $cmenu){
@@ -105,8 +105,8 @@
                                 ?>
                             </li>
                         <?php
-                    }                 
-                    
+                    }
+
                 }
 
 
@@ -132,7 +132,7 @@
 				<li class="heightLine-a" style="height: 372px;">
 					<p><a href="https://www.propolife.co.jp/">TOP</a></p>
 				</li>
-				
+
 				<li class="heightLine-a" style="height: 372px;">
 					<p><a href="https://www.propolife.co.jp/company/">企業情報</a></p>
 					<ul>
@@ -155,7 +155,6 @@
 						<li><a href="https://www.chronicle-web.com/" target="_blank">株式会社クロニクル</a></li>
 						<li><a href="http://www.chronicle-kensetsu.co.jp/" target="_blank">株式会社クロニクル建設</a></li>
 						<li><a href="https://www.prostyle-residence.com/" target="_blank">株式会社プロスタイル</a></li>
-						<li><span>株式会社プロスタイル横浜</span></li>
 						<li><a href="http://chinokanri.co.jp/" target="_blank">千野建物管理株式会社</a></li>
 						<li><span>煙台提案生活木業有限公司</span></li>
 						<li><a href="http://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></li>
@@ -185,7 +184,7 @@
 		<div class="fBox">
 			<div class="subBox clearfix">
 				<?php echo get_field('copyright_content', 'option'); ?>
-				<?php 
+				<?php
 		            $menuLocations = get_nav_menu_locations();
 		            $menuID = $menuLocations['bottom'];
 		            $bottomNav = wp_get_nav_menu_items($menuID);

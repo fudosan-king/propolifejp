@@ -264,10 +264,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						</a>
 						<span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
 					</li>
-					<li>
-						<img src="<?php bloginfo('template_directory'); ?>/common/img/com_link_yokohama.jpg" width="356" height="98" alt="株式会社プロスタイル横浜">
-						<span>株式会社プロスタイル横浜</span>
-					</li>
 				</ul>
 			</div>
 		</div>

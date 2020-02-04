@@ -1,5 +1,5 @@
 <?php  header("Access-Control-Allow-Origin: *"); ?>
-<?php 
+<?php
   include_once "api/api.php";
   $api = new WP_API();
   $recent_posts = $api->get_recent_posts();
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="http://chronicle-web.aws.fudosan-king.jp/plus/cache/css/styles.css" type="text/css">
   <link rel="stylesheet" href="http://chronicle-web.aws.fudosan-king.jp/plus/cache/css/mobile.css" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
+
 
     <link rel="stylesheet" href="http://chronicle-web.aws.fudosan-king.jp/plus/cache/assets/themes/my-bootstrap/css/templates.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css">
@@ -109,9 +109,9 @@
     * END - Khanh Nguyen (KN) - Ajax get data and process.
     */
     </script>
-  
+
   <link rel="stylesheet" href="http://chronicle-web.aws.fudosan-king.jp/plus/cache/css/fix.css" type="text/css">
-  
+
 
   <?php wp_head(); ?>
 </head>
@@ -176,12 +176,12 @@
   <div class="navbar"></div>
 </div>
 
-    
+
 <main class="magazine article">
     <section class="section_article">
         <div class="container">
             <div class="row">
-              <?php 
+              <?php
                 if(have_posts()):
                   while(have_posts()): the_post();
                     $imgThumb = wp_get_attachment_image_url( get_post_thumbnail_id(), $size = 'full', $icon = false );
@@ -234,8 +234,8 @@
                         <a href="#" class="btn btnYellow">button 3</a>
                     </p>
                 </div>
-                <?php 
-                     
+                <?php
+
                     endwhile;
                   endif;
                 ?>
@@ -244,14 +244,14 @@
                     <div class="row justify-content-center side_right">
 
                         <div class="col-12">
-                            
-                        
+
+
 
                             <h4>新着記事</h4>
                             <div class="box_new_arcticle">
                                 <div class="sync_content">
                                     <!-- AJAX JSON CONTENT -->
-                                    <?php 
+                                    <?php
                                       if(!empty($recent_posts)):
                                         foreach($recent_posts['data'] as $rc_post){
                                           ?>
@@ -270,7 +270,7 @@
                                                       </div>
                                                   </div>
                                               </article>
-                                             <?php 
+                                             <?php
                                               foreach($rc_post['terms'] as $term){echo '<span class="label_sub">'.$term['name'].'</span>';}
                                               ?>
                                           </a>
@@ -280,7 +280,7 @@
                                     ?>
                                 </div>
 
-                                <?php 
+                                <?php
                                 if ($recent_posts['max_num_pages']>0){
                                   ?>
                                     <a href="#" class="article_items">
@@ -320,7 +320,7 @@
                             <div class="category_list">
                                 <h4>ジャンル別で記事を見る</h4>
                                 <!-- AJAX JSON CONTENT -->
-                                <?php 
+                                <?php
                                   if(!empty($list_terms)):
                                     foreach($list_terms as $term){
                                       echo '<a href="">'.$term['name'].'</a>';
@@ -332,7 +332,7 @@
 
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -358,7 +358,6 @@
             <li><a href="http://chronicle-web.aws.fudosan-king.jp/plus">クロニクルプラス</a></li>
             <li><a href="https://www.chronicle-web.com/logmansion/">ログマンション</a></li>
             <li><a href="https://www.chronicle-web.com/order_renove/">オーダーリノベ </a></li>
-            <li><a href="https://www.prostyle-villa.com/">プロスタイルヴィラ</a></li>
             <li><a href="https://www.chronicle-web.com/reform/">クロニクルリフォーム</a></li>
             <li><a href="http://www.chro-residence.com/aobadai/">クロニクルレジデンス</a></li>
           </ul>
@@ -417,10 +416,10 @@
 <script src="http://chronicle-web.aws.fudosan-king.jp/plus/cache/js/button-favorites.js"></script>
 <script src="http://chronicle-web.aws.fudosan-king.jp/plus/cache/js/bsnav.min.js"></script>
 <script src="http://chronicle-web.aws.fudosan-king.jp/plus/cache/js/functions.js"></script>
-  
+
     <script src="http://chronicle-web.aws.fudosan-king.jp/plus/cache/common/js/scrollTop.js"></script>
     <script src="http://chronicle-web.aws.fudosan-king.jp/plus/magazine/assets/js/content.js"></script>
-  
+
 </body>
 
 </html>

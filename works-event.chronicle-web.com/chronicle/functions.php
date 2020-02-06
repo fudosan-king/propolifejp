@@ -1,5 +1,7 @@
 <?php
 
+define('TEMPLATE_ASSETS', get_stylesheet_directory_uri());
+
 	add_image_size( 'event_main', 1000, 9999, true);
 	add_image_size( 'event', 400, 220, true);
 	add_image_size( 'work', 880, 460, true);
@@ -421,3 +423,9 @@ function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_post_thumbnail_sizes_attr', 10 , 3 );
+
+add_action('admin_enqueue_scripts', 'add_admin_assets');   
+function add_admin_assets(){    
+  wp_enqueue_script('admin_validate', TEMPLATE_ASSETS.'/js/validate.js', array('jquery'));
+  wp_enqueue_style( 'admin_css_style', TEMPLATE_ASSETS.'/css/admin.css', false, '1.0.0' );
+}

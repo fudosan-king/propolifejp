@@ -38,7 +38,7 @@
 	<div class="wrap clearfix">
 		<div class="box">
 			<h3>イベント</h3>
-			<div class="imgBox"><img src="<?php bloginfo('template_url') ?>/<?php echo get_post_type( $post ); ?>/images/img_02.jpg" alt=""></div>
+			<!-- <div class="imgBox"><img src="<?php //bloginfo('template_url') ?>/<?php echo get_post_type( $post ); ?>/images/img_02.jpg" alt=""></div> -->
 			<p>実際にクロニクルのリノベーションを体感できる住まい見学会などを随時開催しております。<br>
 	他とは違う、本物の天然無垢材を、実際に「見て、手を触れて」ご体感してください！（先着順・予約制）</p>
 			<ul class="clearfix">
@@ -135,7 +135,7 @@
 
 		<div class="box">
 			<h3>セミナー</h3>
-			<div class="imgBox"><img src="<?php bloginfo('template_url') ?>/<?php echo get_post_type( $post ); ?>/images/img_01.jpg" alt=""></div>
+			<!-- <div class="imgBox"><img src="<?php //bloginfo('template_url') ?>/<?php echo get_post_type( $post ); ?>/images/img_01.jpg" alt=""></div> -->
 			<p>クロニクルでは、目的やテーマに合わせて様々なセミナーを開催しております。<br>
 	リノベーションに関するさまざまな疑問を、解消いたします！（先着順・予約制）</p>
 

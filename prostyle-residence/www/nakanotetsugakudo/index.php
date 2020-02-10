@@ -72,7 +72,7 @@
 			</header>
 
 
-			<section class="section_topbanner">
+			<section class="section_topbanner mb-5">
 				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 
 				<!-- <div class="carousel carousel_topbanner">

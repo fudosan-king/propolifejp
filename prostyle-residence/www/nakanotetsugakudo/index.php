@@ -102,9 +102,9 @@
 							<ul class="topbanner_footer">
 								<li>
 									<p>
-										<span class="meter_label">39m<sup>2</sup>超</span>
-										<span class="price_yen">3,890</span><span class="label_yen">万円〜</span>
-										<span class="monthly">月々</span> <span class="price_stand">9</span>
+										<span class="meter_label">52m<sup>2</sup>超</span>
+										<span class="price_yen">5,290</span><span class="label_yen">万円〜</span>
+										<span class="monthly">月々</span> <span class="price_stand">13</span>
 										<span class="label_stand">万円台～</span>
 									</p>
 								</li>
@@ -153,6 +153,14 @@
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.2.3</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>Cタイプ完売いたしました。</p>
+			      											</div>
+			      										</div>
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2019.12.13</p>

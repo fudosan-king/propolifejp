@@ -1,5 +1,11 @@
+@media (max-width: 1600px) {
+	.section_topbanner {
+		height: 980px;
+	}
+}
+
 @media (min-width: 1200px) {
-	
+
 }
 
 @media (max-width: 1024px) {
@@ -22,10 +28,16 @@
 		font-size: 16px;
 		margin-bottom: 0;
 	}
+	.section_topbanner {
+		height: 638px;
+	}
 
 }
 @media (max-width: 823px) {
-	
+	.section_topbanner {
+		height: 500px;
+	}
+
 }
 @media (max-width: 812px) {
 	.btn_gradient {
@@ -34,7 +46,7 @@
 }
 
 @media (max-width: 800px) {
-	
+
 }
 
 @media (max-width: 768px) {
@@ -97,7 +109,7 @@
 	.navbar-nav .nav-item.active>.nav-link, .navbar-nav .nav-item:active:focus>.nav-link, .navbar-nav .nav-item:active>.nav-link, .navbar-nav .nav-item:focus>.nav-link, .navbar-nav .nav-item:hover>.nav-link {
 		color: #fff;
 	}
-	
+
 	.section_topbanner {
 		/*background: url('../images/1x/bg_top_sp2.jpg') no-repeat;*/
 		background-repeat: no-repeat;
@@ -162,7 +174,7 @@
 		top: 0;
 		font-size: 16px;
 	}
-	
+
 	ul.list_topics {
 		margin: 0;
 	}
@@ -184,7 +196,7 @@
 	.toppage {
 		padding: 8px 0;
 	}
-	
+
 	footer {
 		padding: 15px 0 70px;
 		background: rgba(196,196,196,1);
@@ -607,7 +619,7 @@
 	}
 	.gallery .carousel-main {
 		margin-left: -15px;
-		margin-right: -15px;		
+		margin-right: -15px;
 	}
 	.restroom_big_img {
 		margin-bottom: 20px;
@@ -870,7 +882,9 @@
 	.mt_66 {
 		margin-top: 66px;
 	}
-
+	.section_topbanner {
+		height: 478px;
+	}
 
 }
 
@@ -1038,10 +1052,10 @@
 		width: 100%;
 	}
 	.carousel_topbanner .carousel-cell img, .owl_topbanner .item img {
-		object-fit: fill;	
+		object-fit: fill;
 	}
 	.campaign {margin: 10px auto 20px;}
-	
+
 }
 @media (max-width: 375px) {
 	ul.list_info li:nth-child(3) p .big_text, ul.list_info li:nth-child(4) p .big_text, ul.list_info li:nth-child(5) p .big_text {
@@ -1092,14 +1106,14 @@
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-    
+
 }
 
 @supports not (-webkit-overflow-scrolling: touch) {
-  	/* CSS for other than iOS devices */ 
-  	
+  	/* CSS for other than iOS devices */
+
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	
+
 }

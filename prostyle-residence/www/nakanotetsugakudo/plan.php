@@ -467,42 +467,6 @@
 		      							</div>
 		      						</div>
 
-		      						<div class="boxroomplan mt-5">
-		      							<h3 class="title mb-5"><span>2DK</span></h3>
-
-		      							<div class="row">
-		      								<div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/cg_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>2DK <span>+SIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>39.<span class="uint">44㎡</span> <span class="approximately">（約11.93坪）</span></h2>
-				      												<p>バルコニー面積/ 4.20㎡（約1.27坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-		      										</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">対面型キッチン</div>
-			      										<div class="btn_sm_black">シューズインクローゼット</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan13.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<a href="plan_detail_cg.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div>
-		      							</div>
-		      						</div>
-
 		      						<p class="gray mt-5 mb-5"><small>※ＷＩＣ：ウォークインクローゼット、ＦＣ：ファミリークローク、ＳＩＣ：シューズインクローゼット、Ｓ：サービスルーム(納戸)</small></p>
 
 		      					</div>

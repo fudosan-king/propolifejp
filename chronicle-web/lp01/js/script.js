@@ -257,6 +257,9 @@ $(function() {
         // $('#iMonthlyLoan').val(monthlyLoanValue)
 
         // console.log(formulaRateValue);
+        $('html, body').animate({
+            scrollTop: $(".renovation_fee").offset().top
+        }, 700);
     });
 
     /* CONTACT PART */
@@ -270,7 +273,7 @@ $(function() {
         $('#ishow_room').append('<option value="' + el + '">' + el + '</option>');
     });
 
-    for(var i = 10; i<=19; i++){
+    for(var i = 10; i<19; i++){
         var strTime = i + ':00';
         $('#ivisit_hour').append('<option value="' + strTime + '">' + strTime + '</option>');
     }
@@ -393,6 +396,12 @@ $(function() {
                 'border-color': 'initial',
             });
             $('.require-flag.email').css('background-color', '#a40000');
+        }
+
+        if(!isValid){
+            $('html, body').animate({
+                scrollTop: $(".frm_consult_shoroom").offset().top
+            }, 700);
         }
 
         return isValid;

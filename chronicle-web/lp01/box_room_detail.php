@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="form-group">
-                            <a href="#renovation_fee" id="iEstimate" class="btn btnStart">START</a>
+                            <a href="" id="iEstimate" class="btn btnStart">START</a>
                         </div>
                         <p id="renovation_fee" class="renovation_fee"><a href="#">物件</a>+<a href="#">リノベーション</a>費用</p>
 
@@ -53,7 +53,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="rate_percent">※借入年数35年、ボーナス返済なし、元利均等返済変動金利年0.47％、頭金0円を想定<br>
+                            <p class="rate_percent">※借入年数35年、ボーナス返済なし、元利均等返済、変動金利年0.47％、頭金0円を想定<br>
                             ※このシミュレーションは目安です。実際の購入・借入については弊社ショールームにご相談ください</p>
                         </div>
 

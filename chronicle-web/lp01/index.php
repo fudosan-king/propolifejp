@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>損しないリノベーションのコツ</h1>
+                        <h1>後悔しないリノベとは…</h1>
                     </div>
                 </div>
             </div>
@@ -24,17 +24,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <p>リノベーション成功の秘訣はコスパです。<br>
-                            目先の施工費用だけで判断するのは得策ではありません。</p>
-                            <p>ある程度お金をかけても結果的に満足する、<br>
-                            費用対効果の高いリノベを意識するのが大切です。</p>
-                            <p>そこでオススメなのは無垢材を使ったリノベーション。<br>
-                            無垢材とは、天然木から切り出したありのままの木材のこと。<br>
-                            薄い木材を接着剤で張り合わせた集成材と比べると<br>
-                            値段は張りますが、将来的に張り替える必要もなく、<br>
-                            エイジングを愉しめることを考えると断然オススメ。</p>
-                            <p>無垢材に特化した「クロニクルのリノベーション」なら<br>
-                            コスパのいい賢いリノベーションが楽しめるのです。</p>
+                           <p>リノベーション成功のカギは「長期的視点」と「費用対効果」。目先の費用だけで施工内容や業者を決めるのは早計です。ある程度コストをかけても結果的に満足する、費用対効果の高いリノベを意識することが大切なのです。そこでクロニクルの「無垢材リノベーション」。無垢材とは、天然木から切り出したありのままの木材。薄い木材を貼り付けた合板と比べると値は張りますが、年を経るごとに風合いが増し、触れるたびに無垢ならではの心地よさが味わえるのです。しかも耐久性が高いため、張り替えの必要がありません。長い目で見て、合板よりも費用対効果が高いのは一目瞭然です。</p>
                         </div>
                     </div>
                 </div>
@@ -44,18 +34,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="title">クロニクル無垢材リノベーションの <span>特徴</span></h2>
+                            <h2 class="title">クロニクル無垢材リノベーションの <span>魅力</span></h2>
                             <div class="box_feature_item">
                                 <div class="row">
                                     <div class="col-12 col-md-7 align-self-center">
                                         <h3>
-                                            <span class="cap_number">01</span> 
-                                            <span class="feature_title">自社木材工場で実現した<br>無垢材の「一気通貫リノベ」</span>
+                                            自社製材工場」だから実現する納得感ある無垢材リノベーション
                                         </h3>
-                                        <p>クロニクルは、無垢材の製材工場から不動産仲介会社、建設会社まで自社で抱えています。業種の違う会社同士が提携しただけの「ワンストップリノベーション」の上をいく、自社内での「一気通貫のリノベーション」が可能なのです。そのメリットは、お客様がリノベーションに費やす時間と手間、そしてコスパに大きく現れます。</p>
+                                        <p>クロニクルは、無垢材の製材工場から自社倉庫（卸し、流通）、販売会社、施工会社まで自社で抱えています。数社が連携した「ワンストップリノベーション」とは違う、自社内での「一気通貫リノベーション」が可能なのです。「無垢材は高価」というイメージがあると思いますが、クロニクルは中間マージンがかからないため、品質と価格のバランスに優れた無垢材リノベーションを提供できるのです。フローリングから建具まで、レベルの高いA、Bランクの無垢材のみを使用しているのもポイント。しかもトータルのリノベーション費用は、他社の無垢材リノベと比べて㎡あたり1万円～2万円ほど安くなるケースがほとんどです。</p>
                                     </div>
                                     <div class="col-12 col-md-5 align-self-center">
-                                        <img src="images/1x/img01.jpg" alt="" class="img-fluid">
+                                        <div class="box_feature_item_img">
+                                            <img src="images/1x/img01.jpg" alt="" class="img-fluid">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -63,23 +54,17 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7 align-self-center">
                                         <h3>
-                                            <span class="cap_number">02</span> 
-                                            <span class="feature_title">日本全国1500件を超える<br>豊富な「無垢材リノベ施工事例」</span>
+                                            「1500件超」の無垢材施工実績で
+                                            絶対的な安心感を提供します
                                         </h3>
-                                        <p>1500件にも及ぶ無垢材リノベーションを行ってきたクロニクルならではの信頼感もポイントです。施工やメンテナンスにちょっとしたコツが必要な無垢材リノベーションを、長年つちかった知見、技術でお客様にご提供します。</p>
+                                        <p>過去10年、1500件にも及ぶ無垢材リノベーションを行ってきたクロニクルならではの信頼感もポイントです。調湿作用がある無垢材は、多少縮んだり、膨らんだりする性質があります。そのため施工やメンテナンスにちょっとしたコツが必要になりますが、クロニクルは長年つちかった知見、技術でお客様に信頼感の高い無垢材リノベーションをご提供できます。また、無垢材施工実績が豊富なクロニクルだから可能な「精度の高い見積もり」も好評。工事が進んでいくにつれ、価格が膨れ上がることの多いリノベーションですが、最初からある程度の予算感がわかるのは安心。「お金と時間のストレス」を軽減していきます。</p>
                                     </div>
                                     <div class="col-12 col-md-5 align-self-center">
-                                        <img src="images/1x/img02.jpg" alt="" class="img-fluid">
+                                        <div class="box_feature_item_img">
+                                            <img src="images/1x/img02.jpg" alt="" class="img-fluid">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="box_solid">
-                                <h2>ゆえに、<br>
-                                クロニクルの無垢材リノベーションは</h2>
-                                <h1>高品質の無垢材使用で<br>
-                                経験豊富な職人の施工なのに<br>
-                                ㎡単価は1万～2万円も安い</h1>
                             </div>
                         </div>
                     </div>
@@ -87,22 +72,28 @@
             </section>
 
              <section class="section_solidwood">
-                <h2 class="title">無垢材リノベーション一例</h2>
+                <h2 class="title"><span class="red">リノベの詳細</span>と<span class="red">費用</span>が今すぐわかる！</h2>
                 <div class="box_gallery">
-                    <div class="carousel" data-flickity='{ "freeScroll": true, "wrapAround": true, "pageDots": false }'>
-                        <div class="carousel-cell">
-                            <img src="images/1x/slider/slide02.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="images/1x/slider/slide01.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="images/1x/slider/slide03.jpg" alt="" class="img-fluid">
+                    <div class="carousel main">
+                    </div>
+                </div>
+
+                <div class="box_gallery_detail">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 box_gallery_detail_wrapper">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn btn_contactus">お問い合わせ</a>  
+
+                <?php require 'box_room_detail.php'; ?>
+
+
+
             </section>
+
+           <?php require 'section_consult.php'; ?>
 
 
         </main>

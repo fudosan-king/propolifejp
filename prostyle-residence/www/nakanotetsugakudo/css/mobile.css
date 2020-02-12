@@ -4,8 +4,22 @@
 	}
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1440px) {
+	.section_topbanner {
+		height: 898px;
+	}
+}
 
+@media (max-width: 1366px) {
+	.section_topbanner {
+		height: 850px;
+	}
+}
+
+@media (max-width: 1280px) {
+	.section_topbanner {
+		height: 798px;
+	}
 }
 
 @media (max-width: 1024px) {

@@ -45,7 +45,6 @@
 	.box_feature_item h3 {
 		font-size: 26px;
 		margin-bottom: 30px;
-		text-align: center;
 	}
 	.box_feature_item h3 .cap_number {
 		display: block;
@@ -80,11 +79,13 @@
 		padding-bottom: 60px;
 	}
 	.section_solidwood .title {
-		font-size: 22px;
+		font-size: 26px;
 	}
 	.box_gallery_detail_content {
 		margin-left: 0;
 		margin-right: 0;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.box_room_detail_content {
 		margin-left: 0;
@@ -92,12 +93,31 @@
 		margin-bottom: 0;
 		padding: 15px;
 	}
+	.box_gallery {
+		padding: 0 30px;
+	}
+	.box_gallery .carousel-cell {
+		width: 100%;
+	}
 	.box_gallery .carousel-cell, .box_gallery .carousel-cell img {
 		height: 380px;
 	}
 	.box_gallery .flickity-button {
-		width: 45px;
-		height: 45px;
+		width: 35px;
+		height: 35px;
+	}
+	.box_gallery .flickity-prev-next-button.next {
+		right: -30px;
+	}
+	.box_gallery .flickity-prev-next-button.previous {
+		left: -30px;
+	}
+	.box_gallery .flickity-button:hover {
+		border: none;
+		background: transparent;
+	}
+	.box_gallery_detail_content .flickity-prev-next-button {
+		display: block;
 	}
 	.box_solid {
 		margin-top: 60px;
@@ -130,6 +150,9 @@
 		-webkit-background-size: 50%;
 		background-size: 50%;
 	}
+	ul.list_select_material li {
+		margin-right: 30px;
+	}
 
 	/* section_consult */
 	.frm_consult_shoroom h3 {
@@ -159,6 +182,28 @@
 		min-width: auto;
 	}
 
+	/* lp picture tagging */
+	.box_gallery.box_gallery_tag {
+		padding: 0 15px;
+	}
+	.box_gallery.box_gallery_tag .flickity-prev-next-button.previous {
+		left: -30px;
+	}
+	.box_gallery.box_gallery_tag .flickity-prev-next-button.next {
+		right: -30px;
+	}
+
+	/* thanks page */
+	.section_thanks {
+		margin: 50px 0;
+	}
+	.box_thanks {
+		width: 100%;
+	}
+	.box_thanks h2 {
+		font-size: 2rem;
+	}
+
 
 }
 
@@ -177,16 +222,25 @@
 	.section_banner {
 		height: 281px;
 	}
-	.box_gallery .carousel-cell, .box_gallery .carousel-cell img {
+	.box_gallery .carousel-cell, .box_gallery .carousel-cell img, 
+	.box_gallery.box_gallery_tag .carousel-cell,  .box_gallery.box_gallery_tag .carousel-cell img {
 		height: 186px;
 	}
+
 }
 
 @media (max-width: 375px) {
 	
 }
 
-
+@supports (-webkit-appearance:none) {
+	.frm_room_detail .form-control.estimated_loan {
+		color: #000;
+	}
+	.frm_room_detail .form-control.theamount {
+  		color: #000;
+  	}
+}
 @supports (-webkit-overflow-scrolling: touch) {
     
 }

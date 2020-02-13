@@ -461,23 +461,25 @@ $(function() {
             $('#goBack').click();
         }
     });
-
-    // var collectInputText = $('input[type="text"]');
-    // $.each(collectInputText, function(i, e){
-    //     var cfrmPrefix = '#cfrm_' + $(e).attr('name');
-    //     $(e).val('TEST ' + cfrmPrefix);
-    // });
-    // var collectTextArea = $('textarea');
-    // $.each(collectTextArea, function(i, e){
-    //     var cfrmPrefix = '#cfrm_' + $(e).attr('name');
-    //     $(e).val('TEST ' + cfrmPrefix);
-    // });
-    // $('input[name="email"]').val('khanh@propolife.co.jp');
-    
-    // $('#ishow_room').val('東京日本橋');
-    // $('#ivisit_hour').val('10:00');
-
-    // var date = new Date();
-    // var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    // $('#ivisit_date').datepicker('setDate', today);
 });
+
+function demo(){
+    var collectInputText = $('input[type="text"]');
+    $.each(collectInputText, function(i, e){
+        var cfrmPrefix = '#cfrm_' + $(e).attr('name');
+        $(e).val('TEST ' + cfrmPrefix);
+    });
+    var collectTextArea = $('textarea');
+    $.each(collectTextArea, function(i, e){
+        var cfrmPrefix = '#cfrm_' + $(e).attr('name');
+        $(e).val('TEST ' + cfrmPrefix);
+    });
+    $('input[name="email"]').val('khanh@propolife.co.jp');
+    
+    $('#ishow_room').val('東京日本橋');
+    $('#ivisit_hour').val('10:00');
+
+    var date = new Date();
+    var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    $('#ivisit_date').datepicker('setDate', today);
+}

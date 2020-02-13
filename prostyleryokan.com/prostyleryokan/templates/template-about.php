@@ -134,7 +134,10 @@ get_header();
                                     </div>
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion_questions">
                                       <div class="card-body">
-                                        <p>2018年8月にオープンしたプロスタイル旅館 横浜馬車道 (https://www.prostyleryokan.com/yokohamabashamichi/)がございます。2019年には浅草にも開業を予定しています。株式会社プ</p>
+                                        <p>2018年8月にオープンしたプロスタイル旅館 横浜馬車道
+                                        <a href="https://www.prostyleryokan.com/yokohamabashamichi/" target="_blank">https://www.prostyleryokan.com/yokohamabashamichi/</a></p>
+                                        <p>2019年12月にオープンしたプロスタイル旅館 東京浅草
+                                        <a href="https://www.prostyleryokan.com/tokyo-asakusa/" target="_blank">https://www.prostyleryokan.com/tokyo-asakusa/</a>がございます。</p>
                                       </div>
                                     </div>
                                 </div>

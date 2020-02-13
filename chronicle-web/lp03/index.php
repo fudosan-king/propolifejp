@@ -41,26 +41,23 @@
             <section class="section_solidwood">
                 <h2 class="title"><span class="red">リノベの詳細</span>と<span class="red">費用</span>が今すぐわかる！</h2>
                 <div class="box_gallery">
-                    <div class="carousel" data-flickity='{ "freeScroll": false, "wrapAround": true, "pageDots": false }'>
-                        <div class="carousel-cell">
-                            <img src="images/1x/slider/slide01.jpg" alt="" class="img-fluid">
-                            <i class="i_tag tag_1"></i>
-                            <i id="tag_2" class="i_tag tag_2"></i>
-                            <i class="i_tag tag_3"></i>
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="images/1x/slider/slide02.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="images/1x/slider/slide03.jpg" alt="" class="img-fluid">
+                    <div class="carousel main">
+                    </div>
+                </div>
+
+                <div class="box_gallery_detail">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 box_gallery_detail_wrapper">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                 <?php require 'box_gallery_detail.php'; ?>
-
                 <?php require 'box_room_detail.php'; ?>
-                
+
+
+
             </section>
 
             <?php require 'section_consult.php'; ?>

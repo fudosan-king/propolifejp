@@ -20,7 +20,7 @@
                                 <div class="form-group">
                                     <label for="">物件の価格 <small></small></label>
                                     <div class="d-flex">
-                                        <input type="number" id="iRoomPrice" class="form-control property_price" placeholder="例:1500">
+                                        <input type="number" id="iRoomPrice" class="form-control property_price" placeholder="例:1500" min="0">
                                         <span class="unit align-self-end">万円</span>
                                     </div>
                                 </div>

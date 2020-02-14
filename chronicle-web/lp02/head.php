@@ -1,7 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
-<title>Logpack</title>
+<title>中古マンションの無垢材リノベーションならクロニクル</title>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 

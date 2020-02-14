@@ -694,6 +694,7 @@ ul.list_select_material li.active .box_material_wood::before, ul.list_select_mat
 	font-size: 35px;
 	font-weight: 800;
 	font-family: "Hiragino Sans", "Hiragino Kaku Gothic Std";
+	text-shadow: 0 2px 4px rgba(0,0,0,0.50);
 }
 .box_gray {
 	background: #4c4c4c;

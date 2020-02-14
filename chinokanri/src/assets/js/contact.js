@@ -239,6 +239,11 @@ $(document).ready(function() {
             var cfrm_comments = $('textarea[name="iken"]').val();
             $('.cfrm_comments').html(cfrm_comments);
 
+            var favorite = [];
+            $.each($('input[name="koumoku"]:checked'), function(){
+                favorite.push($(this).val() + "<br>");
+            });
+            $('.cfrm_koumokus').html(favorite);
             dataLayer.push({
                 'event': 'inquiry-confirm-nakanotetsugakudo-reservation'
             });
@@ -274,7 +279,7 @@ $(document).ready(function() {
                 if ($(this).val() == '')
                     $(this).val('null');
             });
-
+            //console.log($('.frm_contact').serialize());
             $('.frm_contact').submit();
         } else {
             $('#goBack').click();

@@ -5,9 +5,9 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="telNumber">
-                        <a href="tel:0455819556 ">
+                        <a href="tel:0120997950">
                             <div>お電話でのお問い合わせも承っております</div>
-                            <div>045-581-9556 </div>
+                            <div>0120-99-7950</div>
                         </a>
                     </div>
                 </div>

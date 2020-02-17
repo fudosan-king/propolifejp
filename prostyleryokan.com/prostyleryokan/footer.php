@@ -36,7 +36,7 @@
     <script src="<?php echo TEMPLATE_ASSETS_PATH; ?>/js/common.js"></script>
     <script src="<?php echo TEMPLATE_ASSETS_PATH; ?>/lib/jquery.ripples/jquery.ripples-min.js"></script>
     <script src="<?php echo TEMPLATE_ASSETS_PATH; ?>/lib/slick/slick.min.js"></script>
-    <script src="<?php echo TEMPLATE_ASSETS_PATH; ?>/js/home.js%3Fdate=191124"></script>
+    <script src="<?php echo TEMPLATE_ASSETS_PATH; ?>/js/home.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

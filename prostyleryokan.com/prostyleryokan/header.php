@@ -18,20 +18,20 @@
 
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css%3Ffamily=Noto+Serif+JP:500,600&amp;display=swap&amp;subset=japanese.css" media="all">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css%3Ffamily=Cinzel&amp;display=swap.css" media="all">
-    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/fonts/icomoon/style.css%3Fdate=191221.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/fonts/icomoon/style.css" media="all">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/normalize.min.css" media="all">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/lib/fancybox/jquery.fancybox.min.css" media="all">
-    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/base.css%3Fdate=191221.css" media="all">
-    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/common.css%3Fdate=191202b.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/base.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/common.css" media="all">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/lib/slick/slick.css" media="all">
-    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/home.css%3Fdate=191124.css" media="all">
+    <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/home.css" media="all">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/styles.css">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/mobile.css">
 
-    <script src="//maps.google.com/maps/api/js?sensor=true&key=AIzaSyAffKlhXHZXYWehQzLKHGMFmJVb7Nvgi0Y"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyAffKlhXHZXYWehQzLKHGMFmJVb7Nvgi0Y"></script>
 
     <?php wp_head(); ?>
 

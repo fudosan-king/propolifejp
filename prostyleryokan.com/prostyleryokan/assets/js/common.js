@@ -12,9 +12,9 @@ $(function () {
 	}
 
 	//Stickyfill Run
-	if (document.uniqueID && window.matchMedia && document.documentMode >= 11 && typeof Stickyfill !== 'undefined') {
-		Stickyfill.add($('#js-gNav'));
-	}
+	// if (document.uniqueID && window.matchMedia && document.documentMode >= 11 && typeof Stickyfill !== 'undefined') {
+	// 	Stickyfill.add($('#js-gNav'));
+	// }
 
 	//scrollEvent
 	isFlag.scroll = false;
@@ -79,7 +79,7 @@ $(function () {
 	//SmartPhoneNavi menu clickEvent
 	$('#js-gMenuBtn').click(function () {
 		$(this).toggleClass('isShow');
-		$('#js-gNav').toggleClass('isShow');
+		// $('#js-gNav').toggleClass('isShow');
 		return false;
 	});
 
@@ -98,7 +98,7 @@ $(function () {
 		if (window.location.pathname === $(this).prop('pathname')) {
 			if ($obj.length > 0) {
 				$('#js-gMenuBtn').removeClass('isShow');
-				$('#js-gNav').removeClass('isShow');
+				// $('#js-gNav').removeClass('isShow');
 
 				$('body,html').animate({
 					scrollTop: $obj.offset().top

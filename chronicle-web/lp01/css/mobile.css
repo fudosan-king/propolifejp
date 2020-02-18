@@ -227,6 +227,8 @@
 		height: 186px;
 	}
 
+	.frm_consult_shoroom .box_location_title {margin-top: 20px;}
+
 }
 
 @media (max-width: 375px) {

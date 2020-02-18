@@ -117,7 +117,13 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="box_consult_row">
+                            <div class="row">
+                                <div class="col-12 col-md-8 offset-md-4">
+                                    <section id="showRoomInfo"></section>
+                                </div>
+                            </div>
+                        </div>
                         <div class="box_consult_row">
                             <div class="row">
                                 <div class="col-12">
@@ -202,6 +208,14 @@
                                 </div>
                                 <div class="col-12 col-md-8">
                                     <div class="cfr cfrm_location">None</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box_consult_row">
+                            <div class="row">
+                                <div class="col-12 col-md-8 offset-md-4">
+                                    <section id="showRoomInfoConfirm"></section>
                                 </div>
                             </div>
                         </div>

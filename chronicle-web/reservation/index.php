@@ -21,7 +21,7 @@
                         <div class="col-12 col-md-10 mx-auto">
                             <form action="http://go.pardot.com/l/185822/2020-01-20/nk1dkv" method="POST" role="form" class="frm_consult_shoroom">
                             <!-- <form action="http://html-static/lp01/lp_cost.php" method="POST" role="form" class="frm_consult_shoroom"> -->
-                                <h3>ショールームで相談する</h3>
+                                <h3>リノベーション完成予想図をもらおう！</h3>
                                 <p class="text_notify">お近くのショールームで<b>リノベーションの詳細や費用、物件の探し方</b>など<br>
                                 住まいに関することは何でもご相談ください。</p>
 
@@ -134,7 +134,13 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="box_consult_row">
+                                        <div class="row">
+                                            <div class="col-12 col-md-8 offset-md-4">
+                                                <section id="showRoomInfo"></section>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="box_consult_row">
                                         <div class="row">
                                             <div class="col-12">
@@ -219,6 +225,14 @@
                                             </div>
                                             <div class="col-12 col-md-8">
                                                 <div class="cfr cfrm_location">None</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box_consult_row">
+                                        <div class="row">
+                                            <div class="col-12 col-md-8 offset-md-4">
+                                                <section id="showRoomInfoConfirm"></section>
                                             </div>
                                         </div>
                                     </div>

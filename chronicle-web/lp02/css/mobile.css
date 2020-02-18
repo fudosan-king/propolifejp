@@ -226,7 +226,7 @@
 	.box_gallery.box_gallery_tag .carousel-cell,  .box_gallery.box_gallery_tag .carousel-cell img {
 		height: 186px;
 	}
-
+	.frm_consult_shoroom .box_location_title {margin-top: 20px;}
 }
 
 @media (max-width: 375px) {

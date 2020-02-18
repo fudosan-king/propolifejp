@@ -73,6 +73,7 @@
 			    </div>
 			</header>
 			<div class="topbanner">
+				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 				<img class="d-none d-md-block img-fluid" src="images/1x/bg_top_pc2.jpg">
 			    <img class="d-block d-md-none img-fluid" src="images/1x/bg_top_sp2.jpg">
 			</div>

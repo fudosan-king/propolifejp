@@ -72,34 +72,10 @@
 			        </div>
 			    </div>
 			</header>
-
-
-			<section class="section_topbanner">
-				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
-
-				<!-- <div class="carousel carousel_topbanner">
-				  	<div class="carousel-cell">
-				    	<img class="carousel-cell-image d-none d-md-block" src="images/1x/bg_top_pc.jpg">
-				    	<img class="carousel-cell-image d-block d-md-none" src="images/1x/bg_top_sp.jpg">
-				  	</div>
-				  	<div class="carousel-cell">
-				    	<img class="carousel-cell-image d-none d-md-block" src="images/1x/bg_top_pc2.jpg">
-				    	<img class="carousel-cell-image d-block d-md-none" src="images/1x/bg_top_sp2.jpg">
-				  	</div>
-				</div> -->
-
-				<!-- <div class="owl-carousel owl-theme owl_topbanner"> -->
-				<!-- <div class="owl-carousel owl-theme owl_topbanner">
-				    <div class="item">
-				    	<img class="d-none d-md-block img-fluid" src="images/1x/bg_top_pc2.jpg">
-				    	<img class="d-block d-md-none img-fluid" src="images/1x/bg_top_sp2.jpg">
-				    </div>
-				</div> -->
-				<div class="topbanner">
-					<img class="d-none d-md-block img-fluid" src="images/1x/bg_top_pc2.jpg">
-				    <img class="d-block d-md-none img-fluid" src="images/1x/bg_top_sp2.jpg">
-				</div>
-			</section>
+			<div class="topbanner">
+				<img class="d-none d-md-block img-fluid" src="images/1x/bg_top_pc2.jpg">
+			    <img class="d-block d-md-none img-fluid" src="images/1x/bg_top_sp2.jpg">
+			</div>
 			<div class="w_topbanner_footer">
 				<div class="container-fluid">
 					<div class="row">

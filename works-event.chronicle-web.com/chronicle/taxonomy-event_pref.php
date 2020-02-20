@@ -15,7 +15,7 @@
 			
 		<?php
 		$tag = get_current_term();
-
+		$queryShowroom = (isset($_GET['showroom']) && !empty($_GET['showroom'])) ? $_GET['showroom'] : null;
 		$catID = $tag->term_id;
 		$allTerms = get_terms('event_pref','orderby=id','hide_empty=0');
 		$allTermsIDs = get_terms( 'event_pref', array(
@@ -58,10 +58,16 @@
 							'terms' => $catID
 						),
 					),
+					// 'meta_key' => 'showroom',
+					// 'meta_value' => 'tokyo_omotesando',
 					'post_type' => 'event', //カスタム投稿名
 					'posts_per_page'=> 10, //表示件数（-1で全ての記事を表示）
 					'paged' => $paged,
 				);
+				if(!empty($queryShowroom)){
+					$args['meta_key'] = 'showroom';
+					$args['meta_value'] = $queryShowroom;
+				}
 				query_posts( $args );
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
@@ -160,6 +166,10 @@
 					'posts_per_page'=> 10, //表示件数（-1で全ての記事を表示）
 					'paged' => $paged,
 				);
+				if(!empty($queryShowroom)){
+					$args['meta_key'] = 'showroom';
+					$args['meta_value'] = $queryShowroom;
+				}
 				query_posts( $args );
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();

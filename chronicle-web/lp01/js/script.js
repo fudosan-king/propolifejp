@@ -246,6 +246,8 @@ $(function() {
         var dataIdentity = getRoomAreaDATA(roomAreaValue);
         var renovationPriceValue = parseFloat(dataIdentity[materialValue]);
 
+        
+
         var totalPriceValue = roomPriceValue + renovationPriceValue;
 
         var formulaRateValue = Math.pow((1 + parseFloat(RULES.interest_rate)), RULES.repayment_period) / (Math.pow((1 + parseFloat(RULES.interest_rate)), RULES.repayment_period) - 1);
@@ -255,6 +257,12 @@ $(function() {
         rawMonthlyLoan.set(monthlyLoanValue);
         // $('#iTotalPrice').val(totalPriceValue/10000)
         // $('#iMonthlyLoan').val(monthlyLoanValue)
+
+        console.log('Room Area: ' + dataIdentity);
+        console.log('Room Price:' + roomPriceValue);
+        console.log('Renovation Price: ' + renovationPriceValue);
+        console.log('Total Price: ' + (totalPriceValue/10000));
+        console.log('Monthly Loan: ' + monthlyLoanValue);
 
         // console.log(formulaRateValue);
         $('html, body').animate({

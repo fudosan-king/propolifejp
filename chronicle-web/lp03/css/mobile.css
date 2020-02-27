@@ -204,7 +204,21 @@
 		font-size: 2rem;
 	}
 
-
+	.break_line {
+		display: block;
+	}
+	.img_cirle {
+		top: 10px;
+		right: 0;
+		bottom: inherit;
+	}
+	.img_cirle, .img_cirle img {
+		width: 145px;
+	    height: 139px;
+	}
+	.frm_consult_shoroom_head .text_notify {
+		line-height: 1.5em;
+	}
 }
 
 @media (min-width: 768px) {
@@ -226,7 +240,9 @@
 	.box_gallery.box_gallery_tag .carousel-cell,  .box_gallery.box_gallery_tag .carousel-cell img {
 		height: 186px;
 	}
+
 	.frm_consult_shoroom .box_location_title {margin-top: 20px;}
+
 }
 
 @media (max-width: 375px) {
@@ -255,5 +271,17 @@
 	}
 	h1,h2,h3,h4,h5,h6 {
 		font-family: "メイリオ",Meiryo,"游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS PGothic",sans-serif;	
+	}
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+	@supports (-webkit-appearance:none) and (stroke-color:transparent) {
+	    .frm_consult_shoroom_head h3 {
+			text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 
+			0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 
+			0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 
+			0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 
+			0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white;
+		}
 	}
 }

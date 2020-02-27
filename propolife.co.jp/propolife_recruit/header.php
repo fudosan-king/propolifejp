@@ -1,5 +1,9 @@
 <?php
 global $dir_name, $temp_dir, $dir_category, $current_page_url;
+if ($dir_name == 'training' || $dir_name == 'office' || $dir_name == 'support') {
+    get_template_part( 404 ); 
+    exit();
+}
 $current_page_url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 $temp_dir = get_stylesheet_directory_uri();
 

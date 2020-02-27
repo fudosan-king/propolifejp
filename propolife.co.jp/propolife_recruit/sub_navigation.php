@@ -30,10 +30,7 @@ global $temp_dir, $dir_name, $dir_category;
                     <?php endif; ?>
                 </ul>
             </li>
-            <li<?php if($dir_name == 'training'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/training/">人材育成</a></li>
             <li<?php if($dir_name == 'benefit'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/benefit/">福利厚生</a></li>
-            <li<?php if($dir_name == 'support'): ?> class="current li-support"<?php endif; ?>><a href="<?php echo home_url(); ?>/support/">子育て支援</a></li>
-            <li<?php if($dir_name == 'office'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/office/">オフィス紹介</a></li>
         </ul>
     </div>
 

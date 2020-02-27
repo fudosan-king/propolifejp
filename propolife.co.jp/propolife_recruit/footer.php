@@ -33,6 +33,10 @@
                 </li>
                 <li class="heightLine-a" style="height: 372px;">
                     <p><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></p>
+                    <ul>
+                        <li><a href="https://www.propolife.co.jp/recruit/newgraduate/">新卒採用</a></li>
+                        <li><a href="https://www.propolife.co.jp/recruit/career/">中途採用</a></li>
+                    </ul>
                 </li>
                 <li class="heightLine-a" style="height: 372px;">
                     <p><a href="https://www.propolife.co.jp/group/">グループ企業</a></p>

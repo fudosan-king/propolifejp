@@ -4,9 +4,16 @@
             <div class="col-12 col-md-10 mx-auto">
                 <form action="http://go.pardot.com/l/185822/2020-01-20/nk1dkv" method="POST" role="form" class="frm_consult_shoroom">
                 <!-- <form action="http://html-static/lp01/lp_cost.php" method="POST" role="form" class="frm_consult_shoroom"> -->
-                    <h3>リノベーション完成予想図をもらおう！</h3>
-                    <p class="text_notify">お近くのショールームで<b>リノベーションの詳細や費用、物件の探し方</b>など<br>
-                    住まいに関することは何でもご相談ください。</p>
+                    <div class="frm_consult_shoroom_head">
+                        <h3>ショールームで<span class="break_line">リノベ完成予想図を</span>もらおう！</h3>
+                        <p class="text_notify">
+                            お近くのショールームで<br>
+                            <strong><span class="break_line">リノベーションの詳細や費用、</span>物件探しのお手伝い</strong>など<br>住まいに関してなんでもご相談ください。
+                        </p>
+                        <div class="img_cirle">
+                            <img src="images/1x/IMG_0413.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
 
                     <section class="data-input">
                         <div class="box_consult_row mb-3">

@@ -220,7 +220,7 @@
 #sp_global_nav li.job{ background-image:url(../../images/home/parts_sp_gnav_job.png); background-position: left center;}
 #sp_global_nav li.recruit{ background-image:url(../../images/home/parts_sp_gnav_recruit.png); background-position: right top;} 
 #sp_global_nav li.training{ background-image:url(../../images/home/parts_sp_gnav_training.png); background-position: left center;}
-#sp_global_nav li.benefit{ background-image:url(../../images/home/parts_sp_gnav_benefit.png); background-position: right center;}
+#sp_global_nav li.benefit{ background-image:url(../../images/home/parts_sp_gnav_benefit_left.png); background-position: left center;}
 #sp_global_nav li.support{ background-image:url(../../images/home/parts_sp_gnav_support.png); background-position: left center;}
 #sp_global_nav li.point{ background-image:url(../../images/home/parts_sp_gnav_point.png); background-position: right center;}
 #sp_global_nav li.office{ background-image:url(../../images/home/parts_sp_gnav_office.png); background-position: left center;}

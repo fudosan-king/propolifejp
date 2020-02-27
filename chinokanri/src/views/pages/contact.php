@@ -329,12 +329,35 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 問い合わせ内容 -->
+                    <!-- お問い合わせ項目(複数選択可) -->
                     <div class="row require">
                         <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                    問い合わせ内容
+                                    お問い合わせ項目(複数選択可)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-8 col-lg-8 right-side">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <input type="checkbox" name="koumoku" id="koumoku1" value="マンション管理について"><label for="koumoku1"> マンション管理について</label><br>
+                                    <input type="checkbox" name="koumoku" id="koumoku2" value="賃貸・売買のご相談"><label for="koumoku2"> 賃貸・売買のご相談</label><br>
+                                    <input type="checkbox" name="koumoku" id="koumoku3" value="賃貸管理について"><label for="koumoku3"> 賃貸管理について</label><br>
+                                    <input type="checkbox" name="koumoku" id="koumoku4" value="建物・設備について"><label for="koumoku4"> 建物・設備について</label><br>
+                                    <input type="checkbox" name="koumoku" id="koumoku5" value="リフォーム"><label for="koumoku5"> リフォーム</label><br>
+                                    <input type="checkbox" name="koumoku" id="koumoku6" value="ご意見・ご要望"><label for="koumoku6"> ご意見・ご要望</label><br>
+                                    <input type="checkbox" name="koumoku" id="koumoku7" value="その他"><label for="koumoku7"> その他</label><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- お問い合わせ内容 -->
+                    <div class="row require">
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    お問い合わせ内容
                                     <label class="require-flag iken">必須</label>
                                 </div>
                             </div>
@@ -488,12 +511,30 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 問い合わせ内容 -->
+                    <!-- お問い合わせ項目(複数選択可) -->
                     <div class="row require">
                         <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                    問い合わせ内容
+                                    お問い合わせ項目(複数選択可)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-8 col-lg-8 right-side">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="cfr cfrm_koumokus" style="min-height: 90px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- お問い合わせ内容 -->
+                    <div class="row require">
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    お問い合わせ内容
                                     <label class="require-flag">必須</label>
                                 </div>
                             </div>

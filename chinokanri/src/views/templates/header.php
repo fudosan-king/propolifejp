@@ -19,7 +19,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
+
         <link rel="stylesheet" href="<?=base_url();?>assets/css/style.css">
 
         <!-- Place your kit's code here -->
@@ -32,7 +32,7 @@
         <meta name="Description" content="<?=$meta_description;?>">
         <meta name="Keywords" content="<?=$meta_keywords;?>">
 
-        <?php 
+        <?php
             if($this->uri->uri_string() == 'contact' || $this->uri->uri_string() == 'contact/finish' || $this->uri->uri_string() == 'kaiyaku/finish'):
                 ?>
                 <link rel="stylesheet" href="<?=base_url();?>assets/css/contact.css">
@@ -78,7 +78,7 @@
 
         <header>
             <div class="container">
-                <div class="row">                    
+                <div class="row">
                     <div class="col-12 col-sm-12 col-md-8">
                        <p class="header-intro">分譲マンション・賃貸物件・商業ビル管理事業・プロパティ・マネジメント・建物清掃事業</p>
                        <a href="/"><img class="header-logo" src="<?=base_url();?>assets/img/logo.jpg" class="img-fluid" alt="Responsive image"></a>
@@ -87,13 +87,17 @@
                     <div class="col-12 col-sm-12 col-md-4">
                         <div class="header-contact"><a href="<?=base_url();?>contact"><i class="fa fa-envelope" aria-hidden="true"></i>お問い合わせ</a></div>
                         <div class="header-phone"><a href="tel:0120997950"><i class="fa fa-phone fa-flip-horizontal" aria-hidden="true"></i>0120-99-7950</a></div>
+                        <div class="header-fax">
+                            電話 045-581-9556（代）<br>
+                            FAX 045-575-6477
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
         </header>
         <div class="container">
-            <?php 
+            <?php
                 if($this->router->fetch_class() == 'home'):
                     ?>
                     <section class="row banner">
@@ -106,4 +110,3 @@
                     <?php
                 endif;
             ?>
-            

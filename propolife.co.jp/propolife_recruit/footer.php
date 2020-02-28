@@ -1,4 +1,4 @@
-<div class="btm_page_top">
+<div class="btm_page_top" style="display: none;">
 <p class="btn_pagetop"><img src="<?php bloginfo('template_directory'); ?>/common/images/btn_pagetop.png" width="60" height="60" alt=""></p>
 </div>
 </div><!-- // #wrap -->

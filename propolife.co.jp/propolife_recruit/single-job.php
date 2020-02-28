@@ -92,7 +92,7 @@ $is_even = ($posts_length % 4 == 0)? true: false;
                     $job_permalink = get_permalink();
                 ?>
                 <div>
-                    <img class="img-fuild" src="<?php echo $job_image_thumb[0]; ?>" alt>
+                    <div><a href="<?php echo $job_permalink; ?>"><img class="img-fuild" src="<?php echo $job_image_thumb[0]; ?>" alt></a></div>
                     <a class="caption" href="<?php echo $job_permalink; ?>"><?php echo $job_name; ?></a>
                 </div>
                 <?php $num += 1; endforeach; wp_reset_postdata(); wp_reset_query(); ?>

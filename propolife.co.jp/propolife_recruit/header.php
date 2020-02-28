@@ -35,6 +35,8 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
         <meta property="og:title" content="PROPOZOO 株式会社プロポライフグループ　採用GUIDE MAP" />
         <meta property="og:description" content="PROPOZOO プロポライフグループ採用GUIDEMAP。それは個性豊かなプロポライフグループの社員達が活躍する島、”PROPOZOO”。島内を巡り、普段どのように仕事をしているのか、どんな会社なのかを、ご体験ください。" />
         <meta property="og:image" content="https://www.propolife.co.jp/recruit/wordpress/wp-content/themes/propolife_recruit/common/ogimage.jpg" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
         <?php
         if(is_page( 'contact' )):
             ?>
@@ -56,6 +58,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery.transit.min.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/jquery.smarttouch.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/common.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/common/js/common_parts.js"></script>
         <?php foreach($has_script_page as $p): if($p == $dir_name): ?>

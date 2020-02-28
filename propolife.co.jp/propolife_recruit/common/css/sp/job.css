@@ -24,6 +24,7 @@
     position: absolute;
     bottom: 0;
     left: 50px;
+    display: none !important;
 }
 
 #contents_inner.single .img_btm_animal{
@@ -36,6 +37,7 @@
     position: absolute;
     bottom: 0;
     left: 55px;
+    display: none !important;
 }
 /* ------------------------------------------------------- */
 
@@ -449,7 +451,6 @@
 #job_btm_nav .btn_prev{ float: left;}
 #job_btm_nav .btn_next{ float: right;}
 
-}
 /*Renew layout page single job*/
 #page_job_single .job_entry_are { margin: 0 0 30px 0; }
 #page_job_single .job_entry_are .newgraduate { margin-right: 5px; }
@@ -489,8 +490,9 @@
 #page_job_single .job_list .multiple-jobs .slick-list .slick-track .slick-slide img { width: 85%; object-fit: contain; padding-left: 20px; padding-bottom: 10px; }
 #page_job_single .job_list .multiple-jobs .caption { text-decoration: none; font-size: 16px; font-weight: 600; }
 #job_content .business-content { margin: 15px 0; }
-#job_content .business-content h4 { margin-bottom: 15px; font-weight: bold; font-size: 22px; }
+#job_content .business-content h4 { margin-bottom: 15px; font-weight: bold; font-size: 22px; text-align: center; }
 #job_content .business-content p { line-height: 20px; font-weight: 500; }
+}
 
 
 /* --------------------------------------------------------------------------------
@@ -742,6 +744,7 @@
 .slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 100px; line-height: 1; color: #000; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
 .slick-next { right: -15px; }
 .slick-prev, .slick-next { top: -10px; }
+#page_job_single .job_list .multiple-jobs .caption { font-size: 10px; }
 
 }
 

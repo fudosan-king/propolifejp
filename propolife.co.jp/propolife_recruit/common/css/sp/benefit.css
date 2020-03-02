@@ -197,7 +197,11 @@
         border-bottom: 1px solid #fff;
         text-align: center;
     }
-
+    #benefit_list .benefit-are .benefit-title h3 { margin: 0px 0px 0px 0px; }
+    .benefit-notification { width: 100%; height: auto; }
+    .benefit-notification .benefit-group { width: 100%; height: auto; padding: 20px 0px; border-top: solid 1px #a8a8a8;}
+    .benefit-notification .benefit-group .benefit-subject { display: table-cell; width: 150px; }
+    .benefit-notification .benefit-group .benefit-text { display: table-cell; line-height: 20px;}
 }
 
 
@@ -212,5 +216,6 @@
 #page_benefit .benefit_content{
     font-size: 11px;
 }
-
+.benefit-notification .benefit-group .benefit-subject { width: 100px; }
 }
+#page_job_single .job_list .multiple-jobs .slick-list .slick-track .slick-slide img { padding-left: 10px; }

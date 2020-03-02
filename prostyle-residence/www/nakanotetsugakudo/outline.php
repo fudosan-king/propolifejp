@@ -293,7 +293,7 @@
 
 
 
-					      		<p class="mb-5 text-center">更新日<span>(2月14日)</span>・更新予定日<span>(2月28日)</span></p>
+					      		<p class="mb-5 text-center">更新日<span>(3月2日)</span>・更新予定日<span>(3月16日)</span></p>
 
 	      					</div>
 	      				</div>

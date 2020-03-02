@@ -20,26 +20,30 @@ $dir_name = 'benefit';
         <div class="benefit_content">
             <?php echo get_field('benefit_content'); ?>
         </div>
-        <div id="employ"></div>
+        <div id="employ" style="display: none;"></div>
         <div id="benefit_list">
-            <ul>
-                <?php
+            <?php
                 while(the_repeater_field('benefit_repeater_field')):
                 $list_title = get_sub_field('benefit_list_title');
-                $list_text = get_sub_field('benefit_list_text');
-                $list_image = wp_get_attachment_image_src(get_sub_field('benefit_list_image'), 'medium');
                 ?>
-                <li>
-                    <div class="col_right">
-                        <p><img src="<?php echo $list_image[0]; ?>" alt=""></p>
+            <div class="benefit-are">
+                <div class="benefit-title">
+                    <h3><?php echo $list_title; ?></h3>
+                </div>
+                <div class="benefit-notification">
+                    <?php 
+                        while(the_repeater_field('benefit_list_group')): 
+                        $list_subject = get_sub_field('benefit_list_subject');
+                        $list_text = get_sub_field('benefit_list_text');
+                    ?>
+                    <div class="benefit-group">
+                        <div class="benefit-subject"><?php echo $list_subject; ?></div>
+                        <div class="benefit-text"><?php echo $list_text; ?></div>
                     </div>
-                    <div class="col_left">
-                        <h4><?php echo $list_title; ?></h4>
-                        <p><?php echo $list_text; ?></p>
-                    </div>
-                </li>
-                <?php endwhile; ?>
-            </ul>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+            <?php endwhile; ?>
         </div><!-- // #benefit_list -->
         
     </div><!-- // #page_benefit -->

@@ -78,7 +78,7 @@ $is_even = ($posts_length % 4 == 0)? true: false;
                 <a href="<?php echo home_url(); ?>/newgraduate/">新卒採用</a>
             </div>
             <div class="mid_carrer">
-                <a href="<?php echo home_url(); ?>">中途採用</a>
+                <a href="<?php echo home_url(); ?>/career/">中途採用</a>
             </div>
         </div><!-- // #job_entry_are -->
         <div class="job_list">

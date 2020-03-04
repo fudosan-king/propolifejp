@@ -210,7 +210,7 @@
     }
     #benefit_list .benefit-are .benefit-title h3 { margin: 0px 0px 0px 0px; }
     .benefit-notification { width: 100%; height: auto; }
-    .benefit-notification .benefit-group { width: 100%; height: auto; padding: 20px 0px; border-top: solid 1px #a8a8a8;}
+    .benefit-notification .benefit-group { max-width: 100%; height: auto; padding: 20px 0px 20px 50px; border-top: solid 1px #a8a8a8;}
     .benefit-notification .benefit-group .benefit-subject { display: table-cell; width: 150px; }
     .benefit-notification .benefit-group .benefit-text { display: table-cell; line-height: 20px;}
 }

@@ -35,13 +35,13 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
         <meta property="og:title" content="PROPOZOO 株式会社プロポライフグループ　採用GUIDE MAP" />
         <meta property="og:description" content="PROPOZOO プロポライフグループ採用GUIDEMAP。それは個性豊かなプロポライフグループの社員達が活躍する島、”PROPOZOO”。島内を巡り、普段どのように仕事をしているのか、どんな会社なのかを、ご体験ください。" />
         <meta property="og:image" content="https://www.propolife.co.jp/recruit/wordpress/wp-content/themes/propolife_recruit/common/ogimage.jpg" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
         <?php
         if(is_page( 'contact' )):
             ?>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
                 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/contact/styles.css" type="text/css">
                 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/contact/mobile.css" type="text/css">

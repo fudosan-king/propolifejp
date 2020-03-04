@@ -11,7 +11,7 @@ $dir_name = 'job';
 <?php
 $posts = query_posts(array(
     'post_type' => 'job',
-    'posts_per_page' => 8,
+    'posts_per_page' => -1,
     'order' => 'menu_order',
     'post_status' => 'publish'
 ));

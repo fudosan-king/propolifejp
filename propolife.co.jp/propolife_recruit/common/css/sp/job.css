@@ -48,66 +48,82 @@
 *
 *
 -------------------------------------------------- */
+.img_btm_animal, .btm_page_top, #job_btm_nav { display: none; }
+#contents_inner.index {
+    width: 100%;
+}
+#contents_inner h3 {
+    text-align: left !important;
+    padding: 5px 0px 5px 20px !important;
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+}
+.profession-box {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.profession-box .profession {
+    width: auto;
+    float: left;
+    margin-left: 7px;
+}
+.profession-box .profession:first-child {
+    margin-left: 0px;
+}
+#contents_inner .profession h4 {
+    clear: both;
+    padding: 5px 0px;
+    margin: 0 0 10px;
+    line-height: 1.25;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: .09em;
+    border-bottom: solid 5px #800000;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+}
+.custom-class li { margin-right: 7px; }
+.custom-class li:nth-last-child(1) { margin-right: 0px; }
+/*end part custom job page*/
 #page_job_index{
     overflow: hidden;
 }
 
 #page_job_index .job_copy{
-    text-align: left;
-    margin: 0 0 20px 0;
-    padding: 0 25px;
+    margin: 0 0 45px 0;
     line-height: 1.5em;
     font-size: 16px;
     font-weight: bold;
 }
 
-#page_job_index .job_copy br{
-    display: none;
-}
-
 #page_job_index .page_job_list ul{
-    width: 100%;
     overflow: hidden;
-    text-align: center;
-    letter-spacing: -.40em;
+    width: auto;
+    display: block;
 }
 
 #page_job_index .page_job_list li{
-    width: 39%;
-    padding: 0 20px;
-    text-align: center;
-    display: inline-block;
-    letter-spacing: 0;
-    vertical-align: top;
-    margin: 0 0 30px 0;
+    width: 142px;
+    float: left;
     position: relative;
 }
 
-#page_job_index .page_job_list li p{  transition: opacity .1s ease; position: relative;}
-
-#page_job_index .page_job_list li .pic:after{
-    content: '';
-    width: 26px;
-    height: 100%;
-    background-image:url(../../images/job/parts_thumb_arrow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: -32px;
-    z-index: 2;
-}
-
-#page_job_index .page_job_list li:first-child .pic:after{ display: none;}
+#page_job_index .page_job_list li p{ transition: opacity .1s ease; position: relative;}
 
 #page_job_index .page_job_list li:hover p{ opacity: .7;}
 #page_job_index .page_job_list li:hover img{ opacity: 1;}
 
+#page_job_index .page_job_list li.no_arrow .pic:after{ display: none;}
+#page_job_index .page_job_list li:last-child .pic:after{ display: none;}
+
 #page_job_index .page_job_list li a{
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
     color: #49361d;
     line-height: 1.57em;
+    text-align: left;
 }
 
 #page_job_index .page_job_list li a:hover{ text-decoration: none;}
@@ -115,12 +131,6 @@
 #page_job_index .page_job_list li br{ display: none;}
 #page_job_index .page_job_list li .ruby{ font-size: 11px;}
 #page_job_index .page_job_list li .single_ruby{ display: none;}
-
-#page_job_index .page_job_list li .pic{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
 
 #page_job_index .page_job_list li .pic img{
     width: 100%;
@@ -487,35 +497,52 @@
 .slick-next { right: 15px; }
 .slick-slider .slick-list { margin-right: 10%; margin-left: 10%; }
 #page_job_single .job_list .multiple-jobs .slick-list .slick-track .slick-slide { text-align: center; }
-#page_job_single .job_list .multiple-jobs .slick-list .slick-track .slick-slide img { width: 85%; object-fit: contain; padding-left: 20px; padding-bottom: 10px; }
+#page_job_single .job_list .multiple-jobs .slick-list .slick-track .slick-slide img { width: 85%; object-fit: contain; padding-left: 10px; padding-bottom: 10px; }
 #page_job_single .job_list .multiple-jobs .caption { text-decoration: none; font-size: 16px; font-weight: 600; }
 #job_content .business-content { margin: 15px 0; }
 #job_content .business-content h4 { margin-bottom: 15px; font-weight: bold; font-size: 22px; text-align: center; }
 #job_content .business-content p { line-height: 20px; font-weight: 500; }
 }
 
-
+/* --------------------------------------------------------------------------------
+*
+    @media screen and (max-width: 375px) 
+*
+-------------------------------------------------------------------------------- */
+@media screen and (max-width: 375px) {
+    #page_job_index .page_job_list li{
+        width: 160px !important;
+    }
+}
 /* --------------------------------------------------------------------------------
 *
     @media screen and (max-width: 480px) 
 *
 -------------------------------------------------------------------------------- */
 @media screen and (max-width: 480px) {
-#page_job_index .job_copy{
-    font-size: 13px;
-}
+    .page-job-group { padding-left: 0px; padding-right: 0px; }
+    #contents_inner h3 {
+        padding: 5px 0px 5px 24px !important;
+    }
+    .profession-box { padding-left: 24px; }
+    .profession-box .profession { margin-right: 7px; margin-left: 0px; }
+    .custom-class li { margin-right: 7px !important; }
+    .custom-class li:nth-last-child(1) { margin-right: 0px !important; }
+    #page_job_index .job_copy{
+        font-size: 13px;
+        padding: 0px 24px;
+    }
 
-#page_job_index .page_job_list li{
-    font-size: 10px;
-    padding: 0 10px;
-    margin: 0 0 15px 0;
-}
+    #page_job_index .page_job_list li{
+        width: 180px;
+        font-size: 10px;
+    }
 
-#page_job_index .page_job_list li .pic:after{
-    background-size: 16px;
-    left: -23px;
-}
-#page_job_index .page_job_list li .ruby{ font-size: 9px;}
+    #page_job_index .page_job_list li .pic:after{
+        background-size: 16px;
+        left: -23px;
+    }
+    #page_job_index .page_job_list li .ruby{ font-size: 9px;}
 
 
 /* --------------------------------------------------
@@ -739,6 +766,7 @@
 
 #job_btm_nav .btn_prev{ float: left;}
 #job_btm_nav .btn_next{ float: right;}
+#page_job_index .page_job_list li a { text-decoration: none; }
 
 /*Renew layout page single job*/
 .slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 100px; line-height: 1; color: #000; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   

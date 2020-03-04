@@ -27,9 +27,10 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="message-complete">
                         お問い合わせが完了しました
-                        <p>お問い合わせ有り難う御座います。<br>
+                        <p class="text-note1">お問い合わせ有り難う御座います。<br>
                             後程、担当者からご連絡させて頂きます。<br>
                         今暫くお待ちくださいませ。</p>
+                        <p class="text-note2">※休業日などでご返信が遅くなる場合がございます。<br>お急ぎの場合はお電話でご確認お願い致します。</p>
                     </div>
                 </div>
             </div>

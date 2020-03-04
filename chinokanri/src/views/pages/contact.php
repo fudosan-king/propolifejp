@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                         <div align="center">
-                            必要事項をご入力の上、送信ボタンを押してください。
+                            入力内容をご確認の上、送信ボタンを押してください。
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">

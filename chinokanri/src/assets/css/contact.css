@@ -25,10 +25,10 @@
 .checkbox.center {text-align: center;}
 
 .telNumber {
-  text-align:center; 
-  width: 50%; 
-  margin: 0 auto; 
-  padding: 5px; 
+  text-align:center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 5px;
   margin: 20px auto 5px;
   background-color: #A47E51;
   border-radius: 5px;
@@ -40,7 +40,7 @@
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
-  
+
 }
 
 .telNumber:hover {background-color: #c79458; cursor: pointer;}
@@ -140,6 +140,12 @@ ul.list_job {padding-left: 0;}
 }
 
 .message-complete p {font-weight: normal;font-size:12pt; margin-top: 20px;}
+.message-complete .text-note1 {
+  font-weight: 600 !important;
+}
+.message-complete .text-note2 {
+  font-size: 13px;
+}
 
 /* Responsive
 ==================================== */
@@ -155,7 +161,7 @@ ul.list_job {padding-left: 0;}
 
 
 @media all and (max-width: 500px) {
-  
+
 }
 
 @media all and (min-width: 500px) {
@@ -289,7 +295,7 @@ header h2 img {
       top: 5px;
       right: 7px;
   }
-  
+
   .form_info.input > .row {border: none;}
   .form_info .left-side {padding: 5px 10px; position: relative;}
   .form_info .right-side > .row {border: none;}
@@ -310,26 +316,26 @@ header h2 img {
 }
 
 @media (max-width: 1366px) {
-  
+
 }
 @media (max-width: 1280px) {
-  
+
 }
 
 @media (min-width: 1200px) {
-  
+
 }
 
 @media (max-width: 1024px) {
-  
+
 }
 
 @media (max-width: 980px) {
-  
+
 }
 
 @media (min-width: 992px) {
-  
+
 }
 
 @media (max-width: 991px) {
@@ -367,22 +373,22 @@ header h2 img {
         float: none;
         margin: 15px 0;
     }
-    .navbar-collapse.collapse.in { 
+    .navbar-collapse.collapse.in {
         display: block!important;
         /* background: #D59A6E; */
     }
     .collapsing {
         overflow: hidden!important;
     }
-    
+
 }
 
 @media (max-width: 800px) {
-  
+
 }
 
 @media (min-width: 768px) {
-  
+
 }
 
 @media (max-width: 768px) {
@@ -451,12 +457,12 @@ header h2 img {
         border-bottom: 1px solid rgb(120,108,94);
         padding-bottom: 30px;
         padding-top: 30px;
-        background: rgb(197,183,157);        
+        background: rgb(197,183,157);
     }
     ul.naviBox > li:last-child {
         border-bottom: none;
     }
-    
+
     ul.naviBox li p {
         margin-bottom: 0;
     }
@@ -480,19 +486,19 @@ header h2 img {
 }
 
 @media (max-width: 736px) {
-  
+
 }
 
 @media (max-width: 667px) {
-  
+
 }
 
 @media (max-width: 640px) {
-  
+
 }
 
 @media (max-width: 568px) {
-  
+
 }
 
 @media (max-width: 420px) {
@@ -501,13 +507,13 @@ header h2 img {
 }
 
 @media (max-width: 375px) {
-  
+
 }
 
 @media (max-width: 360px) {
-  
+
 }
 
 @media (max-width: 320px) {
-  
+
 }

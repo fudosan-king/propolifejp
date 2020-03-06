@@ -5,13 +5,20 @@
 	    <meta charset="<?php bloginfo('charset'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="">
+		
+		<?php 
+			if(is_front_page()){
+				echo '<meta name="keywords" content="東京,浅草,ホテル,旅館,プロスタイル旅館東京浅草,公式サイト">';
+			}
+		?>
 
 		<link rel="apple-touch-icon" sizes="152x152" href="<?php the_fav_path(); ?>/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="<?php the_fav_path(); ?>/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="<?php the_fav_path(); ?>/favicon-16x16.png">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
+
+
 
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap&subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" href="<?php the_css_path(); ?>/fontawesome-pro-5.7.0-web/css/all.css">

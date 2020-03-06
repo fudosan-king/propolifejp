@@ -1,5 +1,4 @@
 <?php 
-
 include_once 'inc/inc.php';
 include_once 'inc/acf-object/acf-home.php';
 include_once 'inc/acf-object/acf-outline.php';

@@ -73,14 +73,35 @@
 			    </div>
 			</header>
 			<div class="topbanner">
-				<a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
+				<!-- Baner only 1 image -->
+				<!-- <a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 				<img class="d-none d-md-block img-fluid" src="images/1x/bg_top_pc2.jpg">
-			    <img class="d-block d-md-none img-fluid" src="images/1x/bg_top_sp2.jpg">
+			    <img class="d-block d-md-none img-fluid" src="images/1x/bg_top_sp2.jpg"> -->
+			    <!-- End baner only 1 image -->
+
+				<!-- Baner is slide -->
+			    <a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
+				<div class="carousel carousel_topbanner">
+					<div class="carousel-cell">
+				    	<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC_slide01.jpg">
+				    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP_slide01.jpg">
+				  	</div>
+				  	<div class="carousel-cell">
+				    	<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC_slide02.jpg">
+				    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP_slide02.jpg">
+				  	</div>
+				  	<div class="carousel-cell">
+				    	<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC_slide03.jpg">
+				    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP_slide03.jpg">
+				  	</div>
+				</div>
+				<!-- End baner is slide -->
 			</div>
 			<div class="w_topbanner_footer">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">
+							<a href="/nakanotetsugakudo/plan.php" target="_blank">
 							<ul class="topbanner_footer">
 								<li>
 									<p>
@@ -99,6 +120,7 @@
 									</p>
 								</li>
 							</ul>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -135,6 +157,14 @@
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.3.9</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>3月14日より大商談会開催します。</p>
+			      											</div>
+			      										</div>
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.2.3</p>

@@ -42,8 +42,8 @@ $(function($) {
     });
 
     var $carousel = $('.carousel_topbanner').flickity({
-      autoPlay: 8000,
-      pauseAutoPlayOnHover: true,
+      autoPlay: 5000,
+      pauseAutoPlayOnHover: false,
       prevNextButtons: false,
       fade: true,
       pageDots: false,
@@ -54,12 +54,12 @@ $(function($) {
 
     $carousel.on( 'settle.flickity', function() {
       if(flkty.selectedIndex === 2){
-         // console.log("last!") 
+         // console.log("last!")
          $carousel.flickity('stopPlayer');
       }
     });
 
-    
+
 
 });
 

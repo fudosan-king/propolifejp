@@ -97,6 +97,9 @@
 				</div>
 				<!-- End baner is slide -->
 			</div>
+			<div class="text_top_baner" align="center">
+				<span class="text-content">大商談会開催</span>
+			</div>
 			<div class="w_topbanner_footer">
 				<div class="container-fluid">
 					<div class="row">
@@ -105,7 +108,7 @@
 							<ul class="topbanner_footer">
 								<li>
 									<p>
-										<span class="meter_label">52m<sup>2</sup>超</span>
+										<span class="meter_label">2LDK 角住戸</span>
 										<span class="price_yen">5,290</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">13</span>
 										<span class="label_stand">万円台～</span>
@@ -113,8 +116,8 @@
 								</li>
 								<li>
 									<p>
-										<span class="meter_label">60m<sup>2</sup>超</span>
-										<span class="price_yen">5,790</span><span class="label_yen">万円〜</span>
+										<span class="meter_label">3LDK</span>
+										<span class="price_yen">5,490</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">14</span>
 										<span class="label_stand">万円台～</span>
 									</p>

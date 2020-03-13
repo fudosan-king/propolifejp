@@ -1047,6 +1047,14 @@
 	.section_topbanner, .carousel_topbanner .carousel-cell, .carousel_topbanner .carousel-cell img, .owl_topbanner .item, .owl_topbanner .item img {
 		height: 426px;
 	}
+    .text_top_baner {
+      top: 368px;
+      height: 50px;
+    }
+    .text_top_baner .text-content {
+      line-height: 50px;
+      font-size: 30px;
+    }
 }
 @media (max-width: 414px) {
 	.navbar-brand {
@@ -1069,6 +1077,14 @@
 		object-fit: fill;
 	}
 	.campaign {margin: 10px auto 20px;}
+    .text_top_baner {
+      top: 300px;
+      height: 40px;
+    }
+    .text_top_baner .text-content {
+      line-height: 40px;
+      font-size: 26px;
+    }
 
 }
 @media (max-width: 375px) {
@@ -1116,6 +1132,14 @@
 	ul.list_info li:nth-child(3) p .big_text, ul.list_info li:nth-child(4) p .big_text, ul.list_info li:nth-child(5) p .big_text {
 		font-size: 13.5px;
 	}
+    .text_top_baner {
+      top: 194px;
+      height: 40px;
+    }
+    .text_top_baner .text-content {
+      line-height: 40px;
+      font-size: 26px;
+    }
 
 }
 

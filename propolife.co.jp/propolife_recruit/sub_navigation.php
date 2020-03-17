@@ -27,6 +27,7 @@ global $temp_dir, $dir_name, $dir_category;
 
                     <?php if (total_objects_inside_tax('career-limit', 'area')>0 ): ?>
                     <li<?php if($dir_category == 'career-limit'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/【中途採用】勤務地限定/">中途採用</a></li>
+                    <li<?php if($dir_category == 'part-time-limit'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/【アルバイト】勤務地限定/">アルバイト</a></li>
                     <?php endif; ?>
                 </ul>
             </li>

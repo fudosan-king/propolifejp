@@ -1,7 +1,6 @@
 <!-- SE: Khanh Nguyen -->
 <?php
 
-
     $pageType = null;
     switch ($post->post_type) {
         case 'newgraduate':
@@ -12,8 +11,11 @@
         case 'career-limit':
             $pageType = 'career';
             break;
+        case 'part-time':
+        case 'part-time-limit':
+            $pageType = 'part-time';
+            break;
     }
-
     $page = get_page_by_path( $pageType, $output = OBJECT, $post_type = 'page' );
     $page_title = $page->post_title;
 
@@ -25,9 +27,9 @@
 
     $recruit_entry_url = get_field('recruit_entry_url');
 ?>
+
 <div id="contents">
 <div id="contents_inner">
-
     <div id="page_title">
         <h2><img src="<?php echo $temp_dir; ?>/common/images/recruit/img_title_h2.png" alt="RECRUIT INFO" class="pc"><img src="<?php echo $temp_dir; ?>/common/images/recruit/img_title_h2_sp.png" alt="RECRUIT INFO" class="sp"></h2>
         <p class="title_sub"><?php echo array_search($post->post_type, array('newgraduate-limit', 'career-limit')) >= 0 ? "【".$page_title."】勤務地限定":$page_title; ?><span class="line"></span></p>
@@ -142,6 +144,9 @@
                 <tr>
                     <th>応募方法</th>
                     <td>
+                        <div class="company-name-detail">
+                            <a href="<?php echo get_field('info_company')['link']; ?>"><?php echo get_field('info_company')['name']; ?></a>
+                        </div>
                         <div class="entry_desc">
                             <?php echo get_field('recruit_entry_text'); ?>
                         </div>

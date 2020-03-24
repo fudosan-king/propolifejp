@@ -2,7 +2,7 @@
 <?php
 global $temp_dir;
 
-$arrPostType = array('newgraduate', 'newgraduate-limit', 'career', 'career-limit');
+$arrPostType = array('newgraduate', 'newgraduate-limit', 'career', 'career-limit', 'part-time', 'part-time-limit');
 
 $obj = get_queried_object();
 

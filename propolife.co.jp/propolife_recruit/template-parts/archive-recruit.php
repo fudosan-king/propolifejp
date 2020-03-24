@@ -2,9 +2,15 @@
 <?php 
     global $temp_dir; 
     $obj = get_queried_object();
+    if ($obj->name == "part-time-limit") {
+        $business_slug = "business-part-time-limit";
+    } else {
+        $business_slug = "business-career-limit";
+    }
 
     $newgraduateType = array('newgraduate', 'newgraduate-limit');
     $careerType = array('career', 'career-limit');
+    $parttimeType = array('part-time', 'part-time-limit');
 
     $pageType = null;
     switch ($obj->query_var) {
@@ -15,6 +21,10 @@
         case 'career':
         case 'career-limit':
             $pageType = 'career';
+            break;
+        case 'part-time':
+        case 'part-time-limit':
+            $pageType = 'part-time';
             break;
     }
 
@@ -32,113 +42,94 @@
     </div>
     
     <div id="page_recruit">
+        <?php
+            $business_args = array('taxonomy' => $business_slug, 'orderby' => 'name', 'order'   => 'ASC', "parent" => 0);
+            $business_taxonomy = get_categories($business_args);
+        ?>
+        <?php 
+            foreach($business_taxonomy  as $business): 
+                if ($business->count > 0):
+        ?>
         <div class="page_recruit_content">
-            <?php 
-                // SE: Khanh Nguyen
+            <h3><?php echo $business->name; ?></h3>
+            <div class="business-content">
+                <?php 
+                    $profession_args = array('taxonomy' => $business_slug, "parent" => $business->term_id);
+                    $profession_taxonomy = get_categories($profession_args);                    
+                ?>
+                <?php foreach($profession_taxonomy  as $profession): ?>
+                <?php 
+                    $args = array(
+                        'post_type' => $obj->name,
+                        'post_status' => 'publish',
+                        'posts_per_page' => -1,
+                        // 'meta_key'      => 'part_time',
+                        // 'meta_value'    => $kind_of_time,
+                        'tax_query' => array(
+                            array(
+                            'taxonomy' => $business_slug,
+                            'field' => 'term_id',
+                            'terms' => $profession->term_id
+                            )
+                        )
+                    );
+                                
+                    $query = new WP_Query( $args );
 
-                $post_type = $obj->query_var;
-                $taxonomy_name = $obj->taxonomies[0];
-                $archive_slug = $obj->rewrite['slug'];
-
-                $args = array(
-                    'taxonomy'      => $taxonomy_name,
-                    'hide_empty'    => false,
-                    'parent'        => 0,
-                );
-                $categories = get_categories($args);
-                $post_count = count($categories);
-                foreach ($categories as $cat){
-                    // print_r($cat);
-                    ?>
+                    $job_total = $query->post_count;
                     
-                        <?php 
 
-                            $args = array(
-                    
-                                // Type & Status Parameters
-                                'post_type'   => $post_type,
-                                'post_status' => 'publish',
-                        
-                                // Order & Orderby Parameters
-                                'order'               => 'DESC',
-                                'orderby'             => 'date',
-                        
-                                // Pagination Parameters
-                                'posts_per_page'         => -1,
-                                // 'posts_per_archive_page' => 10,
-                                // 'nopaging'               => false,
-                                // 'paged'                  => get_query_var( 'paged' ),
-                                // 'offset'                 => 3,
-                    
-                                // Taxonomy Parameters
-                                'tax_query' => array(
-                                    array(
-                                        'taxonomy'         => $cat->taxonomy,
-                                        'field'            => 'slug',
-                                        'terms'            => $cat->slug,
-                                        'include_children' => true,
-                                        'operator'         => 'IN',
-                                    )
-                                )
-
-                            );
+                    if ($job_total > 0): ?>
+                        <h4><?php echo $profession->name; ?></h4>
+                        <article class="recruit_region mb-4">
                             
-                            $query = new WP_Query( $args );
-
-                            $job_total = $query->post_count;
-
-                            if ($job_total > 0): ?>
-                                <article class="recruit_region">
-                                    <header><?php echo $cat->name; ?></header>
-                            <?php
-
-                                if($query->have_posts()) : while($query->have_posts()): $query->the_post();
-
-                                    $objUrl = trailingslashit(path_join( home_url(), path_join( $archive_slug, path_join( $cat->slug, $post->post_name))) );
-                                    ?>
-                                        <a href="<?php echo $objUrl; ?> " target="_blank">
-                                            <section>
-                                                <h3><strong><?php the_title(); ?></strong></h3>
-                                                <div class="description">“<?php echo get_field('recruit_short_description');?>“</div>
-                                            </section>
-                                        </a>
-                                    <?php
-                                    endwhile;
-                                    wp_reset_postdata();
-                                    wp_reset_query();
-                                endif;
-                            ?>
-                                     <div class="clearfix"></div>
-                                </article>
-                            <?php
-                            endif;
-                         ?>
-
-                         <?php 
-
-                            // if($job_total == 0) {
-                                ?>
-                                 <!-- <div align="center">ジョブが見つかりません。</div> -->
-                                <?php
-                            // }
-
-                         ?>
-                    <br><br>
                     <?php
-                }
 
-                 // SE: Khanh Nguyen
-
-            ?>
-            <?php 
-                if($post_count == 0) {
+                        if($query->have_posts()) : while($query->have_posts()): $query->the_post();
+                            $objUrl = get_the_permalink();
+                            $term_obj_list_area = get_the_terms( $query->post->ID, 'area' );
+                            ?> 
+                            <a href="<?php echo $objUrl; ?> " target="_blank"> 
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-6 col-9"><h5><strong><?php the_title(); ?></strong></h5></div>
+                                        <div class="col-md-2 col-3 are-name" >
+                                            <?php 
+                                                // echo $term_obj_list_area[0]->name;
+                                                if (count($term_obj_list_area) > 1) {
+                                                    $i = 1;
+                                                    foreach ($term_obj_list_area as $term_area) {
+                                                        if($i % 2 == 0){
+                                                            echo ', '.$term_area->name;
+                                                        }else{
+                                                            echo $term_area->name;
+                                                        }
+                                                        $i += 1;
+                                                    }
+                                                } else {
+                                                    echo $term_obj_list_area[0]->name;
+                                                }
+                                            ?>     
+                                        </div>
+                                        <div class="col-md-4 col-12 company-name"><?php echo get_field('recruit_short_description');?></div>
+                                    </div>
+                                </section>
+                            </a>
+                            <?php
+                            endwhile;
+                            wp_reset_postdata();
+                            wp_reset_query();
+                        endif;
                     ?>
-                     <div align="center">エリアが見つかりませんでした。</div>
+                             <div class="clearfix"></div>
+                        </article>
                     <?php
-                }
-            ?>
+                    endif;
+                ?>
+                <?php endforeach; ?>
+            </div>
         </div>
-        
+        <?php endif; endforeach; ?>
         <p class="img_process"><img src="<?php echo $recruit_process_image_pc[0]; ?>" alt="" class="pc"><img src="<?php echo $recruit_process_image_sp[0]; ?>" alt="" class="sp"></p>
     </div><!-- // #page_recruit -->
 

@@ -16,8 +16,8 @@
  ------------------------------------------------------- */
 #contents_inner{ padding-bottom: 190px;}
 .img_btm_animal{
-    width: 132px;
-    height: 253px;
+    width: 172px;
+    height: 183px;
     background-image:url(../../images/recruit/img_btm_animal.png);
     background-repeat: no-repeat;
     background-position: center top;
@@ -223,7 +223,12 @@
 *
 -------------------------------------------------------------------------------- */
 @media screen and (max-width: 480px) {
-
+.recruit_region section { padding-top: 0px !important; }
+.business-content h4 { font-size: 16px; } 
+#page_recruit .page_recruit_content .recruit_region section h3 { font-size: 15px; }
+article .company-name { padding: 0px 30px; font-size: 14px; }
+#page_recruit .page_recruit_content .recruit_region a { height: 80px; }
+/*<SE: Minh */
 #page_recruit{
     margin: 0 0 0 0;
     padding: 0 25px;

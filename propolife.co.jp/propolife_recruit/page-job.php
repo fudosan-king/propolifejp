@@ -60,7 +60,6 @@ $dir_name = 'job';
                                 while ( $posts->have_posts() ) : $posts->the_post();
                                     $post_id = $posts->post->ID; 
                                     $job_visual = wp_get_attachment_image_src(get_field('job_list_image_thumb'), 'medium');
-                                    $job_division_copy = get_field('job_division_copy');
                                     $job_division = get_field('job_name');
                                     $job_permalink = get_permalink();
                                     if(isset($post_id)):
@@ -68,7 +67,6 @@ $dir_name = 'job';
                                     <li>
                                         <a href="<?php echo $job_permalink; ?>">
                                             <p class="pic"><img src="<?php echo $job_visual[0]; ?>" alt="<?php echo strip_tags($job_division); ?>"></p>
-                                            <p class="division_copy"><?php echo $job_division_copy; ?></p>
                                             <p class="division"><?php echo $job_division; ?></p>
                                         </a>
                                     </li>

@@ -33,7 +33,7 @@ $is_even = ($posts_length % 4 == 0)? true: false;
         <?php
         $job_business_content = get_field('job_business_content');
         $job_division_copy = get_field('job_division_copy');
-        $job_division = get_field('job_division');
+        $job_business = get_field('job_business');
         $job_position = get_field('job_position');
         $job_name = get_field('job_name');
         $job_main_visual = wp_get_attachment_image_src(get_field('job_main_visual'), 'large');
@@ -42,7 +42,7 @@ $is_even = ($posts_length % 4 == 0)? true: false;
         ?>
         <div id="job_body">
             <div id="job_title">
-                <h3><?php echo $job_division_copy; ?></h3>
+                <h3><?php echo $job_business; ?></h3>
                 <p class="name"><span class="position"><?php echo $job_position; ?></span><?php echo $job_name; ?></p>
             </div><!-- // #job_title -->
             

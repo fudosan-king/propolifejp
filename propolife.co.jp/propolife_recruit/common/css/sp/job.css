@@ -71,17 +71,16 @@
 .profession-box .profession:first-child {
     margin-left: 0px;
 }
+#contents_inner .profession .profession-tx { border-bottom: solid 5px #800000; height: 45px; margin-bottom: 10px; }
 #contents_inner .profession h4 {
+    width: 140px;
     clear: both;
-    padding: 5px 0px;
-    margin: 0 0 10px;
     line-height: 1.25;
     text-align: left;
     box-sizing: border-box;
     font-size: 15px;
     font-weight: bold;
     letter-spacing: .09em;
-    border-bottom: solid 5px #800000;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
 }
 .custom-class li { margin-right: 7px; }
@@ -525,7 +524,7 @@
         padding: 5px 0px 5px 24px !important;
     }
     .profession-box { padding-left: 24px; }
-    .profession-box .profession { margin-right: 7px; margin-left: 0px; }
+    .profession-box .profession { margin-right: 7px; margin-left: 0px; margin-bottom: 10px; }
     .custom-class li { margin-right: 7px !important; }
     .custom-class li:nth-last-child(1) { margin-right: 0px !important; }
     #page_job_index .job_copy{

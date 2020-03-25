@@ -91,21 +91,21 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                     "title": "<?php the_title(); ?>",
                     "employmentType": ["<?php echo $type_of_work_time; ?>"],
                     "datePosted": "<?php echo get_the_date('Y-m-d'); ?>",
-                    "openingHours": "<?php echo get_field('ads_work_time'); ?>",
+                    "openingHours": "<?php echo get_field('ads_work_hours'); ?>",
                     "hiringOrganization": {
                         "@type": "Organization",
-                        "name": "<?php echo get_field('ads_company_name'); ?>",
-                        "sameAs": "<?php echo get_field('ads_company_link'); ?>"
+                        "name": "<?php echo get_field('ads_company')['name']; ?>",
+                        "sameAs": "<?php echo get_field('ads_company')['link']; ?>"
                     },
                     "jobLocation": {
                         "@type": "Place",
                         "address": {
                             "@type": "PostalAddress",
-                            "streetAddress": "<?php echo get_field('ads_company_street'); ?>",
-                            "addressLocality": "<?php echo get_field('ads_company_location'); ?>",
-                            "addressRegion": "<?php echo get_field('ads_company_region'); ?>",
-                            "postalCode": "<?php echo get_field('ads_company_code'); ?>",
-                            "addressCountry": "<?php echo get_field('ads_company_country'); ?>"
+                            "streetAddress": "<?php echo get_field('ads_address')['street']; ?>",
+                            "addressLocality": "<?php echo get_field('ads_address')['location']; ?>",
+                            "addressRegion": "<?php echo get_field('ads_address')['region']; ?>",
+                            "postalCode": "<?php echo get_field('ads_address')['code']; ?>",
+                            "addressCountry": "<?php echo get_field('ads_address')['country']; ?>"
                         }
                     },
                     "baseSalary": {
@@ -113,9 +113,9 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         "currency": "JPY",
                         "value": {
                             "@type": "QuantitativeValue",
-                            "minValue": "<?php echo get_field('ads_salary_min'); ?>",
-                            "maxValue": "<?php echo get_field('ads_salary_max'); ?>",
-                            "unitText": "<?php echo get_field('ads_salary_unit'); ?>"
+                            "minValue": "<?php echo get_field('ads_salary')['min']; ?>",
+                            "maxValue": "<?php echo get_field('ads_salary')['max']; ?>",
+                            "unitText": "MONTH"
                         }
                     }
                 }

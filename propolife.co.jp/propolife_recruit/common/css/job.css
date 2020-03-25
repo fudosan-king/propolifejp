@@ -75,7 +75,7 @@
     margin-left: 6px;
     margin-top: 15px;
 }
-.profession-box .profession:first-child {
+.profession-box .profession-6, .profession-box .profession:first-child {
     margin-left: 0px;
 }
 #contents_inner .profession .profession-tx { border-bottom: solid 5px #800000; height: 45px; margin-bottom: 10px; }

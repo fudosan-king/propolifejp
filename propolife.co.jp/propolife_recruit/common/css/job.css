@@ -73,13 +73,13 @@
     width: auto;
     float: left;
     margin-left: 6px;
+    margin-top: 15px;
 }
 .profession-box .profession:first-child {
     margin-left: 0px;
 }
 #contents_inner .profession .profession-tx { border-bottom: solid 5px #800000; height: 45px; margin-bottom: 10px; }
 #contents_inner .profession h4 {
-    width: 149px;
     clear: both;
     line-height: 1.25;
     text-align: left;
@@ -110,7 +110,7 @@
 }
 
 #page_job_index .page_job_list li{
-    width: 149px;
+    width: 252px;
     float: left;
     position: relative;
 }

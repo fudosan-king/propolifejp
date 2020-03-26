@@ -72,58 +72,6 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-58LD4XD');</script>
         <!-- End Google Tag Manager -->
-        <?php
-            if(is_single() && $post_type == 'career-limit' || is_single() && $post_type == 'part-time-limit'):
-                if($post_type == 'career-limit') { 
-                    $type_of_work_time = 'FULL_TIME'; 
-                } else { 
-                    $type_of_work_time = 'PART_TIME'; 
-                }
-        ?>
-            <!-- Google Json LD -->
-            <script type="application/ld+json">
-                {
-                    "@context": "https://schema.org",
-                    "@type": "JobPosting",
-                    "url": "<?php echo get_permalink(); ?>",
-                    "image": "http://www.propolife.co.jp/wp-content/themes/corporate/common/img/index/main_img02.jpg",
-                    "description": "<?php echo get_field('ads_description'); ?>",
-                    "title": "<?php the_title(); ?>",
-                    "employmentType": ["<?php echo $type_of_work_time; ?>"],
-                    "datePosted": "<?php echo get_the_date('Y-m-d'); ?>",
-                    "openingHours": "<?php echo get_field('ads_work_hours'); ?>",
-                    "hiringOrganization": {
-                        "@type": "Organization",
-                        "name": "<?php echo get_field('ads_company')['name']; ?>",
-                        "sameAs": "<?php echo get_field('ads_company')['link']; ?>"
-                    },
-                    "jobLocation": {
-                        "@type": "Place",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "<?php echo get_field('ads_address')['street']; ?>",
-                            "addressLocality": "<?php echo get_field('ads_address')['location']; ?>",
-                            "addressRegion": "<?php echo get_field('ads_address')['region']; ?>",
-                            "postalCode": "<?php echo get_field('ads_address')['code']; ?>",
-                            "addressCountry": "<?php echo get_field('ads_address')['country']; ?>"
-                        }
-                    },
-                    "baseSalary": {
-                        "@type": "MonetaryAmount",
-                        "currency": "JPY",
-                        "value": {
-                            "@type": "QuantitativeValue",
-                            "minValue": "<?php echo get_field('ads_salary')['min']; ?>",
-                            "maxValue": "<?php echo get_field('ads_salary')['max']; ?>",
-                            "unitText": "MONTH"
-                        }
-                    }
-                }
-            </script>
-            <!-- End Google Json LD -->
-        <?php
-            endif;
-        ?>
     </head>
     <body id="<?php echo $dir_name; ?>">
         <!-- Google Tag Manager (noscript) -->

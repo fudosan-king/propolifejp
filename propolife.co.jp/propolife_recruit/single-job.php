@@ -58,15 +58,17 @@ $is_even = ($posts_length % 4 == 0)? true: false;
                     $row_num = 0;
                     while(the_repeater_field('job_content_repeater_field')):
                     $job_content_image = wp_get_attachment_image_src(get_sub_field('job_content_image'), 'medium');
-                    $job_content_title = get_sub_field('job_content_title');
-                    $job_content_text = get_sub_field('job_content_text');
+                    $job_content = get_sub_field('job_content');
                     ?>
                     <div class="section<?php if($row_num % 2 == 1): ?> right<?php endif; ?>">
                         <p class="pic"><img src="<?php echo $job_content_image[0]; ?>" alt=""></p>
-                        <div class="desc">
-                            <h4><?php echo $job_content_title; ?></h4>
-                            <p><?php echo $job_content_text; ?></p>
+                        <?php $i = 0; ?>    
+                        <?php while(the_repeater_field('job_content')): ?>
+                        <div class="desc pb-4">
+                            <h4><?php echo $job_content[$i]['title']; ?></h4>
+                            <p><?php echo $job_content[$i]['text']; ?></p>
                         </div>
+                        <?php $i +=1; endwhile; ?>
                     </div>
                     <?php $row_num += 1; endwhile; ?>
                 </div><!-- // #content_body -->
@@ -108,7 +110,7 @@ $is_even = ($posts_length % 4 == 0)? true: false;
         </div><!-- // #job_btm_nav -->
     </div><!-- // #page_job_single -->
 
-<p class="img_btm_animal" style="display: none;"></p>
+<p class="img_btm_animal"></p>
 </div><!-- // #contents_inner -->
 </div><!-- // #contents -->
 

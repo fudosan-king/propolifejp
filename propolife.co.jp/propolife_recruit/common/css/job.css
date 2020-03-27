@@ -23,7 +23,7 @@
     common overwrite
  ------------------------------------------------------- */
 #contents_inner.index{ width: 760px; padding-bottom: 250px;}
-#contents_inner.single{ width: 750px; padding-bottom: 160px;}
+#contents_inner.single{ width: 750px; padding-bottom: 250px;}
 #contents_inner.index .img_btm_animal{
     width: 260px;
     height: 334px;
@@ -54,7 +54,6 @@
 *
 *
 -------------------------------------------------- */
-.img_btm_animal, .btm_page_top, #job_btm_nav { display: none; }
 #contents_inner.index {
     width: 800px !important; 
 }

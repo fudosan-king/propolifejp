@@ -492,6 +492,9 @@ ul.list_info li p .big_text {
 }
 .box_informations_content {
   position: relative;
+  overflow-y: scroll;
+  height: 110px;
+  overflow-x: hidden;
 }
 .box_informations_content::before {
   width: 1px;

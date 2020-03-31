@@ -2019,13 +2019,13 @@ iframe {
   line-height: 80px;
   font-weight: 600;
   position: relative;
-  top: -8px;
+  top: -4px;
 }
 
 .text_top_baner .text-line-up {
   font-size: 35px;
   position: relative;
-  top: 8px;
+  top: 12px;
 }
 
 @media(min-width:768px) {

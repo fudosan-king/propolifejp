@@ -901,7 +901,20 @@
 	}
 
 }
+@media (max-width: 767px) {
+	.text_top_baner {
+		top: 770px;
+    	height: 72px;
+	}
+	.text_top_baner .text-line-up {
+		font-size: 25px;
+		top: 4px;
+	}
+	.text_top_baner .text-content {
+		top: -4px;
+	}
 
+}
 @media (max-width: 736px) {
 	.navbar-brand {
 		position: absolute;
@@ -1033,7 +1046,10 @@
 	.meter_label {
 		font-size: 18px;
 	}
-
+	.text_top_baner {
+		top: 620px;
+    	height: 72px;
+	}
 }
 @media (min-width: 576px) {
 	.modal_detail .modal-dialog {
@@ -1048,12 +1064,18 @@
 		height: 426px;
 	}
     .text_top_baner {
-      top: 368px;
-      height: 50px;
+      top: 345px;
+      height: 70px;
     }
     .text_top_baner .text-content {
       line-height: 50px;
       font-size: 30px;
+    }
+    .text_top_baner .text-line-up {
+    	font-size: 20px;
+    }
+    .text_top_baner .text-content {
+    	font-size: 30px;
     }
 }
 @media (max-width: 414px) {
@@ -1078,8 +1100,8 @@
 	}
 	.campaign {margin: 10px auto 20px;}
     .text_top_baner {
-      top: 300px;
-      height: 40px;
+      top: 280px;
+      height: 60px;
     }
     .text_top_baner .text-content {
       line-height: 40px;

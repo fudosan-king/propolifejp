@@ -98,7 +98,8 @@
 				<!-- End baner is slide -->
 			</div>
 			<div class="text_top_baner" align="center">
-				<span class="text-content">大商談会開催</span>
+				<span class="text-line-up">モデルルーム住戸</span><br>
+				<span class="text-content">春の大商談会開催！</span>
 			</div>
 			<div class="w_topbanner_footer">
 				<div class="container-fluid">
@@ -160,6 +161,14 @@
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.3.31</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>4月4日よりモデルルーム使用住戸春の大商談会を開催します。</p>
+			      											</div>
+			      										</div>
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.3.9</p>

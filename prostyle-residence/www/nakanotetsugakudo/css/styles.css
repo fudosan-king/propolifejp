@@ -2008,16 +2008,24 @@ iframe {
 }
 .text_top_baner {
   position: absolute;
-  top: 710px;
-  height: 80px;
+  top: 690px;
+  height: 100px;
   width: 100%;
   background-color: #ffffff;
   opacity: 0.8;
 }
 .text_top_baner .text-content {
-  font-size: 50px;
+  font-size: 45px;
   line-height: 80px;
   font-weight: 600;
+  position: relative;
+  top: -8px;
+}
+
+.text_top_baner .text-line-up {
+  font-size: 35px;
+  position: relative;
+  top: 8px;
 }
 
 @media(min-width:768px) {

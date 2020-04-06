@@ -628,7 +628,7 @@ main section.award-content {
     border-top: 1px solid #ccc;
 }
 main section.award-content img {
-    min-height: 110px;
+    /*min-height: 110px;*/
     width: 100%;
 }
 
@@ -636,6 +636,7 @@ main section.award-content h3 {
     font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 7px;
+    color: #000;
 }
 
 main section.award-content p {

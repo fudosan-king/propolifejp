@@ -928,10 +928,10 @@ ul.list_row li h4 {
   font-size: 14px;
 }
 .bg_notbuy {
-  background: url('../images/1x/i_o.png') no-repeat center center;
+  background: url('../images/1x/i_x.png') no-repeat center center;
 }
 .bg_willbuy {
-  background: url('../images/1x/i_x.png') no-repeat center center;
+  background: url('../images/1x/i_o.png') no-repeat center center;
 }
 .section_cate {
   padding: 60px 0;

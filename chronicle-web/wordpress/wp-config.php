@@ -61,8 +61,8 @@ define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 
-define('WP_SITEURL', 'http://chronicle-web.test');
-define('WP_HOME', 'http://chronicle-web.test');
+define('WP_SITEURL', 'http://www.chronicle-web.test/wordpress/');
+define('WP_HOME', 'http://www.chronicle-web.test');
 
 /**#@-*/
 

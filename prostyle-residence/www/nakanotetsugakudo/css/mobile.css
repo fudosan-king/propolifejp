@@ -910,7 +910,6 @@
 @media (max-width: 767px) {
 	.text_top_baner {
 		top: 770px;
-    	height: 72px;
 	}
 	.text_top_baner .text-line-up {
 		font-size: 25px;
@@ -1054,7 +1053,6 @@
 	}
 	.text_top_baner {
 		top: 620px;
-    	height: 72px;
 	}
 }
 @media (min-width: 576px) {
@@ -1071,7 +1069,6 @@
 	}
     .text_top_baner {
       top: 345px;
-      height: 70px;
     }
     .text_top_baner .text-content {
       line-height: 50px;
@@ -1107,7 +1104,6 @@
 	.campaign {margin: 10px auto 20px;}
     .text_top_baner {
       top: 280px;
-      height: 60px;
     }
     .text_top_baner .text-content {
       line-height: 40px;
@@ -1162,7 +1158,6 @@
 	}
     .text_top_baner {
       top: 194px;
-      height: 40px;
     }
     .text_top_baner .text-content {
       line-height: 40px;

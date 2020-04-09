@@ -98,8 +98,10 @@
 				<!-- End baner is slide -->
 			</div>
 			<div class="text_top_baner" align="center">
-				<span class="text-line-up">モデルルーム住戸</span><br>
-				<span class="text-content">春の大商談会開催！</span>
+				<!-- <span class="text-line-up">モデルルーム住戸</span><br>
+				<span class="text-content">春の大商談会開催！</span> -->
+				<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC-bar.png">
+		    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP-bar.png">
 			</div>
 			<div class="w_topbanner_footer">
 				<div class="container-fluid">

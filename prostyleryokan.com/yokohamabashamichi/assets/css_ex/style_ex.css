@@ -596,7 +596,7 @@ img.sp-text {display: none;}
 	.restaurant_content .more_text span.more_loop {position: relative; right: initial; width: 36%}
 
 	.w_site_content {
-		height: 580px;
+		height: 450px;
 	}
 	.box_notice {
 		width: 92%;
@@ -615,7 +615,7 @@ img.sp-text {display: none;}
 	img.sp-text {
 		display: none;
 	}
-	.section_top {height: 100%;}
+	
 	.w_site_content h2 {
 		margin-top: 60px;
 	}
@@ -800,10 +800,10 @@ img.sp-text {display: none;}
     /*img.sp-text {display: inline;}*/
 
 	#scroll_down {
-		bottom: -40px;
+		bottom: -100px;
 	}
 	#scroll_down .vertical_elem {height: 90px;}
-	#scroll_down {bottom: 0;}
+	/*#scroll_down {bottom: 0;}*/
 	#scroll_down .start_square{top: -84px;}
 	#scroll_down::after {
 		font-family: 'ZapfinoLinotypeOne';

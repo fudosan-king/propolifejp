@@ -300,6 +300,14 @@
 	.box_rooms_detail_img .slick-next {right: 5px;}
 
 	.section_footer_bottom ul.sns li a.btn_fb {padding: 10px;}
+	.box_notice {
+		width: 100%;
+		margin-top: 15px;
+		padding: 15px;
+	}
+	.box_notice p {
+		line-height: 1.5em;
+	}
 }
 
 @media (max-width: 736px) {
@@ -453,6 +461,13 @@
 
 	.section_access p, .section_access ul, .section_access td {font-size: 12px;}
 	.box_rooms_content span {font-size: 12px;}
+	.caption_content h3 {
+	    font-size: 30px;
+	}
+	.box_notice {
+		margin-top: 20px;
+	}
+
 
 }
 @media (max-width: 375px) {

@@ -18,7 +18,7 @@ global $temp_dir, $dir_name, $dir_category;
             <li class="parent">
                 <p>採用情報</p>
                 <ul>
-                    <!-- <li<?php //if($dir_category == 'newgraduate'): ?> class="current"<?php //endif; ?>><a href="<?php //echo home_url(); ?>/newgraduate/">新卒採用</a></li> -->
+                    <li<?php if($dir_category == 'newgraduate'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/newgraduate/">新卒採用</a></li>
                     <!-- <?php if (total_objects_inside_tax('newgraduate-limit', 'area')>0 ): ?>
                     <li<?php if($dir_category == 'newgraduate-limit'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/【新卒採用】勤務地限定/">【新卒採用】勤務地限定</a></li>
                     <?php endif; ?> -->

@@ -1,12 +1,18 @@
-@media (max-width: 1600px) {
+@media (max-width: 1680px) {
 	.section_topbanner {
 		height: 980px;
+	}
+	.text_top_baner {
+		top: 665px;
 	}
 }
 
 @media (max-width: 1440px) {
 	.section_topbanner {
 		height: 898px;
+	}
+	.text_top_baner {
+		top: 685px;
 	}
 }
 

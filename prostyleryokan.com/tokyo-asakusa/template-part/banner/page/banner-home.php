@@ -45,7 +45,7 @@
 	}
 ?>
 <section class="section_banner">
-	<div class="owl-carousel owl-theme owl_banner">
+	<div class="owl-carousel owl-theme owl_banner <?=$currentLanguage;?>">
 		<div class="item">
 			<?php _generateTag_image($data->pc_image, 'd-none d-md-block'); ?>
 			<?php _generateTag_image($data->sp_image, 'd-block d-md-none'); ?>

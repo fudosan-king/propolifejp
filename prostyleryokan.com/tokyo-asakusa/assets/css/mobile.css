@@ -315,6 +315,10 @@
 		height: 560px;
 	}
 
+	.owl_banner.en, .owl_banner.en .item img {
+		height: 700px;
+	}
+
 	.caption {
 		right: 15px;
 		left: 15px;

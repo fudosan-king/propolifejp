@@ -4,7 +4,7 @@
     <?php get_template_part( 'template-parts/header/main', 'header' ); ?>
     <div class="jarallax bg_top">
         <img class="jarallax-img" src="<?php echo TEMPLATE_DIR; ?>/images/1x/bg_menu.jpg" alt="">
-        <a href="/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_gray.svg" alt="" class="img-fluid" width="150"></a>
+        <a href="/yokohamabashamichi/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_gray.svg" alt="" class="img-fluid" width="150"></a>
         <div class="page_content">
             <div class="black_title">
                 <h2><?php the_title(); ?></h2>

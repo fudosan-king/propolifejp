@@ -1,7 +1,7 @@
 <div class="sub_page">
 
 	<?php get_template_part( 'template-parts/header/main', 'header' ); ?>
-	<a href="/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_gray.svg" alt="" class="img-fluid" width="150"></a>
+	<a href="/yokohamabashamichi/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_gray.svg" alt="" class="img-fluid" width="150"></a>
 
 	<section class="section_accomodation_detail">
 		<?php 

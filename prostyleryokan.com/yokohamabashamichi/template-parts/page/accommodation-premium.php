@@ -8,7 +8,7 @@ $pageObj = get_page_by_path($strPage);
     <?php get_template_part( 'template-parts/header/main', 'header' ); ?>
     <div class="jarallax bg_top" style="background: #a6bcd4;">
          <img class="jarallax-img bg-scale" src="<?php echo get_field('background_image', $pageObj)['url']; ?>" alt="">
-        <a href="/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_white.svg" alt="" class="img-fluid" width="150"></a>
+        <a href="/yokohamabashamichi/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_white.svg" alt="" class="img-fluid" width="150"></a>
         <div class="accomodation_content">
           <span class="box_line">
             <svg width="200" height="200" viewBox="0 0 100 100">

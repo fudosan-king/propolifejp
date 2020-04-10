@@ -798,7 +798,7 @@ img.sp-text {display: none;}
 
     img.pc-text {display: none;}
     /*img.sp-text {display: inline;}*/
-
+    .w_site_content h1 {display: none;}
 	#scroll_down {
 		bottom: -100px;
 	}

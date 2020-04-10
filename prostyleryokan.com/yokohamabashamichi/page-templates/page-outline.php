@@ -8,7 +8,7 @@
     <?php get_template_part( 'template-parts/header/main', 'header' ); ?>
     <div class="jarallax bg_top">
         <img class="jarallax-img bg-scale" src="<?php echo get_field('background_image')['url']; ?>" alt="">
-        <a href="/" class="logo"><img src="images/1x/logo_white.svg" alt="" class="img-fluid" width="150"></a>
+        <a href="/yokohamabashamichi/" class="logo"><img src="images/1x/logo_white.svg" alt="" class="img-fluid" width="150"></a>
         <div class="accomodation_content">
           <div class="w_box_line">
             <span class="box_line">

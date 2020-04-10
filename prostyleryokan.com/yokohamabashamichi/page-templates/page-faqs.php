@@ -9,7 +9,7 @@
 	<section class="section_notation">
 		<?php get_template_part( 'template-parts/header/main', 'header' ); ?>
 		<div class="bg_top bg_pattern">
-			<a href="/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_gray.svg" alt="" class="img-fluid" width="150"></a>
+			<a href="/yokohamabashamichi/" class="logo"><img src="<?php echo TEMPLATE_DIR; ?>/images/1x/logo_gray.svg" alt="" class="img-fluid" width="150"></a>
 			<div class="notation_content">
 				<div class="black_title black_title_faq">
 					<h2><?php the_title(); ?></h2>

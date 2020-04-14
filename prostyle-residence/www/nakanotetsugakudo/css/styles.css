@@ -2261,3 +2261,15 @@ iframe {
 .topbanner {
   width: 100%;
 }
+.box_sumitomo {
+  text-align: center; border: solid 1px #000000; margin: 40px 75px 0 75px;
+}
+.box_sumitomo .content {
+  padding: 30px 0 20px 0; font-weight: bold; font-size: 20px; line-height: 30px;
+}
+.box_sumitomo .content .text-up {
+  font-size: 38px;
+}
+.box_sumitomo .content .link_sumotimo {
+  color: red;
+}

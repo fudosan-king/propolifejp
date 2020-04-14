@@ -51,6 +51,12 @@
 	.section_topbanner {
 		height: 638px;
 	}
+	.box_sumitomo .content {
+		font-size: 16px;
+	}
+	.box_sumitomo .content .text-up {
+		font-size: 30px;
+	}
 
 }
 @media (max-width: 823px) {
@@ -905,6 +911,15 @@
 	.section_topbanner {
 		height: 478px;
 	}
+	.box_sumitomo {
+		margin: 20px 0 0 0;
+	}
+	.box_sumitomo .content {
+		font-size: 14px;
+	}
+	.box_sumitomo .content .text-up {
+		font-size: 24px;
+	}
 
 }
 @media (max-width: 767px) {
@@ -1080,6 +1095,15 @@
     .text_top_baner .text-content {
     	font-size: 30px;
     }
+    .box_sumitomo .content {
+		font-size: 12px;
+		line-height: 22px;
+		padding-top: 18px;
+    	padding-bottom: 6px;
+	}
+	.box_sumitomo .content .text-up {
+		font-size: 16px;
+	}
 }
 @media (max-width: 414px) {
 	.navbar-brand {

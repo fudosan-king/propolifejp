@@ -172,6 +172,14 @@
 			      									<div class="box_informations_content">
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.4.15</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>Lタイプ完売いたしました。Jタイプの間取り（3LDK＋2WIC＋SIC）を公開いたしました。</p>
+			      											</div>
+			      										</div>
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.3.31</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">

@@ -184,3 +184,9 @@ footer a {
 
 .datepicker {background-color: #fdfbf3;}
 .datepicker td {width: 32px; height: 32px;}
+.validate-error {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important;
+    /*border-color: #ff0000!important;*/
+    border: 1px solid #ff0000!important;
+    padding-left: 5px!important;
+}

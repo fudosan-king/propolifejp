@@ -53,8 +53,11 @@
 	
 }
 
-@media (max-width: 375px) {
-  	
+@media (max-width: 360px) {
+  	.btn_border{
+	    padding-left: 30px;
+    	padding-right: 30px;
+  	}
 }
 
 

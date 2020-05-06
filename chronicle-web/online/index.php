@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="./assets/css/styles.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/mobile.css" type="text/css">
-    <script type="text/javascript" src="https://typesquare.com/3/tsst/script/ja/typesquare.js?5e72c6a675bc4b9598da5036e90393a3" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="https://typesquare.com/3/tsst/script/ja/typesquare.js?5e72c6a675bc4b9598da5036e90393a3" charset="utf-8"></script> -->
 </head>
 
 <body>
@@ -53,38 +53,86 @@
                                     <br>※ご利用は無料ですが、別途通信料がかかります。データ通信料はお客さまのご負担となります。
                                     <br>従量課金制通信サービスや通信料に上限があるネット回線・プランを利用する場合はご注意ください。
                                     <br>安定した画質で利用するためにも、Wi-Fi環境下での利用を推奨します。</p>
-                                <form action="./confirm/" method="POST" class="frm_online">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" required placeholder="お名前（必須）">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="email" required placeholder="メールアドレス（必須）">
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="datepicker" type="text" name="datepicker" class="form-control datepicker" placeholder="ご希望日">
-                                    </div>
-                                    <div class="form-group">
-                                        <select name="time" class="form-control" placeholder="">
-                                            <option value="ご希望時間" selected>ご希望時間</option>
-                                            <option value="時間を運択">時間を運択</option>
-                                            <option value="10:00">10:00</option>
-                                            <option value="11:00">11:00</option>
-                                            <option value="12:00">12:00</option>
-                                            <option value="13:00">13:00</option>
-                                            <option value="14:00">14:00</option>
-                                            <option value="15:00">15:00</option>
-                                            <option value="16:00">16:00</option>
-                                            <option value="17:00">17:00</option>
-                                            <option value="18:00">18:00</option>
-                                            <option value="19:00">19:00</option>
-                                        </select>
-                                    </div>
-                                    <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                            個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
-                                    </p>
-                                    <p class="mb-0 text-center">
-                                        <button type="submit" name="submit" class="btn btn_border">上記に同意して確認画面へ</button>
-                                    </p>
+                                <form action="http://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online">
+                                    <section class="data-input">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" required placeholder="お名前（必須）">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="email" required placeholder="メールアドレス（必須）">
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="datepicker" type="text" name="datepicker" class="form-control datepicker" placeholder="ご希望日">
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="time" class="form-control" placeholder="">
+                                                <option value="ご希望時間" selected>ご希望時間</option>
+                                                <option value="時間を運択">時間を運択</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="18:00">18:00</option>
+                                                <option value="19:00">19:00</option>
+                                            </select>
+                                        </div>
+                                        <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
+                                                個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
+                                        </p>
+                                        <p class="mb-0 text-center">
+                                            <button type="button" id="btn_confirm" name="confirm" class="btn btn_border">上記に同意して確認画面へ</button>
+                                        </p>
+                                    </section>
+
+                                    <section class="data-confirm" style="display: none;">
+                                        <div class="box_entry">
+                                            <h2 class="text-center">入力内容をご確認ください</h2>
+                                            <div class="row">
+                                                <div class="col-4 col-md-6 align-self-center">
+                                                    <label for="">お名前</label>
+                                                </div>
+                                                <div class="col-8 col-md-6 align-self-center">
+                                                    <p class="mb-0 cfr_name"></p>
+                                                    <input type="hidden" name="pd_name" value="">
+                                                </div>
+                                                <div class="col-4 col-md-6 align-self-center">
+                                                    <label for="">メールアドレス</label>
+                                                </div>
+                                                <div class="col-8 col-md-6 align-self-center">
+                                                    <p class="mb-0 cfr_email"><span id="cfr_email"></span></p>
+                                                    <input type="hidden" name="pd_email" value="">
+                                                </div>
+                                                <div class="col-4 col-md-6 align-self-center">
+                                                    <label for=""> ご希望日</label>
+                                                </div>
+                                                <div class="col-8 col-md-6 align-self-center">
+                                                    <p class="mb-0 cfr_date"></p>
+                                                    <input type="hidden" name="pd_appointment_date" value="">
+                                                </div>
+                                                <div class="col-4 col-md-6 align-self-center">
+                                                    <label for="">ご希望時間</label>
+                                                </div>
+                                                <div class="col-8 col-md-6 align-self-center">
+                                                    <p class="mb-0 cfr_hour"></p>
+                                                    <input type="hidden" name="pd_appointment_hour" value="">
+                                                </div>
+                                            </div>
+                                            <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
+                                            個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small></p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 mb-3">
+                                                <a href="" class="btn btn_border btn_return w-100">入力画面に戻る</a>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <button type="submit" name="submit" class="btn btn_border btn_send w-100">送信する</button>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </form>
                             </div>
                         </div>
@@ -103,6 +151,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
     <script src="./assets/js/functions.js"></script>
 </body>
 

@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="./assets/css/styles.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/mobile.css" type="text/css">
-    <!-- <script type="text/javascript" src="https://typesquare.com/3/tsst/script/ja/typesquare.js?5e72c6a675bc4b9598da5036e90393a3" charset="utf-8"></script> -->
+    <script type="text/javascript" src="https://typesquare.com/3/tsst/script/ja/typesquare.js?5e72c6a675bc4b9598da5036e90393a3" charset="utf-8"></script>
 </head>
 
 <body>

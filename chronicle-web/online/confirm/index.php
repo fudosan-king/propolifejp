@@ -65,7 +65,7 @@
                                 ※ご利用は無料ですが、別途通信料がかかります。データ通信料はお客さまのご負担となります。<br>
                                 　従量課金制通信サービスや通信料に上限があるネット回線・プランを利用する場合はご注意ください。<br>
                                 　安定した画質で利用するためにも、Wi-Fi環境下での利用を推奨します。</p>
-                                <form action="http://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online">
+                                <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online">
                                     <div class="box_entry">
                                         <h2 class="text-center">入力内容をご確認ください</h2>
                                         <div class="row">

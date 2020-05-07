@@ -3,7 +3,7 @@ $(function($) {
     today = new Date();
     var date = new Date();
     var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    var meetday = today;
+    var meetday = moment();
 
     if(today.getDay() == 2)
         meetday = moment(today).add(2, 'day');

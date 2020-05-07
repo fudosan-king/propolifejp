@@ -18,7 +18,7 @@
     <meta name="viewport" content="width = device-width, init-scale = 1.0, minim-scale = 1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
-    <title>株式会社アストラスト　溝の口店</title>
+    <title>株式会社クロニクル　オンライン相談予約</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon_package_v0.16/apple-touch-icon.png">

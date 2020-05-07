@@ -156,7 +156,7 @@
 	      						</ul>
 	      						<div class="box_sumitomo">
 	      							<p class="content">
-		      							<span class="text-up">モデルルーム住戸 春の大商談会開催中！【完全予約制】</span><br>
+		      							<span class="text-up">モデルルーム住戸 大商談会開催中！【完全予約制】</span><br>
 		      							<br>
 										※マンションギャラリーには係員が常駐しておりません。必ずご予約のうえ、ご来場ください。<br>WEB来場予約は<a class="link_sumotimo" href="/nakanotetsugakudo/contact/reservation/">こちら</a>から<br>
 									</p>

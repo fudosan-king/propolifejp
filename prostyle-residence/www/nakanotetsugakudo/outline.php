@@ -273,7 +273,7 @@
 					      			</tr>
 					      		</table>
 
-					      		<p class="mb-5 text-center">更新日<span>（4月15日）</span>・更新予定日<span>（5月7日）</span></p>
+					      		<p class="mb-5 text-center">更新日<span>（5月7日）</span>・更新予定日<span>（5月20日）</span></p>
 
 	      					</div>
 	      				</div>

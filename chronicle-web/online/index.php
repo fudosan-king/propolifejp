@@ -91,6 +91,10 @@
                                                 <option value="19:00">19:00</option>
                                             </select>
                                         </div>
+                                        <div class="form-group">
+                                            <label>備考</label>
+                                            <textarea name="note" id="input" class="form-control" rows="3"></textarea>
+                                        </div>
                                         <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                                 個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
                                         </p>
@@ -130,6 +134,13 @@
                                                 <div class="col-8 col-md-6 align-self-center">
                                                     <p class="mb-0 cfr_hour"></p>
                                                     <input type="hidden" name="pd_appointment_hour" value="">
+                                                </div>
+                                                <div class="col-4 col-md-6 align-self-center">
+                                                    <label for="">備考</label>
+                                                </div>
+                                                <div class="col-8 col-md-6 align-self-center">
+                                                    <p class="mb-0 cfr_note"></p>
+                                                    <input type="hidden" name="pd_note" value="">
                                                 </div>
                                             </div>
                                             <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>

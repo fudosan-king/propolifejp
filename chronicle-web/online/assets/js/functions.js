@@ -36,11 +36,13 @@ $(function($) {
             $('.cfr_email').html($('input[name="email"]').val());
             $('.cfr_date').html($('input[name="datepicker"]').val());
             $('.cfr_hour').html($('select[name="time"]').val());
+            $('.cfr_note').html($('textarea[name="note"]').val());
 
             $('input[name="pd_name"]').val($('input[name="name"]').val());
             $('input[name="pd_email"]').val($('input[name="email"]').val());
             $('input[name="pd_appointment_date"]').val($('input[name="datepicker"]').val());
             $('input[name="pd_appointment_hour"]').val($('select[name="time"]').val());
+            $('input[name="pd_note"]').val($('textarea[name="note"]').val());
 
 
         }else{

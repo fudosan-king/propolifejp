@@ -48,6 +48,7 @@ header {
 	color: #777;
 	font-family: 'A1 Gothic R';
 }
+
 .frm_online input {
 	border: none;
 	border-bottom: 1px solid #434343;
@@ -82,6 +83,13 @@ header {
 	background-image: url('../images/1x/i_dropdown.png');
 	background-position: 99% center;
 	background-repeat: no-repeat;
+}
+.frm_online textarea {
+	font-family: 'A1 Gothic M';
+	background: transparent;
+	box-shadow: none;
+	border: 1px solid #434343;
+	color: #777777;
 }
 .frm_online .form-group {
 	margin-bottom: 65px;
@@ -142,7 +150,7 @@ footer a {
 .frm_online label {
 	font-size: 18px;
 	font-family: 'A1 Gothic M';
-	color: #adadad;
+	color: #777777;
 	padding: 15px 0;
 }
 .box_entry p {

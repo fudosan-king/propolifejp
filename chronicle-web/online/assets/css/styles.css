@@ -65,6 +65,7 @@ header {
 }
 .frm_online select {
 	font-family: 'A1 Gothic M';
+	color: #777777;
 	border: none;
 	border-bottom: 1px solid #434343;
 	border-radius: 0;
@@ -93,13 +94,14 @@ header {
 }
 .frm_online .form-group {
 	margin-bottom: 65px;
+	position: relative;
 }
 .frm_online .form-control:focus {
 	background: transparent;
 	border-color: #568eab;
 }
 .frm_online input.datepicker, .frm_online input.datepicker:focus {
-	background: url('../images/1x/i_date.png') no-repeat 100% 98%;
+	background: url('../images/1x/i_date.png') no-repeat 100% 50%;
 	font-family: 'A1 Gothic M';
 }
 .text_information {
@@ -192,10 +194,26 @@ footer a {
 
 .datepicker {background-color: #fdfbf3;}
 .datepicker td {width: 32px; height: 32px;}
+.datepicker .datepicker-days .table-condensed td.today.day {background-image: linear-gradient(to bottom, #dcdcdc, #eee)}
+.datepicker .datepicker-days .table-condensed td.today.day.disabled {color: #999;}
+/*.datepicker .datepicker-days .table-condensed td.day.can {background-image: linear-gradient(to bottom, #fdd49a, #fdf59a);}
+.datepicker .datepicker-days .table-condensed td.active.day.can {background-color: #0044cc; background-image: none;}*/
 .validate-error {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important;
     /*border-color: #ff0000!important;*/
     border: 1px solid #ff0000!important;
     padding-left: 5px!important;
 }
-.data-confirm p {font-family: initial;}
+.data-confirm label.cfr {font-family: initial;}
+
+.placeholder-custom {
+    position: absolute;
+    top: 5px;
+    color: #777777;
+	font-family: 'A1 Gothic M';
+	z-index: -1;
+}
+.placeholder-custom.error{padding-left: 5px!important;}
+
+.form-group .require {color: #568eab;}
+

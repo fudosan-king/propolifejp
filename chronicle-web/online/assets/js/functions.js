@@ -12,7 +12,7 @@ $(function($) {
 
     $('#datepicker').datepicker({
         // todayHighlight: true,
-        format: 'yyyy年mm月dd',
+        format: 'yyyy年mm月dd日',
         language: 'ja',
         autoclose:true,
         beforeShowDay: function (date) {

@@ -64,33 +64,89 @@
                                     <br>※ご利用は無料ですが、別途通信料がかかります。データ通信料はお客さまのご負担となります。
                                     <br>従量課金制通信サービスや通信料に上限があるネット回線・プランを利用する場合はご注意ください。
                                     <br>安定した画質で利用するためにも、Wi-Fi環境下での利用を推奨します。</p>
-                                <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online">
+                                <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online" autocomplete="off">
                                     <section class="data-input">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" required placeholder="お名前（必須）">
+                                            <input type="text" class="form-control" name="name" required>
+                                            <div class="placeholder-custom">お名前<span class="require">（必須）</span></div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="email" required placeholder="メールアドレス（必須）">
+                                            <input type="text" class="form-control" name="email" required placeholder="">
+                                            <div class="placeholder-custom">メールアドレス<span class="require">（必須）</span></div>
+                                        </div>
+                                        <div class="form-group mb-5">
+                                            <label>第1希望日時<span class="require">（必須）</span></label>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <input id="datepicker" type="text" name="datepicker" class="form-control datepicker">
+                                                    <div class="placeholder-custom">日付を選択</div>
+                                                </div>
+                                                <div class="col-6">
+                                                     <select name="time" class="form-control" placeholder="">
+                                                        <option value="時間を選択" selected>時間を選択</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                        <option value="19:00">19:00</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-5">
+                                            <label>第2希望日時</label>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <input id="datepicker2" type="text" name="datepicker2" class="form-control datepicker">
+                                                    <div class="placeholder-custom">日付を選択</div>
+                                                </div>
+                                                <div class="col-6">
+                                                     <select name="time2" class="form-control" placeholder="">
+                                                        <option value="時間を選択" selected>時間を選択</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                        <option value="19:00">19:00</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
-                                            <input id="datepicker" type="text" name="datepicker" class="form-control datepicker" placeholder="ご希望日">
+                                            <label>第3希望日時</label>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                     <input id="datepicker3" type="text" name="datepicker3" class="form-control datepicker">
+                                                     <div class="placeholder-custom">日付を選択</div>
+                                                </div>
+                                                <div class="col-6">
+                                                     <select name="time3" class="form-control" placeholder="">
+                                                        <option value="時間を選択" selected>時間を選択</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                        <option value="19:00">19:00</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <select name="time" class="form-control" placeholder="">
-                                                <option value="ご希望時間" selected>ご希望時間</option>
-                                                <option value="時間を運択">時間を運択</option>
-                                                <option value="10:00">10:00</option>
-                                                <option value="11:00">11:00</option>
-                                                <option value="12:00">12:00</option>
-                                                <option value="13:00">13:00</option>
-                                                <option value="14:00">14:00</option>
-                                                <option value="15:00">15:00</option>
-                                                <option value="16:00">16:00</option>
-                                                <option value="17:00">17:00</option>
-                                                <option value="18:00">18:00</option>
-                                                <option value="19:00">19:00</option>
-                                            </select>
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label>備考</label>
                                             <textarea name="note" id="input" class="form-control" rows="3"></textarea>
@@ -111,35 +167,45 @@
                                                     <label for="">お名前</label>
                                                 </div>
                                                 <div class="col-8 col-md-6 align-self-center">
-                                                    <p class="mb-0 cfr_name"></p>
+                                                    <label class="cfr cfr_name"></label>
                                                     <input type="hidden" name="pd_name" value="">
                                                 </div>
                                                 <div class="col-4 col-md-6 align-self-center">
                                                     <label for="">メールアドレス</label>
                                                 </div>
                                                 <div class="col-8 col-md-6 align-self-center">
-                                                    <p class="mb-0 cfr_email"><span id="cfr_email"></span></p>
+                                                    <label class="cfr cfr_email"><span id="cfr_email"></span></label>
                                                     <input type="hidden" name="pd_email" value="">
                                                 </div>
                                                 <div class="col-4 col-md-6 align-self-center">
-                                                    <label for=""> ご希望日</label>
+                                                    <label for=""> 第1希望日時</label>
                                                 </div>
                                                 <div class="col-8 col-md-6 align-self-center">
-                                                    <p class="mb-0 cfr_date"></p>
+                                                    <label class="cfr cfr_date_time"></label>
                                                     <input type="hidden" name="pd_appointment_date" value="">
+                                                    <input type="hidden" name="pd_appointment_time" value="">
                                                 </div>
                                                 <div class="col-4 col-md-6 align-self-center">
-                                                    <label for="">ご希望時間</label>
+                                                    <label for="">第2希望日時</label>
                                                 </div>
                                                 <div class="col-8 col-md-6 align-self-center">
-                                                    <p class="mb-0 cfr_hour"></p>
-                                                    <input type="hidden" name="pd_appointment_hour" value="">
+                                                    <label class="cfr cfr_date_time_2"></label>
+                                                    <input type="hidden" name="pd_appointment_date_2" value="">
+                                                    <input type="hidden" name="pd_appointment_time_2" value="">
+                                                </div>
+                                                <div class="col-4 col-md-6 align-self-center">
+                                                    <label for="">第3希望日時</label>
+                                                </div>
+                                                <div class="col-8 col-md-6 align-self-center">
+                                                    <label class="cfr cfr_date_time_3"></label>
+                                                    <input type="hidden" name="pd_appointment_date_3" value="">
+                                                    <input type="hidden" name="pd_appointment_time_3" value="">
                                                 </div>
                                                 <div class="col-4 col-md-6 align-self-center">
                                                     <label for="">備考</label>
                                                 </div>
                                                 <div class="col-8 col-md-6 align-self-center">
-                                                    <p class="mb-0 cfr_note"></p>
+                                                    <label class="cfr cfr_note"></label>
                                                     <input type="hidden" name="pd_note" value="">
                                                 </div>
                                             </div>

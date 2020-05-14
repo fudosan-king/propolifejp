@@ -78,7 +78,7 @@
                                             <label>第1希望日時<span class="require">（必須）</span></label>
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <input id="datepicker" type="text" name="datepicker" class="form-control datepicker">
+                                                    <input id="datepicker" type="text" name="datepicker" class="form-control datepicker" readonly>
                                                     <div class="placeholder-custom">日付を選択</div>
                                                 </div>
                                                 <div class="col-6">
@@ -102,7 +102,7 @@
                                             <label>第2希望日時</label>
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <input id="datepicker2" type="text" name="datepicker2" class="form-control datepicker">
+                                                    <input id="datepicker2" type="text" name="datepicker2" class="form-control datepicker" readonly>
                                                     <div class="placeholder-custom">日付を選択</div>
                                                 </div>
                                                 <div class="col-6">
@@ -126,7 +126,7 @@
                                             <label>第3希望日時</label>
                                             <div class="row">
                                                 <div class="col-6">
-                                                     <input id="datepicker3" type="text" name="datepicker3" class="form-control datepicker">
+                                                     <input id="datepicker3" type="text" name="datepicker3" class="form-control datepicker" readonly>
                                                      <div class="placeholder-custom">日付を選択</div>
                                                 </div>
                                                 <div class="col-6">

@@ -65,13 +65,26 @@
                                     <br>従量課金制通信サービスや通信料に上限があるネット回線・プランを利用する場合はご注意ください。
                                     <br>安定した画質で利用するためにも、Wi-Fi環境下での利用を推奨します。</p>
                                 <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online" autocomplete="off">
+                                    <?php 
+                                        $name = isset($_GET['name']) ? $_GET['name'] : '';
+                                        $email = isset($_GET['email']) ? $_GET['email'] : '';
+                                        $inquiry = isset($_GET['inquiry']) ? $_GET['inquiry'] : '';
+
+                                        $utm_source = isset($_GET['utm_source']) ? $_GET['utm_source'] : '';
+                                        $utm_medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '';
+                                        $utm_campaign = isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '';
+                                    ?>
+                                    <input type="hidden" name="utm_source" id="input" class="form-control" <?php echo !empty($utm_source) ? 'value="'.$utm_source.'"'  : '' ?>>
+                                    <input type="hidden" name="utm_medium" id="input" class="form-control" <?php echo !empty($utm_medium) ? 'value="'.$utm_medium.'"'  : '' ?>>
+                                    <input type="hidden" name="utm_campaign" id="input" class="form-control" <?php echo !empty($utm_campaign) ? 'value="'.$utm_campaign.'"'  : '' ?>>
+
                                     <section class="data-input">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" required>
+                                            <input type="text" class="form-control" name="name" <?php echo !empty($name) ? 'value="'.$name.'"'  : '' ?> required>
                                             <div class="placeholder-custom">お名前<span class="require">（必須）</span></div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="email" required placeholder="">
+                                            <input type="text" class="form-control" name="email" <?php echo !empty($email) ? 'value="'.$email.'"'  : '' ?>  required placeholder="">
                                             <div class="placeholder-custom">メールアドレス<span class="require">（必須）</span></div>
                                         </div>
                                         <div class="form-group mb-5">
@@ -148,8 +161,8 @@
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label>備考</label>
-                                            <textarea name="note" id="input" class="form-control" rows="3"></textarea>
+                                            <label>備考：ご質問やご要望などあればご記入下さい。オンライン相談時に回答させていただきます。</label>
+                                            <textarea name="note" id="input" class="form-control" rows="3"><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
                                         </div>
                                         <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                                 個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
@@ -202,7 +215,7 @@
                                                     <input type="hidden" name="pd_appointment_time_3" value="">
                                                 </div>
                                                 <div class="col-4 col-md-6 align-self-center">
-                                                    <label for="">備考</label>
+                                                    <label for="">備考：ご質問やご要望などあればご記入下さい。オンライン相談時に回答させていただきます。</label>
                                                 </div>
                                                 <div class="col-8 col-md-6 align-self-center">
                                                     <label class="cfr cfr_note"></label>

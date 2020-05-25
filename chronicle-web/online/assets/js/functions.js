@@ -1,5 +1,13 @@
 $(function($) {
 
+    $.each($('.frm_online input'), function(index, el) {
+        if($(el).val() == ""){
+            $(el).siblings('.placeholder-custom').eq(0).show();
+        }else{
+            $(el).siblings('.placeholder-custom').eq(0).hide();
+        }
+    });
+
     $('.frm_online input').on("focus", function(){
         if(!$(this).hasClass('datepicker'))
             $(this).siblings('.placeholder-custom').eq(0).hide();

@@ -27,7 +27,7 @@ $(function($) {
         case 2: meetday = moment(today).add(2, 'day'); break;
         case 3: meetday = moment(today).add(1, 'day'); break;
         default: meetday = moment(today).add(1, 'day'); break;
-    }   
+    }
 
     $('#datepicker, #datepicker2, #datepicker3').datepicker({
         // todayHighlight: true,
@@ -39,17 +39,17 @@ $(function($) {
 
             if(date.getDate() == (new Date()).getDate() )
                 return false;
-            
+
             if(date.getTime() < (new Date()).getTime() )
                 return false;
-            
+
             if (date.getDay() == 2 || date.getDay() == 3)
                 return false;
 
             // if(moment(date).format('DD/MM/YYYY') == meetday.format('DD/MM/YYYY')){
             //     return { classes: 'can' };
             // }
-            
+
 
             return true;
         },
@@ -99,10 +99,11 @@ $(function($) {
 
             $('input[name="pd_appointment_date_3"]').val(mapValue($('input[name="datepicker3"]').val()));
             $('input[name="pd_appointment_time_3"]').val(mapValue($('select[name="time3"] option:selected').val()));
-            
+
             $('input[name="pd_note"]').val($('textarea[name="note"]').val());
 
-
+            $('.box_intro').css('display', 'none');
+            $('.sub_des').css('display', 'none');
         }else{
             // $('.data-input').hide();
             // $('.data-confirm').fadeOut();

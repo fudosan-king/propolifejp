@@ -5,7 +5,9 @@
 }
 
 @media (max-width: 812px) {
-	
+	.box_intro {
+		display: inline-block;
+	}
 }
 
 @media (max-width: 800px) {
@@ -39,18 +41,18 @@
 }
 
 @media (min-width: 768px) {
-	
+
 }
 @media (max-width: 736px) {
-	
+
 }
 
 @media (max-width: 667px) {
-	
+
 }
 
 @media (max-width: 414px) {
-	
+
 }
 
 @media (max-width: 360px) {
@@ -62,16 +64,16 @@
 
 
 
-@media not all and (min-resolution:.001dpcm) { 
-    
+@media not all and (min-resolution:.001dpcm) {
+
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-    
+
 }
 
 @supports not (-webkit-overflow-scrolling: touch) {
-  
+
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0){

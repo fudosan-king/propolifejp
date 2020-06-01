@@ -158,7 +158,7 @@
 	      							<p class="content">
 		      							<span class="text-up">モデルルーム住戸 大商談会開催中！【完全予約制】</span><br>
 		      							<br>
-										※マンションギャラリーには係員が常駐しておりません。必ずご予約のうえ、ご来場ください。<br>WEB来場予約は<a class="link_sumotimo" href="/nakanotetsugakudo/contact/reservation/">こちら</a>から<br>
+										WEB来場予約は<a class="link_sumotimo" href="/nakanotetsugakudo/contact/reservation/">こちら</a>から<br>
 									</p>
 	      						</div>
 	      						<div class="box_informations">
@@ -170,6 +170,14 @@
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.6.1</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>モデルルーム住戸大商談会開催中です。</p>
+			      											</div>
+			      										</div>
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.4.15</p>

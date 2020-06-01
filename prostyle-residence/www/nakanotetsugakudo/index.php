@@ -154,13 +154,13 @@
 	      								<p>ペットとふれあえる<span class="big_text">公園<span class="red">目の前</span></span></p>
 	      							</li>
 	      						</ul>
-	      						<div class="box_sumitomo">
+	      						<!-- <div class="box_sumitomo">
 	      							<p class="content">
 		      							<span class="text-up">モデルルーム住戸 大商談会開催中！【完全予約制】</span><br>
 		      							<br>
 										WEB来場予約は<a class="link_sumotimo" href="/nakanotetsugakudo/contact/reservation/">こちら</a>から<br>
 									</p>
-	      						</div>
+	      						</div> -->
 	      						<div class="box_informations">
 	      							<div class="row justify-content-center">
 	      								<div class="col-12 col-sm-12 col-md-11">

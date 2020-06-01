@@ -56,16 +56,19 @@
                                 <img src="./assets/images/1x/online-sales.svg" alt="" class="img-fluid" width="57">
                             </p>
                             <h1 class="text-center">オンライン相談予約</h1>
-                            <p class="box_intro">クロニクルでは、ご自宅でもオンラインでスタッフにご相談いただけます。
-                                <br>各種オンラインミーティングツール（zoom、calling、Google meet等）を使い、 スタッフと対話しながら、物件をご確認いただけます。</p>
+                            <div class="box_intro">
+                                <div class="col-12 col-md-7">
+                                    クロニクルでは、ご自宅でもオンラインでスタッフにご相談いただけます。
+                                        <br>各種オンラインミーティングツール（zoom、calling、Google meet等）を使い、 スタッフと対話しながら、物件をご確認いただけます。
+                                </div>
+                                <div class="col-12 col-md-5">
+                                    <img src="./assets/images/1x/contact-online.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+
                             <div class="box_content">
-                                <p class="sub_des">※カメラ機能がついたパソコン、タブレット、スマートフォンのいずれかが必要です。
-                                    <br>※お顔が映るのが苦手な方は音声のみで問題ございません。
-                                    <br>※ご利用は無料ですが、別途通信料がかかります。データ通信料はお客さまのご負担となります。
-                                    <br>従量課金制通信サービスや通信料に上限があるネット回線・プランを利用する場合はご注意ください。
-                                    <br>安定した画質で利用するためにも、Wi-Fi環境下での利用を推奨します。</p>
                                 <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online" autocomplete="off">
-                                    <?php 
+                                    <?php
                                         $name = isset($_GET['name']) ? $_GET['name'] : '';
                                         $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         $inquiry = isset($_GET['inquiry']) ? $_GET['inquiry'] : '';
@@ -159,10 +162,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
-                                            <label>備考：ご質問やご要望などあればご記入下さい。オンライン相談時に回答させていただきます。</label>
-                                            <textarea name="note" id="input" class="form-control" rows="3"><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
+                                            <textarea name="note" id="input" class="form-control" rows="3" placeholder="備考：ご質問やご要望などあればご記入下さい。オンライン相談時に回答させていただきます。"><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
                                         </div>
                                         <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                                 個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
@@ -235,6 +237,11 @@
                                         </div>
                                     </section>
                                 </form>
+                                <p class="sub_des">※カメラ機能がついたパソコン、タブレット、スマートフォンのいずれかが必要です。
+                                    <br>※お顔が映るのが苦手な方は音声のみで問題ございません。
+                                    <br>※ご利用は無料ですが、別途通信料がかかります。データ通信料はお客さまのご負担となります。
+                                    <br>従量課金制通信サービスや通信料に上限があるネット回線・プランを利用する場合はご注意ください。
+                                    <br>安定した画質で利用するためにも、Wi-Fi環境下での利用を推奨します。</p>
                             </div>
                         </div>
                     </div>

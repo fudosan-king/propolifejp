@@ -164,7 +164,8 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <textarea name="note" id="input" class="form-control" rows="3" placeholder="備考：ご質問やご要望などあればご記入下さい。オンライン相談時に回答させていただきます。"><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
+                                            <label>備考</label>
+                                            <textarea name="note" id="input" class="form-control" rows="3" placeholder="ご質問やご要望などあればご記入下さい。オンライン相談時に回答いたします。"><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
                                         </div>
                                         <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                                 個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
@@ -217,7 +218,7 @@
                                                     <input type="hidden" name="pd_appointment_time_3" value="">
                                                 </div>
                                                 <div class="col-4 col-md-6 align-self-center">
-                                                    <label for="">備考：ご質問やご要望などあればご記入下さい。オンライン相談時に回答させていただきます。</label>
+                                                    <label for="">備考</label>
                                                 </div>
                                                 <div class="col-8 col-md-6 align-self-center">
                                                     <label class="cfr cfr_note"></label>

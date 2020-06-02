@@ -64,19 +64,19 @@ $office_nav_row = ($office_length/4 > $office_nav_row_num? $office_nav_row_num +
             <?php
                 $office_table_num = 0;
                 while(the_repeater_field('access_table')):
-                $name_ja = get_sub_field('office_title_ja');
-                $name_en = get_sub_field('office_title_en');
-                $address = get_sub_field('address');
-                $misc = get_sub_field('misc');
-                $root = get_sub_field('root');
-                $latlng= get_sub_field('map_latlng');
-                $col_bg = ($office_table_num % 2 == 1)? true: false;
-                $qtrans_split_address = qtrans_split($address);
-                $display = get_sub_field('display');
+                    $name_ja = get_sub_field('office_title_ja');
+                    $name_en = get_sub_field('office_title_en');
+                    $address = get_sub_field('address');
+                    $misc = get_sub_field('misc');
+                    $root = get_sub_field('root');
+                    $latlng= get_sub_field('map_latlng');
+                    $col_bg = ($office_table_num % 2 == 1)? true: false;
+                    $qtrans_split_address = qtrans_split($address);
+                    $display = get_sub_field('display');
 
-                $address_gmap = str_replace(array("\r\n","\n","\r", "<br />"), '', strip_tags($qtrans_split_address['ja'], "<br><br/>"));
+                    $address_gmap = str_replace(array("\r\n","\n","\r", "<br />"), '', strip_tags($qtrans_split_address['ja'], "<br><br/>"));
 
-                if($display){
+                    if($display){
             ?>
             <div id="office<?php echo $office_table_num; ?>" class="section_list<?php if($col_bg): echo ' left'; endif; ?>">
                 <div class="col_left <?php echo $display; ?>">
@@ -100,7 +100,11 @@ $office_nav_row = ($office_length/4 > $office_nav_row_num? $office_nav_row_num +
                 </div>
             </div>
 
-            <?php } $office_table_num += 1; endwhile; ?>
+            <?php
+                    $office_table_num += 1; 
+                } 
+                endwhile; 
+            ?>
             
         </div><!-- // #office_list -->
     </div>

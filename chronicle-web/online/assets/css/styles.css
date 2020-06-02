@@ -33,7 +33,7 @@ header {
 }
 .box_intro {
 	font-family: 'A1 Gothic M';
-	font-size: 1em;
+	font-size: 14px;
 	border: 1px solid #777;
 	padding: 25px 30px;
 	text-align: center;
@@ -148,7 +148,7 @@ footer a {
 	padding: 0 55px;
 }
 .frm_online h2 {
-	margin-bottom: 50px;
+	margin-top: 50px;
 }
 .frm_online label {
 	font-size: 16px;
@@ -207,6 +207,10 @@ footer a {
 }
 .data-confirm label.cfr {font-family: initial;}
 
+.data-confirm label {
+	color: #000000;
+}
+
 .placeholder-custom {
     position: absolute;
     top: 5px;
@@ -220,5 +224,20 @@ footer a {
 .placeholder-fix {
 	top: 72px;
     left: 10px;
+}
+.header-right {
+	margin-top: 5px;
+}
+.header-right h1 {
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+.header-right .reservation {
+	display: inline-flex;
+}
+.content-top {
+	margin-top: 15px;
 }
 

@@ -17,6 +17,7 @@
 @media (max-width: 768px) {
 	.box_intro {
 		padding: 15px;
+		font-size: 12px;
 	}
 	.box_content {
 		padding: 0;
@@ -38,6 +39,19 @@
 	.box_thanks p {
 		font-size: 1em;
 	}
+	.header-right {
+		margin-top: 2px;
+	}
+	.header-right h1 {
+        font-size: 9px;
+    }
+    .header-right img {
+    	width: 30px;
+    }
+    .content-top {
+    	margin-top: 0px;
+    	margin-bottom: 10px;
+    }
 }
 
 @media (min-width: 768px) {

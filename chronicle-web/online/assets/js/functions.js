@@ -18,6 +18,24 @@ $(function($) {
          }
     });
 
+    $.each($('.frm_online textarea'), function(index, el) {
+        if($(el).val() == ""){
+            $(el).siblings('.placeholder-custom').eq(0).show();
+        }else{
+            $(el).siblings('.placeholder-custom').eq(0).hide();
+        }
+    });
+
+    $('.frm_online textarea').on("focus", function(){
+        if(!$(this).hasClass('datepicker'))
+            $(this).siblings('.placeholder-custom').eq(0).hide();
+    });
+    $('.frm_online textarea').on("blur change", function(){
+         if($(this).val() == "") {
+             $(this).siblings('.placeholder-custom').eq(0).show();
+         }
+    });
+
     today = new Date();
     var date = new Date();
     var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());

@@ -43,6 +43,10 @@
                         <a href="index.php" class="logo">
                             <img src="./assets/images/1x/logo.png" alt="" class="img-fluid" width="270">
                         </a>
+                        <p class="text-center mt-5">
+                            <img src="./assets/images/1x/online-sales.svg" alt="" class="img-fluid" width="57">
+                        </p>
+                        <h1 class="text-center">オンライン相談予約</h1>
                     </div>
                 </div>
             </div>
@@ -52,16 +56,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <p class="text-center mt-5">
-                                <img src="./assets/images/1x/online-sales.svg" alt="" class="img-fluid" width="57">
-                            </p>
-                            <h1 class="text-center">オンライン相談予約</h1>
                             <div class="box_intro">
-                                <div class="col-12 col-md-7">
+                                <div class="col-12 col-md-8" align="left">
                                     クロニクルでは、ご自宅でもオンラインでスタッフにご相談いただけます。
                                         <br>各種オンラインミーティングツール（zoom、calling、Google meet等）を使い、 スタッフと対話しながら、物件をご確認いただけます。
                                 </div>
-                                <div class="col-12 col-md-5">
+                                <div class="col-12 col-md-4">
                                     <img src="./assets/images/1x/contact-online.png" alt="" class="img-fluid">
                                 </div>
                             </div>
@@ -69,13 +69,13 @@
                             <div class="box_content">
                                 <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online" autocomplete="off">
                                     <?php
-                                        $name = isset($_GET['name']) ? $_GET['name'] : '';
-                                        $email = isset($_GET['email']) ? $_GET['email'] : '';
-                                        $inquiry = isset($_GET['inquiry']) ? $_GET['inquiry'] : '';
+                                        $name = isset($_GET['n']) ? $_GET['n'] : '';
+                                        $email = isset($_GET['e']) ? $_GET['e'] : '';
+                                        $inquiry = isset($_GET['i']) ? $_GET['i'] : '';
 
-                                        $utm_source = isset($_GET['utm_source']) ? $_GET['utm_source'] : '';
-                                        $utm_medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '';
-                                        $utm_campaign = isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '';
+                                        $utm_source = isset($_GET['s']) ? 'suumo' : '';
+                                        $utm_medium = isset($_GET['m']) ? 'online_before_mail': '';
+                                        $utm_campaign = isset($_GET['c']) ? $_GET['c'] : '';
                                     ?>
                                     <input type="hidden" name="utm_source" id="input" class="form-control" <?php echo !empty($utm_source) ? 'value="'.$utm_source.'"'  : '' ?>>
                                     <input type="hidden" name="utm_medium" id="input" class="form-control" <?php echo !empty($utm_medium) ? 'value="'.$utm_medium.'"'  : '' ?>>
@@ -83,12 +83,13 @@
 
                                     <section class="data-input">
                                         <div class="form-group">
+                                            <label>お名前<span class="require">（必須）</span></label>
                                             <input type="text" class="form-control" name="name" <?php echo !empty($name) ? 'value="'.$name.'"'  : '' ?> required>
-                                            <div class="placeholder-custom">お名前<span class="require">（必須）</span></div>
                                         </div>
                                         <div class="form-group">
+                                            <label>メールアドレス<span class="require">（必須）</span></label>
                                             <input type="text" class="form-control" name="email" <?php echo !empty($email) ? 'value="'.$email.'"'  : '' ?>  required placeholder="">
-                                            <div class="placeholder-custom">メールアドレス<span class="require">（必須）</span></div>
+                                            <div class="placeholder-custom placeholder-fix">abc@propolife.co.jp</div>
                                         </div>
                                         <div class="form-group mb-5">
                                             <label>第1希望日時<span class="require">（必須）</span></label>
@@ -165,7 +166,8 @@
 
                                         <div class="form-group">
                                             <label>備考</label>
-                                            <textarea name="note" id="input" class="form-control" rows="3" placeholder="ご質問やご要望などあればご記入下さい。オンライン相談時に回答いたします。"><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
+                                            <textarea name="note" id="input" class="form-control" rows="3" required placeholder=""><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
+                                            <div class="placeholder-custom placeholder-fix">ご質問やご要望などあればご記入下さい。オンライン相談時に回答いたします。</div>
                                         </div>
                                         <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                                 個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>

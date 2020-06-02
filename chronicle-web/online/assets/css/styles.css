@@ -33,7 +33,7 @@ header {
 }
 .box_intro {
 	font-family: 'A1 Gothic M';
-	font-size: 1.25em;
+	font-size: 1em;
 	border: 1px solid #777;
 	padding: 25px 30px;
 	text-align: center;
@@ -217,4 +217,8 @@ footer a {
 .placeholder-custom.error{padding-left: 5px!important;}
 
 .form-group .require {color: #568eab;}
+.placeholder-fix {
+	top: 72px;
+    left: 10px;
+}
 

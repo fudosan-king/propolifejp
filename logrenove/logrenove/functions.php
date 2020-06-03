@@ -1,0 +1,475 @@
+<?php 
+
+    define('ASSETS_PATH', get_stylesheet_directory_uri() . '/assets');
+    define('STYLESHEET_PATH', ASSETS_PATH . '/css');
+    define('SCRIPT_PATH', ASSETS_PATH . '/js');
+    define('IMAGE_PATH', ASSETS_PATH . '/images');
+    define('FAVICON_PATH', ASSETS_PATH . '/favicon');
+
+    $header_posts = null;
+    $header_ids = null;
+
+    require_once 'includes/mobile_detect.php';
+    require_once 'includes/api.php';
+
+    $detect = new Mobile_Detect;
+
+    function logrenove_setup() {
+
+        load_theme_textdomain( 'logrenove' );
+
+        add_theme_support( 'title-tag' );
+        add_theme_support( 'editor-styles' );
+
+        register_nav_menus(
+            array(
+                'side'    => __( 'Side Menu', 'logrenove' ),
+                'social' => __( 'Social Links Menu', 'logrenove' ),
+                'bottom' => __( 'Bottom Menu', 'logrenove' ),
+            )
+        );
+    }
+    add_action( 'after_setup_theme', 'logrenove_setup' );
+
+    add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+    function my_theme_enqueue_styles() {
+        
+     
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", false, null);
+        wp_enqueue_script('jquery');
+
+    }
+
+    add_action( 'admin_enqueue_scripts', 'my_admin_theme_enqueue_styles' );
+    function my_admin_theme_enqueue_styles() {
+     
+        wp_enqueue_style( 'admin-style',
+            get_stylesheet_directory_uri() . '/admin.css',
+            array(),
+            wp_get_theme()->get('Version')
+        );
+        wp_enqueue_script( 'admin-script', get_stylesheet_directory_uri() . '/admin.js', array('jquery'), $ver = false, $in_footer = true );
+
+        $args = array(
+            'default_category_id' => get_option('default_category'),
+            'default_category_name' => get_the_category_by_ID( get_option('default_category') ),
+        );
+        wp_localize_script( 'admin-script', 'php_obj', $args );
+    }
+
+    function my_site_WI_dequeue_script() {
+        wp_dequeue_script( 'twentyseventeen-global' );
+    }
+
+    add_action( 'wp_print_scripts', 'my_site_WI_dequeue_script', 100 );
+
+    if( function_exists('acf_add_options_page') ) {
+    
+        acf_add_options_page(array(
+            'page_title'    => 'Logrenove\'s Theme Settings',
+            'menu_title'    => 'Logrenove',
+            'menu_slug'     => 'theme-logrenove-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));    
+    }
+
+    if( !function_exists('get_query_pagination') ) {
+    
+        function get_query_pagination($args = array()){
+            global $wp_query;
+            global $paged;
+
+            $total = $wp_query->max_num_pages;
+            $cpaged = max(1, $paged);
+
+            $paginationHTML = ' <nav><ul class="pagination justify-content-center">';
+            $pagination = paginate_links( 
+                array(
+                    'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                    'total'        => $total,
+                    'current'      => $cpaged,
+                    'format'       => '?paged=%#%',
+                    'show_all'     => false,
+                    'type'         => 'array',
+                    'end_size'     => 2,
+                    'mid_size'     => 1,
+                    'prev_next'    => true,
+                    'prev_text'    => sprintf( '<i></i> %1$s', __( '&laquo;', 'text-domain' ) ),
+                    'next_text'    => sprintf( '%1$s <i></i>', __( '&raquo;', 'text-domain' ) ),
+                    'add_args'     => $args,
+                    'add_fragment' => '',
+                ) 
+            );
+
+            if (!empty($pagination)):
+                foreach($pagination as $page){
+                    $paginationHTML .='<li class="page-item">'.$page.'</li>';
+                }
+            endif;
+
+            return $paginationHTML .= ' </ul></nav>';
+        } 
+    }
+
+
+    if( !function_exists('get_custom_query_pagination') ) {
+    
+        function get_custom_query_pagination($paged, $total, $args = array()){
+            $paginationHTML = ' <nav><ul class="pagination justify-content-center">';
+            $pagination = paginate_links( 
+                array(
+                    'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                    'total'        => $total,
+                    'current'      => $paged,
+                    'format'       => '?paged=%#%',
+                    'show_all'     => false,
+                    'type'         => 'array',
+                    'end_size'     => 2,
+                    'mid_size'     => 1,
+                    'prev_next'    => true,
+                    'prev_text'    => sprintf( '<i></i> %1$s', __( '&laquo;', 'text-domain' ) ),
+                    'next_text'    => sprintf( '%1$s <i></i>', __( '&raquo;', 'text-domain' ) ),
+                    'add_args'     => $args,
+                    'add_fragment' => '',
+                ) 
+            );
+
+            if (!empty($pagination)):
+                foreach($pagination as $page){
+                    $paginationHTML .='<li class="page-item">'.$page.'</li>';
+                }
+            endif;
+
+            return $paginationHTML .= ' </ul></nav>';
+        } 
+    }
+    
+    function get_nav_child_menu($menus, $parent_menu){
+        $child_menus = array();
+        foreach($menus as $menu){
+            if($menu->menu_item_parent == $parent_menu){
+                array_push($child_menus, $menu);
+            }
+        }
+        return $child_menus;
+    }
+
+    function the_breadcrumb()
+    {
+        $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+        // $delimiter = '&raquo;'; // delimiter between crumbs
+        $delimiter = '&gt;'; // delimiter between crumbs
+        
+        $home = 'TOP'; // text for the 'Home' link
+        $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
+        $before = '<li class="breadcrumb-item active" aria-current="page">'; // tag before the current crumb
+        $after = '</li>'; // tag after the current crumb
+
+        global $post;
+        $homeLink = get_bloginfo('url');
+
+        $shortTitle = mb_strimwidth(get_the_title(), 0, 44, '...');
+
+        if (is_home() || is_front_page()) {
+            if ($showOnHome == 1) {
+                echo '<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="' . $homeLink . '">' . $home . '</a></li></ol></nav>';
+            }
+        } else {
+            echo '<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
+            if (is_search()) {
+                echo $before . 'Search results for "' . get_search_query() . '"' . $after;
+            } elseif (is_day()) {
+                echo '<li class="breadcrumb-item"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
+                echo '<li class="breadcrumb-item"><a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time('F') . '</a></li> ' . $delimiter . ' ';
+                echo $before . get_the_time('d') . $after;
+            } elseif (is_month()) {
+                echo '<li class="breadcrumb-item"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
+                echo $before . get_the_time('F') . $after;
+            } elseif (is_year()) {
+                echo $before . get_the_time('Y') . $after;
+            } elseif (is_single() && !is_attachment()) {
+                if (get_post_type() != 'post') {
+                    $post_type = get_post_type_object(get_post_type());
+                    $slug = $post_type->rewrite;
+                    echo '<li class="breadcrumb-item"><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li>';
+                    if ($showCurrent == 1) {
+                        echo ' ' . $delimiter . ' ' . $before . $shortTitle . $after;
+                    }
+                } else {
+                    // here
+                    $cat = get_the_category();
+                    $cat = $cat[0];                   
+                        
+                    $cats = '<li class="breadcrumb-item">' . get_category_parents($cat, true, ' ' . $delimiter . ' '). '</li>';
+                    if ($showCurrent == 0) {
+                        $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
+                    }
+                    if($cat->slug != 'uncategorized'){
+                        echo $cats;
+                    }
+                    if ($showCurrent == 1) {
+                        echo $before . $shortTitle . $after;
+                    }
+                    
+                   
+                }
+            } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
+                $post_type = get_post_type_object(get_post_type());
+                echo $before . $post_type->labels->singular_name . $after;
+            } elseif (is_attachment()) {
+                $parent = get_post($post->post_parent);
+                $cat = get_the_category($parent->ID);
+                $cat = $cat[0];
+                echo '<li class="breadcrumb-item">' . get_category_parents($cat, true, ' ' . $delimiter . ' '). '</li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_permalink($parent) . '">' . $parent->post_title. '</a></li>';
+                if ($showCurrent == 1) {
+                    echo ' ' . $delimiter . ' ' . $before . $shortTitle . $after;
+                }
+            } elseif (is_page() && !$post->post_parent) {
+                if ($showCurrent == 1) {
+                    echo $before . $shortTitle . $after;
+                }
+            } elseif (is_page() && $post->post_parent) {
+                $parent_id  = $post->post_parent;
+                $breadcrumbs = array();
+                while ($parent_id) {
+                    $page = get_page($parent_id);
+                    $breadcrumbs[] = '<li class="breadcrumb-item"><a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
+                    $parent_id  = $page->post_parent;
+                }
+                $breadcrumbs = array_reverse($breadcrumbs);
+                for ($i = 0; $i < count($breadcrumbs); $i++) {
+                    echo $breadcrumbs[$i];
+                    if ($i != count($breadcrumbs)-1) {
+                        echo ' ' . $delimiter . ' ';
+                    }
+                }
+                if ($showCurrent == 1) {
+                    echo ' ' . $delimiter . ' ' . $before . $shortTitle . $after;
+                }
+            } elseif (is_tag()) {
+                echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+            } elseif (is_author()) {
+                global $author;
+                $userdata = get_userdata($author);
+                echo $before . 'Articles posted by ' . $userdata->display_name . $after;
+            } elseif (is_404()) {
+                echo $before . 'Error 404' . $after;
+            }
+            if (get_query_var('paged')) {
+                if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) {
+                    echo ' (';
+                }
+                echo __('Page') . ' ' . get_query_var('paged');
+                if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) {
+                    echo ')';
+                }
+            }
+            echo '</ol></nav>';
+        }
+    } // end the_breadcrumb()
+
+    // function custom_excerpt_length( $length ) {
+    //     return 20;
+    // }
+    // add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+    // function max_title_length( $title ) {
+    //     return mb_strimwidth($title, 0, 44, '...');
+    // }
+    // add_filter( 'the_title', 'max_title_length');
+
+    function trim_post_trailing_whitespace( $content ) {
+        return preg_replace('/[\p{Z}\s]{2,}/u', ' ', $content);
+    }
+    add_filter( 'the_content', 'trim_post_trailing_whitespace', 0 );
+
+    function load_init(){
+        global $header_posts;
+        global $header_ids;
+        global $post;
+
+        $headerBanner = get_field('header_banner', 'option');
+        $display_type = $headerBanner['display_type'];
+
+        switch ($display_type) {
+            case 'manual': {
+                $header_ids = array();
+                $sticky_ids = get_option( 'sticky_posts' );
+                $args = array(
+                    'post__in'     => $sticky_ids,
+                    'post_status' => 'publish',
+                    'order'               => 'DESC',
+                    'orderby'             => 'date',
+                    'ignore_sticky_posts' => true,
+                    'posts_per_page'         => 3,
+
+                    // Permission Parameters -
+                    'perm' => 'readable',
+
+                    // Parameters relating to caching
+                    'no_found_rows'          => false,
+                    'cache_results'          => true,
+                    'update_post_term_cache' => true,
+                    'update_post_meta_cache' => true,
+                );
+                $query = new WP_Query( $args );
+                if($query->have_posts()):
+                    while($query->have_posts()): $query->the_post();
+                        array_push($header_ids, $post->ID);
+                    endwhile;
+                endif;
+                wp_reset_postdata();
+                wp_reset_query();
+
+                /* WRONG LOGIC BUT JP TEAM NEED */
+                if ( count(get_option( 'sticky_posts' )) > 0 && count(get_option( 'sticky_posts' )) < 3){
+                    $times = 3 - count(get_option( 'sticky_posts' ));
+
+                    $args = array(
+                        'post__not_in'     => $header_ids,
+                        'post_status' => 'publish',
+                        'order'               => 'DESC',
+                        'orderby'             => 'date',
+                        'ignore_sticky_posts' => true,
+                        'posts_per_page'         => $times,
+
+                        // Permission Parameters -
+                        'perm' => 'readable',
+
+                        // Parameters relating to caching
+                        'no_found_rows'          => false,
+                        'cache_results'          => true,
+                        'update_post_term_cache' => true,
+                        'update_post_meta_cache' => true,
+                    );
+                    $query = new WP_Query( $args );
+                    if($query->have_posts()):
+                        while($query->have_posts()): $query->the_post();
+                            array_push($header_ids, $post->ID);
+                        endwhile;
+                    endif;
+                    wp_reset_postdata();
+                    wp_reset_query();
+                }
+
+                // echo 'INIT: ';
+                // print_r($header_ids);
+            }break;
+            
+            case 'auto':{
+                $number_display = $headerBanner['number_display'];
+                $header_posts = wp_get_recent_posts( $args = array(
+                    'numberposts' => $number_display,
+                    'post_status' => 'publish',
+                ), $output = 'ARRAY_A' );
+
+                $header_ids = array_column($header_posts, 'ID');
+            }break;
+        }        
+    }
+    add_action( 'init', 'load_init' );
+
+    // Alter search posts per page
+    function myprefix_search_posts_per_page($query) {
+        if ( $query->is_search() ) {
+            $query->set( 'posts_per_page', get_option( 'posts_per_page' ) );
+            $query->set( 'post_type', array('post','event'));
+        }
+
+        if (  $query->is_main_query() && $query->is_home() ) {
+            global $header_ids;
+
+            $headerBanner = get_field('header_banner', 'option');
+            $display_type = $headerBanner['display_type'];
+
+            $query->set( 'post__not_in', $header_ids );
+            $query->set( 'ignore_sticky_posts', true );
+        }
+        return $query;
+    }
+    add_action( 'pre_get_posts','myprefix_search_posts_per_page' );
+
+    function logrenove_login_logo() { 
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+        // $image = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+        $image = IMAGE_PATH."/1x/ico.png";
+        ?> 
+            <style type="text/css"> 
+                body.login div#login h1 a {
+                    background-image: url(<?php echo $image; ?>);
+                    background-size: cover;
+                    width: 130px;
+                    height: 130px;
+                    margin-bottom: 50px;
+                } 
+            </style>
+        <?php 
+    } 
+    add_action( 'login_enqueue_scripts', 'logrenove_login_logo' );
+
+    function add_extra_header_script(){
+        echo get_field('header_extend_script', 'option');
+    }
+    add_action( 'header_extra_script', 'add_extra_header_script');
+
+    function add_extra_body_script(){
+        echo get_field('body_extend_script', 'option');
+    }
+    add_action( 'body_extra_script', 'add_extra_body_script');
+
+    function add_extra_footer_script(){
+        echo get_field('footer_extend_script', 'option');
+    }
+    add_action( 'footer_extra_script', 'add_extra_footer_script');
+
+    add_filter( 'wpseo_breadcrumb_links', 'wpseo_breadcrumb_add_woo_shop_link' );
+    function wpseo_breadcrumb_add_woo_shop_link( $links ) {
+        global $post;
+
+        if (is_single()){
+            $term = $links[1]['term'];
+            if($term->slug == 'uncategorized'){
+                unset($links[1]);
+            }
+        }
+
+        return $links;
+    }
+
+    /**
+     * 
+     */
+    class ThumbnailItem
+    {
+        public $title, $caption, $alt, $url;
+
+        function __construct($post_id, $size='full')
+        {
+            $this->size = $size;
+            $meta = wp_get_attachment_metadata($post_id, false )['image_meta'];
+            $this->title = $meta['title'];
+            $this->caption = $meta['caption'];
+            $this->alt = get_post_meta( $post_id, '_wp_attachment_image_alt', true );
+            $this->url = wp_get_attachment_image_url( $post_id, $size, false );
+        }
+    }
+
+    //SmartNewsフィード追加
+    add_action('init', function (){
+        add_feed('smartnews', function () {
+            get_template_part('smartnews');
+        });
+    });
+     
+    //SmartNewsのHTTP header for Content-type
+    add_filter( 'feed_content_type', function ( $content_type, $type ) {
+        if ( 'smartnews' === $type ) {
+            return feed_content_type( 'rss2' );
+        }
+        return $content_type;
+    }, 10, 2 );
+
+?>

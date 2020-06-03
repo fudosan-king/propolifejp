@@ -1,0 +1,6 @@
+#wp-admin-bar-wp-logo {display: none;}
+#adminmenu #toplevel_page_theme-logrenove-settings div.wp-menu-image:before {content:''; background-image: url(assets/favicon/logrenova-icon.png)}
+#adminmenu #toplevel_page_theme-logrenove-settings:hover div.wp-menu-image:before {content:''; background-image: url(assets/favicon/logrenova-icon-hover.png)}
+.validate-error {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important; border-color: #ff0000!important;}
+
+.wp-block.editor-block-list__block.block-editor-block-list__block { border-bottom: #eaeaea 1px solid; }

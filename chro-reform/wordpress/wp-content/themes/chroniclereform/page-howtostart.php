@@ -8,21 +8,21 @@
     <meta name="description" content="天然無垢材の調達から打ち合わせ、設計施工、アフターサービスまで自社一貫。グループ累計1,600件以上の施工実績。天然無垢材体験会予約受付中。">
     <title>天然無垢材のリノベーションなら｜クロニクルリフォーム</title>
 
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
-    <link rel="manifest" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/favicon_package_v0.16/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png">
+    <link rel="manifest" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/favicon_package_v0.16/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap&subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/fontawesome-pro-5.7.0-web/css/all.css">
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/fontawesome-pro-5.7.0-web/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
 
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/styles.css" type="text/css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/mobile.css" type="text/css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/contact.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/mobile.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/contact.css" type="text/css">
 
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
@@ -39,9 +39,9 @@
     gtag('config', 'AW-844745329');
     </script>
 
-    <!-- Begin Mieruca Embed Code --> 
-    <script type="text/javascript" id="mierucajs"> window.__fid = window.__fid || [];__fid.push([237230988]); (function() { function mieruca(){if(typeof window.__fjsld != "undefined") return; window.__fjsld = 1; var fjs = document.createElement('script'); fjs.type = 'text/javascript'; fjs.async = true; fjs.id = "fjssync"; var timestamp = new Date;fjs.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://hm.mieru-ca.com/service/js/mieruca-hm.js?v='+ timestamp.getTime(); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(fjs, x); }; setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent("onload", mieruca) : window.addEventListener("load", mieruca, false)) : mieruca(); })(); 
-    </script> 
+    <!-- Begin Mieruca Embed Code -->
+    <script type="text/javascript" id="mierucajs"> window.__fid = window.__fid || [];__fid.push([237230988]); (function() { function mieruca(){if(typeof window.__fjsld != "undefined") return; window.__fjsld = 1; var fjs = document.createElement('script'); fjs.type = 'text/javascript'; fjs.async = true; fjs.id = "fjssync"; var timestamp = new Date;fjs.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://hm.mieru-ca.com/service/js/mieruca-hm.js?v='+ timestamp.getTime(); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(fjs, x); }; setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent("onload", mieruca) : window.addEventListener("load", mieruca, false)) : mieruca(); })();
+    </script>
     <!-- End Mieruca Embed Code -->
 </head>
 
@@ -51,7 +51,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-8 align-self-center">
-                        <a target="_blank" href="https://www.chronicle-web.com/reform"><img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/logo_kensetsu.png" alt="" class="img-fluid" width="350"></a>
+                        <a target="_blank" href="https://www.chronicle-web.com/reform"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/logo_kensetsu.png" alt="" class="img-fluid" width="350"></a>
                     </div>
                     <div class="col-12 col-md-4 align-self-center">
                         <div class="w_gotocontact">
@@ -65,15 +65,15 @@
         <main>
             <section class="section_top">
                 <!-- <div class="top_bg">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_1.jpg" alt="" class="img-fluid w-100">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_2.jpg" alt="" class="img-fluid w-100">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_3.jpg" alt="" class="img-fluid w-100">
+                    <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/top_1.jpg" alt="" class="img-fluid w-100">
+                    <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/top_2.jpg" alt="" class="img-fluid w-100">
+                    <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/top_3.jpg" alt="" class="img-fluid w-100">
                 </div> -->
 
 <div class="top-slider">
-  <div><div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_1.jpg)" alt="" class="img-fluid"></div></div>
-  <div><div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_2.jpg)" alt="" class="img-fluid"></div></div>
-  <div><div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/top_3.jpg)" alt="" class="img-fluid"></div></div>
+  <div><div class='img-bg' style="background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/top_1.jpg)" alt="" class="img-fluid"></div></div>
+  <div><div class='img-bg' style="background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/top_2.jpg)" alt="" class="img-fluid"></div></div>
+  <div><div class='img-bg' style="background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/top_3.jpg)" alt="" class="img-fluid"></div></div>
 </div>
 
 
@@ -91,7 +91,7 @@
                         <div class="col-sm-10 offset-sm-1 intro">
                             <h2>無垢フローリングの魅力とは</h2>
                             <section class="data-block left">
-                                <div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_1.jpg)"></div>
+                                <div class='img-bg' style="background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/lumber_sample_1.jpg)"></div>
                                 <article>
                                     <div class="content">
                                         <h3>1. 気持ちの良い自然な肌触り</h3>
@@ -100,7 +100,7 @@
                                 </article>
                             </section>
                             <section class="data-block right">
-                                <div class='img-bg d-block d-md-none' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_2.jpg)"></div>
+                                <div class='img-bg d-block d-md-none' style="background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/lumber_sample_2.jpg)"></div>
                                 <article>
                                     <div class="content">
                                         <h3>2. 天然の空調効果と木の香り</h3>
@@ -108,10 +108,10 @@
                                         無垢の木そのものが持つ香りの成分には、<span class="color-orange">気持ちを落ち着かせるリラックス効果があります。</span></p>
                                         </div>
                                 </article>
-                                <div class='img-bg d-md-block d-none' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_2.jpg)"></div>
+                                <div class='img-bg d-md-block d-none' style="background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/lumber_sample_2.jpg)"></div>
                             </section>
                             <section class="data-block left">
-                                <div class='img-bg' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/lumber_sample_3.jpg)"></div>
+                                <div class='img-bg' style="background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/lumber_sample_3.jpg)"></div>
                                 <article>
                                     <div class="content">
                                         <h3>3. 時と共に味わいが深まる</h3>
@@ -139,21 +139,21 @@
                                     <div class="col-12">
                                         <div class="contruction_item" style="box-shadow:none">
                                             <div class="contruction_item_img" style="height: auto;">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/description_1.png" alt="" class="img-fluid" style="height: auto;">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/description_1.png" alt="" class="img-fluid" style="height: auto;">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="contruction_item" style="box-shadow:none">
                                             <div class="contruction_item_img" style="height: auto;">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/description_2.png" alt="" class="img-fluid" style="height: auto;">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/description_2.png" alt="" class="img-fluid" style="height: auto;">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="contruction_item" style="box-shadow:none">
                                             <div class="contruction_item_img" style="height: auto;">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/description_3.png" alt="" class="img-fluid" style="height: auto;">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/description_3.png" alt="" class="img-fluid" style="height: auto;">
                                             </div>
                                         </div>
                                     </div>
@@ -174,27 +174,27 @@
                             <div class="row mt-3">
                                 <div class="col-12 col-md-4">
                                     <div class="box_pattern">
-                                        <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/ttl-oak.png" alt="" class="img-fluid">
+                                        <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/ttl-oak.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="box_pattern">
-                                        <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/ttl-walnut.png" alt="" class="img-fluid">
+                                        <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/ttl-walnut.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="box_pattern">
-                                        <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/ttl-teak.png" alt="" class="img-fluid">
+                                        <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/ttl-teak.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 d-block d-md-none">
                                     <div class="box_pattern">
-                                        <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/ttl-karin.png" alt="" class="img-fluid">
+                                        <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/ttl-karin.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 d-block d-md-none mx-auto">
                                     <div class="box_pattern">
-                                        <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/ttl-kabazakura.png" alt="" class="img-fluid">
+                                        <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/ttl-kabazakura.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
 
@@ -202,12 +202,12 @@
                                     <div class="row">
                                         <div class="col-6 col-md-6">
                                             <div class="box_pattern">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/ttl-karin.png" alt="" class="img-fluid">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/ttl-karin.png" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-6">
                                             <div class="box_pattern">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/ttl-kabazakura.png" alt="" class="img-fluid">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/ttl-kabazakura.png" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@
                                     <div class="col-12">
                                         <div class="contruction_item">
                                             <div class="contruction_item_img">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/construction_samples_1.jpg" alt="" class="img-fluid">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/construction_samples_1.jpg" alt="" class="img-fluid">
                                             </div>
                                             <div class="contruction_item_content">
                                                 <div class="row">
@@ -254,7 +254,7 @@
                                     <div class="col-12">
                                         <div class="contruction_item">
                                             <div class="contruction_item_img">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/construction_samples_2.jpg" alt="" class="img-fluid">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/construction_samples_2.jpg" alt="" class="img-fluid">
                                             </div>
                                             <div class="contruction_item_content">
                                                 <div class="row">
@@ -276,7 +276,7 @@
                                     <div class="col-12">
                                         <div class="contruction_item">
                                             <div class="contruction_item_img">
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/construction_samples_3.jpg" alt="" class="img-fluid">
+                                                <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/construction_samples_3.jpg" alt="" class="img-fluid">
                                             </div>
                                             <div class="contruction_item_content">
                                                 <div class="row">
@@ -589,8 +589,8 @@
     <script type="text/javascript" language="javascript" src="https://raw.githubusercontent.com/moment/moment/master/locale/ja.js"></script>
     <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
-    <script src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/js/functions.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/js/contact.js"></script>
+    <script src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/js/functions.js"></script>
+    <script src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/js/contact.js"></script>
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
@@ -639,7 +639,7 @@
               });
         });
 
-        
+
     </script>
 
 </body>

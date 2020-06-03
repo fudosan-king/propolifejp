@@ -13,21 +13,21 @@ $template_assets_root = get_bloginfo('template_directory') . '/commonfiles';
 
 <title><?php wp_title('｜', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/reset.css">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/general.css">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/colorscheme.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/base.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/module.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/parts.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/smart.less">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/general.css">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/colorscheme.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/base.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/module.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/parts.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/smart.less">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker.css">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker_nav.css">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/tablet.css">
-<link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" type="image/png" />
+<link rel="icon" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png" type="image/png" />
 <!--[if lt IE 9]>
-<script src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/html5shiv.js"></script>
+<script src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/html5shiv.js"></script>
 <![endif]-->
-<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.js"></script>
+<script type="text/javascript" src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/jquery.js"></script>
 <script type="text/javascript">
 // if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 //         document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
@@ -35,9 +35,9 @@ $template_assets_root = get_bloginfo('template_directory') . '/commonfiles';
 //         document.write('<meta name="viewport" content="width=1100, maximum-scale=1">');
 //     }
 </script>
-<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/less.js"></script>
-<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.responsive-elements.js"></script>
-<script type="text/javascript" src ="<?php bloginfo('template_directory'); ?>/commonfiles/js/common.js"></script>
+<script type="text/javascript" src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/less.js"></script>
+<script type="text/javascript" src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/jquery.responsive-elements.js"></script>
+<script type="text/javascript" src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/common.js"></script>
 
 <script>
   window.fbAsyncInit = function() {
@@ -85,7 +85,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--======== Category Title start ===========-->
 <div class="ttlCategory bgGrey">
 	<div class="boxInner">
-	<h1 class="txtMain"><img class="imgMain" src ="<?php bloginfo('template_directory'); ?>/commonfiles/img/blog/ttl-main.png" alt="スタッフブログ"><img class="imgSmp" src ="<?php bloginfo('template_directory'); ?>/commonfiles/img/blog/ttl-main-smp.png" alt="スタッフブログ"></h1>
+	<h1 class="txtMain"><img class="imgMain" src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/blog/ttl-main.png" alt="スタッフブログ"><img class="imgSmp" src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/blog/ttl-main-smp.png" alt="スタッフブログ"></h1>
 	</div>
 </div>
 <!--======== //Category Title end ===========-->
@@ -138,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="singleBoxPaging clearfix">
 	<p>
 	<span class="btnPrev"><?php previous_post_link('%link', '<img src ="' . $template_assets_root . '/img/post/btn-prev.png" alt="前の投稿">');?></span>
-	<span class="btnTop"><a href="/blog/"><img src ="<?php bloginfo('template_directory'); ?>/commonfiles/img/post/btn-blogtop.png" alt="スタッフブログトップへ"></a></span>
+	<span class="btnTop"><a href="/blog/"><img src ="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/post/btn-blogtop.png" alt="スタッフブログトップへ"></a></span>
 	<span class="btnNext"><?php next_post_link('%link', '<img src ="' . $template_assets_root . '/img/post/btn-next.png" alt="次の投稿">');?></span>
 	</p>
 </div>
@@ -204,8 +204,8 @@ setup_postdata($post); ?>
 <aside id="aside" class="boxInner">
 <p class="txtC">
 <a href="http://www.rakuten.co.jp/mokume/" target="_blank">
-<img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
-<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
+<img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
+<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
 </a>
 </p>
 </aside>

@@ -9,27 +9,27 @@
 <meta name="google-site-verification" content="dDL25vJt5ssxOXyO9q9ewjh4iicb7Ufr8N2NHw_K32E" />
 <title><?php wp_title('｜', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/reset.css">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/general.css">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/colorscheme.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/base.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/module.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/parts.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/lightbox.css">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/smart.less">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/general.css">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/colorscheme.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/base.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/module.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/parts.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/lightbox.css">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/smart.less">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker.css">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker_nav.css">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/tablet.css">
-<link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" type="image/png" />
+<link rel="icon" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png" type="image/png" />
 
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri().'/candy/common/css/base.css'; ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri().'/candy/common/css/detail.css'; ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri().'/candy/works/css/style.css'; ?>">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/candy/common/css/base.css'; ?>">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/candy/common/css/detail.css'; ?>">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/candy/works/css/style.css'; ?>">
 
 <!--[if lt IE 9]>
-<script src="<?php bloginfo('template_directory'); ?>/commonfiles/js/html5shiv.js"></script>
+<script src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/html5shiv.js"></script>
 <![endif]-->
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/jquery.js"></script>
 <script type="text/javascript">
 // if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 //         document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
@@ -37,12 +37,12 @@
 //         document.write('<meta name="viewport" content="width=1100, maximum-scale=1">');
 //     }
 </script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/less.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/lightbox.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/common.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/less.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/lightbox.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/common.js"></script>
 
 <!-- トップページのみ使用JS start-->
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.tile.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/jquery.tile.js"></script>
 <script type="text/javascript">
 /* -- 最新情報エリア高さ揃える -- */
 $(window).load(function() {
@@ -51,7 +51,7 @@ $(window).load(function() {
 </script>
 <script type="text/javascript">
 </script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/jquery.flexslider.js"></script>
 <script type="text/javascript">
 /* スマホ・PICKUPスライド */
 $(window).load(function(){
@@ -64,10 +64,10 @@ slideshow: false,
 <!-- //トップページのみ使用JS end-->
 
 <!-- メインビジュアル用JS start-->
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/tabs.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/tabs.slideshow.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/index.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/material.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/tabs.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/tabs.slideshow.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/index.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/material.js"></script>
 <!-- //メインビジュアル用JS end-->
 
 <!-- Google Tag Manager -->
@@ -111,14 +111,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<ul class="boxSlidetabs">
 	<li>
 	<a href="#tab1" class="tab1">
-	<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-material.png" alt="自然素材"></span>
-	<span class="txtBtn imgMain"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-material-txt.png" alt="自然素材"></span>
+	<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-material.png" alt="自然素材"></span>
+	<span class="txtBtn imgMain"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-material-txt.png" alt="自然素材"></span>
 	</a>
 	</li>
 	<li>
 	<a href="#tab2" class="tab2">
-	<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-onestop.png" alt="ワンストップ"></span>
-	<span class="txtBtn imgMain"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-onestop-txt.png" alt="ワンストップ"></span>
+	<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-onestop.png" alt="ワンストップ"></span>
+	<span class="txtBtn imgMain"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-onestop-txt.png" alt="ワンストップ"></span>
 	</a>
 	</li>
 	</ul>
@@ -138,19 +138,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="topmainSmp" class="boxImgChangeSmp">
 <ul class="boxSelectBtn">
 <li class="on">
-<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-material.png" alt="自然素材"></span>
-<span class="txtBtn imgSmp"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-material-txt-smp.png" alt="自然素材"></span>
+<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-material.png" alt="自然素材"></span>
+<span class="txtBtn imgSmp"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-material-txt-smp.png" alt="自然素材"></span>
 </li>
 <li>
-<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-onestop.png" alt="ワンストップ"></span>
-<span class="txtBtn imgSmp"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/btn-onestop-txt-smp.png" alt="ワンストップ"></span>
+<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-onestop.png" alt="ワンストップ"></span>
+<span class="txtBtn imgSmp"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/btn-onestop-txt-smp.png" alt="ワンストップ"></span>
 </li>
 </ul>
 <div class="boxContWrap">
-<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/img-material-smp.png" alt="自然素材メインイメージ">
+<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/img-material-smp.png" alt="自然素材メインイメージ">
 </div>
 <div class="boxContWrap disnon">
-<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/topmain/img-onestop-smp.png" alt="ワンストップメインイメージ">
+<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/img-onestop-smp.png" alt="ワンストップメインイメージ">
 </div>
 </div>
 <!--======== //メインビジュアル end ===========-->
@@ -165,8 +165,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<h2 class="ttl">木のインテリアショップmokume</h2>
 	<a href="http://www.rakuten.co.jp/mokume/" target="_balnk">
-	<img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/info/bnr-mokume.png" alt="木のインテリアシヨッブ">
-	<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/info/bnr-mokume-smp.png" alt="木のインテリアシヨッブ">
+	<img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/info/bnr-mokume.png" alt="木のインテリアシヨッブ">
+	<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/info/bnr-mokume-smp.png" alt="木のインテリアシヨッブ">
 	</a>
 
 	<!-- //クロニクルプラス end -->
@@ -199,7 +199,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!--=== Section start ===-->
 	<section class="boxSection clearfix">
 
-	<p class="fltL mb70 mr40"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/about/img-about.jpg" alt="クロニクルリフォームとは"></p>
+	<p class="fltL mb70 mr40"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/about/img-about.jpg" alt="クロニクルリフォームとは"></p>
 
 	<p class="fltL mb50 imgMain">わたしたちは、ちょっとばかり世話焼きです。<br>
 	お客様の希望をお伺いするだけでは、まだ足りない。<br>
@@ -211,7 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	なぜって、それは、クロニクルリフォームだからできる、とても素敵なリノベーションの秘訣だから。</p>
 
 
-	<p class="mb40 txtC"><img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/about/img-onestop-service.png" alt="ワンストップサービスとは"><img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/about/img-onestop-service-smp.png" alt="ワンストップサービスとは"></p>
+	<p class="mb40 txtC"><img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/about/img-onestop-service.png" alt="ワンストップサービスとは"><img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/about/img-onestop-service-smp.png" alt="ワンストップサービスとは"></p>
 
 	<p class="mb100 txtC">クロニクルリフォームでは、お客様専属のプランナーが完成までの全工程においてトータルにおうちづくりをお手伝いいたします。<br>
 	本当に住みたい家で暮らしていただきたい。<br>
@@ -247,29 +247,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<section class="boxSection">
 
 	<div class="clearfix">
-	<h3 class="ttlMaterial txtC mb30"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/ttl-main.png" alt="自然素材３つの魅力"></h3>
+	<h3 class="ttlMaterial txtC mb30"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/ttl-main.png" alt="自然素材３つの魅力"></h3>
 	<ul class="boxCharm">
 	<li class="bgDotBtm">
 		<dl>
-		<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/material/ttl-charm1.gif" alt="安心安全"></dt>
+		<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/material/ttl-charm1.gif" alt="安心安全"></dt>
 		<dd>自然素材だからこそ健康面でも安心。</dd>
 		</dl>
 	</li>
 	<li class="bgDotBtm">
 		<dl>
-		<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/material/ttl-charm2.gif" alt="耐久性"></dt>
+		<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/material/ttl-charm2.gif" alt="耐久性"></dt>
 		<dd>一般的に自然素材は耐久性が高く、メンテナンスも容易。</dd>
 		</dl>
 	</li>
 	<li class="bgDotBtm">
 		<dl>
-		<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/material/ttl-charm3.gif" alt="デザイン"></dt>
+		<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/material/ttl-charm3.gif" alt="デザイン"></dt>
 		<dd>自然素材がもたらす本物ならではの質感、色合いがお部屋を彩ります。</dd>
 		</dl>
 	</li>
 	</ul>
 	</div>
-	<p class="btnArw"><a href="material/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/material/btn-material.png" width="130" alt="自然素材詳細を見る"></a></p>
+	<p class="btnArw"><a href="material/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/material/btn-material.png" width="130" alt="自然素材詳細を見る"></a></p>
 	</section>
 	<!--=== //Section end ===-->
 
@@ -298,67 +298,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<ol>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step01.png" alt="STEP01"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step01.jpg" alt="STEP01"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step01.png" width="130" alt="なんでも相談会0円"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step01.png" alt="STEP01"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step01.jpg" alt="STEP01"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step01.png" width="130" alt="なんでも相談会0円"></dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step02.png" alt="STEP02"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step02.jpg" alt="STEP02"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step02.png" width="95" alt="現地調査"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step02.png" alt="STEP02"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step02.jpg" alt="STEP02"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step02.png" width="95" alt="現地調査"></dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step03.png" alt="STEP03"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step03.jpg" alt="STEP03"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step03.png" width="140" alt="設計費＆お見積り0円"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step03.png" alt="STEP03"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step03.jpg" alt="STEP03"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step03.png" width="140" alt="設計費＆お見積り0円"></dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step04.png" alt="STEP04"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step04.jpg" alt="STEP04"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step04.png" width="190" alt="ご納得のゆくまで打ち合わせ0円"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step04.png" alt="STEP04"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step04.jpg" alt="STEP04"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step04.png" width="190" alt="ご納得のゆくまで打ち合わせ0円"></dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step05.png" alt="STEP05"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step05.jpg" alt="STEP05"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step05.png" width="38" alt="ご契約"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step05.png" alt="STEP05"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step05.jpg" alt="STEP05"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step05.png" width="38" alt="ご契約"></dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step06.png" alt="STEP06"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step06.jpg" alt="STEP06"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step06.png" width="28" alt="着工"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step06.png" alt="STEP06"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step06.jpg" alt="STEP06"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step06.png" width="28" alt="着工"></dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step07.png" alt="STEP07"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step07.jpg" alt="STEP07"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step07.png" width="90" alt="完了・お引越し"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step07.png" alt="STEP07"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step07.jpg" alt="STEP07"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step07.png" width="90" alt="完了・お引越し"></dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-			<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/icn-step08.png" alt="STEP08"></dt>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/img-step08.jpg" alt="STEP08"></dd>
-			<dd><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/txt-step08.png" width="150" alt="アフターサービス0円"></dd>
+			<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/icn-step08.png" alt="STEP08"></dt>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/img-step08.jpg" alt="STEP08"></dd>
+			<dd><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/txt-step08.png" width="150" alt="アフターサービス0円"></dd>
 			</dl>
 		</li>
 		</ol>
 		</div>
 	</div>
 
-	<p class="mb70 txtC"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/service/ttl-service-onestop.png" alt="ワンストップサービスだからスピーディ＆リーズナブル＆わかりやすい"></p>
+	<p class="mb70 txtC"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/service/ttl-service-onestop.png" alt="ワンストップサービスだからスピーディ＆リーズナブル＆わかりやすい"></p>
 
-	<p class="btnArw"><a href="service/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/service/btn-service.png" width="130" alt="サービス詳細を見る"></a></p>
+	<p class="btnArw"><a href="service/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/btn-service.png" width="130" alt="サービス詳細を見る"></a></p>
 	</section>
 	<!--=== //Section end ===-->
 
@@ -387,7 +387,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<dt>
 	<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/plan/">
 	<span class="ttlPlan">DESIGNER’S PLAN <span class="txtSub">デザイナーズプラン</span></span>
-	<img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/plan/img-plan-designers.jpg" alt="デザイナーズプラン">
+	<img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/plan/img-plan-designers.jpg" alt="デザイナーズプラン">
 	</a>
 	</dt>
 	<dd>リノベーション実績豊富な当社が、これまでの経験や<br>
@@ -401,7 +401,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<dt>
 	<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/freeplan/">
 	<span class="ttlPlan">FREE PLAN<span class="txtSub">自由設計プラン</span></span>
-		<img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/plan/img-plan-free.jpg" alt="自由設計プラン">
+		<img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/plan/img-plan-free.jpg" alt="自由設計プラン">
 	</a>
 	</dt>
 	<dd>「こだわりのある暮らしはこだわりのある生活空間から」<br>
@@ -437,7 +437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="boxTabsWrap">
 		<?php get_template_part( 'template-parts/content', 'works'); ?>
 
-	<p class="btnArw"><a href="works/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/works/btn-works.png" width="140" alt="施工事例をもっと見る"></a></p>
+	<p class="btnArw"><a href="works/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/works/btn-works.png" width="140" alt="施工事例をもっと見る"></a></p>
 	</section>
 	<!--=== //Section end ===-->
 
@@ -463,8 +463,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	高品質・低価格の住宅設備・建材を実際のお部屋にいるかのごとく見て、触れていただくことができます。<br>
 	ぜひ、お近くのショールームまでお気軽にご来場ください。</p>
 	<p>
-	<a href="https://www.chronicle-plus.com/showroom/" target="_blank"><img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/showroom/bnr-showroom.png" alt="Our Showroom 自然の温もりを「住まい」に">
-	<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/top/showroom/bnr-showroom-smp.png" alt="Our Showroom 自然の温もりを「住まい」に"></a>
+	<a href="https://www.chronicle-plus.com/showroom/" target="_blank"><img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/showroom/bnr-showroom.png" alt="Our Showroom 自然の温もりを「住まい」に">
+	<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/showroom/bnr-showroom-smp.png" alt="Our Showroom 自然の温もりを「住まい」に"></a>
 	</p>
 	</section>
 	<!--=== //Section end ===-->
@@ -477,12 +477,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <aside id="aside" class="boxInner">
 <p class="txtC">
 	<a href="https://www.chronicle-web.com/line/" target="_blank">
-<img class="imgMain" style="width:840px" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-chronicle-line.jpg" alt="木のインテリアショップmokume">
-<img class="imgSmp" style="width:100%" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-chronicle-line-sp.jpg" alt="木のインテリアショップmokume">
+<img class="imgMain" style="width:840px" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-chronicle-line.jpg" alt="木のインテリアショップmokume">
+<img class="imgSmp" style="width:100%" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-chronicle-line-sp.jpg" alt="木のインテリアショップmokume">
 </a><br><br>
 <a href="http://www.rakuten.co.jp/mokume/" target="_blank">
-<img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
-<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
+<img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
+<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
 </a>
 </p>
 </aside>

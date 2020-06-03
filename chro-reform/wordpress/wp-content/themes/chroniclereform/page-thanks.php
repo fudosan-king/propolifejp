@@ -8,22 +8,22 @@
     <meta name="description" content="">
     <title>Chronicle Reform</title>
 
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
-    <link rel="manifest" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/favicon_package_v0.16/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png">
+    <link rel="manifest" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/favicon_package_v0.16/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap&subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/fontawesome-pro-5.7.0-web/css/all.css">
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/fontawesome-pro-5.7.0-web/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
 
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/styles.css" type="text/css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/mobile.css" type="text/css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/css/contact.css" type="text/css">
-    
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/mobile.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/css/contact.css" type="text/css">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12788873-6"></script>
     <script>
@@ -31,10 +31,10 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-12788873-6');
-        gtag('config', 'AW-844745329'); 
+        gtag('config', 'AW-844745329');
     </script>
 
-    <!-- Event snippet for 無垢材体験会予約（ショールーム予約） conversion page --> 
+    <!-- Event snippet for 無垢材体験会予約（ショールーム予約） conversion page -->
     <script> gtag('event', 'conversion', {'send_to': 'AW-844745329/t558CIjqz68BEPGU55ID'}); </script>
 
     <!-- Google Tag Manager -->
@@ -51,13 +51,13 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9S2NL"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <div id="page">
         <header>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-4 align-self-center">
-                        <a target="_blank" href="https://www.chronicle-web.com/reform"><img src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/images/1x/logo_kensetsu.png" alt="" class="img-fluid" width="350"></a>
+                        <a target="_blank" href="https://www.chronicle-web.com/reform"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/images/1x/logo_kensetsu.png" alt="" class="img-fluid" width="350"></a>
                     </div>
                     <div class="col-12 col-md-4 align-self-center">
                         <!-- <div class="w_gotocontact">
@@ -90,7 +90,7 @@
 
     </div>
 
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -99,8 +99,8 @@
     <script type="text/javascript" language="javascript" src="https://raw.githubusercontent.com/moment/moment/master/locale/ja.js"></script>
     <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
-    <script src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/js/functions.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/assets/lp/ourworks/js/contact.js"></script>
+    <script src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/js/functions.js"></script>
+    <script src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/assets/lp/ourworks/js/contact.js"></script>
     <script>
         (function(d) {
             var config = {

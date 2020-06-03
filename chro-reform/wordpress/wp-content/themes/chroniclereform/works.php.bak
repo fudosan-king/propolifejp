@@ -8,29 +8,29 @@
 
 			<ul class="boxSelectBtn">
 			<li class="on">
-			<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-thumb-01.jpg" alt="KITCHEN"></span>
+			<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-thumb-01.jpg" alt="KITCHEN"></span>
 			<span class="txtBtn">KITCHEN</span>
 			</li>
 			<li>
-			<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-thumb-02.jpg" alt="WORKSPACE"></span>
+			<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-thumb-02.jpg" alt="WORKSPACE"></span>
 			<span class="txtBtn">WORKSPACE</span>
 			</li>
 			<li>
-			<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-thumb-03.jpg" alt="LIVING"></span>
+			<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-thumb-03.jpg" alt="LIVING"></span>
 			<span class="txtBtn">LIVING</span>
 			</li>
 			</ul>
 
 			<div class="boxContWrap">
-			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg01_01.png" alt="自然なビンテージ感を"></a>
+			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg01_01.png" alt="自然なビンテージ感を"></a>
 			</div>
 
 			<div class="boxContWrap disnon">
-			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg01_02.png" alt="自然なビンテージ感を"></a>
+			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg01_02.png" alt="自然なビンテージ感を"></a>
 			</div>
 
 			<div class="boxContWrap disnon">
-			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg01_03.png" alt="自然なビンテージ感を"></a>
+			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg01_03.png" alt="自然なビンテージ感を"></a>
 			</div>
 
 			</div>
@@ -39,9 +39,9 @@
 			<!--== スマホ用画像切替 start ==-->
 			<div class="boxImgChange02 flexslider imgSmp clearfix">
 			<ul class="slides">
-			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg01_01.png" alt="自然なビンテージ感を"></a></li>
-			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg01_02.png" alt="自然なビンテージ感を"></a></li>
-			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg01_03.png" alt="自然なビンテージ感を"></a></li>
+			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg01_01.png" alt="自然なビンテージ感を"></a></li>
+			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg01_02.png" alt="自然なビンテージ感を"></a></li>
+			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg01_03.png" alt="自然なビンテージ感を"></a></li>
 			</ul>
 			</div>
 			<!--== //スマホ用画像切替 end ==-->
@@ -57,29 +57,29 @@
 
 			<ul class="boxSelectBtn">
 			<li class="on">
-			<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/thumb02_01.png" alt="LIVING"></span>
+			<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/thumb02_01.png" alt="LIVING"></span>
 			<span class="txtBtn">LIVING</span>
 			</li>
 			<li>
-			<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/thumb02_02.png" alt="WORKSPACE"></span>
+			<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/thumb02_02.png" alt="WORKSPACE"></span>
 			<span class="txtBtn">WORKSPACE</span>
 			</li>
 			<li>
-			<span class="imgBtn"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/thumb02_03.png" alt="JAPANESE ROOM"></span>
+			<span class="imgBtn"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/thumb02_03.png" alt="JAPANESE ROOM"></span>
 			<span class="txtBtn">JAPANESE ROOM</span>
 			</li>
 			</ul>
 
 			<div class="boxContWrap">
-			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg02_01.png" alt="お部屋を彩る「壁」"></a>
+			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg02_01.png" alt="お部屋を彩る「壁」"></a>
 			</div>
 
 			<div class="boxContWrap disnon">
-			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg02_02.png" alt="お部屋を彩る「壁」"></a>
+			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg02_02.png" alt="お部屋を彩る「壁」"></a>
 			</div>
 
 			<div class="boxContWrap disnon">
-			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg02_03.png" alt="お部屋を彩る「壁」"></a>
+			<a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg02_03.png" alt="お部屋を彩る「壁」"></a>
 			</div>
 
 			</div>
@@ -88,9 +88,9 @@
 			<!--== スマホ用画像切替 start ==-->
 			<div class="boxImgChange02 flexslider imgSmp clearfix">
 			<ul class="slides">
-			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg02_01.png" alt="お部屋を彩る「壁」"></a></li>
-			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg02_02.png" alt="お部屋を彩る「壁」"></a></li>
-			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/mainimg02_02.png" alt="お部屋を彩る「壁」"></a></li>
+			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg02_01.png" alt="お部屋を彩る「壁」"></a></li>
+			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg02_02.png" alt="お部屋を彩る「壁」"></a></li>
+			<li><a href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } ?>/works/works02/"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/mainimg02_02.png" alt="お部屋を彩る「壁」"></a></li>
 			</ul>
 			</div>
 			<!--== //スマホ用画像切替 end ==-->
@@ -109,21 +109,21 @@
 
 	<ul class="boxWorksList clearfix">
 
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/01.jpg" data-lightbox="image-1" data-title="外光を柔らかく室内に取り入れるエントランス、赤の玄関扉がモダンな印象。<br>壁の一部は数種の無垢材を乱張りしたおしゃれな仕様に。"><span>#A</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-01.jpg" alt="#A"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/02.jpg" data-lightbox="image-1" data-title="木の風合いをお部屋全体に取り入れたLDK。壁面は見せる収納の可動棚を取り付け、カウンター付きのキッチンで大人っぽいカフェ風に。"><span>#B</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-02.jpg" alt="#B"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/03.jpg" data-lightbox="image-1" data-title="忙しい朝にも大活躍の3ユニットのパウダースペース。モザイクタイル、棚板風の収納、フレームミラーでシンプルで機能的な造りに。"><span>#C</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-03.jpg" alt="#C"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/04.jpg" data-lightbox="image-1" data-title="白のブリックタイルを取り入れた清潔感ある室内。天井には無垢材の化粧梁で空間に奥行を。珪藻土壁にして、赤ちゃんにも安心のリビングに。"><span>#D</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-04.jpg" alt="#D"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/05.jpg" data-lightbox="image-1" data-title="家族が自由に行き来できるオープンキッチン。ダイニングと対面式にして、お料理をしながら家族の様子をいつでも見ることができる。"><span>#E</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-05.jpg" alt="#E"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/06.jpg" data-lightbox="image-1" data-title="ジャパニーズモダンな和室。黒い格子柄の襖と格子窓、琉球畳と個性的なアイテムを取り入れながらも統一感ある雰囲気が漂う。"><span>#F</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-06.jpg" alt="#F"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/07.jpg" data-lightbox="image-1" data-title="玄関からの目隠しに取り入れた格子。採光性は保ちつつ、小物を飾ったり、物掛けにしたりと使い勝手も良い。"><span>#G</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-07.jpg" alt="#G"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/08.jpg" data-lightbox="image-1" data-title="全長6メートルの壁一面に取り付けられた可動棚。縦に伸びるラインと見せる収納でお部屋をすっきり＆広々とみせる効果も。"><span>#H</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-08.jpg" alt="#H"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/09.jpg" data-lightbox="image-1" data-title="個性的なブルーの壁。なにげなく飾られた絵やグリーンが映え、それだけでおしゃれな空間にできるおすすめのテクニック。"><span>#I</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-09.jpg" alt="#I"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/10.jpg" data-lightbox="image-1" data-title="壁に色を取り入れることで照明の光が趣を持つ。「壁は白」の固定観念を捨てると、お部屋のアレンジも自在に。"><span>#J</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-10.jpg" alt="#J"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/11.jpg" data-lightbox="image-1" data-title="リノベーションだからできた「赤い扉」。まだ使用可能な既存の扉に専用のシートをはってできる簡単リメイク。"><span>#K</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-11.jpg" alt="#K"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/12.jpg" data-lightbox="image-1" data-title="フルリノベーションで間取り、仕様を一新。人気の天然無垢材フローリングで温かみのあるお部屋に。"><span>#L</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-12.jpg" alt="#L"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/13.jpg" data-lightbox="image-1" data-title="ベッセル型のボールを取り入れた洗面。限られたスペースにコンパクトに取り付けながらも、モザイクタイルで印象的に。"><span>#M</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-13.jpg" alt="#M"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/14.jpg" data-lightbox="image-1" data-title="天然無垢材を豊富に取り入れたアイランドキッチンのLDK。大収納のパントリーは扉付きで、すっきりと。"><span>#N</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-14.jpg" alt="#N"></a></li>
-	<li><a href="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/15.jpg" data-lightbox="image-1" data-title="「とにかく収納スペースをたっぷりと」という要望が多いマンションリノベ。天然無垢材仕様のキャビネットは吸湿効果の面でも優れもの。"><span>#O</span><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/works/top/img-works-15.jpg" alt="#O"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/01.jpg" data-lightbox="image-1" data-title="外光を柔らかく室内に取り入れるエントランス、赤の玄関扉がモダンな印象。<br>壁の一部は数種の無垢材を乱張りしたおしゃれな仕様に。"><span>#A</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-01.jpg" alt="#A"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/02.jpg" data-lightbox="image-1" data-title="木の風合いをお部屋全体に取り入れたLDK。壁面は見せる収納の可動棚を取り付け、カウンター付きのキッチンで大人っぽいカフェ風に。"><span>#B</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-02.jpg" alt="#B"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/03.jpg" data-lightbox="image-1" data-title="忙しい朝にも大活躍の3ユニットのパウダースペース。モザイクタイル、棚板風の収納、フレームミラーでシンプルで機能的な造りに。"><span>#C</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-03.jpg" alt="#C"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/04.jpg" data-lightbox="image-1" data-title="白のブリックタイルを取り入れた清潔感ある室内。天井には無垢材の化粧梁で空間に奥行を。珪藻土壁にして、赤ちゃんにも安心のリビングに。"><span>#D</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-04.jpg" alt="#D"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/05.jpg" data-lightbox="image-1" data-title="家族が自由に行き来できるオープンキッチン。ダイニングと対面式にして、お料理をしながら家族の様子をいつでも見ることができる。"><span>#E</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-05.jpg" alt="#E"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/06.jpg" data-lightbox="image-1" data-title="ジャパニーズモダンな和室。黒い格子柄の襖と格子窓、琉球畳と個性的なアイテムを取り入れながらも統一感ある雰囲気が漂う。"><span>#F</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-06.jpg" alt="#F"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/07.jpg" data-lightbox="image-1" data-title="玄関からの目隠しに取り入れた格子。採光性は保ちつつ、小物を飾ったり、物掛けにしたりと使い勝手も良い。"><span>#G</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-07.jpg" alt="#G"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/08.jpg" data-lightbox="image-1" data-title="全長6メートルの壁一面に取り付けられた可動棚。縦に伸びるラインと見せる収納でお部屋をすっきり＆広々とみせる効果も。"><span>#H</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-08.jpg" alt="#H"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/09.jpg" data-lightbox="image-1" data-title="個性的なブルーの壁。なにげなく飾られた絵やグリーンが映え、それだけでおしゃれな空間にできるおすすめのテクニック。"><span>#I</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-09.jpg" alt="#I"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/10.jpg" data-lightbox="image-1" data-title="壁に色を取り入れることで照明の光が趣を持つ。「壁は白」の固定観念を捨てると、お部屋のアレンジも自在に。"><span>#J</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-10.jpg" alt="#J"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/11.jpg" data-lightbox="image-1" data-title="リノベーションだからできた「赤い扉」。まだ使用可能な既存の扉に専用のシートをはってできる簡単リメイク。"><span>#K</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-11.jpg" alt="#K"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/12.jpg" data-lightbox="image-1" data-title="フルリノベーションで間取り、仕様を一新。人気の天然無垢材フローリングで温かみのあるお部屋に。"><span>#L</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-12.jpg" alt="#L"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/13.jpg" data-lightbox="image-1" data-title="ベッセル型のボールを取り入れた洗面。限られたスペースにコンパクトに取り付けながらも、モザイクタイルで印象的に。"><span>#M</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-13.jpg" alt="#M"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/14.jpg" data-lightbox="image-1" data-title="天然無垢材を豊富に取り入れたアイランドキッチンのLDK。大収納のパントリーは扉付きで、すっきりと。"><span>#N</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-14.jpg" alt="#N"></a></li>
+	<li><a href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/15.jpg" data-lightbox="image-1" data-title="「とにかく収納スペースをたっぷりと」という要望が多いマンションリノベ。天然無垢材仕様のキャビネットは吸湿効果の面でも優れもの。"><span>#O</span><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/img-works-15.jpg" alt="#O"></a></li>
 
 
 <?php query_posts('post_type=works&showposts=15'); ?>

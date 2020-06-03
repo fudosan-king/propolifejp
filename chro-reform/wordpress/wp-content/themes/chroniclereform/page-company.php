@@ -22,9 +22,9 @@ Template Name: CompanyPage
     <link rel="stylesheet/less" type="text/css" href="../shindan/style.css">
     <link rel="stylesheet/less" type="text/css" href="../shindan/nicker.css">
     <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/tablet.css">
-    <link rel="icon" href="https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/images/favicon.png" type="image/png">
+    <link rel="icon" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png" type="image/png">
     <!--[if lt IE 9]>
-  <script src="https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/js/html5shiv.js"></script>
+  <script src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/html5shiv.js"></script>
   <![endif]-->
     <script async="" src="../shindan/files/saved_resource"></script>
     <script async="" src="../shindan/files/saved_resource(1)"></script>

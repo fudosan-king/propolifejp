@@ -16,7 +16,7 @@ if (!$_SERVER['HTTP_X_CUSTOM_REFERRER']) {
 <nav id="boxGlobalNav" class="">
     <dl>
         <dt class="btnOpen">
-            <img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/btn-gnav-menu.png" alt="Menu">
+            <img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/btn-gnav-menu.png" alt="Menu">
         </dt>
         <dd class="boxMenu">
             <ul>

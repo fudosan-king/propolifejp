@@ -97,7 +97,7 @@
 
 <!--== ▼ページトップへ戻る start ==-->
 <p id="btnPageTop">
-<a href="#container"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/btn-pagetop.png" width="50" height="50" alt="ページトップへ戻る"></a>
+<a href="#container"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/btn-pagetop.png" width="50" height="50" alt="ページトップへ戻る"></a>
 </p>
 <!--== //ページトップへ戻る end ==-->
 </div>

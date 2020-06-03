@@ -117,7 +117,7 @@ em {
   display: none;
 }
 #header #boxGlobalNav li {
-  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav-line.gif) no-repeat top left;
+  background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav-line.gif) no-repeat top left;
   float: left;
   height: 35px;
   padding-left: 1px;
@@ -131,7 +131,7 @@ em {
 }
 #header #boxGlobalNav a span {
   display: block;
-  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav.png) no-repeat 0 -2px;
+  background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav.png) no-repeat 0 -2px;
   height: 35px;
   color: #ffffff;
   text-indent: 100%;
@@ -240,7 +240,7 @@ em {
   background: #f6f5f2;
 }
 .bgDotBtm {
-  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
+  background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
 }
 .liDot li {
   padding-left: 20px;
@@ -404,7 +404,7 @@ em {
 .boxImgChange02 .flex-control-paging li a {
   display: block;
   float: left;
-  background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slides-pagination.png) no-repeat;
+  background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slides-pagination.png) no-repeat;
   background-size: 10px;
   width: 10px;
   height: 11px;

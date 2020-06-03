@@ -302,7 +302,7 @@ em {
 }
 
 #header #boxGlobalNav li {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav-line.gif) no-repeat top left;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav-line.gif) no-repeat top left;
     float: left;
     height: 35px;
     padding-left: 1px;
@@ -319,7 +319,7 @@ em {
 
 #header #boxGlobalNav a span {
     display: block;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav.png) no-repeat 0 -2px;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-gnav.png) no-repeat 0 -2px;
     height: 35px;
     color: #ffffff;
     text-indent: 100%;
@@ -460,7 +460,7 @@ em {
 }
 
 .bgDotBtm {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
 }
 
 .liDot li {
@@ -666,7 +666,7 @@ em {
 .boxImgChange02 .flex-control-paging li a {
     display: block;
     float: left;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slides-pagination.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slides-pagination.png) no-repeat;
     background-size: 10px;
     width: 10px;
     height: 11px;
@@ -1053,13 +1053,13 @@ em {
 }
 
 .page-top #content #topmain.boxImgChangePC .boxSlidetabs li a {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-off.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-off.png) no-repeat;
     width: 120px;
     padding: 8px;
 }
 
 .page-top #content #topmain.boxImgChangePC .boxSlidetabs li .current {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-on.png);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-on.png);
 }
 
 .page-top #content #topmain.boxImgChangePC .boxSlidetabs li:first-child {
@@ -1080,11 +1080,11 @@ em {
 }
 
 .page-top #content #topmain.boxImgChangePC .boxContWrap .item1 {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/img-material.png);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/img-material.png);
 }
 
 .page-top #content #topmain.boxImgChangePC .boxContWrap .item2 {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/img-onestop.png);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/img-onestop.png);
 }
 
 .page-top #content .boxLatestInfo {
@@ -1247,7 +1247,7 @@ em {
     top: 50%;
     left: 100%;
     z-index: 5;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/material/bg-arw.gif) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/material/bg-arw.gif) no-repeat;
     content: "";
     width: 20px;
     height: 22px;
@@ -1298,7 +1298,7 @@ em {
 }
 
 .page-top #content .boxService .boxSection .boxStep .boxStepInner ol {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-step-arw2.png) no-repeat center;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-step-arw2.png) no-repeat center;
     width: 1074px;
     margin-left: -25px;
 }
@@ -1332,7 +1332,7 @@ em {
     position: absolute;
     top: 0;
     left: -25px;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-step-arw1.png) no-repeat center;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-step-arw1.png) no-repeat center;
     width: 20px;
     height: 100%;
     content: "";
@@ -1355,7 +1355,7 @@ em {
     position: absolute;
     left: 50%;
     bottom: -62px;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-arw-g.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-arw-g.png) no-repeat;
     width: 234px;
     height: 62px;
     margin-left: -120px;
@@ -1382,7 +1382,7 @@ em {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5) url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/plan/bg-arw.png) no-repeat 95%;
+    background: rgba(0, 0, 0, 0.5) url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/plan/bg-arw.png) no-repeat 95%;
     width: 100%;
     padding: 22px 28px 18px;
     color: #ffffff;
@@ -1495,7 +1495,7 @@ em {
 
 .page-top #content .boxContact .btnSubmit input {
     border: none;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact.png) no-repeat center #534336;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact.png) no-repeat center #534336;
     text-indent: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -1525,7 +1525,7 @@ em {
 
 .boxPostList > ul > li {
     position: relative;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
     padding: 35px 0;
 }
 
@@ -1636,7 +1636,7 @@ em {
 /* -------- 投稿詳細 -------- */
 
 .boxPostDetail {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
     margin: 0 0 35px;
     padding: 0 0 35px;
 }
@@ -1947,13 +1947,13 @@ em {
 }
 
 #topmainMaterial.boxImgChangePC .boxSlidetabs li a {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-off.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-off.png) no-repeat;
     width: 74px;
     padding: 5px;
 }
 
 #topmainMaterial.boxImgChangePC .boxSlidetabs li .current {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-on.png);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-on.png);
 }
 
 #topmainMaterial.boxImgChangePC .boxSlidetabs li:first-child,
@@ -2082,7 +2082,7 @@ em {
     position: absolute;
     top: -1px;
     left: 50%;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/service/icn-arw.gif) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/service/icn-arw.gif) no-repeat;
     width: 112px;
     height: 61px;
     content: "";
@@ -2161,7 +2161,7 @@ em {
     position: absolute;
     left: -45px;
     bottom: -15px;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/common/bg-arw.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/common/bg-arw.png) no-repeat;
     content: "";
     width: 35px;
     height: 35px;
@@ -2258,23 +2258,23 @@ em {
 }
 
 .page-plan #content #basic-style .boxArticleHead {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-basic-style.jpg);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-basic-style.jpg);
 }
 
 .page-plan #content #natural-style .boxArticleHead {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-natural-style.jpg);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-natural-style.jpg);
 }
 
 .page-plan #content #italian-style .boxArticleHead {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-italian-style.jpg);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-italian-style.jpg);
 }
 
 .page-plan #content #japanese-style .boxArticleHead {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-japanese-style.jpg);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-japanese-style.jpg);
 }
 
 .page-plan #content #vintage-style .boxArticleHead {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-vintage-classic-style.jpg);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/designers/bg-vintage-classic-style.jpg);
 }
 
 .page-plan #content .boxFreePlan {
@@ -2305,7 +2305,7 @@ em {
 }
 
 .page-plan #content #works01 .boxArticleHead {
-    background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/free/bg-works01.jpg);
+    background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/plan/free/bg-works01.jpg);
 }
 
 
@@ -2405,7 +2405,7 @@ em {
     top: 0;
     left: 0;
     display: block;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/bg-workslist.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/top/bg-workslist.png) no-repeat;
     width: 64px;
     height: 55px;
     padding: 5px;
@@ -2426,7 +2426,7 @@ em {
 }
 
 .page-works #content .bdrOrange {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/detail/bg-ttl-orange.png) no-repeat bottom;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/detail/bg-ttl-orange.png) no-repeat bottom;
     padding: 0 0 7px 5px;
 }
 
@@ -2441,7 +2441,7 @@ em {
 }
 
 .page-works #content .boxPostDetail .boxPostHead {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/detail/bg-ttl-post.gif);
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/detail/bg-ttl-post.gif);
     margin-bottom: 30px;
     padding: 15px 18px;
 }
@@ -2502,7 +2502,7 @@ em {
     position: absolute;
     top: 50%;
     right: -30px;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-arw-right.gif) no-repeat center;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-arw-right.gif) no-repeat center;
     width: 20px;
     height: 20px;
     content: "";
@@ -2568,7 +2568,7 @@ em {
 }
 
 .page-works #content #side .boxPostMenu .ttlPostMenu {
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/detail/bg-side-ttl.gif);
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/works/detail/bg-side-ttl.gif);
     padding: 7px 10px;
     font-size: 1.1em;
     color: #ffffff;
@@ -2623,12 +2623,12 @@ li.als-boxItem:first-child {
 
 .als-bgPrev {
     left: -12px;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slide-arw-prev.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slide-arw-prev.png) no-repeat;
 }
 
 .als-bgNext {
     right: -8px;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slide-arw-next.png) no-repeat;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-slide-arw-next.png) no-repeat;
 }
 
 .als-btnPrev,
@@ -3231,7 +3231,7 @@ input#contacttype-2 {
         margin: 0 0 20px;
     }
     .boxPostDetail + .boxPaging {
-        background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
+        background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot.png) repeat-x bottom;
         margin-bottom: 0;
         padding: 20px 0;
     }
@@ -3445,12 +3445,12 @@ input#contacttype-2 {
         width: 15%;
     }
     .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li .imgBtn {
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-off.png);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-off.png);
         padding: 5px;
         margin-bottom: 7%;
     }
     .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li.on .imgBtn {
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-on.png);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/topmain/bg-imgchange-on.png);
     }
     .page-top #content #topmainSmp.boxImgChangeSmp .boxSelectBtn li:first-child {
         margin-right: 10%;
@@ -3731,7 +3731,7 @@ input#contacttype-2 {
         position: absolute;
         left: 0;
         bottom: -30px;
-        background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-step-arw2-smp.png) no-repeat center;
+        background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/service/bg-step-arw2-smp.png) no-repeat center;
         background-size: 50%;
         width: 200%;
         height: 30px;
@@ -3863,7 +3863,7 @@ input#contacttype-2 {
     }
     .page-top #content .boxContact .btnSubmit input {
         width: 100%;
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact-smp.png);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact-smp.png);
         background-size: 60px;
         margin: 0;
     }
@@ -3931,14 +3931,14 @@ input#contacttype-2 {
     .boxPostMenu .ttlSmp {
         position: relative;
         display: block;
-        background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/post/bg-open.png) no-repeat 96% center #f6f5f2;
+        background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/post/bg-open.png) no-repeat 96% center #f6f5f2;
         background-size: 10px 10px;
         padding: 15px;
         font-size: 1.1em;
         cursor: pointer;
     }
     .boxPostMenu .ttlSmp.on {
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/post/bg-close.png);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/post/bg-close.png);
     }
     .boxPostMenu ul {
         margin-bottom: 20px;
@@ -4130,11 +4130,11 @@ input#contacttype-2 {
         max-width: 75px;
     }
     #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li .imgBtn {
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-off.png);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-off.png);
         padding: 3px;
     }
     #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li.on .imgBtn {
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-on.png);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/bg-imgchange-on.png);
     }
     #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li:first-child,
     #topmainMaterialSmp.boxImgChangeSmp .boxSelectBtn li:first-child + li {
@@ -4205,7 +4205,7 @@ input#contacttype-2 {
         font-size: 0.9em;
     }
     .page-service #content .boxArticle .boxServiceStep .boxInner:before {
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/service/icn-arw-smp.gif);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/service/icn-arw-smp.gif);
         background-size: 50%;
     }
     .page-service #content .boxArticle #boxStepNav.fixed {
@@ -4319,7 +4319,7 @@ input#contacttype-2 {
         font-size: 0.9em;
     }
     .page-plan #content .boxStyleSelect .bgDotBtm {
-        background-image: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot-small.gif);
+        background-image: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bg-dot-small.gif);
     }
     .page-plan #content .boxStyleSelect .boxSelectBtn {
         width: 100%;
@@ -4539,7 +4539,7 @@ input#contacttype-2 {
         top: auto;
         right: 50%;
         bottom: -30px;
-        background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-arw-btm.gif) no-repeat center;
+        background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/icn-arw-btm.gif) no-repeat center;
         background-size: 70%;
         width: 20px;
         height: 20px;
@@ -4631,7 +4631,7 @@ input#contacttype-2 {
 
 .boxContact .btnSubmit input {
     border: none;
-    background: url(https://www.chro-reform.com/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact.png) no-repeat center #534336;
+    background: url(https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/contact/btn-contact.png) no-repeat center #534336;
     text-indent: 100%;
     overflow: hidden;
     white-space: nowrap;

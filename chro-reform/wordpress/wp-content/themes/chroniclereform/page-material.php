@@ -9,21 +9,21 @@
 
 <title>自然素材｜クロニクルリフォーム</title>
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/reset.css">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/general.css">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/colorscheme.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/base.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/module.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/parts.less">
-<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/commonfiles/css/smart.less">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/general.css">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/colorscheme.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/base.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/module.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/parts.less">
+<link rel="stylesheet/less" type="text/css" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/css/smart.less">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker.css">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/nicker_nav.css">
 <link rel="stylesheet/less" type="text/css" href="<?php if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { if ($_SERVER['HTTP_X_CUSTOM_REFERRER']) { echo $_SERVER['HTTP_X_CUSTOM_REFERRER']; } else { bloginfo('url'); } } ?>/shindan/tablet.css">
-<link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" type="image/png" />
+<link rel="icon" href="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/images/favicon.png" type="image/png" />
 <!--[if lt IE 9]>
-<script src="<?php bloginfo('template_directory'); ?>/commonfiles/js/html5shiv.js"></script>
+<script src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/html5shiv.js"></script>
 <![endif]-->
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/jquery.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/jquery.js"></script>
 <script type="text/javascript">
 // if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 //         document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
@@ -31,12 +31,12 @@
 //         document.write('<meta name="viewport" content="width=1100, maximum-scale=1">');
 //     }
 </script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/less.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/common.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/less.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/common.js"></script>
 <!-- メインビジュアル用JS start-->
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/tabs.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/tabs.slideshow.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/commonfiles/js/material.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/tabs.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/tabs.slideshow.js"></script>
+<script type="text/javascript" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/js/material.js"></script>
 <!-- //メインビジュアル用JS end-->
 
 <!-- Google Tag Manager -->
@@ -90,28 +90,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php include TEMPLATEPATH . '/material.php';?>
 	</header>
 
-	<h2 class="txtC mb30"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/ttl-main.png" alt="自然素材３つの魅力"></h2>
+	<h2 class="txtC mb30"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/ttl-main.png" alt="自然素材３つの魅力"></h2>
 
 	<section id="charm01" class="boxSection bgDotBtm clearfix">
-	<p class="imgCharm fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-charm1.jpg" alt="安心安全"></p>
+	<p class="imgCharm fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-charm1.jpg" alt="安心安全"></p>
 	<dl class="boxCharm fltR">
-	<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/ttl-charm1.gif" alt="安心安全"></dt>
+	<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/ttl-charm1.gif" alt="安心安全"></dt>
 	<dd>自然素材だからこそ健康面でも安心。おうちのすべてを自然素材で作り上げることは今の時代、なかなか大変ですが、できる限り取り入れることでより安心安全な住宅にすることができます。シックハウス症候群で問題となっているホルムアルデヒドなどの化学物質の使用量が大幅に軽減され、小さなお子さんがいるご家庭でも安心して暮らすことができます。</dd>
 	</dl>
 	</section>
 
 	<section id="charm02" class="boxSection bgDotBtm clearfix">
-	<p class="imgCharm fltR"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-charm2.jpg" alt="耐久性"></p>
+	<p class="imgCharm fltR"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-charm2.jpg" alt="耐久性"></p>
 	<dl class="boxCharm fltL">
-	<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/ttl-charm2.gif" alt="耐久性"></dt>
+	<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/ttl-charm2.gif" alt="耐久性"></dt>
 	<dd>一般的に自然素材は石油製品や化学製品に比べて耐久性が高く、簡単なメンテナンスで長く使い続けることができます。たとえば、天然無垢材フローリングと合板フローリングを比較した場合、耐久性の低い合板フローリングは先々かかる張替の費用が余計に発生するため、長い目で見ると耐久性の高い天然無垢材フローリングのほうがコスト面でも断然お得なのです。</dd>
 	</dl>
 	</section>
 
 	<section id="charm03" class="boxSection clearfix">
-	<p class="imgCharm fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-charm3.jpg" alt="デザイン"></p>
+	<p class="imgCharm fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-charm3.jpg" alt="デザイン"></p>
 	<dl class="boxCharm fltR">
-	<dt><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/ttl-charm3.gif" alt="デザイン"></dt>
+	<dt><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/ttl-charm3.gif" alt="デザイン"></dt>
 	<dd>自然素材がもたらす本物ならではの質感、色合いがお部屋を彩ります。<br>
 	長く使い続けるうちに醸し出される経年変化の風合いはなんともいえぬ味わいとなって<br>
 	お部屋のデザイン性を高めてくれます。</dd>
@@ -130,7 +130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</header>
 
 	<section class="boxSection boxInner clearfix">
-	<p class="imgMaterial fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-wood-main.png" alt=""></p>
+	<p class="imgMaterial fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-wood-main.png" alt=""></p>
 	<dl class="boxMaterial fltR">
 	<dt class="ttlMaterial bgDotBtm">天然無垢材</dt>
 	<dd>
@@ -142,7 +142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<dd>フローリング、腰壁、化粧梁など、そのほか多数。</dd>
 		<dt class="ttlBalloon"><span>樹種</span></dt>
 		<dd class="boxTwoColumn clearfix">
-			<p class="fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-wood-karin.jpg" alt="カリン"></p>
+			<p class="fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-wood-karin.jpg" alt="カリン"></p>
 			<dl class="fltR">
 			<dt>カリン</dt>
 			<dd>
@@ -159,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</dd>
 
 		<dd class="boxTwoColumn clearfix">
-			<p class="fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-wood-walnut.jpg" alt="ウォルナット"></p>
+			<p class="fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-wood-walnut.jpg" alt="ウォルナット"></p>
 			<dl class="fltR">
 			<dt>ウォルナット</dt>
 			<dd>
@@ -176,7 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</dd>
 
 			<dd class="boxTwoColumn clearfix">
-			<p class="fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-wood-oak.jpg" alt="オーク"></p>
+			<p class="fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-wood-oak.jpg" alt="オーク"></p>
 			<dl class="fltR">
 			<dt>オーク</dt>
 			<dd>
@@ -192,7 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</dd>
 
 			<dd class="boxTwoColumn clearfix">
-			<p class="fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-wood-cheek.jpg" alt="チーク"></p>
+			<p class="fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-wood-cheek.jpg" alt="チーク"></p>
 			<dl class="fltR">
 			<dt>チーク</dt>
 			<dd>
@@ -209,7 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 			<dd class="boxTwoColumn clearfix">
-			<p class="fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-wood-kanzakura.jpg" alt="カバザクラ"></p>
+			<p class="fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-wood-kanzakura.jpg" alt="カバザクラ"></p>
 			<dl class="fltR">
 			<dt>カバザクラ</dt>
 			<dd>
@@ -228,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</section>
 
 	<section class="boxSection boxInner clearfix">
-	<p class="imgMaterial fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-keisoudo-main.png" alt="珪藻土"></p>
+	<p class="imgMaterial fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-keisoudo-main.png" alt="珪藻土"></p>
 	<dl class="boxMaterial fltR">
 	<dt class="ttlMaterial bgDotBtm">珪藻土</dt>
 	<dd>
@@ -236,7 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<dl>
 		<dt class="ttlBalloon"><span>メリット</span></dt>
 		<dd class="boxTwoColumn clearfix">
-			<p class="fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-keisoudo.jpg" alt="珪藻土"></p>
+			<p class="fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-keisoudo.jpg" alt="珪藻土"></p>
 			<ul class="fltR liDot">
 			<li>冬場には保湿効果が、夏場には脱湿効果があり、快適にお過ごしいただけます</li>
 			<li>冷暖房の使用が抑えられるので、省エネで環境に優しいうえ、経済的です</li>
@@ -251,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</section>
 
 	<section class="boxSection boxInner clearfix">
-	<p class="imgMaterial fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-shikkui-main.png" alt="漆喰"></p>
+	<p class="imgMaterial fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-shikkui-main.png" alt="漆喰"></p>
 	<dl class="boxMaterial fltR">
 	<dt class="ttlMaterial bgDotBtm">漆喰</dt>
 	<dd>
@@ -259,7 +259,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<dl>
 		<dt class="ttlBalloon"><span>メリット</span></dt>
 		<dd class="boxTwoColumn clearfix">
-			<p class="fltL"><img src="<?php bloginfo('template_directory'); ?>/commonfiles/img/material/img-shikkui.jpg" alt="漆喰"></p>
+			<p class="fltL"><img src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/material/img-shikkui.jpg" alt="漆喰"></p>
 			<ul class="fltR liDot">
 			<li>吸湿および放湿機能があり、室内を一定の湿度に保つ。冬場の結露や乾燥を防ぎ、快適なお部屋に</li>
 			<li>自然素材でありながら消石灰でできている漆喰は、耐火性が高い。火事に強く延焼をとどめる効果が期待できる</li>
@@ -278,8 +278,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <aside id="aside" class="boxInner">
 <p class="txtC">
 <a href="http://www.rakuten.co.jp/mokume/" target="_blank">
-<img class="imgMain" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
-<img class="imgSmp" src="<?php bloginfo('template_directory'); ?>/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
+<img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-toMokume.png" alt="木のインテリアショップmokume">
+<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/common/bnr-toMokumeSP.png" alt="木のインテリアショップmokume">
 </a>
 </p>
 </aside>

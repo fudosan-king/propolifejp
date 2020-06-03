@@ -68,17 +68,32 @@
                             <div class="box_content">
                                 <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online" autocomplete="off">
                                     <?php
-                                        $name = isset($_GET['n']) ? $_GET['n'] : '';
-                                        $email = isset($_GET['e']) ? $_GET['e'] : '';
+                                        $name = '';
+                                        $email = '';
                                         $inquiry = isset($_GET['i']) ? $_GET['i'] : '';
 
                                         $utm_source = isset($_GET['s']) ? 'suumo' : '';
                                         $utm_medium = isset($_GET['m']) ? 'online_before_mail': '';
                                         $utm_campaign = isset($_GET['c']) ? $_GET['c'] : '';
+
+                                        $payload = json_encode(array("unique_id" => $utm_campaign));
+                                        $cURLConnection = curl_init('https://fudosan-king.jp/api/members');
+                                        curl_setopt($cURLConnection, CURLOPT_POSTFIELDS, $payload);
+                                        curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
+                                        curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+                                        $apiResponse = curl_exec($cURLConnection);
+                                        curl_close($cURLConnection);
+                                        $res = json_decode($apiResponse);
+                                        $signal = json_decode($apiResponse)->ok;
+                                        if(isset($signal) && $signal){
+                                            $info = json_decode($apiResponse)->member;
+                                             $name = isset($signal) && $signal ? $info->full_name : '';
+                                            $email = isset($signal) && $signal ? $info->email : '';
+                                        }
                                     ?>
-                                    <input type="hidden" name="utm_source" id="input" class="form-control" <?php echo !empty($utm_source) ? 'value="'.$utm_source.'"'  : '' ?>>
-                                    <input type="hidden" name="utm_medium" id="input" class="form-control" <?php echo !empty($utm_medium) ? 'value="'.$utm_medium.'"'  : '' ?>>
-                                    <input type="hidden" name="utm_campaign" id="input" class="form-control" <?php echo !empty($utm_campaign) ? 'value="'.$utm_campaign.'"'  : '' ?>>
+                                    <input type="hidden" name="utm_source" id="iutm_source" class="form-control" <?php echo !empty($utm_source) ? 'value="'.$utm_source.'"'  : '' ?>>
+                                    <input type="hidden" name="utm_medium" id="iutm_medium" class="form-control" <?php echo !empty($utm_medium) ? 'value="'.$utm_medium.'"'  : '' ?>>
+                                    <input type="hidden" name="utm_campaign" id="iutm_campaign" class="form-control" <?php echo !empty($utm_campaign) ? 'value="'.$utm_campaign.'"'  : '' ?>>
 
                                     <section class="data-input">
                                         <div class="form-group">

@@ -236,6 +236,7 @@ footer a {
 }
 .header-right .reservation {
 	display: inline-flex;
+	align-items: center;
 }
 .content-top {
 	margin-top: 15px;

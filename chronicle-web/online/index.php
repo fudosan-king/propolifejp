@@ -39,15 +39,15 @@
         <header>
             <div class="container">
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5 header-left" align="center">
+                    <div class="col-1 d-none d-md-block"></div>
+                    <div class="col-6 col-md-5 header-left" align="center">
                         <a href="index.php" class="logo">
                             <img src="./assets/images/1x/logo.png" alt="" class="img-fluid" width="270">
                         </a>
                     </div>
-                    <div class="col-5 header-right" align="center">
+                    <div class="col-6 col-md-5 header-right" align="center">
                         <span class="reservation">
-                        <img src="./assets/images/1x/online-sales.svg" alt="" class="img-fluid" width="57"><h1 class="text-center">オンライン相談予約</h1>
+                        <img src="./assets/images/1x/online-sales.svg" alt="" class="img-fluid" width="57"><h1 class="text-center ml-2">オンライン相談予約</h1>
                         </span>
                     </div>
                 </div>

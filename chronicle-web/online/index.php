@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-6 col-md-5 header-right" align="center">
                         <span class="reservation">
-                        <img src="./assets/images/1x/online-sales.svg" alt="" class="img-fluid" width="57"><h1 class="text-center ml-2">オンライン相談予約</h1>
+                        <h1 class="text-center ml-2">オンライン相談予約</h1>
                         </span>
                     </div>
                 </div>
@@ -59,12 +59,9 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="box_intro">
-                                <div class="col-12 col-md-9 content-top" align="left">
+                                <div class="col-12 col-md-12 content-top" align="left">
                                     クロニクルでは、ご自宅でもオンラインでスタッフにご相談いただけます。
                                         <br>各種オンラインミーティングツール（zoom、calling、Google meet等）を使い、 スタッフと対話しながら、物件をご確認いただけます。
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <img src="./assets/images/1x/contact-online.png" alt="" class="img-fluid">
                                 </div>
                             </div>
 

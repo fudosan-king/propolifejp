@@ -169,10 +169,10 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <span><a href="http://nikuan-kotakino.com" target="_blank">株式会社小滝野</a></span>
                     </li>
                     <li>
-                        <a href="http://www.propolifehotels.com" target="_blank">
+                        <a href="https://www.prostyleryokan.com" target="_blank">
                         <img src="<?php bloginfo('template_directory'); ?>/common/img/com_link11.jpg" width="356" height="98" alt="株式会社プロスタイル旅館">
                         </a>
-                        <span><a href="http://www.propolifehotels.com" target="_blank">株式会社プロスタイル旅館</a></span>
+                        <span><a href="https://www.prostyleryokan.com" target="_blank">株式会社プロスタイル旅館</a></span>
                     </li>
                     <li>
                         <a href="https://www.oki-ig.com"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー"></a>
@@ -264,7 +264,7 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <li><span>煙台提案生活木業有限公司</span></li>
                         <li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
                         <li><a href="http://nikuan-kotakino.com" target="_blank">株式会社小滝野</a></li>
-			<li><a href="http://www.propolifehotels.com/" target="_blank">株式会社プロスタイル旅館</a></li>
+			<li><a href="https://www.prostyleryokan.com/" target="_blank">株式会社プロスタイル旅館</a></li>
                         <li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>
                     </ul>
                 </li>

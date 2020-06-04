@@ -52,12 +52,13 @@
             <section class="section_main">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="box_intro img d-flex justify-content-center">
+                        <div class="col-12 text-center">
+                            <div class="box_intro img">
                                 <img src="./assets/images/1x/PC-banner.png" class="img-fluid d-none d-md-block" alt="Responsive image">
                                 <img src="./assets/images/1x/SP-banner.png" class="img-fluid d-block d-md-none" alt="Responsive image">
                             </div>
-
+                        </div>
+                        <div class="col-12">
                             <div class="box_content">
                                 <form action="https://go.pardot.com/l/185822/2020-05-06/pxcq1j" method="POST" class="frm_online" autocomplete="off">
                                     <?php
@@ -65,9 +66,10 @@
                                         $email = '';
                                         $inquiry = isset($_GET['i']) ? $_GET['i'] : '';
 
-                                        $utm_source = isset($_GET['s']) ? 'suumo' : '';
-                                        $utm_medium = isset($_GET['m']) ? 'online_before_mail': '';
-                                        $utm_campaign = isset($_GET['c']) ? $_GET['c'] : '';
+                                        $utm_source = isset($_GET['utm_source']) ? $_GET['utm_source'] : '';
+                                        $utm_medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '';
+                                        $c = isset($_GET['c']) ? $_GET['c'] : '';
+                                        $utm_campaign = isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : $c;
 
                                         $payload = json_encode(array("unique_id" => $utm_campaign));
                                         $cURLConnection = curl_init('https://fudosan-king.jp/api/members');
@@ -80,7 +82,7 @@
                                         $signal = json_decode($apiResponse)->ok;
                                         if(isset($signal) && $signal){
                                             $info = json_decode($apiResponse)->member;
-                                             $name = isset($signal) && $signal ? $info->full_name : '';
+                                            $name = isset($signal) && $signal ? $info->full_name : '';
                                             $email = isset($signal) && $signal ? $info->email : '';
                                         }
                                     ?>
@@ -244,7 +246,8 @@
                                         </div>
                                     </section>
                                 </form>
-                                <p class="sub_des">※カメラ機能がついたパソコン、タブレット、スマートフォンのいずれかが必要です。
+                                <p class="sub_des">※各種オンラインミーティングツール(zoom、calling、Google meet)で対応いたします。
+                                    <br>※カメラ機能がついたパソコン、タブレット、スマートフォンのいずれかが必要です。
                                     <br>※お顔が映るのが苦手な方は音声のみで問題ございません。
                                     <br>※ご利用は無料ですが、別途通信料がかかります。データ通信料はお客さまのご負担となります。
                                     <br>従量課金制通信サービスや通信料に上限があるネット回線・プランを利用する場合はご注意ください。

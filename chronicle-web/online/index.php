@@ -84,9 +84,6 @@
                                             $email = isset($signal) && $signal ? $info->email : '';
                                         }
                                     ?>
-                                    <input type="hidden" name="utm_source" id="iutm_source" class="form-control" <?php echo !empty($utm_source) ? 'value="'.$utm_source.'"'  : '' ?>>
-                                    <input type="hidden" name="utm_medium" id="iutm_medium" class="form-control" <?php echo !empty($utm_medium) ? 'value="'.$utm_medium.'"'  : '' ?>>
-                                    <input type="hidden" name="utm_campaign" id="iutm_campaign" class="form-control" <?php echo !empty($utm_campaign) ? 'value="'.$utm_campaign.'"'  : '' ?>>
 
                                     <section class="data-input">
                                         <div class="form-group">

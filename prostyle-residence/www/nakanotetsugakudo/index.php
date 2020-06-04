@@ -161,6 +161,9 @@
 										WEB来場予約は<a class="link_sumotimo" href="/nakanotetsugakudo/contact/reservation/">こちら</a>から<br>
 									</p>
 	      						</div> -->
+	      						<div class="box_sumitomo" style="border: none">
+	      							<a href="https://my.matterport.com/show/?m=2wYcFGRfG4k" target="_blank"><img style="max-width: 100%" src="images/slide/matterportbanner.png"></a>
+	      						</div>
 	      						<div class="box_informations">
 	      							<div class="row justify-content-center">
 	      								<div class="col-12 col-sm-12 col-md-11">

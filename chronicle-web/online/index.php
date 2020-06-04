@@ -39,16 +39,11 @@
         <header>
             <div class="container">
                 <div class="row">
-                    <div class="col-1 d-none d-md-block"></div>
-                    <div class="col-6 col-md-5 header-left" align="center">
-                        <a href="index.php" class="logo">
-                            <img src="./assets/images/1x/logo.png" alt="" class="img-fluid" width="270">
+                    <div class="col-12 d-flex justify-content-center">
+                        <a href="/" class="logo">
+                            <img src="./assets/images/1x/logo.png" alt="" class="img-fluid d-none d-md-block" width="350">
+                            <img src="./assets/images/1x/logo.png" alt="" class="img-fluid d-block d-md-none" width="250">
                         </a>
-                    </div>
-                    <div class="col-6 col-md-5 header-right" align="center">
-                        <span class="reservation">
-                        <h1 class="text-center ml-2">オンライン相談予約</h1>
-                        </span>
                     </div>
                 </div>
             </div>
@@ -58,11 +53,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="box_intro">
-                                <div class="col-12 col-md-12 content-top" align="left">
-                                    クロニクルでは、ご自宅でもオンラインでスタッフにご相談いただけます。
-                                        <br>各種オンラインミーティングツール（zoom、calling、Google meet等）を使い、 スタッフと対話しながら、物件をご確認いただけます。
-                                </div>
+                            <div class="box_intro img d-flex justify-content-center">
+                                <img src="./assets/images/1x/PC-banner.png" class="img-fluid d-none d-md-block" alt="Responsive image">
+                                <img src="./assets/images/1x/SP-banner.png" class="img-fluid d-block d-md-none" alt="Responsive image">
                             </div>
 
                             <div class="box_content">

@@ -178,7 +178,7 @@
 
                                         <div class="form-group">
                                             <label>備考</label>
-                                            <textarea name="note" id="input" class="form-control" rows="3" required placeholder=""><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
+                                            <textarea name="note" id="input" class="form-control" rows="3" placeholder=""><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
                                             <div class="placeholder-custom placeholder-fix">ご質問やご要望などあればご記入下さい。オンライン相談時に回答いたします。</div>
                                         </div>
                                         <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>

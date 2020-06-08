@@ -491,7 +491,8 @@
 
         /** This filter is documented in wp-includes/post-template.php */
 
-        $get_the_content = get_the_content();
+        $get_the_content = preg_replace('/<div class="wp-block-uagb-table-of-contents.*?目次.*<\/div>/', '', get_the_content());
+
         if (preg_match_all( '/wp:block {"ref":\d+}/', $get_the_content, $matches )) {
             foreach ($matches[0] as $wp_block) {
                 $postId = filter_var($wp_block, FILTER_SANITIZE_NUMBER_INT);

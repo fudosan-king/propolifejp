@@ -37,6 +37,7 @@
 						<li><a href="modelroom.php">モデルルーム</a></li>
 						<li><a href="equipment.php">設備仕様</a></li>
 						<li><a href="plan.php">プラン</a></li>
+						<li><a href="price-list.pdf">プライスリスト</a></li>
 						<li><a href="map.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false">現地案内図</a></li>
 						<li><a href="outline.php">物件概要</a></li>
 					</ul>

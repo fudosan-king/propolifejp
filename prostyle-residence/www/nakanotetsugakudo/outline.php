@@ -67,6 +67,7 @@
 				                <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
 				                <li class="nav-item"><a class="nav-link" href="access.php">Access</a></li>
 				                <li class="nav-item"><a class="nav-link" href="plan.php">Plan</a></li>
+				                <li class="nav-item"><a class="nav-link" href="price-list.pdf">Pricelist <span>NEW</span></a></li>
 				                <li class="nav-item"><a class="nav-link" href="modelroom.php">Modelroom</a></li>
 				                <li class="nav-item"><a class="nav-link" href="equipment.php">Equipment</a></li>
 				                <li class="nav-item d-block d-md-none"><a class="nav-link" href="outline.php">Outline</a></li>
@@ -195,7 +196,7 @@
 					      		<table class="table table-bordered table_outline">
 					      			<tr>
 					      				<th>販売戸数</th>
-					      				<td>5戸</td>
+					      				<td>6戸</td>
 					      			</tr>
 					      			<tr>
 					      				<th>販売価格</th>
@@ -207,11 +208,11 @@
 					      			</tr>
 					      			<tr>
 					      				<th>住戸専有面積</th>
-					      				<td>52.91㎡〜63.88㎡</td>
+					      				<td>52.91㎡〜64.07㎡</td>
 					      			</tr>
 					      			<tr>
 					      				<th>バルコニー面積</th>
-					      				<td>3.75㎡〜6.45㎡</td>
+					      				<td>3.75㎡〜6.39㎡</td>
 					      			</tr>
 					      			<tr>
 					      				<th>室外機置場面積</th>
@@ -219,19 +220,19 @@
 					      			</tr>
 					      			<tr>
 					      				<th>管理費（月額）</th>
-					      				<td>19,385円〜22,715円　※インターネット・TV使用料含む</td>
+					      				<td>19,385円〜22,765円　※インターネット・TV使用料含む</td>
 					      			</tr>
 					      			<tr>
 					      				<th>修繕積立金（月額）</th>
-					      				<td>4,230円〜5,110円</td>
+					      				<td>4,230円〜5,130円</td>
 					      			</tr>
 					      			<tr>
 					      				<th>管理準備金（引渡時一括）</th>
-					      				<td>18,835円〜22,165円</td>
+					      				<td>18,835円〜22,215円</td>
 					      			</tr>
 					      			<tr>
 					      				<th>修繕積立基金（引渡時一括）</th>
-					      				<td>283,410円〜342,370円</td>
+					      				<td>283,410円〜343,710円</td>
 					      			</tr>
 					      			<tr>
 					      				<th>備考</th>

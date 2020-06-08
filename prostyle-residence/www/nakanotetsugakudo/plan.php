@@ -63,6 +63,7 @@
 			                <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
 			                <li class="nav-item"><a class="nav-link" href="access.php">Access</a></li>
 			                <li class="nav-item active"><a class="nav-link" href="plan.php">Plan</a></li>
+			                <li class="nav-item"><a class="nav-link" href="price-list.pdf">Pricelist <span>NEW</span></a></li>
 			                <li class="nav-item"><a class="nav-link" href="modelroom.php">Modelroom</a></li>
 			                <li class="nav-item"><a class="nav-link" href="equipment.php">Equipment</a></li>
 				            <li class="nav-item d-block d-md-none"><a class="nav-link" href="outline.php">Outline</a></li>
@@ -118,6 +119,38 @@
 		      							<p class="subtitle">※Bg、Btype［2・3F］は2LDK＋S</p>
 
 		      							<div class="row">
+
+		      								<div class="col-12 col-md-6">
+		      									<div class="roomplan_item">
+		      										<div class="roomplan_item_top">
+			      										<div class="row no-gutters">
+			      											<div class="col-5">
+			      												<h1><img src="images/1x/a_type.png" alt="" class="img-fluid"></h1>
+			      											</div>
+			      											<div class="col-7">
+			      												<div class="roomplan_item_info">
+				      												<h3>3LDK <span>+WIC+SIC</span></h3>
+				      												<p>住戸専有面積/</p>
+				      												<h2>64.<span class="uint">07㎡</span> <span class="approximately">（約19.38坪）</span></h2>
+				      												<p>バルコニー面積/ 6.39㎡（約1.93坪）</p>
+				      												<p>室外機置場面積/ 2.25㎡（約0.68坪）</p>
+			      												</div>
+			      											</div>
+			      										</div>
+		      										</div>
+		      										<div class="w_btn d-flex">
+			      										<div class="btn_sm_black">ワイドスパン</div>
+			      										<div class="btn_sm_black">大型ウォークインクローゼット</div>
+		      										</div>
+		      										<div class="roomplan_item_img">
+		      											<img src="images/1x/roomplan01.png" alt="" class="img-fluid">
+		      										</div>
+		      										<div class="roomplan_item_footer">
+		      											<a href="plan_detail_ag.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
+		      										</div>
+		      									</div>
+		      								</div>
+
 		      								<div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
@@ -270,7 +303,7 @@
 		      									</div>
 		      								</div>
 
-		      								<div class="col-12 col-md-6">
+		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
@@ -299,7 +332,7 @@
 		      											<a href="plan_detail_j.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
-		      								</div>
+		      								</div> -->
 
 		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">

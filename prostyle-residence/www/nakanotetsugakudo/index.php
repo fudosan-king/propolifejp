@@ -65,6 +65,7 @@
 			                <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
 			                <li class="nav-item"><a class="nav-link" href="access.php">Access</a></li>
 			                <li class="nav-item"><a class="nav-link" href="plan.php">Plan</a></li>
+			                <li class="nav-item"><a class="nav-link" href="price-list.pdf">Pricelist <span>NEW</span></a></li>
 			                <li class="nav-item"><a class="nav-link" href="modelroom.php">Modelroom</a></li>
 			                <li class="nav-item"><a class="nav-link" href="equipment.php">Equipment</a></li>
 			                <li class="nav-item d-block d-md-none"><a class="nav-link" href="outline.php">Outline</a></li>
@@ -161,9 +162,33 @@
 										WEB来場予約は<a class="link_sumotimo" href="/nakanotetsugakudo/contact/reservation/">こちら</a>から<br>
 									</p>
 	      						</div> -->
-	      						<div class="box_sumitomo" style="border: none">
-	      							<a href="https://my.matterport.com/show/?m=2wYcFGRfG4k" target="_blank"><img style="max-width: 100%" src="images/slide/matterportbanner.png"></a>
+
+	      						<img src="images/1x/banner.png" class="img-fluid w-100 mt-md-5 mt-0">
+
+	      						<div class="box_video">
+	      							<h3 class="text-center mt-3 mt-md-5">フルスクリーンでご覧ください。</h3>
+	      							<div class="row">
+	      								<div class="col-12 col-md-4">
+	      									<div class="embed-responsive embed-responsive-16by9">
+											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=2wYcFGRfG4k"></iframe>
+											</div>
+											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_f.php" class="btn btn_video">>>Fタイプ間取りはこちら </a>
+	      								</div>
+	      								<div class="col-12 col-md-4">
+	      									<div class="embed-responsive embed-responsive-16by9">
+											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=Ey9RHKzJqGy"></iframe>
+											</div>
+											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_b.php" class="btn btn_video">>>Bタイプ間取りはこちら </a>
+	      								</div>
+	      								<div class="col-12 col-md-4">
+	      									<div class="embed-responsive embed-responsive-16by9">
+											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=QcgwjcRxafu"></iframe>
+											</div>
+											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_i.php" class="btn btn_video">>>Iタイプ間取りはこちら </a>
+	      								</div>
+	      							</div>
 	      						</div>
+
 	      						<div class="box_informations">
 	      							<div class="row justify-content-center">
 	      								<div class="col-12 col-sm-12 col-md-11">
@@ -173,6 +198,38 @@
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.06.08</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>新機能として「3D映像」を追加いたしました。</p>
+			      											</div>
+			      										</div>
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.06.08</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>Ｊタイプ完売いたしました。</p>
+			      											</div>
+			      										</div>
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.06.08</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>価格表公開いたしました。</p>
+			      											</div>
+			      										</div>
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.06.08</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>Agタイプ公開いたしました。</p>
+			      											</div>
+			      										</div>
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.6.1</p>
@@ -327,6 +384,12 @@
 	      							<a class="topics_items" href="plan.php">
 		      							<img src="images/1x/plan.jpg" alt="" class="img-fluid">
 		      							<h4>Plan</h4>
+		      						</a>
+	      						</li>
+	      						<li>
+	      							<a class="topics_items" href="price-list.pdf">
+	      								<img src="images/1x/pricelist-image.jpg" alt="" class="img-fluid">
+		      							<h4>PriceList</h4>
 		      						</a>
 	      						</li>
 	      					</ul>

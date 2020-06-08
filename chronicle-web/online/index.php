@@ -64,15 +64,18 @@
                                     <?php
                                         $name = '';
                                         $email = '';
+                                        $estate_name = '';
                                         $inquiry = isset($_GET['i']) ? $_GET['i'] : '';
 
                                         $utm_source = isset($_GET['utm_source']) ? $_GET['utm_source'] : '';
                                         $utm_medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '';
                                         $c = isset($_GET['c']) ? $_GET['c'] : '';
                                         $utm_campaign = isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : $c;
+                                        $company_id = isset($_GET['id']) ? $_GET['id'] : '';
 
-                                        $payload = json_encode(array("unique_id" => $utm_campaign));
+                                        $payload = json_encode(array("unique_id" => $utm_campaign, "company_id" => $company_id));
                                         $cURLConnection = curl_init('https://fudosan-king.jp/api/members');
+                                        // $cURLConnection = curl_init('http://fdk.localhost:5000/api/members');
                                         curl_setopt($cURLConnection, CURLOPT_POSTFIELDS, $payload);
                                         curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
                                         curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
@@ -84,8 +87,11 @@
                                             $info = json_decode($apiResponse)->member;
                                             $name = isset($signal) && $signal ? $info->full_name : '';
                                             $email = isset($signal) && $signal ? $info->email : '';
+                                            $estate_name = isset($signal) && $signal ? $info->estate_name : '';
                                         }
                                     ?>
+
+                                    <input type="hidden" name="pd_estate_name" value="<?php echo $estate_name; ?>">
 
                                     <section class="data-input">
                                         <div class="form-group">

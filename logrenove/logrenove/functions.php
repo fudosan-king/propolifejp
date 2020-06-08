@@ -449,9 +449,9 @@
         function __construct($post_id, $size='full')
         {
             $this->size = $size;
-            $meta = wp_get_attachment_metadata($post_id, false )['image_meta'];
-            $this->title = $meta['title'];
-            $this->caption = $meta['caption'];
+            $meta = !empty(wp_get_attachment_metadata($post_id, false )['image_meta'])?wp_get_attachment_metadata($post_id, false )['image_meta']:array();
+            $this->title = !empty($meta['title'])?$meta['title']:'';
+            $this->caption = !empty($meta['caption'])?$meta['caption']:'';
             $this->alt = get_post_meta( $post_id, '_wp_attachment_image_alt', true );
             $this->url = wp_get_attachment_image_url( $post_id, $size, false );
         }
@@ -471,5 +471,42 @@
         }
         return $content_type;
     }, 10, 2 );
+
+    // Feed customize
+    remove_action ('do_feed_rss2','do_feed_rss2',10,1);
+    add_action( 'do_feed_rss2', 'do_feed_rss2_customize', 10, 1 );
+
+    function do_feed_rss2_customize( $for_comments ) {
+        if ( $for_comments ) {
+            load_template( ABSPATH . WPINC . '/feed-rss2-comments.php' );
+        } else {
+            get_template_part('feed-rss2');
+        }
+    }
+
+    function get_the_content_feed_customize( $feed_type = null ) {
+        if ( ! $feed_type ) {
+            $feed_type = get_default_feed();
+        }
+
+        /** This filter is documented in wp-includes/post-template.php */
+
+        $get_the_content = get_the_content();
+        if (preg_match_all( '/wp:block {"ref":\d+}/', $get_the_content, $matches )) {
+            foreach ($matches[0] as $wp_block) {
+                $postId = filter_var($wp_block, FILTER_SANITIZE_NUMBER_INT);
+                $postTitle = strtolower(get_post($postId)->post_title);
+                if(preg_match( '/internal.*?/', $postTitle))
+                {
+                    $get_the_content = str_replace('<!-- wp:block {"ref":'.$postId.'} /-->', '', $get_the_content );
+                }
+            }
+        }
+
+        $content = apply_filters( 'the_content', $get_the_content );
+        $content = str_replace( ']]>', ']]&gt;', $content );
+
+        return apply_filters( 'the_content_feed', $content, $feed_type );
+    }
 
 ?>

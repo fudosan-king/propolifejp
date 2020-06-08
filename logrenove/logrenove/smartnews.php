@@ -128,7 +128,7 @@ do_action( 'rss_tag_pre', 'rss2' );
     <description><![CDATA[<?php echo the_excerpt_rss(); ?>]]></description>
     <?php endif; ?>
     <?php
-    $content = get_the_content_feed('rss2');
+    $content = get_the_content_feed_customize('rss2');
     //aリンクは含めない。SmartNewsの仕様？リンクが多くあると以下のエラーが出る
     //item.content:encoded の記事内に多くのリンクが含まれています - item.title: 記事のタイトル
     //https://publishers.smartnews.com/ja/smartformat/specification_rss/

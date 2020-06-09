@@ -170,19 +170,19 @@
 	      							<div class="row">
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
-											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=2wYcFGRfG4k"></iframe>
+											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=2wYcFGRfG4k" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_f.php" class="btn btn_video">>>Fタイプ間取りはこちら </a>
 	      								</div>
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
-											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=Ey9RHKzJqGy"></iframe>
+											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=Ey9RHKzJqGy" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_b.php" class="btn btn_video">>>Bタイプ間取りはこちら </a>
 	      								</div>
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
-											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=QcgwjcRxafu"></iframe>
+											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=QcgwjcRxafu" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_i.php" class="btn btn_video">>>Iタイプ間取りはこちら </a>
 	      								</div>

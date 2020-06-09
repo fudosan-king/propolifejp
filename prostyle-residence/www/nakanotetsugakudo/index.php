@@ -65,7 +65,7 @@
 			                <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
 			                <li class="nav-item"><a class="nav-link" href="access.php">Access</a></li>
 			                <li class="nav-item"><a class="nav-link" href="plan.php">Plan</a></li>
-			                <li class="nav-item"><a class="nav-link" href="price-list.pdf">Pricelist <span>NEW</span></a></li>
+			                <li class="nav-item"><a class="nav-link" href="pricelist.php">Pricelist <span>NEW</span></a></li>
 			                <li class="nav-item"><a class="nav-link" href="modelroom.php">Modelroom</a></li>
 			                <li class="nav-item"><a class="nav-link" href="equipment.php">Equipment</a></li>
 			                <li class="nav-item d-block d-md-none"><a class="nav-link" href="outline.php">Outline</a></li>
@@ -387,7 +387,7 @@
 		      						</a>
 	      						</li>
 	      						<li>
-	      							<a class="topics_items" href="price-list.pdf">
+	      							<a class="topics_items" href="pricelist.php">
 	      								<img src="images/1x/pricelist-image.jpg" alt="" class="img-fluid">
 		      							<h4>PriceList</h4>
 		      						</a>

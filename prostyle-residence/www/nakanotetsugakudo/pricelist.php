@@ -76,19 +76,76 @@
 				    </div>
 			    </div>
 
-	      		<section class="section_merit">
+	      		<div class="main_outline">
 	      			<div class="container">
 	      				<div class="row">
-	      					<div class="col-12 text-center">
-	      						<img src="images/1x/merit.jpg" alt="" class="img-fluid mb-md-5 mb-2">
-	      						<img src="images/1x/group_enterprise.png" alt="" class="img-fluid mt-md-5 mt-2">
+	      					<div class="col-12">
+	      						<h2 class="headline">PRICE LIST</h2>
+								<section class="mt-4 mb-5 pt-3 pb-5">
+									<img src="images/1x/pricelist.png" class="img-fluid" alt="Responsive image">	
+								</section>
 	      					</div>
 	      				</div>
 	      			</div>
 
 
+	      		</div>
+	      		<section class="section_topics">
+	      			<div class="container">
+	      				<div class="row no-gutters">
+	      					<div class="col-12 d-block d-sm-none">
+	      						<h5>Menu</h5>
+	      					</div>
+	      					<ul class="list_topics">
+	      						<li>
+	      							<a class="topics_items" href="design.php">
+		      							<img src="images/1x/design.jpg" alt="" class="img-fluid">
+		      							<h4>Design</h4>
+		      						</a>
+	      						</li>
+	      						<li>
+	      							<a class="topics_items" href="location.php">
+			      						<img src="images/1x/location.jpg" alt="" class="img-fluid">
+			      						<h4>Location</h4>
+			      					</a>
+			      				</li>
+	      						<li>
+	      							<a class="topics_items" href="access.php">
+		      							<img src="images/1x/access.jpg" alt="" class="img-fluid">
+		      							<h4>Access</h4>
+		      						</a>
+	      						</li>
+	      						<li>
+	      							<a class="topics_items" href="modelroom.php">
+		      							<img src="images/1x/modelroom.jpg" alt="" class="img-fluid">
+		      							<h4>Modelroom</h4>
+		      						</a>
+	      						</li>
+	      						<li>
+	      							<a class="topics_items" href="equipment.php">
+		      							<img src="images/1x/equipment.jpg" alt="" class="img-fluid">
+		      							<h4>Equipment</h4>
+		      						</a>
+	      						</li>
+	      						<li>
+	      							<a class="topics_items" href="plan.php">
+		      							<img src="images/1x/plan.jpg" alt="" class="img-fluid">
+		      							<h4>Plan</h4>
+		      						</a>
+	      						</li>
+	      						<li>
+	      							<a class="topics_items" href="pricelist.php">
+	      								<img src="images/1x/pricelist-image.jpg" alt="" class="img-fluid">
+		      							<h4>PriceList</h4>
+		      						</a>
+	      						</li>
+	      					</ul>
+	      					<div class="col-12 d-block d-sm-none">
+	      						<p class="text_sub"><small>※掲載の完成予想図は、図面を基に描き起こした物で、実際とは異なります。周辺建物、施設等は省略しております。なお、植栽は特定の季節の状況を示すものではありません。又、植栽の樹種、大きさについては未確定となっており、竣工時には完成予想図程度には成長しておりません。</small></p>
+	      					</div>
+	      				</div>
+	      			</div>
 	      		</section>
-
 	      	</main>
 
 	      	<?php require 'footer.php'; ?>

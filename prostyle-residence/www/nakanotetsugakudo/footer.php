@@ -30,7 +30,7 @@
 										ご希望の方</p>
 									</div>
 								</div>
-								<a href="merit.php" class="btn btn_clickHere mt-3">>> 詳細はコチラ</a>
+								<a href="sumikae.php" class="btn btn_clickHere mt-3">>> 詳細はコチラ</a>
 							</div>
 						</div>
 						<div class="col-12 col-sm-6 align-self-center">
@@ -60,7 +60,7 @@
 						<li><a href="modelroom.php">モデルルーム</a></li>
 						<li><a href="equipment.php">設備仕様</a></li>
 						<li><a href="plan.php">プラン</a></li>
-						<li><a href="price-list.pdf">プライスリスト</a></li>
+						<li><a href="pricelist.php">プライスリスト</a></li>
 						<li><a href="map.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false">現地案内図</a></li>
 						<li><a href="outline.php">物件概要</a></li>
 					</ul>

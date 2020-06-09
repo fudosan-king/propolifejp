@@ -687,15 +687,15 @@ footer h5 {
   font-weight: normal;
 }
 .box_changelife {
-  background: #fff;
-  padding: 20px 30px;
-  margin: 20px auto 35px;
-  width: 60%;
+  padding: 10px 10px;
+  margin: 15px auto 35px;
+  width: 72%;
 }
 .box_changelife p {
   font-size: 26px;
+  line-height: 1.3em;
   font-family: "a-otf-futo-min-a101-pr6n";
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-align: center;
 }
 .btn_clickHere {
@@ -703,18 +703,31 @@ footer h5 {
   color: #fff;
   display: block;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 10px;
   font-family: "a-otf-futo-min-a101-pr6n";
   line-height: 1em;
-  letter-spacing: 0.2em;
   padding: 10px;
 }
 .btn_clickHere:hover {
   background: #b21e23;
   color: #fff;
 }
-
+.box_changelife_body {
+  background: #fff;
+  padding: 10px;
+  text-align: left;
+  min-height: 153px;
+}
+.img_intro_thecharm {
+  height: 80px;
+  width: 100%;
+}
+.img_intro_thecharm img {
+  height: 80px;
+  width: 100%;
+  object-fit: cover;
+}
 ul.menu_footer {
   padding: 0;
   margin: 0 0 36px;
@@ -2304,8 +2317,6 @@ ul.list_topics {
 ul.list_topics li:nth-child(5) {
   margin-bottom: 5px;
 }
-
-
 .btn_video {
   background: #b21e23;
   color: #fff;
@@ -2316,6 +2327,9 @@ ul.list_topics li:nth-child(5) {
 .btn_video:hover {
   color: #fff;
   background: #8a0d11;
+}
+.section_merit {
+  padding: 120px 0 70px;
 }
 
 @media (max-width: 768px) {
@@ -2335,6 +2349,13 @@ ul.list_topics li:nth-child(5) {
 
   .btn_video {
     margin-bottom: 30px;
+  }
+  .box_changelife_body {
+    margin-bottom: 15px;
+    min-height: auto;
+  }
+  .section_merit {
+    padding-top: 0;
   }
 }
 

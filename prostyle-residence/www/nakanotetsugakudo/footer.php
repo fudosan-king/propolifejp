@@ -19,12 +19,35 @@
 			<div class="col-12">
 				<div class="box_changelife">
 					<div class="row">
-						<div class="col-5 col-sm-5 align-self-center">
-							<a href="sumikae.php"><img src="images/1x/logo_footer.svg" alt="" class="img-fluid" width="200"></a>
+						<div class="col-12 col-sm-6 align-self-center">
+							<div class="box_changelife_body">
+								<div class="row no-gutters">
+									<div class="col-6 col-md-7 align-self-center">
+										<a href="sumikae.php"><img src="images/1x/logo_footer.svg" alt="" class="img-fluid" width="185"></a>
+									</div>
+									<div class="col-6 col-md-5 align-self-center">
+										<p>住み替えを<br>
+										ご希望の方</p>
+									</div>
+								</div>
+								<a href="merit.php" class="btn btn_clickHere mt-3">>> 詳細はコチラ</a>
+							</div>
 						</div>
-						<div class="col-7 col-sm-7 align-self-center">
-							<p>住み替えをご希望の方</p>
-							<a href="sumikae.php" class="btn btn_clickHere">>> 詳細はコチラ</a>
+						<div class="col-12 col-sm-6 align-self-center">
+							<div class="box_changelife_body">
+								<div class="row no-gutters">
+									<div class="col-6 col-md-5 align-self-center">
+										<div class="img_intro_thecharm">
+											<img src="images/1x/intro_thecharm.jpg" alt="" class="img-fluid rounded">
+										</div>
+									</div>
+									<div class="col-6 col-md-7 align-self-center">
+										<p class="pl-3">完成済み物件の<br>
+										魅力をご紹介</p>
+									</div>
+								</div>
+								<a href="merit.php" class="btn btn_clickHere">>> 詳細はコチラ</a>
+							</div>
 						</div>
 					</div>
 				</div>

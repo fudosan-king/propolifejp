@@ -81,7 +81,7 @@
 	      				<div class="row">
 	      					<div class="col-12">
 	      						<h2 class="headline">PRICE LIST</h2>
-								<section class="mt-4 mb-5 pt-3 pb-5">
+								<section class="pricelist-img mt-4 mb-5 pt-3 pb-5">
 									<img src="images/1x/pricelist.png" class="img-fluid" alt="Responsive image">	
 								</section>
 	      					</div>

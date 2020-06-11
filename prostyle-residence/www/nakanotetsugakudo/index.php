@@ -92,11 +92,17 @@
 				    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP_slide02.jpg">
 				  	</div>
 				  	<div class="carousel-cell">
-				    	<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC_slide03.jpg">
-				    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP_slide03.jpg">
+				    	<img class="carousel-cell-image" src="images/slide/PC_slide03.jpg">
+				    	<h1>棟内モデルルームオープン</h1>
 				  	</div>
 				</div>
 				<!-- End baner is slide -->
+
+				<div class="banner_gallery">
+					<a href="gallery.php"><img class="banner_gallery_pc" src="images/slide/gallery-banner_PC.png"></a>
+			    	<a href="gallery.php"><img class="banner_gallery_sp" src="images/slide/gallery-banner_SP.png"></a>
+				</div>
+				
 			</div>
 			<div class="text_top_baner" align="center">
 				<!-- <span class="text-line-up">モデルルーム住戸</span><br>
@@ -104,6 +110,9 @@
 				<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC-bar.png">
 		    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP-bar.png">
 			</div>
+
+			
+
 			<div class="w_topbanner_footer">
 				<div class="container-fluid">
 					<div class="row">

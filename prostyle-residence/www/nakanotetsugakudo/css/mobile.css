@@ -27,7 +27,9 @@
 		height: 798px;
 	}
 }
-
+@media (max-width: 1112px) {
+	
+}
 @media (max-width: 1024px) {
 	.section_infomations .container, .w_topbanner_footer .container {
 		min-width: 100%;
@@ -57,6 +59,9 @@
 	.box_sumitomo .content .text-up {
 		font-size: 30px;
 	}
+	
+	
+	
 
 }
 @media (max-width: 823px) {
@@ -304,12 +309,7 @@
 		position: relative;
 	}
 	.text_entrace {
-		position: absolute;
-		right: 10px;
-		bottom: 5px;
-		margin-bottom: 0;
-		color: #fff;
-		font-size: 8px;
+		margin-bottom: 15px;
 	}
 	.line_break {
 		display: block;
@@ -318,19 +318,14 @@
 		margin-bottom: 26px;
 	}
 	.w_img, .w_img img {
-		height: 190px;
+		height: 200px;
 	}
-	.w_img img {
-		object-fit: fill;
-	}
+	
 	.w_img_landmarks, .w_img_landmarks img {
 		height: 259px;
 	}
 	.w_architecture_img, .w_architecture_img img {
 		height: 240px;
-	}
-	.w_img_fullheight {
-		margin-bottom: 24px;
 	}
 	.headline {
 		margin-top: 40px;

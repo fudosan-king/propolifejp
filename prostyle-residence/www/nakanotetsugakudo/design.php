@@ -85,7 +85,7 @@
 				      			<h3 class="subheadline">華やかな桜と瑞々しい緑。<span class="line_break">パークサイドの美しい邸宅。</span></h3>
 				      			<p class="des">眼前に桜並木と哲学堂公園の緑が広がり、堂々たる姿を、<br>
 				      			樹々の色彩が鮮やかに飾る、美しい邸宅。</p>
-				      			<div class="w_img_fullheight">
+				      			<div class="w_img_fullheight mb-5">
 				      				<img src="images/1x/w105_0426.jpg" alt="" class="img-fluid">
 				      				<span>外観完成予想CG</span>
 				      			</div>

@@ -207,6 +207,15 @@
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
+			      										
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.06.11</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>竣工ギャラリーを公開しました。</p>
+			      											</div>
+			      										</div>
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.06.08</p>

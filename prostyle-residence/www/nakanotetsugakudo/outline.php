@@ -274,7 +274,7 @@
 					      			</tr>
 					      		</table>
 
-					      		<p class="mb-5 text-center">更新日<span>（6月1日）</span>・更新予定日<span>（6月15日）</span></p>
+					      		<p class="mb-5 text-center">更新日<span>（6月10日）</span>・更新予定日<span>（6月25日）</span></p>
 
 	      					</div>
 	      				</div>

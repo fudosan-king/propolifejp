@@ -147,6 +147,25 @@ main section.content-page dl.company dt:first-child + dd {
     border-top: none;
 }
 
+main section.content-page article.company-info {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+/*main section.content-page article.company-info > .row {padding: 15px 20px;}*/
+main section.content-page article.company-info .left,
+main section.content-page article.company-info .right {border-top: 1px solid #D6D6D6; padding: 15px;}
+main section.content-page article.company-info .right > .row {padding: 7px 5px;}
+main section.content-page article.company-info .right > .row .col {padding: 7px 5px;}
+main section.content-page article.company-info .year-group {color: #AB7D4C; font-weight: bold; font-size: 2.0rem; line-height: 1.5; margin-bottom: 0;}
+main section.content-page article.company-info .now-group{
+    background: url('../images/1x/div.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35px;
+    margin: 25px auto;
+}
+
 .section_news .block_news p time { margin-right: 20px; }
 
 .section_news .ad-banner-gooddesign {text-align: center; margin: 30px 0 20px;}
@@ -1722,9 +1741,11 @@ footer {
     main section.result-list-page li {margin-bottom: 20px;}
 
 
-    
+    main section.content-page article.company-info > .row {padding: 0 15px;}
+    main section.content-page article.company-info .left,
+    main section.content-page article.company-info .right {padding: 0;}
+    main section.content-page article.company-info .right {border-top: none;}
+    main section.content-page article.company-info .right > .row {padding: 0 10px;}
+    main section.content-page article.company-info .right > .row .col {padding: 5px;}
     
 }
-
-
-

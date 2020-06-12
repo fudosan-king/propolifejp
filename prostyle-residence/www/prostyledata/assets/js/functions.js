@@ -212,5 +212,5 @@ $(function() {
 
         });
     }
-    console.log(isMobile);
+    // console.log(isMobile);
 });

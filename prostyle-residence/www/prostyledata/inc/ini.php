@@ -15,6 +15,9 @@ define ("SGVINK_VAR_URI", get_template_directory_uri().'/var');
 define ("SGVINK_VAR_IMAGES_URI", SGVINK_VAR_URI.'/images');
 define ("SGVINK_VAR_VIDEOS_URI", SGVINK_VAR_URI.'/videos');
 
+define ("SGVINK_SUMIKAE", SGVINK_ASSETS_URI.'/sumikae');
+define ("SGVINK_SUMIKAE_STYLESHEET_URI", SGVINK_SUMIKAE.'/css');
+
 class SGVinK
 {
 	
@@ -43,6 +46,14 @@ class SGVinK
 	}
 	public static function get_css_uri(){
 		return SGVINK_STYLESHEET_URI."/";
+	}
+
+	// Stylesheet Sumikae URI
+	public static function the_sumikae_css_uri(){
+		echo SGVINK_SUMIKAE_STYLESHEET_URI;
+	}
+	public static function get_sumikae_css_uri(){
+		return SGVINK_SUMIKAE_STYLESHEET_URI."/";
 	}
 
 	// Scritps URI

@@ -40,6 +40,14 @@ if(is_page( 'contact' ) || is_page( 'contact-purchase' ) || is_page( 'sell' )):
 	<?php
 endif;
 
+if(is_page( 'sumikae' )):
+	?>
+		<link rel="stylesheet" href="<?php SGVinK::the_sumikae_css_uri(); ?>/local.css" type="text/css">
+		<link rel="stylesheet" href="<?php SGVinK::the_sumikae_css_uri(); ?>/style.css" type="text/css">
+    	
+	<?php
+endif;
+
 if(is_page('gooddesign')):
 	?>
 	<script>

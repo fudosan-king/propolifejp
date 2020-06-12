@@ -4,12 +4,14 @@
 	<footer id="footer">
 
         <div class="social-banner">
-            <div class="container">
+            <div class="container box_changelife">
                 <div class="row">
-                    <div class="col-12 col-md-10 mx-auto">
-                         <a href="https://www.facebook.com/prostyleresidence/" target="_blank"> 
-                            <img src="<?php SGVinK::the_images_uri(); ?>/1x/banner_fb.jpg" alt="" class="img-fluid">
-                        </a>
+                    <div class="col-5 col-sm-5 align-self-center">
+                        <a href="/sumikae/"><img src="<?php SGVinK::the_images_uri(); ?>/1x/logo_footer_sumikae.svg" alt="" class="img-fluid" width="200"></a>
+                    </div>
+                    <div class="col-7 col-sm-7 align-self-center">
+                        <p>住み替えをご希望の方</p>
+                        <a href="/sumikae/" class="btn btn_clickHere">&gt;&gt; 詳細はコチラ</a>
                     </div>
                 </div>
             </div>
@@ -21,16 +23,16 @@
 			<div class="container">
 				<div class="footer_sns d-none d-md-block">
 					<div class="row">
-						<div class="col-12 col-md-9 mx-auto">
+						<div class="col-12 col-md-12 col-lg-9 mx-auto">
 							<div class="row text-center">
-								<div class="col-md-3 align-self-center">
+								<div class="col-md-4 align-self-center">
 									<a href="https://www.instagram.com/prostyle20170217/" target="_blank"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/i_instagram.png" alt=""> <span class="ml-1">公式Instagram</span></a>
 								</div>
-								<div class="col-md-3 align-self-center">
+								<div class="col-md-4 align-self-center">
 									<a href="http://line.me/R/ti/p/@vqs2771x" target="_blank"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/LINE_APP@2x.png" alt=""> <span class="ml-1">公式LINE</span></a>
 								</div>
-								<div class="col-md-6 align-self-center">
-									<p class="mb-0 text-left">新規物件情報や販売中物件のイベント情報など <br>随時公開中</p>
+								<div class="col-md-4 align-self-center">
+									<a href="https://www.facebook.com/prostyleresidence/" target="_blank"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/f_logo_RGB-Blue_58@2x.png" alt=""> <span class="ml-1">公式FACEBOOK</span></a>
 								</div>
 							</div>
 						</div>
@@ -39,14 +41,17 @@
 
 				<div class="footer_sns d-block d-md-none">
 					<div class="row">
-						<div class="col-7 align-self-center">
+						<div class="col-6 align-self-center">
 							<p class="mb-0 text-left">株式会社プロスタイル公式SNS</p>
 						</div>
 						<div class="col-2 align-self-center">
 							<a href="https://www.instagram.com/prostyle20170217/" target="_blank"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/i_instagram.png" alt=""></a>
 						</div>
-						<div class="col-3 align-self-center">
+						<div class="col-2 align-self-center">
 							<a href="http://line.me/R/ti/p/@vqs2771x" target="_blank"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/LINE_APP@2x.png" alt=""></a>
+						</div>
+						<div class="col-2 align-self-center">
+							<a href="https://www.facebook.com/prostyleresidence/" target="_blank"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/f_logo_RGB-Blue_58@2x.png" alt=""></a>
 						</div>
 					</div>
 				</div>

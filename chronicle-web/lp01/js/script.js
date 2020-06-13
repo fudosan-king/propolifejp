@@ -293,10 +293,10 @@ $(function() {
                     <div class="col-12 col-md-6">\
                         <div class="box_location_title"> \
                             <div class="row"> \
-                                <div class="col-8 col-md-8 align-self-center"> \
+                                <div class="col-10 col-md-9 align-self-center"> \
                                     <h3><a target="_blank" href="' + this.webURL + '">' + this.title + '</a></h3> \
                                 </div> \
-                                <div class="col-4 col-md-4 align-self-center"> \
+                                <div class="col-2 col-md-3 align-self-center"> \
                                     <a target="_blank" class="btnMap" href="' + this.webURL + '">Map </a> \
                                 </div> \
                             </div> \

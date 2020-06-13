@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box_consult_row">
+                        <div class="box_consult_row mb-3">
                             <div class="row">
                                 <div class="col-12 col-md-8 offset-md-4">
                                     <section id="showRoomInfo"></section>

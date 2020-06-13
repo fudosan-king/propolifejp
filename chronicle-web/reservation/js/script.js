@@ -55,7 +55,7 @@ $(function() {
                 'クロニクル<br>東京日本橋ショールーム',
                 '住所：東京都中央区八重洲1-5-17 \
                     <br> 八重洲香川ビルディング2F \
-                    <br> フリーコール：0120-602-423 \
+                    <br> フリーコール：0120-991-657 \
                     <br> 営業時間：10:00~19:00（火・水曜日定休 祝日を除く）',
                 'http://www.chronicle-web.com/showroom/tokyo_yaesu/',
                 'https://my.matterport.com/show/?m=VHEQdZ6QNAh',

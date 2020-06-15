@@ -512,4 +512,91 @@
         return apply_filters( 'the_content_feed', $content, $feed_type );
     }
 
+    // Get recommend posts from current post
+
+    function get_recommend_posts()
+    {
+        $articles_ids = get_recommend_articles_ids();
+
+        $args = array(
+            'post__in'    => $articles_ids,
+            // Type & Status Parameters
+            'post_type'   => 'post',
+            'post_status' => 'publish',
+            // Order & Orderby Parameters
+            'order'               => 'DESC',
+            'orderby'             => 'date',
+            'ignore_sticky_posts' => true,
+            // Pagination Parameters
+            'posts_per_page'         => -1,
+            // Permission Parameters -
+            'perm' => 'readable',
+            // Parameters relating to caching
+            'no_found_rows'          => false,
+            'cache_results'          => true,
+            'update_post_term_cache' => true,
+            'update_post_meta_cache' => true,
+        );
+        
+        $query = new WP_Query( $args );
+        
+        if($query->have_posts()) return $query;
+        else return false;
+    }
+
+    function get_recommend_articles_ids()
+    {
+        $articles_ids = [];
+        if(is_single())
+        {
+            $field = 'articles';
+            $post_id = get_queried_object_id();
+
+        }
+        elseif(is_home())
+        {
+            $field = 'home_recommend_articles';
+            $post_id = 'option';
+        }
+        else
+        {
+            $field = 'category_articles';
+            $post_id = get_queried_object();
+        }
+        for($i=1;$i<=5;$i++)
+        {
+            $articles = get_field($field.'_'.$i, $post_id);
+            $articles_url = !empty($articles['url'])?$articles['url']:'';
+            if(!empty($articles_url))
+            {
+                $articles_ids[] = intval(filter_var($articles_url, FILTER_SANITIZE_NUMBER_INT));
+            }
+        }
+        $count_articles_ids = is_array($articles_ids)?count($articles_ids):0;
+
+        $numberposts = 5-$count_articles_ids;
+
+        $recent_posts = get_recent_posts($numberposts, $articles_ids);
+
+        if($count_articles_ids<5)
+        {
+            $articles_ids = is_array($articles_ids)?array_merge(array_column($recent_posts, 'ID'), $articles_ids):array_column($recent_posts, 'ID');
+        }
+
+        return $articles_ids;
+    }
+
+    function get_recent_posts($numberposts=5, $exclude=array())
+    {
+        $exclude[] = get_queried_object_id();
+        $recent_args = array(
+            'numberposts' => $numberposts,
+            'post_status' => 'publish',
+            'exclude'     => $exclude
+        );
+
+        $recent_posts = wp_get_recent_posts( $recent_args, $output = 'ARRAY_A' );
+
+        return $recent_posts;
+    }
 ?>

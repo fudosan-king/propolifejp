@@ -516,32 +516,47 @@
 
     function get_recommend_posts()
     {
+        global $detect;
         $articles_ids = get_recommend_articles_ids();
+        $posts = array();
+        foreach ($articles_ids as $key => $articles_id) {
+            $obj = new stdClass();
+            $obj->permalink = get_permalink($articles_id);
+            $obj->title = get_the_title($articles_id);
+            $_size = $detect->isMobile() ? 'medium' : 'thumbnail' ;
+            $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
+            $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
+            $obj->firstCat = get_the_category($articles_id)[0]->name;
+            $posts[] = $obj;
+        }
 
-        $args = array(
-            'post__in'    => $articles_ids,
-            // Type & Status Parameters
-            'post_type'   => 'post',
-            'post_status' => 'publish',
-            // Order & Orderby Parameters
-            'order'               => 'DESC',
-            'orderby'             => 'date',
-            'ignore_sticky_posts' => true,
-            // Pagination Parameters
-            'posts_per_page'         => -1,
-            // Permission Parameters -
-            'perm' => 'readable',
-            // Parameters relating to caching
-            'no_found_rows'          => false,
-            'cache_results'          => true,
-            'update_post_term_cache' => true,
-            'update_post_meta_cache' => true,
-        );
-        
-        $query = new WP_Query( $args );
-        
-        if($query->have_posts()) return $query;
+        if(count($posts)) return $posts;
         else return false;
+
+        // $args = array(
+        //     'post__in'    => $articles_ids,
+        //     // Type & Status Parameters
+        //     'post_type'   => 'post',
+        //     'post_status' => 'publish',
+        //     // Order & Orderby Parameters
+        //     // 'order'               => 'DESC',
+        //     // 'orderby'             => 'date',
+        //     'ignore_sticky_posts' => true,
+        //     // Pagination Parameters
+        //     'posts_per_page'         => -1,
+        //     // Permission Parameters -
+        //     'perm' => 'readable',
+        //     // Parameters relating to caching
+        //     'no_found_rows'          => false,
+        //     'cache_results'          => true,
+        //     'update_post_term_cache' => true,
+        //     'update_post_meta_cache' => true,
+        // );
+        
+        // $query = new WP_Query( $args );
+        
+        // if($query->have_posts()) return $query;
+        // else return false;
     }
 
     function get_recommend_articles_ids()
@@ -580,9 +595,9 @@
 
         if($count_articles_ids<5)
         {
-            $articles_ids = is_array($articles_ids)?array_merge(array_column($recent_posts, 'ID'), $articles_ids):array_column($recent_posts, 'ID');
+            $articles_ids = is_array($articles_ids)?array_merge($articles_ids, array_column($recent_posts, 'ID')):array_column($recent_posts, 'ID');
         }
-
+        // var_dump($articles_ids);die;
         return $articles_ids;
     }
 

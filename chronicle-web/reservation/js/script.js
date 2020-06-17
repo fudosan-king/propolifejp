@@ -70,16 +70,16 @@ $(function() {
                 'https://www.chronicle-web.com/showroom/static/assets/pc/images/pic_kichijoji-omiya.jpg',
                 false
             ),
-        '埼玉大宮' : new SHOWROOM(
-                'クロニクル<br>埼玉大宮ショールーム',
-                '住所：埼玉県さいたま市大宮区桜木町 1-7-5 \
-                    <br> ソニックシティビル 16F \
-                    <br> フリーコール：0120-990-566 \
-                    <br> 営業時間：10:00~19:00（火・水曜日定休 祝日を除く）',
-                'http://www.chronicle-web.com/showroom/saitama_omiya/',
-                'https://www.chronicle-web.com/showroom/static/assets/pc/images/pic_kichijoji-omiya.jpg',
-                false
-            ),
+        // '埼玉大宮' : new SHOWROOM(
+        //         'クロニクル<br>埼玉大宮ショールーム',
+        //         '住所：埼玉県さいたま市大宮区桜木町 1-7-5 \
+        //             <br> ソニックシティビル 16F \
+        //             <br> フリーコール：0120-990-566 \
+        //             <br> 営業時間：10:00~19:00（火・水曜日定休 祝日を除く）',
+        //         'http://www.chronicle-web.com/showroom/saitama_omiya/',
+        //         'https://www.chronicle-web.com/showroom/static/assets/pc/images/pic_kichijoji-omiya.jpg',
+        //         false
+        //     ),
         '横浜西口' : new SHOWROOM(
                 'クロニクル<br>横浜⻄⼝ショールーム',
                 '住所：神奈川県横浜市神奈川区鶴屋町2-23-2 TSプラザビルディング4F \
@@ -96,41 +96,41 @@ $(function() {
                 'http://www.chronicle-web.com/showroom/nagoya_fushimi/',
                 'https://my.matterport.com/show/?model=StMUHsrBco9&brand=0',
             ),
-        '京都四条' : new SHOWROOM(
-                'クロニクル<br>京都四条ショールーム',
-                '住所：京都府京都市下京区四条通柳馬場西入立売中之町99 四条SETビル1F \
-                    <br> フリーコール：0120-917-697 \
-                    <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）',
-                'https://www.chronicle-web.com/showroom/kyoto/',
-                'https://my.matterport.com/show/?model=1pQPahYhq7p',
-            ),
-        '大阪梅田' : new SHOWROOM(
-                'クロニクル<br>大阪梅田ショールーム',
-                '住所：大阪府大阪市北区曽根崎2-12-7 \
-                    <br> 清和梅田ビル5F \
-                    <br> フリーコール：0120-957-953 \
-                    <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）',
-                'http://www.chronicle-web.com/showroom/osaka/',
-                'https://my.matterport.com/show/?model=utuVeEZ8giT',
-            ),
-        '神戸元町' : new SHOWROOM(
-                'クロニクル<br>神戸元町ショールーム',
-                '〒650-0024 \
-                    <br> 神戸市中央区海岸通3 シップ神戸海岸ビル1F \
-                    <br> フリーコール：0120-948-301 \
-                    <br> 営業時間: 10:00~19:00（火・水曜日定休 祝日を除く）',
-                'https://www.chronicle-web.com/showroom/kobe/',
-                'https://my.matterport.com/show/?m=iQfNoNcSASx&brand=0',
-            ),
-        '福岡天神' : new SHOWROOM(
-                'クロニクル<br>福岡天神ショールーム',
-                '住所：福岡県福岡市中央区天神2-4-11 \
-                    <br> パシフィーク天神2F \
-                    <br> フリーコール：0120-981-779 \
-                    <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）',
-                'https://www.chronicle-web.com/showroom/fukuoka_tenjin/',
-                'https://my.matterport.com/show/?m=PGFv4MSTTLw&brand=0',
-            ),
+        // '京都四条' : new SHOWROOM(
+        //         'クロニクル<br>京都四条ショールーム',
+        //         '住所：京都府京都市下京区四条通柳馬場西入立売中之町99 四条SETビル1F \
+        //             <br> フリーコール：0120-917-697 \
+        //             <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）',
+        //         'https://www.chronicle-web.com/showroom/kyoto/',
+        //         'https://my.matterport.com/show/?model=1pQPahYhq7p',
+        //     ),
+        // '大阪梅田' : new SHOWROOM(
+        //         'クロニクル<br>大阪梅田ショールーム',
+        //         '住所：大阪府大阪市北区曽根崎2-12-7 \
+        //             <br> 清和梅田ビル5F \
+        //             <br> フリーコール：0120-957-953 \
+        //             <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）',
+        //         'http://www.chronicle-web.com/showroom/osaka/',
+        //         'https://my.matterport.com/show/?model=utuVeEZ8giT',
+        //     ),
+        // '神戸元町' : new SHOWROOM(
+        //         'クロニクル<br>神戸元町ショールーム',
+        //         '〒650-0024 \
+        //             <br> 神戸市中央区海岸通3 シップ神戸海岸ビル1F \
+        //             <br> フリーコール：0120-948-301 \
+        //             <br> 営業時間: 10:00~19:00（火・水曜日定休 祝日を除く）',
+        //         'https://www.chronicle-web.com/showroom/kobe/',
+        //         'https://my.matterport.com/show/?m=iQfNoNcSASx&brand=0',
+        //     ),
+        // '福岡天神' : new SHOWROOM(
+        //         'クロニクル<br>福岡天神ショールーム',
+        //         '住所：福岡県福岡市中央区天神2-4-11 \
+        //             <br> パシフィーク天神2F \
+        //             <br> フリーコール：0120-981-779 \
+        //             <br> 営業時間：10:00~19:00 (火・水曜日定休 祝日を除く）',
+        //         'https://www.chronicle-web.com/showroom/fukuoka_tenjin/',
+        //         'https://my.matterport.com/show/?m=PGFv4MSTTLw&brand=0',
+        //     ),
     }
 
     $.each(LIST_SHOWROOM_INFO, function(label, el) {

@@ -18,8 +18,8 @@ $no_image_url = 'https://www.logrenove.jp/wp-content/themes/logrenove/assets/ima
 $tracking_id = 'Google AnalyticsのトラッキングID';
 $site_domain = 'logrenove.jp';
  
- 
-header( 'Content-Type: ' . feed_content_type( 'rss2' ), true );
+header( 'Content-Type: ' . feed_content_type( 'rss2' ) . '; charset=' . get_option( 'blog_charset' ), true );
+// header( 'Content-Type: ' . feed_content_type( 'rss2' ), true );
 $more = 1;
  
 echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>';
@@ -129,11 +129,14 @@ do_action( 'rss_tag_pre', 'rss2' );
     <?php endif; ?>
     <?php
     $content = get_the_content_feed_customize('rss2');
+    $img = wp_get_attachment_image_url( get_post_thumbnail_id(), $size = 'full', $icon = false ); //here
+    $imgHTML = '<img class="img-fluid" src="'.$img.'"'; //here
     //aリンクは含めない。SmartNewsの仕様？リンクが多くあると以下のエラーが出る
     //item.content:encoded の記事内に多くのリンクが含まれています - item.title: 記事のタイトル
     //https://publishers.smartnews.com/ja/smartformat/specification_rss/
     $content = preg_replace('{<a [^>]+?>}i', '', $content);
     $content = str_replace('</a>', '', $content);
+    $content = $imgHTML.$content; //here
      ?>
     <content:encoded><![CDATA[<?php echo $content; ?>]]></content:encoded>
  

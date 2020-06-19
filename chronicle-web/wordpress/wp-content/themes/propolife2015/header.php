@@ -256,7 +256,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="https://www.facebook.com/chronicle.web.official/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/icon-facebook.png" alt=""></a>
                 <a href="https://www.instagram.com/chronicle_web.official/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/icon-instagram.png" alt=""></a>
                 <a href="https://page.line.me/hci7480k" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/icon-line.png" alt=""></a>
-                <a href="https://www.pinterest.jp/chronicleofficial/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/images/icon-pinterest.png" alt=""></a>
+               <!--  <a href="https://www.pinterest.jp/chronicleofficial/" target="_blank"><img src="<?php //bloginfo('template_directory'); ?>/common/images/icon-pinterest.png" alt=""></a> -->
             </li>
         </ul>
     </div>

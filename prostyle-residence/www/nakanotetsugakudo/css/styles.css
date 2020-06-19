@@ -2364,6 +2364,12 @@ ul.list_topics li:nth-child(5) {
   display: none;
 }
 
+.banner_pricelist {
+  position: absolute;
+  right: 45px;
+  bottom: 32%;
+  z-index: 45;
+}
 
 @media (max-width: 1024px) {
   .banner_gallery {
@@ -2371,6 +2377,10 @@ ul.list_topics li:nth-child(5) {
   }
   .carousel_topbanner .carousel-cell h1 {
     font-size: 60px;
+  }
+
+  .banner_pricelist {
+    bottom: 42%;
   }
 }
 
@@ -2415,8 +2425,7 @@ ul.list_topics li:nth-child(5) {
     margin-top: -30px;
   }
   .banner_gallery {
-    right: 0;
-    left: 0;
+    right: 15px;
     bottom: 22%;
     margin: auto;
     width: 50%;
@@ -2430,5 +2439,12 @@ ul.list_topics li:nth-child(5) {
   .banner_gallery_sp {
     display: block;
   }
+
+  .banner_pricelist {
+    right: 15px;
+    width: 20%;
+    bottom: 35%;
+  }
+
 }
 

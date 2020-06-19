@@ -59,12 +59,7 @@ $(function($) {
       }
     });
 
-    $('.pricelist-img').mousedown(function(event) {
-      return false
-    });
-    $('.pricelist-img img').bind('contextmenu', function(e){
-        return false;
-    });
+
 
 });
 

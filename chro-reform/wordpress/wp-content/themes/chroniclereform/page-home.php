@@ -463,7 +463,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	高品質・低価格の住宅設備・建材を実際のお部屋にいるかのごとく見て、触れていただくことができます。<br>
 	ぜひ、お近くのショールームまでお気軽にご来場ください。</p>
 	<p>
-	<a href="https://www.chronicle-plus.com/showroom/" target="_blank"><img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/showroom/bnr-showroom.png" alt="Our Showroom 自然の温もりを「住まい」に">
+	<a href="https://www.chronicle-web.com/showroom/" target="_blank"><img class="imgMain" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/showroom/bnr-showroom.png" alt="Our Showroom 自然の温もりを「住まい」に">
 	<img class="imgSmp" src="https://www.chronicle-web.com/reform/wordpress/wp-content/themes/chroniclereform/commonfiles/img/top/showroom/bnr-showroom-smp.png" alt="Our Showroom 自然の温もりを「住まい」に"></a>
 	</p>
 	</section>

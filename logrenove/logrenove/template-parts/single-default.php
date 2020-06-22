@@ -4,6 +4,7 @@ if(have_posts()):
         $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
         $caption = wp_get_attachment_caption( get_post_thumbnail_id() );
     ?>
+
         <div class="box_article_detail">
             <h1 class="d-md-block"><?php the_title(); ?></h1>
             <div class="row">
@@ -40,7 +41,7 @@ if(have_posts()):
             </div>
             <div class="col-12">
                 <div class="row">
-                    <?php the_content(); ?>
+                    <?php the_content(); ?>                    
                 </div>
             </div>
             
@@ -60,10 +61,24 @@ if(have_posts()):
                     $tagsHTML .= '</p>';
                     echo $tagsHTML;
                  ?>
-                <ul class="list_shared">
-                    <li><div class="tw-share-button"><a class="twitter-share-button" href="<?php the_permalink(); ?>" data-size="large" data-lang="ja">Tweet</a></div></li>
-                    <li><div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div></li>
-                </ul>
+                 <div class="box_shared">
+                    <div class="row">
+                        <div class="col-12 col-md-6 align-self-center text-center">
+                            <p class="mb-0">この記事をシェアする</p>
+                            <ul class="list_shared mb-0 justify-content-center">
+                                <li><div class="tw-share-button"><a class="twitter-share-button" href="<?php the_permalink(); ?>" data-size="large" data-lang="ja">Tweet</a></div></li>
+                                <li><div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6 align-self-center text-center">
+                            <div class="box_follow mt-4 mt-md-0">
+                                <p class="mb-2">LogRenoveをフォローする</p>
+                                <a class="mr-4" target="_blank" href="<?php echo get_field('facebook_url', 'option')?>" class="mr-4"><img src="/wp-content/themes/logrenove/assets/images/i_face_book.png" alt="" class="img-fluid" width="60"></a>
+                                <a target="_blank" href="<?php echo get_field('twitter_url', 'option')?>"><img src="/wp-content/themes/logrenove/assets/images/i_twitter.png" alt="" class="img-fluid" width="60"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     <?php

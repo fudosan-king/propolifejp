@@ -13,7 +13,7 @@ global $temp_dir, $dir_name, $dir_category;
         <ul>
             <li<?php if($dir_name == 'home'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>">TOP</a></li>
             <li<?php if($dir_name == 'concept'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/concept/">メッセージ</a></li>
-            <li<?php if($dir_name == 'point'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/point/">企業を知る</a></li>
+            <!-- <li<?php // if($dir_name == 'point'): ?> class="current"<?php // endif; ?>><a href="<?php // echo home_url(); ?>/point/">企業を知る</a></li> -->
             <li<?php if($dir_name == 'job'): ?> class="current"<?php endif; ?>><a href="<?php echo home_url(); ?>/job/">プロポのお仕事</a></li>
             <li class="parent">
                 <p>採用情報</p>

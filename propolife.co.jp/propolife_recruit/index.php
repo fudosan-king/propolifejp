@@ -28,7 +28,7 @@ $dir_name = 'home';
                 <p class="btn_job"><a href="<?php echo home_url(); ?>/job/"><img src="<?php echo $temp_dir; ?>/common/images/home/btn_home_job.png" alt="プロポのお仕事"></a></p>
                 <p class="btn_concept"><a href="<?php echo home_url(); ?>/concept/"><img src="<?php echo $temp_dir; ?>/common/images/home/btn_home_concept.png" alt="メッセージ"></a></p>
                 <p class="btn_recruit"><a href="<?php echo home_url(); ?>/newgraduate/"><img src="<?php echo $temp_dir; ?>/common/images/home/btn_home_recruit.png" alt="採用情報"></a></p>
-                <p class="btn_point"><a href="<?php echo home_url(); ?>/point/"><img src="<?php echo $temp_dir; ?>/common/images/home/btn_home_point.png" alt="企業を知る"></a></p>
+                <!-- <p class="btn_point"><a href="<?php // echo home_url(); ?>/point/"><img src="<?php // echo $temp_dir; ?>/common/images/home/btn_home_point.png" alt="企業を知る"></a></p> -->
                 <p class="btn_benefit"><a href="<?php echo home_url(); ?>/benefit/"><img src="<?php echo $temp_dir; ?>/common/images/home/btn_home_benefit.png" alt="福利厚生"></a></p>
             </div><!-- #btn_list -->
 
@@ -49,7 +49,7 @@ $dir_name = 'home';
                 </ul>
             </li>
             <li class="benefit"><a href="<?php echo home_url(); ?>/benefit/"></a></li>
-            <li class="point"><a href="<?php echo home_url(); ?>/point/"></a></li>
+            <!-- <li class="point"><a href="<?php // echo home_url(); ?>/point/"></a></li> -->
         </ul>
     </div><!-- // #sp_global_nav -->
 

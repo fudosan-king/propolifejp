@@ -95,7 +95,7 @@
                     </tr>
                 </tbody>
             </table>
-            <span>※お問い合わせ0120-933-759（人事フリーダイヤル）</span>
+            <span>お問い合わせはフォームよりお願い致します。</span>
         </article>
     </div>
 </section>

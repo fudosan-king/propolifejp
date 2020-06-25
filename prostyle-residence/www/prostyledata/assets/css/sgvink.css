@@ -1708,6 +1708,8 @@ footer {
     .navbar-nav .nav-item .dropdown-item:nth-child(1) {border-top: none;}
 
     ul.navbar-nav.navbar-mobile.mr-0.main_nav {min-width: 100%;}
+    main section.content-page .extra-content {padding-top: 50px;}
+    main section.content-page .extra-content #section_title h2 {font-size: 2.0em;}
     main section.content-page .extra-content #section_title h2 img{height: 0.8em;}
     main section.content-page .extra-content #section_title h2 img.spec {height: auto; width: 100%;}
     main section.content-page dl.company {font-size: 10pt;}

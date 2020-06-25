@@ -100,9 +100,11 @@
                         if(!empty($socialLinked)):
                             echo '<div class="social-link">';
                             foreach($socialLinked as $name => $link){
+                                if(!empty($link)):
                                 ?>
                                     <a href="<?php echo $link; ?>" target="_blank"><img src="<?php echo SGVinK::get_images_uri()."/social/icon-".$name.".png"; ?>" class="img-responsive" alt="<?php echo 'social-'.$name; ?>" width="40"></a>
                                 <?php
+                                endif;
                             }
                             echo '</div>';
                         endif; 

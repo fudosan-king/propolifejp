@@ -31,7 +31,7 @@
 
 
 <?php 
-if(is_page( 'contact' ) || is_page( 'contact-purchase' ) || is_page( 'sell' )):
+if(is_page( 'contact' ) || is_page( 'contact-purchase' ) || is_page( 'sell' ) || is_page( 'unsubscribe' )):
 	?>
 		<link rel="stylesheet" href="<?php SGVinK::the_css_uri(); ?>/contact/styles.css" type="text/css">
     	<link rel="stylesheet" href="<?php SGVinK::the_css_uri(); ?>/contact/mobile.css" type="text/css">

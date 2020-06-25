@@ -29,6 +29,12 @@ if(is_page( 'sell' )):
     <?php
 endif;
 
+if(is_page( 'unsubscribe' )):
+    ?>
+        <script src="<?php SGVinK::the_js_uri(); ?>/contact/contact-unsubscribe.js"></script>
+    <?php
+endif;
+
 if(is_page('kaitori') || is_page('kaitori-demo')):
     ?>
         <script src='https://unpkg.com/packery@2/dist/packery.pkgd.js'></script>

@@ -1,3 +1,9 @@
+.validate-error {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6);
+    border-color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.02);
+}
+
 .content-page.contact .frm_contact #goConfirm,
 .content-page.contact .frm_contact #goBack,
 .content-page.contact .frm_contact #goSubmit {
@@ -127,6 +133,62 @@
 .Rtable--6cols > .Rtable-cell {
   width: 16.6%;
 }
+
+/* form email */
+.content-page.unsubscribe .frm_email {
+  margin: 60px 0;
+  font-size: 14px;
+}
+.content-page.unsubscribe .frm_email .row_line {
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+  padding: 15px 0;
+}
+.content-page.unsubscribe .frm_email .row_line:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.content-page.unsubscribe .frm_email label {
+  margin-bottom: 0;
+  font-weight: 500;
+  display: block;
+}
+.content-page.unsubscribe .frm_email .box_label {
+  background: #ccc;
+  margin: -20px -23px;
+  padding: 8px;
+}
+.content-page.unsubscribe .frm_email .line_space {
+  position: absolute;
+  left: -3px;
+  top: 8px;
+}
+.content-page.unsubscribe .frm_email .btnConfirmation {
+  padding-left: 45px; 
+  padding-right: 45px;
+  border: 2px solid #857a6b;
+  background: #fff;
+  color: #857a6b;
+  min-width: 175px;
+}
+.content-page.unsubscribe .frm_email .btnConfirmation:hover {
+  background: #fa9617;
+  color: #fff;
+  border-color: #fa9617;
+}
+.content-page.unsubscribe .frm_email .form-control {
+  font-size: 14px;
+}
+.content-page.unsubscribe .frm_email .form-control:focus {
+  border-color: #ae8148;
+}
+.content-page.unsubscribe .frm_email .custom-radio .custom-control-input:checked~.custom-control-label::before {
+  background: #ae8148;
+}
+.content-page.unsubscribe .frm_email .custom-control-input:focus~.custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(174, 128, 72, 0.58);
+}
+
+.content-page.unsubscribe .frm_email .confirmForm {display: none;}
 
 /* Responsive
 ==================================== */

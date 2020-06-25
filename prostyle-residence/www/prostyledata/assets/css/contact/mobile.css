@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+    .content-page.unsubscribe .frm_email label {
+        font-size: 11px;
+    }
+}
+
 @media screen and (max-width: 420px){
 	ul.list_interest {
 		padding: 0;
@@ -6,4 +12,10 @@
 	ul.list_interest li {
 		width: 100%;
 	}
+
+    .content-page.unsubscribe .frm_email .btnConfirmation{min-width: 155px; padding-left: 30px; padding-right: 30px;}
+}
+
+@media screen and (max-width: 320px){
+    .content-page.unsubscribe .frm_email .btnConfirmation{min-width: 135px; padding-left: 0; padding-right: 0;}
 }

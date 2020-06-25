@@ -34,9 +34,7 @@
 										<?php 
 											if (have_rows('timeline_control')):
 												echo '<article class="company-info">';
-												$finalTimeline = count(get_field('timeline_control'));
 												while(have_rows('timeline_control')): the_row();
-													echo get_row_index() == $finalTimeline ? '<div class="now-group"></div>' : '';
 													?>
 														<div class="row">
 															<div class="col col-12 col-md-2 left">

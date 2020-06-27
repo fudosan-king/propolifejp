@@ -146,6 +146,11 @@
 		      											<img src="images/1x/roomplan01.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_ag.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -176,6 +181,12 @@
 		      											<img src="images/1x/roomplan02.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												402号室　5490万円 <br>
+		      												502号室　5590万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_b.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -206,6 +217,11 @@
 		      											<img src="images/1x/roomplan03.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_bg.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -237,6 +253,11 @@
 		      											<img src="images/1x/roomplan04.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												501号室　5890万円 <br>
+		      												月々15万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_g.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -268,6 +289,11 @@
 		      											<img src="images/1x/roomplan05.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_h.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -298,6 +324,11 @@
 		      											<img src="images/1x/roomplan06.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												602号室　6190万円 <br>
+		      												月々15万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_i.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -329,6 +360,11 @@
 		      											<img src="images/1x/roomplan07.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_j.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -360,6 +396,11 @@
 		      											<img src="images/1x/roomplan08.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_k.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -392,6 +433,11 @@
 		      											<img src="images/1x/roomplan09.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_l.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -429,6 +475,11 @@
 		      											<img src="images/1x/roomplan10.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_dg.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -460,6 +511,11 @@
 		      											<a href="plan_detail_fr.php"><img src="images/1x/roomplan11.png" alt="" class="img-fluid"></a>
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												101号室　5690万円 <br>
+		      												月々14万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_fr.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
@@ -492,6 +548,11 @@
 		      											<a href="plan_detail_f.php"><img src="images/1x/roomplan12.png" alt="" class="img-fluid"></a>
 		      										</div>
 		      										<div class="roomplan_item_footer">
+		      											<p>
+		      												404号室　5290万円 <br>
+		      												月々13万円台～ <br>
+		      												頭金<label>0</label>円　ボーナス<label>0</label>円
+		      											</p>
 		      											<a href="plan_detail_f.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>

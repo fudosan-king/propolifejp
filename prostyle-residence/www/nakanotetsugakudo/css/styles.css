@@ -1951,6 +1951,12 @@ ul.list_tebrakey li span {
 .roomplan_item_footer {
   text-align: center;
 }
+.roomplan_item_footer p {
+  font-size: 1.0rem;
+  line-height: 1.5;
+  min-height: 105px;
+}
+.roomplan_item_footer p label {color: red;}
 .roomplan_item_top {
   min-height: 195px;
 }

@@ -133,7 +133,7 @@
 								<li>
 									<p>
 										<span class="meter_label">3LDK</span>
-										<span class="price_yen">5,490</span><span class="label_yen">万円〜</span>
+										<span class="price_yen">5,590</span><span class="label_yen">万円〜</span>
 										<span class="monthly">月々</span> <span class="price_stand">14</span>
 										<span class="label_stand">万円台～</span>
 									</p>

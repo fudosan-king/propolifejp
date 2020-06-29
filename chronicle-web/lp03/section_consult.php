@@ -246,7 +246,7 @@
                     <div class="text-center">
                         <div class="box_inquiries">
                             <p>お電話でのお問い合わせは</p>
-                            <p><a href="tel:0120-991-658">0120-991-658</a></p>
+                            <p><a href="tel:0120-991-657">0120-991-657</a></p>
                         </div>
                     </div>
                 </form>

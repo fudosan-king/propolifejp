@@ -46,7 +46,7 @@ $(function() {
         '表参道本店' : new SHOWROOM(
                 'クロニクル<br>表参道本店ショールーム',
                 '住所：東京都港区北⻘⼭3-6-23 \
-                    <br> フリーコール：0120-991-658 \
+                    <br> フリーコール：0120-991-657 \
                     <br> 営業時間：10:00~19:00（⽕・⽔曜⽇定休 祝⽇を除く）',
                 'http://www.chronicle-web.com/showroom/tokyo_omotesando/',
                 'https://my.matterport.com/show/?m=kADWBSviwid&brand=0',

@@ -182,7 +182,6 @@
 		      										</div>
 		      										<div class="roomplan_item_footer">
 		      											<p>
-		      												402号室　5490万円 <br>
 		      												502号室　5590万円 <br>
 		      												月々14万円台～ <br>
 		      												頭金<label>0</label>円　ボーナス<label>0</label>円

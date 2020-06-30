@@ -1,0 +1,61 @@
+.validate-error {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6);
+    border-color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.02);
+}
+
+/* form email */
+.section_contact .frm_handler {
+  margin: 60px 0;
+  font-size: 14px;
+}
+.section_contact .frm_handler .row_line {
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+  padding: 15px 0;
+}
+.section_contact .frm_handler .row_line:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.section_contact .frm_handler label {
+  margin-bottom: 0;
+  font-weight: 500;
+  display: block;
+}
+.section_contact .frm_handler .box_label {
+  background: #ccc;
+  margin: -20px -23px;
+  padding: 8px;
+}
+.section_contact .frm_handler .line_space {
+  position: absolute;
+  left: -3px;
+  top: 8px;
+}
+.section_contact .frm_handler .btnConfirmation {
+  padding-left: 45px; 
+  padding-right: 45px;
+  border: 2px solid #857a6b;
+  background: #fff;
+  color: #857a6b;
+  min-width: 175px;
+}
+.section_contact .frm_handler .btnConfirmation:hover {
+  background: #fa9617;
+  color: #fff;
+  border-color: #fa9617;
+}
+.section_contact .frm_handler .form-control {
+  font-size: 14px;
+}
+.section_contact .frm_handler .form-control:focus {
+  border-color: #80bdff;
+}
+.section_contact .frm_handler .custom-radio .custom-control-input:checked~.custom-control-label::before {
+  background: #80bdff;
+}
+.section_contact .frm_handler .custom-control-input:focus~.custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(174, 128, 72, 0.58);
+}
+
+.section_contact .frm_handler .confirmForm {display: none;}

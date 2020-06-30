@@ -46,6 +46,11 @@
         <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
         <script src="<?php echo TEMPLATE_ASSETS_PATH; ?>/js/contact.js"></script>
     <?php endif; ?>
+
+    <?php if(is_page( 'campaign01' )): ?>
+        <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+        <script src="<?php echo TEMPLATE_ASSETS_PATH; ?>/js/pardot.js"></script>
+    <?php endif; ?>
     
     </body>
 

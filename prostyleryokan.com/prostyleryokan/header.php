@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/styles.css">
     <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/mobile.css">
 
+    <?php if(is_page( 'campaign01' )):?>
+        <link rel="stylesheet" href="<?php echo TEMPLATE_ASSETS_PATH; ?>/css/pardot.css">
+    <?php endif; ?>
+
     <script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyAffKlhXHZXYWehQzLKHGMFmJVb7Nvgi0Y"></script>
 
     <?php wp_head(); ?>

@@ -65,16 +65,18 @@ if(have_posts()):
                     <div class="row">
                         <div class="col-12 col-md-6 align-self-center text-center">
                             <p class="mb-0">この記事をシェアする</p>
-                            <ul class="list_shared mb-0 justify-content-center">
-                                <li><div class="tw-share-button"><a class="twitter-share-button" href="<?php the_permalink(); ?>" data-size="large" data-lang="ja">Tweet</a></div></li>
-                                <li><div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div></li>
-                            </ul>
+                            <img style="cursor: pointer;" src="/wp-content/themes/logrenove/assets/images/i_twitter.png" alt="Share on Twitter" onclick="window.open('https://twitter.com/share?text=<?php wp_title(); ?>&amp;url=<?php the_permalink(); ?>','_blank'); return false;" width="60">
+                            <img style="cursor: pointer;" src="/wp-content/themes/logrenove/assets/images/i_face_book.png" alt="<?php the_title(); ?>" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('<?php the_permalink(); ?>'),'facebook-share-dialog','width=626,height=436'); return false;" width="60">
+                            <img style="cursor: pointer;" src="/wp-content/themes/logrenove/assets/images/i_line.png" alt="<?php the_title(); ?>" onclick="window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent('<?php the_permalink(); ?>'),'line-share-dialog','width=626,height=436'); return false;" width="60">
                         </div>
                         <div class="col-12 col-md-6 align-self-center text-center">
                             <div class="box_follow mt-4 mt-md-0">
                                 <p class="mb-2">LogRenoveをフォローする</p>
-                                <a class="mr-4" target="_blank" href="<?php echo get_field('facebook_url', 'option')?>" class="mr-4"><img src="/wp-content/themes/logrenove/assets/images/i_face_book.png" alt="" class="img-fluid" width="60"></a>
-                                <a target="_blank" href="<?php echo get_field('twitter_url', 'option')?>"><img src="/wp-content/themes/logrenove/assets/images/i_twitter.png" alt="" class="img-fluid" width="60"></a>
+                                <ul class="list_shared mb-0 justify-content-center">
+                                <li><a class="twitter-follow-button" href="<?php echo get_field('twitter_url', 'option')?>" data-show-count="false" data-show-screen-name="false" data-lang="ja">フォロー</a></li>
+                                <li><div style="width: 80px;" class="fb-like" data-href="<?php echo get_field('facebook_url', 'option')?>" data-width="" data-layout="button" data-action="like" data-share="false"></div></li>
+                                <li><div class="line-it-button" data-lang="ja" data-type="friend" data-lineid="<?php echo get_field('line_id', 'option')?>" style="display: none;"></div></li>
+                            </ul>
                             </div>
                         </div>
                     </div>

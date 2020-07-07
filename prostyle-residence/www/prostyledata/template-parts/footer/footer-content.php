@@ -42,17 +42,20 @@
 			<div class="container">
 				<div class="footer_sns d-none d-md-block">
 					<div class="row">
-						<div class="col-12 col-md-12 col-lg-6 mx-auto">
+						<div class="col-12 col-md-12 col-lg-10 mx-auto">
 							<div class="row text-center">
-								<div class="col-md-6 align-self-center">
+								<div class="col-md-4 align-self-center">
 									<a href="https://www.instagram.com/prostyle20170217/" target="_blank"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/i_instagram.png" alt=""> <span class="ml-1">公式Instagram</span></a>
 								</div>
 								<!-- <div class="col-md-6 align-self-center">
-									<a href="http://line.me/R/ti/p/@vqs2771x" target="_blank"> <img width="54" src="<?php //SGVinK::the_images_uri(); ?>/1x/LINE_APP@2x.png" alt=""> <span class="ml-1">公式LINE</span></a>
-								</div> -->
-								<div class="col-md-6 align-self-center">
-									<a href="https://www.facebook.com/prostyleresidence/" target="_blank"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/f_logo_RGB-Blue_58@2x.png" alt=""> <span class="ml-1">公式FACEBOOK</span></a>
+                                    <a href="http://line.me/R/ti/p/@vqs2771x" target="_blank"> <img width="54" src="<?php //SGVinK::the_images_uri(); ?>/1x/LINE_APP@2x.png" alt=""> <span class="ml-1">公式LINE</span></a>
+                                </div> -->
+								<div class="col-md-4 align-self-center">
+									<a href="https://www.facebook.com/prostyleresidence/" target="_blank"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/f_logo_RGB-Blue_58@2x.png" alt=""> <span class="ml-1">公式Facebook</span></a>
 								</div>
+                                <div class="col-md-4 align-self-center">
+                                    <a href="https://www.youtube.com/channel/UC1UquQQDwtU6VfKq3pwM4Hg" target="_blank"> <img width="54" src="<?php SGVinK::the_images_uri(); ?>/1x/yt_icon_rgb.png" alt=""> <span class="ml-1">公式YouTubeチャンネル</span></a>
+                                </div>
 							</div>
 						</div>
 					</div>

@@ -1131,7 +1131,7 @@
 
     .box_video h3 {font-size: 18px;}
 
-    .roomplan_item_footer p {min-height: inherit;}
+    .roomplan_item_footer p {min-height: inherit;font-size: 20px;}
 
 }
 @media (max-width: 375px) {

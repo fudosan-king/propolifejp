@@ -197,7 +197,7 @@
 					      		<table class="table table-bordered table_outline">
 					      			<tr>
 					      				<th>販売戸数</th>
-					      				<td>5戸</td>
+					      				<td>4戸</td>
 					      			</tr>
 					      			<tr>
 					      				<th>販売価格</th>
@@ -275,7 +275,7 @@
 					      			</tr>
 					      		</table>
 
-					      		<p class="mb-5 text-center">更新日<span>（6月27日）</span>・更新予定日<span>（7月15日）</span></p>
+					      		<p class="mb-5 text-center">更新日<span>（7月7日）</span>・更新予定日<span>（7月15日）</span></p>
 
 	      					</div>
 	      				</div>

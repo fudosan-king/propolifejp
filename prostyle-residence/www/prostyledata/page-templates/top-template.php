@@ -60,6 +60,7 @@ if (have_posts()):
 	<?php get_template_part( 'template-parts/home/block', 'realestate' ); ?>
 	<?php //get_template_part( 'template-parts/home/block', 'gallery' ); ?>
 	<?php //get_template_part( 'template-parts/home/block', 'distribution' ); ?>
+	<?php get_template_part( 'template-parts/home/block', 'ryokan' ); ?>
 	<?php get_template_part( 'template-parts/home/block', 'videos' ); ?>
 
 

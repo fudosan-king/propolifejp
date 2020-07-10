@@ -63,8 +63,8 @@
 
 				<div class="footer_sns d-block d-md-none">
 					<div class="row">
-						<div class="col-7 align-self-center">
-							<p class="mb-0 text-left">株式会社プロスタイル公式SNS</p>
+						<div class="col-3 align-self-center">
+							<p class="mb-0 text-left">公式SNS</p>
 						</div>
 						<div class="col-2 align-self-center">
 							<a href="https://www.instagram.com/prostyle20170217/" target="_blank"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/i_instagram.png" alt=""></a>
@@ -75,6 +75,9 @@
 						<div class="col-2 align-self-center">
 							<a href="https://www.facebook.com/prostyleresidence/" target="_blank"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/f_logo_RGB-Blue_58@2x.png" alt=""></a>
 						</div>
+                        <div class="col-2 align-self-center">
+                            <a href="https://www.youtube.com/channel/UC1UquQQDwtU6VfKq3pwM4Hg" target="_blank"> <img width="39" src="<?php SGVinK::the_images_uri(); ?>/1x/yt_icon_rgb.png" alt=""></a>
+                        </div>
 					</div>
 				</div>
 

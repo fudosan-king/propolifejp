@@ -1,5 +1,5 @@
 <main>
-    <section class="section_ryokan">
+    <section class="section_ryokan_post">
         <div class="container">
             <div class="row">
                 <div class="col-12">

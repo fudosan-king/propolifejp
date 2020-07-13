@@ -1554,6 +1554,60 @@ ul.list_row li h4 {
   border-color: #646363;
 }
 
+/* convert img to text */
+main .section_news .block_valuable .title {
+  font-family: heisei-kaku-gothic-std, sans-serif;
+  font-weight: 700;
+  color: #3c3c3c;
+  font-size: 20px;
+  line-height: 1em;
+}
+.btn_brand_commitment {
+  display: inline-block;
+  border: 1px solid #AE8148;
+  margin-bottom: 15px;
+  padding: 10px 80px 10px 30px;
+  font-size: 18px;
+  position: relative;
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-weight: 600;
+  min-width: 350px;
+}
+.btn_brand_commitment::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 1px;
+  height: 100%;
+  background: #AE8148;
+}
+.btn_brand_commitment::before {
+  content: '';
+  background: url('../images/i_down.png') no-repeat;
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 28px;
+  height: 10px;
+}
+.btn_brand_commitment:hover::before {
+  background: url('../images/i_down_white.png') no-repeat;
+}
+.btn_brand_commitment:hover {
+  background: #AE8148;
+  color: #fff;
+  border-color: #AE8148;
+}
+.btn_brand_commitment:hover::after {
+  background: #fff;
+}
+.modal_brands h2, .modal_commitment h2 {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-weight: 400;
+  font-size: 37px;
+}
+
 
 @media (max-width: 768px) {
   .box_ryokan_topimg {

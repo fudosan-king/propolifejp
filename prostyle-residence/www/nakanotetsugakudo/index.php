@@ -174,8 +174,11 @@
 										WEB来場予約は<a class="link_sumotimo" href="/nakanotetsugakudo/contact/reservation/">こちら</a>から<br>
 									</p>
 	      						</div> -->
+	      						<div class="mx-auto text-center">
+		      						<iframe width="560" height="315" src="https://www.youtube.com/embed/dkw5hrxTYZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width:100%;height:auto;min-height:315px"></iframe>
+	      						</div>
 
-	      						<img src="images/1x/banner.png" class="img-fluid w-100 mt-md-5 mt-0">
+		      					<img src="images/1x/banner.png" class="img-fluid w-100 mt-md-5 mt-0">
 
 	      						<div class="box_video">
 	      							<h3 class="text-center mt-3 mt-md-5">フルスクリーンでご覧ください。</h3>

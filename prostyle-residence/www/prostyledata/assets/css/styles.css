@@ -1511,6 +1511,14 @@ ul.list_row li h4 {
   font-family: "San Francisco Display Ultralight";
   font-size: 46px;
 }
+@media(max-width: 320px) {
+  .section_ryokan h2 {
+  font-size: 3em;
+  }
+  .section_ryokan h2 span {
+    font-size: 40px;
+  }
+}
 .section_ryokan .subtitle {
   text-align: center;
   color: #AE8148;

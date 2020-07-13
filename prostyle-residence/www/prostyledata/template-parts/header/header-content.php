@@ -130,7 +130,10 @@
 <div id="modal_brands" class="modal fade bd-example-modal-lg modal_brands" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <h2><img src="<?php SGVinK::the_images_uri(); ?>/modal02.png" width="75%" class="img-responsive" alt="Image"></h2>
+            <h2>
+                <!-- <img src="<?php //SGVinK::the_images_uri(); ?>/modal02.png" width="75%" class="img-responsive" alt="Image"> -->
+                プロスタイルのブランド展開
+            </h2>
             <a href="#" class="btn btnClose" data-dismiss="modal" aria-label="Close"><img src="<?php SGVinK::the_images_uri(); ?>/1x/i_close_white.png" alt=""></a>
             <ul class="list_row">
 

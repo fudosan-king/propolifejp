@@ -17,21 +17,21 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-<link rel="apple-touch-icon" sizes="152x152" href="<?=FAVICON_PATH;?>/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="<?=FAVICON_PATH;?>/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="<?=FAVICON_PATH;?>/favicon-16x16.png">
-<link rel="manifest" href="<?=FAVICON_PATH;?>/site.webmanifest">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo FAVICON_PATH;?>/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo FAVICON_PATH;?>/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo FAVICON_PATH;?>/favicon-16x16.png">
+<link rel="manifest" href="<?php echo FAVICON_PATH;?>/site.webmanifest">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css">
 
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css"></noscript>
 
-<link rel="preload" href="<?=STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="<?=STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css"></noscript>
+<link rel="preload" href="<?php echo STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css"></noscript>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="<?=STYLESHEET_PATH;?>/styles.min.css" type="text/css">
+<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/styles.min.css" type="text/css">
 <?php 
     if(is_single()):
         ?>
@@ -45,7 +45,7 @@
             <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"></noscript>
 
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
-            <link rel="stylesheet" href="<?=STYLESHEET_PATH;?>/single.min.css" type="text/css">
+            <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/single.min.css" type="text/css">
         <?php
     endif;
 ?>
@@ -54,8 +54,8 @@
     if ($detect->isMobile()):
         ?>
             
-        	<link rel="stylesheet" href="<?=STYLESHEET_PATH;?>/bsnav.min.css" type="text/css">
-        	<link rel="stylesheet" href="<?=STYLESHEET_PATH;?>/mobile.min.css" type="text/css">
+        	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/bsnav.min.css" type="text/css">
+        	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.min.css" type="text/css">
         <?php
     endif;
 ?>

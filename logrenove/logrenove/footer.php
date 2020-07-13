@@ -2,7 +2,15 @@
 
     </div><!-- End page -->
 
-    <?php require 'includes/js-footer.php'; ?>
+    <?php 
+        
+        if(is_page( 'service' )){
+            require 'includes/js-footer2.php';
+
+        }else{
+            require 'includes/js-footer.php';
+        }
+    ?>
 
     <?php if(is_single()): ?>
         <div id="fb-root"></div>

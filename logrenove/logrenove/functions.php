@@ -6,6 +6,12 @@
     define('IMAGE_PATH', ASSETS_PATH . '/images');
     define('FAVICON_PATH', ASSETS_PATH . '/favicon');
 
+    define('SERVICE_PATH', ASSETS_PATH . '/service');
+    define('SERVICE_STYLESHEET_PATH', SERVICE_PATH . '/css');
+    define('SERVICE_SCRIPT_PATH', SERVICE_PATH . '/js');
+    define('SERVICE_IMAGE_PATH', SERVICE_PATH . '/images');
+    define('SERVICE_FAVICON_PATH', SERVICE_PATH . '/favicon');
+
     $header_posts = null;
     $header_ids = null;
 

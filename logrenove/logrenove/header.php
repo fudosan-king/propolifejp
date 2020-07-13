@@ -2,7 +2,13 @@
 <html class="no-js">
 
 <head>
-    <?php require 'includes/head.php'; ?>
+    <?php 
+        if(is_page( 'service' )){
+            require 'includes/head2.php'; 
+        }else{
+            require 'includes/head.php'; 
+        }
+    ?>
 
     <?php wp_head(); ?>
     <?php do_action( 'header_extra_script'); ?>
@@ -23,9 +29,16 @@
     <?php if(!is_preview()): ?>
         <div class="init-overload active"></div>
     <?php endif; ?>
-    <div id="page">
-        <?php require 'includes/header.php'; ?>    
-        <?php 
+    <div id="page" data-service="<?php echo is_page( 'service' ); ?>">
+        <?php
+            if(is_page( 'service' )){
+                require 'includes/header2.php';
+            }else{
+                require 'includes/header.php';
+            }
+            
+        ?>    
+        <?php
             if(is_home()){
                 get_template_part( 'template-parts/banner', 'default' );     
             }

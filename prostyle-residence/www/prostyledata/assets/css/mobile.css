@@ -389,6 +389,12 @@
 	.banner {
 		height: 439px;
 	}
+	.section_ryokan h2 {
+		font-size: 2.7em;
+	}
+	.section_ryokan h2 span {
+		font-size: 35px;
+	}
 }
 
 @supports (-webkit-overflow-scrolling: touch) {

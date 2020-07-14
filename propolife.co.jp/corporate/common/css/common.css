@@ -575,14 +575,15 @@ body {
 }
 
 #footer .fBox ul {
-	padding: 1px 7px 0 0;
+	/*padding: 1px 7px 0 0;*/
+	padding-top: 4px;
 	float: right;
 }
 
 #footer .fBox li {
 	padding-left: 17px;
 	float: left;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 
 #footer .fBox li a {

@@ -368,6 +368,61 @@
 			      									</div>
 			      								</div>
 	      									</div>
+	      									<section class="section_aboutcorona">
+	      										<div class="container">
+	      											<div class="row">
+	      												<div class="col-12 col-lg-11 mx-auto">
+	      													<h2>新型コロナウイルス感染予防対策について <br>
+	      													当施設では以下のような対策を実施しております。</h2>
+	      													<ul>
+	      														<li>
+	      															<div class="box_intros_img">
+	      																<img src="images/SVG/sterilizationcleaning.svg" alt="" class="img-fluid" width="141">
+	      															</div>
+	      															<p>除菌清掃</p>
+	      														</li>
+	      														<li>
+	      															<div class="box_intros_img">
+		      															<img src="images/SVG/setting_finger.svg" alt="" class="img-fluid" width="144">
+		      														</div>
+	      															<p>手指消毒液設置</p>
+	      														</li>
+	      														<li>
+	      															<div class="box_intros_img">
+		      															<img src="images/SVG/regularventilation.svg" alt="" class="img-fluid" width="
+		      															142">
+		      														</div>
+	      															<p>定期的な換気</p>
+	      														</li>
+	      														<li>
+	      															<div class="box_intros_img">
+		      															<img src="images/SVG/enoughdistance.svg" alt="" class="img-fluid" width="159">
+		      														</div>
+	      															<p>十分な距離に<br>配慮した接客</p>
+	      														</li>
+	      														<li>
+	      															<div class="box_intros_img">
+		      															<img src="images/SVG/temperature.svg" alt="" class="img-fluid" width="142">
+		      														</div>
+	      															<p>スタッフの<br>体温測定・健康管理</p>
+	      														</li>
+	      														<li>
+	      															<div class="box_intros_img">
+		      															<img src="images/SVG/handwash.svg" alt="" class="img-fluid" width="179">
+		      														</div>
+	      															<p>スタッフの<br>手洗い・うがい</p>
+	      														</li>
+	      														<li>
+	      															<div class="box_intros_img">
+		      															<img src="images/SVG/mask.svg" alt="" class="img-fluid" width="159">
+		      														</div>
+	      															<p>スタッフの<br>マスク着用</p>
+	      														</li>
+	      													</ul>
+	      												</div>
+	      											</div>
+	      										</div>
+	      									</section>
 	      									<div class="w_btn_gradient">
       											<a href="contact/reservation/" class="btn btn_gradient btnReserve">
       												<p>Reserve</p>

@@ -18,7 +18,7 @@ if (have_posts()):
 		<?php get_template_part( 'template-parts/home/block', 'news' ); ?>
 
 		<div class="block_valuable">
-			<div class="title">プロスタイルとは</div>
+			<div class="title">プロスタイルとは…。</div>
 			<?php the_content(); ?>
 
 			<br>

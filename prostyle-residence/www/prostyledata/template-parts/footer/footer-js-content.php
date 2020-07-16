@@ -23,6 +23,12 @@
 
 <?php 
 
+if(is_page( 'contact' ) || is_page( 'contact-purchase' ) || is_page( 'sell' ) || is_page( 'unsubscribe' ) || is_page( 'inquiry' )):
+  ?>
+    <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+  <?php
+endif;
+
 if(is_page( 'contact' )):
 	?>
 		<script src="<?php SGVinK::the_js_uri(); ?>/contact/contact.js"></script>
@@ -44,6 +50,15 @@ endif;
 if(is_page( 'unsubscribe' )):
     ?>
         <script src="<?php SGVinK::the_js_uri(); ?>/contact/contact-unsubscribe.js"></script>
+    <?php
+endif;
+
+if(is_page( 'inquiry' )):
+    ?>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="<?php SGVinK::the_js_uri(); ?>/contact/contact-inquiry.js"></script>
     <?php
 endif;
 

@@ -114,7 +114,7 @@
 .form_info .content-policy-title span {font-weight: bold; font-size: 12pt;}
 .form_info .content-policy-title label.require-flag {position: absolute; right: 90px;}
 
-.form_info .btn-post-gen {padding: 2px 5px;font-size: 10pt;}
+.form_info .btn-post-gen {padding: 2px 5px;font-size: 10pt; color: #fff; border-radius: .25rem;}
 
 ul.list_interest {padding-left: 0; list-style: none;}
 ul.list_job {padding-left: 0;}

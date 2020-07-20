@@ -94,7 +94,9 @@
 				  	<div class="carousel-cell">
 				    	<img class="carousel-cell-image" src="images/slide/PC_slide03.jpg">
 				  	</div>
+
 				</div>
+				<div class="slide-text position-absolute text-white w-100 text-center font-weight-bold">最終4邸</div>
 				<!-- End baner is slide -->
 
 				<div class="banner_pricelist">
@@ -105,7 +107,6 @@
 					<a href="gallery.php"><img class="banner_gallery_pc" src="images/slide/gallery-banner_PC.png"></a>
 			    	<a href="gallery.php"><img class="banner_gallery_sp" src="images/slide/gallery-banner_SP.png"></a>
 				</div>
-				
 			</div>
 			<div class="text_top_baner" align="center">
 				<!-- <span class="text-line-up">モデルルーム住戸</span><br>
@@ -372,7 +373,7 @@
 	      										<div class="container">
 	      											<div class="row">
 	      												<div class="col-12 col-lg-11 mx-auto">
-	      													<h2>新型コロナウイルス感染予防対策について <br>
+	      													<h2>新型コロナウイルス感染予防対策について<br/>
 	      													当施設では以下のような対策を実施しております。</h2>
 	      													<ul>
 	      														<li>

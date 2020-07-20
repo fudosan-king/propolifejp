@@ -2303,6 +2303,12 @@ iframe {
   width: 100%;
   position: relative;
 }
+.topbanner .slide-text {
+  z-index: 9999;
+  top: 50%;
+  font-size: 6rem;
+  text-shadow: 4px -4px 3px #777
+}
 .box_sumitomo {
   text-align: center; border: solid 1px #000000; margin: 40px 75px 0 75px;
 }
@@ -2388,6 +2394,11 @@ ul.list_topics li:nth-child(5) {
   .banner_pricelist {
     bottom: 42%;
   }
+
+  .topbanner .slide-text {
+    top: calc(50% - 2rem);
+    font-size: 5rem
+  }
 }
 
 @media (max-width: 768px) {
@@ -2399,6 +2410,12 @@ ul.list_topics li:nth-child(5) {
     left: 100px;
     top: 10px;
     color: red;
+  }
+
+  .topbanner .slide-text {
+
+    font-size: 4rem;
+    text-shadow: 2px -2px 2px #777
   }
   
   .navbar-nav .nav-item:nth-child(6) {
@@ -2420,8 +2437,6 @@ ul.list_topics li:nth-child(5) {
     height: 266px;
     background-image: url('../images/gallery/commonarea_sp.jpg');
   }
-  
-  
 }
 
 @media (max-width: 736px) {
@@ -2601,6 +2616,12 @@ ul.list_topics li:nth-child(5) {
   }
 }
 
+@media (max-width: 425px){
+  .topbanner .slide-text {
+    font-size: 2rem
+  }
+}
+
 @media (max-width: 414px) {
   .box_intros_img {
     height: 110px;
@@ -2616,6 +2637,12 @@ ul.list_topics li:nth-child(5) {
   }
   .section_aboutcorona ul li p {
     font-size: 7px;
+  }
+}
+
+@media (max-width: 320px){
+  .topbanner .slide-text {
+    font-size: 1.5rem
   }
 }
 

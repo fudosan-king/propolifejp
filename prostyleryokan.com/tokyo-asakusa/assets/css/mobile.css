@@ -449,6 +449,10 @@
 	.box_img_photo, .box_img_photo img {
 		height: 230px;
 	}
+
+	.owl_banner .item .banner_goto_asakusa img {
+	    width: 100%;
+  	}
 }
 @media (min-width: 576px) {
 	#modal_concept .modal-dialog {

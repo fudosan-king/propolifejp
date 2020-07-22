@@ -45,9 +45,12 @@
 				<div class="caption_content <?=$currentLanguage;?>">
 					<?php _echo($data->caption); ?>
 				</div>
-				<div class="box_notice">
-            		<?php echo $noticeContent; ?>
-            	</div>
+				<!-- <div class="box_notice"> -->
+            		<?php //echo $noticeContent; ?>
+            	<!-- </div> -->
+            	<a target="_blank" class="banner_goto_asakusa d-none d-md-block" href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/rsv_pln_lst.aspx?hi_id=2&lang=ja-JP"><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_asakusa.png" alt="" class="img-fluid"></a>
+
+				<a target="_blank" class="banner_goto_asakusa d-block d-md-none" href="https://advance.reservation.jp/prostyleryokan/s_sp/rsv/plan_list.aspx?hi_id=2&lang=ja-JP"><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_asakusa.png" alt="" class="img-fluid"></a>
 			</div>
 		</div>
 	</div>

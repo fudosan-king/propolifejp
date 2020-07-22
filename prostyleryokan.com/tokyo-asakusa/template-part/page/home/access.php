@@ -39,12 +39,14 @@
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="map_frame">
-                    <div class="acf-map">
-                        <div class="marker" data-lat="<?php echo $data->map->lat; ?>" data-lng="<?php echo $data->map->lng; ?>">
-                            <p class="address"><?php echo $data->map->address; ?></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3239.479334173804!2d139.7986798!3d35.7144283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec39c4e00ff%3A0x68af1801cc7b1092!2z5pel5pys44CB44CSMTExLTAwMzMg5p2x5Lqs6YO95Y-w5p2x5Yy66Iqx5bed5oi477yS5LiB55uu77yR77yS4oiS77yR77yR!5e0!3m2!1sja!2s!4v1594349258939!5m2!1sja!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <!-- <div class="acf-map">
+                        <div class="marker" data-lat="<?php //echo $data->map->lat; ?>" data-lng="<?php //echo $data->map->lng; ?>">
+                            <p class="address"><?php //echo $data->map->address; ?></p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
+
             </div>
         </div>
         <div class="row">

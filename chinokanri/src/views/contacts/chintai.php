@@ -17,21 +17,7 @@
         margin-bottom: 30px;
     }
 </style>
-<nav class="nav_top">
-   <div class="container">
-      <div class="row">
-         <div class="col-12">
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-               <a class="nav-item nav-link flex-fill" id="nav-previewrequest-tab" href="<?=base_url();?>contact/naiken" role="tab" aria-controls="nav-previewrequest" aria-selected="true"><span>内見依頼に関する<br>お問合せ</span></a>
-               <a class="nav-item nav-link flex-fill active" id="nav-rentalproperty-tab" href="<?=base_url();?>contact/chintai" role="tab" aria-controls="nav-rentalproperty" aria-selected="false"><span>当社管理賃貸物件に<br>関するお問合せ</span></a>
-               <a class="nav-item nav-link flex-fill" id="nav-propertysale-tab" href="<?=base_url();?>contact/bunjyo" role="tab" aria-controls="nav-propertysale" aria-selected="false"><span>当社管理分譲物件に<br>関するお問合せ</span></a>
-               <a class="nav-item nav-link flex-fill" id="nav-cancellation-tab" href="<?=base_url();?>contact/kaiyaku" role="tab" aria-controls="nav-cancellation" aria-selected="false"><span>解約に関するお問合せ</span></a>
-               <a class="nav-item nav-link flex-fill" id="nav-management-tab" href="<?=base_url();?>contact/important" role="tab" aria-controls="nav-management" aria-selected="false"><span>管理に関わる<br>重要事項調査報告書作成<br>の依頼</span></a>
-            </div>
-         </div>
-      </div>
-   </div>
-</nav>
+<?php include_once 'nav/top.php'; ?>
 <div class="tab-content" id="nav-tabContent">
    <div class="tab-pane fade show active" id="nav-rentalproperty" role="tabpanel" aria-labelledby="nav-rentalproperty-tab">
       <section class="section_content_top">

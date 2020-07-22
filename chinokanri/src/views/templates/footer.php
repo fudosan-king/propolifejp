@@ -44,6 +44,12 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>
                 <script src="<?=base_url();?>assets/js/functions.js"></script>
             <?php endif;
+            if($this->uri->uri_string() == 'contact/important'):
+                ?>
+                <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+                <script src="<?=base_url();?>assets/js/pardot/important.js"></script>       
+                <?php
+            endif;
             if($this->uri->uri_string() == 'kaiyaku'):
                 ?>
                 <script src="<?=base_url();?>assets/js/kaiyaku.js"></script>
@@ -53,9 +59,6 @@
                 <?php
             endif;
         ?>
-
-        <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
-        <script src="<?=base_url();?>assets/js/pardot/important.js"></script>
 
     </body>
 </html>

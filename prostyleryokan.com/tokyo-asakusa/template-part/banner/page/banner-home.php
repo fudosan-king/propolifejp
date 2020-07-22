@@ -55,3 +55,15 @@
 		</div>
 	</div>
 </section>
+
+<section class="section_note">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+            	<div class="box_note">
+	            	<?php echo $noticeContent; ?>
+            	</div>
+            </div>
+        </div>
+    </div>
+</section>

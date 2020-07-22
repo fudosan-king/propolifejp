@@ -381,7 +381,9 @@ header {
 	width: 20px;
 	height: 20px;
 }
+
 .btnAgree.cfr {width: 45%;}
+
 .frm_general label.custom-control-label, .frm_general label span {
 	font-family: "SF Pro Display Regular", "Noto Sans JP";
 	font-weight: normal;

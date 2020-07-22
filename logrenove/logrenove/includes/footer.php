@@ -38,6 +38,22 @@
   </section>
 
   <section class="footer_bottom">
-    <p><?php echo get_field('footer_copyright', 'option'); ?></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8 mx-auto">
+                <div class="row">
+                    <div class="col-12 col-lg-7 align-self-center text-center">
+                        <p><?php echo get_field('footer_copyright', 'option'); ?></p>
+                    </div>
+                    <div class="col-12 col-lg-2 align-self-center">
+                        <p class="mb-2 mb-lg-0">関連サイト</p>
+                    </div>
+                    <div class="col-12 col-lg-3 align-self-center">
+                        <a target="_blank" href="https://www.chronicle-web.com/plus/"><img src="<?=IMAGE_PATH;?>/chro_plus_white.png" alt="" class="img-fluid" width="200"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </section>
 </footer>

@@ -11,8 +11,8 @@
                         <div class="main_left">
                             <?php get_template_part( 'template-parts/single', 'default' ); ?>
                             <?php //require 'includes/box_search_serminar.php'; ?>
-
-                            <?php get_template_part( 'template-parts/form', 'consult' ); ?>
+                            <?php //get_template_part( 'template-parts/form', 'consult' ); ?>
+                            <?php get_template_part( 'template-parts/banner', 'bottom' ); ?>
                             <?php get_template_part( 'template-parts/posts', 'relate' ); ?>
                         </div>
                     </div>

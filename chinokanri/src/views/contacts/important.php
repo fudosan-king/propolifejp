@@ -1,18 +1,4 @@
-<nav class="nav_top">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link flex-fill" id="nav-previewrequest-tab" href="index.php" role="tab" aria-controls="nav-previewrequest" aria-selected="true"><span>内見依頼に関する<br>お問合せ</span></a>
-                    <a class="nav-item nav-link flex-fill" id="nav-rentalproperty-tab" href="chintai.php" role="tab" aria-controls="nav-rentalproperty" aria-selected="false"><span>当社管理賃貸物件に<br>関するお問合せ</span></a>
-                    <a class="nav-item nav-link flex-fill" id="nav-propertysale-tab" href="bunjyo.php" role="tab" aria-controls="nav-propertysale" aria-selected="false"><span>当社管理分譲物件に<br>関するお問合せ</span></a>
-                    <a class="nav-item nav-link flex-fill" id="nav-cancellation-tab" href="kaiyaku.php" role="tab" aria-controls="nav-cancellation" aria-selected="false"><span>解約に関するお問合せ</span></a>
-                    <a class="nav-item nav-link flex-fill active" id="nav-management-tab" href="important.php" role="tab" aria-controls="nav-management" aria-selected="false"><span>管理に関わる<br>重要事項調査報告書作成<br>の依頼</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
+<?php include_once 'nav/top.php'; ?>
 <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-management" role="tabpanel" aria-labelledby="nav-management-tab">
         <section class="section_content_top">
@@ -21,9 +7,9 @@
                     <div class="col-12">
                         <h1>管理に係る 重要事項調査報告書 作成の依頼</h1>
                         <ul class="steps">
-                            <li class="input active"><a href="#">入力</a></li>
-                            <li class="confirm"><a href="#">確認</a></li>
-                            <li class="finish"><a href="#">完了</a></li>
+                            <li class="input active"><a href="javascript:void(0)">入力</a></li>
+                            <li class="confirm"><a href="javascript:void(0)">確認</a></li>
+                            <li class="finish"><a href="javascript:void(0)">完了</a></li>
                         </ul>
 
                         <?php if(!isset($_GET['finish'])): ?>
@@ -100,7 +86,7 @@
                                                             <input type="text" name="building_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <a class="btnAuto btn mt-2 mt-lg-0" href="#"><img src="images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
+                                                            <a class="btnAuto btn mt-2 mt-lg-0" href="javascript:void(0)" onclick="AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -391,7 +377,7 @@
                                                             <input type="text" name="kondo_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <a class="btnAuto btn mt-2 mt-lg-0" href="#"><img src="images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
+                                                            <a class="btnAuto btn mt-2 mt-lg-0" href="javascript:void(0)" onclick="AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
                                                         </div>
                                                     </div>
                                                 </div>

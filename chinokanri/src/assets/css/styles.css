@@ -280,6 +280,10 @@ header {
 	color: #fff;
 }
 
+.steps li:first-child {
+    border-left: 2px solid #0180CD;
+};
+
 /* Following */
 .steps li.current ~ li { background-color: #EBEBEB; }
 .steps li.current ~ li::after {	border-left-color: #EBEBEB; }

@@ -732,6 +732,7 @@
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="box_datetime">
                                                 <input type="text" class="form-control datepicker" placeholder="2020/06/26" name="cancellation_notice_date" required>
+                                                <i class="i_datetime"></i>
                                             </div>
                                         </div>
                                     </div>

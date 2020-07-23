@@ -69,6 +69,7 @@ class Contact extends CI_Controller {
             'meta_description' => 'ビル管理事業、マンション管理事業、プロパテイマネジメント事業、清掃事業なら横浜市鶴見区の千野建物管理株式会社',
             'meta_keywords' => '千野建物管理,千野建物管理株式会社,横浜,鶴見,ビル管理,マンション管理,プロパテイマネジメント,清掃',
         );
+
         $this->load->view('templates/header', $data);
         $this->load->view('contacts/bunjyo');
         $this->load->view('templates/footer');
@@ -98,8 +99,6 @@ class Contact extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    
-    
 }
 
 /* End of file Home.php */

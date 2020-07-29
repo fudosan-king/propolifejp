@@ -11,4 +11,4 @@
 	<?php do_action( 'wp_body' ); ?>
 	
 	<div id="page">
-		<?php get_template_part( 'template-parts/header/header', 'content' ); ?>
+		<?php get_template_part( 'template-parts/header/header', 'content' );?>

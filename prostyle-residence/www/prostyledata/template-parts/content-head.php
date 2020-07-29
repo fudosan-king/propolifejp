@@ -35,8 +35,6 @@ if(is_page( 'contact' ) || is_page( 'contact-purchase' ) || is_page( 'sell' ) ||
 	?>
 		<link rel="stylesheet" href="<?php SGVinK::the_css_uri(); ?>/contact/styles.css" type="text/css">
     	<link rel="stylesheet" href="<?php SGVinK::the_css_uri(); ?>/contact/mobile.css" type="text/css">
-
-		<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 	<?php
 endif;
 
@@ -62,4 +60,12 @@ if(is_page('gooddesign')):
 	</script>
 	<?php
 endif;
+
+if(is_page( 'inquiry' )):
+	?>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
+	<?php
+endif;
+
 ?>

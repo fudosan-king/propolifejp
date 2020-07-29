@@ -77,6 +77,11 @@ function sgvink_scripts () {
 
 	wp_enqueue_style( 'custom-styles', SGVinK::get_css_uri()."sgvink.css", array('styles'), $ver = false, $media = 'all' );
 	wp_enqueue_script( 'custom-scripts', SGVinK::get_js_uri()."sgvink.js", array('scripts'), $ver = false, $in_footer = false );
+
+    if(is_page( 'online' ) || is_page( 'inquiry' )):
+        wp_enqueue_style( 'online-styles', SGVinK::get_css_uri()."/online/styles.css", array(), $ver = false, $media = 'all' );
+        wp_enqueue_style( 'online-mobile', SGVinK::get_css_uri()."/online/mobile.css", array(), $ver = false, $media = 'all' );
+    endif;
 }
 add_action( 'wp_enqueue_scripts', 'sgvink_scripts' );
 

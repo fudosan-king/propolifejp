@@ -12,7 +12,7 @@ $dir_name = 'benefit';
 <div id="contents_inner">
 
     <div id="page_title">
-        <h2><img src="<?php echo $temp_dir; ?>/common/images/benefit/img_title_h2.png" alt="FAMILY BENEFIT" class="pc"><img src="<?php echo $temp_dir; ?>/common/images/benefit/img_title_h2_sp.png" alt="FAMILY BENEFIT" class="sp"></h2>
+        <h2><img src="<?php echo $temp_dir; ?>/common/images/benefit/img_title_h2.png" alt="BENEFITS" class="pc"><img src="<?php echo $temp_dir; ?>/common/images/benefit/img_title_h2_sp.png" alt="BENEFITS" class="sp"></h2>
         <p class="title_sub"><?php echo $page_title; ?><span class="line"></span></p>
     </div>
     

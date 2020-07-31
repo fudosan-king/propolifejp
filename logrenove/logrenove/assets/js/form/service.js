@@ -19,6 +19,7 @@ $(function($) {
         language: 'ja',
         autoclose:true,
         todayHighlight: true,
+        ignoreReadonly: true,
         beforeShowDay: function (date) {
 
             if(date.getDate() == (new Date()).getDate() )
@@ -34,6 +35,7 @@ $(function($) {
         },
 
     });
+    $('.datepicker').prop('readonly', true);
 
 
     $('#btn_confirm').click(function(event) {

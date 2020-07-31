@@ -382,6 +382,12 @@ header {
 	height: 20px;
 }
 
+.btnAgree .i_rightwhite.rotate {
+    transform: rotateY(180deg);
+    left: 20px;
+    right: 0;
+}
+
 .btnAgree.cfr {width: 45%;}
 
 .frm_general label.custom-control-label, .frm_general label span {

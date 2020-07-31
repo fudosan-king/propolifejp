@@ -956,4 +956,4 @@ ul.list_menufooter li a {
 .frm_box_bookonline .confirmForm .form-group {margin-bottom: 25px;}
 .frm_box_bookonline .confirmForm label {margin-bottom: 0;}
 .datepicker .datepicker-days .day.disabled:not(.today) {background: #f9f9f9; border-radius: 0;}
-
+.datepicker[readonly] {background-color: #fff;}

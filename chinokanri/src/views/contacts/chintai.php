@@ -1,21 +1,15 @@
 <style type="text/css">
-    .frm-confirm button {
-        background: #0180CD;
-        border-radius: 100px;
-        color: #fff;
-        padding: 15px 20px;
-        width: 70%;
-        display: block;
-        margin: 15px auto 0;
-        font-family: 'SF Pro Display Semibold', "Noto Sans JP";
-        font-size: 1.125em;
-        position: relative;
-    }
-    .frm-confirm .form-group {
-        font-size: 0.875em;
-        border-color: #828282;
-        margin-bottom: 30px;
-    }
+   .frm-confirm .btnAgree {
+      width: 90%;
+   }
+   .frm-confirm .label_sub {
+      line-height: 1rem;
+      margin-left: 1em;
+      margin-bottom: .5rem
+   }
+   .frm-confirm .confirm-text {
+      font-size: 0.875em
+   }
 </style>
 <?php include_once 'nav/top.php'; ?>
 <div class="tab-content" id="nav-tabContent">
@@ -316,110 +310,100 @@
                      </div>
                      <!-- confirm -->
                      <div class="frm_general_content frm-confirm" style="display: none">
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">お名前</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                        <table class="table table-bordered">
+                           <tr>
+                              <td>
+                                 <label>お名前</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="kanji_familyname"></span>
                                  <span id="kanji_name"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">お名前（フリガナ）</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>お名前（フリガナ）</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="kata_familyname"></span>
                                  <span id="kata_name"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">住所</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>住所</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="postal-code"></span><br>
                                  <span id="pref"></span><br>
                                  <span id="city"></span><br>
                                  <span id="address"></span><br>
                                  <span id="building-room"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">電話番号</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>電話番号</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="phone-number"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">メールアドレス</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>メールアドレス</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="email"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">ご連絡方法</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>ご連絡方法</label>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="contact-method"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">お問合せ分類</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>お問合せ分類</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="classification_contact"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">お問い合わせ項目</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
-                                 <span id="contact_item"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">お問い合わせ内容</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>お問い合わせ項目</label>
+                              </td>
+                              <td class="confirm-text">
+                                 <span id="classification_contact"></span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>お問い合わせ内容</label>
+                              </td>
+                              <td class="confirm-text">
                                  <span id="contact_content"></span>
-                              </div>
-                           </div>
-                        </div>
+                              </td>
+                           </tr>
+                        </table>
                         <div class="box_content_footer">
                             <div class="form-group text-center">
                                 <div class="row">
                                     <div class="col-6 col-lg-6">
-                                        <button type="submit" class="btn" id="btnBack">戻る</button>
+                                        <button type="submit" class="btn btnAgree" id="btnBack"><i class="i_rightwhite rotate"></i> 戻る</button>
                                     </div>
                                     <div class="col-6 col-lg-6">
-                                        <button type="submit" class="btn" id="btnSubmit">送信する</button>
+                                        <button type="submit" class="btn btnAgree" id="btnSubmit">送信する <i class="i_rightwhite"></i></button>
                                     </div>
                                 </div>
                             </div>

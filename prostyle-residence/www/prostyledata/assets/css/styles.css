@@ -1746,3 +1746,24 @@ main .section_news .block_valuable .title {
   .box_changelife p {font-size: 12px;}
   .box_changelife .btn_clickHere {font-size: 10px;}
 }
+.p-title01 {
+  color: #000;
+}
+#contents_inner img {
+    vertical-align: unset;
+    border-style: none;
+}
+#contents_inner a:visited {
+    color: #000;
+    text-decoration: underline;
+}
+#contents_inner a:link {
+    color: #000;
+}
+#contents_inner a {
+    font-size: 14px;
+    text-decoration: none;
+}
+.p-text {
+    text-decoration: underline;
+}

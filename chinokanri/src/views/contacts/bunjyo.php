@@ -6,10 +6,10 @@
                 <div class="row">
                     <div class="col-12">
                         <h1 id="form-title">当社管理分譲物件に関するお問合せ</h1>
-                        <ul class="steps">
-                            <li class="active"><a href="http://html-static.fudosan-king.jp/chinokanri/bunjyo.php#" id="input">入力</a></li>
-                            <li id="confirm"><a href="http://html-static.fudosan-king.jp/chinokanri/bunjyo.php#">確認</a></li>
-                            <li id="finish"><a href="http://html-static.fudosan-king.jp/chinokanri/bunjyo.php#">完了</a></li>
+                        <ul class="steps d-flex">
+                            <li class="active flex-fill"><span href="#" id="input">入力</span></li>
+                            <li id="confirm" class="flex-fill"><span href="#">確認</span></li>
+                            <li id="finish" class="flex-fill"><span href="#">完了</span></li>
                         </ul>
                         <ul class="list">
                             <li>内容によってはお答えできない場合や、電子メール以外の方法でお答えさせていただく場合がございます。</li>
@@ -106,7 +106,7 @@
                                                     <input type="text" name="postal_code" class="form-control" placeholder="例：1234567" required onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')">
                                                 </div>
                                                 <div class="col-12 col-lg-6 align-self-center">
-                                                    <button type="button" class="btnAuto btn mt-2 mt-lg-0 btn-link" onClick="AjaxZip3.zip2addr('postal_code','','prefecture','city', 'chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</button>
+                                                    <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onClick="AjaxZip3.zip2addr('postal_code','','prefecture','city', 'chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +196,7 @@
                                         <div class="col-2 col-lg-1 align-self-center">
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
-                                            <input type="text" name="building_name" class="form-control" required>
+                                            <input type="text" name="building_name" class="form-control">
                                         </div>
                                     </div>
                                 </div>

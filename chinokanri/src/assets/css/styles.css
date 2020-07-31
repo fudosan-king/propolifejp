@@ -216,91 +216,87 @@ header {
 	margin-bottom: 30px;
 }
 
-.steps {
-  margin: 60px 0;
-  overflow: hidden;
-  padding: 0;
+.steps { 
+	list-style: none; 
+	overflow: hidden; 
+	margin: 60px 0;
+ 	padding: 0;
+ 	width: 100%;
+ 	position: relative;
 }
-.steps a {
-  color: #0180CD;
+.steps::before {
+	content: '';
+	border: 2px solid #0180CD;
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+.steps li { 
   display: block;
-  padding: 7px 15px;
-  font-size: 0.875em;
-  font-family: 'SF Pro Display Semibold', "Noto Sans JP", sans-serif;
-  font-weight: 600;
-}
-.steps li {
-  float: left;
-  margin-left: 0;
-  width: 33.333%;
-  list-style: none;
-  border-right: 2px solid #0180CD; /* width: gap between arrows, color: background of document */
+  border-right: none;
   position: relative;
+  width: 100%;
+}
+.steps li span {
+  color: #0180CD;
+  text-decoration: none; 
+  padding: 8px 0 8px 20px;
+  background: #fff; 
+  position: relative; 
+  display: block;
+  font-family: "SF Pro Display Semibold", "Noto Sans JP";
+  font-size: 0.875em;
   text-align: center;
 }
-.steps li:first-child {
-  padding-left: 5px;
-  border-left: 2px solid #0180CD;
-}
-.steps li:nth-child(n+2)::before {
-  position: absolute;
-  top:0;
-  left:0;
-  display: block;
-  border-left: 15px solid #0180CD; /* width: arrow width, color: background of document */
-  border-top: 20px solid transparent; /* width: half height */
-  border-bottom: 20px solid transparent; /* width: half height */
-  width: 0;
-  height: 0;
-  content: " ";
-}
-.steps li::after {
-  z-index: 1; /* need to bring this above the next item */
-  position: absolute;
-  top: 0;
-  right: -15px; /* arrow width (negated) */
-  display: block;
-  border-left: 15px solid #0180CD; /* width: arrow width */
-  border-top: 20px solid transparent; /* width: half height */
-  border-bottom: 20px solid transparent; /* width: half height */
-  width:0;
-  height:0;
-  content: " ";
-}
-.steps li {
-	background-color: #fff;
-	border-top: 2px solid #0180CD;
-	border-bottom: 2px solid #0180CD;
-}
-.steps li::after { border-left-color: #fff; }
-
-.steps li.active { background-color: #0180CD; }
-.steps li.active::after { border-left-color: #0180CD; }
-.steps li.active a {
+.steps li.active span {
+	background: #0180CD;
 	color: #fff;
 }
-
-/* Following */
-.steps li.current ~ li { background-color: #EBEBEB; }
-.steps li.current ~ li::after {	border-left-color: #EBEBEB; }
-
-/* Hover for completed and current */
-.steps li:hover {
-	background-color: #0180CD;
-}
-.steps li:hover a {
-	color: #fff;
-}
-.steps li:hover::after {
+.steps li.active span::after {
 	border-left-color: #0180CD;
 }
-.steps li:last-child::after {
-	border-left: none;
+.steps li span::after { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 20px solid #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px; 
+  left: 100%;
+  z-index: 2; 
+}	
+.steps li span::before { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 25px solid transparent; 
+  border-bottom: 25px solid transparent;
+  border-left: 20px solid #0180CD;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px; 
+  margin-left: 2px;
+  left: 100%;
+  z-index: 1; 
 }
-.steps li:first-child::after a {
-	border-right: none;
-	border-top: none;
+.steps li:first-child span {
+  	padding-left: 10px;
 }
+.steps li:last-child span {
+  background: #fff !important;
+  color: #0180CD;
+  pointer-events: none;
+  cursor: default;
+}
+.steps li:last-child span::after { border: 0; }
 
 
 /* form */

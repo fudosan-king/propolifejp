@@ -25,10 +25,10 @@
             <div class="row">
                <div class="col-12">
                   <h1>当社管理賃貸物件に関するお問合せ</h1>
-                  <ul class="steps">
-                     <li class="active"><a href="#">入力</a></li>
-                     <li><a href="#">確認</a></li>
-                     <li><a href="#">完了</a></li>
+                  <ul class="steps d-flex">
+                     <li class="active flex-fill"><span >入力</span></li>
+                     <li class="flex-fill"><span>確認</span></li>
+                     <li class="flex-fill"><span>完了</span></li>
                   </ul>
                   <ul class="list">
                      <li>内容によってはお答えできない場合や、電子メール以外の方法でお答えさせていただく場合がございます。</li>
@@ -122,7 +122,7 @@
                                        <input type="text" name="postal-code" class="form-control required" placeholder="例：1234567" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city','address')">
                                     </div>
                                     <div class="col-12 col-lg-6 align-self-center">
-                                       <a class="btnAuto btn mt-2 mt-lg-0" style="cursor: pointer;" onclick="AjaxZip3.zip2addr('postal-code','','pref','city')"><img src="<?=base_url();?>assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
+                                       <a class="btnAuto btn mt-2 mt-lg-0" style="cursor: pointer;" onclick="AjaxZip3.zip2addr('postal-code','','pref','city')"><img src="<?=base_url();?>assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
                                     </div>
                                  </div>
                               </div>
@@ -220,7 +220,7 @@
                                  <span class="label_sub">必須</span>
                               </div>
                               <div class="col-10 col-lg-6 align-self-center">
-                                 <input type="number" name="phone-number" placeholder="例：0312341234" class="form-control required">
+                                 <input type="text" name="phone-number" placeholder="例：0312341234" class="form-control required">
                               </div>
                            </div>
                         </div>

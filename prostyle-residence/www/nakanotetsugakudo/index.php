@@ -498,37 +498,43 @@
 	      				</div>
 	      			</div>
 	      		</section>
-	      		<section class="section_consultationreservation">
+				<section class="section_consultationreservation">
 	      			<div class="container">
 	      				<div class="row">
 	      					<div class="col-12">
-	      						<div class="box_consultationreservation">
-	      							<h1>オンライン相談ご予約フォーム</h1>
-	      							<h4>中野哲学堂オンライン接客のご案内内容・メリットのご紹介</h4>
-	      							<div class="row">
-	      								<div class="col-12 col-lg-8">
-	      									<ul class="clearfix">
-	      										<li>物件の概要について</li>
-	      										<li>設備・仕様について</li>
-	      										<li>立地について</li>
-	      										<li>間取りのご案内</li>
-	      										<li>建物・デザインなどについて</li>
-	      										<li>販売状況のご説明</li>
-	      									</ul>
-	      								</div>
-	      								<div class="col-12 col-lg-4">
-	      									<div class="caller">
-	      										<img src="images/1x/caller.png" alt="" class="img-fluid" width="266">
-	      									</div>
-	      								</div>
-	      							</div>
-	      							<a href="https://www.prostyle-residence.com/online/?from=nakano" class="btn btnDetail">詳しくはこちら</a>
-	      						</div>
-	      						<p class="text-center mb-0">インターネットに接続されたPCやタブレットをご用意いただくだけで、アプリのダウンロードなどの事前準備不要で接続可能です。</p>
+	      						<a href="https://www.prostyle-residence.com/online/?from=nakano" class="d-none d-lg-block">
+		      						<div class="box_consultationreservation">
+		      							<h1>オンライン相談ご予約フォーム</h1>
+		      							<h4>中野哲学堂オンライン接客のご案内内容・メリットのご紹介</h4>
+		      							<div class="row">
+		      								<div class="col-12 col-lg-8">
+		      									<ul class="clearfix">
+		      										<li>物件の概要について</li>
+		      										<li>設備・仕様について</li>
+		      										<li>立地について</li>
+		      										<li>間取りのご案内</li>
+		      										<li>建物・デザインなどについて</li>
+		      										<li>販売状況のご説明</li>
+		      									</ul>
+		      								</div>
+		      								<div class="col-12 col-lg-4">
+		      									<div class="caller">
+		      										<img src="images/1x/caller.png" alt="" class="img-fluid" width="266">
+		      									</div>
+		      								</div>
+		      							</div>
+		      							<div class="btn btnDetail">詳しくはこちら</div>
+		      						</div>
+		      						<p class="text-center mb-0 text-dark">インターネットに接続されたPCやタブレットをご用意いただくだけで、アプリのダウンロードなどの事前準備不要で接続可能です。</p>
+	      						</a>
+	      						<a href="https://www.prostyle-residence.com/online/?from=nakano" class="d-block d-lg-none">
+	      							<img src="images/1x/consultationreservation_sp.png" alt="" class="img-fluid">
+	      						</a>
 	      					</div>
 	      				</div>
 	      			</div>
 	      		</section>
+
 	      	</main>
 
 	      	<?php require 'footer.php'; ?>

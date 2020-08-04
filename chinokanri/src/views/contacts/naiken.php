@@ -1,21 +1,15 @@
 <style type="text/css">
-    .frm-confirm button {
-        background: #0180CD;
-        border-radius: 100px;
-        color: #fff;
-        padding: 15px 20px;
-        width: 70%;
-        display: block;
-        margin: 15px auto 0;
-        font-family: 'SF Pro Display Semibold', "Noto Sans JP";
-        font-size: 1.125em;
-        position: relative;
-    }
-    .frm-confirm .form-group {
-        font-size: 0.875em;
-        border-color: #828282;
-        margin-bottom: 30px;
-    }
+   .frm-confirm .btnAgree {
+      width: 90%;
+   }
+   .frm-confirm .label_sub {
+      line-height: 1rem;
+      margin-left: 1em;
+      margin-bottom: .5rem
+   }
+   .frm-confirm .confirm-text {
+      font-size: 0.875em
+   }
 </style>
 <?php include_once 'nav/top.php'; ?>
 <div class="tab-content" id="nav-tabContent">
@@ -25,10 +19,10 @@
             <div class="row">
                <div class="col-12">
                   <h1>業者様内見依頼に関するお問い合わせ</h1>
-                  <ul class="steps">
-                     <li class="active"><a href="#">入力</a></li>
-                     <li><a href="#">確認</a></li>
-                     <li><a href="#">完了</a></li>
+                  <ul class="steps d-flex">
+                     <li class="active flex-fill"><span>入力</span></li>
+                     <li class="flex-fill"><span>確認</span></li>
+                     <li class="flex-fill"><span>完了</span></li>
                   </ul>
                   <ul class="list">
                      <!-- <li>内容によってはお答えできない場合や、電子メール以外の方法でお答えさせていただく場合がございます。</li> -->
@@ -64,7 +58,7 @@
                                  <span class="label_sub">必須</span>
                               </div>
                               <div class="col-8 col-lg-10 align-self-center">
-                                 <input type="number" name="room-number" class="form-control required" placeholder="部屋番号">
+                                 <input type="text" name="room-number" class="form-control required" placeholder="部屋番号">
                               </div>
                               <div class="col-2 col-lg-1 align-self-center">
                                  <span>号室</span>
@@ -114,7 +108,7 @@
                               </div>
                               <div class="col-10 col-lg-11">
                                  <input type="text" name="company-name" class="form-control mb-3 required" placeholder="会社名">
-                                 <input type="text" name="branch-name" class="form-control required" placeholder="支店名">
+                                 <input type="text" name="branch-name" class="form-control" placeholder="支店名">
                               </div>
                            </div>
                         </div>
@@ -131,7 +125,7 @@
                                        <input type="text" name="postal-code" class="form-control required" placeholder="例：1234567" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city')">
                                     </div>
                                     <div class="col-12 col-lg-6 align-self-center">
-                                       <a class="btnAuto btn mt-2 mt-lg-0" style="cursor: pointer;" onclick="AjaxZip3.zip2addr('postal-code','','pref','city')"><img src="<?=base_url();?>assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
+                                       <a class="btnAuto btn mt-2 mt-lg-0" style="cursor: pointer;" onclick="AjaxZip3.zip2addr('postal-code','','pref','city')"><img src="<?=base_url();?>assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
                                     </div>
                                  </div>
                               </div>
@@ -211,7 +205,7 @@
                                  <span class="label_sub">必須</span>
                               </div>
                               <div class="col-10 col-lg-11 align-self-center">
-                                 <input type="number" name="phone-number" class="form-control required" placeholder="例：0312341234">
+                                 <input type="text" name="phone-number" class="form-control required" placeholder="例：0312341234">
                               </div>
                            </div>
                         </div>
@@ -222,7 +216,7 @@
                                  <span class="label_sub">必須</span>
                               </div>
                               <div class="col-10 col-lg-11 align-self-center">
-                                 <input type="number" name="mobile-number" class="form-control required" placeholder="例：0312341234">
+                                 <input type="text" name="mobile-number" class="form-control required" placeholder="例：0312341234">
                               </div>
                            </div>
                         </div>
@@ -257,96 +251,89 @@
                      </div>
                      <!-- confirm -->
                      <div class="frm_general_content frm-confirm" style="display: none">
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">物件名</label>
-                              </div>
-                              <div class="col-10 col-lg-8" id="property-name"></div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">号室</label>
-                              </div>
-                              <div class="col-8 col-lg-8" id="room-number"></div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-12 col-lg-4">
-                                 <label for="">内覧希望日時</label>
-                              </div>
-                              <div class="col-12 col-lg-8">
-                                 <span id="visit-date"></span>
-                                 <span id="visit-hour"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">会社名</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
-                                 <span id="company-name"></span> <br>
-                                 <span id="branch-name"></span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">住所</label>
-                              </div>
-                              <div class="col-10 col-lg-8">
-                                  <span id="postal-code"></span> <br>
-                                  <span id="pref"></span> <br>
-                                  <span id="address"></span> <br>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">会社電話番号</label>
-                              </div>
-                              <div class="col-10 col-lg-8" id="phone-number"></div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">担当者携帯電話番号</label>
-                              </div>
-                              <div class="col-10 col-lg-8" id="mobile-number"></div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">メールアドレス</label>
-                              </div>
-                              <div class="col-10 col-lg-8" id="email"></div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-2 col-lg-4">
-                                 <label for="">備考</label>
-                              </div>
-                              <div class="col-10 col-lg-8" id="note"></div>
-                           </div>
-                        </div>
-                        <div class="box_content_footer">
+                        <table class="table table-bordered">
+                           <tr>
+                              <td>
+                                 <label>物件名</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td id="property-name" class="confirm-text"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>号室</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td id="room-number" class="confirm-text"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>内覧希望日時</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td>
+                                 <span id="visit-date" class="confirm-text"></span>
+                                 <span id="visit-hour" class="confirm-text"></span>
+                              </td>
+                           </tr>
+                        <tr>
+                              <td>
+                                 <label>会社名</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td>
+                                 <span id="company-name" class="confirm-text"></span> <br>
+                                 <span id="branch-name" class="confirm-text"></span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>住所</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td>
+                                  <span id="postal-code" class="confirm-text"></span> <br>
+                                  <span id="pref" class="confirm-text"></span> <br>
+                                  <span id="address" class="confirm-text"></span> <br>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>会社電話番号</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td id="phone-number" class="confirm-text"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>担当者携帯電話番号</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td id="mobile-number" class="confirm-text"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>メールアドレス</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td id="email" class="confirm-text"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label>備考</label>
+                                 <span class="label_sub">必須</span>
+                              </td>
+                              <td id="note" class="confirm-text"></td>
+                           </tr>
+                        </table>
+                        <div class="box_content_footer mt-4">
                             <div class="form-group text-center">
                                 <div class="row">
-                                    <div class="col-6 col-lg-6">
-                                        <button type="submit" class="btn" id="btnBack">戻る</button>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btnAgree" id="btnBack"><i class="i_rightwhite rotate"></i> 戻る</button>
                                     </div>
-                                    <div class="col-6 col-lg-6">
-                                        <button type="submit" class="btn" id="btnSubmit">送信する</button>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btnAgree" id="btnSubmit">送信する <i class="i_rightwhite"></i></button>
                                     </div>
                                 </div>
                             </div>

@@ -34,22 +34,54 @@ if(have_posts()):
 
         if($query->have_posts()):
             ?>
-                <div class="box_relation_article">
+                <!-- <div class="box_relation_article">
                     <h2>関連記事</h2>
                     <div class="carousel carousel_relation_article" data-flickity='{ "groupCells": true, "pageDots": false, "freeScroll": true, "wrapAround": true }'>
                         <?php
+                        // while($query->have_posts()): $query->the_post();
+                        //     $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
+                        //     ?>
+                        //         <div class="carousel-cell">
+                        //             <a class="relation_article_img" href="<?php the_permalink(); ?>" target="_blank">
+                        //                 <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); //alt but get post title?>" title="<?php the_title(); //alt but get post title?>" class="img-fluid">
+                        //             </a>
+                        //             <p><?php the_title(); ?></p>
+                        //         </div>                            
+                        //     <?php
+                        // endwhile;
+                        ?>
+                    </div>
+                </div> -->
+
+                <div class="box_relation_article">
+                    <h2>関連記事</h2>
+                    <div class="row">
+                    <?php
                         while($query->have_posts()): $query->the_post();
                             $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
-                            ?>
-                                <div class="carousel-cell">
-                                    <a class="relation_article_img" href="<?php the_permalink(); ?>" target="_blank">
-                                        <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); //alt but get post title?>" title="<?php the_title(); //alt but get post title?>" class="img-fluid">
-                                    </a>
-                                    <p><?php the_title(); ?></p>
-                                </div>                            
-                            <?php
+                    ?>
+                        <div class="col-12 col-lg-6">
+                            <div class="relation_article_item">
+                                <div class="row no-gutters">
+                                    <div class="col-6 col-lg-12 align-self-center">
+                                        <a class="relation_article_img" href="<?php the_permalink(); ?>" target="_blank">
+                                            <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="img-fluid lazy-loaded" src="<?php echo $thumbnails->url;?>">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-lg-12 align-self-center">
+                                        <div class="relation_article_content">
+                                            <p>
+                                                <!-- <a href="<?php // the_permalink(); ?>" target="_blank"><?php // the_title(); ?></a> -->
+                                                <?php the_title(); ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
                         endwhile;
-                        ?>
+                    ?>
                     </div>
                 </div>
             <?php

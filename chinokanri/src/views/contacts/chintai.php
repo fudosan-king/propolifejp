@@ -295,7 +295,7 @@
                         </div>
                         <div class="box_content_footer">
                             <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                            個人情報の取扱に関しましては <a class="btn-link" href="#"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                            個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                             ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
                             <div class="form-group text-center">

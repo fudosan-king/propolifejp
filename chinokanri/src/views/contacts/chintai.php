@@ -8,7 +8,11 @@
       margin-bottom: .5rem
    }
    .frm-confirm .confirm-text {
-      font-size: 0.875em
+      font-size: 0.875em;
+      width: 70%;
+   }
+   .frm-confirm .table-bordered td {
+      border: 1px solid #555;
    }
 </style>
 <?php include_once 'nav/top.php'; ?>
@@ -18,7 +22,7 @@
          <div class="container">
             <div class="row">
                <div class="col-12">
-                  <h1>当社管理賃貸物件に関するお問合せ</h1>
+                  <h1>当社管理賃貸物件に関するお問い合わせ</h1>
                   <ul class="steps d-flex">
                      <li class="active flex-fill"><span >入力</span></li>
                      <li class="flex-fill"><span>確認</span></li>
@@ -270,20 +274,20 @@
                               <div class="col-2 col-lg-1 align-self-center">
                               </div>
                               <div class="col-10 col-lg-11 align-self-center">
-                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" id="customRadio1" name="contact_item" class="custom-control-input" value="建物設備故障について">
+                                 <div class="custom-control custom-checkbox mb-2">
+                                    <input type="checkbox" id="customRadio1" name="contact_item[]" class="custom-control-input" value="建物設備故障について">
                                     <label class="custom-control-label" for="customRadio1">建物設備故障について</label>
                                  </div>
-                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" id="customRadio2" name="contact_item" class="custom-control-input" value="引越しを検討中、新しい物件を探してる">
+                                 <div class="custom-control custom-checkbox mb-2">
+                                    <input type="checkbox" id="customRadio2" name="contact_item[]" class="custom-control-input" value="引越しを検討中、新しい物件を探してる">
                                     <label class="custom-control-label" for="customRadio2">引越しを検討中、新しい物件を探してる</label>
                                  </div>
-                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" id="customRadio3" name="contact_item" class="custom-control-input" value="ご意見・ご要望">
+                                 <div class="custom-control custom-checkbox mb-2">
+                                    <input type="checkbox" id="customRadio3" name="contact_item[]" class="custom-control-input" value="ご意見・ご要望">
                                     <label class="custom-control-label" for="customRadio3">ご意見・ご要望</label>
                                  </div>
-                                 <div class="custom-control custom-radio mb-2">
-                                    <input type="radio" id="customRadio4" name="contact_item" class="custom-control-input" value="その他">
+                                 <div class="custom-control custom-checkbox mb-2">
+                                    <input type="checkbox" id="customRadio4" name="contact_item[]" class="custom-control-input" value="その他">
                                     <label class="custom-control-label" for="customRadio4">その他</label>
                                  </div>
                               </div>
@@ -314,7 +318,6 @@
                            <tr>
                               <td>
                                  <label>お名前</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td class="confirm-text">
                                  <span id="kanji_familyname"></span>
@@ -324,7 +327,6 @@
                            <tr>
                               <td>
                                  <label>お名前（フリガナ）</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td class="confirm-text">
                                  <span id="kata_familyname"></span>
@@ -334,7 +336,6 @@
                            <tr>
                               <td>
                                  <label>住所</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td class="confirm-text">
                                  <span id="postal-code"></span><br>
@@ -347,7 +348,6 @@
                            <tr>
                               <td>
                                  <label>電話番号</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td class="confirm-text">
                                  <span id="phone-number"></span>
@@ -356,7 +356,6 @@
                            <tr>
                               <td>
                                  <label>メールアドレス</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td class="confirm-text">
                                  <span id="email"></span>
@@ -373,7 +372,6 @@
                            <tr>
                               <td>
                                  <label>お問合せ分類</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td class="confirm-text">
                                  <span id="classification_contact"></span>
@@ -384,7 +382,7 @@
                                  <label>お問い合わせ項目</label>
                               </td>
                               <td class="confirm-text">
-                                 <span id="classification_contact"></span>
+                                 <span id="contact_item"></span>
                               </td>
                            </tr>
                            <tr>

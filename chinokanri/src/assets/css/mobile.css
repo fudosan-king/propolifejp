@@ -196,6 +196,14 @@
     .banner-content h3 {font-size: 18pt;}
 
     footer ul li a {padding: 0 0.4rem; font-size: 11px;}
+
+    .btnAuto {
+    	font-size: .75rem;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: block;
+    }
 }
 
 

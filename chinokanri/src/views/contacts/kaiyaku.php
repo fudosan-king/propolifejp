@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>解約に関するお問合せ</h1>
+                        <h1>解約に関するお問い合わせ</h1>
                         <ul class="steps d-flex">
                             <li class="active flex-fill" id="input"><span>入力</span></li>
                             <li id="confirm" class="flex-fill"><span>確認</span></li>
@@ -36,11 +36,13 @@
                                             <span class="label_sub mt-2">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-11">
-                                            <input type="text" class="form-control mb-2" name="contract_estate_name" required>
                                             <div class="custom-control custom-checkbox">
                                                 <input type="hidden" class="custom-control-input" name="contract_detached_house" value="なし">
                                                 <input type="checkbox" class="custom-control-input" name="contract_detached_house_ckb" id="contract_detached_house_ckb">
-                                                <label class="custom-control-label" for="contract_detached_house_ckb">一戸建てを契約されているお客様はこちらにチェックを入れて下さい。物件名は省略頂けます。</label>
+                                                <label class="custom-control-label" for="contract_detached_house_ckb">一戸建てを契約されているお客様はこちらにチェックを入れて下さい。物件名と号室は省略頂けます。</label>
+                                            </div>
+                                            <div>
+                                                <input type="text" class="form-control mb-2" name="contract_estate_name" required>
                                             </div>
                                         </div>
                                     </div>
@@ -60,6 +62,7 @@
                                         </div>
                                     </div>
 
+                                    <label for="">住所</label>
                                     <p class="mb-1">郵便番号</p>
                                     <div class="row mb-3">
                                         <div class="col-2 col-lg-1 align-self-center">
@@ -400,6 +403,7 @@
                                         </div>
                                     </div>
 
+                                    <label for="">住所</label>
                                     <p class="mb-1">郵便番号</p>
                                     <div class="row mb-3">
                                         <div class="col-2 col-lg-1 align-self-center">
@@ -602,6 +606,7 @@
                                         </div>
                                     </div>
 
+                                    <label for="">住所</label>
                                     <p class="mb-1">郵便番号</p>
                                     <div class="row mb-3">
                                         <div class="col-2 col-lg-1 align-self-center">
@@ -749,9 +754,8 @@
                                                 <input type="text" class="form-control datepicker" placeholder="2020/06/26" name="cancellation_date" required>
                                                 <i class="i_datetime"></i>
                                             </div>
-                                            <p class="mb-0 red">※　解約日までの賃料が発生いたします。解約日当月の賃料は通常月と同じよう全額お振込みお願いいたしま 
-                                            す。敷金精算時に精算いたします。<br>※　解約日までに室内お荷物をすべて移動をお願いいたします。ライフラインの解約手続きもお願いいたします。<br>
-                                            ※　例：1ヶ月前予告の場合、通知日が1月1日なら解約日は最短で2月1日となります。</p>
+                                            <p class="mb-0 red">※　解約日までの賃料が発生いたします。解約日当月の賃料は通常月と同じように全額お振込みをお願いいたします。敷金精算時に精算いたします。<br/>※　解約日までに室内お荷物をすべて移動をお願いいたします。ライフラインの解約手続きもお願いいたします。<br/>※　例：1ヶ月前予告の場合、通知日が1月1日なら解約日は最短で2月1日となります。
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

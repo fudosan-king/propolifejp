@@ -6,10 +6,10 @@
                 <div class="row">
                     <div class="col-12">
                         <h1>管理に係る 重要事項調査報告書 作成の依頼</h1>
-                        <ul class="steps">
-                            <li class="input active"><a href="javascript:void(0)">入力</a></li>
-                            <li class="confirm"><a href="javascript:void(0)">確認</a></li>
-                            <li class="finish"><a href="javascript:void(0)">完了</a></li>
+                        <ul class="steps d-flex">
+                            <li class="input active flex-fill"><span>入力</span></li>
+                            <li class="confirm flex-fill"><span>確認</span></li>
+                            <li class="finish flex-fill"><span>完了</span></li>
                         </ul>
 
                         <?php if(!isset($_GET['finish'])): ?>
@@ -86,7 +86,7 @@
                                                             <input type="text" name="building_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <a class="btnAuto btn mt-2 mt-lg-0" href="javascript:void(0)" onclick="AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
+                                                            <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -377,8 +377,8 @@
                                                             <input type="text" name="kondo_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <a class="btnAuto btn mt-2 mt-lg-0" href="javascript:void(0)" onclick="AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
-                                                        </div>
+                                                            <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
+                                                      </div>
                                                     </div>
                                                 </div>
                                             </div>

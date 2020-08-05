@@ -6,10 +6,10 @@
                 <div class="row">
                     <div class="col-12">
                         <h1>解約に関するお問合せ</h1>
-                        <ul class="steps">
-                            <li class="active" id="input"><a href="#">入力</a></li>
-                            <li id="confirm"><a href="#">確認</a></li>
-                            <li id="finish"><a href="#">完了</a></li>
+                        <ul class="steps d-flex">
+                            <li class="active flex-fill" id="input"><span>入力</span></li>
+                            <li id="confirm" class="flex-fill"><span>確認</span></li>
+                            <li id="finish" class="flex-fill"><span>完了</span></li>
                         </ul>
                         <ul class="list">
                             <li>弊社管理物件お住まいの方専用となります。管理会社が不明な場合は、弊社までご連絡下さい。</li>
@@ -71,7 +71,7 @@
                                                     <input type="text" class="form-control" placeholder="例：1234567" name="contract_estate_postal_code" required onkeyup="AjaxZip3.zip2addr(this,'','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')">
                                                 </div>
                                                 <div class="col-12 col-lg-6 align-self-center">
-                                                    <button type="button" class="btnAuto btn mt-2 mt-lg-0 btn-link" href="http://html-static.fudosan-king.jp/chinokanri/kaiyaku.php#" onclick="AjaxZip3.zip2addr('contract_estate_postal_code','','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</button>
+                                                    <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('contract_estate_postal_code','','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -411,7 +411,7 @@
                                                     <input type="text" class="form-control" placeholder="例：1234567" name="relocation_postal_code" required onkeyup="AjaxZip3.zip2addr(this,'','relocation_refectures','relocation_city')">
                                                 </div>
                                                 <div class="col-12 col-lg-6 align-self-center">
-                                                    <button type="button" class="btnAuto btn mt-2 mt-lg-0 btn-link" href="http://html-static.fudosan-king.jp/chinokanri/kaiyaku.php#" onclick="AjaxZip3.zip2addr('relocation_postal_code','','relocation_refectures','relocation_city')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</button>
+                                                    <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('relocation_postal_code','','relocation_refectures','relocation_city')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -613,7 +613,7 @@
                                                     <input type="text" class="form-control" placeholder="例：1234567" name="emergency_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','emergency_refectures','emergency_city','emergency_location_number')" required>
                                                 </div>
                                                 <div class="col-12 col-lg-6 align-self-center">
-                                                    <a class="btnAuto btn mt-2 mt-lg-0" href="http://html-static.fudosan-king.jp/chinokanri/kaiyaku.php#" onclick="AjaxZip3.zip2addr('emergency_postal_code','','emergency_refectures','emergency_city','emergency_location_number')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> 郵便番号から住所を自動的入力</a>
+                                                    <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('emergency_postal_code','','emergency_refectures','emergency_city','emergency_location_number')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
                                                 </div>
                                             </div>
                                         </div>

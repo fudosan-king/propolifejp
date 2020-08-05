@@ -9,7 +9,6 @@
                         <div class="col-12 text-center">
                             <ul>
                                 <li><a href="<?=base_url();?>contact" target="_blank">お問い合わせ</a></li>
-                                <li><a href="<?=base_url();?>kaiyaku" target="_blank">解約フォーム</a></li>
                                 <li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
                                 <li><a href="<?=base_url();?>privacy-policy" target="_blank">プライバシーポリシー</a></li>
                             </ul>

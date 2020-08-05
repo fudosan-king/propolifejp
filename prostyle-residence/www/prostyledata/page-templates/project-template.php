@@ -42,7 +42,6 @@
 									    
 									    <?php 
 											get_template_part( 'template-parts/distribution/block', 'distribution' );
-											get_template_part( 'template-parts/distribution/block', 'gallery' );
 										?>
 
 									</div>

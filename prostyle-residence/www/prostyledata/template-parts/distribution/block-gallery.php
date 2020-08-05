@@ -24,12 +24,11 @@ function loadGallerySlider($isDesktop = true) {
 
         // GALLERY PC VERSION
         $flag = 1;
-        echo '<div class="owl-carousel owl-theme owl_gallerys ">';
+        echo '<div class="box_gallerys">';
         while(have_rows($galleryControl)): the_row();
 
             if ($flag == 1){
                 echo '  
-                <div class="item">
                     <div class="row no-gutters">';
             }
 
@@ -156,7 +155,6 @@ function loadGallerySlider($isDesktop = true) {
 
             if ($flag == $maxImage || $flag == count(get_field($galleryControl)) ){
                 echo '
-                    </div>
                 </div>';
                 $flag = 0;
             }
@@ -173,10 +171,7 @@ function loadGallerySlider($isDesktop = true) {
         <div class="container">
             <div class="row">
                 <div class="col col-sm-12">
-                    <h2 class="headline"><img src="<?php SGVinK::the_images_uri(); ?>/GALLERY.png" height="35" class="img-responsive" alt="Image"></h2>
                     <?php loadGallerySlider(); ?>
-
-
                 </div>
             </div>
         </div>
@@ -188,7 +183,6 @@ function loadGallerySlider($isDesktop = true) {
         <div class="container">
             <div class="row">
                 <div class="col col-sm-12">
-                    <h2 class="headline"><img src="<?php SGVinK::the_images_uri(); ?>/GALLERY.png" height="35" class="img-responsive" alt="Image"></h2>
                     <?php loadGallerySlider(false); ?>
 
                 </div>

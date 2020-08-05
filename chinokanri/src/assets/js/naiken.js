@@ -29,7 +29,15 @@ $(function($) {
         $.each(data, function(key, value) {
             var name = value.name;
             var val = value.value;
-            $("#"+name).html(val);
+            if (name.includes('[]') === false) 
+            {
+                $("#"+name).html(val);
+            }
+            else 
+            {
+                name = name.replace('[]','');
+                $("#"+name).append(val + '<br>');
+            }
         })
     }
 

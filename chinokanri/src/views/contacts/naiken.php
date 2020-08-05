@@ -8,7 +8,11 @@
       margin-bottom: .5rem
    }
    .frm-confirm .confirm-text {
-      font-size: 0.875em
+      font-size: 0.875em;
+      width: 70%;
+   }
+   .frm-confirm .table-bordered td {
+      border: 1px solid #555;
    }
 </style>
 <?php include_once 'nav/top.php'; ?>
@@ -255,21 +259,18 @@
                            <tr>
                               <td>
                                  <label>物件名</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td id="property-name" class="confirm-text"></td>
                            </tr>
                            <tr>
                               <td>
                                  <label>号室</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td id="room-number" class="confirm-text"></td>
                            </tr>
                            <tr>
                               <td>
                                  <label>内覧希望日時</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td>
                                  <span id="visit-date" class="confirm-text"></span>
@@ -279,7 +280,6 @@
                         <tr>
                               <td>
                                  <label>会社名</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td>
                                  <span id="company-name" class="confirm-text"></span> <br>
@@ -289,7 +289,6 @@
                            <tr>
                               <td>
                                  <label>住所</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td>
                                   <span id="postal-code" class="confirm-text"></span> <br>
@@ -300,28 +299,24 @@
                            <tr>
                               <td>
                                  <label>会社電話番号</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td id="phone-number" class="confirm-text"></td>
                            </tr>
                            <tr>
                               <td>
                                  <label>担当者携帯電話番号</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td id="mobile-number" class="confirm-text"></td>
                            </tr>
                            <tr>
                               <td>
                                  <label>メールアドレス</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td id="email" class="confirm-text"></td>
                            </tr>
                            <tr>
                               <td>
                                  <label>備考</label>
-                                 <span class="label_sub">必須</span>
                               </td>
                               <td id="note" class="confirm-text"></td>
                            </tr>

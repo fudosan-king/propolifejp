@@ -269,29 +269,29 @@
                                             <span class="label_sub">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-11">
-                                            <div class="custom-control custom-radio mb-2">
-                                                <input type="checkbox" id="customRadio5" name="contact_item[]" class="custom-control-input" value="マンション管理について" required>
-                                                <label class="custom-control-label" for="customRadio5">マンション管理について</label>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" id="customCheckbox5" name="contact_item[]" class="custom-control-input" value="マンション管理について" required>
+                                                <label class="custom-control-label" for="customCheckbox5">マンション管理について</label>
                                             </div>
-                                            <div class="custom-control custom-radio mb-2">
-                                                <input type="checkbox" id="customRadio6" name="contact_item[]" class="custom-control-input" value="賃貸・売買のご相談" required>
-                                                <label class="custom-control-label" for="customRadio6">賃貸・売買のご相談</label>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" id="customCheckbox6" name="contact_item[]" class="custom-control-input" value="賃貸・売買のご相談" required>
+                                                <label class="custom-control-label" for="customCheckbox6">賃貸・売買のご相談</label>
                                             </div>
-                                            <div class="custom-control custom-radio mb-2">
-                                                <input type="checkbox" id="customRadio7" name="contact_item[]" class="custom-control-input" value="建物・設備について" required>
-                                                <label class="custom-control-label" for="customRadio7">建物・設備について</label>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" id="customCheckbox7" name="contact_item[]" class="custom-control-input" value="建物・設備について" required>
+                                                <label class="custom-control-label" for="customCheckbox7">建物・設備について</label>
                                             </div>
-                                            <div class="custom-control custom-radio mb-2">
-                                                <input type="checkbox" id="customRadio8" name="contact_item[]" class="custom-control-input" value="リフォームの相談" required>
-                                                <label class="custom-control-label" for="customRadio8">リフォームの相談</label>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" id="customCheckbox8" name="contact_item[]" class="custom-control-input" value="リフォームの相談" required>
+                                                <label class="custom-control-label" for="customCheckbox8">リフォームの相談</label>
                                             </div>
-                                            <div class="custom-control custom-radio mb-2">
-                                                <input type="checkbox" id="customRadio9" name="contact_item[]" class="custom-control-input" value="ご意見・ご要望" required>
-                                                <label class="custom-control-label" for="customRadio9">ご意見・ご要望</label>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" id="customCheckbox9" name="contact_item[]" class="custom-control-input" value="ご意見・ご要望" required>
+                                                <label class="custom-control-label" for="customCheckbox9">ご意見・ご要望</label>
                                             </div>
-                                            <div class="custom-control custom-radio mb-2">
-                                                <input type="checkbox" id="customRadio10" name="contact_item[]" class="custom-control-input" value="その他" required>
-                                                <label class="custom-control-label" for="customRadio10">その他</label>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" id="customCheckbox10" name="contact_item[]" class="custom-control-input" value="その他" required>
+                                                <label class="custom-control-label" for="customCheckbox10">その他</label>
                                             </div>
                                         </div>
                                     </div>

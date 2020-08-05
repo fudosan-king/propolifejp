@@ -27,16 +27,11 @@
         var disabledElementArr = ['radio', 'checkbox']
 
         Array.from(datepickerElements).forEach((datepickerElement) => {
-            datepickerElement.addEventListener('click', function() {
-                if (datepickerElement.dataset.isMounted != 'true') {
-                    $(datepickerElement).datepicker({
-                        language: 'ja',
-                        autoclose: true
-                    });
-                    $(datepickerElement).datepicker('show')
-                    datepickerElement.dataset.isMounted = 'true'
-                }
-            })
+            $(datepickerElement).datepicker({
+                language: 'ja',
+                autoclose: true,
+                disableTouchKeyboard: true
+            });
         })
 
         btnBack.addEventListener('click', function() {

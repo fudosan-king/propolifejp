@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 id="form-title">当社管理分譲物件に関するお問合せ</h1>
+                        <h1 id="form-title">当社管理分譲物件に関するお問い合わせ</h1>
                         <ul class="steps d-flex">
                             <li class="active flex-fill"><span href="#" id="input">入力</span></li>
                             <li id="confirm" class="flex-fill"><span href="#">確認</span></li>
@@ -270,27 +270,27 @@
                                         </div>
                                         <div class="col-10 col-lg-11">
                                             <div class="custom-control custom-radio mb-2">
-                                                <input type="radio" id="customRadio5" name="contact_item" class="custom-control-input" value="マンション管理について" required>
+                                                <input type="checkbox" id="customRadio5" name="contact_item[]" class="custom-control-input" value="マンション管理について" required>
                                                 <label class="custom-control-label" for="customRadio5">マンション管理について</label>
                                             </div>
                                             <div class="custom-control custom-radio mb-2">
-                                                <input type="radio" id="customRadio6" name="contact_item" class="custom-control-input" value="賃貸・売買のご相談" required>
+                                                <input type="checkbox" id="customRadio6" name="contact_item[]" class="custom-control-input" value="賃貸・売買のご相談" required>
                                                 <label class="custom-control-label" for="customRadio6">賃貸・売買のご相談</label>
                                             </div>
                                             <div class="custom-control custom-radio mb-2">
-                                                <input type="radio" id="customRadio7" name="contact_item" class="custom-control-input" value="建物・設備について" required>
+                                                <input type="checkbox" id="customRadio7" name="contact_item[]" class="custom-control-input" value="建物・設備について" required>
                                                 <label class="custom-control-label" for="customRadio7">建物・設備について</label>
                                             </div>
                                             <div class="custom-control custom-radio mb-2">
-                                                <input type="radio" id="customRadio8" name="contact_item" class="custom-control-input" value="リフォームの相談" required>
+                                                <input type="checkbox" id="customRadio8" name="contact_item[]" class="custom-control-input" value="リフォームの相談" required>
                                                 <label class="custom-control-label" for="customRadio8">リフォームの相談</label>
                                             </div>
                                             <div class="custom-control custom-radio mb-2">
-                                                <input type="radio" id="customRadio9" name="contact_item" class="custom-control-input" value="ご意見・ご要望" required>
+                                                <input type="checkbox" id="customRadio9" name="contact_item[]" class="custom-control-input" value="ご意見・ご要望" required>
                                                 <label class="custom-control-label" for="customRadio9">ご意見・ご要望</label>
                                             </div>
                                             <div class="custom-control custom-radio mb-2">
-                                                <input type="radio" id="customRadio10" name="contact_item" class="custom-control-input" value="その他" required>
+                                                <input type="checkbox" id="customRadio10" name="contact_item[]" class="custom-control-input" value="その他" required>
                                                 <label class="custom-control-label" for="customRadio10">その他</label>
                                             </div>
                                         </div>

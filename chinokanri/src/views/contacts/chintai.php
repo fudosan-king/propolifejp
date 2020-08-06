@@ -251,7 +251,7 @@
                            </div>
                         </div>
                         <div class="form-group">
-                           <label for="">お問合せ分類</label>
+                           <label for="">お問い合わせ分類</label>
                            <div class="row">
                               <div class="col-2 col-lg-1 align-self-center">
                                  <span class="label_sub">必須</span>
@@ -271,23 +271,24 @@
                         <div class="form-group">
                            <label for="">お問い合わせ項目（複数選択可）</label>
                            <div class="row">
-                              <div class="col-2 col-lg-1 align-self-center">
+                              <div class="col-2 col-lg-1">
+                                 <span class="label_sub">必須</span>
                               </div>
                               <div class="col-10 col-lg-11 align-self-center">
                                  <div class="custom-control custom-checkbox mb-2">
-                                    <input type="checkbox" id="customRadio1" name="contact_item[]" class="custom-control-input" value="建物設備故障について">
+                                    <input type="checkbox" id="customRadio1" name="contact_item[]" class="custom-control-input required" value="建物設備故障について">
                                     <label class="custom-control-label" for="customRadio1">建物設備故障について</label>
                                  </div>
                                  <div class="custom-control custom-checkbox mb-2">
-                                    <input type="checkbox" id="customRadio2" name="contact_item[]" class="custom-control-input" value="引越しを検討中、新しい物件を探してる">
+                                    <input type="checkbox" id="customRadio2" name="contact_item[]" class="custom-control-input required" value="引越しを検討中、新しい物件を探してる">
                                     <label class="custom-control-label" for="customRadio2">引越しを検討中、新しい物件を探してる</label>
                                  </div>
                                  <div class="custom-control custom-checkbox mb-2">
-                                    <input type="checkbox" id="customRadio3" name="contact_item[]" class="custom-control-input" value="ご意見・ご要望">
+                                    <input type="checkbox" id="customRadio3" name="contact_item[]" class="custom-control-input required" value="ご意見・ご要望">
                                     <label class="custom-control-label" for="customRadio3">ご意見・ご要望</label>
                                  </div>
                                  <div class="custom-control custom-checkbox mb-2">
-                                    <input type="checkbox" id="customRadio4" name="contact_item[]" class="custom-control-input" value="その他">
+                                    <input type="checkbox" id="customRadio4" name="contact_item[]" class="custom-control-input required" value="その他">
                                     <label class="custom-control-label" for="customRadio4">その他</label>
                                  </div>
                               </div>
@@ -371,7 +372,7 @@
                            </tr>
                            <tr>
                               <td>
-                                 <label>お問合せ分類</label>
+                                 <label>お問い合わせ分類</label>
                               </td>
                               <td class="confirm-text">
                                  <span id="classification_contact"></span>

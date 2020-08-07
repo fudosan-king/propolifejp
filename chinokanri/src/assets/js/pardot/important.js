@@ -346,4 +346,11 @@ $(function($) {
         
     }
 
+    // Test confirm
+    // demo();
+    // setTimeout(function(){
+    //     $('#btn_confirm').click();
+    // },2000);
+    
+
 });

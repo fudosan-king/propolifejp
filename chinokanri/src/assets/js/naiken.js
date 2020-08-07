@@ -63,30 +63,23 @@ $(function($) {
         var data = $('.frm-input input.required,select.required').map(function() {
             key = $(this).attr('name');
             val = $(this).val();
-            type_elem = $(this).attr('type');
-            if(['radio'].indexOf(type_elem) != -1) {
-                checked = $('input[name='+key+']:checked');
-                val = checked.length > 0 ? checked.val() : '';
+            if(['radio','checkbox'].indexOf($(this).attr('type')) != -1) {
+                if($('input[name='+key+']:checked').length > 0) val = $('input[name='+key+']:checked').val();
+                else val = '';
             }
-            else if(['checkbox'].indexOf(type_elem) != -1) {
-                key = key.includes('[]') ? key.replace('[]','') : key;
-                val = $('input[name^='+key+']:checked').map(function() {
-                    return $(this).val();
-                });
-            }
-            var obj = {};
-            obj['name'] = key;
-            obj['value'] = val;
+            var obj={};
+            obj['name']=key;
+            obj['value']=val;
             return obj;
         });
     	var invalid = $();
     	$.each(data, function(key, value) {
     		var name = value.name;
     		var val = value.value;
-            var element = $('[name^='+name+']');
+            var element = $('[name='+name+']')
             var required = element.hasClass('required');
             if(required) {
-                if(val == '' || val.length == 0) {
+                if(val=='') {
                     element.addClass('is-invalid');
                     invalid.push(name);
 

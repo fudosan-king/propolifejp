@@ -22,7 +22,7 @@
          <div class="container">
             <div class="row">
                <div class="col-12">
-                  <h1>内見依頼に関するお問い合わせ</h1>
+                  <h1>業者様内見依頼に関するお問い合わせ</h1>
                   <ul class="steps d-flex">
                      <li class="active flex-fill"><span>入力</span></li>
                      <li class="flex-fill"><span>確認</span></li>
@@ -41,7 +41,7 @@
          <div class="container">
             <div class="row">
                <div class="col-12">
-                  <form action="http://go.pardot.com/l/185822/2020-07-16/q9wfsc" class="frm_general" method="post">
+                  <form action="https://go.pardot.com/l/185822/2020-07-16/q9wfsc" class="frm_general" method="post">
                      <!-- input data -->
                      <div class="frm_general_content frm-input">
                         <div class="form-group">
@@ -236,7 +236,7 @@
                               </div>
                         </div>
                         <div class="form-group">
-                           <label for="">お問い合わせ内容</label>
+                           <label for="">備考</label>
                            <textarea name="note" id="" class="form-control" cols="30" rows="7" placeholder="ご質問やご希望があればご記入ください。"></textarea>
                         </div>
                         <div class="box_content_footer">

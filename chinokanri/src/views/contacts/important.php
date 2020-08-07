@@ -28,20 +28,7 @@
         </section>
 
         <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
-            <div style="
-            color:#AE8148;
-            font-size:16pt; 
-            text-align:center; 
-            padding: 3%; 
-            border: #e8e8e8 1px solid;
-            border-radius: 10px;
-            width: 50%;
-            margin: 0 auto 130px;
-            line-height: 1.6;
-            -webkit-box-shadow: 12px 12px 13px 1px rgba(0,0,0,0.32);
-            -moz-box-shadow: 12px 12px 13px 1px rgba(0,0,0,0.32);
-            box-shadow: 12px 12px 13px 1px rgba(0,0,0,0.32);
-            ">
+            <div class="success-submit">
                 <div class="mb-4"><b>お問い合わせが完了しました</b></div>
                 <div class="mb-3">お問い合わせ有り難う御座います。 <br>
                 後程、メールにてお振込先等、ご連絡致します。 <br>
@@ -638,10 +625,10 @@
                                         <h2>宅地建物取引業者情報</h2>
                                         <div class="form-group">
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                     <label for="">会社名</label> <span class="label_sub mt-2">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                     <label for="">会社名</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr company_name"></div>
                                                     <div class="cfr branch_name"></div>
@@ -651,11 +638,11 @@
                                         <div class="form-group">
                                             
                                            
-                                            <div class="row mb-3">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">所在地（送付先）</label> <span class="label_sub">必須</span>
+                                            <div class="row">
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">所在地（送付先）</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr building_address"></div>
                                                 </div>
@@ -664,11 +651,11 @@
                                         <div class="form-group">
                                             
                                            
-                                            <div class="row mb-3">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">免許番号</label> <span class="label_sub">必須</span>
+                                            <div class="row">
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">免許番号</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr building_license"></div>
                                                 </div>
@@ -677,11 +664,11 @@
                                         <div class="form-group">
                                             
                                             
-                                            <div class="row mb-2">
-                                                <div class="col col-lg-5">
+                                            <div class="row">
+                                                <div class="col col-3 col-lg-5">
                                                     <label for="">担当者</label><p class="mb-1">所属部課（支店名）</p>
                                                 </div>
-                                                <div class="col-12 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr representative_office"></div>
                                                 </div>
@@ -690,10 +677,10 @@
                                         <div class="form-group">
                                             
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">氏名</label> <span class="label_sub">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">氏名</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr name"></div>
                                                 </div>
@@ -702,10 +689,10 @@
                                         <div class="form-group">
                                             
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">電話番号（半角数字</label> <span class="label_sub">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">電話番号（半角数字</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr phone"></div>
                                                 </div>
@@ -714,10 +701,10 @@
                                         <div class="form-group">
                                             
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">FAX番号（半角数字</label> <span class="label_sub">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">FAX番号（半角数字</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                      <div class="cfr fax"></div>
                                                 </div>
@@ -726,10 +713,10 @@
                                         <div class="form-group">
                                             
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">メールアドレス（半角英数字）</label> <span class="label_sub">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">メールアドレス（半角英数字）</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                      <div class="cfr email"></div>
                                                 </div>
@@ -749,47 +736,39 @@
                                         <div class="form-group">
                                             
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">名称</label> <span class="label_sub mt-2">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">名称</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                      <div class="cfr kondo_name"></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="row mb-3">
-                                                <div class="col-2 col-lg-5">
-                                                     <label for="">所在地</label> <span class="label_sub">必須</span>
+                                            <div class="row">
+                                                <div class="col col-3 col-lg-5">
+                                                     <label for="">所在地</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr kondo_address"></div>
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <div class="form-group mb-0">
-                                            <label for="">売却依頼主</label>
-                                            
+                                        <div class="form-group">
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    住戸番号 <span class="label_sub">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">売却依頼主</label> 
+                                                    <p class="mb-1">住戸番号</p>
+                                                    <p class="mb-1">氏名</p>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
-                                                     <div class="cfr unit_number_sale"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    氏名 <span class="label_sub">必須</span>
-                                                </div>
-                                                <div class="col-10 col-lg-7">
-                                                    <!-- cfr -->
-                                                     <div class="cfr unit_name_sale"></div>
+                                                    <label for="">&nbsp;</label>
+                                                    <p class="cfr unit_number_sale mb-1"></p>
+                                                    <p class="cfr unit_name_sale mb-1"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -806,11 +785,11 @@
                                         <h2>依頼書類・使用目的</h2>
                                         <div class="form-group">
                                             
-                                            <div class="row mb-3">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">依頼書類</label> <span class="label_sub">必須</span>
+                                            <div class="row">
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">依頼書類</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr request_document"></div>
                                                 </div>
@@ -818,11 +797,11 @@
                                         </div>
                                         <div class="form-group">
                                             
-                                            <div class="row mb-3">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">使用目的</label> <span class="label_sub">必須</span>
+                                            <div class="row">
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">使用目的</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr purpose_of_use"></div>
                                                 </div>
@@ -831,10 +810,10 @@
                                         <div class="form-group mb-0">
                                             
                                             <div class="row">
-                                                <div class="col-2 col-lg-5">
-                                                    <label for="">受取方法</label> <span class="label_sub">必須</span>
+                                                <div class="col col-3 col-lg-5">
+                                                    <label for="">受取方法</label>
                                                 </div>
-                                                <div class="col-10 col-lg-7">
+                                                <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
                                                     <div class="cfr receive_method"></div>
                                                 </div>

@@ -91,7 +91,7 @@
 		padding: 30px 0;
 	}
 	.frm_general_content {
-		width: 100%;
+		width: 93%;
 	}
 
 	.flex-fill {
@@ -103,6 +103,9 @@
 	}
 	.frm_general .form-group {
 		margin-bottom: 15px;
+	}
+	.data-confirm .form-group {
+	    margin-bottom: 0;
 	}
 	.primary_policy {
 		font-size: .6em;
@@ -186,6 +189,10 @@
 
     .cancellation .content {margin: 20px auto 40px;}
 
+    .btnAgree .i_rightwhite,
+    .btnAgree .i_rightwhite.rotate {top: 16px;}
+	
+	.success-submit {width: 90%; font-size: 11pt;}
 
     footer ul li a { padding: 0 0.6rem; font-size: 11px; font-weight: bold;}
     .copyright {font-weight: bold;}

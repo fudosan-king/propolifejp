@@ -1,0 +1,155 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bashamichi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-22 06:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Name of the theme
+msgid "Bashamichi"
+msgstr ""
+
+#: functions.php:29
+msgid "Bottom Menu"
+msgstr ""
+
+#. Name of the template
+msgid "Concept - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Experience - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Experience 1 - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Experience 2 - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "FAQs - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Gallery - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Home - Page Template"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.facebook.com/khanhnp91"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.prostyleryokan.com/yokohamabashamichi/"
+msgstr ""
+
+#. Author of the theme
+msgid "Khanh (カン) - Propolife Vietnam"
+msgstr ""
+
+#. Name of the template
+msgid "Outline - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Plan - Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Restaurant - Page Template"
+msgstr ""
+
+#: functions.php:27
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:28
+msgid "Top Support Menu"
+msgstr ""
+
+#. Description of the theme
+msgid "Unique template of Yokohama Bashamichi Hotel"
+msgstr ""
+
+#: includes/booking.php:73
+msgid "から"
+msgstr ""
+
+#: includes/booking.php:68
+msgid "ご宿泊日"
+msgstr ""
+
+#: includes/booking.php:92
+msgid "まで"
+msgstr ""
+
+#: includes/booking.php:152
+msgid "キャンセル"
+msgstr ""
+
+#: includes/booking.php:152
+msgid "予約確認・変更"
+msgstr ""
+
+#: includes/booking.php:109
+msgid "人数"
+msgstr ""
+
+#: includes/booking.php:138
+msgid "価格順に検索"
+msgstr ""
+
+#: includes/booking.php:111 includes/booking.php:112 includes/booking.php:113
+#: includes/booking.php:114
+msgid "名"
+msgstr ""
+
+#: includes/booking.php:116
+msgid "室"
+msgstr ""
+
+#: includes/booking.php:128
+msgid "宿泊プラン別"
+msgstr ""
+
+#: includes/booking.php:97 includes/booking.php:149
+msgid "検索"
+msgstr ""
+
+#: includes/booking.php:122
+msgid "検索方法"
+msgstr ""
+
+#: includes/booking.php:77 includes/booking.php:78 includes/booking.php:79
+#: includes/booking.php:80 includes/booking.php:81 includes/booking.php:82
+#: includes/booking.php:83 includes/booking.php:84 includes/booking.php:85
+#: includes/booking.php:86
+msgid "泊"
+msgstr ""
+
+#: includes/booking.php:97 includes/booking.php:149
+msgid "空室検索"
+msgstr ""
+
+#: includes/booking.php:159
+msgid "航空券、高速バス付きプランはこちら"
+msgstr ""
+
+#: includes/booking.php:133
+msgid "部屋タイプ別"
+msgstr ""

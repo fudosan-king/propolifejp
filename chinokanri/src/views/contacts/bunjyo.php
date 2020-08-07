@@ -114,7 +114,7 @@
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="row">
                                                 <div class="col-12 col-lg-6 align-self-center">
-                                                    <input type="text" name="postal_code" class="form-control" placeholder="例：1234567 required" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')">
+                                                    <input type="text" name="postal_code" class="form-control required" placeholder="例：1234567" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')">
                                                 </div>
                                                 <div class="col-12 col-lg-6 align-self-center">
                                                     <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onClick="AjaxZip3.zip2addr('postal_code','','prefecture','city', 'chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>

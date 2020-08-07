@@ -330,78 +330,78 @@
                                                 
                             </div>
                             <div class="frm_general frm-confirm" id="confirm-form" style="display: none">
-                                    <div class="form-group">
-                                        <table class="table table-bordered">
-                                            <tr>
-                                                <td>お名前</td>
-                                                <td>
-                                                    <div class="confirm-text" id="kanji_familyname"></div>
-                                                    <div id="kanji_name"></div>
-                                                </td>       
-                                            </tr>
-                                            <tr>
-                                                <td>お名前（フリガナ）</td>
-                                                <td>
-                                                    <div id="kata_familyname"></div>
-                                                    <div id="kata_name"></div>
-                                                </td>       
-                                            </tr>
-                                            <tr>
-                                                <td>郵便番号</td>
-                                                <td id="postal_code"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>都道府県</td>
-                                                <td id="prefecture"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>市区町村</td>
-                                                <td id="city"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>丁目番地</td>
-                                                <td id="chome_address"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>建物名・号室</td>
-                                                <td id="building_name"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>電話番号（半角数字）<span>※ハイフンなしでご記入ください。</span></td>
-                                                <td id="phone_number"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>メールアドレス（半角英数字）</td>
-                                                <td id="email"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ご連絡方法（ご希望がある場合はご指定ください）</td>
-                                                <td id="contact_ways"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>お問合せ分類</td>
-                                                <td id="contact_classification"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>お問い合わせ項目（複数選択可）</td>
-                                                <td id="contact_item"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>お問い合わせ内容</td>
-                                                <td id="contact_content"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="form-group text-center">
-                                        <div class="row">
-                                            <div class="col-12 col-lg-6">
-                                                <button type="button" class="btn btn-secondary text-white" id="btnBack">戻る <i class="i_leftwhite"></i></button>
-                                            </div>
-                                            <div class="col-12 col-lg-6">
-                                                <button type="button" class="btn btn-primary text-white" id="btnSubmit">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
-                                            </div>
+                                <div class="form-group">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td>お名前</td>
+                                            <td>
+                                                <div class="confirm-text" id="kanji_familyname"></div>
+                                                <div id="kanji_name"></div>
+                                            </td>       
+                                        </tr>
+                                        <tr>
+                                            <td>お名前（フリガナ）</td>
+                                            <td>
+                                                <div id="kata_familyname"></div>
+                                                <div id="kata_name"></div>
+                                            </td>       
+                                        </tr>
+                                        <tr>
+                                            <td>郵便番号</td>
+                                            <td id="postal_code"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>都道府県</td>
+                                            <td id="prefecture"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>市区町村</td>
+                                            <td id="city"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>丁目番地</td>
+                                            <td id="chome_address"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>建物名・号室</td>
+                                            <td id="building_name"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>電話番号（半角数字）<span>※ハイフンなしでご記入ください。</span></td>
+                                            <td id="phone_number"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>メールアドレス（半角英数字）</td>
+                                            <td id="email"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ご連絡方法（ご希望がある場合はご指定ください）</td>
+                                            <td id="contact_ways"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>お問合せ分類</td>
+                                            <td id="contact_classification"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>お問い合わせ項目（複数選択可）</td>
+                                            <td id="contact_item"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>お問い合わせ内容</td>
+                                            <td id="contact_content"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="form-group text-center">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <button type="button" class="btn" id="btnBack">戻る <i class="i_rightwhite rotate"></i></button>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <button type="button" class="btn" id="btnSubmit">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
                                         </div>
                                     </div>
+                                </div>
                             </div> 
                         </form>
                     </div>

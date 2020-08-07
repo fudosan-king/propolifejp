@@ -79,8 +79,8 @@ $(function($) {
             $('.data-input').hide();
             $('.section_content_top .steps li').removeClass('active');
             $('.section_content_top .steps li.confirm').addClass('active');
-            $("html, body").animate({ scrollTop: $($('.data-confirm')).offset().top - 50 }, 0);
             $('.data-confirm').fadeIn();
+            $("html, body").animate({ scrollTop: $($('.data-confirm')).offset().top}, 0);
 
 
             $('.cfr.company_name').html($('input[name="company_name"]').val());
@@ -183,8 +183,8 @@ $(function($) {
         $('.data-confirm').hide();
         $('.section_content_top .steps li').removeClass('active');
         $('.section_content_top .steps li.input').addClass('active');
-        $("html, body").animate({ scrollTop: $($('.data-input')).offset().top - 250 }, 0);
         $('.data-input').fadeIn();
+        $("html, body").animate({ scrollTop: $($('.data-input')).offset().top}, 0);
     });
 
     $('#btn_send').click(function(event) {

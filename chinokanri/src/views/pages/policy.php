@@ -120,7 +120,7 @@
                 <br>
                 <br> 【お問い合わせ】
                 <br>
-                <a href="<?=base_url()?>contact" target="_blank">お問い合わせフォーム</a>
+                <a href="<?=base_url();?>contact/naiken/" target="_blank">お問い合わせフォーム</a>
             </article>
         </div>
     </section>

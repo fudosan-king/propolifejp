@@ -269,7 +269,7 @@ header {
   position: absolute;
   top: 50%;
   margin-top: -25px; 
-  left: 100%;
+  left: 99%;
   z-index: 2; 
 }	
 .steps li span::before { 
@@ -291,8 +291,6 @@ header {
   	padding-left: 10px;
 }
 .steps li:last-child span {
-  background: #fff !important;
-  color: #0180CD;
   pointer-events: none;
   cursor: default;
 }
@@ -392,7 +390,27 @@ header {
 }
 
 .data-confirm .form-group {margin-bottom: 0;}
+.data-confirm .frm_general_content .form-group .row {border: 1px #000 solid; border-bottom: none;}
+.data-confirm .frm_general_content .form-group .row .col {padding: 15px;}
+/*.data-confirm .frm_general_content .form-group .row .col:last-child {display: flex; align-items: center;}*/
+.data-confirm .frm_general_content .form-group .row .col:first-child {border-right: 1px #000 solid;}
+.data-confirm .frm_general_content .form-group:last-child .row {border-bottom: 1px #000 solid;}
 .data-confirm .label_sub {line-height: 1;}
+
+.success-submit {
+	color:#AE8148;
+    font-size:16pt; 
+    text-align:center; 
+    padding: 3%; 
+    border: #e8e8e8 1px solid;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto 130px;
+    line-height: 1.6;
+    -webkit-box-shadow: 12px 12px 13px 1px rgba(0,0,0,0.32);
+    -moz-box-shadow: 12px 12px 13px 1px rgba(0,0,0,0.32);
+    box-shadow: 12px 12px 13px 1px rgba(0,0,0,0.32);
+}
 
 /* footer */
 footer {

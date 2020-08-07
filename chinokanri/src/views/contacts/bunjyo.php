@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form action="http://go.pardot.com/l/185822/2020-07-19/qb1ql7" data-action-url="http://go.pardot.com/l/185822/2020-07-19/qb1ql7" class="frm_general needs-validation" novalidate id="form-bunjyo" method="POST">
+                        <form action="https://go.pardot.com/l/185822/2020-07-19/qb1ql7" data-action-url="http://go.pardot.com/l/185822/2020-07-19/qb1ql7" class="frm_general needs-validation" novalidate id="form-bunjyo" method="POST">
                             <div class="frm_general_content">
                                 <div class="form-group">
                                     <label for="">お名前</label>

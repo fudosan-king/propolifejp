@@ -22,7 +22,7 @@
             </div>
         </section>
 
-        <form class="frm_general" id="form-kaiyaku" action="http://go.pardot.com/l/185822/2020-07-20/qb1qx9" method="POST" novalidate>
+        <form class="frm_general" id="form-kaiyaku" action="https://go.pardot.com/l/185822/2020-07-20/qb1qx9" method="POST" novalidate>
             <section class="section_content_body bg_bluelight">
                 <div class="container">
                     <div class="row">

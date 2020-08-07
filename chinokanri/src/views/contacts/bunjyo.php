@@ -18,9 +18,9 @@
                     <div class="col-12">
                         <h1 id="form-title">当社管理分譲物件に関するお問い合わせ</h1>
                         <ul class="steps d-flex">
-                            <li class="active flex-fill"><span href="#" id="input">入力</span></li>
-                            <li id="confirm" class="flex-fill"><span href="#">確認</span></li>
-                            <li id="finish" class="flex-fill"><span href="#">完了</span></li>
+                            <li id="input" class="active flex-fill"><span>入力</span></li>
+                            <li id="confirm" class="flex-fill"><span>確認</span></li>
+                            <li id="finish" class="flex-fill"><span>完了</span></li>
                         </ul>
                         <ul class="list">
                             <li>内容によってはお答えできない場合や、電子メール以外の方法でお答えさせていただく場合がございます。</li>

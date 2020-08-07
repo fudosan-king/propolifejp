@@ -79,7 +79,7 @@ $(function($) {
             $('.data-input').hide();
             $('.section_content_top .steps li').removeClass('active');
             $('.section_content_top .steps li.confirm').addClass('active');
-            $("html, body").animate({ scrollTop: $($('.section_content_top .steps')).offset().top - 50 }, 0);
+            $("html, body").animate({ scrollTop: $($('.data-confirm')).offset().top - 50 }, 0);
             $('.data-confirm').fadeIn();
 
 
@@ -183,7 +183,7 @@ $(function($) {
         $('.data-confirm').hide();
         $('.section_content_top .steps li').removeClass('active');
         $('.section_content_top .steps li.input').addClass('active');
-        $("html, body").animate({ scrollTop: $($('.section_content_top .steps')).offset().top - 250 }, 0);
+        $("html, body").animate({ scrollTop: $($('.data-input')).offset().top - 250 }, 0);
         $('.data-input').fadeIn();
     });
 

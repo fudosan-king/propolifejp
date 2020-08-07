@@ -1061,10 +1061,10 @@
                     <div class="form-group text-center">
                         <div class="row">
                             <div class="col-12 col-lg-6">
-                                <button type="button" class="btn btn-secondary text-white" id="btnBack">戻る <i class="i_leftwhite"></i></button>
+                                <button type="button" class="btn" id="btnBack">戻る <i class="i_rightwhite rotate"></i></button>
                             </div>
                             <div class="col-12 col-lg-6">
-                                <button type="button" class="btn btn-primary text-white" id="btnSubmit">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                <button type="button" class="btn" id="btnSubmit">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
                             </div>
                         </div>
                     </div>

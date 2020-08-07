@@ -121,6 +121,20 @@
         {
             Array.from(formControlElements).forEach((element) => {
                 var elementName = element.getAttribute('name')
+                if (elementName.includes('[]') === false) {
+                    if (document.getElementById(elementName)) {
+                        document.getElementById(elementName).innerHTML = ''
+                    }
+                } else {
+                    elementName = elementName.replace('[]','');
+                    if (document.getElementById(elementName)) {
+                        document.getElementById(elementName).innerHTML = ''; 
+                    }
+                }
+            })
+            
+            Array.from(formControlElements).forEach((element) => {
+                var elementName = element.getAttribute('name')
                 var elementVal = element.value
                 if (elementName.includes('[]') === false) {
                     if (document.getElementById(elementName)) {

@@ -1,81 +1,112 @@
 (function() {
     'use strict';
-    
+
     window.addEventListener('load', function() {
         var btnAgree = document.getElementById('btnAgree')
         var btnBack = document.getElementById('btnBack')
+        var btnSubmit = document.getElementById('btnSubmit')
         var form = document.getElementById('form-bunjyo')
+        var inputForm = form.querySelector('#input-form')
+        var confirmForm = form.querySelector('#confirm-form')
         var steps =  document.querySelectorAll('.steps li')
         var current_step = 'input'
         var formControlElements = form.querySelectorAll('input, textarea, select')
-        var disabledElementArr = ['radio', 'checkbox']
+        var errorElements = []
 
         var btnAutoFillCheck = document.getElementById('auto-fill-checked-box')
 
         btnBack.addEventListener('click', function() {
-            if (current_step == "confirm") {
-                new Promise(function(resolve, reject) {
-                    goInputStep()
-                    enableInputForm()
+            var hideConfirmForm = new Promise(function(resolve, reject) {
+                hide(confirmForm)
+                resolve()   
+            }).then(() => {
+                show(inputForm)
+            }).then(() => {
+                goInputStep()
+                if (errorElements.length > 0) {
                     showFormErrors()
-                    resolve()
-                }).then(function() {
-                    btnBack.style.display = 'none'
-                    btnAgree.style.maxWidth = '40%'
-                }) 
-            }
+                } else {
+                    document.getElementById('form-title').scrollIntoView({behavior: "smooth"}) 
+                }
+            })
         }, false)
 
         btnAgree.addEventListener('click', function() {
-            if (current_step == "input") {
-                if (form.checkValidity() == true) {
-                    new Promise(function(resolve,reject) {
-                        goConfirmStep()
-                        resolve()
-                    }).then(() => {
-                        btnBack.style.display = 'inline-block'
-                        btnAgree.style.maxWidth = '40%' 
-                    })
-                }
-                else {
-                    showFormErrors()
-                }
-                form.classList.add('was-validated');
-            } else if (current_step == "confirm") {
-                if (form.checkValidity() == true) {
-                    new Promise(function(resolve, reject) {
-                        enableInputForm()
-                        resolve()
-                    }).then(() => {
-                        btnAgree.disabled = true
-                        form.submit()  
-                    })
-                } else {
-                    goInputStep()
-                    enableInputForm()
-                    btnBack.style.display = 'none'
-                    btnAgree.style.removePropert('max- width')
-                }
+            validateForm()
+            if (errorElements.length > 0) {
+                showFormErrors()
+            } else {
+                 new Promise(function(resolve,reject) {
+                    updataDataConfirmForm()
+                    hide(inputForm)
+                    resolve()
+                }).then(() => {
+                    show(confirmForm)
+                    goConfirmStep()
+                    document.getElementById('form-title').scrollIntoView({behavior: "smooth"}) 
+                })
             }
-            form.classList.add('was-validated');
         }, false)
+
+        btnSubmit.addEventListener('click', function() {
+            validateForm()
+            if (errorElements.length <= 0) {
+                btnSubmit.disabled = true
+                form.submit()  
+            }
+        }, false)
+
+
+        function validateForm() {
+            var ERROR_NO_INPUT = '値を入力してください';
+            var isValid = true
+            errorElements = []
+            Array.from(formControlElements).forEach((formElement) => {
+                formElement.classList.remove('is-invalid')
+                if (!formElement.classList.contains('required')) {
+                    return
+                }
+                var elementName = formElement.getAttribute('name')
+                var elementVal = formElement.value
+                var elementType = formElement.getAttribute('type')
+                if (['radio','checkbox'].indexOf(elementType) < 0) {
+                    if (elementVal == '') {
+                        isValid = false
+                        errorElements.push(formElement)
+                    }
+
+                } else {
+                    if (document.querySelectorAll('[name="' + elementName + '"]:checked').length <= 0) {
+                        isValid = false
+                        errorElements.push(formElement)
+                    }
+                }
+            })
+
+            Array.from(errorElements).forEach((element)=> {
+                element.classList.add('is-invalid')
+            })
+            return isValid
+        }
+        function show(element)
+        {
+            element.style.display = "block";
+        }
+        function hide(element)
+        {
+            element.style.display = "none";
+        }
 
         function goConfirmStep()
         {
-            var disableFormPromis = new Promise(function(resolve, reject) {   
-                disableInputForm()
-                resolve()
-            }).then(function() {
-                changeStep("confirm")
-                document.getElementById('form-title').scrollIntoView({behavior: "smooth"}) 
-            })
+            changeStep("confirm")
         }
         function showFormErrors()
         {
             event.preventDefault();
             event.stopPropagation();
 
-            var errorElements = form.querySelectorAll('input:invalid, textarea:invalid, select:invalid');
+            var errorElements = form.querySelectorAll('.is-invalid');
             if (errorElements.length > 0) {
                 errorElements[0].scrollIntoView({behavior: 'smooth', block: 'center'}) 
             }
@@ -86,23 +117,24 @@
             changeStep("input")
         }
 
-        function disableInputForm()
+        function updataDataConfirmForm()
         {
             Array.from(formControlElements).forEach((element) => {
-                if (disabledElementArr.indexOf(element.type) > -1 || element.tagName == "SELECT") {
-                    element.disabled = true
+                var elementName = element.getAttribute('name')
+                var elementVal = element.value
+                if (elementName.includes('[]') === false) {
+                    if (document.getElementById(elementName)) {
+                        document.getElementById(elementName).innerHTML = elementVal
+                    }
                 } else {
-                    element.readOnly = true
+                    elementName = elementName.replace('[]','');
+                    if (element.checked) {
+                        if (document.getElementById(elementName)) {
+                            document.getElementById(elementName).innerHTML += (elementVal + '<br>'); 
+                        }
+                    }
                 }
             })
-        }
-
-        function enableInputForm()
-        {
-            Array.from(formControlElements).forEach((element) => {
-                element.removeAttribute('disabled')
-                element.removeAttribute('readonly')
-            }) 
         }
 
         function changeStep(new_step) 
@@ -118,3 +150,17 @@
         }
     }, false)
 })();
+function demo()
+{
+    var formControlElements = document.querySelectorAll('input, textarea, select')
+    Array.from(formControlElements).forEach((element) => {
+        if (element.tagName == "SELECT") {
+            element.selectedIndex = 1
+        } else if (['radio', 'checkbox'].indexOf(element.getAttribute('type')) > -1) {
+            document.querySelector('[name="' + element.getAttribute('name') + '"]').checked = true
+        }
+        else if (!element.value) {
+            element.value = "test"
+        }
+    })
+}

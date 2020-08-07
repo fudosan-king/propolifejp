@@ -1,3 +1,14 @@
+<style type="text/css">
+   .frm-confirm {
+      font-size: 0.875rem
+   }
+   .frm-confirm .table-bordered td {
+      border: 1px solid #555;
+   }
+   .frm-confirm .table-bordered td:first-child{
+        width: 30%
+   }
+</style>
 <?php include_once 'nav/top.php'; ?>
 <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-propertysale" role="tabpanel" aria-labelledby="nav-propertysale-tab">
@@ -25,8 +36,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form action="https://go.pardot.com/l/185822/2020-07-19/qb1ql7" data-action-url="http://go.pardot.com/l/185822/2020-07-19/qb1ql7" class="frm_general needs-validation" novalidate id="form-bunjyo" method="POST">
-                            <div class="frm_general_content">
+                        <form action="https://go.pardot.com/l/185822/2020-07-19/qb1ql7" data-action-url="http://go.pardot.com/l/185822/2020-07-19/qb1ql7" class="frm_general" id="form-bunjyo" method="POST">
+                            <div class="frm_general_content" id="input-form">
                                 <div class="form-group">
                                     <label for="">お名前</label>
                                     <div class="row">
@@ -41,7 +52,7 @@
                                                             <p class="mb-0">姓</p>
                                                         </div>
                                                         <div class="col-10 align-self-center">
-                                                            <input type="text" name="kanji_familyname" class="form-control" placeholder="例：千野" required>
+                                                            <input type="text" name="kanji_familyname" class="form-control required" placeholder="例：千野">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -51,7 +62,7 @@
                                                             <p class="mb-0">名</p>
                                                         </div>
                                                         <div class="col-10 align-self-center">
-                                                            <input type="text" name="kanji_name" class="form-control" placeholder="例：太郎" required>
+                                                            <input type="text" name="kanji_name" class="form-control required" placeholder="例：太郎">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -74,7 +85,7 @@
                                                             <p class="mb-0">セイ</p>
                                                         </div>
                                                         <div class="col-10 align-self-center">
-                                                            <input type="text" name="kata_familyname" class="form-control" placeholder="例：チノ" required>
+                                                            <input type="text" name="kata_familyname" class="form-control required" placeholder="例：チノ">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -84,7 +95,7 @@
                                                             <p class="mb-0">メイ</p>
                                                         </div>
                                                         <div class="col-10 align-self-center">
-                                                            <input type="text" name="kata_name" class="form-control" placeholder="例：タロウ" required>
+                                                            <input type="text" name="kata_name" class="form-control required" placeholder="例：タロウ">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -103,7 +114,7 @@
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="row">
                                                 <div class="col-12 col-lg-6 align-self-center">
-                                                    <input type="text" name="postal_code" class="form-control" placeholder="例：1234567" required onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')">
+                                                    <input type="text" name="postal_code" class="form-control" placeholder="例：1234567 required" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')">
                                                 </div>
                                                 <div class="col-12 col-lg-6 align-self-center">
                                                     <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onClick="AjaxZip3.zip2addr('postal_code','','prefecture','city', 'chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -117,7 +128,7 @@
                                             <span class="label_sub">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
-                                            <select name="prefecture" id="" class="form-control custom-select" required>
+                                            <select name="prefecture" id="" class="form-control custom-select required">
                                                 <option value="">▼ 選択してください </option>
                                                 <option value="北海道">北海道</option>
                                                 <option value="青森県">青森県</option>
@@ -176,7 +187,7 @@
                                             <span class="label_sub">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
-                                            <input type="text" name="city" class="form-control" required>
+                                            <input type="text" name="city" class="form-control required">
                                         </div>
                                     </div>
 
@@ -187,7 +198,7 @@
                                             <span class="label_sub">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
-                                            <input type="text" name="chome_address" class="form-control" required>
+                                            <input type="text" name="chome_address" class="form-control required">
                                         </div>
                                     </div>
 
@@ -208,7 +219,7 @@
                                             <span class="label_sub">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-6 align-self-center">
-                                            <input type="text" name="phone_number" placeholder="例：0312341234" class="form-control" required>
+                                            <input type="text" name="phone_number" placeholder="例：0312341234" class="form-control required">
                                         </div>
                                     </div>
                                 </div>
@@ -220,7 +231,7 @@
                                             <span class="label_sub">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-6 align-self-center">
-                                            <input type="email" name="email" placeholder="例：xxxxxxx@hchinokanri.co.jp" class="form-control" required>
+                                            <input type="email" name="email" placeholder="例：xxxxxxx@hchinokanri.co.jp" class="form-control required">
                                         </div>
                                     </div>
                                 </div>
@@ -232,11 +243,11 @@
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="rdo_phone1" name="contact_ways" class="custom-control-input" value="電話">
+                                                <input type="radio" id="rdo_phone1" name="contact_ways" class="custom-control-input required" value="電話">
                                                 <label class="custom-control-label" for="rdo_phone1">電話</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="rdo_email2" name="contact_ways" class="custom-control-input" value="email">
+                                                <input type="radio" id="rdo_email2" name="contact_ways" class="custom-control-input required" value="email">
                                                 <label class="custom-control-label" for="rdo_email2">E-mail</label>
                                             </div>
                                         </div>
@@ -244,18 +255,18 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="">お問合せ分類</label>
+                                    <label for="">お問い合わせ分類</label>
                                     <div class="row">
                                         <div class="col-2 col-lg-1 align-self-center">
                                             <span class="label_sub">必須</span>
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline3" name="contact_classification" class="custom-control-input" value="当社管理分譲物件に住んでいる" required>
+                                                <input type="radio" id="customRadioInline3" name="contact_classification" class="custom-control-input required" value="当社管理分譲物件に住んでいる">
                                                 <label class="custom-control-label" for="customRadioInline3">当社管理分譲物件に住んでいる</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline4" name="contact_classification" class="custom-control-input" value="当社管理分譲物件に住んでいない" required>
+                                                <input type="radio" id="customRadioInline4" name="contact_classification" class="custom-control-input required" value="当社管理分譲物件に住んでいない">
                                                 <label class="custom-control-label" for="customRadioInline4">当社管理分譲物件に住んでいない</label>
                                             </div>
                                         </div>
@@ -270,27 +281,27 @@
                                         </div>
                                         <div class="col-10 col-lg-11">
                                             <div class="custom-control custom-checkbox mb-2">
-                                                <input type="checkbox" id="customCheckbox5" name="contact_item[]" class="custom-control-input" value="マンション管理について" required>
+                                                <input type="checkbox" id="customCheckbox5" name="contact_item[]" class="custom-control-input required" value="マンション管理について">
                                                 <label class="custom-control-label" for="customCheckbox5">マンション管理について</label>
                                             </div>
                                             <div class="custom-control custom-checkbox mb-2">
-                                                <input type="checkbox" id="customCheckbox6" name="contact_item[]" class="custom-control-input" value="賃貸・売買のご相談" required>
+                                                <input type="checkbox" id="customCheckbox6" name="contact_item[]" class="custom-control-input required" value="賃貸・売買のご相談">
                                                 <label class="custom-control-label" for="customCheckbox6">賃貸・売買のご相談</label>
                                             </div>
                                             <div class="custom-control custom-checkbox mb-2">
-                                                <input type="checkbox" id="customCheckbox7" name="contact_item[]" class="custom-control-input" value="建物・設備について" required>
+                                                <input type="checkbox" id="customCheckbox7" name="contact_item[]" class="custom-control-input required" value="建物・設備について">
                                                 <label class="custom-control-label" for="customCheckbox7">建物・設備について</label>
                                             </div>
                                             <div class="custom-control custom-checkbox mb-2">
-                                                <input type="checkbox" id="customCheckbox8" name="contact_item[]" class="custom-control-input" value="リフォームの相談" required>
+                                                <input type="checkbox" id="customCheckbox8" name="contact_item[]" class="custom-control-input required" value="リフォームの相談">
                                                 <label class="custom-control-label" for="customCheckbox8">リフォームの相談</label>
                                             </div>
                                             <div class="custom-control custom-checkbox mb-2">
-                                                <input type="checkbox" id="customCheckbox9" name="contact_item[]" class="custom-control-input" value="ご意見・ご要望" required>
+                                                <input type="checkbox" id="customCheckbox9" name="contact_item[]" class="custom-control-input required" value="ご意見・ご要望">
                                                 <label class="custom-control-label" for="customCheckbox9">ご意見・ご要望</label>
                                             </div>
                                             <div class="custom-control custom-checkbox mb-2">
-                                                <input type="checkbox" id="customCheckbox10" name="contact_item[]" class="custom-control-input" value="その他" required>
+                                                <input type="checkbox" id="customCheckbox10" name="contact_item[]" class="custom-control-input required" value="その他">
                                                 <label class="custom-control-label" for="customCheckbox10">その他</label>
                                             </div>
                                         </div>
@@ -300,24 +311,98 @@
                                 <div class="form-group">
                                     <label for="">お問い合わせ内容</label>
                                     <textarea name="contact_content" id="" class="form-control" cols="30" rows="8" placeholder="ご質問やご希望があればご記入ください。"></textarea>
-                                </div>                                  
+                                </div>               
                                 <div class="box_content_footer">
                                     <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                     個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                     ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
                                     <div class="form-group text-center">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ck_agree" name="ck_agree" required>
+                                            <input type="checkbox" class="custom-control-input required" id="ck_agree" name="ck_agree">
                                             <label class="custom-control-label" for="ck_agree">同意する</label>
                                         </div>
                                     </div>
                                     
                                      <div class="form-group text-center">
-                                        <button type="button" class="btn btnAgree bg-secondary mr-2" id="btnBack" style="display: none; max-width: 40%">戻る <i class="i_leftwhite"></i></button>
                                         <button type="button" class="btn btnAgree d-inline-block" id="btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
                                     </div>
                                 </div>
+                                                
                             </div>
+                            <div class="frm_general frm-confirm" id="confirm-form" style="display: none">
+                                    <div class="form-group">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td>お名前</td>
+                                                <td>
+                                                    <div class="confirm-text" id="kanji_familyname"></div>
+                                                    <div id="kanji_name"></div>
+                                                </td>       
+                                            </tr>
+                                            <tr>
+                                                <td>お名前（フリガナ）</td>
+                                                <td>
+                                                    <div id="kata_familyname"></div>
+                                                    <div id="kata_name"></div>
+                                                </td>       
+                                            </tr>
+                                            <tr>
+                                                <td>郵便番号</td>
+                                                <td id="postal_code"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>都道府県</td>
+                                                <td id="prefecture"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>市区町村</td>
+                                                <td id="city"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>丁目番地</td>
+                                                <td id="chome_address"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>建物名・号室</td>
+                                                <td id="building_name"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>電話番号（半角数字）<span>※ハイフンなしでご記入ください。</span></td>
+                                                <td id="phone_number"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>メールアドレス（半角英数字）</td>
+                                                <td id="email"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ご連絡方法（ご希望がある場合はご指定ください）</td>
+                                                <td id="contact_ways"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>お問合せ分類</td>
+                                                <td id="contact_classification"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>お問い合わせ項目（複数選択可）</td>
+                                                <td id="contact_item"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>お問い合わせ内容</td>
+                                                <td id="contact_content"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                <button type="button" class="btn btn-secondary text-white" id="btnBack">戻る <i class="i_leftwhite"></i></button>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <button type="button" class="btn btn-primary text-white" id="btnSubmit">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div> 
                         </form>
                     </div>
                 </div>

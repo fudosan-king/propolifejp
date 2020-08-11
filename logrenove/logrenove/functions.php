@@ -478,6 +478,21 @@
         return $content_type;
     }, 10, 2 );
 
+    //Antenna RSS
+    add_action('init', function (){
+        add_feed('antenna', function () {
+            get_template_part('antenna');
+        });
+    });
+     
+    //Antenna RSS
+    add_filter( 'feed_content_type', function ( $content_type, $type ) {
+        if ( 'antenna' === $type ) {
+            return feed_content_type( 'rss2' );
+        }
+        return $content_type;
+    }, 10, 2 );
+
     // Feed customize
     remove_action ('do_feed_rss2','do_feed_rss2',10,1);
     add_action( 'do_feed_rss2', 'do_feed_rss2_customize', 10, 1 );
@@ -498,7 +513,7 @@
         /** This filter is documented in wp-includes/post-template.php */
 
         $get_the_content = preg_replace('/<div class="wp-block-uagb-table-of-contents.*?目次.*<\/div>/', '', get_the_content());
-        $get_the_content = preg_replace('/◆こちらもおすすめ◆(.*)<\/p>$/sm','</p>', $get_the_content);
+        // $get_the_content = preg_replace('/◆こちらもおすすめ◆(.*)<\/p>$/sm','</p>', $get_the_content);
         $get_the_content = str_replace('<p></p>', '', $get_the_content);
         
         // if (preg_match_all( '/wp:block {"ref":\d+}/', $get_the_content, $matches )) {

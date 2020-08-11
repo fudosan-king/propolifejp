@@ -30,7 +30,6 @@
                                 ?>
                                 <?php if($page_data['lang']): ?><li><a href="<?php echo $page_data['url']; ?>"><?php echo $page_data['title']; ?></a></li><?php endif; echo "\n"; ?>
                                 <?php endforeach; ?>
-                                <li><a href="/ir/">電子公告</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -246,7 +246,7 @@
                            </p>
                            <div class="form-group text-center">
                               <div class="custom-control custom-checkbox">
-                                 <input type="checkbox" name="agree" class="custom-control-input required" id="ck_agree" value="1">
+                                 <input type="checkbox" name="agree" class="custom-control-input required" id="ck_agree" value="1" checked>
                                  <label class="custom-control-label" for="ck_agree">同意する</label>
                               </div>
                               <button type="submit" class="btn btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>

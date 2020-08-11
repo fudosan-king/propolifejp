@@ -30,7 +30,7 @@
 				<h2 class="title"><?=__('Booking', 'uniquek');?></h2>
 			</div>
 			<div class="col-12 col-md-11 mx-auto">
-				<form method="get" action="" id="ifrmBooking" name="frmBooking" target="_blank" class="frm_booking" onSubmit="return send()">
+				<form method="get" action="" id="ifrmBooking" name="frmBooking" target="_blank" class="frm_booking" onSubmit="return send()" target="_blank" >
 					<div class="row">
 						<div class="col-6 col-md-2 align-self-center">
 							<div class="form-group">

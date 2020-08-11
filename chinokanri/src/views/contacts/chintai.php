@@ -305,7 +305,7 @@
 
                             <div class="form-group text-center">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" name="agree" class="custom-control-input required" id="ck_agree" value="1">
+                                    <input type="checkbox" name="agree" class="custom-control-input required" id="ck_agree" value="1" checked>
                                     <label class="custom-control-label" for="ck_agree">同意する</label>
                                 </div>
 

@@ -91,15 +91,15 @@ $(function($) {
     if ($('#section_booking').length){
         var $smartForm = $(this).find('#ifrmBooking');
         if (isMobile)
-            $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/s_sp/rsv/htl_redirect_ser.aspx');
+            $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/s_sp/rsv/search.aspx?hi_id=2&lang=ja-JP&sm=opt');
         else
-            $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect_ser.aspx');
+            $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/index.aspx?hi_id=2&lang=ja-JP');
 
         $(window).on('resize', function(){
             if (isMobile || $(this).width()<=414)
-                $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/s_sp/rsv/htl_redirect_ser.aspx');
+                $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/s_sp/rsv/search.aspx?hi_id=2&lang=ja-JP&sm=opt');
             else
-                $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect_ser.aspx');
+                $smartForm.attr('action', 'https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/index.aspx?hi_id=2&lang=ja-JP');
         })
     }
 

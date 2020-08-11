@@ -39,7 +39,7 @@ function loadGallerySlider($isDesktop = true) {
                     $imgSmallURL3 = wp_get_attachment_image_url( get_sub_field('group_1_img_3')['ID'], $size = 'large', $icon = false);
                     $imgSmallURL4 = wp_get_attachment_image_url( get_sub_field('group_1_img_4')['ID'], $size = 'large', $icon = false);
                     echo '
-                    <div class="col col-6 col-sm-4">
+                    <div class="col col-12 col-sm-4">
                         <div class="row no-gutters">
                             <div class="col col-6 col-sm-6">
                                 <figure class="photo orange">
@@ -79,7 +79,7 @@ function loadGallerySlider($isDesktop = true) {
                     $imgSmallURL3 = wp_get_attachment_image_url( get_sub_field('group_2_img_3')['ID'], $size = 'large', $icon = false);
 
                     echo '
-                    <div class="col col-6 col-sm-4">
+                    <div class="col col-12 col-sm-4">
                         <figure class="photo orange">
                             <img src="'.$imgBigURL1.'" alt="" class="img-fluid">
                             <i class="ion-search"></i>
@@ -110,7 +110,7 @@ function loadGallerySlider($isDesktop = true) {
                     $imgSmallURL1 = wp_get_attachment_image_url( get_sub_field('group_3_img_1')['ID'], $size = 'large', $icon = false);
                     $imgSmallURL2 = wp_get_attachment_image_url( get_sub_field('group_3_img_2')['ID'], $size = 'large', $icon = false);
                     echo '
-                    <div class="col col-6 col-sm-4">
+                    <div class="col col-12 col-sm-4">
                         <div class="row no-gutters">
                             <div class="col col-6 col-sm-6">
                                 <figure class="photo orange">
@@ -211,7 +211,7 @@ function loadGallerySlider($isDesktop = true) {
                 default: {
                     $imgURL = wp_get_attachment_image_url( get_sub_field('single_main_img')['ID'], $size = 'large', $icon = false);
                     echo '
-                    <div class="col col-6 col-sm-4">
+                    <div class="col col-12 col-sm-4">
                         <figure class="photo photo_larg orange">
                             <img src="'.$imgURL.'" alt="" class="img-fluid">
                             <i class="ion-search"></i>
@@ -236,7 +236,7 @@ function loadGallerySlider($isDesktop = true) {
 }
 ?>
 
-<section class="section_gallerys project d-none d-sm-block">
+<section class="section_gallerys project">
     <div class="w_section_gallerys">
         <div class="container">
             <div class="row">
@@ -248,15 +248,15 @@ function loadGallerySlider($isDesktop = true) {
     </div>
 </section>
 
-<section class="section_gallerys project d-block d-sm-none">
+<!-- <section class="section_gallerys project d-block d-sm-none">
     <div class="w_section_gallerys">
         <div class="container">
             <div class="row">
                 <div class="col col-sm-12">
-                    <?php loadGallerySlider(false); ?>
+                    <?php //loadGallerySlider(false); ?>
 
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->

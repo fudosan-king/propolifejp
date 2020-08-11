@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>管理に係る 重要事項調査報告書 作成の依頼</h1>
+                        <h1>管理に関わる重要事項調査報告書作成の依頼</h1>
                         <ul class="steps d-flex">
                             <li class="input active flex-fill"><span>入力</span></li>
                             <li class="confirm flex-fill"><span>確認</span></li>
@@ -30,10 +30,10 @@
         <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
             <div class="success-submit">
                 <div class="mb-4"><b>お問い合わせが完了しました</b></div>
-                <div class="mb-3">お問い合わせ有り難う御座います。 <br>
-                後程、メールにてお振込先等、ご連絡致します。 <br>
+                <div class="mb-3">お問い合わせ有り難う御座います。<br>
+                後程、メールにてお振込先等、ご連絡致します。<br>
                 今暫くお待ちくださいませ。</div>
-                <p>※休業日などでご返信が遅くなる場合がございます。 <br>
+                <p>※休業日などでご返信が遅くなる場合がございます。<br>
                 お急ぎの場合はお電話でご確認お願い致します。</p>
             </div>
         <?php else: ?>

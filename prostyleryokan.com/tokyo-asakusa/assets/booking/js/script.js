@@ -103,4 +103,11 @@ $(function($) {
         })
     }
 
+    if (isMobile){
+        $('.nav-link.btnBooking').click(function(event) {
+            /* Act on the event */
+            $('.navbar_toggler_custom').click();
+        });
+    }
+
 });

@@ -221,16 +221,32 @@
         var contractEstateNameInp = document.querySelector('input[name="contract_estate_name"]')
         var contractEstateRoomNumberInp = document.querySelector('input[name="contract_estate_room_number"]')
          if (contractDetachedHouseCkb.checked) {
-            contractEstateNameInp.style.backgroundColor = "#e9ecef";
-            contractEstateRoomNumberInp.style.backgroundColor = "#e9ecef"
+                contractEstateNameInp.style.backgroundColor = "#e9ecef";
+                contractEstateNameInp.disabled = true
+                contractEstateNameInp.value = ''
+                contractEstateNameInp.classList.remove('required')
+                contractEstateRoomNumberInp.style.backgroundColor = "#e9ecef"
+                contractEstateRoomNumberInp.disabled = true
+                contractEstateRoomNumberInp.value = ''
+                contractEstateRoomNumberInp.classList.remove('required')
         }        
         contractDetachedHouseCkb.addEventListener("change", function () {
             if (contractDetachedHouseCkb.checked) {
                 contractEstateNameInp.style.backgroundColor = "#e9ecef";
+                contractEstateNameInp.disabled = true
+                contractEstateNameInp.value = ''
+                contractEstateNameInp.classList.remove('required')
                 contractEstateRoomNumberInp.style.backgroundColor = "#e9ecef"
+                contractEstateRoomNumberInp.disabled = true
+                contractEstateRoomNumberInp.value = ''
+                contractEstateRoomNumberInp.classList.remove('required')
             } else {
                 contractEstateNameInp.style.backgroundColor = "#fff";
-                contractEstateRoomNumberInp.style.backgroundColor = "#fff" 
+                contractEstateNameInp.removeAttribute('disabled')
+                contractEstateNameInp.classList.add('required')
+                contractEstateRoomNumberInp.style.backgroundColor = "#fff"
+                contractEstateRoomNumberInp.removeAttribute('disabled')
+                contractEstateRoomNumberInp.classList.add('required')
             }
         })
 

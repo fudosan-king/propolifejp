@@ -2,12 +2,16 @@
    .frm-confirm {
       font-size: 0.875rem
    }
-   .frm-confirm .table-bordered td, .frm-confirm .table tbody+tbody {
+   .frm-confirm .table-bordered td, .frm-confirm .table tbody {
       border: 1px solid #555;
+   }
+   .frm-confirm .section_content_body:nth-child(odd) {
+      background-color: rgba(1,128,205,.05)
    }
    .frm-confirm .table-bordered td:first-child{
         width: 30%
    }
+
 </style>
 <?php include_once 'nav/top.php'; ?>
 <div class="tab-content" id="nav-tabContent">
@@ -810,7 +814,7 @@
 
                                         <div class="form-group text-center">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input required" id="ck_agree" name="ck_agree">
+                                                <input type="checkbox" class="custom-control-input required" id="ck_agree" name="ck_agree" checked>
                                                 <label class="custom-control-label" for="ck_agree">同意する</label>
                                             </div>
                                         </div>
@@ -824,21 +828,13 @@
                     </div>
                 </section>
             </div>
-            <section class="section_content_body frm-confirm" id="confirm-form" style="display: none">
-                <div class='container'>
-                    <div class="form-group">
-                        <table class="table table-bordered">
+            <div class="frm-confirm" id="confirm-form" style="display: none">
+                <section class="section_content_body">
+                    <div class='container'>
+                        <h2>契約物件情報</h2>
+                        <table class="table table-bordered confirm-table">
                             <tbody>
                                 <!-- section 契約物件情報-->
-                                <tr>
-                                    <td colspan="2" class="text-center font-weight-bold">契約物件情報</td>
-                                </tr>
-                                <tr>
-                                    <td>一戸建てを契約されているお客様はこちらにチェックを入れて下さい。物件名と号室は省略頂けます。</td>
-                                    <td>
-                                        <div id="contract_detached_house"></div>
-                                    </td>
-                                </tr>
                                 <tr>
                                     <td>物件名</td>
                                     <td>
@@ -873,11 +869,15 @@
                                 </tr>
                                 <!-- end section-->
                             </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="section_content_body">
+                    <div class='container'>
+                        <h2>ご契約者様の情報</h2>
+                        <table class="table table-bordered confirm-table">
                             <tbody>
                                 <!-- section ご契約者様の情報-->
-                                <tr>
-                                    <td colspan="2" class="text-center font-weight-bold">ご契約者様の情報</td>
-                                </tr>
                                 <tr>
                                     <td>ご契約者様の氏名</td>
                                     <td>
@@ -891,12 +891,6 @@
                                         <div id="contractor_furigana_family_name"></div>
                                         <div id="contractor_furigana_name"></div>
                                     </td>       
-                                </tr>
-                                <tr>
-                                    <td>ご契約者様と入居者様が同じ場合は、こちらにチェックを入れて下さい。<br>
-                                        <span class="red">※ご契約者様と入居者様が異なる場合は、入居者様の氏名もご入力下さい。</span>
-                                    </td>
-                                    <td><div id="contractor_same_resident"></div></td>
                                 </tr>
                                 <tr>
                                     <td>入居者様の氏名</td>
@@ -922,11 +916,15 @@
                                 </tr>
                                 <!-- end section-->
                             </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="section_content_body">
+                    <div class='container'>
+                        <h2>転居先情報</h2>
+                        <table class="table table-bordered confirm-table">
                             <tbody>
                                 <!-- section 転居先情報-->
-                                <tr>
-                                    <td colspan="2" class="text-center font-weight-bold">転居先情報</td>
-                                </tr>
                                 <tr>
                                     <td>物件名</td>
                                     <td>
@@ -953,11 +951,15 @@
                                 </tr>
                                 <!-- end section-->
                             </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="section_content_body">
+                    <div class='container'>
+                        <h2>敷金・日割賃料返金先口座</h2>
+                        <table class="table table-bordered confirm-table">
                             <tbody>
                                 <!-- section 敷金・日割賃料返金先口座-->
-                                <tr>
-                                    <td colspan="2" class="text-center font-weight-bold">敷金・日割賃料返金先口座</td>
-                                </tr>
                                 <tr>
                                     <td>【銀行名】</td>
                                     <td>
@@ -984,11 +986,15 @@
                                 </tr>
                                 <!-- end section-->
                             </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="section_content_body">
+                    <div class='container'>
+                        <h2>緊急連絡先</h2>
+                        <table class="table table-bordered confirm-table">
                             <tbody>
                                 <!-- section 緊急連絡先-->
-                                <tr>
-                                    <td colspan="2" class="text-center font-weight-bold">緊急連絡先</td>
-                                </tr>
                                 <tr>
                                     <td>氏名</td>
                                     <td>
@@ -1025,11 +1031,15 @@
                                 </tr>
                                 <!-- end section-->
                             </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="section_content_body">
+                    <div class='container'>
+                        <h2>解約日・立会希望日</h2>
+                        <table class="table table-bordered confirm-table">
                             <tbody>
                                 <!-- section 解約日・立会希望日-->
-                                <tr>
-                                    <td colspan="2" class="text-center font-weight-bold">解約日・立会希望日</td>
-                                </tr>
                                 <tr>
                                     <td>解約通知日</td>
                                     <td>
@@ -1058,18 +1068,22 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="form-group text-center">
-                        <div class="row">
-                            <div class="col-12 col-lg-6">
-                                <button type="button" class="btn" id="btnBack">戻る <i class="i_rightwhite rotate"></i></button>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <button type="button" class="btn" id="btnSubmit">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                </section>
+                <section class="section_content_body bg-white">
+                    <div class='container'>
+                        <div class="form-group text-center">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn" id="btnBack">戻る <i class="i_rightwhite rotate"></i></button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn" id="btnSubmit">送信 <i class="i_rightwhite"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section> 
+                </section>
+            </div> 
         </form>
     </div>
 </div>

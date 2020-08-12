@@ -1,4 +1,22 @@
 $(function($) {
+    var queryString = function(){
+
+        var search = window.location.search;
+        var res = {};
+        var str = search.substr(1);
+        var params = str.split("&");
+        params.forEach(function(data){
+            var obj = data.split("=");
+            res[obj[0]] = obj[1];
+        });
+        return res;
+    }
+
+    if (typeof queryString()['finish'] !== 'undefined' && queryString()['finish'] == '1'){
+        $('.section_content_top .steps li').removeClass('active');
+        $('.section_content_top .steps li.finish').addClass('active');
+    }
+
     $('form.frm_general').on('submit',function(e) {
         var frm_data = $(this).serializeArray();
         var isValid = check_valid(frm_data);

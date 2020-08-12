@@ -1820,3 +1820,17 @@ main .section_news .block_valuable .title {
     width: 100% !important;
   }
 }
+
+.fancybox-caption--separate {
+  margin-top: 0;
+}
+.fancybox-caption {
+  bottom: 100%;
+  background: transparent;
+  padding: 0;
+}
+.fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption .fancybox-caption__body h2 {
+  font-size: 14px;
+  margin-bottom: -5px;
+  padding-left: 10px;
+}

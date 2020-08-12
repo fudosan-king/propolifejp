@@ -105,7 +105,9 @@ if (!function_exists('display_nav_menus')){
 
 			get_nav_lang();
 
-			echo '<li class="nav-item"><a class="nav-link btnBooking" href="'.home_url().'/#section_booking">'.__('Booking', 'uniquek').' <i class="fal fa-angle-right fa-lg"></i></a></li>';
+			echo '<li class="nav-item d-none d-md-block"><a class="nav-link btnBooking" href="'.home_url().'/#section_booking">'.__('Booking', 'uniquek').' <i class="fal fa-angle-right fa-lg"></i></a></li>';
+
+			echo '<li class="nav-item d-block d-md-none"><a class="nav-link btnBooking" target="_blank" href="https://advance.reservation.jp/prostyleryokan/s_sp/rsv/search.aspx?hi_id=2&lang=ja-JP">'.__('Booking', 'uniquek').' <i class="fal fa-angle-right fa-lg"></i></a></li>';
 
 			echo '<li class="nav-item"><a class="nav-link btnBooking btn_locationtohotel mt-0" href="https://goo.gl/maps/oHtjfGiA8Hk6Eep87" target="_blank">'.__('現在地からホテルまでのルート', 'uniquek').'<i class="fal fa-angle-right fa-lg"></i></a></li>';
 

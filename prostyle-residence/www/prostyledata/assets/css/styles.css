@@ -1802,20 +1802,19 @@ main .section_news .block_valuable .title {
     margin-left: -15px;
     margin-right: -15px;
   }
-  .fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption {
-    padding-left: 15px;
-    padding-bottom: 5px;
-  }
+
   .box_gallerys .photo {
     margin: 5px;
   }
   .box_gallerys .photo_larg, .box_gallerys .photo_larg img {
     height: 340px;
   }
-  .fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption .fancybox-caption__body h2 {
-    font-size: 16px !important;
-    /*text-align: center;*/
+
+  .fancybox-container .fancybox-stage.customize .fancybox-content .fancybox-caption .fancybox-caption__body h2, h3, h4
+  {
+    margin-bottom: -5px !important;
   }
+
   #footer .naviBox .naviUl .heightLine-a:nth-child(2) {
     width: 100% !important;
   }

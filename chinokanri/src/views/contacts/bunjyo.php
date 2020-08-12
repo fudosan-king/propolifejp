@@ -318,7 +318,7 @@
                                     ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
                                     <div class="form-group text-center">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input required" id="ck_agree" name="ck_agree">
+                                            <input type="checkbox" class="custom-control-input required" id="ck_agree" name="ck_agree" checked>
                                             <label class="custom-control-label" for="ck_agree">同意する</label>
                                         </div>
                                     </div>
@@ -398,7 +398,7 @@
                                             <button type="button" class="btn" id="btnBack">戻る <i class="i_rightwhite rotate"></i></button>
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <button type="button" class="btn" id="btnSubmit">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                            <button type="button" class="btn" id="btnSubmit">送信 <i class="i_rightwhite"></i></button>
                                         </div>
                                     </div>
                                 </div>

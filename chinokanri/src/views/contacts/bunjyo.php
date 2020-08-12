@@ -22,17 +22,28 @@
                             <li id="confirm" class="flex-fill"><span>確認</span></li>
                             <li id="finish" class="flex-fill"><span>完了</span></li>
                         </ul>
-                        <ul class="list">
-                            <li>内容によってはお答えできない場合や、電子メール以外の方法でお答えさせていただく場合がございます。</li>
-                            <li>夜間、水、日、祝祭日、年末年始など当社営業時間外にいただいたメールは翌営業日以降に回答いたします。</li>
-                            <li>お客様あてにお送りした電子メールの一部または全体を、当社の許可なく、転用、二次使用することは、固くお断りいたします。</li>
-                        </ul>
+                        <?php if(!isset($_GET['finish'])): ?>
+                            <ul class="list">
+                                <li>内容によってはお答えできない場合や、電子メール以外の方法でお答えさせていただく場合がございます。</li>
+                                <li>夜間、水、日、祝祭日、年末年始など当社営業時間外にいただいたメールは翌営業日以降に回答いたします。</li>
+                                <li>お客様あてにお送りした電子メールの一部または全体を、当社の許可なく、転用、二次使用することは、固くお断りいたします。</li>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="section_content_body bg_bluelight">
+        <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
+            <div class="success-submit">
+                <div class="mb-4"><b>お問い合わせが完了しました</b></div>
+                <div class="mb-3">お問い合わせ有り難う御座います。<br>
+                後程、メールにてお振込先等、ご連絡致します。<br>
+                今暫くお待ちくださいませ。</div>
+                <p>※休業日などでご返信が遅くなる場合がございます。<br>
+                お急ぎの場合はお電話でご確認お願い致します。</p>
+            </div>
+        <?php else: ?>
+            <section class="section_content_body bg_bluelight">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -407,6 +418,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
+        <?php endif; ?>
     </div>
 </div>

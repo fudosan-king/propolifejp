@@ -23,20 +23,20 @@ get_header();
                     <p>&nbsp;</p>
                     <p>《株式会社プロポライフグループ》</p>
                     <p>東京都港区北⻘⼭3-6-23</p>
-                    <p>電話：03-6897-8560</p>
+                    <!-- <p>電話：03-6897-8560</p> -->
                 <?php else: ?>
 
                     <form action="https://go.pardot.com/l/185822/2019-06-27/hnbz5j" method="POST" role="form" class="frm_contact">
                         <h2 class="form-title" style="margin-bottom: 30px;">お問い合わせ</h2>
 
-                        <div class="contact_tel">
+                        <!-- <div class="contact_tel">
                             <p>
                                 <b>＜お電話でのお問い合わせについて＞</b> <br>
                                 お電話でのお問い合わせは次の番号までお願いいたします。 <br>
                                 　電話番号：<a href="tel:03-6897-8560">03-6897-8560</a> <br>
                                 　営業時間：10：00～19：00
                             </p>
-                        </div>
+                        </div> -->
 
                         <p align="center">
                             必要事項をご入力の上、「入力内容を確認する」ボタンを押してください。<br>

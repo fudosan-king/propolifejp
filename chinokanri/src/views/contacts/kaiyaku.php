@@ -1088,7 +1088,7 @@
                                         <button type="button" class="btn" id="btnBack">戻る <i class="i_rightwhite rotate"></i></button>
                                     </div>
                                     <div class="col-12 col-lg-6">
-                                        <button type="button" class="btn" id="btnSubmit">送信 <i class="i_rightwhite"></i></button>
+                                        <button type="button" class="btn mt-4 mb-lg-0" id="btnSubmit">送信する <i class="i_rightwhite"></i></button>
                                     </div>
                                 </div>
                             </div>

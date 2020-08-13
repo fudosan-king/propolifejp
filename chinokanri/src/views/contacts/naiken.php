@@ -333,10 +333,10 @@
                            <div class="box_content_footer mt-4">
                                <div class="form-group text-center">
                                    <div class="row">
-                                       <div class="col-6">
+                                       <div class="col-12 col-lg-6">
                                            <button type="submit" class="btn btnAgree" id="btnBack"><i class="i_rightwhite rotate"></i> 戻る</button>
                                        </div>
-                                       <div class="col-6">
+                                       <div class="col-12 col-lg-6">
                                            <button type="submit" class="btn btnAgree" id="btnSubmit">送信する <i class="i_rightwhite"></i></button>
                                        </div>
                                    </div>

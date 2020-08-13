@@ -1,11 +1,10 @@
 $(function($) {
 	$.ajax({
-		url: '/assets/data/jp_national_holidays_min_2020.json',
+		url: '/assets/data/jp_national_holidays_min.json',
 		dataType: 'json',
 	})
 	.always(function(data) {
-		var holidays = data ? data[2020] : null;
-
+		var holidays = data[(new Date()).getFullYear()];
 		$('.datepicker').datepicker({
 			language: 'ja',
 			disableTouchKeyboard: true,
@@ -23,8 +22,8 @@ $(function($) {
 	            if (date.getDay() == 2 || date.getDay() == 3)
 	                return false;
 
-	            if(holidays && holidays[(date.getMonth() + 1)]){
-	            	if(holidays[(date.getMonth() + 1)].includes(date.getDate()))
+	            if(data &&  data[date.getFullYear()][(date.getMonth() + 1)]){
+	            	if(data[date.getFullYear()][(date.getMonth() + 1)].includes(date.getDate()))
 	            		return false;
 	            }
 	            
@@ -32,8 +31,8 @@ $(function($) {
 	        },
 		});
 	})
-	.fail(function() {
-		console.log("error");
+	.fail(function(e) {
+		console.log(e);
 	})
 
 });

@@ -615,6 +615,11 @@ footer .back-to-top {
     border-radius: .25rem;
 }
 
+.datepicker .datepicker-days .day.disabled:not(.today) {
+    background: #e4e4e4;
+    border-radius: 0;
+}
+
 .frm-confirm .btn {
 	width: 100%;
 	padding: 15px 20px;

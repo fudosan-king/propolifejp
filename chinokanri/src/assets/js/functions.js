@@ -13,13 +13,10 @@ $(function($) {
 	        ignoreReadonly: true,
 	        beforeShowDay: function (date) {
 
-	            if(date.getDate() == (new Date()).getDate() )
+	            if(date.getTime() <= (new Date()).getTime() )
 	                return false;
 
-	            if(date.getTime() < (new Date()).getTime() )
-	                return false;
-
-	            if (date.getDay() == 2 || date.getDay() == 3)
+	            if (date.getDay() == 3 || date.getDay() == 0)
 	                return false;
 
 	            if(data &&  data[date.getFullYear()][(date.getMonth() + 1)]){

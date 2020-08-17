@@ -635,4 +635,14 @@
 
         return $recent_posts;
     }
+
+    function get_post_tags()
+    {
+        // if(is_single()) $tags = get_the_tags(get_queried_object_id());
+        // else $tags = get_tags(array( 'hide_empty' => false ));
+        $args = array( 'hide_empty' => false );
+        $args['include'] = get_field('taxonomy_tags', 'option');
+        $tags = get_tags($args);
+        return wp_list_sort($tags, 'count', 'DESC');
+    }
 ?>

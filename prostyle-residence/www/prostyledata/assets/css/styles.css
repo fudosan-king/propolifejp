@@ -503,6 +503,9 @@ ul.menu_footer li:hover a {
 .btnDocument:hover .i_right {
   background: url('../images/1x/i_right_white.png') no-repeat;
 }
+.btnCancel{
+  width: 100%
+}
 .address {
   border-left: 1px solid #000;
   padding-left: 10px;

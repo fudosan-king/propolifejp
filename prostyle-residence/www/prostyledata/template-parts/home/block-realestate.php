@@ -44,11 +44,14 @@
 				case 'predict':
 					$soldoutText = __('販売予告', 'sgvink');
 					break;
+				case 'cancel':
+					$soldoutText = __('キャンセル待ち受付中', 'sgvink');
+					break;
 				default:
 					$soldoutText = __('完売御礼', 'sgvink');
 					break;
 			}
-			$soldoutClass = get_field('status') == 'sold' ? 'soldout' : '' ;
+			$soldoutClass =  in_array(get_field('status'), ['sold', 'cancel']) ? 'soldout' : '' ;
 
 			
 			?>
@@ -95,23 +98,31 @@
 													echo '</div>';
 												endif;
 											?>
-											
-											<?php if (get_field('status') == 'sale' || get_field('status') == 'predict'): 
-												echo '<div class="text-center">';
+										
+											<?php 
+												if (get_field('status') == 'sale' || get_field('status') == 'predict'): 
+													echo '<div class="text-center">';
 
-												if (!empty($requestLink)){
-													echo '<a href="'.$requestLink.'" class="btn btnDocument">資料請求 <i class="i_right"></i></a>';
-												}
+													if (!empty($requestLink)){
+														echo '<a href="'.$requestLink.'" class="btn btnDocument">資料請求 <i class="i_right"></i></a>';
+													}
 
-												if (!empty($visitLink)){
-													echo '<a href="'.$visitLink.'" class="btn btnDocument">来場予約 <i class="i_right"></i></a>';
-												}											
+													if (!empty($visitLink)){
+														echo '<a href="'.$visitLink.'" class="btn btnDocument">来場予約 <i class="i_right"></i></a>';
+													}											
 
-												echo '</div>'
+													echo '</div>';
+
+												elseif (get_field('status') == 'cancel') :
+
+													if (!empty($requestLink)){
+														echo '<div class="text-center"><a href="'.$requestLink.'" class="btn btn btnDocument btnCancel">キャンセル待ちはこちら <i class="i_right"></i></a></div>';
+													}
+
+												endif;
 
 											?>											
-													
-											<?php endif; ?>
+											
 										</div>
 
 										<?php 

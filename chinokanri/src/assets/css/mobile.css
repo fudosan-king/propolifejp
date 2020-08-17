@@ -173,6 +173,7 @@
 	.frm-confirm .btn {
 		width: 100%
 	}
+	.btnAgree.cfr {width: 100%;}
 }
 
 @media (max-width: 414px) {
@@ -205,7 +206,7 @@
 
     .cancellation .content {margin: 20px auto 40px;}
 
-    .btnAgree {width: 100%;}
+    /*.btnAgree {width: 100%;}*/
 
     .btnAgree .i_rightwhite.rotate {top: 33%;}
 	
@@ -220,8 +221,6 @@
     .banner-content h3 {font-size: 18pt;}
 
     .btnAgree .i_rightwhite.rotate {top: 30%;}
-    .btnAgree.cfr:first-child {padding-right: 0;}
-    .btnAgree.cfr:last-child {padding-left: 0;}
 
     footer ul li a {padding: 0 0.4rem; font-size: 11px;}
 

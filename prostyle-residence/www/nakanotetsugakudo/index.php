@@ -217,6 +217,15 @@
 
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.08.01</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>オンライン相談会を開始いたしました。</p>
+			      											</div>
+			      										</div>
+
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.07.03</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">

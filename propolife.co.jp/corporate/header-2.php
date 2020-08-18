@@ -63,7 +63,7 @@ if(is_page(array('top'))){
 ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/news.css">
 <?php
-}elseif(is_page('ir') || is_page('prostyle-ryokan-yokohama-bashamichi') || is_page('prostyle-yokohama')){
+}elseif(is_page('ir') || is_page('prostyle-ryokan-yokohama-bashamichi') || is_page('prostyle-yokohama') || is_page('logknot')){
 ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/common/css/pressrelease.css">
 <?php

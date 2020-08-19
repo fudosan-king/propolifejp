@@ -42,7 +42,7 @@
             <div class="success-submit">
                 <div class="mb-4"><b>お問い合わせが完了しました</b></div>
                 <div class="mb-3">お問い合わせ有り難う御座います。<br>
-                後程、メールにてお振込先等、ご連絡致します。<br>
+                後程、担当者からご連絡させて頂きます。<br>
                 今暫くお待ちくださいませ。</div>
                 <p>※休業日などでご返信が遅くなる場合がございます。<br>
                 お急ぎの場合はお電話でご確認お願い致します。</p>
@@ -1088,7 +1088,7 @@
                                         <button type="button" class="btn" id="btnBack">戻る <i class="i_rightwhite rotate"></i></button>
                                     </div>
                                     <div class="col-12 col-lg-6">
-                                        <button type="button" class="btn mt-4 mb-lg-0" id="btnSubmit">送信する <i class="i_rightwhite"></i></button>
+                                        <button type="button" class="btn mt-4 mt-lg-0" id="btnSubmit">送信する <i class="i_rightwhite"></i></button>
                                     </div>
                                 </div>
                             </div>

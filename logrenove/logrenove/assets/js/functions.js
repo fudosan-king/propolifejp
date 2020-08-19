@@ -145,5 +145,9 @@ $(function() {
         });
 
     }
+    $(".btn_close").click(function(event) {
+        event.preventDefault();
+        $(".section_cookie").toggle('fast');
+    });
     
 });

@@ -176,6 +176,8 @@
 	.btnAgree.cfr {width: 100%;}
 }
 
+
+
 @media (max-width: 414px) {
 	.banner-content {right: inherit; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;}
     .banner-content h3 {font-size: 18pt}

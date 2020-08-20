@@ -46,7 +46,7 @@ if (have_posts()):
 					$newGoodPost = get_post('718');
 					if (isset($newGoodPost)):
 						?>
-							<a href="<?php echo get_the_permalink($newGoodPost); ?>" target="_blank" ><?php echo $newGoodPost->post_title; ?></a>
+							<a href="<?php echo get_the_permalink($newGoodPost); ?>"><?php echo $newGoodPost->post_title; ?></a>
 						<?php
 					endif;
 				?>

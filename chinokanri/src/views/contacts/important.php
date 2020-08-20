@@ -182,13 +182,13 @@
                                                             <input type="text" name="governor_opt1_first" class="form-control" data-group="building_license_minister">
                                                         </div>
                                                         <div class="col-1 col-lg-1 align-self-center">
-                                                            <p class="mb-0 mx-2 text-center">第</p>
+                                                            <p class="mb-0 mx-2 text-left">）第</p>
                                                         </div>
                                                         <div class="col-6 col-lg-6 align-self-center">
                                                             <input type="text" name="governor_opt1_number" class="form-control" data-group="building_license_minister">
                                                         </div>
                                                         <div class="col-2 col-lg-2 align-self-center">
-                                                            <p class="mb-0 text-left ml-1">号　）</p>
+                                                            <p class="mb-0 text-left ml-1">号</p>
                                                         </div>
                                                     </div>
                                                     <div class="row no-gutters mb-3 mb-lg-4">
@@ -213,13 +213,13 @@
                                                             <input type="text" name="governor_opt2_first" class="form-control" data-group="building_license_governor" readonly="">
                                                         </div>
                                                         <div class="col-1 col-lg-1 align-self-center">
-                                                            <p class="mb-0 mx-2 text-center">第</p>
+                                                            <p class="mb-0 mx-2 text-left">）第</p>
                                                         </div>
                                                         <div class="col-6 col-lg-6 align-self-center">
                                                             <input type="text" name="governor_opt2_number" class="form-control" data-group="building_license_governor" readonly="">
                                                         </div>
                                                         <div class="col-2 col-lg-2 align-self-center">
-                                                            <p class="mb-0 text-left ml-1">号　）</p>
+                                                            <p class="mb-0 text-left ml-1">号</p>
                                                         </div>
                                                     </div>
                                                     <div class="custom-control custom-radio mb-2">
@@ -288,10 +288,10 @@
                                             <label for="">FAX番号（半角数字）<span>※ハイフンなしでご記入ください。</span></label>
                                             <div class="row">
                                                 <div class="col-2 col-lg-1 align-self-center">
-                                                    <span class="label_sub">必須</span>
+                                                    
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
-                                                    <input type="text" name="fax" class="form-control" placeholder="例：0312341234" data-require="true">
+                                                    <input type="text" name="fax" class="form-control" placeholder="例：0312341234">
                                                 </div>
                                             </div>
                                         </div>
@@ -299,10 +299,10 @@
                                             <label for="">FAX番号・確認用（半角数字）<span>※ハイフンなしでご記入ください。</span></label>
                                             <div class="row">
                                                 <div class="col-2 col-lg-1 align-self-center">
-                                                    <span class="label_sub">必須</span>
+                                                    
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
-                                                    <input type="text" name="fax_confirm" class="form-control" placeholder="例：0312341234" data-require="true" data-confirm="true" data-confirm-name="fax">
+                                                    <input type="text" name="fax_confirm" class="form-control" placeholder="例：0312341234" data-confirm="true" data-confirm-name="fax">
                                                 </div>
                                             </div>
                                         </div>
@@ -465,15 +465,6 @@
                                         </div>
                                         <div class="form-group mb-0">
                                             <label for="">売却依頼主</label>
-                                            <p class="mb-1">住戸番号</p>
-                                            <div class="row mb-3">
-                                                <div class="col-2 col-lg-1 align-self-center">
-                                                    <span class="label_sub">必須</span>
-                                                </div>
-                                                <div class="col-10 col-lg-11 align-self-center">
-                                                    <input type="text" name="unit_number_sale" class="form-control" data-require="true">
-                                                </div>
-                                            </div>
                                             <p class="mb-1">氏名</p>
                                             <div class="row mb-3">
                                                 <div class="col-2 col-lg-1 align-self-center">
@@ -504,12 +495,9 @@
                                                 <div class="col-10 col-lg-11">
                                                     <div class="custom-control custom-checkbox mb-1">
                                                         <input type="checkbox" name="request_document[]" class="custom-control-input" value="調査報告書" id="cb_surveyreport" data-require="true">
-                                                        <label class="custom-control-label" for="cb_surveyreport">調査報告書</label>
+                                                        <label class="custom-control-label" for="cb_surveyreport">調査報告書 (11,000円/1戸)</label>
                                                     </div>
                                                     <div class="row mb-3">
-                                                        <div class="col-12 col-lg-4 align-self-center">
-                                                            <p class="mb-0">調査報告書 (11,000円/1戸)</p>
-                                                        </div>
                                                         <div class="col-10 col-lg-6 align-self-center">
                                                             <input type="number" min="1" max="20" name="request_unit" class="form-control" readonly="">
                                                         </div>
@@ -517,15 +505,11 @@
                                                             <p class="mb-0">戸</p>
                                                         </div>
                                                     </div>
-                                                    <div class="custom-control custom-checkbox mb-1">
+                                                    <div class="custom-control custom-checkbox mb-3">
                                                         <input type="checkbox" name="request_document[]" class="custom-control-input" value="管理規約（コピー）" id="cb_managementagreement" data-require="true">
-                                                        <label class="custom-control-label" for="cb_managementagreement">管理規約（コピー）</label>
+                                                        <label class="custom-control-label" for="cb_managementagreement">管理規約（コピー） (3,300円)</label>
                                                     </div>
-                                                     <div class="row mb-3">
-                                                        <div class="col-12">
-                                                            <p class="mb-0">管理規約（コピー） (3,300円)</p>
-                                                        </div>
-                                                    </div>
+
                                                     <p>※税込表記になります。<br>
                                                         ※振込手数料はご負担下さい。<br>
                                                         ※依頼戸数をご入力下さい。<br>

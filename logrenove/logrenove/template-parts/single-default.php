@@ -83,17 +83,17 @@ if(have_posts()):
                 </div>
             </div>
         </div>
-
+        <?php $section_cookie = get_section_cookie(); ?>
         <section class="section_cookie">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-7 align-self-center">
-                        <p class="d-none d-md-block"><?=get_field('section_cookie_description','option')?></p>
+                        <p class="d-none d-md-block"><?=$section_cookie['description']?></p>
                     </div>
                     <div class="col-12 col-md-5 align-self-center">
                         <p class="text-center text-lg-right">
-                            <a class="btn btn_online font-weight-bold d-none d-md-block" target="_blank" href="<?=get_field('section_cookie_url','option')?>"><?=get_field('section_cookie_text','option')?></a>
-                            <a class="btn btn_online font-weight-bold d-block d-md-none" target="_blank" href="<?=get_field('section_cookie_url','option')?>"><?=get_field('section_cookie_text','option')?></a>
+                            <a class="btn btn_online font-weight-bold d-none d-md-block" target="_blank" href="<?=$section_cookie['url']?>"><?=$section_cookie['text']?></a>
+                            <a class="btn btn_online font-weight-bold d-block d-md-none" target="_blank" href="<?=$section_cookie['url']?>"><?=$section_cookie['text']?></a>
                         </p>
                     </div>
                 </div>

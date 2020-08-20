@@ -1311,3 +1311,45 @@ ul.list_information li p {
 .box_note p:last-child {
   margin-bottom: 0;
 }
+@font-face {font-family: "SF Pro Display Regular";
+  src: url("../css/fonts/0b51833ff62e4af8acb5fd3e2bf59e97.eot"); /* IE9*/
+  src: url("../css/fonts/0b51833ff62e4af8acb5fd3e2bf59e97.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../css/fonts/0b51833ff62e4af8acb5fd3e2bf59e97.woff2") format("woff2"), /* chrome、firefox */
+  url("../css/fonts/0b51833ff62e4af8acb5fd3e2bf59e97.woff") format("woff"), /* chrome、firefox */
+  url("../css/fonts/0b51833ff62e4af8acb5fd3e2bf59e97.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../css/fonts/0b51833ff62e4af8acb5fd3e2bf59e97.svg#SF Pro Display Regular") format("svg"); /* iOS 4.1- */
+}
+.wrap_note {
+  width: 870px;
+  margin: auto;
+}
+.box_note {
+  font-family: "SF Pro Display Regular", "noto-sans-cjk-jp";
+}
+.box_note h3 {
+  font-family: "SF Pro Display Regular", "noto-sans-cjk-jp";
+  margin-bottom: 35px;
+}
+@media (max-width: 768px) {
+  .wrap_note {
+    width: 100%;
+  }
+  .box_note {
+    padding: 15px;
+  }
+  .box_note h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .box_note p {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .box_note p {
+    font-size: 12px;
+  }
+  .box_note h3 {
+    font-size: 14px;
+  }
+}

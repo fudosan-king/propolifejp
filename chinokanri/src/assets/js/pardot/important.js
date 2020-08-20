@@ -131,7 +131,6 @@ $(function($) {
                 $('input[name="kondo_building_room"]').val()
             );
 
-            $('.cfr.unit_number_sale').html($('input[name="unit_number_sale"]').val());
             $('.cfr.unit_name_sale').html($('input[name="unit_name_sale"]').val());
             
             // // /* 0:調査報告書, 1:管理規約（コピー） */
@@ -322,7 +321,6 @@ $(function($) {
                 $('input[name="kondo_building_name"]').val('Vinhomes Riverside');
                 $('input[name="kondo_building_room"]').val('Apt. 205');
 
-                $('input[name="unit_number_sale"]').val('CLI#1331');
                 $('input[name="unit_name_sale"]').val('LUX');
                 
                 // /* 0:調査報告書, 1:管理規約（コピー） */

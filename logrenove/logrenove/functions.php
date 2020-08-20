@@ -645,4 +645,18 @@
         $tags = get_tags($args);
         return wp_list_sort($tags, 'count', 'DESC');
     }
+
+    function get_section_cookie()
+    {
+        global $wp_query;
+        $post_cat_id = wp_get_post_categories($wp_query->post->ID)[0];
+        $section_cookie_text = get_field('section_cookie_text','category_'.$post_cat_id);
+        $section_cookie_url = get_field('section_cookie_url','category_'.$post_cat_id);
+        $section_cookie_description = get_field('section_cookie_description','category_'.$post_cat_id);
+        $section_cookie = array();
+        $session_cookie['description'] = $section_cookie_description ? $section_cookie_description : get_field('section_cookie_description','option');;
+        $session_cookie['text'] = !empty($section_cookie_text) ? $section_cookie_text : get_field('section_cookie_text','option');
+        $session_cookie['url'] = !empty($section_cookie_url) ? $section_cookie_url : get_field('section_cookie_url','option');
+        return $session_cookie;
+    }
 ?>

@@ -214,3 +214,13 @@ $(function() {
     }
     // console.log(isMobile);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    $anchorElements = document.getElementsByTagName('a')
+    Array.from($anchorElements).forEach(function(anchorElement) {
+        if (anchorElement.host !== location.host) {
+            anchorElement.target = '_blank';
+            anchorElement.rel = 'noopener noreferrer';
+        }
+    })
+}, false);

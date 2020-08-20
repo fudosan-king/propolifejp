@@ -60,16 +60,18 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-            	<div class="box_note">
-	            	<?php echo $noticeContent; ?>
-            	</div>
-            	<p class="mb-4 d-none d-md-block" ><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect.aspx?hi_id=2&lang=ja-JP&p_id=16&page=plan"><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="" class="img-fluid"></a></p>
-            	<p class="mb-4 d-block d-md-none" ><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?smp_id=16&hi_id=2&lang=ja-JP"><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="" class="img-fluid"></a></p>
-            	<div class="box_note">
-            		<h3>【STAY HOTELのお知らせ】</h3>
-            		<p>昨今の新型コロナウイルス感染症（COVID-19）の防止策として、 国内でのテレワークの普及は急速に拡大している中、自宅以外のホテルに住まう感覚での活用を提案すべく、素泊まり5泊6日で1室最低20,000円～という料金設定の「STAY HOTEL」プランを開始することとなりました。<br>
-            		※清掃およびアメニティ交換のタイミングは宿泊期間中1回となっています。</p>
-            	</div>
+            	<div class="wrap_note">
+	            	<div class="box_note mb-5">
+		            	<?php echo $noticeContent; ?>
+	            	</div>
+	            	<p class="mb-4 d-none d-md-block" ><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect.aspx?hi_id=2&lang=ja-JP&p_id=16&page=plan"><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="" class="img-fluid"></a></p>
+	            	<p class="mb-4 d-block d-md-none" ><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?smp_id=16&hi_id=2&lang=ja-JP"><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="" class="img-fluid"></a></p>
+	            	<div class="box_note">
+	            		<h3>【STAY HOTELのお知らせ】</h3>
+	            		<p>昨今の新型コロナウイルス感染症（COVID-19）の防止策として、 国内でのテレワークの普及は急速に拡大している中、自宅以外のホテルに住まう感覚での活用を提案すべく、素泊まり5泊6日で1室最低20,000円～という料金設定の「STAY HOTEL」プランを開始することとなりました。<br>
+	            		※清掃およびアメニティ交換のタイミングは宿泊期間中1回となっています。</p>
+	            	</div>
+	            </div>
             </div>
         </div>
     </div>

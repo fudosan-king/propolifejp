@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center mb-3">
             <?php 
-                $footer_banner = get_field('footer_banner', 'option');
+                $footer_banner = get_footer_banner();
                 $left_url = $footer_banner['left_url'];
                 $left_banner = $footer_banner['left_banner'];
                 $right_url = $footer_banner['right_url'];

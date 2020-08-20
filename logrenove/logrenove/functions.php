@@ -659,4 +659,18 @@
         $session_cookie['url'] = !empty($section_cookie_url) ? $section_cookie_url : get_field('section_cookie_url','option');
         return $session_cookie;
     }
+
+    function get_footer_banner()
+    {
+        global $wp_query;
+        $post_cat_id = wp_get_post_categories($wp_query->post->ID)[0];
+        $category_footer_banner = get_field('footer_banner', 'category_'.$post_cat_id);
+        $footer_banner = get_field('footer_banner', 'option');
+        $result = array();
+        $result['left_url'] = (!empty($category_footer_banner['left_url']) && count($category_footer_banner['left_url'])) ? $category_footer_banner['left_url'] : $footer_banner['left_url'];
+        $result['left_banner'] = (!empty($category_footer_banner['left_banner']) && count($category_footer_banner['left_banner'])) ? $category_footer_banner['left_banner'] : $footer_banner['left_banner'];
+        $result['right_url'] = (!empty($category_footer_banner['right_url']) && count($category_footer_banner['right_url'])) ? $category_footer_banner['right_url'] : $footer_banner['right_url'];
+        $result['right_banner'] = (!empty($category_footer_banner['right_banner']) && count($category_footer_banner['right_banner'])) ? $category_footer_banner['right_banner'] : $footer_banner['right_banner'];
+        return $result;
+    }
 ?>

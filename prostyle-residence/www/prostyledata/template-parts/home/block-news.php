@@ -40,7 +40,7 @@
 					</div>
 					<div class="col col-12 col-sm-11">';
 		while($query->have_posts()): $query->the_post();	
-			echo '<p><time datetime="'.get_the_date('Y-m-d').'">'.get_the_date('Y-m-d').'</time><a href="'.get_permalink().'" target="_blank">'.get_the_title().'</a></p>';
+			echo '<p><time datetime="'.get_the_date('Y-m-d').'">'.get_the_date('Y-m-d').'</time><a href="'.get_permalink().'">'.get_the_title().'</a></p>';
 		endwhile;
 		echo '		</div>
 				</div>

@@ -52,7 +52,7 @@
                                                         if (isset($newGoodPost)):
                                                             ?>
                                                                 <div class="btn-link">
-                                                                    <a class="btn" href="<?php echo get_the_permalink($newGoodPost); ?>" target="_blank" >詳しくはこちら(プレスリリース) <i class="i_right_white"></i></a>
+                                                                    <a class="btn" href="<?php echo get_the_permalink($newGoodPost); ?>">詳しくはこちら(プレスリリース) <i class="i_right_white"></i></a>
                                                                 </div>
                                                             <?php
                                                         endif;

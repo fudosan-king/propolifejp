@@ -23,7 +23,7 @@ if (have_posts()):
         <div align="center">
             <p style="font-size:12px;">こちらからPDFでダウンロードして頂けます。</p>
             <article class="docItem">
-                <a href="https://www.prostyle-residence.com/wp-content/uploads/2019/02/★プロスタイル買取物件募集★.pdf" target="_blank"><img src="https://www.prostyle-residence.com/wp-content/themes/prostyledata/assets/images/ext/file_pdf.png" alt=""></a><br><br>
+                <a href="https://www.prostyle-residence.com/wp-content/uploads/2019/02/★プロスタイル買取物件募集★.pdf"><img src="https://www.prostyle-residence.com/wp-content/themes/prostyledata/assets/images/ext/file_pdf.png" alt=""></a><br><br>
                 <div class="title">★プロスタイル買取物件募集★.pdf</div>
             </article>
         </div>

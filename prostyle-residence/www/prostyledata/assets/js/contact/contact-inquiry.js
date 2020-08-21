@@ -18,8 +18,19 @@ $(function($) {
         $('.breadcrumb_reservation .flex-fill.finish').addClass('active');
     }
 
-    if (typeof queryString()['from'] !== 'undefined' && queryString()['from'] == 'nakano'){
-        $('select[name="property_name"]').append('<option value="プレシス中野哲学堂パークフロント" selected>プレシス中野哲学堂パークフロント</option>');
+    if (typeof queryString()['from'] !== 'undefined'){
+        switch(queryString()['from']){
+            case 'nakano':{
+                $('select[name="property_name"]').append('<option value="プレシス中野哲学堂パークフロント" selected>プレシス中野哲学堂パークフロント</option>');
+            }break;
+            case 'ichigao':{
+                $('select[name="property_name"]').append('<option value="プロスタイル市ヶ尾" selected>プロスタイル市ヶ尾</option>');
+            }break;
+            case 'sakura':{
+                $('select[name="property_name"]').append('<option value="プレシス淵野辺 桜レジデンス" selected>プレシス淵野辺 桜レジデンス</option>');
+            }break;
+        }
+        
     }else{
         $('select[name="property_name"]').append('<option value="">物件を選択</option>');
         $('select[name="property_name"]').append('<option value="プレシス中野哲学堂パークフロント">プレシス中野哲学堂パークフロント</option>');

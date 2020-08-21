@@ -454,12 +454,15 @@
 
         function __construct($post_id, $size='full')
         {
-            $this->size = $size;
-            $meta = !empty(wp_get_attachment_metadata($post_id, false )['image_meta'])?wp_get_attachment_metadata($post_id, false )['image_meta']:array();
-            $this->title = !empty($meta['title'])?$meta['title']:'';
-            $this->caption = !empty($meta['caption'])?$meta['caption']:'';
-            $this->alt = get_post_meta( $post_id, '_wp_attachment_image_alt', true );
-            $this->url = wp_get_attachment_image_url( $post_id, $size, false );
+            if(!empty($post_id)){
+                $this->size = $size;
+                $meta = !empty(wp_get_attachment_metadata($post_id, false )['image_meta'])?wp_get_attachment_metadata($post_id, false )['image_meta']:array();
+                $this->title = !empty($meta['title'])?$meta['title']:'';
+                $this->caption = !empty($meta['caption'])?$meta['caption']:'';
+                $this->alt = get_post_meta( $post_id, '_wp_attachment_image_alt', true );
+                $this->url = wp_get_attachment_image_url( $post_id, $size, false );
+            }
+            
         }
     }
 

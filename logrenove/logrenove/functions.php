@@ -676,4 +676,16 @@
         $result['right_banner'] = (!empty($category_footer_banner['right_banner']) && count($category_footer_banner['right_banner'])) ? $category_footer_banner['right_banner'] : $footer_banner['right_banner'];
         return $result;
     }
+
+    function get_sidebar_banner()
+    {
+        global $wp_query;
+        $post_cat_id = wp_get_post_categories($wp_query->post->ID)[0];
+        $category_sidebar_banner = get_field('sidebar_banner', 'category_'.$post_cat_id);
+        $sidebar_banner = get_field('sidebar_banner', 'option');
+        $result = array();
+        $result['url'] = (!empty($category_sidebar_banner['url']) && count($category_sidebar_banner['url'])) ? $category_sidebar_banner['url'] : $sidebar_banner['url'];
+        $result['banner'] = (!empty($category_sidebar_banner['banner']) && count($category_sidebar_banner['banner'])) ? $category_sidebar_banner['banner'] : $sidebar_banner['banner'];
+        return $result;
+    }
 ?>

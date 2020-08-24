@@ -9,6 +9,12 @@
             echo '<li><a href="'.get_field('twitter_url', 'option').'" target="_blank"><i class="fab fa-twitter"></i></a></li>';
           if(!empty(get_field('instagram_url', 'option')))
             echo '<li><a href="'.get_field('instagram_url', 'option').'" target="_blank"><i class="fab fa-instagram"></i></a></li>';
+          if(!empty(get_field('line_id', 'option')))
+          {
+            $line_id = get_field('line_id', 'option');
+            $line_url = 'https://page.line.me/'.explode('@', $line_id, 2)[1];
+            echo '<li><a href="'.$line_url.'" target="_blank"><i class="fab fa-line"></i></a></li>';
+          }
         ?>
       </ul>
 

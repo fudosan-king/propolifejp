@@ -78,7 +78,6 @@
                 }
             }, false)
 
-
             function validateForm() {
                 var ERROR_NO_INPUT = '値を入力してください';
                 var isValid = true

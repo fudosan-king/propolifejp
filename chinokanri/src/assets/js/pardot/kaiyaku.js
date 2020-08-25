@@ -53,15 +53,21 @@
                 
             }, false)
 
-
             Array.from(datepickerElements).forEach((datepickerElement) => {
                 $(datepickerElement).datepicker({
                     language: 'ja',
                     autoclose: true,
-                    disableTouchKeyboard: true
+                    disableTouchKeyboard: true,
+                    beforeShowDay: function (date) {
+                        var oneMonth = new Date()
+                        oneMonth.setMonth(oneMonth.getMonth() + 1)
+                        if (date.getTime() <= oneMonth.getTime())
+                            return false;
+
+                        return true
+                    },
                 });
             })
-
 
             btnBack.addEventListener('click', function() {
                 var hideConfirmForm = new Promise(function(resolve, reject) {

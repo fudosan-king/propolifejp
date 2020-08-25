@@ -121,8 +121,12 @@
 
 												endif;
 
-											?>											
-											
+											?>
+                                            <?php if (get_field('inquiry_url')) : ?>
+                                                <a target="_blank" class="btn_documentrequest" href="<?php echo get_field('inquiry_url'); ?>" rel="noopener noreferrer">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/document_request.png" alt="" class="img-fluid">
+                                                </a>
+                                            <?php endif; ?>
 										</div>
 
 										<?php 

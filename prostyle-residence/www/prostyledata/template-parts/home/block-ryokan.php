@@ -1,4 +1,13 @@
 <section class="section_ryokan bg_common">
+    <div class="banner_line">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a target="_blank" href="https://www.prostyle-residence.com/online/?from=nakano" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner.png" alt="" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -1836,3 +1836,29 @@ main .section_news .block_valuable .title {
   margin-bottom: -5px;
   padding-left: 10px;
 }
+/* 25/08/2020 */
+.banner_line {
+  padding-bottom: 60px;
+  border-bottom: 35px solid #3F3F41;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.btn_documentrequest {
+  display: block;
+  margin-top: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+@media (max-width: 768px) {
+  .banner_line {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+  .btn_documentrequest {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .section_ryokan {
+    padding-top: 100px;
+  }
+}

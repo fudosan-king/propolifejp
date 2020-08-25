@@ -762,7 +762,7 @@
                                                 </div>
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="box_datetime">
-                                                        <input type="text" class="form-control required rounded-0 border-top-0 border-left-0 border-right-0 bg-transparent" name="cancellation_notice_date" value="<?php echo date("Y/m/d"); ?>" readonly>
+                                                        <input type="text" class="form-control required rounded-0 border-top-0 border-left-0 border-right-0 bg-transparent" name="cancellation_notice_date" value="<?php date_default_timezone_set('Asia/Tokyo'); echo date("Y/m/d"); ?>" readonly>
                                                     </div>
                                                 </div>
                                             </div>

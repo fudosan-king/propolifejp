@@ -17,6 +17,10 @@ $(function($) {
         $('.section_content_top .steps li.finish').addClass('active');
     }
 
+    $('input:checkbox[name=contact-method]').on('click',function(){
+      if($('input:checkbox[name=contact-method]:checked').length > 1) $(this).prop('checked', false);
+    })
+
     $('form.frm_general').on('submit',function(e) {
         var frm_data = $(this).serializeArray();
         var isValid = check_valid(frm_data);

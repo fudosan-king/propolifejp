@@ -410,10 +410,10 @@
                                 <div class="form-group">
                                     
                                     <div class="row">
-                                        <div class="col-2 col-lg-3 align-self-center">
+                                        <div class="col-12 col-lg-3 align-self-center">
                                             <label for="">お名前</label>
                                         </div>
-                                        <div class="col-10 col-lg-9 align-self-center">
+                                        <div class="col-12 col-lg-9 align-self-center">
                                             <div class="cfr_name">fd</div>
                                         </div>
                                     </div>
@@ -421,10 +421,10 @@
 
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-2 col-lg-3 align-self-center">
+                                        <div class="col-12 col-lg-3 align-self-center">
                                             <label for="">メールアドレス</label>
                                         </div>
-                                        <div class="col-10 col-lg-9 align-self-center">
+                                        <div class="col-12 col-lg-9 align-self-center">
                                             <div class="cfr_email">df</div>
                                         </div>
                                     </div>
@@ -433,26 +433,26 @@
                                 <div class="form-group">
                                     <label class="mb-3" for="">相談希望日時</label>
                                     <div class="row mb-3">
-                                        <div class="col-12 col-lg-3">
+                                        <div class="col-5 col-lg-3">
                                             <span class="pl-3">第1希望日時</span>
                                         </div>
-                                        <div class="col-12 col-lg-9 align-self-center">
+                                        <div class="col-7 col-lg-9 align-self-center">
                                              <div class="cfr_date_time_1">df</div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-12 col-lg-3">
+                                        <div class="col-5 col-lg-3">
                                             <span class="pl-3">第2希望日時</span>
                                         </div>
-                                        <div class="col-12 col-lg-9 align-self-center">
+                                        <div class="col-7 col-lg-9 align-self-center">
                                              <div class="cfr_date_time_2">df</div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-12 col-lg-3">
+                                        <div class="col-5 col-lg-3">
                                             <span class="pl-3">第3希望日時</span>
                                         </div>
-                                        <div class="col-12 col-lg-9 align-self-center">
+                                        <div class="col-7 col-lg-9 align-self-center">
                                              <div class="cfr_date_time_3">df</div>
                                         </div>
                                     </div>

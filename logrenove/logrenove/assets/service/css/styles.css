@@ -951,7 +951,7 @@ ul.list_menufooter li a {
 }
 
 .btnAgree.cfr {width: 30%; margin: 0 10px;}
-.btnAgree .i_rightwhite.rotate {transform: rotateY(180deg);}
+.btnAgree .i_rightwhite.rotate {transform: rotateY(180deg); left: 20px;}
 
 .frm_box_bookonline .confirmForm .form-group {margin-bottom: 25px;}
 .frm_box_bookonline .confirmForm label {margin-bottom: 0;}

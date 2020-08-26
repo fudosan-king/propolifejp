@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js">
 
@@ -5,8 +6,45 @@
 	<title>【公式】プレシス中野哲学堂パークフロント｜哲学堂公園1分、全戸南東向き+パークビュー</title>
 	<meta name="keywords" content="プレシス中野哲学堂パークフロント,西武新宿線,新井薬師前駅,都営地下鉄大江戸線,落合南長崎駅,東京,マンション,新築,株式会社プロスタイル"/>
 	<meta name="description" content="中野区松が丘2丁目の新築分譲マンション。西武新宿線・都営大江戸線アドレス。2LDK～3LDK。全戸南東向き＋哲学堂公園ビュー。建物内モデルルーム公開中‼実際のお部屋をご確認頂けます。"/>
-    <?php require 'head.php'; ?>
-    <style type="text/css">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+<link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800,900&amp;subset=japanese" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&amp;subset=japanese" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
+
+<link rel="stylesheet" href="css/fontawesome-pro-5.7.0-web/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/tablesaw.stackonly.css">
+<link rel="stylesheet" href="css/bsnav.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<link rel="stylesheet" href="css/mobile.css" type="text/css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KFVKSR');</script>
+<!-- End Google Tag Manager -->    <style type="text/css">
     </style>
 </head>
 
@@ -84,6 +122,9 @@
 			    <a class="navbar-brand d-block d-md-none" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300"></a>
 				<div class="carousel carousel_topbanner">
 					<div class="carousel-cell">
+				    	<img class="carousel-cell-image" src="images/slide/slide.png">
+				    </div>
+					<div class="carousel-cell">
 				    	<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC_slide01.jpg">
 				    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP_slide01.jpg">
 				  	</div>
@@ -94,53 +135,198 @@
 				  	<div class="carousel-cell">
 				    	<img class="carousel-cell-image" src="images/slide/PC_slide03.jpg">
 				  	</div>
-
 				</div>
-				<div class="slide-text position-absolute text-white w-100 text-center font-weight-bold">最終4邸</div>
+
+				<div class="last_houses">
+					<h1 class="number_last_houses"><span class="finally">最<br>終</span><span class="number">4</span><span class="mansion">邸</span></h1>
+					<!-- <img src="images/slide/prices.png" alt="" class="img-fluid d-none d-lg-block"> -->
+					<div class="box_sellingprice d-none d-lg-block">
+						<div class="box_sellingprice_content">
+							<p>販売価格</p>
+							<ul>
+								<li>
+									<p class="cornerunit">角住戸</p>
+									<h2>2LDK  
+										<span>＋WIC<br>
+										＋SIC</span>
+									</h2>
+								</li>
+								<li>
+									<h1 class="gold">5,200</h1>
+								</li>
+								<li>
+									<p class="unit">※100万円<span>単位</span></p>
+									<h3>万円<br>台〜</h3>
+								</li>
+							</ul>
+							<ul class="custom">
+								<li>
+									<div class="box_monthly_payment">
+										<span class="monthly_payment">月々<br>支払</span>
+										<span class="number_monthly_payment gold">13</span>
+										<span class="total">万円<br>台〜</span>
+									</div>
+								</li>
+								<li>
+									<p class="down_payment">
+										<span class="label">頭金</span>
+										<span class="number">0</span>
+										<span class="cricle">円</span>
+									</p>
+								</li>
+								<li>
+									<p class="down_payment">
+										<span class="label">ボーナス<br>
+										払い</span>
+										<span class="number">0</span>
+										<span class="cricle">円</span>
+									</p>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<h2>3LDK 
+										<span class="liha">＋WIC</span>
+									</h2>
+								</li>
+								<li>
+									<h1 class="gold">5,500</h1>
+								</li>
+								<li>
+									<p class="unit">※100万円<span>単位</span></p>
+									<h3>万円<br>台〜</h3>
+								</li>
+							</ul>
+							<ul class="custom">
+								<li>
+									<div class="box_monthly_payment">
+										<span class="monthly_payment">月々<br>支払</span>
+										<span class="number_monthly_payment gold">14</span>
+										<span class="total">万円<br>台〜</span>
+									</div>
+								</li>
+								<li>
+									<p class="down_payment">
+										<span class="label">頭金</span>
+										<span class="number">0</span>
+										<span class="cricle">円</span>
+									</p>
+								</li>
+								<li>
+									<p class="down_payment">
+										<span class="label">ボーナス<br>
+										払い</span>
+										<span class="number">0</span>
+										<span class="cricle">円</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				
+
+
 				<!-- End baner is slide -->
 
-				<div class="banner_pricelist">
-					<a href="pricelist.php"><img class="img-fluid" src="images/slide/price_list.png"></a>
-				</div>
-
 				<div class="banner_gallery">
+					<a href="pricelist.php"><img class="pricelist_img img-fluid mr-0 mb-2 mr-lg-2 mb-lg-0" src="images/slide/price_list.png"></a>
 					<a href="gallery.php"><img class="banner_gallery_pc" src="images/slide/gallery-banner_PC.png"></a>
 			    	<a href="gallery.php"><img class="banner_gallery_sp" src="images/slide/gallery-banner_SP.png"></a>
 				</div>
+
 			</div>
-			<div class="text_top_baner" align="center">
-				<!-- <span class="text-line-up">モデルルーム住戸</span><br>
-				<span class="text-content">春の大商談会開催！</span> -->
+			<!-- <div class="text_top_baner" align="center">
 				<img class="carousel-cell-image d-none d-md-block" src="images/slide/PC-bar.png">
 		    	<img class="carousel-cell-image d-block d-md-none" src="images/slide/SP-bar.png">
-			</div>
+			</div> -->
 
 			
 
 			<div class="w_topbanner_footer">
-				<div class="container-fluid">
+				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<a href="/nakanotetsugakudo/plan.php" target="_blank">
-							<ul class="topbanner_footer">
+							<ul class="box_price d-block d-lg-none">
 								<li>
-									<p>
-										<span class="meter_label">2LDK 角住戸</span>
-										<span class="price_yen">5,290</span><span class="label_yen">万円〜</span>
-										<span class="monthly">月々</span> <span class="price_stand">13</span>
-										<span class="label_stand">万円台～</span>
-									</p>
+									<p class="gold">2LDK 角住戸 <span>5,290</span>万円〜月々<span>13</span>万円台～</p>
 								</li>
 								<li>
-									<p>
-										<span class="meter_label">3LDK</span>
-										<span class="price_yen">5,590</span><span class="label_yen">万円〜</span>
-										<span class="monthly">月々</span> <span class="price_stand">14</span>
-										<span class="label_stand">万円台～</span>
-									</p>
+									<p class="gold">3LDK <span>5,590</span>万円〜月々<span>14</span>万円台～</p>
 								</li>
 							</ul>
-							</a>
+							<div class="box_large_modelroom">
+								<div class="d-flex">
+									<div class="box_readylive flex-fill">
+										<h2>即<span>入居可</span></h2>
+										<p>※諸手続き完了後</p>
+									</div>
+									<h1 class="flex-fill"><span>モデルルーム</span>大商談会開催</h1>
+									<div class="actual_room flex-fill">
+										<p>実際のお部屋が<br>
+										ご覧になれます</p>
+									</div>
+								</div>
+		    				</div>
+		    				<div class="box_selling_phrase">
+		    					<ul class="d-block d-lg-flex">
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_top">
+			    							<h2>全邸南東向き</h2>
+			    							<p>明るい日差しと開放感</p>
+		    							</div>
+		    						</li>
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_top">
+			    							<h2>中野駅生活圏</h2>
+			    							<p>中央線快速、総武線・東西線始発駅</p>
+		    							</div>
+		    						</li>
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_top">
+			    							<h2>公園目の前</h2>
+			    							<p>ペットとふれあえる</p>
+		    							</div>
+		    						</li>
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_top">
+			    							<h2>全12タイプ</h2>
+			    							<p>多彩なプランニング</p>
+		    							</div>
+		    						</li>
+		    					</ul>
+		    				</div>
+
+		    				<div class="w_selling_phrase_footer">
+		    					<ul class="d-block d-lg-flex">
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_footer pl-0">
+			    							<p>西武新宿線「新井薬師前」駅</p>
+			    							<h3>徒歩<span class="gold">10</span>分</h3>
+		    							</div>
+		    						</li>
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_footer">
+			    							<p>都営大江戸線「落合南長崎」駅</p>
+			    							<h3>徒歩<span class="gold">13</span>分</h3>
+		    							</div>
+		    						</li>
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_footer">
+			    							<p>関東バス「哲学堂下」停留所まで</p>
+			    							<h3>徒歩<span>1</span>分</h3>
+		    							</div>
+		    						</li>
+		    						<li class="flex-fill">
+		    							<div class="selling_phrase_footer pr-0">
+			    							<p>関東バス「中野駅」停留所まで</p>
+			    							<h3><span>7</span>分</h3>
+		    							</div>
+		    						</li>
+		    					</ul>
+		    				</div>
+
 						</div>
 					</div>
 				</div>
@@ -151,7 +337,7 @@
 	      			<div class="container">
 	      				<div class="row">
 	      					<div class="col-12">
-	      						<ul class="list_info">
+	      						<!-- <ul class="list_info">
 	      							<li>
 	      								<p>多彩なプランニング<span class="big_text">全<span class="red">12</span>タイプ</span></p>
 	      							</li>
@@ -167,7 +353,7 @@
 	      							<li>
 	      								<p>ペットとふれあえる<span class="big_text">公園<span class="red">目の前</span></span></p>
 	      							</li>
-	      						</ul>
+	      						</ul> -->
 	      						<!-- <div class="box_sumitomo">
 	      							<p class="content">
 		      							<span class="text-up">モデルルーム住戸 大商談会開催中！【完全予約制】</span><br>
@@ -546,11 +732,138 @@
 
 	      	</main>
 
-	      	<?php require 'footer.php'; ?>
-    </div>
+	      	<a href="#" id="scrollup" class="toppage d-block d-md-none"><i class="fal fa-chevron-up fa-2x"></i></a>
+<footer>
+	<div class="container">
+		<h5>Contact</h5>
+		<div class="row">
+			<div class="col-12">
+				<div class="w_btn_gradient mt-0">
+					<a href="contact/reservation/" class="btn btn_gradient btnReserve">
+						<p>Reserve</p>
+						<p>来場予約はこちら</p>
+					</a>
+					<a href="contact/material/" class="btn btn_gradient btnEntry">
+						<p>Entry</p>
+						<p>資料請求はこちら</p>
+					</a>
+				</div>
+			</div>
 
-    <?php require 'js-footer.php'; ?>
-</body>
-<?php require 'gtm.php'; ?>
+			<div class="col-12">
+				<div class="box_changelife">
+					<div class="row">
+						<div class="col-12 col-sm-6 align-self-center">
+							<div class="box_changelife_body">
+								<div class="row no-gutters">
+									<div class="col-6 col-md-7 align-self-center">
+										<a href="sumikae.php"><img src="images/1x/logo_footer.svg" alt="" class="img-fluid" width="185"></a>
+									</div>
+									<div class="col-6 col-md-5 align-self-center">
+										<p>住み替えを<br>
+										ご希望の方</p>
+									</div>
+								</div>
+								<a href="sumikae.php" class="btn btn_clickHere mt-3">>> 詳細はコチラ</a>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 align-self-center">
+							<div class="box_changelife_body">
+								<div class="row no-gutters">
+									<div class="col-6 col-md-5 align-self-center">
+										<div class="img_intro_thecharm">
+											<img src="images/1x/intro_thecharm.jpg" alt="" class="img-fluid rounded">
+										</div>
+									</div>
+									<div class="col-6 col-md-7 align-self-center">
+										<p class="pl-3">完成済み物件の<br>
+										魅力をご紹介</p>
+									</div>
+								</div>
+								<a href="merit.php" class="btn btn_clickHere">>> 詳細はコチラ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box_footer_bottom">
+					<ul class="menu_footer d-none d-sm-none d-md-block">
+						<li><a href="/nakanotetsugakudo/">トップ</a></li>
+						<li><a href="design.php">デザイン</a></li>
+						<li><a href="location.php">ロケーション</a></li>
+						<li><a href="access.php">アクセス</a></li>
+						<li><a href="modelroom.php">モデルルーム</a></li>
+						<li><a href="equipment.php">設備仕様</a></li>
+						<li><a href="plan.php">プラン</a></li>
+						<li><a href="pricelist.php">プライスリスト</a></li>
+						<li><a href="map.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false">現地案内図</a></li>
+						<li><a href="outline.php">物件概要</a></li>
+					</ul>
+					<p class="mb-0">お問い合わせは「プレシス中野哲学堂パークフロント」現地販売センター</p>
+					<a href="tel:0120965297"><p class="freecall"><i class="i_freecall"></i> 0120-965-297</p></a>
+					<p>営業時間/10：00～19：00 定休日/火・水曜日（祝日除く）</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<section class="section_lastbottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-3 text-center">
+			</div>
+			<div class="col-6 text-center">
+				＜売主・販売＞ <img src="images/1x/logo_prostyle.svg" alt="" class="img-fluid" width="250">
+			</div>
+		</div>
+	</div>
+</section>
 
+<div class='back-to-top d-none d-md-block' id='back-to-top' title='Back to top'>
+  <i class="fal fa-angle-up fa-3x"></i>
+</div>
+
+<!-- menu on mobile -->
+<div class="bsnav-mobile d-block d-sm-none">
+  <div class="bsnav-mobile-overlay"></div>
+  <div class="navbar"></div>
+</div>
+
+<script language="javascript">
+	var popupWindow = null;
+    function centeredPopup(url,winName,w,h,scroll){
+        LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+        TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+        settings =
+        'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+        popupWindow = window.open(url,winName,settings)
+    }
+
+    function closeWindow() {
+	   	if(false == popupWindow.closed)
+	   	{
+	      	popupWindow.close ();
+	   	} else {
+	      	alert('That window is already closed. Open the window first and try again!');
+	   	}
+	}
+</script>    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/tablesaw.stackonly.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="https://unpkg.com/flickity@2.2/dist/flickity.pkgd.js"></script>
+<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+
+
+<script src="js/bsnav.min.js"></script>
+<script src="js/functions.js"></script></body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVKSR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 </html>

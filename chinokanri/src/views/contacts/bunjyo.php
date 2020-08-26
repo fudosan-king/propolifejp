@@ -253,13 +253,13 @@
                                         <div class="col-2 col-lg-1 align-self-center">
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="rdo_phone1" name="contact_ways" class="custom-control-input required" value="電話">
-                                                <label class="custom-control-label" for="rdo_phone1">電話</label>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="contact_way_phone" name="contact_ways" class="custom-control-input required" value="電話">
+                                                <label class="custom-control-label" for="contact_way_phone">電話</label>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="rdo_email2" name="contact_ways" class="custom-control-input required" value="email">
-                                                <label class="custom-control-label" for="rdo_email2">E-mail</label>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="contact_way_email" name="contact_ways" class="custom-control-input required" value="email">
+                                                <label class="custom-control-label" for="contact_way_email">E-mail</label>
                                             </div>
                                         </div>
                                     </div>

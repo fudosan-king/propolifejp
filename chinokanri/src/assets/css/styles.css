@@ -378,7 +378,7 @@ header {
 }
 
 .btnAgree .i_rightwhite.rotate {
-    transform: rotateY(180deg);
+    transform: translateY(-50%) rotateY(180deg);
     left: 20px;
     right: 0;
 }

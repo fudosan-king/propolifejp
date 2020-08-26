@@ -42,6 +42,9 @@ $(function($) {
         /* Act on the event */
         if(checkValidate()){
             $('.data-input').hide();
+
+            $("html, body").animate({scrollTop: $('.box_bookonline').offset().top-30}, 300);
+
             $('.data-confirm').fadeIn();
 
             $('.cfr_name').html($('input[name="name"]').val());

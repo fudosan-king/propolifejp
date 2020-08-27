@@ -259,9 +259,6 @@
 		font-size: 16px;
 		margin-bottom: 15px;
 	}
-	#page header {
-		padding-bottom: 19%;
-	}
 	.section_lastbottom {
     	padding: 15px;
 	}
@@ -1075,7 +1072,7 @@
 		background: #000;
 		position: fixed;
 		z-index: 300;
-		/*bottom: 0;*/
+		bottom: 0;
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #fff;
 		border-left: 1px solid #fff;
@@ -1191,11 +1188,8 @@
 	.text_top_baner {
 		top: 620px;
 	}
-	#page header {
-		padding-bottom: 19%;
-	}
 	.section_lastbottom {
-    	padding: 15px;
+    	padding: 15px 0 95px;
 	}
 }
 @media (min-width: 576px) {

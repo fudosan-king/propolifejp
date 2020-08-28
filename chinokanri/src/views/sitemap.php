@@ -7,7 +7,7 @@
     </url>
 
     <!-- My code is looking quite different, but the principle is similar -->
-    <?php foreach($items as $url) { ?>
+    <?php foreach($urls as $url) { ?>
     <url>
         <loc><?= base_url().$url ?></loc>
         <priority>0.5</priority>

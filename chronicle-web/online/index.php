@@ -28,6 +28,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W4CF54');</script>
     <!-- End Google Tag Manager -->
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TJ9PM7H"></script>
 </head>
 
 <body>

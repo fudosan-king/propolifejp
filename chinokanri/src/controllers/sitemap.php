@@ -12,10 +12,10 @@ class Sitemap extends CI_Controller {
         // $this->load->database();
         // $query = $this->db->get("items");
         // $data['items'] = $query->result();
-        $data['items'] = array(
-            'kaiyaku/',
-            'privacy-policy/',
-            'contact/',
+        $data['urls'] = array(
+            'kaiyaku',
+            'privacy-policy',
+            'contact',
             // 'contact/naiken',
             // 'contact/chintai',
             // 'contact/kaiyaku',

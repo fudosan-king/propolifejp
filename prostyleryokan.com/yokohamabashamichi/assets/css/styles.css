@@ -1479,9 +1479,19 @@ ul.list_information li p {
 	padding: 0px;
 }
 
+.section_notify .box_concept
+{
+	background: #F4F4F4;
+    border-radius: 8px;
+    padding: 30px;
+}
 .section_notify p, .section_notify h3
 {
 	display: block;
 	text-align: center;
 	width: 100%;
+}
+.section_banner .msp-cn-136-5{
+	font-size: 33px !important;
+
 }

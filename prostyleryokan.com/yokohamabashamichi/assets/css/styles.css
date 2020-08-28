@@ -1469,3 +1469,19 @@ ul.list_information li p {
   color: #94000e;
   font-weight: 500;
 }
+.ms-layer-mask .ms-layer a img
+{
+	max-width: 100%;
+}
+
+.ms-layer-mask .box_notice
+{
+	padding: 0px;
+}
+
+.section_notify p, .section_notify h3
+{
+	display: block;
+	text-align: center;
+	width: 100%;
+}

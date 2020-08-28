@@ -35,6 +35,7 @@
                 今暫くお待ちくださいませ。</div>
                 <p>※休業日などでご返信が遅くなる場合がございます。<br>
                 お急ぎの場合はお電話でご確認お願い致します。</p>
+                <input type="hidden" name="email" value="">
             </div>
         <?php else: ?>
             <form action="https://go.pardot.com/l/185822/2020-07-20/qb451p" name="pardotForm" id="pardotForm" class="frm_general" method="POST">

@@ -53,7 +53,7 @@ $(function($) {
     var flkty = Flickity.data( $('.carousel_topbanner')[0] );
 
     $carousel.on( 'settle.flickity', function() {
-      if(flkty.selectedIndex === 2){
+      if(flkty.selectedIndex === 3){
          // console.log("last!")
          $carousel.flickity('stopPlayer');
       }

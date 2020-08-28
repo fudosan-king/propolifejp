@@ -381,7 +381,10 @@ $(document).ready(function() {
     // BUTTON SET SUBMIT FORM ACTION
     $('#goSubmit').click(function() {
         if (invalidCheck()) {
-
+            // ADD STORE NAME AND EMAIL TO LOCAL STORAGE
+            localStorage.setItem('reservation_surname', $('input[name="first-name"]').val());
+            localStorage.setItem('reservation_name', $('input[name="last-name"]').val());
+            localStorage.setItem('reservation_email', $('input[name="email"]').val());
             // RE-SET VALUE ON FINAL TURN
             $('form input[type="text"]').each(function() {
                 if ($(this).val() == '')

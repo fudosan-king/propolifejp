@@ -930,6 +930,26 @@
 	.box_sumitomo .content .text-up {
 		font-size: 24px;
 	}
+	.frm_onlineservices .btnReserve {
+		min-width: auto;
+		display: block;
+		width: 100%;
+	}
+	.box_onlineservices {
+		padding: 15px;
+	}
+	.box_onlineservices_content {
+		padding: 15px;
+	}
+	.box_precautions {
+		padding: 15px;
+	}
+	.banner_onlineservices p {
+		text-align: center;
+	}
+	.banner_onlineservices_content {
+		padding-right: 0;
+	}
 
 	.banner_gallery {
 	    text-align: right;

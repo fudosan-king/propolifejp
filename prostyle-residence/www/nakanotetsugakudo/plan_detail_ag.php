@@ -61,7 +61,7 @@
 
 				      			<div class="card box_standard">
 						            <div class="card-body">
-					                    <p class="text-center mb-5"><img src="images/1x/roomplan_a01.png" alt="" class="img-fluid"></p>
+					                    <p class="text-center mb-5"><img src="images/1x/roomplan_ag.png" alt="" class="img-fluid"></p>
 					                    <p class="text-center"><img src="images/1x/roomplan_a02.png" alt="" class="img-fluid"></p>
 					                    <p><small>■１階部分図（Ag type）</small></p>
 					                    <div class="box_info_bottom">

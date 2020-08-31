@@ -145,7 +145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 
 				<div class="last_houses">
-					<h1 class="number_last_houses"><span class="finally">最<br>終</span><span class="number">4</span><span class="mansion">邸</span></h1>
+					<h1 class="number_last_houses"><span class="finally">最<br>終</span><span class="number">3</span><span class="mansion">邸</span></h1>
 					<!-- <img src="images/slide/prices.png" alt="" class="img-fluid d-none d-lg-block"> -->
 					<div class="box_sellingprice d-none d-lg-block">
 						<div class="box_sellingprice_content">
@@ -197,7 +197,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									</h2>
 								</li>
 								<li>
-									<h1 class="gold">5,500</h1>
+									<h1 class="gold">5,600</h1>
 								</li>
 								<li>
 									<p class="unit">※100万円<span>単位</span></p>
@@ -260,7 +260,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									<p class="gold">2LDK 角住戸 <span>5,290</span>万円〜月々<span>13</span>万円台～</p>
 								</li>
 								<li>
-									<p class="gold">3LDK <span>5,590</span>万円〜月々<span>14</span>万円台～</p>
+									<p>
+										<span class="meter_label">3LDK</span>
+										<span class="price_yen">5600</span><span class="label_yen">万円〜</span>
+										<span class="monthly">月々</span> <span class="price_stand">14</span>
+										<span class="label_stand">万円台～</span>
+									</p>
 								</li>
 							</ul>
 							<div class="box_large_modelroom">
@@ -408,6 +413,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
 
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.08.28</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>Bタイプ完売しました」を追加</p>
+			      											</div>
+			      										</div>
+			      										
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.08.01</p>

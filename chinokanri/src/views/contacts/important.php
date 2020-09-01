@@ -286,6 +286,17 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="">電話番号・確認用（半角数字）<span>※ハイフンなしでご記入ください。</span></label>
+                                            <div class="row">
+                                                <div class="col-2 col-lg-1 align-self-center">
+                                                    <span class="label_sub">必須</span>
+                                                </div>
+                                                <div class="col-10 col-lg-6 align-self-center">
+                                                    <input type="text" name="phone_confirm" class="form-control" placeholder="例：0312341234" data-require="true" data-confirm="true" data-confirm-name="phone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="">FAX番号（半角数字）<span>※ハイフンなしでご記入ください。</span></label>
                                             <div class="row">
                                                 <div class="col-2 col-lg-1 align-self-center">

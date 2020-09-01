@@ -186,12 +186,12 @@ $(function($) {
         $("html, body").animate({ scrollTop: $($('.data-input')).offset().top}, 0);
     });
 
-    $('#btn_send').click(function(event) {
-        /* Act on the event */
-        if(!checkValidate()){
-            return false;
-        }
-    });
+    // $('#btn_send').click(function(event) {
+    //     /* Act on the event */
+    //     if(!checkValidate()){
+    //         return false;
+    //     }
+    // });
 
 
     function checkValidate(){
@@ -203,12 +203,12 @@ $(function($) {
         var invalidBoxShadow = '0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)';
         var invalidBorderColor = '#ff0000';
 
-        var elemsChk = [];
+        var elemsChkRequire = [];
         $.each($('form[name="pardotForm"]').find('[data-require="true"]'), function(index, el) {
-            elemsChk.push(el);
+            elemsChkRequire.push(el);
         });
 
-        $.each(elemsChk, function(key, elem) {
+        $.each(elemsChkRequire, function(key, elem) {
 
             if (typeof($(this)) !== 'undefined'){
                 switch($(this).prop('type')){
@@ -242,18 +242,7 @@ $(function($) {
                                 isValidate = false;
                                 $(elem).addClass('validate-error');
                             } else {
-                                if($(elem).attr('data-confirm') == 'true'){
-                                    var e_name_compare = $(elem).attr('data-confirm-name');
-                                    if($(elem).val() != $('input[name="' + e_name_compare + '"]').val()){
-                                        isValidate = false;
-                                        $(elem).addClass('validate-error');
-                                    }else{
-                                        $(elem).removeClass('validate-error');
-                                    }
-                                }else{
-                                    $(elem).removeClass('validate-error');
-                                }
-                                
+                               $(elem).removeClass('validate-error');
                             }
                         }
                     }break;
@@ -262,23 +251,27 @@ $(function($) {
                             isValidate = false;
                             $(elem).addClass('validate-error');
                         }else{
-                            if($(elem).attr('data-confirm') == 'true'){
-                                var e_name_compare = $(elem).attr('data-confirm-name');
-                                if($(elem).val() != $('input[name="' + e_name_compare + '"]').val()){
-                                    isValidate = false;
-                                    $(elem).addClass('validate-error');
-                                }else{
-                                    $(elem).removeClass('validate-error');
-                                }
-                            }else{
-                                $(elem).removeClass('validate-error');
-                            }
-                            
+                            $(elem).removeClass('validate-error');
                         }
                     }break;
                 }
             }
 
+        });
+
+        var elemsChkConfirm = [];
+        $.each($('form[name="pardotForm"]').find('[data-confirm="true"]'), function(index, el) {
+            elemsChkConfirm.push(el);
+        });
+
+        $.each(elemsChkConfirm, function(key, elem) {
+            var e_name_compare = $(elem).attr('data-confirm-name');
+            if($(elem).val() != $('input[name="' + e_name_compare + '"]').val()){
+                isValidate = false;
+                $(elem).addClass('validate-error');
+            }else{
+                $(elem).removeClass('validate-error');
+            }
         });
 
         return isValidate;

@@ -410,5 +410,16 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	
+  .box_gallerys .photo img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .box_gallerys .photo.custom-object-fit {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+  }
+  .box_gallerys .photo.custom-object-fit img {
+    opacity: 0;
+  }
 }

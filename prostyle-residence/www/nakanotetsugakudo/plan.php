@@ -143,7 +143,7 @@
 			      										<div class="btn_sm_black">大型ウォークインクローゼット</div>
 		      										</div>
 		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan01.png" alt="" class="img-fluid">
+		      											<img src="images/1x/roomplan_ag.png" alt="" class="img-fluid">
 		      										</div>
 		      										<div class="roomplan_item_footer">
 		      											<p>
@@ -156,7 +156,7 @@
 		      									</div>
 		      								</div>
 
-		      								<div class="col-12 col-md-6">
+		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
@@ -189,7 +189,7 @@
 		      											<a href="plan_detail_b.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
-		      								</div>
+		      								</div> -->
 
 		      								<!-- <div class="col-12 col-md-6">
 		      									<div class="roomplan_item">

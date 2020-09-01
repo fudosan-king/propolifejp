@@ -82,7 +82,7 @@
 	      					<div class="col-12">
 	      						<h2 class="headline">PRICE LIST</h2>
 								<section class="pricelist-img mt-4 mb-5 pt-3 pb-5">
-									<img src="images/1x/pricelist.png" class="img-fluid" alt="Responsive image">	
+									<img src="images/1x/price_list_20200820.png" class="img-fluid" alt="Responsive image">	
 								</section>
 	      					</div>
 	      				</div>

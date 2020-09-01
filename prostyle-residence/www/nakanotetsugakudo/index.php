@@ -418,7 +418,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      												<p>2020.08.28</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">
-			      												<p>Bタイプ完売しました」を追加</p>
+			      												<p>Bタイプ完売しました</p>
 			      											</div>
 			      										</div>
 			      										

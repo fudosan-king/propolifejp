@@ -116,7 +116,7 @@
 
 		      						<div class="boxroomplan">
 		      							<h3 class="title"><span>3LDK</span></h3>
-		      							<p class="subtitle">※Bg、Btype［2・3F］は2LDK＋S</p>
+		      							<p class="subtitle"></p>
 
 		      							<div class="row">
 

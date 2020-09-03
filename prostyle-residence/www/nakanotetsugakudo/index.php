@@ -255,19 +255,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<ul class="box_price d-block d-lg-none">
-								<li>
-									<p class="gold">2LDK 角住戸 <span>5,290</span>万円〜月々<span>13</span>万円台～</p>
-								</li>
-								<li>
-									<p>
-										<span class="meter_label">3LDK</span>
-										<span class="price_yen">5600</span><span class="label_yen">万円〜</span>
-										<span class="monthly">月々</span> <span class="price_stand">14</span>
-										<span class="label_stand">万円台～</span>
-									</p>
-								</li>
-							</ul>
+                            <ul class="box_price d-block d-lg-none">
+                                <li>
+                                    <p class="gold">2LDK 角住戸 <span>5,290</span>万円〜月々<span>13</span>万円台～</p>
+                                </li>
+                                <li>
+                                    <p class="gold">3LDK <span>5600</span>万円〜月々<span>14</span>万円台～</p>
+                                </li>
+                            </ul>
 							<div class="box_large_modelroom">
 								<div class="d-flex">
 									<div class="box_readylive flex-fill">

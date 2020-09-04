@@ -2,14 +2,16 @@
     <div class="top_header">
         <div class="container">
             <div class="row">
-                <div class="col-2 col-md-4 align-self-center">
+                <div class="col-4 col-md-4 align-self-center">
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_md"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
-                </div>
-                <div class="col-8 col-md-4 align-self-center">
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_sm"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
-                    <?php get_search_form(); ?>
                 </div>
-                <div class="col-2 col-md-4 align-self-center text-right">
+                <div class="col-7 col-md-5 align-self-center">
+                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-none d-lg-block">「リノベーションをオンライン相談に申し込む（無料）」</a>
+                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-block d-lg-none">「リノベに申込（無料）」</a>
+                    <?php //get_search_form(); ?>
+                </div>
+                <div class="col-1 col-md-3 align-self-center text-right">
                     <!-- <div class="box_top_user_md">
                         <a href="login.php" class="btn btnSignup float-right ml-2"><i class="fas fa-sign-in-alt"></i> <span>ログイン</span></a>
                         <a href="signin.php" class="btn btnSignup float-right"><i class="fas fa-user"></i> <span>新規登録</span></a>
@@ -28,7 +30,7 @@
                 <a href="signin.php" class="btn btnSignup flex-fill"><i class="fas fa-user"></i> <span>新規登録</span></a>
                 <a href="login.php" class="btn btnSignup flex-fill"><i class="fas fa-sign-in-alt"></i> <span>ログイン</span></a>
             </div> -->
-            <?php get_template_part( 'template-parts/searchform', 'sp' ); ?>
+            <?php // get_template_part( 'template-parts/searchform', 'sp' ); ?>
 
             <?php 
                 $menuLocations = get_nav_menu_locations();

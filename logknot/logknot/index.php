@@ -19,7 +19,7 @@
                     <div class="col-12">
                         <div class="banner_content">
                             <h1 data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                <img src="images/SVG/logo_horizontal.svg" alt="" class="img-fluid" width="860">
+                                <img src="images/SVG/logo_horizontal.svg" alt="LogKnot(ログノット)株式会社" class="img-fluid" width="860">
                             </h1>
                             <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">TECH×RENOVATION <img src="images/SVG/i_arrow_duplicate.svg" alt="" class="imgfluid" width="45"> LogKnot</h2>
                         </div>
@@ -38,7 +38,7 @@
                             <ul class="list_news">
                                 <li>
                                     <p class="date">2020.09.01</p>
-                                    <h4>LogKnot株式会社を設立いたしました。</h4>
+                                    <h4><a target="_blank" href="https://www.propolife.co.jp/wp/wp-content/uploads/2020/09/press-release_200904_LogKnot.pdf">LogKnot株式会社を設立いたしました。</a></h4>
                                     <p><span>お知らせ</span></p>
                                 </li>
                                 <!-- <li>
@@ -101,8 +101,7 @@
                             Logは①丸太、無垢材②記録。Knotは①結び目②縁、絆③スピードの意。このふたつの造語です。<br>
                             「Log＝無垢材」のような肌触り、温度感、センスを楽しめるようなサービス・コンテンツを作る組織になれるといいなぁ、と思ってます。もちろんテック企業なので、「Log＝記録」の正確さは大切ですけどね。</p>
                             <p>「Knot＝縁、絆」というのもLogKnotが大切にしたいところ。社内のKnotだけでなく、ユーザーや関係する企業とのKnotも大切にしていきます。世の中、縁と絆、義理人情がすべてですから。そして、テック企業としてのスピード（Knot）感ももちろん大事。<br>
-                            人の縁や絆といった「心地よさ」とテック企業ならではの「合理性」をあわせもった、<br>
-                            両生類的な企業を目指します。</p>
+                            人の縁や絆といった「心地よさ」とテック企業ならではの「合理性」をあわせもった、両生類的な企業を目指します。</p>
                         </div>
                     </div>
                 </div>

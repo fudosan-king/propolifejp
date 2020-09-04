@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
 <title>LogKnot株式会社 - アタリマエをリノベーション</title>
-<meta name="description" content="なんの疑問も持たずに毎日やっていること（仕事だったり、習慣だったり）が、ハタから見ると非常識だったり、無駄だったり、不条理だったりすることってあります。LogKnotはコレを変えていきたいのです。だって、イヤじゃないですか。無駄とか不条理って。。そんな無駄や不条理を、テクノロジーで変えていきます。変える対象はあらゆるモノやコト。仕事の仕方、人との付き合い方、家族のあり方、男女の関係性、会社のルール、住まいのあり方……これらを私たちはテクノロジーで「リノベーション」していきたいのです。"/>
+<meta name="description" content="LogKnot(ログノット)株式会社は、日常生活における無駄や不条理をテクノロジーで変えていきます。変える対象はあらゆるモノやコト。仕事の仕方、人との付き合い方、家族のあり方、男女の関係性、会社のルール、住まいのあり方、今までのアタリマエをテクノロジーで「リノベーション」していきます。"/>
 <meta name="keywords" content=""/>
 
 <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16/apple-touch-icon.png">
@@ -11,6 +11,13 @@
 <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="LogKnot株式会社 - アタリマエをリノベーション">
+<meta property="og:site_name" content="LogKnot株式会社 - アタリマエをリノベーション">
+<meta property="og:description" content="LogKnot(ログノット)株式会社は、日常生活における無駄や不条理をテクノロジーで変えていきます。変える対象はあらゆるモノやコト。仕事の仕方、人との付き合い方、家族のあり方、男女の関係性、会社のルール、住まいのあり方、これらを私たちはテクノロジーで「リノベーション」していきます。">
+<meta property="og:url" content="https://www.logknot.co.jp/">
+<meta property="og:image" content="画像1">
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">

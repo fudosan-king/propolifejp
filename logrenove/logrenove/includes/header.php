@@ -7,8 +7,8 @@
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_sm"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
                 </div>
                 <div class="col-7 col-md-5 align-self-center">
-                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-none d-lg-block">「リノベーションをオンライン相談に申し込む（無料）」</a>
-                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-block d-lg-none">「リノベに申込（無料）」</a>
+                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-none d-lg-block">リノベーションのオンライン相談に申し込む（無料）</a>
+                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-block d-lg-none">リノベ相談に申し込む(無料)</a>
                     <?php //get_search_form(); ?>
                 </div>
                 <div class="col-1 col-md-3 align-self-center text-right">

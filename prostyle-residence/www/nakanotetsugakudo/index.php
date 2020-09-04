@@ -192,8 +192,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							</ul>
 							<ul>
 								<li>
+                                    <p class="cornerunit">角住戸</p>
 									<h2>3LDK
-										<span class="liha">＋WIC<br>
+										<span>＋WIC<br>
 										＋SIC</span><br>
 									</h2>
 								</li>
@@ -261,7 +262,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <p class="gold">2LDK 角住戸 <span>5,200</span>万円台～月々<span>13</span>万円台～</p>
                                 </li>
                                 <li>
-                                    <p class="gold">3LDK <span>5,600</span>万円台～月々<span>14</span>万円台～</p>
+                                    <p class="gold">3LDK 角住戸 <span>5,600</span>万円台～月々<span>14</span>万円台～</p>
                                 </li>
                             </ul>
 							<div class="box_large_modelroom">

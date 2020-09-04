@@ -34,12 +34,21 @@
                 $menuLocations = get_nav_menu_locations();
                 $menuID = $menuLocations['side'];
                 $sideNav = wp_get_nav_menu_items($menuID);
+                $category_show = ['0','4'];
                 
                 if (count($sideNav)>0){
                    
                     echo '<div class="accordion accordionNav" id="accordionNav">';
                     foreach ($sideNav as $index => $nav){
                         /* Action here */
+
+                        if( in_array($index, $category_show)){
+                            $firstExpand = 'true';
+                            $firstShow = 'show';
+                        }else{
+                            $firstExpand = 'false';
+                            $firstShow = '';
+                        }
 
                         if ($nav->menu_item_parent == 0){
                             $childMenu = get_nav_child_menu($sideNav, $nav->ID);
@@ -50,14 +59,14 @@
                                     <div class="card-header" id="heading-<?php echo $index; ?>">
                                         <div class="card-wrapper mb-0">
                                             <a href="<?php echo $nav->url; ?>"><?php echo $nav->title; ?></a>
-                                            <button class="btn btn-link <?php //echo $isCollapsed; ?>" type="button" data-toggle="collapse" data-target="#collapse-sp-<?php echo $index; ?>" aria-expanded="true" aria-controls="collapse-sp-<?php echo $index; ?>"  data-child="<?php echo count($childMenu)>0 ? 'true' : 'false'; ?>"><?php if (count($childMenu)>0): ?><i class="fal fa-chevron-right"></i><?php endif; ?></button>
+                                            <button class="btn btn-link <?php echo ($firstExpand=='false')?'collapsed':''; ?>" type="button" data-toggle="collapse" data-target="#collapse-sp-<?php echo $index; ?>" aria-expanded="<?php echo $firstExpand; ?>" aria-controls="collapse-sp-<?php echo $index; ?>"  data-child="<?php echo count($childMenu)>0 ? 'true' : 'false'; ?>"><?php if (count($childMenu)>0): ?><i class="fal fa-chevron-right"></i><?php endif; ?></button>
                                         </div>
                                     </div>
                                     
                                     <?php
                                         if (count($childMenu)>0){
                                     
-                                            echo '<div id="collapse-sp-'.$index.'" class="collapse show" aria-labelledby="heading-'.$index.'" data-parent="#accordionNav_right">
+                                            echo '<div id="collapse-sp-'.$index.'" class="collapse '.$firstShow.'" aria-labelledby="heading-'.$index.'" data-parent="#accordionNav_right">
                                                     <div class="card-body">
                                                         <ul>';
                                                 foreach($childMenu as $jndex => $cmenu){

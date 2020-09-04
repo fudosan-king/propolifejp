@@ -2446,7 +2446,7 @@ ul.list_topics li:nth-child(5) {
   }
   .banner_gallery {
     right: 15px;
-    bottom: 22%;
+    bottom: 2%;
     margin: auto;
     width: 50%;
   }
@@ -3039,8 +3039,8 @@ ul.list_topics li:nth-child(5) {
   letter-spacing: -.1em;
 }
 .box_sellingprice_content ul li h2 span.liha {
-  top: 7px;
-  right: -10px;
+  top: 0px;
+  right: -17px;
 }
 .box_sellingprice_content ul li h3 {
   color: #fff;

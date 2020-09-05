@@ -297,12 +297,12 @@
                               </tr>
                               <tr>
                                  <td>
-                                    <label>住所</label>
+                                    <label>市区町村・番地</label>
                                  </td>
                                  <td>
                                      <span id="postal-code" class="confirm-text"></span> <br>
                                      <span id="pref" class="confirm-text"></span> <br>
-                                     <span id="address" class="confirm-text"></span> <br>
+                                     <span id="city" class="confirm-text"></span> <br>
                                  </td>
                               </tr>
                               <tr>

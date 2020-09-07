@@ -41,6 +41,7 @@
 <?php 
     if ($detect->isMobile()):
         ?>
+            <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.min.css" type="text/css">
             <link rel="stylesheet" href="<?php echo SERVICE_STYLESHEET_PATH;?>/mobile_sv.min.css" type="text/css">
         <?php
     endif;

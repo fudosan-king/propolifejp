@@ -293,7 +293,7 @@
                                                         <div class="col-12 col-lg-6">
                                                             <div class="row mb-2 mb-lg-0">
                                                                 <div class="col-2 align-self-center">
-                                                                    <p class="mb-0">性</p>
+                                                                    <p class="mb-0">姓</p>
                                                                 </div>
                                                                 <div class="col-10 align-self-center">
                                                                     <input type="text" class="form-control required" placeholder="例：千野" name="resident_kanji_family_name">
@@ -762,8 +762,7 @@
                                                 </div>
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="box_datetime">
-                                                        <input type="text" class="form-control datepicker required" placeholder="2020/06/26" name="cancellation_notice_date">
-                                                        <i class="i_datetime"></i>
+                                                        <input type="text" class="form-control required rounded-0 border-top-0 border-left-0 border-right-0 bg-transparent" name="cancellation_notice_date" value="<?php date_default_timezone_set('Asia/Tokyo'); echo date("Y/m/d"); ?>" readonly>
                                                     </div>
                                                 </div>
                                             </div>

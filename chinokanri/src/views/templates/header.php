@@ -37,6 +37,17 @@
         <meta name="Keywords" content="<?=$meta_keywords;?>">
 
         <?php
+
+            switch ($this->uri->uri_string()) {
+                case 'contact/naiken':
+                case 'contact/chintai':
+                case 'contact/kaiyaku':
+                case 'contact/bunjyo':
+                case 'contact/important': {
+                    echo '<meta name="robots" content="noindex">';
+                }break;
+            }
+
             if($this->uri->uri_string() == 'contact' || $this->uri->uri_string() == 'contact/finish' || $this->uri->uri_string() == 'kaiyaku/finish'):
                 ?>
                 <link rel="stylesheet" href="<?=base_url();?>assets/css/contact.css">

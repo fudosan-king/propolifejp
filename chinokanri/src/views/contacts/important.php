@@ -35,6 +35,7 @@
                 今暫くお待ちくださいませ。</div>
                 <p>※休業日などでご返信が遅くなる場合がございます。<br>
                 お急ぎの場合はお電話でご確認お願い致します。</p>
+                <input type="hidden" name="email" value="">
             </div>
         <?php else: ?>
             <form action="https://go.pardot.com/l/185822/2020-07-20/qb451p" name="pardotForm" id="pardotForm" class="frm_general" method="POST">
@@ -281,6 +282,17 @@
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
                                                     <input type="text" name="phone" class="form-control" placeholder="例：0312341234" data-require="true">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">電話番号・確認用（半角数字）<span>※ハイフンなしでご記入ください。</span></label>
+                                            <div class="row">
+                                                <div class="col-2 col-lg-1 align-self-center">
+                                                    <span class="label_sub">必須</span>
+                                                </div>
+                                                <div class="col-10 col-lg-6 align-self-center">
+                                                    <input type="text" name="phone_confirm" class="form-control" placeholder="例：0312341234" data-require="true" data-confirm="true" data-confirm-name="phone">
                                                 </div>
                                             </div>
                                         </div>

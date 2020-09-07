@@ -1,17 +1,17 @@
 <style type="text/css">
-   .frm-confirm .btnAgree {
+   .frm_confirm .btnAgree {
       width: 90%;
    }
-   .frm-confirm .label_sub {
+   .frm_confirm .label_sub {
       line-height: 1rem;
       margin-left: 1em;
       margin-bottom: .5rem
    }
-   .frm-confirm .confirm-text {
+   .frm_confirm .confirm-text {
       font-size: 0.875em;
       width: 70%;
    }
-   .frm-confirm .table-bordered td {
+   .frm_confirm .table-bordered td {
       border: 1px solid #555;
    }
 </style>
@@ -258,12 +258,12 @@
                                     <input type="checkbox" name="agree" class="custom-control-input required" id="ck_agree" value="1" checked>
                                     <label class="custom-control-label" for="ck_agree">同意する</label>
                                  </div>
-                                 <button type="submit" class="btn btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                 <button type="submit" class="btn btnAgree" id="btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
                               </div>
                            </div>
                         </div>
                         <!-- confirm -->
-                        <div class="frm_general_content frm-confirm" style="display: none">
+                        <div class="frm_general_content frm_confirm" style="display: none">
                            <table class="table table-bordered">
                               <tr>
                                  <td>

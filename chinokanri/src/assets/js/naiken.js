@@ -17,28 +17,35 @@ $(function($) {
         $('.section_content_top .steps li.finish').addClass('active');
     }
 
-    $('form.frm_general').on('submit',function(e) {
-        var frm_data = $(this).serializeArray();
+    $('input:checkbox[name=contact-method]').on('click',function(){
+      if($('input:checkbox[name=contact-method]:checked').length > 1) $(this).prop('checked', false);
+    });
+
+    $('#btnAgree').on('click',function(e){
+        var frm_data = $('form.frm_general').serializeArray();
         var isValid = check_valid(frm_data);
         if(isValid === false) {
             $('html').animate({
                 scrollTop: $('.frm_general').offset().top
             }, 1000, function() {});
         }
-        else {
-            var btn_id = $(":focus", this).attr('id');
-            if(btn_id == 'btnBack') goBack();
-            else if(btn_id == 'btnSubmit') return true;
-            else goConfirm(frm_data);
+        else
+        {
+            goConfirm(frm_data);
         }
         e.preventDefault();
         return false;
-    })
+    });
+
+    $('#btnBack').on('click',function(e){
+        goBack();
+        return false;
+    });
 
     function goConfirm(data)
     {
         $('.frm-input').fadeOut();
-        $('.frm-confirm').fadeIn(function() {
+        $('.frm_confirm').fadeIn(function() {
             $('html').scrollTop($('.frm_general').offset().top);
         });
         $($('.steps li')[0]).removeClass('active');
@@ -64,7 +71,7 @@ $(function($) {
         $('.frm-input').fadeIn(function() {
             $('html').scrollTop($('.frm_general').offset().top);
         });
-        $('.frm-confirm').fadeOut();
+        $('.frm_confirm').fadeOut();
 
         $($('.steps li')[1]).removeClass('active');
         $($('.steps li')[0]).addClass('active');
@@ -128,5 +135,37 @@ $(function($) {
         });
         if(invalid.length > 0) return false;
         else return true;
+    }
+
+    demo = (name='') => {
+        switch(name){
+            case '': {
+                $('input[name="property-name"]').val('プロポライフ');
+                $('input[name="room-number"]').val('ベトナム');
+                $('input[name="visit-date"]').val('2020/08/28');
+                $('select[name="visit-hour"]').val('10:00');
+                $('input[name="company-name"]').val('プロポライフ');
+                $('input[name="branch-name"]').val('ベトナム');
+                $('input[name="postal-code"]').val('1000013');
+                AjaxZip3.zip2addr('postal-code','','pref','city')
+                
+                
+                $('input[name="phone-number"]').val('+84-97-422-6440');
+                $('input[name="mobile-number"]').val('03-6897-8561');
+                $('input[name="email"]').val('khiemtq@propolife.co.jp');
+                
+                $('input[name="kanji_familyname"]').val('プロポライフ');
+                $('input[name="kanji_name"]').val('ベトナム');
+                $('input[name="kata_familyname"]').val('プロポライフ');
+                $('input[name="kata_name"]').val('ベトナム');
+                $('input[name="address"]').val('U1904 - CJ Building');
+                $('input[id="customRadioInline1"]').prop('checked', true);
+                $('input[id="customRadio1"]').prop('checked', true);
+
+                setTimeout(function(){
+                    // $('#btn_confirm').click();
+                },2000);
+            } break;
+        }
     }
 })

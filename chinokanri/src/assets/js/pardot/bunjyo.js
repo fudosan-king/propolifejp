@@ -36,6 +36,7 @@
             var errorElements = []
 
             var btnAutoFillCheck = document.getElementById('auto-fill-checked-box')
+            var contactWaysCkbs = document.querySelectorAll('[name="contact_ways"]')
 
             btnBack.addEventListener('click', function() {
                 var hideConfirmForm = new Promise(function(resolve, reject) {
@@ -78,6 +79,18 @@
                 }
             }, false)
 
+            contactWaysCkbs.forEach(function(contactWaysCkb) {
+                contactWaysCkb.addEventListener('click', function(event) {
+                    var targetCkbId = this.id
+                    if (this.checked) {
+                        document.querySelectorAll('[name="contact_ways"]:checked').forEach(function(checkedContactWayElement) {
+                            if (checkedContactWayElement.id !== targetCkbId) {
+                                checkedContactWayElement.checked = false
+                            }
+                        })
+                    }
+                })
+            })
 
             function validateForm() {
                 var ERROR_NO_INPUT = '値を入力してください';

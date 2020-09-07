@@ -26,11 +26,16 @@
                     期待您的光臨。</p>';
             }break;
             default:{
-                $noticeContent = '<p>【営業再開のお知らせ】</p>
-                    <p>PROSTYLE旅館横浜馬車道は、新型コロナウイルスの影響により<br>
-                    4月1日より休館とさせて頂いておりましたが、この度6月1日より営業再開とさせて頂きます。<br>
-                    <br>
-                    営業再開にあたり、お客様にはより安全・安心にご利用頂く為、引き続き感染防止策を徹底してまいります。</p>';
+                $noticeContent = '<p class="d-block d-md-none">
+                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect.aspx?hi_id=2&amp;lang=ja-JP&amp;p_id=16&amp;page=plan">
+                                        <img src="'.IMAGES_PATH.'/1x/stay_hotel.jpg" alt="" class="img-fluid">
+                                    </a>
+                                  </p>
+                                  <p class="d-none d-md-block">
+                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?smp_id=16&amp;hi_id=2&amp;lang=ja-JP">
+                                         <img src="'.IMAGES_PATH.'/1x/stay_hotel.jpg" alt="" class="img-fluid">
+                                    </a>
+                                  </p>';
             }
         }
     ?>

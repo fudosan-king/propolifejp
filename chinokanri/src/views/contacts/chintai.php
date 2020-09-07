@@ -1,17 +1,17 @@
 <style type="text/css">
-   .frm-confirm .btnAgree {
+   .frm_confirm .btnAgree {
       width: 90%;
    }
-   .frm-confirm .label_sub {
+   .frm_confirm .label_sub {
       line-height: 1rem;
       margin-left: 1em;
       margin-bottom: .5rem
    }
-   .frm-confirm .confirm-text {
+   .frm_confirm .confirm-text {
       font-size: 0.875em;
       width: 70%;
    }
-   .frm-confirm .table-bordered td {
+   .frm_confirm .table-bordered td {
       border: 1px solid #555;
    }
 </style>
@@ -251,12 +251,12 @@
                                  <div class="col-2 col-lg-1 align-self-center">
                                  </div>
                                  <div class="col-10 col-lg-11 align-self-center">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                       <input type="radio" id="rdo_phone" name="contact-method" class="custom-control-input" value="電話">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" id="rdo_phone" name="contact-method" class="custom-control-input" value="電話">
                                        <label class="custom-control-label" for="rdo_phone">電話</label>
                                     </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                       <input type="radio" id="rdo_email" name="contact-method" class="custom-control-input" value="E-mail">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                       <input type="checkbox" id="rdo_email" name="contact-method" class="custom-control-input" value="E-mail">
                                        <label class="custom-control-label" for="rdo_email">E-mail</label>
                                     </div>
                                  </div>
@@ -321,12 +321,12 @@
                                        <label class="custom-control-label" for="ck_agree">同意する</label>
                                    </div>
 
-                                   <button type="submit" class="btn btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                   <button type="submit" class="btn btnAgree" id="btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
                                </div>
                            </div>
                         </div>
                         <!-- confirm -->
-                        <div class="frm_general_content frm-confirm" style="display: none">
+                        <div class="frm_general_content frm_confirm" style="display: none">
                            <table class="table table-bordered">
                               <tr>
                                  <td>

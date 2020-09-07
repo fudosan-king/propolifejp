@@ -210,8 +210,6 @@
     .cancellation .content {margin: 20px auto 40px;}
 
     /*.btnAgree {width: 100%;}*/
-
-    .btnAgree .i_rightwhite.rotate {top: 33%;}
 	
 	.success-submit {width: 95%; font-size: 11pt;}
 
@@ -222,8 +220,6 @@
 @media (max-width: 375px) {
   	.header-contact a {width: 165px; font-size: 11pt;}
     .banner-content h3 {font-size: 18pt;}
-
-    .btnAgree .i_rightwhite.rotate {top: 30%;}
 
     footer ul li a {padding: 0 0.4rem; font-size: 11px;}
 

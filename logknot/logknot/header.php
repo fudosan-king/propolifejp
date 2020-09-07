@@ -1,6 +1,6 @@
 <header>
     <div class="navbar navbar-expand-lg bsnav bsnav-sticky bsnav-sticky-fade">
-        <a class="navbar-brand" href="index.php"><img src="images/SVG/Logo.svg" alt="LogKnot(ログノット)株式会社" class="img-fluid" width="73"></a>
+        <a class="navbar-brand" href="/"><img src="images/SVG/Logo.svg" alt="LogKnot(ログノット)株式会社" class="img-fluid" width="73"></a>
         <!-- <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button> -->
         <div class="box_menu ml-auto mr-auto">
             <div class="collapse navbar-collapse justify-content-md-center">

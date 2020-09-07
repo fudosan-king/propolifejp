@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="LogKnot株式会社 - アタリマエをリノベーション">
 <meta property="og:description" content="LogKnot(ログノット)株式会社は、日常生活における無駄や不条理をテクノロジーで変えていきます。変える対象はあらゆるモノやコト。仕事の仕方、人との付き合い方、家族のあり方、男女の関係性、会社のルール、住まいのあり方、これらを私たちはテクノロジーで「リノベーション」していきます。">
 <meta property="og:url" content="https://www.logknot.co.jp/">
-<meta property="og:image" content="画像1">
+<meta property="og:image" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>images/logknot_logo.png">
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">

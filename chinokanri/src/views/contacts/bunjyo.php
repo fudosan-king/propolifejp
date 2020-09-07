@@ -254,11 +254,11 @@
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" id="contact_way_phone" name="contact_ways" class="custom-control-input required" value="電話">
+                                                <input type="checkbox" id="contact_way_phone" name="contact_ways[]" class="custom-control-input" value="電話">
                                                 <label class="custom-control-label" for="contact_way_phone">電話</label>
                                             </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" id="contact_way_email" name="contact_ways" class="custom-control-input required" value="email">
+                                                <input type="checkbox" id="contact_way_email" name="contact_ways[]" class="custom-control-input" value="email">
                                                 <label class="custom-control-label" for="contact_way_email">E-mail</label>
                                             </div>
                                         </div>

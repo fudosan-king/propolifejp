@@ -828,7 +828,7 @@
                                         <div class="box_content_footer">
                                             <div class="form-inline justify-content-center">
                                                 <button type="button" id="btn_return" class="btn btnAgree cfr"><i class="i_rightwhite rotate"></i> 戻る</button>
-                                                <button type="submit" id="btn_send" class="btn btnAgree cfr">送信する <i class="i_rightwhite"></i></button>
+                                                <button type="button" id="btn_send" class="btn btnAgree cfr">送信する <i class="i_rightwhite"></i></button>
                                             </div>
                                         </div>
                                     </div>

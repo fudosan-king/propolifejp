@@ -186,12 +186,7 @@ $(function($) {
         $("html, body").animate({ scrollTop: $($('.data-input')).offset().top}, 0);
     });
 
-    // $('#btn_send').click(function(event) {
-    //     /* Act on the event */
-    //     if(!checkValidate()){
-    //         return false;
-    //     }
-    // });
+
 
 
     function checkValidate(){
@@ -276,6 +271,14 @@ $(function($) {
 
         return isValidate;
     }
+
+    $('#btn_send').click(function(event) {
+        /* Act on the event */
+        // if(!checkValidate()){
+        //     return false;
+        // }
+        $('form[name="pardotForm"]').submit();
+    });
 
     demo = (name='') => {
         switch(name){

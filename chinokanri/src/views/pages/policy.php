@@ -111,16 +111,13 @@
                     <dt class="title"><h3>9.本プライバシーポリシーの適用および改定</h3> <p>
                     本プライバシーポリシーの内容は、当ウェブサイト掲載日より適用いたします。また、本プライバシーポリシーは、法令等の要請その他当社が必要と認めた場合に予告なく改定する場合があります。（最新の情報については、当ウェブサイト内に掲載いたします）</p></dt>
                     <dt class="title"><h3>10.個人情報データ等の管理について責任を有する者</h3>
-                        <p>
+                        <p style="margin-bottom: 0">
                             株式会社プロポライフグループ　管理本部　<br>
                             所在地：〒<b>107-0061</b>　　東京都港区北⻘⼭<b>3-6-23</b>
                         </p>
                     </dt>
                 </dl>
-                <br>
-                <br> 【お問い合わせ】
-                <br>
-                <a href="<?=base_url();?>contact/naiken/" target="_blank">お問い合わせフォーム</a>
+                <a href="https://www.propolife.co.jp/contact/" target="_blank">お問い合わせフォーム</a>
             </article>
         </div>
     </section>

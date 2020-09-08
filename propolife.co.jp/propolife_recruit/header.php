@@ -91,15 +91,15 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
 
         <header id="header">
             <div class="hInner clearfix">
-                <h1><a href="https://propolife.co.jp/"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo02.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
+                <h1><a href="https://www.propolife.co.jp/"><img src="<?php bloginfo('template_directory'); ?>/common/img/logo02.png" width="206" height="40" alt="株式会社プロポライフグループ 「住」に自由とロマンを。"></a></h1>
                 <nav id="gNavi" class="gNavi">
                     <div class="link"><a style="display: none;" href="https://page.line.me/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_03.png" width="20" height="20" alt="LINE"></a></div>
                     <div class="link"><a style="display: none;" href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link_02.png" width="16" height="16" alt="Instagram"></a></div>
                     <div class="link"><a style="display: none;" href="https://ja-jp.facebook.com/propolifegroup" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/common/img/h_link.png" width="8" height="16" alt="Facebook"></a></div>
                     <ul class="clearfix">
-                        <li class="sub01"><a href="https://propolife.co.jp/company/" class="">企業情報</a></li>
-                        <li class="sub02"><a href="https://propolife.co.jp/group/">グループ企業</a></li>
-                        <li class="sub03"><a href="https://propolife.co.jp/news/">ニュース</a></li>
+                        <li class="sub01"><a href="https://www.propolife.co.jp/company/" class="">企業情報</a></li>
+                        <li class="sub02"><a href="https://www.propolife.co.jp/group/">グループ企業</a></li>
+                        <li class="sub03"><a href="https://www.propolife.co.jp/news/">ニュース</a></li>
                         <li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
                         <li><a href="https://www.propolife.co.jp/contact/" target="_blank">お問い合わせ</a></li>
                     </ul>
@@ -110,9 +110,9 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
             <div class="hBox hBox03">
                 <div class="subBox">
                     <ul class="clearfix txtbanner">
-                        <li><a href="https://propolife.co.jp/news/information/"><span>企業からのお知らせ</span></a></li>
-                        <li><a href="https://propolife.co.jp/news/pressrelease/"><span>プレスリリース</span></a></li>
-                        <li><a href="https://propolife.co.jp/news/media/"><span>メディア掲載情報</span></a></li>
+                        <li><a href="https://www.propolife.co.jp/news/information/"><span>企業からのお知らせ</span></a></li>
+                        <li><a href="https://www.propolife.co.jp/news/pressrelease/"><span>プレスリリース</span></a></li>
+                        <li><a href="https://www.propolife.co.jp/news/media/"><span>メディア掲載情報</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -174,40 +174,40 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                 <div class="subBox">
                     <ul class="clearfix">
                         <li>
-                            <a href="https://propolife.co.jp/company/president/">
+                            <a href="https://www.propolife.co.jp/company/president/">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link01.jpg" width="356" height="133" alt="">
                             </a>
-                            <span><a href="https://propolife.co.jp/company/president/">代表者挨拶</a></span>
+                            <span><a href="https://www.propolife.co.jp/company/president/">代表者挨拶</a></span>
                         </li>
                         <li>
-                            <a href="https://propolife.co.jp/company/philosophy/">
+                            <a href="https://www.propolife.co.jp/company/philosophy/">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link02.jpg" width="356" height="133" alt="">
                             </a>
-                            <span><a href="https://propolife.co.jp/company/philosophy/">企業理念</a></span>
+                            <span><a href="https://www.propolife.co.jp/company/philosophy/">企業理念</a></span>
                         </li>
                         <li>
-                            <a href="https://propolife.co.jp/company/">
+                            <a href="https://www.propolife.co.jp/company/">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link03.jpg" width="356" height="133" alt="">
                             </a>
-                            <span><a href="https://propolife.co.jp/company/">会社概要</a></span>
+                            <span><a href="https://www.propolife.co.jp/company/">会社概要</a></span>
                         </li>
                         <li>
-                            <a href="https://propolife.co.jp/company/history/">
+                            <a href="https://www.propolife.co.jp/company/history/">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link04.jpg" width="356" height="133" alt="">
                             </a>
-                            <span><a href="https://propolife.co.jp/company/history/">沿革</a></span>
+                            <span><a href="https://www.propolife.co.jp/company/history/">沿革</a></span>
                         </li>
                         <li>
-                            <a href="https://propolife.co.jp/company/officer/">
+                            <a href="https://www.propolife.co.jp/company/officer/">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link05.jpg" width="356" height="133" alt="">
                             </a>
-                            <span><a href="https://propolife.co.jp/company/officer/">役員一覧</a></span>
+                            <span><a href="https://www.propolife.co.jp/company/officer/">役員一覧</a></span>
                         </li>
                         <li>
-                            <a href="https://propolife.co.jp/company/access/">
+                            <a href="https://www.propolife.co.jp/company/access/">
                                 <img src="<?php bloginfo('template_directory'); ?>/common/img/h_link06.jpg" width="356" height="133" alt="">
                             </a>
-                            <span><a href="https://propolife.co.jp/company/access/">アクセス</a></span>
+                            <span><a href="https://www.propolife.co.jp/company/access/">アクセス</a></span>
                         </li>
                     </ul>
                 </div>

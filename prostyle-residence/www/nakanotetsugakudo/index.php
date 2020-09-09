@@ -289,7 +289,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		    						<li class="flex-fill">
 		    							<div class="selling_phrase_top">
 			    							<h2>中野駅生活圏</h2>
-			    							<p>中央線快速、総武線・東西線始発駅</p>
+			    							<p>中央線、総武線・東西線始発駅</p>
 		    							</div>
 		    						</li>
 		    						<li class="flex-fill">

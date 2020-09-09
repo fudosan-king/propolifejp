@@ -125,7 +125,7 @@
 		      										<div class="roomplan_item_top">
 			      										<div class="row no-gutters">
 			      											<div class="col-5">
-			      												<h1><img src="images/1x/a_type.png" alt="" class="img-fluid"></h1>
+			      												<h1><img src="images/1x/Ag_1.png" alt="" class="img-fluid"></h1>
 			      											</div>
 			      											<div class="col-7">
 			      												<div class="roomplan_item_info">

@@ -25,7 +25,7 @@
 					      				<div class="row">
 					      					<div class="col-4 col-md-3 align-self-end">
 					      						<div class="text_type">
-					      							<img src="images/1x/ag_type_sp.png" alt="" class="img-fluid">
+					      							<img src="images/1x/Ag_2.png" alt="" class="img-fluid">
 					      						</div>
 					      					</div>
 					      					<div class="col-8 col-md-4 align-self-end">

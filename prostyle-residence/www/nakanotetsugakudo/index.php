@@ -385,12 +385,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_f.php" class="btn btn_video">>>Fタイプ間取りはこちら </a>
 	      								</div>
-	      								<div class="col-12 col-md-4">
+	      								<!-- <div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=Ey9RHKzJqGy" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_b.php" class="btn btn_video">>>Bタイプ間取りはこちら </a>
-	      								</div>
+	      								</div> -->
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=QcgwjcRxafu" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
@@ -415,7 +415,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      												<p>2020.08.28</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">
-			      												<p>Bタイプ完売しました</p>
+			      												<p>Bタイプ完売しました。</p>
 			      											</div>
 			      										</div>
 			      										

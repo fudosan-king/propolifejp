@@ -379,6 +379,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	      						<div class="box_video">
 	      							<h3 class="text-center mt-3 mt-md-5">フルスクリーンでご覧ください。</h3>
 	      							<div class="row">
+	      								<div class="col-12 col-md-2">
+	      								</div>
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=2wYcFGRfG4k" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
@@ -396,6 +398,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=QcgwjcRxafu" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_i.php" class="btn btn_video">>>Iタイプ間取りはこちら </a>
+	      								</div>
+	      								<div class="col-12 col-md-2">
 	      								</div>
 	      							</div>
 	      						</div>

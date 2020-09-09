@@ -776,7 +776,7 @@
                                                 </div>
                                                 <div class="col-10 col-lg-11">
                                                     <div class="box_datetime mb-3">
-                                                        <input type="text" class="form-control datepicker required" placeholder="2020/06/26" name="cancellation_date">
+                                                        <input type="text" class="form-control datepickerCancel required" name="cancellation_date">
                                                         <i class="i_datetime"></i>
                                                     </div>
                                                     <p class="mb-0 red">※　解約日までの賃料が発生いたします。解約日当月の賃料は通常月と同じように全額お振込みをお願いいたします。敷金精算時に精算いたします。<br/>※　解約日までに室内お荷物をすべて移動をお願いいたします。ライフラインの解約手続きもお願いいたします。<br/>※　例：1ヶ月前予告の場合、通知日が1月1日なら解約日は最短で2月1日となります。

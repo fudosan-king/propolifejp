@@ -48,6 +48,7 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>    
                 <script src="<?=base_url();?>assets/js/pardot/kaiyaku.js"></script>  
+                <script src="<?=base_url();?>assets/js/pardot/customdate.js"></script>
                 <?php
             endif;
             if($this->uri->uri_string()=='contact/naiken' || $this->uri->uri_string()=='contact/chintai'): ?>

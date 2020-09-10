@@ -25,7 +25,7 @@
                                     <h4>お問い合わせを受け付けました。<br><br>
                                     確認のため、お客様にメールをお送りしております。お問い合わせ頂き、ありがとうございました。</h4>
                                     <p class="text-center">
-                                        <a href="index.php" class="btn btnback">トップページへ戻る</a>
+                                        <a href="/" class="btn btnback">トップページへ戻る</a>
                                     </p>
                                 </div>
                             </div>

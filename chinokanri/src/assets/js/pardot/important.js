@@ -99,11 +99,11 @@ $(function($) {
             var license_value = ''
             switch(building_license){
                 case '国土交通大臣': {
-                    license_value = $('input[name="building_license[]"]:checked').val() + '（' + $('input[name="governor_opt1_first"]').val() + '第' + $('input[name="governor_opt1_number"]').val() + '号）';
-                    
+                    license_value = $('input[name="building_license[]"]:checked').val() + '（' + $('input[name="governor_opt1_first"]').val() + ') 第' + $('input[name="governor_opt1_number"]').val() + '号';
+
                 }break;
                 case '知事': {
-                    license_value = $('input[name="governor_custom_text"]').val() + $('input[name="building_license[]"]:checked').val() + '（' + $('input[name="governor_opt2_first"]').val() + '第' + $('input[name="governor_opt2_number"]').val() + '号）';
+                    license_value = $('input[name="governor_custom_text"]').val() + $('input[name="building_license[]"]:checked').val() + '（' + $('input[name="governor_opt2_first"]').val() + ') 第' + $('input[name="governor_opt2_number"]').val() + '号';
                 }break;
                 case 'その他': {
                     license_value = $('input[name="governor_other_text"]').val();
@@ -141,7 +141,7 @@ $(function($) {
                 switch($(el).val()){
                     case '調査報告書': {
                         var request_unit = $('input[name="request_unit"]').val() == '' ? 0 : $('input[name="request_unit"]').val();
-                        request_document += '・重要事項' + $(el).val() + '　' + request_unit + '戸/11000円（税込）';
+                        request_document += '・重要事項' + $(el).val() + '　' + request_unit + '戸/1戸当たり11000円（税込）';
                     }break;
                     case '管理規約（コピー）': {
                         request_document += '・' + $(el).val() + '　3300円（税込）';
@@ -249,6 +249,20 @@ $(function($) {
                             $(elem).removeClass('validate-error');
                         }
                     }break;
+                    case 'number': {
+                        if (typeof($(elem).val()) === 'undefined' || $(elem).val() == "" || $(elem).val() == "null") {
+                            isValidate = false;
+                            $(elem).addClass('validate-error');
+                        }else{
+                            var numberPattern = /[0-9]+/;
+                            if (!numberPattern.test($(elem).val())) {
+                                isValidate = false;
+                                $(elem).addClass('validate-error');
+                            } else {
+                                $(elem).removeClass('validate-error');
+                            }
+                        }
+                    }
                 }
             }
 

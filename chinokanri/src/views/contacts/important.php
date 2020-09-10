@@ -71,7 +71,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="text" name="building_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
+                                                            <input type="number" name="building_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -300,7 +300,7 @@
                                             <label for="">FAX番号（半角数字）<span>※ハイフンなしでご記入ください。</span></label>
                                             <div class="row">
                                                 <div class="col-2 col-lg-1 align-self-center">
-                                                    
+
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
                                                     <input type="text" name="fax" class="form-control" placeholder="例：0312341234">
@@ -311,7 +311,7 @@
                                             <label for="">FAX番号・確認用（半角数字）<span>※ハイフンなしでご記入ください。</span></label>
                                             <div class="row">
                                                 <div class="col-2 col-lg-1 align-self-center">
-                                                    
+
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
                                                     <input type="text" name="fax_confirm" class="form-control" placeholder="例：0312341234" data-confirm="true" data-confirm-name="fax">
@@ -373,7 +373,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="text" name="kondo_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
+                                                            <input type="number" name="kondo_post" class="form-control" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -587,7 +587,7 @@
                                     <div class="frm_general_content">
                                         <div class="box_content_footer">
                                             <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                                個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                                個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/" target="_blank"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                                 ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。
                                             </p>
                                             <div class="form-group text-center">
@@ -632,8 +632,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
-                                           
+
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">所在地（送付先）</label>
@@ -645,8 +645,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
-                                           
+
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">免許番号</label>
@@ -658,8 +658,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
-                                            
+
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">担当者</label><p class="mb-1">所属部課（支店名）</p>
@@ -671,7 +671,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">氏名</label>
@@ -683,10 +683,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
-                                                    <label for="">電話番号（半角数字</label>
+                                                    <label for="">電話番号（半角数字)</label>
                                                 </div>
                                                 <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
@@ -695,10 +695,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
-                                                    <label for="">FAX番号（半角数字</label>
+                                                    <label for="">FAX番号（半角数字)</label>
                                                 </div>
                                                 <div class="col col-9 col-lg-7">
                                                     <!-- cfr -->
@@ -707,7 +707,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">メールアドレス（半角英数字）</label>
@@ -730,7 +730,7 @@
                                     <div class="frm_general_content">
                                         <h2>調査対象マンション情報</h2>
                                         <div class="form-group">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">名称</label>
@@ -756,8 +756,7 @@
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
-                                                    <label for="">売却依頼主</label> 
-                                                    <p class="mb-1">住戸番号</p>
+                                                    <label for="">売却依頼主</label>
                                                     <p class="mb-1">氏名</p>
                                                 </div>
                                                 <div class="col col-9 col-lg-7">
@@ -780,7 +779,7 @@
                                     <div class="frm_general_content">
                                         <h2>依頼書類・使用目的</h2>
                                         <div class="form-group">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">依頼書類</label>
@@ -792,7 +791,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">使用目的</label>
@@ -804,7 +803,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group mb-0">
-                                            
+
                                             <div class="row">
                                                 <div class="col col-3 col-lg-5">
                                                     <label for="">受取方法</label>

@@ -52,16 +52,13 @@
 								                    $working_hour = get_field('working_hour');
 								                }
 								            ?>
-					                        <div class="contact_tel">
-					                            <p><b>＜お電話でのお問い合わせについて＞</b><br>
-					                            お電話でのお問い合わせは次の番号までお願いいたします。<br>
-					                            電話番号：<a href="tel:<?php echo get_field('phone_number', 'option') ?>"><?php echo get_field('phone_number', 'option') ?></a> <br>
-					                            <?php echo $working_hour; ?></p>
-					                        </div>
-					                        <p align="center">
-					                            必要事項をご入力の上、「入力内容を確認する」ボタンを押してください。<br>
-					                            <span class="red">＊</span>がついている項目はご記入必須項目になります。
-					                        </p>
+                                            <div class="contact_tel">
+                                                <p><b>＜お電話・メールでのお問い合わせについて＞</b><br>
+                                                    お電話でのお問い合わせ　電話番号：<a href="tel:<?php echo get_field('phone_number', 'option') ?>" target="_blank" rel='noopener noreferrer'><?php echo get_field('phone_number', 'option') ?></a> <br>
+                                                    メールでのお問い合わせ　メールアドレス <a href="mailto:info-ps@propolife.co.jp" target="_blank" rel='noopener noreferrer'>info-ps@propolife.co.jp</a><br>
+                                                    定休日：水曜日※祝日を除く
+                                                </p>
+                                            </div>
 					                        <dl class="Rtable Rtable--3cols Rtable--collapse table_register">
 					                            <!-- <dt class="Rtable-cell Rtable-cell--medium"><strong>来場予約・資料請求 <span class="red">＊</span></strong></dt>
 					                            <dd class="Rtable-cell Rtable-cell--highlight Rtable-cell--2of3 Rtable-cell--rowEnd">

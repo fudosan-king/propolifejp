@@ -8,10 +8,13 @@
 
 <?php 
     $invalid = true;
-    $user_email = isset($_POST['user_email']) ? $_POST['user_email'] : '' ;
+    $user_email = '';
+    if ( isset( $_POST['user_email'] ) && is_string( $_POST['user_email'] ) ) {
+        $user_email = wp_unslash( $_POST['user_email'] );
+    }
     $user_password = isset($_POST['user_password']) ? $_POST['user_password'] : '' ;
     $user_remember = isset($_POST['user_remember']) ? filter_var($_POST['user_remember'], FILTER_VALIDATE_BOOLEAN)  : false ;
-
+    $home_url = get_home_url();
     if(isset($_POST['login_request'])){
         if(!empty($user_email)){        
             $user = get_user_by( 'email', $user_email  );
@@ -25,7 +28,8 @@
                     'remember'      => $user_remember
                 );
                 $user_ = wp_signon( $creds, false );
-                header('Location:'.get_home_url());
+                wp_redirect($home_url);
+                exit;
             }else{
                 $invalid = false;
             }
@@ -33,63 +37,51 @@
             $invalid = false;
         }
     }
-    
-    
 ?>
-
-
 <?php if(!is_user_logged_in()): ?>
-<main>
-    <section class="section_login">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-9 mx-auto">
-                    <h1><a href="<?php echo get_home_url(); ?>"><img src="<?php echo IMAGE_PATH; ?>/1x/logo.svg" alt="logrenove_logo" class="img-fluid" width="257"></a></h1>
-                    <form method="post" class="frm_login">
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <h2>ログイン</h2>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="user_email" placeholder="メールアドレス" value="<?php echo $user_email; ?>">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" name="user_password" placeholder="パスワード">
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="true" id="defaultCheck1" name="user_remember" <?php echo $user_remember ? 'checked' : ''; ?>>
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        次回から自動的にログインする
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btnLogin" name="login_request">ログイン</button>
-                                </div>
-                                <?php if (!$invalid): ?>
-                                    <div class="form-group text-center">
-                                        <label class="login_error">ユーザー名もしくはパスワードが無効です。</label>
-                                    </div>
-                                <?php endif; ?>
-                                <p class="my-4 text-center text_forgotpass"><a href="#">パスワードをお忘れの方</a></p>
-                                <p>初めてご利用になるかたはこちらから新規登録をお願いいたします。</p>
-                                <a href="signin.php" class="btn btnSignin d-block">新規登録</a>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <h2 class="mb-1">SNSを使用してログイン</h2>
-                                <p>SNSアカウントを使って会員登録をされた方はこちらからログインしていただけます。</p>
-                                <a href="#" class="btn d-block btnfb">フェイスブックでログイン <i class="fab fa-facebook-f fa-lg ml-1"></i></a>
-                                <a href="#" class="btn d-block btntw">ツイッターでログイン <i class="fab fa-twitter fa-lg ml-1"></i></a>
-                            </div>
-                        </div>
-                    </form>
+<div class="login_page">
+    <div class="login_header">
+        <a href="<?php echo $home_url; ?>" class=""><img src="<?php echo IMAGE_PATH; ?>/1x/logo.svg" alt="" class="img-fluid" width="250"></a>
+    </div>
+    <div class="login_body">
+        <form method="post" class="frm_main_login">
+            <div class="login_body_top">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="メールアドレス" name="user_email" value="<?php echo esc_attr($user_email); ?>" size="20" autocapitalize="off">
                 </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="パスワード（半角英数6文字以上）" name="user_password">
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" value="true" name="user_remember" id="keeplogin" <?php echo $user_remember ? 'checked' : ''; ?>>
+                    <label class="custom-control-label" for="keeplogin">週刊ログリノベを受け取る</label>
+                </div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn_login" name="login_request" value="login">ログイン</button>
+                </div>
+                <?php if (!$invalid): ?>
+                    <div class="form-group text-center">
+                        <label class="login_error">メールアドレスまたはパスワードが無効です</label>
+                    </div>
+                <?php endif; ?>
+                <p class="mb-0"><a class="btn_forgotpass" href="#">パスワードをお忘れの方はこちら</a></p>
             </div>
-        </div>
-    </section>
+            <div class="login_body_bottom">
+                <?php // echo get_social_login_button(); ?>
+                <!-- <a href="#" class="btn btn_social btnlogin_google">Googleでログイン</a>
+                <a href="#" class="btn btn_social btnlogin_yahoo">Yahoo!JAPANでログイン</a>
 
-</main>
+                <a href="#" class="btn btn_social btnlogin_facebook">Facebookでログイン</a> -->
+                <p class="mt-5 text-center mb-2">初めての方はこちら</p>
+                <a href="<?php echo esc_url(network_site_url('signup')); ?>" class="btn btn_social btn_member mb-0">新規会員登録</a>
+            </div>
+        </form>
+    </div>
+    <?php require(dirname( __FILE__ ).'/../includes/login-footer.php'); ?>
+</div>
 <?php 
     else:
-        header('Location:'.get_home_url());
+        wp_redirect($home_url);
+        exit;
     endif;
  ?>
-<?php get_footer(); ?>

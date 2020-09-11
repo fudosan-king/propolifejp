@@ -688,4 +688,41 @@
         $result['banner'] = (!empty($category_sidebar_banner['banner']) && count($category_sidebar_banner['banner'])) ? $category_sidebar_banner['banner'] : $sidebar_banner['banner'];
         return $result;
     }
+
+    # Customize social login
+
+    // function get_social_login_button()
+    // {
+    //     $buttons = '';
+    //     if(is_plugin_active('accesspress-social-login-lite/accesspress-social-login-lite.php')) {
+    //         $options = get_option( APSL_SETTINGS );
+    //         $user_login_url = home_url();
+    //         $encoded_url = urlencode( $user_login_url );
+    //         foreach ( $options['network_ordering'] as $key => $value ):
+    //             if ( $options["apsl_{$value}_settings"]["apsl_{$value}_enable"] === 'enable' ) {
+    //                 $login_url = wp_login_url().'?apsl_login_id='.esc_attr($value).'_login';
+    //                 if ( $encoded_url ) {
+    //                     $login_url .= "&state=" . urlencode(base64_encode( "redirect_to=$encoded_url" ));
+    //                 }
+    //                  switch ($value) {
+    //                     case 'facebook':
+    //                         $text_label = 'Facebookでログイン';
+    //                         break;
+    //                     case 'google':
+    //                         $text_label = 'Googleでログイン';
+    //                         break;
+    //                     case 'yahoo':
+    //                         $text_label = 'Yahoo!JAPANでログイン';
+    //                         break;
+    //                     default:
+    //                         $text_label = '';
+    //                         break;
+    //                  }
+    //                  $buttons .= "<a href=\"{$login_url}\" class=\"btn btn_social btnlogin_".esc_attr($value)."\">{$text_label}</a>";
+                     
+    //             }
+    //         endforeach;
+    //     }
+    //     return $buttons;
+    // }
 ?>

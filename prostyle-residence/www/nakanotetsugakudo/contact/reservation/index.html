@@ -45,8 +45,6 @@
     </script>
     <!-- End Google Tag Manager -->
 
-
-
     <script src="js/functions.js"></script>
 </head>
 
@@ -71,6 +69,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
+                            <!-- https://go.pardot.com/l/185822/2019-03-05/dgydgm -->
                             <form action="https://go.pardot.com/l/185822/2019-03-05/dgydgm" method="POST" role="form" class="frm_contact">
                                 <h2 class="form-title" style="margin-bottom: 30px;"></h2>
 
@@ -663,7 +662,7 @@
                                                         <input name="secret-info" type="checkbox" id="" value="同意する" onchange=""> 同意する
                                                     </label>
                                                     <div class="error-text secret-info" style="margin-top: 15px;">値を入力してください</div>
-                                                </div>
+                                                </div>                                                
 
                                                 <input type="button" class="btn btn-lg btnForm" id="goConfirm" value="入力内容を確認する">
 
@@ -871,10 +870,15 @@
                                     </div> -->
 
                                     <div class="row">
+
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center" style="margin-top: 20px;">
+                                            <div id="reCAPTCHAv2"></div>
+                                        </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                             <div class="end-form" style="width: 100%;">
                                                 <input type="button" class="btn btn-lg btnForm" id="goBack" value="戻る"> &nbsp;
-                                                <input type="button" class="btn btn-lg btnForm" id="goSubmit" value="送信する">
+                                                <input type="button" class="btn btn-lg btnForm" id="goSubmit" value="送信する" disabled="">
+                                                <input type="hidden" id="token-recaptcha" name="validate-recaptcha" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -889,6 +893,9 @@
             </section>
         </main>
     </div>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
 </body>
 
 </html>

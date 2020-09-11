@@ -8,75 +8,75 @@
 
 <?php 
     $invalid = true;
-    $user_email = isset($_POST['user_email']) ? $_POST['user_email'] : '' ;
+    $email_exist = false;
+    $user_email = '';
+    if ( isset( $_POST['user_email'] ) && is_string( $_POST['user_email'] ) ) {
+        $user_email = wp_unslash( $_POST['user_email'] );
+    }
     $user_password = isset($_POST['user_password']) ? $_POST['user_password'] : '' ;
     $user_received = isset($_POST['user_received']) ? filter_var($_POST['user_received'], FILTER_VALIDATE_BOOLEAN)  : false ;
-
+    $home_url = get_home_url();
     if(isset($_POST['login_register'])){
-        if(!empty($user_email)){        
+        if(!empty($user_email)){    
             $isExisted = email_exists( $user_email );
-            
             if(!$isExisted){
-
-                // $creds = array(
-                //     'user_login'    => $user->user_login,
-                //     'user_password' => $user_password,
-                //     'remember'      => $user_received
-                // );
-                // $user_ = wp_signon( $creds, false );
-                header('Location:'.get_home_url());
+                wp_create_user($user_email, $user_password, $user_email);
+                wp_redirect($home_url.'/login/');
             }else{
-                $invalid = false;
+                $email_exist = true;
             }
         }else{
             $invalid = false;
         }
     }
     
-    
 ?>
-
-<main>
-    <section class="section_login">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-9 mx-auto">
-                    <h1><a href="<?php echo get_home_url(); ?>"><img src="<?php echo IMAGE_PATH; ?>/1x/logo.svg" alt="logrenove_logo" class="img-fluid" width="257"></a></h1>
-                    <form method="post" class="frm_login">
-                        <h2>新規登録</h2>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="user_email" placeholder="メールアドレス">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="user_password" placeholder="パスワード">
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="true" id="defaultCheck1" name="user_received" <?php echo $user_received ? 'checked' : ''; ?>>
-                            <label class="form-check-label" for="defaultCheck1">
-                                ログリノベのメルマガを受け取る
-                            </label>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-6 mx-auto">
-                                <div class="form-group">
-                                    <button type="submit" class="btn btnLogin" name="login_register">仮登録メールを送信する</button>
-                                </div>
-                                <?php if (!$invalid): ?>
-                                    <div class="form-group text-center">
-                                        <label class="register_error">ユーザー名もしくはパスワードが無効です。</label>
-                                    </div>
-                                <?php endif; ?>
-                                <p class="register_sns">またはSNSアカウントで登録</p>
-                                <p class="link_page"><a href="#">利用規約</a> ・ <a href="#">プライバシー</a>ポリシー に同意の上<br> 会員登録を行ってください。</p>
-                                <a href="#" class="btn d-block btnfb">フェイスブックで登録する <i class="fab fa-facebook-f fa-lg ml-1"></i></a>
-                                <a href="#" class="btn d-block btntw">ツイッターで登録する <i class="fab fa-twitter fa-lg ml-1"></i></a>
-                            </div>
-                        </div>
-                    </form>
+<?php if(!is_user_logged_in()): ?>
+<div class="login_page">
+    <div class="login_header">
+        <a href="<?php echo $home_url; ?>" class=""><img src="<?php echo IMAGE_PATH; ?>/1x/logo.svg" alt="" class="img-fluid" width="250"></a>
+    </div>
+    <div class="login_body">
+        <form method="post" class="frm_main_login">
+            <!-- <div class="login_body_top">
+                <h3>新規会員登録</h3>
+                <a href="#" class="btn btn_social btnlogin_google">Googleでログイン</a>
+                <a href="#" class="btn btn_social btnlogin_yahoo">Yahoo!JAPANでログイン</a>
+                <a href="#" class="btn btn_social btnlogin_facebook mb-0">Facebookでログイン</a>
+                <?php // echo get_social_login_button(); ?>
+            </div> -->
+            <div class="login_body_bottom">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="メールアドレス" name="user_email" value="<?php echo esc_attr($user_email); ?>" size="20" autocapitalize="off">
                 </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="パスワード（半角英数6文字以上）" name="user_password">
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="keeplogin" name="user_received">
+                    <label class="custom-control-label" for="keeplogin">週刊ログリノベを受け取る</label>
+                </div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn_login" name="login_register" value="register">入力を確認</button>
+                </div>
+                <?php if (!$invalid): ?>
+                    <div class="form-group text-center">
+                        <label class="login_error">メールアドレスまたはパスワードが無効です</label>
+                    </div>
+                <?php elseif($email_exist): ?>
+                    <div class="form-group text-center">
+                        <label class="login_error">電子メールアドレスはすでに存在しています</label>
+                    </div>
+                <?php endif; ?>
+                <p class="mb-0 termofuse">登録することで、<a href="https://www.propolife.co.jp/terms/" target="_tbank">利用規約</a>と<a href="https://www.propolife.co.jp/privacypolicy/" target="_tbank">プライバシーポリシー</a>に同意したものとみなされます。</p>
             </div>
-        </div>
-    </section>
-</main>
-
-<?php get_footer(); ?>
+        </form>
+    </div>
+    <?php require(dirname( __FILE__ ).'/../includes/login-footer.php'); ?>
+</div>
+<?php 
+    else:
+        wp_redirect($home_url);
+        exit;
+    endif;
+ ?>

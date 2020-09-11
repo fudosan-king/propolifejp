@@ -54,9 +54,11 @@
 								            ?>
                                             <div class="contact_tel">
                                                 <p><b>＜お電話・メールでのお問い合わせについて＞</b><br>
-                                                    お電話でのお問い合わせ　電話番号：<a href="tel:<?php echo get_field('phone_number', 'option') ?>" target="_blank" rel='noopener noreferrer'><?php echo get_field('phone_number', 'option') ?></a> <br>
-                                                    メールでのお問い合わせ　メールアドレス <a href="mailto:info-ps@propolife.co.jp" target="_blank" rel='noopener noreferrer'>info-ps@propolife.co.jp</a><br>
+                                                    <span>お電話でのお問い合わせ　</span><span>電話番号：<a href="tel:<?php echo get_field('phone_number', 'option') ?>" target="_blank" rel='noopener noreferrer'><?php echo get_field('phone_number', 'option') ?></a> <br></span>
+                                                    <span>メールでのお問い合わせ　</span><span>メールアドレス
+                                                    <a href="mailto:info-ps@propolife.co.jp" target="_blank" rel='noopener noreferrer'>info-ps@propolife.co.jp</a><br>
                                                     定休日：水曜日※祝日を除く
+                                                    </span>
                                                 </p>
                                             </div>
 					                        <dl class="Rtable Rtable--3cols Rtable--collapse table_register">

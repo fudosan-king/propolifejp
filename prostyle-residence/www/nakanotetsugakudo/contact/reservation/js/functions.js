@@ -1,3 +1,24 @@
+var validateReCaptcha = function(token) {
+    if(token.length != 0){
+        document.querySelector('#token-recaptcha').value = token;
+        document.querySelector('#goSubmit').removeAttribute('disabled');
+    }
+};
+
+var expiredReCaptcha = function() {
+    document.querySelector('#token-recaptcha').value = '';
+    document.querySelector('#goSubmit').setAttribute('disabled', true);
+    grecaptcha.reset();
+}
+
+var onloadCallback = function() {
+    grecaptcha.render('reCAPTCHAv2', {
+      'sitekey' : '6LdPxMoZAAAAAC3loiP1zl9r44blp-QySkmbiLoG',
+      'callback': validateReCaptcha,
+      'expired-callback': expiredReCaptcha
+    });
+};
+
 jQuery(function($) {
     $(".navbar-toggle").on("click", function() {
         $(this).toggleClass("active");
@@ -497,31 +518,46 @@ $(document).ready(function() {
         $('.form_info.confirm').fadeOut();
         $($('.step ol li')[1]).removeClass('active');
         $($('.step ol li')[0]).addClass('active');
+
+        grecaptcha.reset();
+        $('#goSubmit').attr('disabled', true);
     });
 
     // BUTTON SET SUBMIT FORM ACTION
     $('#goSubmit').click(function() {
         if (invalidCheck()) {
 
-            // RE-SET VALUE ON FINAL TURN
-            $('form input[type="text"]').each(function() {
-                if ($(this).val() == '')
-                    $(this).val('null');
+            var google_reCaptcha_token = $('#token-recaptcha').val();
+
+            var context = {
+                'name': 'recaptcha',
+                'token': google_reCaptcha_token
+            }
+            $.ajax({
+                url: '/nakanotetsugakudo/api.php',
+                type: 'POST',
+                data: context,
+            })
+            .done(function(data) {
+                console.log(data);
+                if(data.success == true){
+                    // RE-SET VALUE ON FINAL TURN
+                    $('form input[type="text"]').each(function() {
+                        if ($(this).val() == '')
+                            $(this).val('null');
+                    });
+
+                    $('form textarea').each(function() {
+                        if ($(this).val() == '')
+                            $(this).val('null');
+                    });
+
+                    $('.frm_contact').submit();
+                }
             });
 
-            $('form textarea').each(function() {
-                if ($(this).val() == '')
-                    $(this).val('null');
-            });
-
-            $('.frm_contact').submit();
         } else {
             $('#goBack').click();
         }
-    });
-
-    // BUTTON TEST ACTION
-    $('#goTest').click(function() {
-        console.log(queryString['reservation']);
     });
 });

@@ -48,6 +48,7 @@
     <?php wp_head(); ?>
 
     <?php print_r($header_info['extra_scripts']); ?>
+    <script src="https://tripla.jp/sdk/javascript/tripla.min.js" data-triplabot-code="6de8a8017ac482dfdace6acc6c934471"></script>
 </head>
 
 <body <?php body_class(); ?>>

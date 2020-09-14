@@ -7,9 +7,37 @@
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_sm"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
                 </div>
                 <div class="col-7 col-md-5 align-self-center">
-                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-none d-lg-block">リノベーションのオンライン相談に申し込む（無料）</a>
-                    <a target="_blank" href="https://www.logrenove.jp/service/" class="btn-link btn btn_applyconsultation d-block d-lg-none">リノベ相談に申し込む(無料)</a>
-                    <?php //get_search_form(); ?>
+                    <?php $service_url = ''; $service_text_sp = ''; $service_text_pc = ''; if (is_singular('post')) {
+                        global $post;
+                        $postCats = get_the_category($post->ID);
+                        if ($postCats) {
+                            foreach ($postCats as $cat) {
+                                if (get_field('service_text_pc', $cat)) {
+                                    $service_text_pc = get_field('service_text_pc', $cat);
+                                    $service_text_sp = get_field('service_text_sp', $cat);
+                                    $service_url = get_field('service_url', $cat);
+                                    break;
+                                }
+                            }
+                        }
+                        if (!$service_text_pc) {
+                            $service_text_pc = get_field('service_text_pc_homepage', 'option');
+                            $service_text_sp = get_field('service_text_sp_homepage', 'option');
+                            $service_url = get_field('service_url_homepage', 'option');
+                        }
+                    } else {
+                        if (get_field('service_text_pc',get_queried_object())) {
+                            $service_text_pc = get_field('service_text_pc', get_queried_object());
+                            $service_text_sp = get_field('service_text_sp', get_queried_object());
+                            $service_url = get_field('service_url', get_queried_object());
+                        } else {
+                            $service_text_pc = get_field('service_text_pc_homepage', 'option');
+                            $service_text_sp = get_field('service_text_sp_homepage', 'option');
+                            $service_url = get_field('service_url_homepage', 'option');
+                        }
+                    } ?>
+                    <a target="_blank" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-none d-lg-block"><?php echo $service_text_pc; ?></a>
+                    <a target="_blank" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-block d-lg-none"><?php echo $service_text_sp; ?></a>
                 </div>
                 <div class="col-1 col-md-3 align-self-center text-right">
                     <!-- <div class="box_top_user_md">

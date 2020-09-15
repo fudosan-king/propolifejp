@@ -9,7 +9,7 @@
             <li><a target="_blank" href="https://www.propolife.co.jp/privacypolicy/">プライバシーポリシー</a></li>
             <li><a target="_blank" href="https://www.propolife.co.jp/socialpolicy/">ソーシャルメディアポリシー</a></li>
           </ul>
-          <p class="copyright"><a href="index.php">©Logknot Inc.</a> all rights reserved.</p>
+          <p class="copyright">Copyright © <a href="/">LogKnot Inc.</a> All Rights Reserved.</p>
         </div>
       </div>
     </div>

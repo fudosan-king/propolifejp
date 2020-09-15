@@ -141,7 +141,7 @@ $(function($) {
                 switch($(el).val()){
                     case '調査報告書': {
                         var request_unit = $('input[name="request_unit"]').val() == '' ? 0 : $('input[name="request_unit"]').val();
-                        request_document += '・重要事項' + $(el).val() + '　' + request_unit + '戸/11,000円（税込）';
+                        request_document += '・重要事項' + $(el).val() + '　' + request_unit + '戸/1戸当たり11,000円（税込）';
                     }break;
                     case '管理規約（コピー）': {
                         request_document += '・' + $(el).val() + '　3300円（税込）';

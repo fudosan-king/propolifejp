@@ -29,6 +29,6 @@
                 </ul>
             </div>
         </div>
-        <a href="#" class="btn btn_menu navbar-toggler d-block"><span>menu</span></a>
+        <a href="#" class="btn btn_menu navbar-toggler "><span>menu</span></a>
     </div>
 </header>

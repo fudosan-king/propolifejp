@@ -98,7 +98,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="number" class="form-control required" placeholder="例：1234567" name="contract_estate_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')">
+                                                            <input type="number" class="form-control required numbersOnly" placeholder="例：1234567" name="contract_estate_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('contract_estate_postal_code','','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -439,7 +439,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="number" class="form-control required" placeholder="例：1234567" name="relocation_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','relocation_refectures','relocation_city')">
+                                                            <input type="number" class="form-control required numbersOnly" placeholder="例：1234567" name="relocation_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','relocation_refectures','relocation_city')">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('relocation_postal_code','','relocation_refectures','relocation_city')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -641,7 +641,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="number" class="form-control required" placeholder="例：1234567" name="emergency_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','emergency_refectures','emergency_city','emergency_location_number')">
+                                                            <input type="number" class="form-control required numbersOnly" placeholder="例：1234567" name="emergency_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','emergency_refectures','emergency_city','emergency_location_number')">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('emergency_postal_code','','emergency_refectures','emergency_city','emergency_location_number')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -819,7 +819,7 @@
 
                                         <div class="box_content_footer">
                                             <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                            個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                            個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/" target="_blank"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                             ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
                                             <div class="form-group text-center">

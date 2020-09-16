@@ -14,7 +14,7 @@
                     <div class="col-12">
                         <h2 class="title">CONTACT</h2>
                         <p class="sub_title">お問い合わせ</p>
-                        <form action="https://go.pardot.com/formHandler/read/id/3966" method="POST" role="form" class="frm_contact">
+                        <form action="https://pi.pardot.com/formHandler/read/id/3966" method="POST" role="form" class="frm_contact">
                             <div class="form-group">
                                 <label for="">お名前　[必須]</label>
                                 <input type="text" name="your_name" class="form-control">
@@ -31,10 +31,10 @@
                                 <label for="">お問い合わせ内容　[必須]</label>
                                 <input type="text" name="free_detail_contact" class="form-control">
                             </div>
-                            <p class="text-center">弊社の個人情報に関する取り扱いについては <a href="#" class="blue font-weight-bold">プライバシーポリシー</a> をご一読ください。<br>
+                            <p class="text-center">弊社の個人情報に関する取り扱いについては <a href="https://www.propolife.co.jp/privacypolicy/" class="blue font-weight-bold">プライバシーポリシー</a> をご一読ください。<br>
                             上記事項をご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
                             <div class="custom-control custom-checkbox text-center">
-                                <input type="checkbox" name="your_agree" class="custom-control-input" id="customCheck1">
+                                <input type="checkbox" name="your_agree" class="custom-control-input" id="customCheck1" checked="checked">
                                 <label class="custom-control-label font-weight-normal" for="customCheck1">同意する</label>
                             </div>
                             <div class="form-group mt-5 text-center">

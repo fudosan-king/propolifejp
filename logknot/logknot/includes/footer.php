@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-12">
           <ul>
-            <li><a target="_blank" href="https://www.propolife.co.jp/contact/">お問い合わせ</a></li>
+            <li><a target="_blank" href="contact">お問い合わせ</a></li>
             <li><a target="_blank" href="https://www.propolife.co.jp/terms/">利用規約</a></li>
             <li><a target="_blank" href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する方針</a></li>
             <li><a target="_blank" href="https://www.propolife.co.jp/privacypolicy/">プライバシーポリシー</a></li>

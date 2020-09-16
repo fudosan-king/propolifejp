@@ -26,7 +26,7 @@
                         <ul class="list_news">
                             <?php 
                                 $args = array(
-                                    'p' => 1,
+                                    'posts_per_page'         => 3,
                                     // Parameters relating to caching
                                     'no_found_rows'          => false,
                                     'cache_results'          => true,

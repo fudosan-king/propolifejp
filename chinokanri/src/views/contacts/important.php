@@ -71,7 +71,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="number" name="building_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
+                                                            <input type="text" name="building_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -373,7 +373,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="number" name="kondo_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
+                                                            <input type="text" name="kondo_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>

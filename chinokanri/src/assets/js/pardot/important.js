@@ -294,66 +294,6 @@ $(function($) {
         $('form[name="pardotForm"]').submit();
     });
 
-    // demo = (name='') => {
-    //     switch(name){
-    //         case '': {
-    //             $('input[name="company_name"]').val('プロポライフ');
-    //             $('input[name="branch_name"]').val('ベトナム');
-
-    //             $('input[name="building_post"]').val('1000013');
-    //             AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');
-    //             $('input[name="building_room_name"]').val('U1904 - CJ Building');
-
-    //             // /* 0:国土交通大臣, 1:None, 2:その他  */
-    //             $('input[name="building_license[]"]')[1].checked = true;
-    //             $('input[name="governor_custom_text"]').val('ABC Hideaki');
-    //             $('input[name="governor_opt2_first"]').val('ABC First');
-    //             $('input[name="governor_opt2_number"]').val('ABC #1');
-
-    //             $('input[name="representative_office"]').val('TEST Representative Office');
-
-    //             $('input[name="last_name"]').val('Nguyen');
-    //             $('input[name="first_name"]').val('Khanh');
-    //             $('input[name="phone"]').val('+84-97-422-6440');
-    //             $('input[name="fax"]').val('03-6897-8561');
-    //             $('input[name="fax_confirm"]').val('03-6897-8561');
-    //             $('input[name="email"]').val('khanh@propolife.co.jp');
-    //             $('input[name="email_confirm"]').val('khanh@propolife.co.jp');
-                
-                
-    //             $('input[name="kondo_name"]').val('VINHOMES');
-
-    //             setTimeout(function(){
-    //                 $('input[name="kondo_post"]').val('1020072');
-    //                 AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');
-    //             },1000);  
-                
-    //             $('input[name="kondo_building_name"]').val('Vinhomes Riverside');
-    //             $('input[name="kondo_building_room"]').val('Apt. 205');
-
-    //             $('input[name="unit_name_sale"]').val('LUX');
-                
-    //             // /* 0:調査報告書, 1:管理規約（コピー） */
-    //             $('input[name="request_document[]"]')[0].checked = true;
-    //             $('input[name="request_unit"]').val('2');
-    //             $('input[name="request_document[]"]')[1].checked = true;
-                
-    //             // /* 0:売買仲介, 1:賃貸仲介, 2:その他  */
-    //             $('input[name="purpose_of_use[]"]')[2].checked = true;
-    //             $('input[name="purpose_of_text"]').val('TEST Purpose');
-
-    //             // /* 0:メールデータ受取り（PDF）, 1:郵送, 2:メールでのデータ受取及び郵送  */
-    //             $('input[name="receive_method[]"]')[2].checked = true;
-
-                
-    //             setTimeout(function(){
-    //                 // $('#btn_confirm').click();
-    //             },2000);
-    //         }break;
-    //     }
-        
-    // }
-
     // Test confirm
     // demo();
     // setTimeout(function(){
@@ -362,3 +302,58 @@ $(function($) {
     
 
 });
+
+var demo = function(){
+    $('input[name="company_name"]').val('プロポライフ');
+    $('input[name="branch_name"]').val('ベトナム');
+
+    $('input[name="building_post"]').val('1000013');
+    AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');
+    $('input[name="building_room_name"]').val('U1904 - CJ Building');
+
+    // /* 0:国土交通大臣, 1:None, 2:その他  */
+    $('input[name="building_license[]"]')[1].checked = true;
+    $('input[name="governor_custom_text"]').val('ABC Hideaki');
+    $('input[name="governor_opt2_first"]').val('ABC First');
+    $('input[name="governor_opt2_number"]').val('ABC #1');
+
+    $('input[name="representative_office"]').val('TEST Representative Office');
+
+    $('input[name="last_name"]').val('Nguyen');
+    $('input[name="first_name"]').val('Khanh');
+    $('input[name="phone"]').val('+84-97-422-6440');
+    $('input[name="fax"]').val('03-6897-8561');
+    $('input[name="fax_confirm"]').val('03-6897-8561');
+    $('input[name="email"]').val('khanh@propolife.co.jp');
+    $('input[name="email_confirm"]').val('khanh@propolife.co.jp');
+    
+    
+    $('input[name="kondo_name"]').val('VINHOMES');
+
+    setTimeout(function(){
+        $('input[name="kondo_post"]').val('1020072');
+        AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');
+    },1000);  
+    
+    $('input[name="kondo_building_name"]').val('Vinhomes Riverside');
+    $('input[name="kondo_building_room"]').val('Apt. 205');
+
+    $('input[name="unit_name_sale"]').val('LUX');
+    
+    // /* 0:調査報告書, 1:管理規約（コピー） */
+    $('input[name="request_document[]"]')[0].checked = true;
+    $('input[name="request_unit"]').val('2');
+    $('input[name="request_document[]"]')[1].checked = true;
+    
+    // /* 0:売買仲介, 1:賃貸仲介, 2:その他  */
+    $('input[name="purpose_of_use[]"]')[2].checked = true;
+    $('input[name="purpose_of_text"]').val('TEST Purpose');
+
+    // /* 0:メールデータ受取り（PDF）, 1:郵送, 2:メールでのデータ受取及び郵送  */
+    $('input[name="receive_method[]"]')[2].checked = true;
+
+    
+    setTimeout(function(){
+        // $('#btn_confirm').click();
+    },2000);
+}

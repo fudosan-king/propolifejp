@@ -20,7 +20,7 @@ $(function($) {
 	                return false;
 
 	            if(data &&  data[date.getFullYear()][(date.getMonth() + 1)]){
-	            	if(data[date.getFullYear()][(date.getMonth() + 1)].includes(date.getDate()))
+	            	if(data[date.getFullYear()][(date.getMonth() + 1)].indexOf(date.getDate()))
 	            		return false;
 	            }
 	            

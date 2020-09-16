@@ -54,7 +54,7 @@ $(function($) {
         $.each(data, function(key, value) {
             var name = value.name;
             var val = value.value;
-            if (name.includes('[]') === false) 
+            if (name.indexOf('[]') === false) 
             {
                 $("#"+name).html(val);
             }
@@ -94,7 +94,7 @@ $(function($) {
                 val = checked.length > 0 ? checked.val() : '';
             }
             else if(['checkbox'].indexOf(type_elem) != -1) {
-                key = key.includes('[]') ? key.replace('[]','') : key;
+                key = key.indexOf('[]') ? key.replace('[]','') : key;
                 val = $('input[name^='+key+']:checked').map(function() {
                     return $(this).val();
                 });
@@ -136,36 +136,32 @@ $(function($) {
         if(invalid.length > 0) return false;
         else return true;
     }
-
-    demo = (name='') => {
-        switch(name){
-            case '': {
-                $('input[name="property-name"]').val('プロポライフ');
-                $('input[name="room-number"]').val('ベトナム');
-                $('input[name="visit-date"]').val('2020/08/28');
-                $('select[name="visit-hour"]').val('10:00');
-                $('input[name="company-name"]').val('プロポライフ');
-                $('input[name="branch-name"]').val('ベトナム');
-                $('input[name="postal-code"]').val('1000013');
-                AjaxZip3.zip2addr('postal-code','','pref','city')
-                
-                
-                $('input[name="phone-number"]').val('+84-97-422-6440');
-                $('input[name="mobile-number"]').val('03-6897-8561');
-                $('input[name="email"]').val('khiemtq@propolife.co.jp');
-                
-                $('input[name="kanji_familyname"]').val('プロポライフ');
-                $('input[name="kanji_name"]').val('ベトナム');
-                $('input[name="kata_familyname"]').val('プロポライフ');
-                $('input[name="kata_name"]').val('ベトナム');
-                $('input[name="address"]').val('U1904 - CJ Building');
-                $('input[id="customRadioInline1"]').prop('checked', true);
-                $('input[id="customRadio1"]').prop('checked', true);
-
-                setTimeout(function(){
-                    // $('#btn_confirm').click();
-                },2000);
-            } break;
-        }
-    }
 })
+
+var demo = function(){
+    $('input[name="property-name"]').val('プロポライフ');
+    $('input[name="room-number"]').val('ベトナム');
+    $('input[name="visit-date"]').val('2020/08/28');
+    $('select[name="visit-hour"]').val('10:00');
+    $('input[name="company-name"]').val('プロポライフ');
+    $('input[name="branch-name"]').val('ベトナム');
+    $('input[name="postal-code"]').val('1000013');
+    AjaxZip3.zip2addr('postal-code','','pref','city')
+    
+    
+    $('input[name="phone-number"]').val('+84-97-422-6440');
+    $('input[name="mobile-number"]').val('03-6897-8561');
+    $('input[name="email"]').val('khiemtq@propolife.co.jp');
+    
+    $('input[name="kanji_familyname"]').val('プロポライフ');
+    $('input[name="kanji_name"]').val('ベトナム');
+    $('input[name="kata_familyname"]').val('プロポライフ');
+    $('input[name="kata_name"]').val('ベトナム');
+    $('input[name="address"]').val('U1904 - CJ Building');
+    $('input[id="customRadioInline1"]').prop('checked', true);
+    $('input[id="customRadio1"]').prop('checked', true);
+
+    setTimeout(function(){
+        // $('#btn_confirm').click();
+    },2000);
+}

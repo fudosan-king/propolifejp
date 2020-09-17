@@ -51,17 +51,24 @@ $(function($) {
         $($('.steps li')[0]).removeClass('active');
         $($('.steps li')[1]).addClass('active');
 
+        var tmpName = '';
         $.each(data, function(key, value) {
             var name = value.name;
             var val = value.value;
-            if (name.indexOf('[]') != -1) 
+            if (name.indexOf('[]') == -1) 
             {
                 $("#"+name).html(val);
             }
             else 
             {
                 name = name.replace('[]','');
-                $("#"+name).append(val + '<br>');
+                if(tmpName != name){
+                    $("#"+name).html(val + '<br>');
+                    tmpName = name;
+                }else{
+                    $("#"+name).append(val + '<br>');
+                }
+                
             }
         })
     }

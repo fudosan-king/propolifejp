@@ -13,8 +13,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-9 mx-auto">
-                            <h1><a href="index.php"><img src="<?=IMAGE_PATH;?>/1x/logo.svg" alt="logrenove_logo" class="img-fluid" width="257"></a></h1>
-                            <form action="index.php" class="frm_login">
+                            <h1><a href="<?php echo home_url(); ?>"><img src="<?=IMAGE_PATH;?>/1x/logo.svg" alt="logrenove_logo" class="img-fluid" width="257"></a></h1>
+                            <form action="<?php echo home_url(); ?>" class="frm_login">
                                 <h2>新規登録</h2>
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="メールアドレス">

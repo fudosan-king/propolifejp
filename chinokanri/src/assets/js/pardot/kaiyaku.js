@@ -140,7 +140,10 @@
                 var ERROR_NO_INPUT = '値を入力してください';
                 var isValid = true
                 errorElements = [];
-                    [].slice.call(formControlElements).forEach(function (formElement) {
+                [].slice.call(formControlElements).forEach(function (formElement) {
+                    formElement.value = sanitizeHtml(formElement.value)
+                });
+                [].slice.call(formControlElements).forEach(function (formElement) {
                     formElement.classList.remove('is-invalid')
                     if (!formElement.classList.contains('required')) {
                         return

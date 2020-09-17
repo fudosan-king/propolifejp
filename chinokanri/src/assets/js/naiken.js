@@ -22,6 +22,9 @@ $(function($) {
     });
 
     $('#btnAgree').on('click',function(e){
+        $.each($('input, textarea'), function(index, el) {
+            $(el).val(sanitizeHtml($(this).val()));
+        })
         var frm_data = $('form.frm_general').serializeArray();
         var isValid = check_valid(frm_data);
         if(isValid === false) {
@@ -57,13 +60,13 @@ $(function($) {
             var val = value.value;
             if (name.indexOf('[]') == -1) 
             {
-                $("#"+name).html(val);
+                $("#"+name).text(val);
             }
             else 
             {
                 name = name.replace('[]','');
                 if(tmpName != name){
-                    $("#"+name).html(val + '<br>');
+                    $("#"+name).text(val + '<br>');
                     tmpName = name;
                 }else{
                     $("#"+name).append(val + '<br>');

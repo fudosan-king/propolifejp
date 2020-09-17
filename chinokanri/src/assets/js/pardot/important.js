@@ -83,10 +83,10 @@ $(function($) {
             $("html, body").animate({ scrollTop: $($('.data-confirm')).offset().top}, 0);
 
 
-            $('.cfr.company_name').html($('input[name="company_name"]').val());
-            $('.cfr.branch_name').html($('input[name="branch_name"]').val());
+            $('.cfr.company_name').text($('input[name="company_name"]').val());
+            $('.cfr.branch_name').text($('input[name="branch_name"]').val());
 
-            $('.cfr.building_address').html('〒' +
+            $('.cfr.building_address').text('〒' +
                 $('input[name="building_post"]').val().substr(0, 3) + '-' + $('input[name="building_post"]').val().substr(3) +
                 $('select[name="building_pref"]').val() +
                 $('input[name="building_city"]').val() +
@@ -109,20 +109,20 @@ $(function($) {
                     license_value = $('input[name="governor_other_text"]').val();
                 }break;
             }
-            $('.cfr.building_license').html(license_value);
+            $('.cfr.building_license').text(license_value);
             $('input[name="license"]').val(license_value);
 
-            $('.cfr.representative_office').html($('input[name="representative_office"]').val());
-            $('.cfr.name').html($('input[name="last_name"]').val() + $('input[name="first_name"]').val());
-            $('.cfr.phone').html($('input[name="phone"]').val());
-            $('.cfr.fax').html($('input[name="fax"]').val());
-            $('.cfr.email').html($('input[name="email"]').val());
+            $('.cfr.representative_office').text($('input[name="representative_office"]').val());
+            $('.cfr.name').text($('input[name="last_name"]').val() + $('input[name="first_name"]').val());
+            $('.cfr.phone').text($('input[name="phone"]').val());
+            $('.cfr.fax').text($('input[name="fax"]').val());
+            $('.cfr.email').text($('input[name="email"]').val());
 
             
             
-            $('.cfr.kondo_name').html($('input[name="kondo_name"]').val());
+            $('.cfr.kondo_name').text($('input[name="kondo_name"]').val());
 
-            $('.cfr.kondo_address').html('〒' +
+            $('.cfr.kondo_address').text('〒' +
                 $('input[name="kondo_post"]').val().substr(0, 3) + '-' + $('input[name="kondo_post"]').val().substr(3) +
                 $('select[name="kondo_pref"]').val() +
                 $('input[name="kondo_city"]').val() +
@@ -131,7 +131,7 @@ $(function($) {
                 $('input[name="kondo_building_room"]').val()
             );
 
-            $('.cfr.unit_name_sale').html($('input[name="unit_name_sale"]').val());
+            $('.cfr.unit_name_sale').text($('input[name="unit_name_sale"]').val());
             
             // // /* 0:調査報告書, 1:管理規約（コピー） */
             var request_document = '';
@@ -148,7 +148,7 @@ $(function($) {
                     }break;
                 }
             });
-            $('.cfr.request_document').html(request_document);
+            $('.cfr.request_document').text(request_document);
             $('input[name="request_document"]').val(request_document.replace('<br>', '\n'));
             // ・重要事項調査報告書　　　1戸/11000（税込）
             // 管理規約（コピー）　3300円（税込）
@@ -164,11 +164,11 @@ $(function($) {
                     purpose_of_use_value = $('input[name="purpose_of_use[]"]:checked').val();
                 }break;
             }
-            $('.cfr.purpose_of_use').html(purpose_of_use_value);
+            $('.cfr.purpose_of_use').text(purpose_of_use_value);
             $('input[name="purpose_of_use"]').val(purpose_of_use_value)
 
             // // /* 0:メールデータ受取り（PDF）, 1:郵送, 2:メールでのデータ受取及び郵送  */
-            $('.cfr.receive_method').html($('input[name="receive_method[]"]:checked').val());
+            $('.cfr.receive_method').text($('input[name="receive_method[]"]:checked').val());
             $('input[name="receive_method"]').val($('input[name="receive_method[]"]:checked').val());
 
         }else{
@@ -197,6 +197,10 @@ $(function($) {
 
         var invalidBoxShadow = '0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)';
         var invalidBorderColor = '#ff0000';
+
+        $.each($('input, textarea'), function(index, el) {
+            $(el).val(sanitizeHtml($(this).val()));
+        })
 
         var elemsChkRequire = [];
         $.each($('form[name="pardotForm"]').find('[data-require="true"]'), function(index, el) {
@@ -322,6 +326,7 @@ var demo = function(){
     $('input[name="last_name"]').val('Nguyen');
     $('input[name="first_name"]').val('Khanh');
     $('input[name="phone"]').val('+84-97-422-6440');
+    $('input[name="phone_confirm"]').val('+84-97-422-6440');
     $('input[name="fax"]').val('03-6897-8561');
     $('input[name="fax_confirm"]').val('03-6897-8561');
     $('input[name="email"]').val('khanh@propolife.co.jp');

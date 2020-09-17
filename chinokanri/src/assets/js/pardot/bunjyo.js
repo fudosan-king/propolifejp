@@ -1,4 +1,17 @@
 (function() {
+    if (!String.prototype.includes) {
+        String.prototype.includes = function(search, start) {
+            if (typeof start !== 'number') {
+                start = 0;
+            }
+
+            if (start + search.length > this.length) {
+                return false;
+            } else {
+                return this.indexOf(search, start) !== -1;
+            }
+        };
+    }
     if (typeof Array.prototype.forEach != 'function') {
         Array.prototype.forEach = function (callback) {
             for (var i = 0; i < this.length; i++) {
@@ -171,7 +184,7 @@
             {
                 [].slice.call(formControlElements).forEach(function (element) {
                     var elementName = element.getAttribute('name')
-                    if (elementName.indexOf('[]') === false) {
+                    if (elementName.includes('[]') === false) {
                         if (document.getElementById(elementName)) {
                             document.getElementById(elementName).innerHTML = ''
                         }
@@ -186,7 +199,7 @@
                     [].slice.call(formControlElements).forEach(function (element) {
                     var elementName = element.getAttribute('name')
                     var elementVal = element.value
-                    if (elementName.indexOf('[]') === false) {
+                    if (elementName.includes('[]') === false) {
                         if (document.getElementById(elementName)) {
                             document.getElementById(elementName).innerHTML = elementVal
                         }

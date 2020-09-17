@@ -1,5 +1,14 @@
 (function() {
-    'use strict';
+    if (typeof Array.prototype.forEach != 'function') {
+        Array.prototype.forEach = function (callback) {
+            for (var i = 0; i < this.length; i++) {
+                callback.apply(this, [this[i], i, this]);
+            }
+        };
+    }
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+    }
     var queryString = function(){
         var search = window.location.search;
         var res = {};
@@ -12,7 +21,7 @@
         return res;
     }
     if (typeof queryString()['finish'] !== 'undefined' && queryString()['finish'] == '1'){
-        Array.from(document.querySelectorAll('.steps li')).forEach((step) => {
+        [].slice.call(document.querySelectorAll('.steps li')).forEach(function (step) {
             if (step.id == 'finish') {
                 step.classList.add('active')
            } else {
@@ -41,15 +50,15 @@
             btnBack.addEventListener('click', function() {
                 var hideConfirmForm = new Promise(function(resolve, reject) {
                     hide(confirmForm)
-                    resolve()   
-                }).then(() => {
+                    resolve()
+                }).then(function () {
                     show(inputForm)
-                }).then(() => {
+                }).then(function () {
                     goInputStep()
                     if (errorElements.length > 0) {
                         showFormErrors()
                     } else {
-                        document.getElementById('form-title').scrollIntoView({behavior: "smooth"}) 
+                        document.getElementById('form-title').scrollIntoView({behavior: "smooth"})
                     }
                 })
             }, false)
@@ -63,10 +72,10 @@
                         updataDataConfirmForm()
                         hide(inputForm)
                         resolve()
-                    }).then(() => {
+                    }).then(function () {
                         show(confirmForm)
                         goConfirmStep()
-                        document.getElementById('form-title').scrollIntoView({behavior: "smooth"}) 
+                        document.getElementById('form-title').scrollIntoView({behavior: "smooth"})
                     })
                 }
             }, false)
@@ -75,7 +84,7 @@
                 validateForm()
                 if (errorElements.length <= 0) {
                     btnSubmit.disabled = true
-                    form.submit()  
+                    form.submit()
                 }
             }, false)
 
@@ -95,8 +104,8 @@
             function validateForm() {
                 var ERROR_NO_INPUT = '値を入力してください';
                 var isValid = true
-                errorElements = []
-                Array.from(formControlElements).forEach((formElement) => {
+                errorElements = [];
+                    [].slice.call(formControlElements).forEach(function (formElement) {
                     formElement.classList.remove('is-invalid')
                     if (!formElement.classList.contains('required')) {
                         return
@@ -109,7 +118,7 @@
                             isValid = false
                             errorElements.push(formElement)
                         }
-                      
+
                     } else if (elementType == "email"){
                         var email_re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                         if (!email_re.test(elementVal)) {
@@ -122,9 +131,9 @@
                             errorElements.push(formElement)
                         }
                     }
-                })
+                });
 
-                Array.from(errorElements).forEach((element)=> {
+                    [].slice.call(errorElements).forEach(function (element) {
                     element.classList.add('is-invalid')
                 })
                 return isValid
@@ -149,7 +158,7 @@
 
                 var errorElements = form.querySelectorAll('.is-invalid');
                 if (errorElements.length > 0) {
-                    errorElements[0].scrollIntoView({behavior: 'smooth', block: 'center'}) 
+                    errorElements[0].scrollIntoView({behavior: 'smooth', block: 'center'})
                 }
             }
 
@@ -160,7 +169,7 @@
 
             function updataDataConfirmForm()
             {
-                Array.from(formControlElements).forEach((element) => {
+                [].slice.call(formControlElements).forEach(function (element) {
                     var elementName = element.getAttribute('name')
                     if (elementName.indexOf('[]') === false) {
                         if (document.getElementById(elementName)) {
@@ -169,12 +178,12 @@
                     } else {
                         elementName = elementName.replace('[]','');
                         if (document.getElementById(elementName)) {
-                            document.getElementById(elementName).innerHTML = ''; 
+                            document.getElementById(elementName).innerHTML = '';
                         }
                     }
-                })
-                
-                Array.from(formControlElements).forEach((element) => {
+                });
+
+                    [].slice.call(formControlElements).forEach(function (element) {
                     var elementName = element.getAttribute('name')
                     var elementVal = element.value
                     if (elementName.indexOf('[]') === false) {
@@ -185,16 +194,16 @@
                         elementName = elementName.replace('[]','');
                         if (element.checked) {
                             if (document.getElementById(elementName)) {
-                                document.getElementById(elementName).innerHTML += (elementVal + '<br>'); 
+                                document.getElementById(elementName).innerHTML += (elementVal + '<br>');
                             }
                         }
                     }
                 })
             }
 
-            function changeStep(new_step) 
+            function changeStep(new_step)
             {
-                Array.from(steps).forEach((step) => {
+                [].slice.call(steps).forEach(function (step){
                     if (step.id == new_step) {
                         step.classList.add('active')
                    } else {
@@ -208,8 +217,8 @@
 })();
 function demo()
 {
-    var formControlElements = document.querySelectorAll('input, textarea, select')
-    Array.from(formControlElements).forEach((element) => {
+    var formControlElements = document.querySelectorAll('input, textarea, select');
+        [].slice.call(formControlElements).forEach(function (element){
         if (element.tagName == "SELECT") {
             element.selectedIndex = 1
         } else if (['radio', 'checkbox'].indexOf(element.getAttribute('type')) > -1) {

@@ -39,6 +39,7 @@
             if($this->uri->uri_string() == 'contact/bunjyo'):
                 ?>
                 <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+                <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
                 <script src="<?=base_url();?>assets/js/pardot/bunjyo.js"></script>       
                 <?php
             endif;

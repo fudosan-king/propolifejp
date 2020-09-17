@@ -32,7 +32,7 @@
                                     </a>
                                   </p>
                                   <p class="d-none d-md-block">
-                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?smp_id=16&amp;hi_id=2&amp;lang=ja-JP">
+                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?hi_id=1&lang=ja-JP&smp_id=38&to_pos=1">
                                          <img src="'.IMAGES_PATH.'/1x/stay_hotel.jpg" alt="" class="img-fluid">
                                     </a>
                                   </p>';

@@ -75,6 +75,81 @@ $(function($) {
         $.scrollTo(target, 800, { offset: - 93 });
     });
 
+    $('#ibtnGoSubmit').click(function(event){
+        if(invalidCheck()){
+            $('.frm_contact').submit();
+        }
+    });
+
+    // VALIDATE FORM DATA
+    function callErrorMessage(elem, message){
+        var htmlError = '<section class="error-box"><div class="icon"></div><p>' + message + '</p></section>';
+        var formGroup = $(elem).closest('.form-group');
+        formGroup.append(htmlError);
+    }
+    function removeErrorMessage(elem){
+        var formGroup = $(elem).closest('.form-group');
+        formGroup.find('.error-box').remove();
+    }
+    function setErrorClass(elem){
+        $(elem).addClass('error-required');
+    }
+    function removeErrorClass(elem){
+        $(elem).removeClass('error-required');
+    }
+
+    function invalidCheck() {
+
+        var ERROR_NO_INPUT = '値を入力してください';
+        var isValid = true
+        errorElements = []
+        var isValid = true;
+
+        $('.error-text').css('display', 'none');
+
+        // EMPTY CHECK
+        var requireInputText = $('input[type="text"][required]');
+        $.each(requireInputText, function(i, e){
+          if(typeof($(e).val()) === 'undefined' || $(e).val() == "" || $(e).val() == "null"){
+                setErrorClass(e);
+                // callErrorMessage($(e), ERROR_NO_INPUT);
+                isValid = false;
+            }
+        });
+
+     
+        if ($("#customCheck1").is(':checked')){
+            setErrorClass($('#customCheck1'));
+            //callErrorMessage($('#customCheck1'), ERROR_NO_INPUT);
+            isValid = false;
+        }else{
+            removeErrorClass($('#customCheck1'));
+            //removeErrorMessage($('#customCheck1'));
+        }
+
+        // EMAIL CHECK
+        // if(typeof($('input[name="your_email"]').val()) === 'undefined' || $('input[name="your_email"]').val() == "" || $('input[name="your_email"]').val() == "null"){
+        //     setErrorClass($('input[name="your_email"]'));
+        //     callErrorMessage($('input[name="your_email"]'), ERROR_NO_INPUT);
+        //     isValid = false;
+        // }else{
+        //     removeErrorClass($('input[name="your_email"]'));
+        //     removeErrorMessage($('input[name="your_email"]'));
+
+        //     var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        //     if (!emailPattern.test($('input[name="your_email"]').val())) {
+        //         setErrorClass($('input[name="your_email"]'));
+        //         callErrorMessage($('input[name="your_email"]'), ERROR_MAIL_FORMAT);
+        //         isValid = false;
+        //     } else {
+        //         removeErrorClass($('input[name="your_email"]'));
+        //         removeErrorMessage($('input[name="your_email"]'));
+        //     }
+        // }
+
+        return isValid;
+    }
+
 
 });
 

@@ -14,22 +14,22 @@
                     <div class="col-12">
                         <h2 class="title">CONTACT</h2>
                         <p class="sub_title">お問い合わせ</p>
-                        <form action="https://pi.pardot.com/formHandler/read/id/3966" method="POST" role="form" class="frm_contact">
+                        <form action="http://go.pardot.com/l/185822/2020-08-31/qh1njf" method="POST" role="form" class="frm_contact">
                             <div class="form-group">
                                 <label for="">お名前　[必須]</label>
-                                <input type="text" name="your_name" class="form-control">
+                                <input type="text" name="your_name" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="">貴社名（※法人様の場合）</label>
-                                <input type="text" name="your_company"  class="form-control">
+                                <input type="text" name="your_company"  class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="">メールアドレス [必須]</label>
-                                <input type="email" name="your_email" class="form-control">
+                                <input type="email" name="your_email" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="">お問い合わせ内容　[必須]</label>
-                                <input type="text" name="free_detail_contact" class="form-control">
+                                <input type="text" name="free_detail_contact" class="form-control" required>
                             </div>
                             <p class="text-center">弊社の個人情報に関する取り扱いについては <a href="https://www.propolife.co.jp/privacypolicy/" class="blue font-weight-bold">プライバシーポリシー</a> をご一読ください。<br>
                             上記事項をご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
@@ -38,7 +38,7 @@
                                 <label class="custom-control-label font-weight-normal" for="customCheck1">同意する</label>
                             </div>
                             <div class="form-group mt-5 text-center">
-                                <button type="submit" class="btn btnSend">上記に同意して送信</button>
+                                <button type="submit" id="ibtnGoSubmit" class="btn btnSend">上記に同意して送信</button>
                             </div>
                         </form>
                     </div>

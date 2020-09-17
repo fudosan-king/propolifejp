@@ -297,6 +297,8 @@ ul.list_news li .date {
 }
 .error-required {border-color: red;}
 
+span.error-required {color: red; margin-left: 10px;}
+
 .box_work h4 {
   font-size: 1.125em;
   font-weight: 700;

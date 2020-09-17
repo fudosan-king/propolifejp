@@ -6,22 +6,22 @@
             <div class="collapse navbar-collapse justify-content-md-center">
                 <ul class="navbar-nav navbar-mobile mr-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/#section_news">NEWS</a>
+                        <a class="nav-link active" href="#section_news">NEWS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#section_mission">MISSION</a>
+                        <a class="nav-link " href="#section_mission">MISSION</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#section_aboutus">ABOUT US</a>
+                        <a class="nav-link" href="#section_aboutus">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#section_works">WORKS</a>
+                        <a class="nav-link" href="#section_works">WORKS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#section_recruit">RECRUIT</a>
+                        <a class="nav-link" href="#section_recruit">RECRUIT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#section_company">COMPANY</a>
+                        <a class="nav-link" href="#section_company">COMPANY</a>
                     </li>
                     <li class="nav-item">
                         <a target="_blank" class="nav-link" href="contact">CONTACT</a>

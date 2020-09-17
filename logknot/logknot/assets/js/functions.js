@@ -54,18 +54,18 @@ $(function($) {
       
     // } );
 
-    $('.navbar-nav .nav-link[href^="#"]').on('click', function (e) {
-        e.preventDefault();
+    // $('.navbar-nav .nav-link[href^="#"]').on('click', function (e) {
+    //     e.preventDefault();
       
-        var targetEle = this.hash;
-        var $targetEle = $(targetEle);
+    //     var targetEle = this.hash;
+    //     var $targetEle = $(targetEle);
       
-        $('html, body').stop().animate({
-            'scrollTop': $targetEle.offset().top
-        }, 800, 'swing', function () {
-            window.location.hash = targetEle;
-        });
-    });
+    //     $('html, body').stop().animate({
+    //         'scrollTop': $targetEle.offset().top
+    //     }, 800, 'swing', function () {
+    //         window.location.hash = targetEle;
+    //     });
+    // });
 
     $('.navbar-nav .nav-link[href^="#"]').on('click', function(e) {
         e.preventDefault();
@@ -75,7 +75,8 @@ $(function($) {
         $.scrollTo(target, 800, { offset: - 93 });
     });
 
-    $('#ibtnGoSubmit').click(function(event){
+    $('#ibtnGoSubmit').on('click', function(e) {
+        e.preventDefault();
         if(invalidCheck()){
             $('.frm_contact').submit();
         }
@@ -83,9 +84,16 @@ $(function($) {
 
     // VALIDATE FORM DATA
     function callErrorMessage(elem, message){
-        var htmlError = '<section class="error-box"><div class="icon"></div><p>' + message + '</p></section>';
-        var formGroup = $(elem).closest('.form-group');
-        formGroup.append(htmlError);
+        var htmlError = '<span class="error-required">' + message + '</span>';
+        var formGroup = $(elem).parent('.form-group');
+
+        if(formGroup.find('.error-required').length)
+        {
+           formGroup.find('.error-required').html(message);
+
+        }else{
+            formGroup.find('label').append(htmlError);
+        } 
     }
     function removeErrorMessage(elem){
         var formGroup = $(elem).closest('.form-group');
@@ -100,52 +108,23 @@ $(function($) {
 
     function invalidCheck() {
 
-        var ERROR_NO_INPUT = '値を入力してください';
-        var isValid = true
-        errorElements = []
+        var ERROR_NO_INPUT = 'この項目は必須です。';
         var isValid = true;
+        errorElements = []
+        
 
         $('.error-text').css('display', 'none');
 
         // EMPTY CHECK
-        var requireInputText = $('input[type="text"][required]');
+        var requireInputText = $('input.required');
+        console.log(requireInputText);
         $.each(requireInputText, function(i, e){
           if(typeof($(e).val()) === 'undefined' || $(e).val() == "" || $(e).val() == "null"){
-                setErrorClass(e);
-                // callErrorMessage($(e), ERROR_NO_INPUT);
+                //setErrorClass(e);
+                callErrorMessage($(e), ERROR_NO_INPUT);
                 isValid = false;
             }
         });
-
-     
-        if ($("#customCheck1").is(':checked')){
-            setErrorClass($('#customCheck1'));
-            //callErrorMessage($('#customCheck1'), ERROR_NO_INPUT);
-            isValid = false;
-        }else{
-            removeErrorClass($('#customCheck1'));
-            //removeErrorMessage($('#customCheck1'));
-        }
-
-        // EMAIL CHECK
-        // if(typeof($('input[name="your_email"]').val()) === 'undefined' || $('input[name="your_email"]').val() == "" || $('input[name="your_email"]').val() == "null"){
-        //     setErrorClass($('input[name="your_email"]'));
-        //     callErrorMessage($('input[name="your_email"]'), ERROR_NO_INPUT);
-        //     isValid = false;
-        // }else{
-        //     removeErrorClass($('input[name="your_email"]'));
-        //     removeErrorMessage($('input[name="your_email"]'));
-
-        //     var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-        //     if (!emailPattern.test($('input[name="your_email"]').val())) {
-        //         setErrorClass($('input[name="your_email"]'));
-        //         callErrorMessage($('input[name="your_email"]'), ERROR_MAIL_FORMAT);
-        //         isValid = false;
-        //     } else {
-        //         removeErrorClass($('input[name="your_email"]'));
-        //         removeErrorMessage($('input[name="your_email"]'));
-        //     }
-        // }
 
         return isValid;
     }

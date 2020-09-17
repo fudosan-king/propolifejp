@@ -54,7 +54,7 @@ $(function($) {
         $.each(data, function(key, value) {
             var name = value.name;
             var val = value.value;
-            if (name.indexOf('[]') === false) 
+            if (name.indexOf('[]') != -1) 
             {
                 $("#"+name).html(val);
             }
@@ -94,7 +94,7 @@ $(function($) {
                 val = checked.length > 0 ? checked.val() : '';
             }
             else if(['checkbox'].indexOf(type_elem) != -1) {
-                key = key.indexOf('[]') ? key.replace('[]','') : key;
+                key = key.indexOf('[]') != -1 ? key.replace('[]','') : key;
                 val = $('input[name^='+key+']:checked').map(function() {
                     return $(this).val();
                 });

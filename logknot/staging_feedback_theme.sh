@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -rlpcDvz staging.php.intra.fudosan-king.jp:/var/www/logknot/wp-content/themes/logknot/ ./logknot/
+rsync -rlpcDvz dev.php.intra.fudosan-king.jp:~/www/logknot/wp-content/themes/logknot/ ./logknot/

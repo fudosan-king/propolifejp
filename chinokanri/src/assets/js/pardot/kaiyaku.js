@@ -279,11 +279,15 @@
             }
 
             mapCheckboxToHidden('contract_detached_house_ckb', 'contract_detached_house', 'あり', 'なし')
+            mapCheckboxToHidden('contract_detached_house_ckb_2', 'contract_detached_house_2', 'あり', 'なし')
             mapCheckboxToHidden('contractor_same_resident_ckb', 'contractor_same_resident', 'あり', 'なし')
             mapCheckboxToHidden('delegate_all_settlement_ckb', 'delegate_all_settlement', 'あり', 'なし')
             var contractDetachedHouseCkb = document.querySelector('input[type="checkbox"][name="contract_detached_house_ckb"]')
+            var contractDetachedHouseCkb_2 = document.querySelector('input[type="checkbox"][name="contract_detached_house_ckb_2"]')
             var contractEstateNameInp = document.querySelector('input[name="contract_estate_name"]')
+            var relocation_estate_name = document.querySelector('input[name="relocation_estate_name"]')
             var contractEstateRoomNumberInp = document.querySelector('input[name="contract_estate_room_number"]')
+            var relocation_room_number = document.querySelector('input[name="relocation_room_number"]')
             if (contractDetachedHouseCkb.checked) {
                 contractEstateNameInp.style.backgroundColor = "#e9ecef";
                 contractEstateNameInp.disabled = true
@@ -311,6 +315,37 @@
                     contractEstateRoomNumberInp.style.backgroundColor = "#fff"
                     contractEstateRoomNumberInp.removeAttribute('disabled')
                     contractEstateRoomNumberInp.classList.add('required')
+                }
+            })
+
+
+            if (contractDetachedHouseCkb_2.checked) {
+                relocation_estate_name.style.backgroundColor = "#e9ecef";
+                relocation_estate_name.disabled = true
+                relocation_estate_name.value = ''
+                relocation_estate_name.classList.remove('required')
+                relocation_room_number.style.backgroundColor = "#e9ecef"
+                relocation_room_number.disabled = true
+                relocation_room_number.value = ''
+                relocation_room_number.classList.remove('required')
+            }
+            contractDetachedHouseCkb_2.addEventListener("change", function () {
+                if (contractDetachedHouseCkb_2.checked) {
+                    relocation_estate_name.style.backgroundColor = "#e9ecef";
+                    relocation_estate_name.disabled = true
+                    relocation_estate_name.value = ''
+                    contractEstateNameInp.classList.remove('required')
+                    relocation_room_number.style.backgroundColor = "#e9ecef"
+                    relocation_room_number.disabled = true
+                    relocation_room_number.value = ''
+                    relocation_room_number.classList.remove('required')
+                } else {
+                    relocation_estate_name.style.backgroundColor = "#fff";
+                    relocation_estate_name.removeAttribute('disabled')
+                    relocation_estate_name.classList.add('required')
+                    relocation_room_number.style.backgroundColor = "#fff"
+                    relocation_room_number.removeAttribute('disabled')
+                    relocation_room_number.classList.add('required')
                 }
             })
         }, false)

@@ -34,14 +34,35 @@ $(function($) {
             case '国土交通大臣': {
                 $('input[data-group="building_license_governor"]').attr('readonly', true);
                 $('input[data-group="building_license_other"]').attr('readonly', true);
+
+                $('input[data-group="building_license_minister"]').attr('data-require', true);
+                $('input[data-group="building_license_governor"]').attr('data-require', false);
+                $('input[data-group="building_license_other"]').attr('data-require', false);
+
+                $('input[data-group="building_license_governor"]').removeClass('validate-error');
+                $('input[data-group="building_license_other"]').removeClass('validate-error');
             }break;
             case '知事': {
                 $('input[data-group="building_license_minister"]').attr('readonly', true);
                 $('input[data-group="building_license_other"]').attr('readonly', true);
+
+                $('input[data-group="building_license_governor"]').attr('data-require', true);
+                $('input[data-group="building_license_minister"]').attr('data-require', false);
+                $('input[data-group="building_license_other"]').attr('data-require', false);
+
+                $('input[data-group="building_license_minister"]').removeClass('validate-error');
+                $('input[data-group="building_license_other"]').removeClass('validate-error');
             }break;
             case 'その他': {
                 $('input[data-group="building_license_minister"]').attr('readonly', true);
                 $('input[data-group="building_license_governor"]').attr('readonly', true);
+
+                $('input[data-group="building_license_other"]').attr('data-require', true);
+                $('input[data-group="building_license_minister"]').attr('data-require', false);
+                $('input[data-group="building_license_governor"]').attr('data-require', false);
+
+                $('input[data-group="building_license_minister"]').removeClass('validate-error');
+                $('input[data-group="building_license_governor"]').removeClass('validate-error');
             }break;
         }
     });

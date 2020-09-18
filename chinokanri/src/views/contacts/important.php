@@ -71,7 +71,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="text" name="building_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
+                                                            <input type="text" name="building_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" maxlength="7" onkeyup="AjaxZip3.zip2addr(this, '', 'building_pref','building_city','building_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('building_post', '', 'building_pref','building_city','building_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -180,13 +180,13 @@
                                                             <p class="mb-0 text-right mr-1">（</p>
                                                         </div>
                                                         <div class="col-2 col-lg-2 align-self-center">
-                                                            <input type="text" name="governor_opt1_first" class="form-control" data-group="building_license_minister">
+                                                            <input type="text" name="governor_opt1_first" class="form-control" data-group="building_license_minister" data-require="true">
                                                         </div>
                                                         <div class="col-1 col-lg-1 align-self-center">
                                                             <p class="mb-0 mx-2 text-left">）第</p>
                                                         </div>
                                                         <div class="col-6 col-lg-6 align-self-center">
-                                                            <input type="text" name="governor_opt1_number" class="form-control" data-group="building_license_minister">
+                                                            <input type="text" name="governor_opt1_number" class="form-control" data-group="building_license_minister" data-require="true">
                                                         </div>
                                                         <div class="col-2 col-lg-2 align-self-center">
                                                             <p class="mb-0 text-left ml-1">号</p>
@@ -200,7 +200,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-9 col-lg-9 align-self-center" >
-                                                            <input type="text" name="governor_custom_text" class="form-control" readonly="" data-group="building_license_governor">
+                                                            <input type="text" name="governor_custom_text" class="form-control" readonly="" data-group="building_license_governor" data-require="false">
                                                         </div>
                                                         <div class="col-2 col-lg-2 align-self-center">
                                                             <p class="mb-0 ml-2">知事</p>
@@ -211,13 +211,13 @@
                                                             <p class="mb-0 text-right mr-1">（</p>
                                                         </div>
                                                         <div class="col-2 col-lg-2 align-self-center">
-                                                            <input type="text" name="governor_opt2_first" class="form-control" data-group="building_license_governor" readonly="">
+                                                            <input type="text" name="governor_opt2_first" class="form-control" data-group="building_license_governor" readonly="" data-require="false">
                                                         </div>
                                                         <div class="col-1 col-lg-1 align-self-center">
                                                             <p class="mb-0 mx-2 text-left">）第</p>
                                                         </div>
                                                         <div class="col-6 col-lg-6 align-self-center">
-                                                            <input type="text" name="governor_opt2_number" class="form-control" data-group="building_license_governor" readonly="">
+                                                            <input type="text" name="governor_opt2_number" class="form-control" data-group="building_license_governor" readonly="" data-require="false">
                                                         </div>
                                                         <div class="col-2 col-lg-2 align-self-center">
                                                             <p class="mb-0 text-left ml-1">号</p>
@@ -227,7 +227,7 @@
                                                         <input type="radio" id="building_license_other" name="building_license[]" class="custom-control-input" value="その他">
                                                         <label class="custom-control-label" for="building_license_other">その他</label>
                                                     </div>
-                                                    <input type="text" class="form-control"  name="governor_other_text"  data-group="building_license_other" placeholder="例：設計事務所、宅建業者でない区分所有者" readonly="">
+                                                    <input type="text" class="form-control"  name="governor_other_text"  data-group="building_license_other" placeholder="例：設計事務所、宅建業者でない区分所有者" readonly="" data-require="false">
                                                 </div>
                                             </div>
                                         </div>
@@ -373,7 +373,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="text" name="kondo_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
+                                                            <input type="text" name="kondo_post" class="form-control numbersOnly" data-require="true" placeholder="例：1234567" maxlength="7" onkeyup="AjaxZip3.zip2addr(this, '', 'kondo_pref','kondo_city','kondo_aza');">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0" onclick="AjaxZip3.zip2addr('kondo_post', '', 'kondo_pref','kondo_city','kondo_aza');"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>

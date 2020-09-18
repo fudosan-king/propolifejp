@@ -269,7 +269,7 @@
                     [].slice.call(formControlElements).forEach(function (element) {
                     var elementName = element.getAttribute('name')
                     if ($(element).is(':radio')) {
-                        var elementVal = $('input[name="wish_attend"]:checked').val();
+                        var elementVal = $('input[name="'+elementName+'"]:checked').val();
                     } else {
                         var elementVal = element.value
                     }

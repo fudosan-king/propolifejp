@@ -325,7 +325,7 @@
                               </tr>
                               <tr>
                                  <td>
-                                    <label>備考</label>
+                                    <label>お問い合わせ内容</label>
                                  </td>
                                  <td id="note" class="confirm-text"></td>
                               </tr>

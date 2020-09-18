@@ -66,10 +66,10 @@ $(function($) {
             {
                 name = name.replace('[]','');
                 if(tmpName != name){
-                    $("#"+name).text(val + '<br>');
+                    $("#"+name).html(escapeHtml(val) + '<br>');
                     tmpName = name;
                 }else{
-                    $("#"+name).append(val + '<br>');
+                    $("#"+name).append(escapeHtml(val) + '<br>');
                 }
                 
             }
@@ -186,6 +186,15 @@ $(function($) {
         if(invalid.length > 0) return false;
         else return true;
     }
+
+    function escapeHtml(text) {
+      return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+    }
 })
 
 var demo = function(){
@@ -199,8 +208,8 @@ var demo = function(){
     AjaxZip3.zip2addr('postal-code','','pref','city')
     
     
-    $('input[name="phone-number"]').val('+84-97-422-6440');
-    $('input[name="mobile-number"]').val('03-6897-8561');
+    $('input[name="phone-number"]').val('84974226440');
+    $('input[name="mobile-number"]').val('0368978561');
     $('input[name="email"]').val('khiemtq@propolife.co.jp');
     
     $('input[name="kanji_familyname"]').val('プロポライフ');

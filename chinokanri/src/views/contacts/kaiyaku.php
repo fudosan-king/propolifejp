@@ -244,7 +244,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="">ご契約者様</label>
+                                            <label for="">ご契約者様の氏名（ふりがな）</label>
                                             <div class="row">
                                                 <div class="col-12 col-lg-1">
                                                     <span class="label_sub mt-2">必須</span>
@@ -896,7 +896,7 @@
                                         </td>       
                                     </tr>
                                     <tr>
-                                        <td>ご契約者様</td>
+                                        <td>ご契約者様の氏名（ふりがな）</td>
                                         <td>
                                             <div id="contractor_furigana_family_name"></div>
                                             <div id="contractor_furigana_name"></div>
@@ -1024,10 +1024,6 @@
                                     <tr>
                                         <td>都道府県</td>
                                         <td id="emergency_refectures"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>市区町村</td>
-                                        <td id="emergency_city"></td>
                                     </tr>
                                     <tr>
                                         <td>丁目・番地</td>

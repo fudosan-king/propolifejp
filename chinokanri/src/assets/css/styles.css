@@ -650,3 +650,8 @@ footer .back-to-top {
     left: 20px;
     right: 0;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.nav-tabs .nav-link span {
+		height: 45px
+	}
+}

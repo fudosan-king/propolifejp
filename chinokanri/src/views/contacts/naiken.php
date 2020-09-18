@@ -297,7 +297,7 @@
                               </tr>
                               <tr>
                                  <td>
-                                    <label>市区町村・番地</label>
+                                    <label>住所</label>
                                  </td>
                                  <td>
                                      <span id="postal-code" class="confirm-text"></span> <br>

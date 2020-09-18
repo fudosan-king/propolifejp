@@ -29,6 +29,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <script src="<?=base_url();?>assets/js/script.js"></script>
         <script src="<?=base_url();?>assets/js/sanitize.min.js"></script>
+        <script src="<?=base_url();?>assets/js/wanakana.min.js"></script>
         <?php 
             if($this->uri->uri_string() == 'contact'):
                 ?>

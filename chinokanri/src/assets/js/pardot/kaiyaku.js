@@ -144,6 +144,7 @@
                     formElement.value = sanitizeHtml(formElement.value)
                 });
                 [].slice.call(formControlElements).forEach(function (formElement) {
+                    console.log(formElement.name);
                     formElement.classList.remove('is-invalid')
                     if (!formElement.classList.contains('required')) {
                         return
@@ -169,6 +170,22 @@
                             errorElements.push(formElement)
                         }
                     }
+
+                    if(elementName == 'bank_account_number'){
+                        var reg = new RegExp('^[0-9]+$');
+                        if(!reg.test(elementVal)){
+                            isValid = false
+                            errorElements.push(formElement)
+                        }
+                    }
+
+                    if(elementName == 'bank_account_holder'){
+                        if(!wanakana.isKatakana(elementVal)){
+                            isValid = false
+                            errorElements.push(formElement)
+                        }
+                    }
+
                 });
 
                         [].slice.call(errorElements).forEach(function (element) {

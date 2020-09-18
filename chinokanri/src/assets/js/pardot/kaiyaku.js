@@ -351,7 +351,7 @@
                     relocation_estate_name.style.backgroundColor = "#e9ecef";
                     relocation_estate_name.disabled = true
                     relocation_estate_name.value = ''
-                    contractEstateNameInp.classList.remove('required')
+                    relocation_estate_name.classList.remove('required')
                     relocation_room_number.style.backgroundColor = "#e9ecef"
                     relocation_room_number.disabled = true
                     relocation_room_number.value = ''

@@ -411,6 +411,11 @@
                                                     <span class="label_sub">必須</span>
                                                 </div>
                                                 <div class="col-10 col-lg-11 align-self-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="hidden" class="custom-control-input" name="contract_detached_house_2" value="なし">
+                                                        <input type="checkbox" class="custom-control-input" name="contract_detached_house_ckb_2" id="contract_detached_house_ckb_2">
+                                                        <label class="custom-control-label" for="contract_detached_house_ckb_2">一戸建てを契約されているお客様はこちらにチェックを入れて下さい。物件名と号室は省略頂けます。</label>
+                                                    </div>
                                                     <input type="text" class="form-control required" name="relocation_estate_name">
                                                 </div>
                                             </div>

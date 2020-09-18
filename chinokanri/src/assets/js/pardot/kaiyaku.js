@@ -144,7 +144,6 @@
                     formElement.value = sanitizeHtml(formElement.value)
                 });
                 [].slice.call(formControlElements).forEach(function (formElement) {
-                    console.log(formElement.name);
                     formElement.classList.remove('is-invalid')
                     if (!formElement.classList.contains('required')) {
                         return
@@ -181,6 +180,22 @@
 
                     if(elementName == 'bank_account_holder'){
                         if(!wanakana.isKatakana(elementVal)){
+                            isValid = false
+                            errorElements.push(formElement)
+                        }
+                    }
+
+                    if(elementName == 'contractor_phone_number'){
+                        var phone_reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+                        if(!phone_reg.test(elementVal)){
+                            isValid = false
+                            errorElements.push(formElement)
+                        }
+                    }
+
+                    if(elementName == 'contractor_furigana_family_name' || elementName == 'contractor_furigana_name' || 
+                        elementName == 'resident_furigana_family_name' || elementName == 'resident_furigana_name'){
+                        if(!wanakana.isHiragana(elementVal)){
                             isValid = false
                             errorElements.push(formElement)
                         }
@@ -351,7 +366,7 @@
                     relocation_estate_name.style.backgroundColor = "#e9ecef";
                     relocation_estate_name.disabled = true
                     relocation_estate_name.value = ''
-                    contractEstateNameInp.classList.remove('required')
+                    relocation_estate_name.classList.remove('required')
                     relocation_room_number.style.backgroundColor = "#e9ecef"
                     relocation_room_number.disabled = true
                     relocation_room_number.value = ''

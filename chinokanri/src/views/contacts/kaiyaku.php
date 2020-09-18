@@ -866,7 +866,7 @@
                                         <td id="contract_estate_pref"></td>
                                     </tr>
                                     <tr>
-                                        <td>市区町村</td>
+                                        <td>お問い合わせ内容</td>
                                         <td id="contract_estate_city"></td>
                                     </tr>
                                     <tr>
@@ -1025,10 +1025,12 @@
                                         <td>都道府県</td>
                                         <td id="emergency_refectures"></td>
                                     </tr>
+
                                     <tr>
                                         <td>市区町村</td>
                                         <td id="emergency_city"></td>
                                     </tr>
+
                                     <tr>
                                         <td>丁目・番地</td>
                                         <td id="emergency_location_number"></td>

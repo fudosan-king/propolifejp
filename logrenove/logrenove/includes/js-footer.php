@@ -16,7 +16,9 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
             <script src="<?=SCRIPT_PATH;?>/form.js" async></script>
-
+            <?php if($post_type == 'events'): ?>
+                <script src="<?=SCRIPT_PATH;?>/form/events.js" async></script>
+            <?php endif; ?>
         <?php
     endif;
 ?>

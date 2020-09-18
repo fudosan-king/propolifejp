@@ -69,6 +69,7 @@ a:hover {text-decoration:none;color:#0180CD;-webkit-transition:all .3s linear;-m
 	text-decoration: underline;
 }
 .red {color: #EB5757 !important;}
+.datepickerCancel[readonly] {background-color: #fff;}
 
 /* header */
 

@@ -308,6 +308,25 @@ $(function($) {
             }
         });
 
+        var elemsChkFone = [];
+        $.each($('form[name="pardotForm"]').find('[data-fone="true"]'), function(index, el) {
+            elemsChkFone.push(el);
+        });
+
+        $.each(elemsChkFone, function(key, elem) {
+            var phone_reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+
+            if($(elem).val()!=""){
+                if(!phone_reg.test($(elem).val())){
+                    isValidate = false;
+                    $(elem).addClass('validate-error');
+                }else{
+                    $(elem).removeClass('validate-error');
+                }
+            }
+            
+        });
+
         return isValidate;
     }
 

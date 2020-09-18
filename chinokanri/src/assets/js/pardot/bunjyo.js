@@ -229,7 +229,11 @@
 
                     [].slice.call(formControlElements).forEach(function (element) {
                     var elementName = element.getAttribute('name')
-                    var elementVal = element.value
+                    if ($(element).is(':radio')) {
+                        var elementVal = $('input[name="'+elementName+'"]:checked').val();
+                    } else {
+                        var elementVal = element.value
+                    }
                     if (elementName.includes('[]') === false) {
                         if (document.getElementById(elementName)) {
                             document.getElementById(elementName).innerHTML = elementVal

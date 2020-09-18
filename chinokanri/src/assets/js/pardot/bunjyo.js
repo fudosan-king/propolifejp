@@ -114,6 +114,24 @@
                 })
             })
 
+            function check_value_type(value, type) {
+                var pattern = '';
+                switch(type) {
+                  case 'hiragana':
+                    pattern = /^([ぁ-ん]+)$/;
+                    break;
+                  case 'katakana':
+                    pattern = /^([ァ-ヶー]+)$/;
+                    break;
+                  case 'number':
+                    pattern = /^([0-9]+)$/;
+                    break;
+                  default:
+                    pattern = /^([a-zA-Z0-9]+)$/;
+                }
+                return pattern.test(value);
+            }
+
             function validateForm() {
                 var ERROR_NO_INPUT = '値を入力してください';
                 var isValid = true
@@ -138,6 +156,16 @@
                     } else if (elementType == "email"){
                         var email_re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                         if (!email_re.test(elementVal)) {
+                            isValid = false
+                            errorElements.push(formElement)
+                        }
+                    } else if (elementName == "kata_familyname" || elementName == "kata_name" ){
+                        if (!check_value_type(elementVal, 'katakana')) {
+                            isValid = false
+                            errorElements.push(formElement)
+                        }
+                    } else if (elementName == "phone_number"){
+                        if (!check_value_type(elementVal, 'number')) {
                             isValid = false
                             errorElements.push(formElement)
                         }

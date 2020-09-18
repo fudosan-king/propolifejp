@@ -93,6 +93,24 @@ $(function($) {
       return emailPattern.test(email);
     }
 
+    function check_value_type(value, type) {
+        var pattern = '';
+        switch(type) {
+          case 'hiragana':
+            pattern = /^([ぁ-ん]+)$/;
+            break;
+          case 'katakana':
+            pattern = /^([ァ-ヶー]+)$/;
+            break;
+          case 'number':
+            pattern = /^([0-9]+)$/;
+            break;
+          default:
+            pattern = /^([a-zA-Z0-9]+)$/;
+        }
+        return pattern.test(value);
+    }
+
     function check_valid() {
         var ERROR_NO_INPUT = '値を入力してください';
         var data = $('.frm-input input.required,select.required').map(function() {
@@ -128,6 +146,28 @@ $(function($) {
                 }
                 else if(name == 'email') {
                     if(!isEmail(val))
+                    {
+                        element.addClass('is-invalid');
+                        invalid.push(name);
+                    }
+                    else {
+                        element.removeClass('is-invalid');
+                        element.addClass('is-valid');
+                    }
+                }
+                else if(name == 'kata_familyname' || name == 'kata_name') {
+                    if(!check_value_type(val, 'katakana'))
+                    {
+                        element.addClass('is-invalid');
+                        invalid.push(name);
+                    }
+                    else {
+                        element.removeClass('is-invalid');
+                        element.addClass('is-valid');
+                    }
+                }
+                else if(name == 'phone-number' || name == 'mobile-number') {
+                    if(!check_value_type(val, 'number'))
                     {
                         element.addClass('is-invalid');
                         invalid.push(name);

@@ -538,10 +538,10 @@
 
     // Get recommend posts from current post
 
-    function get_recommend_posts()
+    function get_recommend_posts($post_type='post')
     {
         global $detect;
-        $articles_ids = get_recommend_articles_ids();
+        $articles_ids = get_recommend_articles_ids($post_type);
         $posts = array();
         foreach ($articles_ids as $key => $articles_id) {
             $obj = new stdClass();
@@ -550,7 +550,7 @@
             $_size = $detect->isMobile() ? 'medium' : 'thumbnail' ;
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
             $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
-            $obj->firstCat = get_the_category($articles_id)[0]->name;
+            $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
             $posts[] = $obj;
         }
 
@@ -583,7 +583,7 @@
         // else return false;
     }
 
-    function get_recommend_articles_ids()
+    function get_recommend_articles_ids($post_type='post')
     {
         $articles_ids = [];
         if(is_single())
@@ -615,23 +615,23 @@
 
         $numberposts = 5-$count_articles_ids;
 
-        $recent_posts = get_recent_posts($numberposts, $articles_ids);
-
         if($count_articles_ids<5)
         {
+            $recent_posts = get_recent_posts($numberposts, $articles_ids, $post_type);
             $articles_ids = is_array($articles_ids)?array_merge($articles_ids, array_column($recent_posts, 'ID')):array_column($recent_posts, 'ID');
         }
         // var_dump($articles_ids);die;
         return $articles_ids;
     }
 
-    function get_recent_posts($numberposts=5, $exclude=array())
+    function get_recent_posts($numberposts=5, $exclude=array(), $post_type='post')
     {
         $exclude[] = get_queried_object_id();
         $recent_args = array(
             'numberposts' => $numberposts,
             'post_status' => 'publish',
-            'exclude'     => $exclude
+            'exclude'     => $exclude,
+            'post_type'   => $post_type,
         );
 
         $recent_posts = wp_get_recent_posts( $recent_args, $output = 'ARRAY_A' );
@@ -689,6 +689,145 @@
         return $result;
     }
 
+    # Events
+
+    function get_event_datetime()
+    {
+        $post_id = get_queried_object_id();
+        $event_datetime = get_field('event_datetime', get_the_ID());
+        $result = array();
+        $result['date'] = (!empty($event_datetime['date']) && count($event_datetime['date'])) ? $event_datetime['date'] : '';
+        $hour = (!empty($event_datetime['hour']) && count($event_datetime['hour'])) ? $event_datetime['hour'] : '09';
+        $minute = (!empty($event_datetime['minute']) && count($event_datetime['minute'])) ? $event_datetime['minute'] : '00';
+        $result['time'] = $hour.':'.$minute;
+        return $result;
+    }
+
+    if( !function_exists('get_query_pagination_events') ) {
+    
+        function get_query_pagination_events($args = array(), $max_num_pages = ''){
+            global $wp_query;
+            global $paged;
+
+            $total = !empty($max_num_pages)?$max_num_pages:$wp_query->max_num_pages;
+            $cpaged = max(1, $paged);
+
+            $paginationHTML = ' <nav><ul class="pagination justify-content-center">';
+            $pagination = paginate_links( 
+                array(
+                    'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                    'total'        => $total,
+                    'current'      => $cpaged,
+                    'format'       => '?paged=%#%',
+                    'show_all'     => false,
+                    'type'         => 'array',
+                    'end_size'     => 2,
+                    'mid_size'     => 1,
+                    'prev_next'    => true,
+                    'prev_text'    => sprintf( '<i></i> %1$s', __( '◀︎', 'text-domain' ) ),
+                    'next_text'    => sprintf( '%1$s <i></i>', __( '▶︎', 'text-domain' ) ),
+                    'add_args'     => $args,
+                    'add_fragment' => '',
+                ) 
+            );
+
+            if (!empty($pagination)):
+                foreach($pagination as $page){
+                    $paginationHTML .='<li class="page-item">'.$page.'</li>';
+                }
+            endif;
+
+            return $paginationHTML .= ' </ul></nav>';
+        } 
+    }
+
+    function get_events($args = array()) {
+        $current_term = get_queried_object();
+        $d = isset($_GET['d'])?$_GET['d']:'';
+        $args_post = array(
+                    'post_type' => 'events',
+                    'posts_per_page' => 6,
+                    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
+                    'orderby'   => 'meta_value',
+                    'order' => 'ASC',
+                    'meta_query' => array(
+                        array(
+                            'key' => 'event_datetime_date',
+                            )
+                    )
+                );
+        if(is_term($current_term->term_id) != NULL)
+        {
+            $args_term = array('tax_query' => array(
+                array(
+                'taxonomy' => get_query_var('taxonomy'),
+                'field' => 'term_id',
+                'terms' => $current_term->term_id,
+                 )
+              ));
+            $args_post = array_merge($args_post, $args_term);
+        }
+        if($d!='')
+        {
+            $posts_by_date_of_week = get_posts_by_date_of_week($d);
+            if(!count($posts_by_date_of_week)) return false;
+            $args_post_by_date_of_week = array('post__in' => $posts_by_date_of_week);
+            $args_post = array_merge($args_post, $args_post_by_date_of_week);
+        }
+        $args_post = count($args)?array_merge($args_post, $args):$args_post;
+        $event_posts = new WP_Query( $args_post );
+        return $event_posts;
+    }
+ 
+    function get_posts_by_date_of_week($d) {
+        $current_term = get_queried_object();
+        $args_post = array(
+            'numberposts'      => -1,
+            'post_type'        => 'events',
+        );
+        if(is_term($current_term->term_id) != NULL)
+        {
+            $args_term = array('tax_query' => array(
+                array(
+                'taxonomy' => get_query_var('taxonomy'),
+                'field' => 'term_id',
+                'terms' => $current_term->term_id,
+                 )
+              ));
+            $args_post = array_merge($args_post, $args_term);
+        }
+        $events = get_posts($args_post);
+        switch ($d) {
+            case 'sat':
+            case 'sun':
+                $post_ids = array();
+                foreach ($events as $key => $post) {
+                    $post_id = $post->ID;
+                    $event_date = get_post_meta($post_id, 'event_datetime_date', true);
+                    $date_of_week = $event_date ? strtolower(date('D', strtotime($event_date))) :'';
+                    if($date_of_week==$d) {
+                        $post_ids[] = $post_id;
+                    }
+                }
+                break;
+            case 'week':
+                $post_ids = array();
+                foreach ($events as $key => $post) {
+                    $post_id = $post->ID;
+                    $event_date = get_post_meta($post_id, 'event_datetime_date', true);
+                    $date_of_week = $event_date ? strtolower(date('D', strtotime($event_date))) :'';
+                    if(!in_array($date_of_week, ['sat', 'sun'])) {
+                        $post_ids[] = $post_id;
+                    }
+                }
+                break;
+            default:
+                $post_ids = array();
+                break;
+        }
+        return $post_ids;
+    }
+
     # Customize social login
 
     // function get_social_login_button()
@@ -725,4 +864,5 @@
     //     }
     //     return $buttons;
     // }
+
 ?>

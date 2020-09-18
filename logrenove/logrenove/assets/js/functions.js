@@ -196,3 +196,24 @@ $(function() {
     });
     
 });
+
+jQuery(function($) {
+  $('a.goto_frm_services[href*="#"]:not([href="#"], .btn_eventdetail)').click(function() {
+      var target = $(this.hash);
+        $('html,body').stop().animate({
+          scrollTop: target.offset().top - 100
+        }, 1100);   
+  });    
+    if (location.hash){
+    var id = $(location.hash);
+    }
+    $(window).on('load', function() {
+      if (location.hash){
+        $('html,body').animate({scrollTop: id.offset().top -100}, 600)
+      };
+     });
+
+    $('.datepicker').datepicker({
+        language: 'ja',
+    });
+});

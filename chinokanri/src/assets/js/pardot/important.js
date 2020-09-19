@@ -219,6 +219,8 @@ $(function($) {
         var invalidBoxShadow = '0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)';
         var invalidBorderColor = '#ff0000';
 
+        var regexNumber = new RegExp('^[0-9]+$');
+
         $.each($('input, textarea'), function(index, el) {
             $(el).val(sanitizeHtml($(this).val()));
         })
@@ -271,7 +273,16 @@ $(function($) {
                             isValidate = false;
                             $(elem).addClass('validate-error');
                         }else{
-                            $(elem).removeClass('validate-error');
+                            if($(elem).attr('name') == 'governor_opt1_first' || $(elem).attr('name') == 'governor_opt1_number' ||
+                                $(elem).attr('name') == 'governor_opt2_first' || $(elem).attr('name') == 'governor_opt2_number'){
+                                if(!regexNumber.test($(elem).val())){
+                                    isValidate = false;
+                                    $(elem).addClass('validate-error');
+                                }else{
+                                     $(elem).removeClass('validate-error');
+                                }
+                            }else
+                                $(elem).removeClass('validate-error');
                         }
                     }break;
                     case 'number': {
@@ -293,6 +304,40 @@ $(function($) {
 
         });
 
+        var elemsChkPhone = [];
+        $.each($('form[name="pardotForm"]').find('[data-phone="true"]'), function(index, el) {
+            elemsChkPhone.push(el);
+        });
+
+        $.each(elemsChkPhone, function(key, elem) {
+            if(!regexNumber.test($(elem).val())){
+                isValidate = false;
+                $(elem).addClass('validate-error');
+            }else{
+                $(elem).removeClass('validate-error');
+            }
+            
+        });
+
+        var elemsChkFax = [];
+        $.each($('form[name="pardotForm"]').find('[data-fax="true"]'), function(index, el) {
+            elemsChkFax.push(el);
+        });
+
+        $.each(elemsChkFax, function(key, elem) {
+            if($(elem).val() != ""){
+                if(!regexNumber.test($(elem).val())){
+                    isValidate = false;
+                    $(elem).addClass('validate-error');
+                }else{
+                    $(elem).removeClass('validate-error');
+                }
+            }else{
+                 $(elem).removeClass('validate-error');
+            }
+            
+        });
+
         var elemsChkConfirm = [];
         $.each($('form[name="pardotForm"]').find('[data-confirm="true"]'), function(index, el) {
             elemsChkConfirm.push(el);
@@ -306,25 +351,6 @@ $(function($) {
             }else{
                 $(elem).removeClass('validate-error');
             }
-        });
-
-        var elemsChkFone = [];
-        $.each($('form[name="pardotForm"]').find('[data-fone="true"]'), function(index, el) {
-            elemsChkFone.push(el);
-        });
-
-        $.each(elemsChkFone, function(key, elem) {
-            var phone_reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
-
-            if($(elem).val()!=""){
-                if(!phone_reg.test($(elem).val())){
-                    isValidate = false;
-                    $(elem).addClass('validate-error');
-                }else{
-                    $(elem).removeClass('validate-error');
-                }
-            }
-            
         });
 
         return isValidate;
@@ -365,10 +391,10 @@ var demo = function(){
 
     $('input[name="last_name"]').val('Nguyen');
     $('input[name="first_name"]').val('Khanh');
-    $('input[name="phone"]').val('+84-97-422-6440');
-    $('input[name="phone_confirm"]').val('+84-97-422-6440');
-    $('input[name="fax"]').val('03-6897-8561');
-    $('input[name="fax_confirm"]').val('03-6897-8561');
+    $('input[name="phone"]').val('84974226440');
+    $('input[name="phone_confirm"]').val('84974226440');
+    $('input[name="fax"]').val('0368978561');
+    $('input[name="fax_confirm"]').val('0368978561');
     $('input[name="email"]').val('khanh@propolife.co.jp');
     $('input[name="email_confirm"]').val('khanh@propolife.co.jp');
     

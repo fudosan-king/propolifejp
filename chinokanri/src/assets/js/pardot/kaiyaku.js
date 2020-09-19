@@ -186,7 +186,7 @@
                     }
 
                     if(elementName == 'contractor_phone_number' || elementName == 'emergency_phone_number'){
-                        var phone_reg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+                        var phone_reg = new RegExp('^[0-9]+$');
                         if(!phone_reg.test(elementVal)){
                             isValid = false
                             errorElements.push(formElement)

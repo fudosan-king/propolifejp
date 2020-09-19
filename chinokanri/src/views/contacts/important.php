@@ -281,7 +281,7 @@
                                                     <span class="label_sub">必須</span>
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
-                                                    <input type="text" name="phone" class="form-control" placeholder="例：0312341234" data-require="true" data-fone="true">
+                                                    <input type="text" name="phone" class="form-control" placeholder="例：0312341234" data-require="true" data-phone="true">
                                                 </div>
                                             </div>
                                         </div>
@@ -292,7 +292,7 @@
                                                     <span class="label_sub">必須</span>
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
-                                                    <input type="text" name="phone_confirm" class="form-control" placeholder="例：0312341234" data-require="true"  data-fone="true" data-confirm="true" data-confirm-name="phone">
+                                                    <input type="text" name="phone_confirm" class="form-control" placeholder="例：0312341234" data-require="true"  data-phone="true" data-confirm="true" data-confirm-name="phone">
                                                 </div>
                                             </div>
                                         </div>
@@ -303,7 +303,7 @@
 
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
-                                                    <input type="text" name="fax" class="form-control" placeholder="例：0312341234" data-fone="true">
+                                                    <input type="text" name="fax" class="form-control" placeholder="例：0312341234" data-fax="true">
                                                 </div>
                                             </div>
                                         </div>
@@ -314,7 +314,7 @@
 
                                                 </div>
                                                 <div class="col-10 col-lg-6 align-self-center">
-                                                    <input type="text" name="fax_confirm" class="form-control" placeholder="例：0312341234" data-confirm="true" data-confirm-name="fax"  data-fone="true">
+                                                    <input type="text" name="fax_confirm" class="form-control" placeholder="例：0312341234" data-confirm="true" data-confirm-name="fax"  data-fax="true">
                                                 </div>
                                             </div>
                                         </div>

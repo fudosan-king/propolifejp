@@ -47,13 +47,13 @@ $(function($) {
 
             $('.data-confirm').fadeIn();
 
-            $('.cfr_name').html($('input[name="name"]').val());
-            $('.cfr_email').html($('input[name="email"]').val());
-            $('.cfr_date_time_1').html($('input[name="datepicker1"]').val() + ' ' + $('select[name="time1"] option:selected').val());
-            $('.cfr_date_time_2').html($('input[name="datepicker2"]').val() + ' ' + $('select[name="time2"] option:selected').val());
-            $('.cfr_date_time_3').html($('input[name="datepicker3"]').val() + ' ' + $('select[name="time3"] option:selected').val());
-            $('.cfr_request_online').html($('input[name="request_online[]"]:checked').val());
-            $('.cfr_inquiry_content').html($('textarea[name="inquiry_content"]').val());
+            $('.cfr_name').text($('input[name="name"]').val());
+            $('.cfr_email').text($('input[name="email"]').val());
+            $('.cfr_date_time_1').text($('input[name="datepicker1"]').val() + ' ' + $('select[name="time1"] option:selected').val());
+            $('.cfr_date_time_2').text($('input[name="datepicker2"]').val() + ' ' + $('select[name="time2"] option:selected').val());
+            $('.cfr_date_time_3').text($('input[name="datepicker3"]').val() + ' ' + $('select[name="time3"] option:selected').val());
+            $('.cfr_request_online').text($('input[name="request_online[]"]:checked').val());
+            $('.cfr_inquiry_content').text($('textarea[name="inquiry_content"]').val());
         }else{
             $("html, body").animate({ scrollTop: $($('#pardotForm .validate-error')[0]).offset().top - 50 }, 300);
         }
@@ -126,6 +126,10 @@ $(function($) {
         var invalidBoxShadow = '0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)';
         var invalidBorderColor = '#ff0000';
 
+        $.each($('input, textarea'), function(index, el) {
+            $(el).val(sanitizeHtml($(this).val()));
+        })
+
         var elemsChk = [];
         $.each($('form[name="pardotForm"]').find('[data-require="true"]'), function(index, el) {
             elemsChk.push(el);
@@ -182,26 +186,24 @@ $(function($) {
         return isValidate;
     }
 
-    demo = (name='') => {
-        switch(name){
-            case 'luu': {
-                $('input[name="name"]').val('Luu Nguyen');
-                $('input[name="email"]').val('luund@propolife.co.jp');
-                $('input[name="datepicker1"]').datepicker('setDate', meetday.format('YYYY/MM/DD'));
-                $('select[name="time1"]').val('11:00');
-                $('input[name="request_online[]"]')[1].checked = true;
-                $('textarea[name="inquiry_content"]').val('Propolife VN Dev Team testing form. LUU NGUYEN');
-            }break;
-            case '': {
-                $('input[name="name"]').val('Khanh Nguyen');
-                $('input[name="email"]').val('khanh@propolife.co.jp');
-                $('input[name="datepicker1"]').datepicker('setDate', meetday.format('YYYY/MM/DD'));
-                $('select[name="time1"]').val('11:00');
-                $('input[name="request_online[]"]')[1].checked = true;
-                $('textarea[name="inquiry_content"]').val('Propolife VN Dev Team testing form. KHANH NGUYEN');
-            }break;
-        }
-        
-    }
-
 });
+
+today = new Date();
+var date = new Date();
+var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+var meetday = moment();
+
+switch(today.getDay()){
+    case 2: meetday = moment(today).add(2, 'day'); break;
+    case 3: meetday = moment(today).add(1, 'day'); break;
+    default: meetday = moment(today).add(1, 'day'); break;
+}
+
+function demo() {
+    $('input[name="name"]').val('Khanh Nguyen');
+    $('input[name="email"]').val('khanh@propolife.co.jp');
+    $('input[name="datepicker1"]').datepicker('setDate', meetday.format('YYYY/MM/DD'));
+    $('select[name="time1"]').val('11:00');
+    $('input[name="request_online[]"]')[1].checked = true;
+    $('textarea[name="inquiry_content"]').val('Propolife VN Dev Team testing form. KHANH NGUYEN');
+}

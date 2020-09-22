@@ -742,6 +742,7 @@
     }
 
     function get_events($args = array()) {
+        $date_diff_events = date_diff_events();
         $current_term = get_queried_object();
         $d = isset($_GET['d'])?$_GET['d']:'';
         $args_post = array(
@@ -749,10 +750,14 @@
                     'posts_per_page' => 6,
                     'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
                     'orderby'   => 'meta_value',
+                    'meta_key' => 'event_datetime_date',
                     'order' => 'ASC',
                     'meta_query' => array(
                         array(
                             'key' => 'event_datetime_date',
+                            'value' => $date_diff_events,
+                            'compare' => '>',
+                            'type' => 'DATE',
                             )
                     )
                 );
@@ -826,6 +831,20 @@
                 break;
         }
         return $post_ids;
+    }
+
+    function date_diff_events($date = '', $days = '-2 days') 
+    {
+        // $timezone = get_option('timezone_string');
+        // $date_2 = !empty($date_2) ? date('Y-m-d H:i', strtotime($date_2)) : date('Y-m-d H:i');
+        // $date_1 = date('Y-m-d H:i', strtotime($date_1));
+        // $origin = date_create($date_1, timezone_open($timezone));
+        // $target = date_create($date_2, timezone_open($timezone));
+        // $interval = date_diff($origin, $target);
+        // return $interval->format('%R%a');
+        $date = !empty($date)?date('Y-m-d', strtotime($date)):date('Y-m-d');
+        $date = date('Ymd', strtotime($date . $days));
+        return $date;
     }
 
     # Customize social login

@@ -12,6 +12,13 @@
     define('SERVICE_IMAGE_PATH', SERVICE_PATH . '/images');
     define('SERVICE_FAVICON_PATH', SERVICE_PATH . '/favicon');
 
+    define('EVENTS_PATH', ASSETS_PATH . '/events');
+    define('EVENTS_STYLESHEET_PATH', EVENTS_PATH . '/css');
+    define('EVENTS_SCRIPT_PATH', EVENTS_PATH . '/js');
+    define('EVENTS_IMAGE_PATH', EVENTS_PATH . '/images');
+    define('EVENTS_FAVICON_PATH', EVENTS_PATH . '/favicon');
+
+
     $header_posts = null;
     $header_ids = null;
 

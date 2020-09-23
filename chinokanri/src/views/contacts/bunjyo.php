@@ -36,7 +36,7 @@
         <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
             <div class="success-submit">
                 <div class="mb-4"><b>お問い合わせが完了しました</b></div>
-                <div class="mb-3">お問い合わせ有り難う御座います。<br>
+                <div class="mb-3">お問い合わせありがとうございます。<br>
                 後ほど、担当者からご連絡させて頂きます。<br>
                 今しばらくありがとうございますお待ちくださいませ。</div>
                 <p>※休業日などでご返信が遅くなる場合がございます。<br>

@@ -59,6 +59,49 @@ $(function($) {
         }
     });
 
+
+    $('#btn_confirm_service2').click(function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        if(checkValidate()){
+            $('.data-input').hide();
+
+            $("html, body").animate({scrollTop: $('.box_bookonline').offset().top-30}, 300);
+
+            $('.data-confirm').fadeIn();
+
+            $('.cfr_name').html($('input[name="name"]').val());
+            $('.cfr_email').html($('input[name="email"]').val());
+            $('.cfr_date').html($('input[name="date"]').val());
+            $('.cfr_time').html($('input[name="time"]').val());
+            $('.cfr_request_online').html($('input[name="request_online[]"]:checked').val());
+            $('.cfr_inquiry_content').html($('textarea[name="inquiry_content"]').val());
+        }else{
+            $("html, body").animate({ scrollTop: $($('#pardotForm .validate-error')[0]).offset().top - 50 }, 300);
+        }
+    });
+
+    $('#btn_confirm_service3').click(function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        if(checkValidate()){
+            $('.data-input').hide();
+
+            $("html, body").animate({scrollTop: $('.box_bookonline').offset().top-30}, 300);
+
+            $('.data-confirm').fadeIn();
+
+            $('.cfr_name').html($('input[name="name"]').val());
+            $('.cfr_email').html($('input[name="email"]').val());
+            $('.cfr_date').html($('input[name="date"]').val());
+            $('.cfr_time').html($('input[name="time"]').val());
+            $('.cfr_request_online').html($('input[name="request_online[]"]:checked').val());
+            $('.cfr_inquiry_content').html($('textarea[name="inquiry_content"]').val());
+        }else{
+            $("html, body").animate({ scrollTop: $($('#pardotForm .validate-error')[0]).offset().top - 50 }, 300);
+        }
+    });
+
     $('#btn_return').click(function(event) {
         /* Act on the event */
         event.preventDefault();

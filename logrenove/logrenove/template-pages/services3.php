@@ -136,119 +136,197 @@
                         <p class="subtitle">
                             ご自宅で「住まいのご相談」しませんか？
                         </p>
-                        <form action="https://go.pardot.com/l/185822/2020-09-07/qhgzp9" method="POST" class="frm_box_bookonline">
-
-                            <div class="form-group">
-                                <div class="row mb-3">
-                                    <div class="col-12 col-lg-12">
-                                        <label for="">オンライン接客希望日時 <span class="label_sub d-inline-block d-lg-none">必須</span></label>
-                                    </div>
-                                    <div class="col-4 col-lg-1 align-self-center">
-                                        <span class="label_sub mb-2 mb-lg-0 d-lg-block d-none">必須</span>
-                                    </div>
-                                    <div class="col-12 col-lg-11 align-self-center">
-                                        <div class="row">
-                                            <div class="col-6 col-lg-6">
-                                                <div class="box_datetime mb-2 mb-lg-0">
-                                                    <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date">
-                                                    <i class="i_datetime"></i>
+                        <form action="https://go.pardot.com/l/185822/2020-09-07/qhgzp9" method="POST" class="frm_box_bookonline" name="pardotForm">
+                            <section class="data-input">
+                                <div class="form-group">
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-12">
+                                            <label for="">オンライン接客希望日時 <span class="label_sub d-inline-block d-lg-none">必須</span></label>
+                                        </div>
+                                        <div class="col-4 col-lg-1 align-self-center">
+                                            <span class="label_sub mb-2 mb-lg-0 d-lg-block d-none">必須</span>
+                                        </div>
+                                        <div class="col-12 col-lg-11 align-self-center">
+                                            <div class="row">
+                                                <div class="col-6 col-lg-6">
+                                                    <div class="box_datetime mb-2 mb-lg-0">
+                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date" data-require="true">
+                                                        <i class="i_datetime"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-lg-6">
+                                                    <select  id="time" class="form-control custom-select" name="time" data-require="true">
+                                                        <option value="" selected>時間を選択</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                        <option value="19:00">19:00</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-6 col-lg-6">
-                                                <select  id="time" class="form-control custom-select" name="time">
-                                                    <option value="" selected>時間を選択</option>
-                                                    <option value="10:00">10:00</option>
-                                                    <option value="11:00">11:00</option>
-                                                    <option value="12:00">12:00</option>
-                                                    <option value="13:00">13:00</option>
-                                                    <option value="14:00">14:00</option>
-                                                    <option value="15:00">15:00</option>
-                                                    <option value="16:00">16:00</option>
-                                                    <option value="17:00">17:00</option>
-                                                    <option value="18:00">18:00</option>
-                                                    <option value="19:00">19:00</option>
-                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-12">
+                                            <label for="">メールアドレス（半角英数字）<span class="label_sub d-inline-block d-lg-none">必須</span></label>
+                                        </div>
+                                        <div class="col-3 col-lg-1 align-self-center">
+                                            <span class="label_sub d-lg-block d-none">必須</span>
+                                        </div>
+                                        <div class="col-12 col-lg-11 align-self-center">
+                                            <input type="text" placeholder="例：xxxxxxx@logrenove.jp" class="form-control" name="email" data-require="true">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-12">
+                                            <label for="">お名前 <span class="label_sub d-inline-block d-lg-none">必須</span></label>
+                                        </div>
+                                        <div class="col-4 col-lg-1 align-self-center">
+                                            <span class="label_sub d-lg-block d-none">必須</span>
+                                        </div>
+                                        <div class="col-12 col-lg-11 align-self-center">
+                                            <input type="text" class="form-control" placeholder="例：山田太郎" name="name" data-require="true">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-12">
+                                            <label for="">オンラインツールのご希望 <span class="label_sub d-inline-block d-lg-none">必須</span></label>
+                                        </div>
+                                        <div class="col-12 col-lg-1">
+                                            <span class="label_sub d-lg-block d-none">必須</span>
+                                        </div>
+                                        <div class="col-12 col-lg-11">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="ordinarydeposit" name="request_online[]" class="custom-control-input" checked data-require="true">
+                                                <label class="custom-control-label" for="ordinarydeposit">Zoom</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="current_account" name="request_online[]" class="custom-control-input" data-require="true">
+                                                <label class="custom-control-label" for="current_account">Google meet</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
-                                        <label for="">メールアドレス（半角英数字）<span class="label_sub d-inline-block d-lg-none">必須</span></label>
-                                    </div>
-                                    <div class="col-3 col-lg-1 align-self-center">
-                                        <span class="label_sub d-lg-block d-none">必須</span>
-                                    </div>
-                                    <div class="col-12 col-lg-11 align-self-center">
-                                        <input type="text" placeholder="例：xxxxxxx@logrenove.jp" class="form-control" name="email">
-                                    </div>
+                                <div class="form-group">
+                                    <label class="fs_default" for="">お問い合わせ内容</label>
+                                    <textarea name="inquiry_content" id="" class="form-control" cols="30" rows="8" placeholder="ご質問やご希望があればご記入ください。"></textarea>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
-                                        <label for="">お名前 <span class="label_sub d-inline-block d-lg-none">必須</span></label>
-                                    </div>
-                                    <div class="col-4 col-lg-1 align-self-center">
-                                        <span class="label_sub d-lg-block d-none">必須</span>
-                                    </div>
-                                    <div class="col-12 col-lg-11 align-self-center">
-                                        <input type="text" class="form-control" placeholder="例：山田太郎" name="name">
-                                    </div>
-                                </div>
-                            </div>
+                                <div class="box_content_footer">
+                                    <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
+                                    個人情報の取扱に関しましては <a class="btn-link" href="#"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                    ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
-                                        <label for="">オンラインツールのご希望 <span class="label_sub d-inline-block d-lg-none">必須</span></label>
-                                    </div>
-                                    <div class="col-12 col-lg-1">
-                                        <span class="label_sub d-lg-block d-none">必須</span>
-                                    </div>
-                                    <div class="col-12 col-lg-11">
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="ordinarydeposit" name="request_online[]" class="custom-control-input" checked>
-                                            <label class="custom-control-label" for="ordinarydeposit">Zoom</label>
+                                    <div class="form-group text-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ck_agree" checked data-require="true">
+                                            <label class="custom-control-label" for="ck_agree">同意する</label>
                                         </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="current_account" name="request_online[]" class="custom-control-input">
-                                            <label class="custom-control-label" for="current_account">Google meet</label>
+
+                                        <button type="submit" id="btn_confirm_service3" class="btn btnAgree" >上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="data-confirm" style="display: none;">
+                            <div class="container">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3 align-self-center">
+                                            <label for="">必須</label>
+                                        </div>
+                                        <div class="col-12 col-lg-9 align-self-center">
+                                            <div class="cfr_date">df</div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="fs_default" for="">お問い合わせ内容</label>
-                                <textarea name="inquiry_content" id="" class="form-control" cols="30" rows="8" placeholder="ご質問やご希望があればご記入ください。"></textarea>
-                            </div>
-
-                            <div class="box_content_footer">
-                                <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                個人情報の取扱に関しましては <a class="btn-link" href="#"><b>プライバシーポリシー</b></a> をご覧ください。<br>
-                                ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
-
-                                <div class="form-group text-center">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="ck_agree" checked>
-                                        <label class="custom-control-label" for="ck_agree">同意する</label>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3 align-self-center">
+                                            <label for="">時間を選択</label>
+                                        </div>
+                                        <div class="col-12 col-lg-9 align-self-center">
+                                            <div class="cfr_time">df</div>
+                                        </div>
                                     </div>
+                                </div>
 
-                                    <button type="submit" class="btn btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3 align-self-center">
+                                            <label for="">メールアドレス</label>
+                                        </div>
+                                        <div class="col-12 col-lg-9 align-self-center">
+                                            <div class="cfr_email">df</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3 align-self-center">
+                                            <label for="">お名前</label>
+                                        </div>
+                                        <div class="col-12 col-lg-9 align-self-center">
+                                            <div class="cfr_name">fd</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3">
+                                            <label for="">オンラインツール</label>
+                                        </div>
+                                        <div class="col-12 col-lg-9">
+                                           <div class="cfr_request_online">df</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3">
+                                            <label for="">お問い合わせ内容</label>
+                                        </div>
+                                        <div class="col-12 col-lg-9">
+                                           <div class="cfr_inquiry_content">df</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <br><br>
+                                <div class="box_content_footer">
+                                    <div class="form-inline justify-content-center">
+                                        <button type="button" id="btn_return" class="btn btnAgree cfr">戻る <i class="i_rightwhite rotate"></i></button>
+                                        <button type="submit" id="btn_send" class="btn btnAgree cfr">送信する <i class="i_rightwhite"></i></button>
+                                    </div>
                                 </div>
                             </div>
-
+                        </section>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    
 
 </main>
 

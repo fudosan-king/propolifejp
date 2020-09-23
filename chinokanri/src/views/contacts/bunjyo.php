@@ -273,11 +273,11 @@
                                         </div>
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline3" name="contact_classification" class="custom-control-input required" value="当社管理分譲物件に住んでいる">
+                                                <input type="radio" id="customRadioInline3" name="contact_classification" class="custom-control-input required" value="当社管理マンションに住んでいる">
                                                 <label class="custom-control-label" for="customRadioInline3">当社管理分譲物件に住んでいる</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline4" name="contact_classification" class="custom-control-input required" value="当社管理分譲物件に住んでいない">
+                                                <input type="radio" id="customRadioInline4" name="contact_classification" class="custom-control-input required" value="当社管理マンションに住んでいない">
                                                 <label class="custom-control-label" for="customRadioInline4">当社管理分譲物件に住んでいない</label>
                                             </div>
                                         </div>
@@ -321,7 +321,7 @@
 
                                 <div class="form-group">
                                     <label for="">お問い合わせ内容</label>
-                                    <textarea name="contact_content" id="" class="form-control" cols="30" rows="8" placeholder="ご質問やご希望があればご記入ください。"></textarea>
+                                    <textarea name="contact_content" id="" class="form-control" cols="30" rows="8" placeholder="お問合せ事項やご意見・ご要望等はこちらにご記入ください"></textarea>
                                 </div>               
                                 <div class="box_content_footer">
                                     <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>

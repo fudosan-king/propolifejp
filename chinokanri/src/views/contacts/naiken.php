@@ -246,7 +246,7 @@
                            </div>
                            <div class="form-group">
                               <label for="">お問い合わせ内容</label>
-                              <textarea name="note" id="" class="form-control" cols="30" rows="7" placeholder="ご質問やご希望があればご記入ください。"></textarea>
+                              <textarea name="note" id="" class="form-control" cols="30" rows="7" placeholder="お問合せ事項やご意見・ご要望等はこちらにご記入ください"></textarea>
                            </div>
                            <div class="box_content_footer">
                               <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>

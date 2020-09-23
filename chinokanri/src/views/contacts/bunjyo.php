@@ -37,10 +37,10 @@
             <div class="success-submit">
                 <div class="mb-4"><b>お問い合わせが完了しました</b></div>
                 <div class="mb-3">お問い合わせ有り難う御座います。<br>
-                後程、担当者からご連絡させて頂きます。<br>
-                今暫くお待ちくださいませ。</div>
+                後ほど、担当者からご連絡させて頂きます。<br>
+                今しばらくありがとうございますお待ちくださいませ。</div>
                 <p>※休業日などでご返信が遅くなる場合がございます。<br>
-                お急ぎの場合はお電話でご確認お願い致します。</p>
+                お急ぎの場合はお電話でご確認お願いいたします。</p>
             </div>
         <?php else: ?>
             <section class="section_content_body bg_bluelight">
@@ -274,11 +274,11 @@
                                         <div class="col-10 col-lg-11 align-self-center">
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="customRadioInline3" name="contact_classification" class="custom-control-input required" value="当社管理マンションに住んでいる">
-                                                <label class="custom-control-label" for="customRadioInline3">当社管理分譲物件に住んでいる</label>
+                                                <label class="custom-control-label" for="customRadioInline3">当社管理マンションに住んでいる</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="customRadioInline4" name="contact_classification" class="custom-control-input required" value="当社管理マンションに住んでいない">
-                                                <label class="custom-control-label" for="customRadioInline4">当社管理分譲物件に住んでいない</label>
+                                                <label class="custom-control-label" for="customRadioInline4">当社管理マンションに住んでいない</label>
                                             </div>
                                         </div>
                                     </div>

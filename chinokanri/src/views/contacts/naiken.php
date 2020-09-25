@@ -32,7 +32,7 @@
                      <ul class="list">
                         <!-- <li>内容によってはお答えできない場合や、電子メール以外の方法でお答えさせていただく場合がございます。</li> -->
                         <li>当社営業時間外にいただいたご依頼は翌営業日以降に回答いたします。</li>
-                        <li>下記フォーム入力後にお手数ですが、<a href="tel:045-581-9556">045-581-9556</a>までお電話お願い致します。</li>
+                        <li>下記フォーム入力後にお手数ですが、<a href="tel:045-581-9556">045-581-9556</a>までお電話お願いいたします。</li>
                      </ul>
                   <?php endif; ?>
                </div>
@@ -42,8 +42,8 @@
       <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
          <div class="success-submit">
              <div class="mb-4"><b>お問い合わせが完了しました</b></div>
-             <div class="mb-3">お問い合わせ有り難う御座います。<br>
-             お手数ですが、<a href="tel:045-581-9556">045-581-9556</a>までお電話をお願い致します。
+             <div class="mb-3">お問い合わせありがとうございます。<br>
+             お手数ですが、<a href="tel:045-581-9556">045-581-9556</a>までお電話をお願いいたします。
          </div>
       <?php else: ?>
          <section class="section_content_body bg_bluelight">
@@ -246,7 +246,7 @@
                            </div>
                            <div class="form-group">
                               <label for="">お問い合わせ内容</label>
-                              <textarea name="note" id="" class="form-control" cols="30" rows="7" placeholder="ご質問やご希望があればご記入ください。"></textarea>
+                              <textarea name="note" id="" class="form-control" cols="30" rows="7" placeholder="お問合せ事項やご意見・ご要望等はこちらにご記入ください"></textarea>
                            </div>
                            <div class="box_content_footer">
                               <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>

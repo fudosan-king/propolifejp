@@ -42,11 +42,11 @@
       <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
          <div class="success-submit">
              <div class="mb-4"><b>お問い合わせが完了しました</b></div>
-             <div class="mb-3">お問い合わせ有り難う御座います。<br>
-            後程、担当者からご連絡させて頂きます。<br>
-            今暫くお待ちくださいませ。</div>
+             <div class="mb-3">お問い合わせありがとうございます。<br>
+             後ほど、担当者からご連絡させて頂きます。<br>
+             今しばらくお待ちくださいませ。</div>
             <p>※休業日などでご返信が遅くなる場合がございます。<br>
-            お急ぎの場合はお電話でご確認お願い致します。</p>
+            お急ぎの場合はお電話でご確認お願いいたします。</p>
          </div>
       <?php else: ?>
          <section class="section_content_body bg_bluelight">
@@ -307,7 +307,7 @@
                            </div>
                            <div class="form-group">
                               <label for="">お問い合わせ内容</label>
-                              <textarea name="contact_content" id="" class="form-control" cols="30" rows="8" placeholder="ご質問やご希望があればご記入ください。"></textarea>
+                              <textarea name="contact_content" id="" class="form-control" cols="30" rows="8" placeholder="お問合せ事項やご意見・ご要望等はこちらにご記入ください"></textarea>
                            </div>
                            <div class="box_content_footer">
                                <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>

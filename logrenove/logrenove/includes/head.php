@@ -31,7 +31,7 @@
 <noscript><link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css"></noscript>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/styles.min.css" type="text/css">
+<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/styles.min.css?t=<?php echo time()?>" type="text/css">
 <?php 
     if(is_single()):
         ?>
@@ -45,7 +45,7 @@
             <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"></noscript>
 
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
-            <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/single.min.css" type="text/css">
+            <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/single.min.css?t=<?php echo time()?>" type="text/css">
         <?php
     endif;
 ?>
@@ -55,7 +55,7 @@
         ?>
             
         	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/bsnav.min.css" type="text/css">
-        	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.min.css" type="text/css">
+        	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.min.css?t=<?php echo time()?>" type="text/css">
         <?php
     endif;
 ?>

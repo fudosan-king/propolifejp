@@ -1060,6 +1060,12 @@
 		padding-right: 0;
 	}
 
+	.box_readylive { padding: 5px; }
+	.title_room {margin-left: 10px; display: flex; flex-direction: column; justify-content: center;}
+	.actual_room {margin-left: 10px;}
+	.box_large_modelroom p {font-size: 18px;}
+	.box_large_modelroom h1 {margin: 0; font-size: 40px;}
+
 }
 @media (max-width: 767px) {
 	.text_top_baner {
@@ -1293,11 +1299,17 @@
 		width: 90px;
 	}
 
+	.box_large_modelroom p {font-size: 10px;}
+	.box_large_modelroom h1 {margin: 0; font-size: 28px;}
+	.gold.remove {font-size: 12px!important;}
 }
 @media (max-width: 375px) {
 	ul.list_info li:nth-child(3) p .big_text, ul.list_info li:nth-child(4) p .big_text, ul.list_info li:nth-child(5) p .big_text {
 		font-size: 17.5px;
 	}
+
+	.box_large_modelroom p {font-size: 8px;}
+	.box_large_modelroom h1 {margin: 0; font-size: 24px;}
 }
 @media (max-width: 360px) {
 	.section_topbanner {
@@ -1357,7 +1369,7 @@
 		font-size: 18px;
 	}
 
-
+	.gold.remove {font-size: 11px!important;}
 
 }
 

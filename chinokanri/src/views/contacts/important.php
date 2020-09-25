@@ -30,11 +30,11 @@
         <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
             <div class="success-submit">
                 <div class="mb-4"><b>お問い合わせが完了しました</b></div>
-                <div class="mb-3">お問い合わせ有り難う御座います。<br>
-                後程、メールにてお振込先等、ご連絡致します。<br>
-                今暫くお待ちくださいませ。</div>
+                <div class="mb-3">お問い合わせありがとうございます。<br>
+                後ほどメールにてお振込先等ご連絡いたします。<br>
+                今しばらくお待ちくださいませ。</div>
                 <p>※休業日などでご返信が遅くなる場合がございます。<br>
-                お急ぎの場合はお電話でご確認お願い致します。</p>
+                お急ぎの場合はお電話でご確認お願いいたします。</p>
                 <input type="hidden" name="email" value="">
             </div>
         <?php else: ?>

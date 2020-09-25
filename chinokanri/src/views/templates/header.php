@@ -103,7 +103,7 @@
                     <div class="col-12 col-lg-3 align-self-center">
                       <div class="header_contact">
                         <div class="header_left">
-                            <p><a class="btn btnEmail" href="<?=base_url();?>contact/"><img src="<?=base_url();?>assets/images/SVG/mail.svg" alt="" class="img-fluid" width="24"> お問い合わせ</a></p>    
+                            <p><a class="btn btnEmail" href="<?=base_url();?>contact/naiken"><img src="<?=base_url();?>assets/images/SVG/mail.svg" alt="" class="img-fluid" width="24"> お問い合わせ</a></p>    
                         </div>
                         <div class="header_right">
                             <p><a class="btnPhone" href="tel:0120997950"><img src="<?=base_url();?>assets/images/SVG/phone.svg" alt="" class="img-fluid" width="24"> 0120-99-7950</a></p>

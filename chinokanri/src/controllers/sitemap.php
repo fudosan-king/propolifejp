@@ -16,11 +16,11 @@ class Sitemap extends CI_Controller {
             'kaiyaku',
             'privacy-policy',
             'contact',
-            // 'contact/naiken',
-            // 'contact/chintai',
-            // 'contact/kaiyaku',
-            // 'contact/bunjyo',
-            // 'contact/important',
+            'contact/naiken',
+            'contact/chintai',
+            'contact/kaiyaku',
+            'contact/bunjyo',
+            'contact/important',
         );
 
         $this->load->view('sitemap', $data);

@@ -15,6 +15,10 @@
 
     <div id="page" >
         <?php
+        if(is_home() || is_front_page() )
             require 'includes/header.php';
+        else
+            require 'includes/header-page.php';
+
         ?>    
      

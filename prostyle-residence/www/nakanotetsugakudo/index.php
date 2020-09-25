@@ -149,9 +149,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<!-- <img src="images/slide/prices.png" alt="" class="img-fluid d-none d-lg-block"> -->
 					<div class="box_sellingprice d-none d-lg-block">
 						<div class="box_sellingprice_content">
-							<p>販売価格</p>
+							
 							<ul>
 								<li>
+									<p>販売価格</p>
 									<p class="cornerunit">角住戸</p>
 									<h2>2LDK  
 										<span>＋WIC<br>
@@ -159,18 +160,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									</h2>
 								</li>
 								<li>
-									<h1 class="gold">5,200</h1>
-								</li>
-								<li>
-									<p class="unit">※100万円<span>単位</span></p>
-									<h3>万円<br>台〜</h3>
+									<div class="discount_wrapper">
+										<div class="discount_yen">
+											<img src="images/1x/discount_5200-150px.png" class="img-fluid" alt="">
+										</div>
+										<div class="box_sellingprice_content_time text-left">
+											<p>旧価格公表日　2019/6/5</p>
+											<p>価格改定日　 2020/9/22</p>
+										</div>
+									</div>
+									
+									<h1 class="gold">4,999 万円</h1>
 								</li>
 							</ul>
 							<ul class="custom">
 								<li>
 									<div class="box_monthly_payment">
 										<span class="monthly_payment">月々<br>支払</span>
-										<span class="number_monthly_payment gold">13</span>
+										<span class="number_monthly_payment gold">12</span>
 										<span class="total">万円<br>台〜</span>
 									</div>
 								</li>
@@ -198,19 +205,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										＋SIC</span><br>
 									</h2>
 								</li>
+								
 								<li>
-									<h1 class="gold">5,600</h1>
-								</li>
-								<li>
-									<p class="unit">※100万円<span>単位</span></p>
-									<h3>万円<br>台〜</h3>
+									<div class="discount_wrapper">
+										<div class="discount_yen">
+											<img src="images/1x/discount_5600-150px.png" class="img-fluid" alt="">
+										</div>
+										<div class="box_sellingprice_content_time text-left">
+											<p>旧価格公表日　2020/6/8 </p>
+											<p>価格改定日　 2020/9/22</p>
+					
+										</div>
+									</div>
+
+									
+									<h1 class="gold">5,399 万円</h1>
 								</li>
 							</ul>
 							<ul class="custom">
 								<li>
 									<div class="box_monthly_payment">
 										<span class="monthly_payment">月々<br>支払</span>
-										<span class="number_monthly_payment gold">14</span>
+										<span class="number_monthly_payment gold">13</span>
 										<span class="total">万円<br>台〜</span>
 									</div>
 								</li>
@@ -259,10 +275,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<div class="col-12">
                             <ul class="box_price d-block d-lg-none">
                                 <li>
-                                    <p class="gold">2LDK 角住戸 <span>5,200</span>万円台～月々<span>13</span>万円台～</p>
+                                    <p class="gold remove"><del>5,200万円</del> 旧価格公示日:2019/6/5 価格改定日:2020/9/22</p>
+                                    <p class="gold">2LDK 角住戸 <span>4,999</span>万円台～月々<span>12</span>万円台～</p>
                                 </li>
                                 <li>
-                                    <p class="gold">3LDK 角住戸 <span>5,600</span>万円台～月々<span>14</span>万円台～</p>
+                                    <p class="gold remove"><del>5,600万円</del> 旧価格公示日:2019/6/8 価格改定日:2020/9/22</p>
+                                    <p class="gold">3LDK 角住戸 <span>5,399</span>万円台～月々<span>13</span>万円台～</p>
                                 </li>
                             </ul>
 							<div class="box_large_modelroom">
@@ -271,7 +289,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										<h2>即<span>入居可</span></h2>
 										<p>※諸手続き完了後</p>
 									</div>
-									<h1 class="flex-fill"><span>モデルルーム</span>大商談会開催</h1>
+									<div class="title_room flex-fill">
+										<p class="flex-fill-title">モデルルーム・販売センター使用住戸につき </p>
+										<h1 > 《価格改定‼》</h1>
+									</div>
 									<div class="actual_room flex-fill">
 										<p>実際のお部屋が<br>
 										ご覧になれます</p>
@@ -413,7 +434,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
-
+　														<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.09.22</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>価格改定いたしました。</p>
+			      											</div>
+			      										</div>
 			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.08.28</p>

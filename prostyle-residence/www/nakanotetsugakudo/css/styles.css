@@ -2837,8 +2837,6 @@ ul.list_topics li:nth-child(5) {
   color: #fff;
   font-size: 70px;
   font-weight: 900;
-  border-top: 1px solid rgba(255, 255, 255, .45);
-  border-bottom: 1px solid rgba(255, 255, 255, .45);
   line-height: 1.2em;
   margin-left: 30px;
 }
@@ -2858,7 +2856,7 @@ ul.list_topics li:nth-child(5) {
   background: -moz-linear-gradient(130.68deg, #C30D23 0.01%, #950006 99.98%);
   background: -webkit-linear-gradient(130.68deg, #C30D23 0.01%, #950006 99.98%);
   background: linear-gradient(130.68deg, #C30D23 0.01%, #950006 99.98%);
-  padding: 5px 5px;
+  padding: 15px;
 }
 .actual_room {
   background: #fff;
@@ -2923,6 +2921,7 @@ ul.list_topics li:nth-child(5) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.gold.remove {-webkit-text-fill-color: cornsilk; margin-bottom: 5px}
 .box_selling_phrase p {
   font-size: 20px;
 }
@@ -2952,7 +2951,7 @@ ul.list_topics li:nth-child(5) {
   background: #000;
   border: 1px solid #fff;
   position: relative;
-  width: 400px;
+  width: 425px;
   height: 410px;
   padding: 18px 20px;
   color: #fff;
@@ -3019,7 +3018,7 @@ ul.list_topics li:nth-child(5) {
 .box_sellingprice_content ul li h1 {
   color: #fff;
   margin: 0;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 500;
   letter-spacing: -.06em;
   line-height: 1.1em;
@@ -3253,4 +3252,21 @@ ul.box_price p span {
 }
 .banner_onlineservices_content {
   padding-right: 90px;
+}
+.title_room {
+  border-top: 1px solid rgba(255, 255, 255, .45); 
+  border-bottom: 1px solid rgba(255, 255, 255, .45);
+  margin-left: 30px;
+}
+
+.discount_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.discount_yen {float: left; margin-left: 5px;}
+.discount_yen img { width: 115px; }
+.box_sellingprice_content_time{
+  float: left;
+  margin-left: 5px;
 }

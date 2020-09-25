@@ -150,6 +150,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 320px;
+    position: relative;
+    z-index: 10;
 }
 
 #sp_global_nav li a{
@@ -218,7 +220,7 @@
 
 #sp_global_nav li.concept{ background-image:url(../../images/home/parts_sp_gnav_concept.png); background-position: right center;}
 #sp_global_nav li.job{ background-image:url(../../images/home/parts_sp_gnav_job.png); background-position: left center;}
-#sp_global_nav li.recruit{ background-image:url(../../images/home/parts_sp_gnav_recruit.png); background-position: right top;} 
+#sp_global_nav li.recruit{ background-image:url(../../images/home/parts_sp_gnav_recruit.png); background-position: right top; z-index: 1;}
 #sp_global_nav li.training{ background-image:url(../../images/home/parts_sp_gnav_training.png); background-position: left center;}
 #sp_global_nav li.benefit{ background-image:url(../../images/home/parts_sp_gnav_benefit_left.png); background-position: left center;}
 #sp_global_nav li.support{ background-image:url(../../images/home/parts_sp_gnav_support.png); background-position: left center;}
@@ -226,13 +228,7 @@
 #sp_global_nav li.office{ background-image:url(../../images/home/parts_sp_gnav_office.png); background-position: left center;}
 #sp_global_nav li.faq{ background-image:url(../../images/home/parts_sp_gnav_faq.png); background-position: right center;}
 
-#sp_global_nav li.concept a{ background-image:url(../../images/home/parts_sp_gnav_concept_txt.png);}
-#sp_global_nav li.job a{ background-image:url(../../images/home/parts_sp_gnav_job_txt.png);}
-#sp_global_nav li.recruit .parents{ background-image:url(../../images/home/parts_sp_gnav_recruit_txt.png);} 
-#sp_global_nav li.recruit .recruit_new a{ background-image:url(../../images/home/parts_sp_gnav_recruit_new_txt.png);} 
-#sp_global_nav li.recruit .recruit_career a{ background-image:url(../../images/home/parts_sp_gnav_recruit_career_txt.png);} 
 #sp_global_nav li.training a{ background-image:url(../../images/home/parts_sp_gnav_training_txt.png);}
-#sp_global_nav li.benefit a{ background-image:url(../../images/home/parts_sp_gnav_benefit_txt.png);}
 #sp_global_nav li.support a{ background-image:url(../../images/home/parts_sp_gnav_support_txt.png);}
 #sp_global_nav li.point a{ background-image:url(../../images/home/parts_sp_gnav_point_txt.png);}
 #sp_global_nav li.office a{ background-image:url(../../images/home/parts_sp_gnav_office_txt.png);}
@@ -285,4 +281,30 @@
 }
 
 
+}
+
+#sp_global_nav li a {
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'fot-tsukuardgothic-std', sans-serif;
+    font-weight: bold;
+}
+
+#sp_global_nav li a span {
+    display: block;
+    position: relative;
+    top: 14px;
+}
+
+#sp_global_nav li.recruit .parents {
+    text-align: center;
+    font-family: 'fot-tsukuardgothic-std', sans-serif;
+    font-weight: bold;
+}
+
+#sp_global_nav li.recruit .parents span {
+    display: block;
+    position: relative;
+    top: 14px;
 }

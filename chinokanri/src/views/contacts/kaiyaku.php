@@ -98,7 +98,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="text" class="form-control required" placeholder="例：1234567" name="contract_estate_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')">
+                                                            <input type="text" class="form-control required numbersOnly" placeholder="例：1234567" name="contract_estate_postal_code" maxlength="7" onkeyup="AjaxZip3.zip2addr(this,'','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('contract_estate_postal_code','','contract_estate_pref','contract_estate_city', 'contract_estate_chome_address')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -244,7 +244,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="">ご契約者様</label>
+                                            <label for="">ご契約者様の氏名（ふりがな）</label>
                                             <div class="row">
                                                 <div class="col-12 col-lg-1">
                                                     <span class="label_sub mt-2">必須</span>
@@ -411,6 +411,11 @@
                                                     <span class="label_sub">必須</span>
                                                 </div>
                                                 <div class="col-10 col-lg-11 align-self-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="hidden" class="custom-control-input" name="contract_detached_house_2" value="なし">
+                                                        <input type="checkbox" class="custom-control-input" name="contract_detached_house_ckb_2" id="contract_detached_house_ckb_2">
+                                                        <label class="custom-control-label" for="contract_detached_house_ckb_2">一戸建てを契約されているお客様はこちらにチェックを入れて下さい。物件名と号室は省略頂けます。</label>
+                                                    </div>
                                                     <input type="text" class="form-control required" name="relocation_estate_name">
                                                 </div>
                                             </div>
@@ -439,7 +444,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="text" class="form-control required" placeholder="例：1234567" name="relocation_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','relocation_refectures','relocation_city')">
+                                                            <input type="text" class="form-control required numbersOnly" placeholder="例：1234567" name="relocation_postal_code" maxlength="7" onkeyup="AjaxZip3.zip2addr(this,'','relocation_refectures','relocation_city')">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('relocation_postal_code','','relocation_refectures','relocation_city')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -641,7 +646,7 @@
                                                 <div class="col-10 col-lg-11 align-self-center">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 align-self-center">
-                                                            <input type="text" class="form-control required" placeholder="例：1234567" name="emergency_postal_code" onkeyup="AjaxZip3.zip2addr(this,'','emergency_refectures','emergency_city','emergency_location_number')">
+                                                            <input type="text" class="form-control required numbersOnly" placeholder="例：1234567" name="emergency_postal_code" maxlength="7" onkeyup="AjaxZip3.zip2addr(this,'','emergency_refectures','emergency_city','emergency_location_number')">
                                                         </div>
                                                         <div class="col-12 col-lg-6 align-self-center">
                                                             <a class="btnAuto btn mt-2 mt-lg-0 btn-link" onclick="AjaxZip3.zip2addr('emergency_postal_code','','emergency_refectures','emergency_city','emergency_location_number')"><img src="<?=base_url();?>/assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -776,7 +781,7 @@
                                                 </div>
                                                 <div class="col-10 col-lg-11">
                                                     <div class="box_datetime mb-3">
-                                                        <input type="text" class="form-control datepicker required" placeholder="2020/06/26" name="cancellation_date">
+                                                        <input type="text" class="form-control datepickerCancel required" name="cancellation_date" readonly="">
                                                         <i class="i_datetime"></i>
                                                     </div>
                                                     <p class="mb-0 red">※　解約日までの賃料が発生いたします。解約日当月の賃料は通常月と同じように全額お振込みをお願いいたします。敷金精算時に精算いたします。<br/>※　解約日までに室内お荷物をすべて移動をお願いいたします。ライフラインの解約手続きもお願いいたします。<br/>※　例：1ヶ月前予告の場合、通知日が1月1日なら解約日は最短で2月1日となります。
@@ -819,7 +824,7 @@
 
                                         <div class="box_content_footer">
                                             <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                            個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                            個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/" target="_blank"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                             ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
                                             <div class="form-group text-center">
@@ -896,7 +901,7 @@
                                         </td>       
                                     </tr>
                                     <tr>
-                                        <td>ご契約者様</td>
+                                        <td>ご契約者様の氏名（ふりがな）</td>
                                         <td>
                                             <div id="contractor_furigana_family_name"></div>
                                             <div id="contractor_furigana_name"></div>
@@ -1025,10 +1030,12 @@
                                         <td>都道府県</td>
                                         <td id="emergency_refectures"></td>
                                     </tr>
+
                                     <tr>
                                         <td>市区町村</td>
                                         <td id="emergency_city"></td>
                                     </tr>
+
                                     <tr>
                                         <td>丁目・番地</td>
                                         <td id="emergency_location_number"></td>
@@ -1071,7 +1078,7 @@
                                         <td id="delegate_all_settlement"></td>
                                     </tr>
                                     <tr>
-                                        <td>市区町村</td>
+                                        <td>お問い合わせ内容</td>
                                         <td id="contact_content"></td>
                                     </tr>
                                     <!-- end section-->

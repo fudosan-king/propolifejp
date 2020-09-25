@@ -1,7 +1,12 @@
 <?php get_header(); ?>
 
-<?php global $detect; ?>
-
+<?php global $detect; 
+    $post_type = get_post_type();
+    if($post_type == 'events'):
+        require( dirname( __FILE__ ) . '/includes/single-event.php' );
+    else:
+?>
+    
     <main class="sub_page">
         <?php get_template_part( 'template-parts/breadcrumb', 'default' ); ?>
         <section class="section_main">
@@ -26,4 +31,4 @@
         </section>
     </main>
 
-<?php get_footer(); ?>
+<?php endif;get_footer(); ?>

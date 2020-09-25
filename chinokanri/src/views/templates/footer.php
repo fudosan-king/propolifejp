@@ -28,6 +28,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <script src="<?=base_url();?>assets/js/script.js"></script>
+        <script src="<?=base_url();?>assets/js/sanitize.min.js"></script>
+        <script src="<?=base_url();?>assets/js/wanakana.min.js"></script>
         <?php 
             if($this->uri->uri_string() == 'contact'):
                 ?>
@@ -39,6 +41,7 @@
             if($this->uri->uri_string() == 'contact/bunjyo'):
                 ?>
                 <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+                <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
                 <script src="<?=base_url();?>assets/js/pardot/bunjyo.js"></script>       
                 <?php
             endif;
@@ -46,8 +49,10 @@
                 ?>
                  <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>    
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
                 <script src="<?=base_url();?>assets/js/pardot/kaiyaku.js"></script>  
+                <script src="<?=base_url();?>assets/js/pardot/customdate.js"></script>
                 <?php
             endif;
             if($this->uri->uri_string()=='contact/naiken' || $this->uri->uri_string()=='contact/chintai'): ?>

@@ -192,8 +192,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							</ul>
 							<ul>
 								<li>
+                                    <p class="cornerunit">角住戸</p>
 									<h2>3LDK
-										<span class="liha">＋WIC<br>
+										<span>＋WIC<br>
 										＋SIC</span><br>
 									</h2>
 								</li>
@@ -261,7 +262,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <p class="gold">2LDK 角住戸 <span>5,200</span>万円台～月々<span>13</span>万円台～</p>
                                 </li>
                                 <li>
-                                    <p class="gold">3LDK <span>5,600</span>万円台～月々<span>14</span>万円台～</p>
+                                    <p class="gold">3LDK 角住戸 <span>5,600</span>万円台～月々<span>14</span>万円台～</p>
                                 </li>
                             </ul>
 							<div class="box_large_modelroom">
@@ -288,7 +289,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		    						<li class="flex-fill">
 		    							<div class="selling_phrase_top">
 			    							<h2>中野駅生活圏</h2>
-			    							<p>中央線快速、総武線・東西線始発駅</p>
+			    							<p>中央線、総武線・東西線始発駅</p>
 		    							</div>
 		    						</li>
 		    						<li class="flex-fill">
@@ -378,23 +379,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	      						<div class="box_video">
 	      							<h3 class="text-center mt-3 mt-md-5">フルスクリーンでご覧ください。</h3>
 	      							<div class="row">
+	      								<div class="col-12 col-md-2">
+	      								</div>
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=2wYcFGRfG4k" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_f.php" class="btn btn_video">>>Fタイプ間取りはこちら </a>
 	      								</div>
-	      								<div class="col-12 col-md-4">
+	      								<!-- <div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=Ey9RHKzJqGy" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_b.php" class="btn btn_video">>>Bタイプ間取りはこちら </a>
-	      								</div>
+	      								</div> -->
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=QcgwjcRxafu" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_i.php" class="btn btn_video">>>Iタイプ間取りはこちら </a>
+	      								</div>
+	      								<div class="col-12 col-md-2">
 	      								</div>
 	      							</div>
 	      						</div>
@@ -414,7 +419,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      												<p>2020.08.28</p>
 			      											</div>
 			      											<div class="col-9 col-sm-10 align-self-center">
-			      												<p>Bタイプ完売しました</p>
+			      												<p>Bタイプ完売しました。</p>
 			      											</div>
 			      										</div>
 			      										

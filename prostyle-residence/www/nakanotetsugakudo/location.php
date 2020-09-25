@@ -315,7 +315,7 @@
 					      								<img src="images/1x/topic01.png" alt="" class="img-fluid d-none d-md-block">
 					      							</div>
 					      						</div>
-					      						<p class="m-0"><small class="font_gothic">※事業期間：平成25年〜平成32年度 出典：東京都建設局ホームページ「西武鉄道新宿線（中井駅〜野方駅間）連続立体交差事業の概要」（平成29年11月現在）</small></p>
+					      						<p class="m-0"><small class="font_gothic">※事業期間：平成25年4月1日～令和9年3月31日まで　出典：中野区ホームページ「連続立体交差事業について」（令和2年9月11日現在)</small></p>
 					      					</div>
 					      					<div class="col-7 col-sm-4">
 					      						<div class="box_comfortable_img">

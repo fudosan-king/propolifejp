@@ -76,6 +76,21 @@
   text-align: center;
 }
 
+.contact_tel p {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact_tel p {
+    font-size: 14px;
+  }
+
+  .contact_tel p span{
+    display: block;
+    width: 100%;
+  }
+}
+
 .btnForm {
   background: #67181D;
   color: #fff;

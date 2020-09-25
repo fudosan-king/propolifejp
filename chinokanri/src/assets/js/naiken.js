@@ -22,6 +22,9 @@ $(function($) {
     });
 
     $('#btnAgree').on('click',function(e){
+        $.each($('input, textarea'), function(index, el) {
+            $(el).val(sanitizeHtml($(this).val()));
+        })
         var frm_data = $('form.frm_general').serializeArray();
         var isValid = check_valid(frm_data);
         if(isValid === false) {
@@ -51,17 +54,24 @@ $(function($) {
         $($('.steps li')[0]).removeClass('active');
         $($('.steps li')[1]).addClass('active');
 
+        var tmpName = '';
         $.each(data, function(key, value) {
             var name = value.name;
             var val = value.value;
-            if (name.includes('[]') === false) 
+            if (name.indexOf('[]') == -1) 
             {
-                $("#"+name).html(val);
+                $("#"+name).text(val);
             }
             else 
             {
                 name = name.replace('[]','');
-                $("#"+name).append(val + '<br>');
+                if(tmpName != name){
+                    $("#"+name).html(escapeHtml(val) + '<br>');
+                    tmpName = name;
+                }else{
+                    $("#"+name).append(escapeHtml(val) + '<br>');
+                }
+                
             }
         })
     }
@@ -83,6 +93,24 @@ $(function($) {
       return emailPattern.test(email);
     }
 
+    function check_value_type(value, type) {
+        var pattern = '';
+        switch(type) {
+          case 'hiragana':
+            pattern = /^([ぁ-ん]+)$/;
+            break;
+          case 'katakana':
+            pattern = /^([ァ-ヶー]+)$/;
+            break;
+          case 'number':
+            pattern = /^([0-9]+)$/;
+            break;
+          default:
+            pattern = /^([a-zA-Z0-9]+)$/;
+        }
+        return pattern.test(value);
+    }
+
     function check_valid() {
         var ERROR_NO_INPUT = '値を入力してください';
         var data = $('.frm-input input.required,select.required').map(function() {
@@ -94,7 +122,7 @@ $(function($) {
                 val = checked.length > 0 ? checked.val() : '';
             }
             else if(['checkbox'].indexOf(type_elem) != -1) {
-                key = key.includes('[]') ? key.replace('[]','') : key;
+                key = key.indexOf('[]') != -1 ? key.replace('[]','') : key;
                 val = $('input[name^='+key+']:checked').map(function() {
                     return $(this).val();
                 });
@@ -127,6 +155,28 @@ $(function($) {
                         element.addClass('is-valid');
                     }
                 }
+                else if(name == 'kata_familyname' || name == 'kata_name') {
+                    if(!check_value_type(val, 'katakana'))
+                    {
+                        element.addClass('is-invalid');
+                        invalid.push(name);
+                    }
+                    else {
+                        element.removeClass('is-invalid');
+                        element.addClass('is-valid');
+                    }
+                }
+                else if(name == 'phone-number' || name == 'mobile-number') {
+                    if(!check_value_type(val, 'number'))
+                    {
+                        element.addClass('is-invalid');
+                        invalid.push(name);
+                    }
+                    else {
+                        element.removeClass('is-invalid');
+                        element.addClass('is-valid');
+                    }
+                }
                 else {
                     element.removeClass('is-invalid');
                     element.addClass('is-valid');
@@ -137,35 +187,40 @@ $(function($) {
         else return true;
     }
 
-    demo = (name='') => {
-        switch(name){
-            case '': {
-                $('input[name="property-name"]').val('プロポライフ');
-                $('input[name="room-number"]').val('ベトナム');
-                $('input[name="visit-date"]').val('2020/08/28');
-                $('select[name="visit-hour"]').val('10:00');
-                $('input[name="company-name"]').val('プロポライフ');
-                $('input[name="branch-name"]').val('ベトナム');
-                $('input[name="postal-code"]').val('1000013');
-                AjaxZip3.zip2addr('postal-code','','pref','city')
-                
-                
-                $('input[name="phone-number"]').val('+84-97-422-6440');
-                $('input[name="mobile-number"]').val('03-6897-8561');
-                $('input[name="email"]').val('khiemtq@propolife.co.jp');
-                
-                $('input[name="kanji_familyname"]').val('プロポライフ');
-                $('input[name="kanji_name"]').val('ベトナム');
-                $('input[name="kata_familyname"]').val('プロポライフ');
-                $('input[name="kata_name"]').val('ベトナム');
-                $('input[name="address"]').val('U1904 - CJ Building');
-                $('input[id="customRadioInline1"]').prop('checked', true);
-                $('input[id="customRadio1"]').prop('checked', true);
-
-                setTimeout(function(){
-                    // $('#btn_confirm').click();
-                },2000);
-            } break;
-        }
+    function escapeHtml(text) {
+      return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
     }
 })
+
+var demo = function(){
+    $('input[name="property-name"]').val('プロポライフ');
+    $('input[name="room-number"]').val('ベトナム');
+    $('input[name="visit-date"]').val('2020/08/28');
+    $('select[name="visit-hour"]').val('10:00');
+    $('input[name="company-name"]').val('プロポライフ');
+    $('input[name="branch-name"]').val('ベトナム');
+    $('input[name="postal-code"]').val('1000013');
+    AjaxZip3.zip2addr('postal-code','','pref','city')
+    
+    
+    $('input[name="phone-number"]').val('84974226440');
+    $('input[name="mobile-number"]').val('0368978561');
+    $('input[name="email"]').val('khiemtq@propolife.co.jp');
+    
+    $('input[name="kanji_familyname"]').val('プロポライフ');
+    $('input[name="kanji_name"]').val('ベトナム');
+    $('input[name="kata_familyname"]').val('プロポライフ');
+    $('input[name="kata_name"]').val('ベトナム');
+    $('input[name="address"]').val('U1904 - CJ Building');
+    $('input[id="customRadioInline1"]').prop('checked', true);
+    $('input[id="customRadio1"]').prop('checked', true);
+
+    setTimeout(function(){
+        // $('#btn_confirm').click();
+    },2000);
+}

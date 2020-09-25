@@ -2,18 +2,49 @@
     <div class="top_header">
         <div class="container">
             <div class="row">
-                <div class="col-2 col-md-4 align-self-center">
+                <div class="col-4 col-md-4 align-self-center">
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_md"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
-                </div>
-                <div class="col-8 col-md-4 align-self-center">
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_sm"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
-                    <?php get_search_form(); ?>
                 </div>
-                <div class="col-2 col-md-4 align-self-center text-right">
+                <div class="col-7 col-md-5 align-self-center">
+                    <?php $service_url = ''; $service_text_sp = ''; $service_text_pc = ''; if (is_singular('post')) {
+                        global $post;
+                        $postCats = get_the_category($post->ID);
+                        if ($postCats) {
+                            foreach ($postCats as $cat) {
+                                if (get_field('service_text_pc', $cat)) {
+                                    $service_text_pc = get_field('service_text_pc', $cat);
+                                    $service_text_sp = get_field('service_text_sp', $cat);
+                                    $service_url = get_field('service_url', $cat);
+                                    break;
+                                }
+                            }
+                        }
+                        if (!$service_text_pc) {
+                            $service_text_pc = get_field('service_text_pc_homepage', 'option');
+                            $service_text_sp = get_field('service_text_sp_homepage', 'option');
+                            $service_url = get_field('service_url_homepage', 'option');
+                        }
+                    } else {
+                        if (get_field('service_text_pc',get_queried_object())) {
+                            $service_text_pc = get_field('service_text_pc', get_queried_object());
+                            $service_text_sp = get_field('service_text_sp', get_queried_object());
+                            $service_url = get_field('service_url', get_queried_object());
+                        } else {
+                            $service_text_pc = get_field('service_text_pc_homepage', 'option');
+                            $service_text_sp = get_field('service_text_sp_homepage', 'option');
+                            $service_url = get_field('service_url_homepage', 'option');
+                        }
+                    } ?>
+                    <a target="_blank" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-none d-lg-block"><?php echo $service_text_pc; ?></a>
+                    <a target="_blank" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-block d-lg-none"><?php echo $service_text_sp; ?></a>
+                </div>
+                <div class="col-1 col-md-3 align-self-center text-right">
                     <!-- <div class="box_top_user_md">
                         <a href="login.php" class="btn btnSignup float-right ml-2"><i class="fas fa-sign-in-alt"></i> <span>ログイン</span></a>
                         <a href="signin.php" class="btn btnSignup float-right"><i class="fas fa-user"></i> <span>新規登録</span></a>
                     </div> -->
+                    <?php //get_template_part( 'template-parts/login', 'header' ); ?>
                     <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -28,7 +59,7 @@
                 <a href="signin.php" class="btn btnSignup flex-fill"><i class="fas fa-user"></i> <span>新規登録</span></a>
                 <a href="login.php" class="btn btnSignup flex-fill"><i class="fas fa-sign-in-alt"></i> <span>ログイン</span></a>
             </div> -->
-            <?php get_template_part( 'template-parts/searchform', 'sp' ); ?>
+            <?php // get_template_part( 'template-parts/searchform', 'sp' ); ?>
 
             <?php 
                 $menuLocations = get_nav_menu_locations();

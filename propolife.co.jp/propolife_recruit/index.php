@@ -39,16 +39,17 @@ $dir_name = 'home';
 
     <div id="sp_global_nav" class="switch_sp">
         <ul>
-            <li class="concept"><a href="<?php echo home_url(); ?>/concept/"></a></li>
-            <li class="job"><a href="<?php echo home_url(); ?>/job/"></a></li>
+            <li class="concept"><a href="<?php echo home_url(); ?>/concept/"><span>メッセージ</span></a></li>
+            <li class="job"><a href="<?php echo home_url(); ?>/job/"><span>プロポのお仕事</span></a></li>
             <li class="recruit">
-                <p class="parents"></p>
+                <p class="parents"><span>採用情報</span></p>
                 <ul>
-                    <li class="recruit_new"><a href="<?php echo home_url(); ?>/newgraduate/"></a></li>
-                    <li class="recruit_career"><a href="<?php echo home_url(); ?>/career/"></a></li>
+                    <li class="recruit_new"><a href="<?php echo home_url(); ?>/newgraduate/"><span>新卒採用</span></a></li>
+                    <li class="recruit_career"><a href="<?php echo home_url(); ?>/【中途採用】勤務地限定/"><span>中途採用</span></a></li>
+                    <li class="recruit_part_time"><a href="<?php echo home_url(); ?>/【アルバイト】勤務地限定/"><span>アルバイト</span></a></li>
                 </ul>
             </li>
-            <li class="benefit"><a href="<?php echo home_url(); ?>/benefit/"></a></li>
+            <li class="benefit"><a href="<?php echo home_url(); ?>/benefit/"><span>福利厚生</span></a></li>
             <!-- <li class="point"><a href="<?php // echo home_url(); ?>/point/"></a></li> -->
         </ul>
     </div><!-- // #sp_global_nav -->

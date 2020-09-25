@@ -135,7 +135,7 @@
                                  <div class="col-10 col-lg-11 align-self-center">
                                     <div class="row">
                                        <div class="col-12 col-lg-6 align-self-center">
-                                          <input type="text" name="postal-code" class="form-control required" placeholder="例：1234567" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city')">
+                                          <input type="text" name="postal-code" class="form-control required numbersOnly" placeholder="例：1234567" maxlength="7" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city')">
                                        </div>
                                        <div class="col-12 col-lg-6 align-self-center">
                                           <a class="btnAuto btn mt-2 mt-lg-0" style="cursor: pointer;" onclick="AjaxZip3.zip2addr('postal-code','','pref','city')"><img src="<?=base_url();?>assets/images/1x/arrow_right.png" width="20" alt="" class="img-fluid"> ※郵便番号から住所が自動で入力されます</a>
@@ -250,7 +250,7 @@
                            </div>
                            <div class="box_content_footer">
                               <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                 個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                 個人情報の取扱に関しましては <a class="btn-link" href="<?=base_url();?>privacy-policy/" target="_blank"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                  ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。
                               </p>
                               <div class="form-group text-center">
@@ -302,7 +302,7 @@
                                  <td>
                                      <span id="postal-code" class="confirm-text"></span> <br>
                                      <span id="pref" class="confirm-text"></span> <br>
-                                     <span id="address" class="confirm-text"></span> <br>
+                                     <span id="city" class="confirm-text"></span> <br>
                                  </td>
                               </tr>
                               <tr>
@@ -325,7 +325,7 @@
                               </tr>
                               <tr>
                                  <td>
-                                    <label>備考</label>
+                                    <label>お問い合わせ内容</label>
                                  </td>
                                  <td id="note" class="confirm-text"></td>
                               </tr>
@@ -334,7 +334,7 @@
                                <div class="form-group text-center">
                                    <div class="row">
                                        <div class="col-12 col-lg-6">
-                                           <button type="submit" class="btn btnAgree" id="btnBack"><i class="i_rightwhite rotate"></i> 戻る</button>
+                                           <button type="button" class="btn btnAgree" id="btnBack"><i class="i_rightwhite rotate"></i> 戻る</button>
                                        </div>
                                        <div class="col-12 col-lg-6">
                                            <button type="submit" class="btn btnAgree" id="btnSubmit">送信する <i class="i_rightwhite"></i></button>

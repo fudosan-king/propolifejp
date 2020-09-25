@@ -505,7 +505,7 @@ ul.list_info li p .big_text {
 }
 .box_informations p {
   word-break: break-word;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7em;
 }
 .box_informations h6 {
@@ -2763,7 +2763,13 @@ ul.list_topics li:nth-child(5) {
 @media (max-width: 320px){  
   .topbanner .slide-text {  
     font-size: 1.5rem;
-  } 
+  }
+  ul.box_price p {
+    font-size: 12px !important;
+  }
+  .box_informations p {
+    font-size: 11px;
+  }
 }
 
 
@@ -3138,7 +3144,7 @@ ul.box_price p {
   margin-bottom: 0;
   color: #fff;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 13px;
 }
 ul.box_price p span {
   font-size: 28px;

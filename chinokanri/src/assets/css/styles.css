@@ -69,6 +69,7 @@ a:hover {text-decoration:none;color:#0180CD;-webkit-transition:all .3s linear;-m
 	text-decoration: underline;
 }
 .red {color: #EB5757 !important;}
+.datepickerCancel[readonly] {background-color: #fff;}
 
 /* header */
 
@@ -648,4 +649,9 @@ footer .back-to-top {
     transform: rotateY(180deg);
     left: 20px;
     right: 0;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.nav-tabs .nav-link span {
+		height: 45px
+	}
 }

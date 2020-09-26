@@ -162,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								<li>
 									<div class="discount_wrapper">
 										<div class="discount_yen">
-											<img src="images/1x/discount_5200-150px.png" class="img-fluid" alt="">
+											<img src="images/1x/discount_5290-150px.png" class="img-fluid" alt="">
 										</div>
 										<div class="box_sellingprice_content_time text-left">
 											<p>旧価格公表日　2019/6/5</p>
@@ -209,7 +209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								<li>
 									<div class="discount_wrapper">
 										<div class="discount_yen">
-											<img src="images/1x/discount_5600-150px.png" class="img-fluid" alt="">
+											<img src="images/1x/discount_5690-150px.png" class="img-fluid" alt="">
 										</div>
 										<div class="box_sellingprice_content_time text-left">
 											<p>旧価格公表日　2020/6/8 </p>
@@ -275,11 +275,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<div class="col-12">
                             <ul class="box_price d-block d-lg-none">
                                 <li>
-                                    <p class="gold remove"><del>5,200万円</del> 旧価格公示日:2019/6/5 価格改定日:2020/9/22</p>
+                                    <p class="gold remove"><del>5,290万円</del> 旧価格公示日:2019/6/5 価格改定日:2020/9/22</p>
                                     <p class="gold">2LDK 角住戸 <span>4,999</span>万円台～月々<span>12</span>万円台～</p>
                                 </li>
                                 <li>
-                                    <p class="gold remove"><del>5,600万円</del> 旧価格公示日:2019/6/8 価格改定日:2020/9/22</p>
+                                    <p class="gold remove"><del>5,690万円</del> 旧価格公示日:2019/6/8 価格改定日:2020/9/22</p>
                                     <p class="gold">3LDK 角住戸 <span>5,399</span>万円台～月々<span>13</span>万円台～</p>
                                 </li>
                             </ul>

@@ -18,7 +18,7 @@
                             <p class="card-text">どんなことでも無料で<br>ご相談承ります！</p>
                         </div>
                     </div>
-                    <a href="#" class="btn btn_consultation d-none d-lg-inline-block">無料相談はこちらから</a>
+                    <a href="#box_bookonline" class="btn btn_consultation d-none d-lg-inline-block">無料相談はこちらから</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-12">
                     <p class="d-block d-lg-none text-center mb-0">
-                        <a href="#" class="btn btn_consultation mt-0">無料相談はこちらから</a>
+                        <a href="#box_bookonline" class="btn btn_consultation mt-0">無料相談はこちらから</a>
                     </p>
                     <h1><span>こんな<b>お悩み</b>ありませんか</span></h1>
                     <ul class="list_qa clearfix">
@@ -131,7 +131,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="box_bookonline">
+                    <div class="box_bookonline" id="box_bookonline">
                         <h2>オンライン相談のご予約</h2>
                         <p class="subtitle">
                             ご自宅で「住まいのご相談」しませんか？
@@ -212,11 +212,11 @@
                                         </div>
                                         <div class="col-12 col-lg-11">
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="ordinarydeposit" name="request_online[]" class="custom-control-input" checked data-require="true">
+                                                <input type="radio" id="ordinarydeposit" name="request_online[]" class="custom-control-input" value="Zoom" checked data-require="true">
                                                 <label class="custom-control-label" for="ordinarydeposit">Zoom</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="current_account" name="request_online[]" class="custom-control-input" data-require="true">
+                                                <input type="radio" id="current_account" name="request_online[]" class="custom-control-input" value="Google meet" data-require="true">
                                                 <label class="custom-control-label" for="current_account">Google meet</label>
                                             </div>
                                         </div>
@@ -230,7 +230,7 @@
 
                                 <div class="box_content_footer">
                                     <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                    個人情報の取扱に関しましては <a class="btn-link" href="#"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                    個人情報の取扱に関しましては <a class="btn-link" href="https://www.propolife.co.jp/privacypolicy" target="_blank" ><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                     ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
                                     <div class="form-group text-center">
@@ -248,7 +248,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3 align-self-center">
-                                            <label for="">必須</label>
+                                            <label for="">希望日付</label>
                                         </div>
                                         <div class="col-12 col-lg-9 align-self-center">
                                             <div class="cfr_date">df</div>
@@ -258,7 +258,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3 align-self-center">
-                                            <label for="">時間を選択</label>
+                                            <label for="">希望時間</label>
                                         </div>
                                         <div class="col-12 col-lg-9 align-self-center">
                                             <div class="cfr_time">df</div>

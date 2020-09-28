@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <h3><img src="<?=EVENTS_IMAGE_PATH;?>/SVG/LogRenove_logo.svg" alt="" class="img-fluid" width="200"> なら「無理なく･自分らしく」</h3>
                     <h1 class="stroke-double" title="">理想の住まいが手に入る!!</h1>
-                    <a class="btn btn_contact_us" href="#" title="">お問い合わせはこちら <span class="idea_left">月々7万円で <br>理想の暮らし!？</span></a>
+                    <a class="btn btn_contact_us" href="#box_bookonline" title="">お問い合わせはこちら <span class="idea_left">月々7万円で <br>理想の暮らし!？</span></a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="container_custom">
-                        <a href="#"><img src="<?=EVENTS_IMAGE_PATH;?>/SVG/banner.svg" alt="" class="img-fluid w-100"></a>
+                        <a href="https://player.riclink.biz/watch?id=742023e0870828cc9e48&guide=1&share=1" target="_tlank" ><img src="<?=EVENTS_IMAGE_PATH;?>/SVG/banner.svg" alt="" class="img-fluid w-100"></a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
         </div>
     </section>
 
-    <section class="section_bookonlineconsultation">
+    <section class="section_bookonlineconsultation" >
         <h2 class="title">まずはお気軽にご相談ください</h2>
         <div class="top_bookonlineconsultation">
             <div class="top_bookonlineconsultation_img">
@@ -99,12 +99,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="box_bookonline">
+                    <div class="box_bookonline" id="box_bookonline">
                         <h2>オンライン相談のご予約</h2>
                         <p class="subtitle">
                             ご自宅で「住まいのご相談」しませんか？
                         </p>
-                        <form action="https://go.pardot.com/l/185822/2020-09-07/qhgzp9" method="POST" class="frm_box_bookonline" name="pardotForm">
+                        <form action="https://go.pardot.com/l/185822/2020-09-07/qhgzp9" method="POST" class="frm_box_bookonline"  name="pardotForm">
                             <section class="data-input">
                                 <div class="form-group">
                                     <div class="row mb-3">
@@ -180,11 +180,11 @@
                                         </div>
                                         <div class="col-12 col-lg-11">
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="ordinarydeposit" name="request_online[]" class="custom-control-input" checked>
+                                                <input type="radio" id="ordinarydeposit" name="request_online[]" class="custom-control-input" value="Zoom" checked>
                                                 <label class="custom-control-label" for="ordinarydeposit">Zoom</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="current_account" name="request_online[]" class="custom-control-input">
+                                                <input type="radio" id="current_account" name="request_online[]" class="custom-control-input" value="Google meet">
                                                 <label class="custom-control-label" for="current_account">Google meet</label>
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@
 
                                 <div class="box_content_footer">
                                     <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                    個人情報の取扱に関しましては <a class="btn-link" href="#"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                    個人情報の取扱に関しましては <a class="btn-link" href="https://www.propolife.co.jp/privacypolicy" target="_blank"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                     ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
                                     <div class="form-group text-center">
@@ -216,7 +216,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-12 col-lg-3 align-self-center">
-                                                <label for="">必須</label>
+                                                <label for="">希望日付</label>
                                             </div>
                                             <div class="col-12 col-lg-9 align-self-center">
                                                 <div class="cfr_date">df</div>
@@ -226,7 +226,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-12 col-lg-3 align-self-center">
-                                                <label for="">時間を選択</label>
+                                                <label for="">希望時間</label>
                                             </div>
                                             <div class="col-12 col-lg-9 align-self-center">
                                                 <div class="cfr_time">df</div>

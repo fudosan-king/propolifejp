@@ -1,6 +1,6 @@
 $(function($) {
 
-    // $('head').append('<style>.validate-error {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important; border-color: #ff0000!important;}</style>');
+    $('head').append('<style>.validate-error {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important; border-color: #ff0000!important;}</style>');
 
     today = new Date();
     var date = new Date();
@@ -35,7 +35,8 @@ $(function($) {
         },
 
     });
-    $('.datepicker').prop('readonly', true);
+
+    //$('.datepicker').prop('readonly', true);
 
 
     $('#btn_confirm').click(function(event) {
@@ -73,7 +74,7 @@ $(function($) {
             $('.cfr_name').html($('input[name="name"]').val());
             $('.cfr_email').html($('input[name="email"]').val());
             $('.cfr_date').html($('input[name="date"]').val());
-            $('.cfr_time').html($('input[name="time"]').val());
+            $('.cfr_time').html($('select[name="time"]').val());
             $('.cfr_request_online').html($('input[name="request_online[]"]:checked').val());
             $('.cfr_inquiry_content').html($('textarea[name="inquiry_content"]').val());
         }else{
@@ -94,7 +95,7 @@ $(function($) {
             $('.cfr_name').html($('input[name="name"]').val());
             $('.cfr_email').html($('input[name="email"]').val());
             $('.cfr_date').html($('input[name="date"]').val());
-            $('.cfr_time').html($('input[name="time"]').val());
+            $('.cfr_time').html($('select[name="time"]').val());
             $('.cfr_request_online').html($('input[name="request_online[]"]:checked').val());
             $('.cfr_inquiry_content').html($('textarea[name="inquiry_content"]').val());
         }else{

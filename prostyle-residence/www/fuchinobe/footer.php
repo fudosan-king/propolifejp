@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4 align-self-center">
-                    <p>お問い合わせは「プロスタイル市ヶ尾」マンションギャラリー</p>
+                    <p>お問い合わせは「プレシス淵野辺レジデンス」マンションギャラリー</p>
                     <p class="number_phone"><a href="tel:0120982067"><img src="<?php echo get_template_directory_uri() ?>/assets/images/SVG/i_phone.svg" alt=""
                                                                           class="img-fluid" width="50"> <span>0120-982-067</span></a>
                     </p>
@@ -15,17 +15,12 @@
                 </div>
                 <div class="col-12 col-lg-8 align-self-center">
                     <div class="d-lg-flex d-block">
-                        <a target="_blank" href="https://lmp1.net/3b6ughk0aqghkd5asjlvtmakot16kxcd/contacts/new"
-                           class="btn btn_documentrequest flex-fill">資料請求</a>
-                        <a target="_blank" href="https://lmp1.net/onl4aktwd2f3poxzihr9ms4vlyklsonf/contacts/new"
-                           class="btn btn_contactus flex-fill">お問い合わせ</a>
+                        <a target="_blank" href="https://lmp1.net/aegniiwmauslajwuy8xrotw5hadohlml/contacts/new" class="btn btn_documentrequest flex-fill">資料請求</a>
+                        <a target="_blank" href="https://lmp1.net/nwkrdphrawvy2vsimpmsrqsm3bwbsle3/contacts/new" class="btn btn_contactus flex-fill">お問い合わせ</a>
                         <ul class="socail">
-                            <li><a target="_blank" href="https://www.facebook.com/prostyleresidence"><img
-                                            src="<?php echo get_template_directory_uri() ?>/assets/images/SVG/i_fb.svg" alt="" class="img-fluid" width="10"></a></li>
-                            <li><a target="_blank" href="https://www.instagram.com/prostyle.official/"><img
-                                            src="<?php echo get_template_directory_uri() ?>/assets/images/SVG/i_ins.svg" alt="" class="img-fluid" width="20"></a></li>
-                            <li><a target="_blank" href="https://www.youtube.com/channel/UC1UquQQDwtU6VfKq3pwM4Hg"><img
-                                            src="<?php echo get_template_directory_uri() ?>/assets/images/SVG/i_youtube.svg" alt="" class="img-fluid" width="22"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/prostyleresidence"><img src="<?php echo get_template_directory_uri() ?>/assets/images/SVG/i_fb.svg" alt="" class="img-fluid" width="10"></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/prostyle.official/"><img src="<?php echo get_template_directory_uri() ?>/assets/images/SVG/i_ins.svg" alt="" class="img-fluid" width="20"></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UC1UquQQDwtU6VfKq3pwM4Hg"><img src="<?php echo get_template_directory_uri() ?>/assets/images/SVG/i_youtube.svg" alt="" class="img-fluid" width="22"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,12 +67,16 @@
 
 </div><!-- End page -->
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/fitodac/bsnav@master/dist/bsnav.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/assets/js/functions.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/sticky.compile.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/functions.js?v=<?php echo time() ?>"></script>
 <?php wp_footer(); ?>
 </body>
 

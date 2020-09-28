@@ -18,7 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.8/jquery.csv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.1.0/autoNumeric.min.js"></script>
-    <script src="<?=SCRIPT_PATH;?>/estimation.js" async></script>
     <script src="<?=SCRIPT_PATH;?>/form/service.js" async></script>
     <script src="<?=SCRIPT_PATH;?>/sanitize.min.js" async></script>
 

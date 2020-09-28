@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.1.0/autoNumeric.min.js"></script>
     <script src="<?=SCRIPT_PATH;?>/estimation.js" async></script>
     <script src="<?=SCRIPT_PATH;?>/form/service.js" async></script>
+    <script src="<?=SCRIPT_PATH;?>/sanitize.min.js" async></script>
 
     <?php if(is_single()): ?>
         <div id="fb-root"></div>

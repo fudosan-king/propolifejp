@@ -58,6 +58,7 @@
             top: 0;
             z-index: 100;
         }
+        .datepicker table tr td.disabled, .datepicker table tr td.disabled:hover{ color: #c2c2c2; }
     </style>
 </head>
 

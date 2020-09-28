@@ -144,50 +144,52 @@ $(function() {
           
         });
 
-        var main = $('.main_left');
-        var side = $('.main_right');
-        var wrapper = $('.sidebar_banner');
+        if($('.sidebar_banner').length > 0){
+            var main = $('.main_left');
+            var side = $('.main_right');
+            var wrapper = $('.sidebar_banner');
 
-        var w = $(window);
-        var wrapperHeight = wrapper.outerHeight();
-        var wrapperTop = wrapper.offset().top;
-        var sideLeft = side.offset().left;
+            var w = $(window);
+            var wrapperHeight = wrapper.outerHeight();
+            var wrapperTop = wrapper.offset().top;
+            var sideLeft = side.offset().left;
 
-        var sideMargin = {
-            top: side.css('margin-top') ? side.css('margin-top') : 0,
-            right: side.css('margin-right') ? side.css('margin-right') : 0,
-            bottom: side.css('margin-bottom') ? side.css('margin-bottom') : 0,
-            left: side.css('margin-left') ? side.css('margin-left') : 0
-        };
+            var sideMargin = {
+                top: side.css('margin-top') ? side.css('margin-top') : 0,
+                right: side.css('margin-right') ? side.css('margin-right') : 0,
+                bottom: side.css('margin-bottom') ? side.css('margin-bottom') : 0,
+                left: side.css('margin-left') ? side.css('margin-left') : 0
+            };
 
-        var winLeft;
-        var pos;
+            var winLeft;
+            var pos;
 
-        var scrollAdjust = function() {
-            sideHeight = side.outerHeight();
-            mainHeight = main.outerHeight();
-            mainAbs = main.offset().top + mainHeight;
-            var winTop = w.scrollTop();
-            winLeft = w.scrollLeft();
-            var winHeight = w.height();
-            var nf = (winTop > wrapperTop) && (mainHeight > sideHeight) ? true : false;
-            pos = !nf ? 'static' : (winTop + wrapperHeight) > mainAbs ? 'absolute' : 'fixed';
+            var scrollAdjust = function() {
+                sideHeight = side.outerHeight();
+                mainHeight = main.outerHeight();
+                mainAbs = main.offset().top + mainHeight;
+                var winTop = w.scrollTop();
+                winLeft = w.scrollLeft();
+                var winHeight = w.height();
+                var nf = (winTop > wrapperTop) && (mainHeight > sideHeight) ? true : false;
+                pos = !nf ? 'static' : (winTop + wrapperHeight) > mainAbs ? 'absolute' : 'fixed';
 
-            if (pos === 'fixed') {
-                side.css({
-                    position: pos,
-                    top: '',
-                    bottom: winHeight - wrapperHeight,
-                    left: sideLeft - winLeft,
-                    margin: 0
-                });
-                $('.sidebar_banner img').removeAttr('style');
-            } else {
-                side.removeAttr('style');
-                $('.sidebar_banner img').css({'width':'100%'});
-            }
-        };
-        w.on('scroll', scrollAdjust);
+                if (pos === 'fixed') {
+                    side.css({
+                        position: pos,
+                        top: '',
+                        bottom: winHeight - wrapperHeight,
+                        left: sideLeft - winLeft,
+                        margin: 0
+                    });
+                    $('.sidebar_banner img').removeAttr('style');
+                } else {
+                    side.removeAttr('style');
+                    $('.sidebar_banner img').css({'width':'100%'});
+                }
+            };
+            w.on('scroll', scrollAdjust);
+        }
 
     }
     $(".btn_close").click(function(event) {
@@ -198,22 +200,33 @@ $(function() {
 });
 
 jQuery(function($) {
-  $('a.goto_frm_services[href*="#"]:not([href="#"], .btn_eventdetail)').click(function() {
+    $('a.goto_frm_services[href*="#"]:not([href="#"], .btn_eventdetail)').click(function() {
       var target = $(this.hash);
         $('html,body').stop().animate({
           scrollTop: target.offset().top - 100
         }, 1100);   
-  });    
+    });    
     if (location.hash){
     var id = $(location.hash);
     }
     $(window).on('load', function() {
-      if (location.hash){
-        $('html,body').animate({scrollTop: id.offset().top -100}, 600)
-      };
+        if (location.hash){
+            $('html,body').animate({scrollTop: id.offset().top -100}, 600)
+        };
      });
 
-    $('.datepicker').datepicker({
-        language: 'ja',
+    if($('.datepicker').length > 0){
+        $('.datepicker').datepicker({
+            language: 'ja',
+        });
+    }
+
+    $('#pardotFormHandler_Contact').on('submit', function(event) {
+        // event.preventDefault();
+        /* Act on the event */
+        $.each($('input, textarea'), function(index, el) {
+            $(el).val(sanitizeHtml($(this).val()));
+        })
     });
+    
 });

@@ -20,12 +20,13 @@
                                         <h3><?php the_title(); ?></h3>
                                         <?php the_content(); ?>
                                         <p>ログリノベに関するご意見・お問い合わせは下記フォームからご送信ください</p>
-                                        <form action="http://go.pardot.com/l/185822/2020-03-11/pn35z9" method="POST" role="form" class="frm_contact">
+                                        <!-- https://go.pardot.com/l/185822/2020-03-11/pn35z9 -->
+                                        <form action="https://go.pardot.com/l/185822/2020-03-11/pn35z9" method="POST" role="form" class="frm_contact" id="pardotFormHandler_Contact">
                                             <div class="form-group">
                                                 <label for="">メールアドレス（必須）</label>
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
-                                                        <input type="email" name="email" class="form-control">
+                                                        <input type="email" name="email" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -46,7 +47,6 @@
             </div>
         </div>
     </section>
-
 </main>
 
 <?php get_footer(); ?>

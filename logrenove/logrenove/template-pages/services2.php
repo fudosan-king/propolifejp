@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3><img src="<?=EVENTS_IMAGE_PATH;?>/images/SVG/LogRenove_logo.svg" alt="" class="img-fluid" width="200"> なら「無理なく･自分らしく」</h3>
+                    <h3><img src="<?=EVENTS_IMAGE_PATH;?>/SVG/LogRenove_logo.svg" alt="" class="img-fluid" width="200"> なら「無理なく･自分らしく」</h3>
                     <h1 class="stroke-double" title="">理想の住まいが手に入る!!</h1>
                     <a class="btn btn_contact_us" href="#" title="">お問い合わせはこちら <span class="idea_left">月々7万円で <br>理想の暮らし!？</span></a>
                 </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="container_custom">
-                        <a href="#"><img src="<?=EVENTS_IMAGE_PATH;?>/images/SVG/banner.svg" alt="" class="img-fluid w-100"></a>
+                        <a href="#"><img src="<?=EVENTS_IMAGE_PATH;?>/SVG/banner.svg" alt="" class="img-fluid w-100"></a>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-2 align-self-center text-center">
-                                <img src="<?=EVENTS_IMAGE_PATH;?>/images/SVG/plus.svg" alt="" class="img-fluid" width="30">
+                                <img src="<?=EVENTS_IMAGE_PATH;?>/SVG/plus.svg" alt="" class="img-fluid" width="30">
                             </div>
                             <div class="col-12 col-lg-5 align-self-center">
                                 <div class="box_blue">
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="col-12 text-center">
-                                <img src="<?=EVENTS_IMAGE_PATH;?>/images/SVG/arrow-down.svg" alt="" class="img-fluid my-0 my-lg-4" width="30">
+                                <img src="<?=EVENTS_IMAGE_PATH;?>/SVG/arrow-down.svg" alt="" class="img-fluid my-0 my-lg-4" width="30">
                             </div>
                         </div>
                         <div class="box_total">
@@ -68,7 +68,7 @@
                                                 <h2 class="mb-0">73,653 <span>円</span></h2>
                                             </div>
                                             <div class="col-4 col-lg-6 text-left">
-                                                <img src="<?=EVENTS_IMAGE_PATH;?>/images/SVG/total_amount.svg" alt="" class="img-fluid total_amount_img" width="99">
+                                                <img src="<?=EVENTS_IMAGE_PATH;?>/SVG/total_amount.svg" alt="" class="img-fluid total_amount_img" width="99">
                                             </div>
                                         </div>
                                     </div>
@@ -78,9 +78,9 @@
                         <p class="about_time_borrowing"><small>※借入年数35年、ボーナス返済なし、元利均等返済、変動金利年0.47％、頭金0円を想定<br>
                         ※このシミュレーションは目安です。実際の購入・借入は、オンライン相談にてお尋ねください。</small></p>
                         <div class="box_why_offer">
-                            <h2 class="mb-2"><img src="<?=EVENTS_IMAGE_PATH;?>/images/SVG/LogRenove_logo.svg" alt="" class="img-fluid" width="162"> が</h2>
+                            <h2 class="mb-2"><img src="<?=EVENTS_IMAGE_PATH;?>/SVG/LogRenove_logo.svg" alt="" class="img-fluid" width="162"> が</h2>
                             <h2>低価格で高品質な住まいを<span>ご提供できる理由とは？</span></h2>
-                            <img src="<?=EVENTS_IMAGE_PATH;?>/images/SVG/one_stop_service.svg" alt="" class="img-fluid w-100 mb-5">
+                            <img src="<?=EVENTS_IMAGE_PATH;?>/SVG/one_stop_service.svg" alt="" class="img-fluid w-100 mb-5">
                             <p>製材から施工、アフターサービスまで自社内で完結し、中間手数料がかからないワンストップサービスを提供しますので、コストを抑えることができます。</p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
         <h2 class="title">まずはお気軽にご相談ください</h2>
         <div class="top_bookonlineconsultation">
             <div class="top_bookonlineconsultation_img">
-                <img src="<?=EVENTS_IMAGE_PATH;?>/images/1x/bg_onlineconsultation.jpg" alt="" class="img-fluid w-100">
+                <img src="<?=EVENTS_IMAGE_PATH;?>/1x/bg_onlineconsultation.jpg" alt="" class="img-fluid w-100">
             </div>
         </div>
         <div class="container">

@@ -17,7 +17,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
             <script src="<?=SCRIPT_PATH;?>/form.js" async></script>
             <?php if($post_type == 'events'): ?>
-                <script src="<?=SCRIPT_PATH;?>/form/events.js?t=<?php echo time()?>" async></script>
+                <script src="<?=SCRIPT_PATH;?>/form/events.js" async></script>
             <?php endif; ?>
         <?php
     endif;

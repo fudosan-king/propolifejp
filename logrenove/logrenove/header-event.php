@@ -40,11 +40,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
 
-    <link rel="stylesheet" href="<?php echo EVENTS_STYLESHEET_PATH;?>/styles.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo EVENTS_STYLESHEET_PATH;?>/events.css" type="text/css">
     <link rel="stylesheet" href="<?php echo EVENTS_STYLESHEET_PATH;?>/bsnav.min.css" type="text/css">
 
     <?php if ($detect->isMobile()): ?>
-        <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.min.css" type="text/css">
+        <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.css" type="text/css">
     <?php endif; ?>
 
     <?php wp_head(); ?>

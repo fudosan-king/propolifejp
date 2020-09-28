@@ -749,7 +749,7 @@
     }
 
     function get_events($args = array()) {
-        $date_diff_events = date_diff_events();
+        $date_diff_events = date_diff_events('', '+2 days');
         $current_term = get_queried_object();
         $d = isset($_GET['d'])?$_GET['d']:'';
         $args_post = array(
@@ -763,7 +763,7 @@
                         array(
                             'key' => 'event_datetime_date',
                             'value' => $date_diff_events,
-                            'compare' => '>',
+                            'compare' => '>=',
                             'type' => 'DATE',
                             )
                     )

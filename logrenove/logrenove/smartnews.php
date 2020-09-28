@@ -134,6 +134,7 @@ do_action( 'rss_tag_pre', 'rss2' );
     //aリンクは含めない。SmartNewsの仕様？リンクが多くあると以下のエラーが出る
     //item.content:encoded の記事内に多くのリンクが含まれています - item.title: 記事のタイトル
     //https://publishers.smartnews.com/ja/smartformat/specification_rss/
+    $content = preg_replace('/◆こちらもおすすめ◆(.*)<\/p>$/sm','</p>', $content);
     $content = preg_replace('{<a [^>]+?>}i', '', $content);
     $content = str_replace('</a>', '', $content);
     $content = $imgHTML.$content; //here

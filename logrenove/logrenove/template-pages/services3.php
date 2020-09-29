@@ -58,7 +58,7 @@
                         </li>
                     </ul>
                     
-                    <p class="my-5 text-center"><a href="#"><img src="<?=EVENTS_IMAGE_PATH;?>/1x/leave_tous.png" alt="" class="img-fluid" width="300"></a></p>
+                    <p class="my-5 text-center"><a href="#box_bookonline"><img src="<?=EVENTS_IMAGE_PATH;?>/1x/leave_tous.png" alt="" class="img-fluid" width="300"></a></p>
                     <div class="card_content">
                         <div class="card text-center">
                             <div class="card-header">オンラインで相談ではこんなことが聞けます</div>

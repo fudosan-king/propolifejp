@@ -14,12 +14,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
 
-    <script src="<?=SERVICE_SCRIPT_PATH;?>/functions.js" async></script>
+    <?php wp_enqueue_script( 'service-script', SERVICE_SCRIPT_PATH.'/functions.js'); ?>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.8/jquery.csv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.1.0/autoNumeric.min.js"></script>
-    <script src="<?=SCRIPT_PATH;?>/form/service.js" async></script>
-    <script src="<?=SCRIPT_PATH;?>/sanitize.min.js" async></script>
+
+    <?php wp_enqueue_script( 'form-service-script', SCRIPT_PATH.'/form/service.js'); ?>
+    <?php wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js'); ?>
 
     <?php if(is_single()): ?>
         <div id="fb-root"></div>

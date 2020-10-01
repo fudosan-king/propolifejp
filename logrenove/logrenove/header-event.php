@@ -46,7 +46,6 @@
             wp_enqueue_style( 'bsnav', STYLESHEET_PATH.'/bsnav.min.css');
             wp_enqueue_style( 'main-sp', STYLESHEET_PATH.'/mobile.css');
         }
-        endif; 
     ?>
 
     <?php wp_head(); ?>

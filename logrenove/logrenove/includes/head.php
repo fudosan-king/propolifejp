@@ -31,8 +31,10 @@
 <noscript><link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css"></noscript>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/styles.min.css?t=<?php echo time()?>" type="text/css">
+
 <?php 
+    wp_enqueue_style( 'main', STYLESHEET_PATH.'/styles.css');
+
     if(is_single()):
         ?>
             <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -45,18 +47,15 @@
             <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"></noscript>
 
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
-            <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/single.min.css?t=<?php echo time()?>" type="text/css">
         <?php
+        wp_enqueue_style( 'single', STYLESHEET_PATH.'/single.css');
     endif;
 ?>
 
 <?php 
     if ($detect->isMobile()):
-        ?>
-            
-        	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/bsnav.min.css" type="text/css">
-        	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.min.css?t=<?php echo time()?>" type="text/css">
-        <?php
+        wp_enqueue_style( 'bsnav', STYLESHEET_PATH.'/bsnav.min.css');
+        wp_enqueue_style( 'main-sp', STYLESHEET_PATH.'/mobile.css');
     endif;
 ?>
 

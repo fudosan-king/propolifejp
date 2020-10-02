@@ -1,5 +1,5 @@
 <?php
-	global $detect;
+    global $detect;
 ?>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
@@ -15,22 +15,26 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
-            <script src="<?=SCRIPT_PATH;?>/form.js" async></script>
-            <?php if($post_type == 'events'): ?>
-                <script src="<?=SCRIPT_PATH;?>/form/events.js?t=<?php echo time()?>" async></script>
-            <?php endif; ?>
+
+            <?php 
+                wp_enqueue_script( 'form-script', SCRIPT_PATH.'/form.js');
+                if($post_type == 'events'){
+                    wp_enqueue_script( 'form-events-script', SCRIPT_PATH.'/form/events.js');
+                }
+            ?>
+            
         <?php
     endif;
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.pkgd.min.js" async></script>
 <?php 
     if (!$detect->isMobile()):
-        ?>
-        	
-			<script src="<?=SCRIPT_PATH;?>/bsnav.min.js" async></script>
-        <?php
+        wp_enqueue_script( 'bsnav-script', SCRIPT_PATH.'/bsnav.min.js');
     endif;
+
+    wp_enqueue_script( 'main-script', SCRIPT_PATH.'/functions.js');
+    wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js');
+
 ?>
 
-<script src="<?=SCRIPT_PATH;?>/functions.js?t=<?php echo time()?>" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" async></script>

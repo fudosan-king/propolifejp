@@ -36,13 +36,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
 
-<link rel="stylesheet" href="<?php echo SERVICE_STYLESHEET_PATH;?>/styles_sv.min.css" type="text/css">
-
-<?php 
+<?php
+    wp_enqueue_style( 'service', SERVICE_STYLESHEET_PATH.'/service.css');
     if ($detect->isMobile()):
-        ?>
-            <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.min.css" type="text/css">
-            <link rel="stylesheet" href="<?php echo SERVICE_STYLESHEET_PATH;?>/mobile_sv.min.css" type="text/css">
-        <?php
+        wp_enqueue_style( 'main-sp', STYLESHEET_PATH.'/mobile.css');
+        wp_enqueue_style( 'service-sp', SERVICE_STYLESHEET_PATH.'/service_sp.css');
     endif;
 ?>

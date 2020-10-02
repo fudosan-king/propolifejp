@@ -45,12 +45,6 @@
 				<div class="caption_content <?=$currentLanguage;?>">
 					<?php _echo($data->caption); ?>
 				</div>
-				<!-- <div class="box_notice"> -->
-            		<?php //echo $noticeContent; ?>
-            	<!-- </div> -->
-            	<a target="_blank" class="banner_goto_asakusa d-none d-md-block" href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/index.aspx?hi_id=2&lang=ja-JP"><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_asakusa.png" alt="" class="img-fluid"></a>
-
-				<a target="_blank" class="banner_goto_asakusa d-block d-md-none" href="https://advance.reservation.jp/prostyleryokan/s_sp/rsv/search.aspx?hi_id=2&lang=ja-JP&sm=opt"><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_asakusa.png" alt="" class="img-fluid"></a>
 			</div>
 		</div>
 	</div>
@@ -61,9 +55,9 @@
         <div class="row">
             <div class="col-12">
             	<div class="wrap_note">
-	            	<div class="box_note mb-5">
-		            	<?php echo $noticeContent; ?>
-	            	</div>
+	            	<!-- <div class="box_note mb-5">
+		            	<?php //echo $noticeContent; ?>
+	            	</div> -->
 	            	<p class="mb-4 d-block d-md-none" ><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect.aspx?hi_id=2&lang=ja-JP&p_id=16&page=plan"><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="" class="img-fluid"></a></p>
 	            	<p class="mb-4 d-none d-md-block" ><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?smp_id=16&hi_id=2&lang=ja-JP"><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="" class="img-fluid"></a></p>
 	            	<div class="box_note">

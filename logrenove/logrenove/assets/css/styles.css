@@ -435,7 +435,7 @@ main {
 }
 
 .section_main {
-	margin-top: 60px
+	/*margin-top: 60px*/
 }
 
 .sub_page {
@@ -2777,7 +2777,15 @@ ul.list_event li a.disabled {
 		left: 15px;
 	}
 }
-.frm_services .custom-checkbox .custom-control-input.is-valid~.custom-control-label, .frm_services .custom-checkbox .was-validated .custom-control-input:valid~.custom-control-label {
+.section_breakcrum #breadcrumbs a {
+	padding-right: 4px;
+}
+.breadcrumb-cat a:nth-child(1) {
+	padding-right: 8px;
+}
+.breadcrumb-cat a:nth-child(2) {
+	padding-left: 8px;
+}.frm_services .custom-checkbox .custom-control-input.is-valid~.custom-control-label, .frm_services .custom-checkbox .was-validated .custom-control-input:valid~.custom-control-label {
     color: unset;
 }
 .frm_services .custom-checkbox .custom-control-input.is-valid:checked~.custom-control-label::before, .frm_services .custom-checkbox .was-validated .custom-control-input:valid:checked~.custom-control-label::before {

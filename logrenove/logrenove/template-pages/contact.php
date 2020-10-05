@@ -35,7 +35,7 @@
                                                 <textarea name="free_detail_contact" id="" cols="30" rows="7" class="form-control"></textarea>
                                             </div>
                                             <p class="text-center mb-0">「プライバシーポリシー」をご一読ください。</p>
-                                            <p class="text-center"><a href="https://www.propolife.co.jp/privacypolicy/" class="btn_privacypolicy">プライバシーポリシーを開く(株式会社プロポライフグループ)</a></p>
+                                            <p class="text-center"><a href="https://www.propolife.co.jp/privacypolicy/" class="btn_privacypolicy" target="_blank" rel="noopener noreferrer" >プライバシーポリシーを開く(株式会社プロポライフグループ)</a></p>
                                             <p class="text-center"><button type="submit" class="btn btnAccept">上記に同意して送信</button></p> 
                                         </form>
                                     <?php

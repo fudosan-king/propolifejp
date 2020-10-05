@@ -27,12 +27,12 @@
             }break;
             default:{
                 $noticeContent = '<p class="d-block d-md-none">
-                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect.aspx?hi_id=2&amp;lang=ja-JP&amp;p_id=16&amp;page=plan">
+                                    <a href="#" data-tripla-booking-widget="search">
                                         <img src="'.IMAGES_PATH.'/1x/stay_hotel.jpg" alt="" class="img-fluid">
                                     </a>
                                   </p>
                                   <p class="d-none d-md-block">
-                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?hi_id=1&lang=ja-JP&smp_id=38&to_pos=1">
+                                    <a href="#" data-tripla-booking-widget="search">
                                          <img src="'.IMAGES_PATH.'/1x/stay_hotel.jpg" alt="" class="img-fluid">
                                     </a>
                                   </p>';

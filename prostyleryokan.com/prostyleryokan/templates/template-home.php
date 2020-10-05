@@ -59,13 +59,13 @@ get_header();
                     <div class="box_main_img">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/2019-12-03@10-33-43-IMG_0043.jpg" alt="" class="img-fluid">
                     </div>
-                    <div class="row no-gutters">
-                        <div class="col-12 col-md-6">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12 col-md-6 col-auto">
                             <a href="https://www.prostyleryokan.com/tokyo-asakusa/" class="btn btn_facility" target="_blank" >施設サイトへ</a>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <!-- <div class="col-12 col-md-6">
                             <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect_ser.aspx?lang=ja-JP&hi_id=2" class="btn btn_reservation" target="_blank">予約サイトへ</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -81,13 +81,13 @@ get_header();
                     <div class="box_main_img">
                         <img src="<?php echo TEMPLATE_ASSETS_PATH; ?>/img/1x/pt-slide03.jpg" alt="" class="img-fluid">
                     </div>
-                    <div class="row no-gutters">
-                        <div class="col-12 col-md-6">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12 col-md-6 col-auto">
                             <a href="https://www.prostyleryokan.com/yokohamabashamichi/" class="btn btn_facility" target="_blank">施設サイトへ</a>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <!-- <div class="col-12 col-md-6">
                             <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect_ser.aspx?lang=ja-JP&hi_id=1" class="btn btn_reservation" target="_blank">予約サイトへ</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

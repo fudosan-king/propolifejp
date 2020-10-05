@@ -20,12 +20,9 @@
                     <br>
                     <p>※清掃およびアメニティ交換のタイミングは宿泊期間中1回となっています。</p>
                     <br>
-                    <p>【営業再開のお知らせ】</p>
-
-                    <p>PROSTYLE旅館横浜馬車道は、新型コロナウイルスの影響により </p>
-                    <p>4月1日より休館とさせて頂いておりましたが、この度6月1日より営業再開とさせて頂きます。</p>
-
-                    <p>営業再開にあたり、お客様にはより安全・安心にご利用頂く為、引き続き感染防止策を徹底してまいります。</p>
+                    <p>【自社ＨＰリニューアルに伴うおしらせ】</p>
+                    <p>自社ＨＰリニューアルに伴い9月18日までにご予約いただいたお客様は下記ＵＲＬよりキャンセル、変更をお願いいたします。</p>
+                    <p><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1">https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1</a></p>
                 </div>
             </div>
         </div>

@@ -25,6 +25,10 @@
             
         <?php
     endif;
+
+    if(is_page('contact')) {
+        wp_enqueue_script( 'form-contact-script', SCRIPT_PATH.'/form/contact.js');
+    }
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.pkgd.min.js" async></script>
 <?php 

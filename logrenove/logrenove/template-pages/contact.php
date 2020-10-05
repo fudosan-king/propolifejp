@@ -6,6 +6,13 @@
 
 <?php get_header(); ?>
 
+<style type="text/css">
+    .validate-error {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important;
+        border-color: #ff0000!important;
+    }
+</style>
+
 <main class="sub_underpage">
 
     <section class="section_contact">
@@ -26,7 +33,7 @@
                                                 <label for="">メールアドレス（必須）</label>
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
-                                                        <input type="email" name="email" class="form-control" required>
+                                                        <input type="email" name="email" class="form-control required">
                                                     </div>
                                                 </div>
                                             </div>

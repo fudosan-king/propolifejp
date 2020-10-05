@@ -592,14 +592,16 @@
 
     function get_recommend_articles_ids($post_type='post')
     {
+        global $wp_query;
         $articles_ids = [];
-        if(is_single())
-        {
-            $field = 'articles';
-            $post_id = get_queried_object_id();
+        // if(is_single())
+        // {
+        //     $field = 'articles';
+        //     $post_id = get_queried_object_id();
 
-        }
-        elseif(is_home())
+        // }
+        // else
+        if(is_home())
         {
             $field = 'home_recommend_articles';
             $post_id = 'option';
@@ -607,7 +609,15 @@
         else
         {
             $field = 'category_articles';
-            $post_id = get_queried_object();
+            if(is_single())
+            {
+                $post_cat_id = wp_get_post_categories($wp_query->post->ID)[0];
+                $post_id = 'category_'.$post_cat_id;
+            }
+            else 
+            {
+                $post_id = get_queried_object();
+            }
         }
         for($i=1;$i<=5;$i++)
         {

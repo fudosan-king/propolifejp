@@ -45,6 +45,10 @@
 				<div class="caption_content <?=$currentLanguage;?>">
 					<?php _echo($data->caption); ?>
 				</div>
+				<!-- <div class="box_notice"> -->
+            		<?php //echo $noticeContent; ?>
+            	<!-- </div> -->
+				<a target="_blank" class="banner_goto_asakusa " href="#"  data-tripla-booking-widget='search'><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_prostyle.jpg" alt="" class="img-fluid"></a>
 			</div>
 		</div>
 	</div>

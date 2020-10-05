@@ -4,12 +4,12 @@
             <div class="col-12">
                 <?php //the_breadcrumb(); ?>
                 <?php
-                    if ( function_exists('yoast_breadcrumb') ) {
-                      yoast_breadcrumb( '<nav id="breadcrumbs">','</nav>' );
-                    }
+                if ( function_exists('the_breadcrumb') ) {
+                    the_breadcrumb();
+                }
                 ?>
             </div>
         </div>
-        
+
     </div>
 </section>

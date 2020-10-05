@@ -173,8 +173,8 @@
     {
         $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
         // $delimiter = '&raquo;'; // delimiter between crumbs
-        $delimiter = '&gt;'; // delimiter between crumbs
-        
+        $delimiter = ''; // delimiter between crumbs
+
         $home = 'TOP'; // text for the 'Home' link
         $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
         $before = '<li class="breadcrumb-item active" aria-current="page">'; // tag before the current crumb
@@ -182,8 +182,7 @@
 
         global $post;
         $homeLink = get_bloginfo('url');
-
-        $shortTitle = mb_strimwidth(get_the_title(), 0, 44, '...');
+        $shortTitle = get_the_title();
 
         if (is_home() || is_front_page()) {
             if ($showOnHome == 1) {
@@ -213,9 +212,10 @@
                 } else {
                     // here
                     $cat = get_the_category();
-                    $cat = $cat[0];                   
-                        
-                    $cats = '<li class="breadcrumb-item">' . get_category_parents($cat, true, ' ' . $delimiter . ' '). '</li>';
+                    $cat = $cat[0];
+
+                    $cats = '<li class="breadcrumb-item breadcrumb-cat">' . get_category_parents($cat, true, '  /  '). '</li>';
+                    $cats = preg_replace('/\s\s\/\s\s(<\/li>)$/', "$1", $cats, 1);
                     if ($showCurrent == 0) {
                         $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
                     }

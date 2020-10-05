@@ -4,8 +4,11 @@
             <div class="col-12">
                 <?php //the_breadcrumb(); ?>
                 <?php
-                if ( function_exists('the_breadcrumb') ) {
-                    the_breadcrumb();
+                global $detect;
+                if(!$detect->isMobile()){
+                    if ( function_exists('the_breadcrumb') ) {
+                        the_breadcrumb();
+                    }
                 }
                 ?>
             </div>

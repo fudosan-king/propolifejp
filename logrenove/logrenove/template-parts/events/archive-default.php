@@ -34,8 +34,9 @@
             </div>
         <?php
             endwhile;
-            $pagination = get_query_pagination_events(array(), $posts->max_num_pages);
+            $pagination = get_query_pagination_events($posts->max_num_pages);
         endif;
+        wp_reset_postdata();
         wp_reset_query();
         ?>
     </div>

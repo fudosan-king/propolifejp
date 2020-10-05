@@ -2777,3 +2777,10 @@ ul.list_event li a.disabled {
 		left: 15px;
 	}
 }
+.frm_services .custom-checkbox .custom-control-input.is-valid~.custom-control-label, .frm_services .custom-checkbox .was-validated .custom-control-input:valid~.custom-control-label {
+    color: unset;
+}
+.frm_services .custom-checkbox .custom-control-input.is-valid:checked~.custom-control-label::before, .frm_services .custom-checkbox .was-validated .custom-control-input:valid:checked~.custom-control-label::before {
+    background: #AE8148;
+    border-color: #AE8148;
+}

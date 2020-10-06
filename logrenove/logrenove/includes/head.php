@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css">
 
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css"></noscript>
 
 <link rel="preload" href="<?php echo STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">

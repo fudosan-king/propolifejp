@@ -7,7 +7,21 @@
 <?php get_template_part( 'template-parts/banner', 'top' ); ?>
 
 <main>
-    <!-- NOTIFITION  -->
+     <section class="section_notify_stay_hotel">
+        <div class="container">
+            <div class="row">
+                <div class="box_concept">
+                    <p class="d-block d-md-none">                       
+                        <img src="<?= IMAGES_PATH?>/1x/stay_hotel.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid">
+                    </p>
+                    <p class="d-none d-md-block">
+                        <img src="<?= IMAGES_PATH ?>/1x/stay_hotel.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid">                       
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section_notify">
         <div class="container">
             <div class="row">
@@ -22,7 +36,7 @@
                     <br>
                     <p>【自社ＨＰリニューアルに伴うおしらせ】</p>
                     <p>自社ＨＰリニューアルに伴い9月18日までにご予約いただいたお客様は下記ＵＲＬよりキャンセル、変更をお願いいたします。</p>
-                    <p><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1">https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1</a></p>
+                    <p><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1" class="link-content">https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1</a></p>
                 </div>
             </div>
         </div>

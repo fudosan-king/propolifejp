@@ -22,13 +22,13 @@
                             <div class="box_ryokan_img">
                                 <img src="<?php echo SGVINK_IMAGES_URI; ?>/main01.jpg" alt="" class="img-fluid">
                             </div>
-                            <div class="row no-gutters">
+                            <div class="row no-gutters justify-content-center">
                                 <div class="col-6 col-lg-6">
                                     <a target="_blank" href="https://www.prostyleryokan.com/yokohamabashamichi/" class="btn btngoto">施設サイトへ</a>
                                 </div>
-                                <div class="col-6 col-lg-6">
+                                <!-- <div class="col-6 col-lg-6">
                                     <a target="_blank" href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect_ser.aspx?lang=ja-JP&hi_id=1" class="btn btngoto mr-0">予約サイトへ</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -40,13 +40,13 @@
                             <div class="box_ryokan_img">
                                 <img src="<?php echo SGVINK_IMAGES_URI; ?>/main02.jpg" alt="" class="img-fluid">
                             </div>
-                            <div class="row no-gutters">
+                            <div class="row no-gutters justify-content-center">
                                 <div class="col-6 col-lg-6">
                                     <a target="_blank" href="https://www.prostyleryokan.com/tokyo-asakusa/" class="btn btngoto">施設サイトへ</a>
                                 </div>
-                                <div class="col-6 col-lg-6">
+                                <!-- <div class="col-6 col-lg-6">
                                     <a target="_blank" href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect_ser.aspx?lang=ja-JP&hi_id=2" class="btn btngoto mr-0">予約サイトへ</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

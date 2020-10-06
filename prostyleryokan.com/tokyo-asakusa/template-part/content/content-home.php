@@ -1,5 +1,5 @@
 
-	<?php include_once 'home/booking.php'; ?>
+	<?php //include_once 'home/booking.php'; ?>
 	
 	<div class="main_content">
 		

@@ -28,14 +28,10 @@
             default:{
                 $noticeContent = '
                                   <p class="d-block d-md-none">
-                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect.aspx?hi_id=2&amp;lang=ja-JP&amp;p_id=16&amp;page=plan">
-                                        <img src="'.IMAGES_PATH.'/1x/stay_hotel_test.jpg" alt="" class="img-fluid">
-                                    </a>
+                                        <img src="'.IMAGES_PATH.'/1x/stay_hotel_test.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid" width="480px">
                                   </p>
                                   <p class="d-none d-md-block">
-                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?hi_id=1&lang=ja-JP&smp_id=38&to_pos=1">
-                                         <img src="'.IMAGES_PATH.'/1x/stay_hotel_test.jpg" alt="" class="img-fluid">
-                                    </a>
+                                        <img src="'.IMAGES_PATH.'/1x/stay_hotel_test.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid" width="480px">
                                   </p>';
             }
         }
@@ -52,7 +48,7 @@
                     data-ease="easeOutQuint"
                     data-masked="true"
                     data-offset-x="0"
-                    data-offset-y="-250"
+                    data-offset-y="-225"
                     data-origin="mc"
                     data-position="normal"
                     data-mask-width="214"><h1><img src="<?php echo IMAGES_PATH; ?>/1x/logo_banner.png" alt="PROSTYLE旅館 横浜馬車道" width="214"></h1>
@@ -71,21 +67,21 @@
                     data-mask-width="1300">文明開化の地で心地よい安らぎを
                     </h2>
 
-                    <div class="ms-layer box_notice1"
+                    <div class="ms-layer box_notice"
                     style=""
                     data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
                     data-duration="4000"
                     data-delay="400"
                     data-ease="easeOutQuint"
                     data-offset-x="0"
-                    data-offset-y="50"
-                    data-origin="mc"
+                    data-offset-y="150"
+                    data-origin="bc"
                     data-position="normal"
                     data-masked="true"
-                    data-mask-width="500"><p class="d-block"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle_test.jpg" alt="" class="img-fluid"></a></p>
+                    data-mask-width="1300"><p class="d-block"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
                     </div>
 
-                    <div class="ms-layer "
+                    <!-- <div class="ms-layer "
                     style=""
                     data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
                     data-duration="4000"
@@ -96,8 +92,8 @@
                     data-origin="mc"
                     data-position="normal"
                     data-masked="true"
-                    data-mask-width="500"><?php echo $noticeContent; ?>
-                    </div>
+                    data-mask-width="500"><?php //echo $noticeContent; ?>
+                    </div> -->
                     
                 </div>
 

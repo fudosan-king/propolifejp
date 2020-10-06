@@ -45,7 +45,7 @@
                         }                    
                     }
                     get_nav_lang();
-                    echo '<li class="nav-item"><a class="nav-link btnBooking" href="#modal_booking" data-toggle="modal">Booking <i class="fal fa-angle-right fa-lg"></i></a></li>';
+                    echo '<li class="nav-item"><a class="nav-link btnBooking" href="#"  data-tripla-booking-widget="search">Booking <i class="fal fa-angle-right fa-lg"></i></a></li>';
                     get_nav_lang(true);
                     echo '</ul>';
                 }

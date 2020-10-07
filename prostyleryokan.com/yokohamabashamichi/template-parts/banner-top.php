@@ -48,7 +48,7 @@
                     data-ease="easeOutQuint"
                     data-masked="true"
                     data-offset-x="0"
-                    data-offset-y="-225"
+                    data-offset-y="-200"
                     data-origin="mc"
                     data-position="normal"
                     data-mask-width="214"><h1><img src="<?php echo IMAGES_PATH; ?>/1x/logo_banner.png" alt="PROSTYLE旅館 横浜馬車道" width="214"></h1>
@@ -60,14 +60,14 @@
                     data-delay="400"
                     data-ease="easeOutQuint"
                     data-offset-x="-3"
-                    data-offset-y="-100"
+                    data-offset-y="-50"
                     data-origin="mc"
                     data-position="normal"
                     data-masked="true"
                     data-mask-width="1300">文明開化の地で心地よい安らぎを
                     </h2>
 
-                    <div class="ms-layer box_notice"
+                    <div class="ms-layer d-none d-md-block "
                     style=""
                     data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
                     data-duration="4000"
@@ -75,11 +75,27 @@
                     data-ease="easeOutQuint"
                     data-offset-x="0"
                     data-offset-y="150"
-                    data-origin="bc"
+                    data-origin="mc"
                     data-position="normal"
                     data-masked="true"
-                    data-mask-width="1300"><p class="d-block"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
+                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
                     </div>
+
+                    <div class="ms-layer d-block d-md-none"
+                    style=""
+                    data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
+                    data-duration="4000"
+                    data-delay="400"
+                    data-ease="easeOutQuint"
+                    data-offset-x="0"
+                    data-offset-y="350"
+                    data-origin="mc"
+                    data-position="normal"
+                    data-masked="true"
+                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
+                    </div>
+
+                
 
                     <!-- <div class="ms-layer "
                     style=""

@@ -43,7 +43,7 @@
                         $count = 0;
                         while($query->have_posts()): $query->the_post();
                             $_size = $detect->isMobile() ? 'medium' : 'large' ;
-                            $thumbnails = new ThumbnailItem(get_post_thumbnail_id(), 'medium');
+                            $thumbnails = new ThumbnailItem(get_post_thumbnail_id(), 'full');
                             $firstCat = get_the_category()[0];
                             $count++;
 
@@ -82,7 +82,7 @@
             if(have_posts()):
                 $count = 0;
                 while(have_posts()): the_post();
-                    $_size = $detect->isMobile() ? 'thumbnail' : 'medium' ;
+                    $_size = $detect->isMobile() ? 'full' : 'full' ;
                     $firstCat = get_the_category()[0];
                     $thumbnails = new ThumbnailItem(get_post_thumbnail_id(), $_size);
                     ?>

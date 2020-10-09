@@ -2840,4 +2840,23 @@ ul.list_event li a.disabled {
     .insta_btn2 span {
         top: -3px !important;
     }
+
+	header {
+        position: fixed;
+        background: #fff;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        transition: all .3s ease;
+        box-shadow: 0 1px 25px rgba(0,0,0, .1);
+    }
+    main {
+        padding-top: 60px;
+    }
+    .nav-up {
+        top: -60px;
+    }
+    .section_cookie {
+        transition: visibility 0s linear 300ms, opacity 300ms;
+    }
 }

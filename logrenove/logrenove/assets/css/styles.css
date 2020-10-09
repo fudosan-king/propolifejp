@@ -2841,3 +2841,7 @@ ul.list_event li a.disabled {
         top: -3px !important;
     }
 }
+
+.box_article_detail h1,h2,h3,h4 {
+	color: #000 !important;
+}

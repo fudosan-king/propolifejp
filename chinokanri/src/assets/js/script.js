@@ -13,6 +13,10 @@ $(function() {
         }, 400);
         return false;
     });
+
+    $(".footer_top_content .footer_top_item h4").click(function(){
+        $(this).parent(".footer_top_item").toggleClass("open"); 
+    });
 });
 $(document).ready(function () {
     $('.numbersOnly').keyup(function () {

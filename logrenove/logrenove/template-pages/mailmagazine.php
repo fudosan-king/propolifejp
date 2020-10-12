@@ -29,7 +29,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
                                             <div class="registration_option_img">
-                                                <a href="#"><img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo.jpg" alt="" class="img-fluid"></a>
+                                                <img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo.jpg" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-12">
@@ -46,7 +46,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
                                             <div class="registration_option_img">
-                                                <a href="#"><img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo02.jpg" alt="" class="img-fluid"></a>
+                                                <img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo02.jpg" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-12">
@@ -63,7 +63,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
                                             <div class="registration_option_img">
-                                                <a href="#"><img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo03.jpg" alt="" class="img-fluid"></a>
+                                                <img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo03.jpg" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-12">
@@ -121,11 +121,11 @@
 
                                 <div class="form-group text-center">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="ck_agree" checked="">
-                                        <label class="custom-control-label font-weight-normal" for="ck_agree">同意する</label>
+                                        <input type="checkbox" name="ck_agree" class="custom-control-input required" id="ck_agree" checked="">
+                                        <label class="custom-control-label font-weight-normal ck_agree" for="ck_agree">同意する</label>
                                     </div>
 
-                                    <button type="submit" class="btn btnAgree" id="btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>
+                                    <button type="submit" class="btn btnAgree" id="btnAgree">上記に同意して登録する <i class="i_rightwhite"></i></button>
                                 </div>
                             </div>
                         </div>

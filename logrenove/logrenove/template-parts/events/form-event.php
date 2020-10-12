@@ -1,5 +1,12 @@
 <?php $even_datetime = get_event_datetime(); ?>
 
+<style type="text/css">
+    .validate-error {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important;
+        border-color: #ff0000!important;
+    }
+</style>
+
 <form id="frm_services" class="frm_services" action="https://go.pardot.com/l/185822/2020-09-01/qh62y3" method="post" accept-charset="utf-8">
     <div class="frm-input">
         <div class="form-group">

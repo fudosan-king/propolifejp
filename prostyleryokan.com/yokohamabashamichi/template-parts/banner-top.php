@@ -26,15 +26,12 @@
                     期待您的光臨。</p>';
             }break;
             default:{
-                $noticeContent = '<p class="d-block d-md-none">
-                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/htl_redirect.aspx?hi_id=2&amp;lang=ja-JP&amp;p_id=16&amp;page=plan">
-                                        <img src="'.IMAGES_PATH.'/1x/stay_hotel.jpg" alt="" class="img-fluid">
-                                    </a>
+                $noticeContent = '
+                                  <p class="d-block d-md-none">
+                                        <img src="'.IMAGES_PATH.'/1x/stay_hotel_test.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid" width="480px">
                                   </p>
                                   <p class="d-none d-md-block">
-                                    <a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/detail_plan_calendar.aspx?hi_id=1&lang=ja-JP&smp_id=38&to_pos=1">
-                                         <img src="'.IMAGES_PATH.'/1x/stay_hotel.jpg" alt="" class="img-fluid">
-                                    </a>
+                                        <img src="'.IMAGES_PATH.'/1x/stay_hotel_test.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid" width="480px">
                                   </p>';
             }
         }
@@ -70,19 +67,49 @@
                     data-mask-width="1300">文明開化の地で心地よい安らぎを
                     </h2>
 
-                    <div class="ms-layer box_notice"
+                    <div class="ms-layer d-none d-md-block "
                     style=""
                     data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
                     data-duration="4000"
                     data-delay="400"
                     data-ease="easeOutQuint"
-                    data-offset-x="-3"
-                    data-offset-y="130"
+                    data-offset-x="0"
+                    data-offset-y="150"
                     data-origin="mc"
                     data-position="normal"
                     data-masked="true"
-                    data-mask-width="1300"><?php echo $noticeContent; ?>
+                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
                     </div>
+
+                    <div class="ms-layer d-block d-md-none"
+                    style=""
+                    data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
+                    data-duration="4000"
+                    data-delay="400"
+                    data-ease="easeOutQuint"
+                    data-offset-x="0"
+                    data-offset-y="350"
+                    data-origin="mc"
+                    data-position="normal"
+                    data-masked="true"
+                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
+                    </div>
+
+                
+
+                    <!-- <div class="ms-layer "
+                    style=""
+                    data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
+                    data-duration="4000"
+                    data-delay="400"
+                    data-ease="easeOutQuint"
+                    data-offset-x="0"
+                    data-offset-y="250"
+                    data-origin="mc"
+                    data-position="normal"
+                    data-masked="true"
+                    data-mask-width="500"><?php //echo $noticeContent; ?>
+                    </div> -->
                     
                 </div>
 

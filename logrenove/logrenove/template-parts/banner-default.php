@@ -57,7 +57,7 @@
                 <div class="carousel carousel_banner">
             <?php
             while($query->have_posts()): $query->the_post();
-                $_size = $detect->isMobile() ? 'medium' : 'large' ;
+                $_size = $detect->isMobile() ? 'full' : 'full' ;
                 $thumbnails = new ThumbnailItem(get_post_thumbnail_id(), $_size);
                 $firstCat = get_the_category()[0];
                 ?>

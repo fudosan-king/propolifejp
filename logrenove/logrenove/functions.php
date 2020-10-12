@@ -173,8 +173,8 @@
     {
         $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
         // $delimiter = '&raquo;'; // delimiter between crumbs
-        $delimiter = '&gt;'; // delimiter between crumbs
-        
+        $delimiter = ''; // delimiter between crumbs
+
         $home = 'TOP'; // text for the 'Home' link
         $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
         $before = '<li class="breadcrumb-item active" aria-current="page">'; // tag before the current crumb
@@ -182,8 +182,7 @@
 
         global $post;
         $homeLink = get_bloginfo('url');
-
-        $shortTitle = mb_strimwidth(get_the_title(), 0, 44, '...');
+        $shortTitle = get_the_title();
 
         if (is_home() || is_front_page()) {
             if ($showOnHome == 1) {
@@ -213,9 +212,10 @@
                 } else {
                     // here
                     $cat = get_the_category();
-                    $cat = $cat[0];                   
-                        
-                    $cats = '<li class="breadcrumb-item">' . get_category_parents($cat, true, ' ' . $delimiter . ' '). '</li>';
+                    $cat = $cat[0];
+
+                    $cats = '<li class="breadcrumb-item breadcrumb-cat">' . get_category_parents($cat, true, '  /  '). '</li>';
+                    $cats = preg_replace('/\s\s\/\s\s(<\/li>)$/', "$1", $cats, 1);
                     if ($showCurrent == 0) {
                         $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
                     }
@@ -554,7 +554,7 @@
             $obj = new stdClass();
             $obj->permalink = get_permalink($articles_id);
             $obj->title = get_the_title($articles_id);
-            $_size = $detect->isMobile() ? 'medium' : 'thumbnail' ;
+            $_size = $detect->isMobile() ? 'full' : 'full' ;
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
             $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
             $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
@@ -592,14 +592,16 @@
 
     function get_recommend_articles_ids($post_type='post')
     {
+        global $wp_query;
         $articles_ids = [];
-        if(is_single())
-        {
-            $field = 'articles';
-            $post_id = get_queried_object_id();
+        // if(is_single())
+        // {
+        //     $field = 'articles';
+        //     $post_id = get_queried_object_id();
 
-        }
-        elseif(is_home())
+        // }
+        // else
+        if(is_home())
         {
             $field = 'home_recommend_articles';
             $post_id = 'option';
@@ -607,7 +609,15 @@
         else
         {
             $field = 'category_articles';
-            $post_id = get_queried_object();
+            if(is_single())
+            {
+                $post_cat_id = wp_get_post_categories($wp_query->post->ID)[0];
+                $post_id = 'category_'.$post_cat_id;
+            }
+            else 
+            {
+                $post_id = get_queried_object();
+            }
         }
         for($i=1;$i<=5;$i++)
         {
@@ -698,6 +708,13 @@
 
     # Events
 
+    function set_posts_per_page_for_events_cpt( $query ) {
+        if ( !is_admin() && $query->is_main_query() && (is_post_type_archive( 'events' ) || is_tax('event_category') || is_tax('event_tags'))) {
+            $query->set( 'posts_per_page', '15' );
+        }
+    }
+    add_action( 'pre_get_posts', 'set_posts_per_page_for_events_cpt' );
+
     function get_event_datetime()
     {
         $post_id = get_queried_object_id();
@@ -712,13 +729,10 @@
 
     if( !function_exists('get_query_pagination_events') ) {
     
-        function get_query_pagination_events($args = array(), $max_num_pages = ''){
-            global $wp_query;
-            global $paged;
-
-            $total = !empty($max_num_pages)?$max_num_pages:$wp_query->max_num_pages;
+        function get_query_pagination_events($max_num_pages = '', $args = array()){
+            global $wp_query, $paged;
+            $total = !empty($max_num_pages) ? $max_num_pages : $wp_query->max_num_pages;
             $cpaged = max(1, $paged);
-
             $paginationHTML = ' <nav><ul class="pagination justify-content-center">';
             $pagination = paginate_links( 
                 array(
@@ -752,21 +766,47 @@
         $date_diff_events = date_diff_events('', '+2 days');
         $current_term = get_queried_object();
         $d = isset($_GET['d'])?$_GET['d']:'';
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args_post = array(
                     'post_type' => 'events',
-                    'posts_per_page' => 6,
-                    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
-                    'orderby'   => 'meta_value',
-                    'meta_key' => 'event_datetime_date',
-                    'order' => 'ASC',
+                    'posts_per_page' => 15,
+                    'paged' => $paged,
+                    'post_status' => 'publish',
+                    'ignore_sticky_posts' => true,
+                    'perm' => 'readable',
+                    'no_found_rows'          => false,
+                    'cache_results'          => true,
+                    'update_post_term_cache' => true,
+                    'update_post_meta_cache' => true,
                     'meta_query' => array(
                         array(
                             'key' => 'event_datetime_date',
                             'value' => $date_diff_events,
                             'compare' => '>=',
                             'type' => 'DATE',
-                            )
-                    )
+                        ),
+                        'relation'  => 'AND',
+                        'event_datetime_date' => array(
+                            'key'       => 'event_datetime_date',
+                            'compare'   => 'EXISTS',
+                            'type'      => 'DATE'
+                        ),
+                        'event_datetime_hour' => array(
+                            'key'       => 'event_datetime_hour',
+                            'compare'   => 'EXISTS',
+                            'type'      => 'NUMERIC'
+                        ),
+                        'event_datetime_minute' => array(
+                            'key'       => 'event_datetime_minute',
+                            'compare'   => 'EXISTS',
+                            'type'      => 'NUMERIC'
+                        ),
+                    ),
+                    'orderby'   => array(
+                        'event_datetime_date' => 'ASC',
+                        'event_datetime_hour' => 'ASC',
+                        'event_datetime_minute' => 'ASC',
+                    ),
                 );
         if(is_term($current_term->term_id) != NULL)
         {
@@ -774,7 +814,7 @@
                 array(
                 'taxonomy' => get_query_var('taxonomy'),
                 'field' => 'term_id',
-                'terms' => $current_term->term_id,
+                'terms' => array($current_term->term_id),
                  )
               ));
             $args_post = array_merge($args_post, $args_term);

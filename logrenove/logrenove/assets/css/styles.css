@@ -2777,3 +2777,67 @@ ul.list_event li a.disabled {
 		left: 15px;
 	}
 }
+.section_breakcrum #breadcrumbs a {
+	padding-right: 4px;
+}
+.breadcrumb-cat a:nth-child(1) {
+	padding-right: 8px;
+}
+.breadcrumb-cat a:nth-child(2) {
+	padding-left: 8px;
+}.frm_services .custom-checkbox .custom-control-input.is-valid~.custom-control-label, .frm_services .custom-checkbox .was-validated .custom-control-input:valid~.custom-control-label {
+    color: unset;
+}
+.frm_services .custom-checkbox .custom-control-input.is-valid:checked~.custom-control-label::before, .frm_services .custom-checkbox .was-validated .custom-control-input:valid:checked~.custom-control-label::before {
+    background: #AE8148;
+    border-color: #AE8148;
+}
+
+/* Instagram button */
+
+.insta_btn2{
+    font-weight: 800;
+    color: #FFF;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block !important;
+    height: 20px;
+    width: 97px;
+    text-align: center !important;
+    font-size: 15px !important;
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat !important;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat !important;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 0px !important;
+}
+
+.insta_btn2:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+    background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+}
+
+.insta_btn2 .fa-instagram{
+    position: relative;
+    top: -1px;
+}
+
+.insta_btn2 span {
+    display:inline-block;
+    position: relative;
+    transition: .5s;
+    font-size: 11px;
+    top: -4px;
+}
+
+@media (max-width: 768px) {
+    .insta_btn2 span {
+        top: -3px !important;
+    }
+}

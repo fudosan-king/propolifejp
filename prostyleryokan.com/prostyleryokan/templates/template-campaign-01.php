@@ -21,9 +21,7 @@ get_header();
     <section class="section_contact">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2 class="title">キャンペーン</h2>
-                    
+                <div class="col-12">                   
                     <?php if(isset($_GET['finish']) && $_GET['finish'] == 1): ?>
                         <div style="
                             font-size:16pt;
@@ -34,7 +32,7 @@ get_header();
                             -webkit-box-shadow: 10px 10px 15px 0px rgba(171,171,171,0.87);
                             -moz-box-shadow: 10px 10px 15px 0px rgba(171,171,171,0.87);
                             box-shadow: 10px 10px 15px 0px rgba(171,171,171,0.87);
-                        ">お問い合わせありがとうございました。</div>
+                        ">ご応募ありがとうございました。</div>
                     <?php else: ?>
                         <p class="text-center">必要事項をご入力の上、「入力内容を確認する」ボタンを押してください。<br>
                         <span class="red">＊</span>がついている項目はご記入必須項目になります。</p>

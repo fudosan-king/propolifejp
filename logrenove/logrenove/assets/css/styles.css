@@ -2854,7 +2854,7 @@ ul.list_event li a.disabled {
         padding-top: 60px;
     }
     .nav-up {
-        top: -60px;
+        top: -160px;
     }
     .section_cookie {
         transition: visibility 0s linear 300ms, opacity 300ms;

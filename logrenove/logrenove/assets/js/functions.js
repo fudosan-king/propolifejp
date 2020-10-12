@@ -230,7 +230,9 @@ jQuery(function($) {
     });
     
 });
+
 jQuery(function($) {
+    if (isMobile) {
 // Hide Header on on scroll down
     var didScroll;
     var lastScrollTop = 0;
@@ -275,5 +277,6 @@ jQuery(function($) {
                 : footer.style.visibility = 'visible';
             this.lastScroll = scrollY;
         }
+    }
     }
 })

@@ -1,7 +1,7 @@
 <header>
     <div class="top_header">
         <div class="container">
-            <div class="row">
+            <div class="row no-gutters">
                 <div class="col-3 col-md-4 align-self-center">
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_md"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_sm"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>

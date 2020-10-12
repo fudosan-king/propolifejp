@@ -22,11 +22,14 @@
 
                 <?php
                 $related = get_posts(
-                    array(
-                        'category__in' => wp_get_post_categories( get_the_ID() ),
-                        'numberposts'  => 5,
-                        'post__not_in' => array( get_the_ID() )
-                    )
+	                array(
+		                'category__in' => wp_get_post_categories( get_the_ID() ),
+		                'numberposts'  => 5,
+		                'post_status' => 'publish',
+		                'orderby'      => 'publish_date',
+		                'order'        => 'DESC',
+		                'post__not_in' => array( get_the_ID() )
+	                )
                 );
                 if( $related ) : foreach( $related as $post ) : setup_postdata($post); ?>
                     <div class="carousel-cell">

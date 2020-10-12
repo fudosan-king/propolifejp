@@ -1,33 +1,35 @@
-jQuery(function($){ // use jQuery code inside this to avoid "$ is not defined" error
+jQuery(function($){
+    // Javascript to enable link to tab
+    var hash = document.location.hash;
+    var prefix = "tab_";
+    if (hash) {
+        $('.nav-tabs a[href="'+hash.replace(prefix,"")+'"]').tab('show');
+    }
+
     $('.misha_loadmore').click(function(e){
         e.preventDefault();
-        var button = $(this),
-            data = {
-                'action': 'loadmore',
-                'query': misha_loadmore_params.posts, // that's how we get params from wp_localize_script() function
-                'page' : misha_loadmore_params.current_page
-            };
-
-        $.ajax({ // you can also use $.post here
-            url : misha_loadmore_params.ajaxurl, // AJAX handler
-            data: { action : 'get_ajax_posts' },
-            dataType: "json",
+        var cat = $(this).data('cat');
+        var pageNumber = $(this).attr('data-current-page');
+        var str = '&cat=' + cat + '&pageNumber=' + pageNumber + '&action=get_ajax_posts';
+        $.ajax({
+            context: this,
+            url : misha_loadmore_params.ajaxurl,
+            data: str,
             type : 'POST',
             beforeSend : function ( xhr ) {
-                button.text('Loading...');
+                $(this).text('LOADING...');
             },
             success : function( data ){
                 if( data ) {
-                    button.text( 'More posts' ).prev().before(data); // insert new posts
-                    misha_loadmore_params.current_page++;
-
-                    if ( misha_loadmore_params.current_page == misha_loadmore_params.max_page )
-                        button.remove(); // if last page, remove the button
-
-                    // you can also fire the "post-load" event here if you use a plugin that requires it
-                    // $( document.body ).trigger( 'post-load' );
+                    pageNumber++;
+                    $(this).attr('data-current-page', pageNumber);
+                    $(this).parent('.text-center').prev().append(data);
+                    $(this).text('MORE');
                 } else {
-                    button.remove(); // if no data, remove the button as well
+                    $(this).text('MORE');
+                    $(this).off('click');
+                    $(this).removeAttr('href');
+                    $(this).css('cursor', 'default');
                 }
             }
         });

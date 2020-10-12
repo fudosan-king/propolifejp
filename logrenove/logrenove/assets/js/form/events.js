@@ -80,6 +80,9 @@ $(function($) {
                 if(val == '' || val.length == 0) {
                     element.addClass('validate-error');
                     invalid.push(name);
+                    if(name == 'ck_agree') {
+                        $('label.ck_agree').css('color', '#ff0000');
+                    }
 
                 }
                 else if(name == 'email') {
@@ -95,6 +98,9 @@ $(function($) {
                 }
                 else {
                     element.removeClass('validate-error');
+                    if(name == 'ck_agree') {
+                        $('label.ck_agree').removeAttr('style');
+                    }
                     // element.addClass('is-valid');
                 }
             }

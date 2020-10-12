@@ -73,7 +73,7 @@
             <div class="form-group text-center mb-0">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input required" name="ck_agree" id="ck_agree" checked>
-                    <label class="custom-control-label font-weight-normal" for="ck_agree">同意する</label>
+                    <label class="custom-control-label font-weight-normal ck_agree" for="ck_agree">同意する</label>
                 </div>
 
                 <button type="submit" class="btn btnAgree" id="btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>

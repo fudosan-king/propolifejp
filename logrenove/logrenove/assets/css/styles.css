@@ -3049,3 +3049,210 @@ ul.list_event li a.disabled {
 	
 
 }
+
+/* section_events version 2 */
+.section_events {
+    font-family: "SF Pro Display Regular", sans-serif;
+}
+.section_events h2 {
+    font-size: 1.125em;
+    color: #333;
+}
+ul.list_cate_event {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+ul.list_cate_event li {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: #fff;
+    color: #333;
+    font-size: 0.875em;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+}
+ul.list_cate_event li.gray {
+    background-color: #E0E0E0;
+}
+ul.list_cate_event li:last-child {
+    background: #AD814D;
+    color: #fff;
+    border-color: #AD814D;
+}
+.box_event_itemv2 {
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.box_event_itemv2::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url('../images/1x/i_right_content_event.svg') no-repeat;
+    width: 12px;
+    height: 20px;
+}
+.box_event_item_img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.box_event_item_img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.box_event_itemv2 h3 {
+    font-size: 1.125em;
+    color: #333;
+}
+.box_event_itemv2 p {
+    font-size: 0.875em;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.box_event_item_content {
+    display: block;
+    color: #333;
+}
+.box_event_item_content:hover {
+    color: #333;
+}
+ul.list_sub_cate_event {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+ul.list_sub_cate_event li {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 4px;
+    border: 1px solid #AD814D;
+    background: #fff;
+    color: #AD814D;
+    font-size: 0.75em;
+    padding: 0 10px;
+}
+ul.list_sub_cate_event li a {
+    color: #AD814D;
+}
+ul.list_sub_cate_event li:last-child {
+    margin-right: 0;
+}
+.section_events .pagination {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    margin-top: 55px;
+}
+.section_events .pagination .page-link {
+    border-radius: 4px;
+    color: #AD814D;
+    font-size: 0.875em;
+    font-weight: 600;
+    border-color: #AD814D;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+.section_events .pagination .page-link:hover, .section_events .page-item.active .page-link {
+    color: #fff;
+    background: #AD814D;
+}
+.section_events .page-item:first-child .page-link {
+    font-size: 0.8em;
+}
+.page-item:last-child .page-link {
+    font-size: 0.8em;
+}
+.banner_documentrequest {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .section_events {
+        margin-top: 15px;
+    }
+    ul.list_cate_event {
+        margin-bottom: 20px;
+    }
+    ul.list_cate_event li {
+        font-size: 14px;
+    }
+    .box_event_itemv2 h3 {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .box_event_itemv2 p {
+        font-size: 14px;
+}
+    .box_event_item_img {
+        margin-bottom: 15px;
+    }
+    .box_event_item_img, .box_event_item_img img {
+        height: 75px;
+    }
+    .box_event_itemv2::after {
+        display: none;
+    }
+    .box_event_itemv2 h3 {
+        margin-bottom: 0;
+    }
+    ul.list_sub_cate_event {
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    ul.list_sub_cate_event li {
+        margin-bottom: 5px;
+        font-size: 12px;
+        padding: 0 5px;
+        margin-right: 5px;
+    }
+    .btn_eventdetail2 {
+        font-size: 14px;
+        color: #fff;
+        background: #AD814D;
+        border-radius: 4px;
+        display: block;
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .banner_documentrequest {
+        margin-bottom: 0;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    .box_event_itemv2 h3 {
+        margin-top: 40px;
+    }
+}
+
+.section_breakcrumb {
+	border-top: 1px solid #cdcdcc
+}
+

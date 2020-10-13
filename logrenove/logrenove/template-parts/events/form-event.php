@@ -12,24 +12,34 @@
         <div class="form-group">
             <div class="row mb-3">
                 <div class="col-12 col-lg-2 align-self-center">
-                    <label for="">開始日時</label>
+                    <label for="">開始日時<span class="red">（※）</span></label>
                 </div>
                 <div class="col-12 col-lg-10 align-self-center">
                     <div class="row">
                         <div class="col-6 col-lg-6">
                             <div class="box_datetime mb-2 mb-lg-0">
+                                <select name="date" class="form-control custom-select required">
+                                    <?php foreach ($even_datetime as $key => $date) { ?>
+                                        <option value="<?=$date['date']?>"><?=$date['date']?></option>
+                                    <?php } ?>
+                                </select>
                                 <!-- <input type="text" name="" class="form-control datepicker" placeholder="日付を選択"> -->
-                                <input type="text" name="date" class="form-control required" placeholder="日付を選択" value="<?php echo $even_datetime['date'];?>" readonly>
+                                <!-- <input type="text" name="date" class="form-control required" placeholder="日付を選択" value="<?php //echo $even_datetime['date'];?>" readonly> -->
                                 <!-- <i class="i_datetime"></i> -->
                             </div>
                         </div>
                         <div class="col-6 col-lg-6">
+                            <select name="time" class="form-control custom-select required">
+                                <?php foreach ($even_datetime as $key => $date) { ?>
+                                    <option value="<?=$date['hour']?>"><?=$date['hour']?></option>
+                                <?php } ?>
+                            </select>
                             <!-- <select name="" id="" class="form-control custom-select">
                                 <option value="">時間を選択</option>
                                 <option value="">...</option>
                                 <option value="">...</option>
                             </select> -->
-                            <input type="text" name="time" class="form-control required" value="<?php echo $even_datetime['time'];?>" readonly>
+                            <!-- <input type="text" name="time" class="form-control required" value="<?php echo $even_datetime['time'];?>" readonly> -->
                         </div>
                     </div>
                 </div>

@@ -67,7 +67,7 @@
         </div>
         <div class="box_content_footer">
             <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。
-            個人情報の取扱に関しましては <a target="_blank" class="btn-link" href="https://www.propolife.co.jp/privacypolicy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+            個人情報の取扱に関しましては <a target="_blank" class="btn-link" href="https://www.propolife.co.jp/privacypolicy/" rel="noopener noreferrer"><b>プライバシーポリシー</b></a> をご覧ください。<br>
             ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
             <div class="form-group text-center mb-0">

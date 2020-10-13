@@ -64,7 +64,7 @@ if(have_posts()):
                             <div class="relation_article_item">
                                 <div class="row no-gutters">
                                     <div class="col-6 col-lg-12 align-self-center">
-                                        <a class="relation_article_img" href="<?php the_permalink(); ?>" target="_blank">
+                                        <a class="relation_article_img" href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer">
                                             <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="img-fluid lazy-loaded" src="<?php echo $thumbnails->url;?>">
                                         </a>
                                     </div>

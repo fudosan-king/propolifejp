@@ -89,13 +89,13 @@
                         <div class="box_location_items">
                             <div class="row no-gutters">
                                 <div class="col-5 col-md-3 align-self-center">
-                                    <a href="<?php the_permalink(); ?>" target="_blank" class="box_location_items_img"><img class="img-fluid" src="<?=$img;?>" alt=""></a>
+                                    <a href="<?php the_permalink(); ?>" target="_blank" class="box_location_items_img" rel="noopener noreferrer"><img class="img-fluid" src="<?=$img;?>" alt=""></a>
                                 </div>
                                 <div class="col-7 col-md-9 align-self-center">
                                     <div class="box_location_items_content">
                                         <p class="badge-secondary badge badge_cate"><i class="fal fa-map-marker-alt"></i> <?php echo $areObj->name; ?></p>
                                         <p class="date"><?php echo get_field('date'); ?> <span><?php echo $stringTime; ?></span></p>
-                                        <h4><a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h4>
+                                        <h4><a href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php the_title(); ?></a></h4>
                                     </div>
                                 </div>
                             </div>

@@ -37,7 +37,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="bsnav-sticky bsnav-sticky-fade">
         <div class="container">
             <div class="navbar navbar-expand-lg bsnav">
-                <a class="navbar-brand" href="<?php echo get_site_url() ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/1x/logo.png"
+                <a class="navbar-brand" href="<?php echo get_site_url() ?>/"><img src="<?php echo get_template_directory_uri() ?>/assets/images/1x/logo.png"
                                                                                              alt="" class="img-fluid"
                                                                                              width="279"></a>
                 <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>

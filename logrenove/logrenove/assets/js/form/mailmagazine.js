@@ -1,16 +1,17 @@
 $(function($) {
 
     $('#btnAgree').on('click',function(e){
-        var frm_data = $('form.frm_services').serializeArray();
+        var frm_data = $('form.frm_registration').serializeArray();
         var isValid = check_valid(frm_data);
         if(isValid === false) {
             $('html').animate({
-                scrollTop: $('.frm_services').offset().top
+                scrollTop: $('.frm_registration').offset().top
             }, 1000, function() {});
         }
         else
         {
-            goConfirm(frm_data);
+            $('form.frm_registration').submit();
+            // goConfirm(frm_data);
         }
         e.preventDefault();
         return false;
@@ -25,23 +26,38 @@ $(function($) {
     {
         $('.frm-input').fadeOut();
         $('.frm_confirm').fadeIn(function() {
-            $('html').scrollTop($('.frm_services').offset().top);
+            $('html').scrollTop($('.frm_registration').offset().top);
         });
 
+        var tmpName = '';
         $.each(data, function(key, value) {
             var name = value.name;
             var val = value.value;
-            $("#"+name).text(val);
+            if (name.indexOf('[]') == -1) 
+            {
+                $("#"+name).text(val);
+            }
+            else 
+            {
+                name = name.replace('[]','');
+                if(tmpName != name){
+                    $("#"+name).html(escapeHtml(val) + '<br>');
+                    tmpName = name;
+                }else{
+                    $("#"+name).append(escapeHtml(val) + '<br>');
+                }
+                
+            }
         })
     }
 
     function goBack()
     {
         $('.frm-input').fadeIn(function() {
-            $('html').scrollTop($('.frm_services').offset().top);
+            $('html').scrollTop($('.frm_registration').offset().top);
         });
         $('.frm_confirm').fadeOut();
-        $('.frm-input').find('input, select').removeClass('is-invalid');
+        $('.frm-input').find('input, select').removeClass('validate-error');
     }
 
     function isEmail(email) {
@@ -107,6 +123,15 @@ $(function($) {
         });
         if(invalid.length > 0) return false;
         else return true;
+    }
+
+    function escapeHtml(text) {
+      return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
     }
 })
 

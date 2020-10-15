@@ -2840,4 +2840,212 @@ ul.list_event li a.disabled {
     .insta_btn2 span {
         top: -3px !important;
     }
+
+	header {
+        position: fixed;
+        background: #fff;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        transition: all .3s ease;
+        box-shadow: 0 1px 25px rgba(0,0,0, .1);
+    }
+    main {
+        padding-top: 60px;
+    }
+    .nav-up {
+        top: -160px;
+    }
+    .section_cookie {
+        transition: visibility 0s linear 300ms, opacity 300ms;
+    }
+}
+
+/* mailmagazine */
+.btn_email {
+	background: #AD814D;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8.5px 40px;
+}
+.btn_email:hover {
+	background: #8c612f;
+	color: #fff;
+}
+.box_registration_option {
+	margin-bottom: 30px;
+}
+.registration_option_img {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+.registration_option_img img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+.box_registration_option h3 {
+	font-size: 1.125em;
+	font-weight: 700;
+	margin-top: 15px;
+}
+.box_registration_option h3 a {
+	color: #333;
+}
+.frm_registration {
+	background: #F2F2F2;
+	padding: 0 100px 10px 100px;
+	border-radius: 8px;
+	margin-top: 100px;
+	position: relative;
+}
+.frm_registration h2 {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	top: -30px;
+	font-size: 1em;
+}
+.frm_registration h2::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 41px 20.5px 0 20.5px;
+    border-color: #AD814D transparent transparent transparent;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    margin: auto;
+}
+.frm_registration h2 .head_title {
+	background: #AD814D;
+	color: #fff;
+	border-radius: 100px;
+	padding: 22px 30px;
+	display: inline-block;
+}
+.frm_registration label {
+	font-size: 0.875em;
+	font-weight: 600;
+}
+.frm_registration .form-control {
+	font-size: 0.875em;
+	height: calc(1.5em + .75rem + 7px);
+	border-color: #828282;
+}
+.frm_registration .form-group {
+	margin-bottom: 50px;
+}
+.frm_registration .box_content_footer {
+	border-top: 1px solid #ccc;
+	padding-top: 30px;
+}
+.frm_registration .btnAgree, .box_thanks_mailmagazine .btnAgree {
+	font-family: 'SF Pro Display Semibold', "Noto Sans JP", sans-serif;
+	background: #3CBCCF;
+}
+.frm_registration .btnAgree .i_rightwhite, .box_thanks_mailmagazine .btnAgree .i_rightwhite {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='10' cy='10' r='10' fill='white'/%3e%3cg clip-path='url(%23clip0)'%3e%3cpath d='M5.32092 10H14.6792' stroke='%233CBCCF' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M10 5.32092L14.6791 10.0001L10 14.6792' stroke='%233CBCCF' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0'%3e%3crect width='11.7647' height='11.7647' fill='white' transform='translate(4.11768 4.11768)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+.frm_registration .custom-control-input:checked ~ .custom-control-label::before {
+    background: #3CBCCF;
+    border-color: #3CBCCF;
+}
+.frm_registration .custom-control-input:focus~.custom-control-label::before {
+	box-shadow: none;
+}
+.frm_registration .primary_policy {
+	font-size: 0.75em;
+}
+.frm_registration .box_content_footer a {
+	color: #3CBCCF;
+}
+.frm_registration .label_sub {
+    background: #3CBCCF;
+    display: inline-block;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 0.75em;
+    font-family: 'SF Pro Display Semibold', "Noto Sans JP";
+    font-weight: 600;
+    text-align: center;
+}
+.box_top_menu {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+.box_thanks_mailmagazine {
+	text-align: center;
+	max-width: 445px;
+	margin: auto;
+	margin-bottom: 115px;
+}
+.box_thanks_mailmagazine h2 {
+	font-size: 2.25em;
+	color: #333;
+	margin-bottom: 50px;
+}
+.box_thanks_mailmagazine h4 {
+	font-size: 1.5em;
+	color: #333;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+.box_thanks_mailmagazine .btnAgree {
+	margin-top: 50px;
+}
+@media (max-width: 768px) {
+	.btn_email {
+		width: 36px;
+		height: 36px;
+		border-radius: 100px;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		margin-right: 10px;
+	}
+	.registration_option_content {
+		padding-left: 10px;
+	}
+	.registration_option_img, .registration_option_img img {
+		height: 115px;
+	}
+	.box_registration_option h3 {
+		margin-top: 0;
+	}
+	.box_registration_option p {
+		margin-bottom: 0;
+	}
+	.frm_registration {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.frm_registration label {
+		font-size: 1em;
+	}
+	.frm_registration .form-group {
+		margin-bottom: 30px;
+	}
+	.frm_registration .primary_policy {
+		font-size: 0.625em;
+		text-align: left;
+	}
+	.box_thanks_mailmagazine h2 {
+		font-size: 1.5em;
+	}
+	
+
 }

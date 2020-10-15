@@ -1,48 +1,16 @@
 $(function($) {
 
-    $('#btnAgree').on('click',function(e){
-        var frm_data = $('form.frm_services').serializeArray();
-        var isValid = check_valid(frm_data);
+    $('.btnAccept').on('click',function(e){
+        var isValid = check_valid();
         if(isValid === false) {
             $('html').animate({
-                scrollTop: $('.frm_services').offset().top
+                scrollTop: $('.frm_contact').offset().top
             }, 1000, function() {});
         }
-        else
-        {
-            goConfirm(frm_data);
-        }
+        else $('.frm_contact').submit();
         e.preventDefault();
         return false;
     });
-
-    $('#btnBack').on('click',function(e){
-        goBack();
-        return false;
-    });
-
-    function goConfirm(data)
-    {
-        $('.frm-input').fadeOut();
-        $('.frm_confirm').fadeIn(function() {
-            $('html').scrollTop($('.frm_services').offset().top);
-        });
-
-        $.each(data, function(key, value) {
-            var name = value.name;
-            var val = value.value;
-            $("#"+name).text(val);
-        })
-    }
-
-    function goBack()
-    {
-        $('.frm-input').fadeIn(function() {
-            $('html').scrollTop($('.frm_services').offset().top);
-        });
-        $('.frm_confirm').fadeOut();
-        $('.frm-input').find('input, select').removeClass('is-invalid');
-    }
 
     function isEmail(email) {
       var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -51,7 +19,7 @@ $(function($) {
 
     function check_valid() {
         var ERROR_NO_INPUT = '値を入力してください';
-        var data = $('.frm-input input.required,select.required').map(function() {
+        var data = $('.frm_contact input.required,select.required').map(function() {
             key = $(this).attr('name');
             val = $(this).val();
             type_elem = $(this).attr('type');
@@ -80,9 +48,6 @@ $(function($) {
                 if(val == '' || val.length == 0) {
                     element.addClass('validate-error');
                     invalid.push(name);
-                    if(name == 'ck_agree') {
-                        $('label.ck_agree').css('color', '#ff0000');
-                    }
 
                 }
                 else if(name == 'email') {
@@ -98,9 +63,6 @@ $(function($) {
                 }
                 else {
                     element.removeClass('validate-error');
-                    if(name == 'ck_agree') {
-                        $('label.ck_agree').removeAttr('style');
-                    }
                     // element.addClass('is-valid');
                 }
             }
@@ -109,13 +71,3 @@ $(function($) {
         else return true;
     }
 })
-
-var demo = function() {
-        $('input[name="name"]').val('test');
-        $('input[name="email"]').val('test@gmail.com');
-        $('textarea[name="inquiry_content"]').val('test');
-
-        setTimeout(function(){
-            // $('#btn_confirm').click();
-        },2000);
-}

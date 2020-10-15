@@ -569,6 +569,7 @@ footer {
 	display: block;
 	position: fixed;
 	bottom: 0;
+	z-index: 200;
 }
 
 /* section_banner_fuchinobe */
@@ -687,4 +688,7 @@ footer {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
+}
+.add-top {
+	top: 130px !important;
 }

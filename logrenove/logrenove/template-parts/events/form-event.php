@@ -1,5 +1,12 @@
 <?php $even_datetime = get_event_datetime(); ?>
 
+<style type="text/css">
+    .validate-error {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important;
+        border-color: #ff0000!important;
+    }
+</style>
+
 <form id="frm_services" class="frm_services" action="https://go.pardot.com/l/185822/2020-09-01/qh62y3" method="post" accept-charset="utf-8">
     <div class="frm-input">
         <div class="form-group">
@@ -66,7 +73,7 @@
             <div class="form-group text-center mb-0">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input required" name="ck_agree" id="ck_agree" checked>
-                    <label class="custom-control-label font-weight-normal" for="ck_agree">同意する</label>
+                    <label class="custom-control-label font-weight-normal ck_agree" for="ck_agree">同意する</label>
                 </div>
 
                 <button type="submit" class="btn btnAgree" id="btnAgree">上記に同意して確認画面へ <i class="i_rightwhite"></i></button>

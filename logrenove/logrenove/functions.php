@@ -931,4 +931,17 @@
     //     return $buttons;
     // }
 
+    /*  
+        #7368: ◇LogRenove目次下設置ウィジェットの開発
+        Modify (insert) below Table of Content (if exist) - 1st priority
+        Modify (insert) below the seccond h2 tag (if exist) - 2nd priority
+    */
+
+    function func_insert_extras_content(){
+        global $post;
+        $insertContent = get_field('insert_extras_content', get_the_category( $post->ID )[0]);
+        $content = isset($insertContent) && !empty($insertContent) ? '<div class="insert-wrapper">'.$insertContent.'</div>' : '';
+        return $content;
+    }
+    add_shortcode( 'insert_extras_content', 'func_insert_extras_content' );
 ?>

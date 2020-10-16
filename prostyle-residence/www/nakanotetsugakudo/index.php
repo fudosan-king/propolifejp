@@ -145,7 +145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 
 				<div class="last_houses">
-					<h1 class="number_last_houses"><span class="finally">最<br>終</span><span class="number">3</span><span class="mansion">邸</span></h1>
+					<h1 class="number_last_houses"><span class="finally">最<br>終</span><span class="number">2</span><span class="mansion">邸</span></h1>
 					<!-- <img src="images/slide/prices.png" alt="" class="img-fluid d-none d-lg-block"> -->
 					<div class="box_sellingprice d-none d-lg-block">
 						<div class="box_sellingprice_content">
@@ -400,7 +400,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	      						<div class="box_video">
 	      							<h3 class="text-center mt-3 mt-md-5">フルスクリーンでご覧ください。</h3>
 	      							<div class="row">
-	      								<div class="col-12 col-md-2">
+	      								<div class="col-12 col-md-4">
 	      								</div>
 	      								<div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
@@ -414,13 +414,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_b.php" class="btn btn_video">>>Bタイプ間取りはこちら </a>
 	      								</div> -->
-	      								<div class="col-12 col-md-4">
+	      								<!-- <div class="col-12 col-md-4">
 	      									<div class="embed-responsive embed-responsive-16by9">
 											  	<iframe class="embed-responsive-item" src="https://my.matterport.com/show/?m=QcgwjcRxafu" frameborder="0" allowfullscreen allow='xr-spatial-tracking'></iframe>
 											</div>
 											<a href="https://www.prostyle-residence.com/nakanotetsugakudo/plan_detail_i.php" class="btn btn_video">>>Iタイプ間取りはこちら </a>
-	      								</div>
-	      								<div class="col-12 col-md-2">
+	      								</div> -->
+	      								<div class="col-12 col-md-4">
 	      								</div>
 	      							</div>
 	      						</div>
@@ -434,7 +434,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      								</div>
 			      								<div class="col-12 col-sm-12 col-md-9 align-self-center">
 			      									<div class="box_informations_content">
-　														<div class="row">
+			      										<div class="row">
+			      											<div class="col-3 col-sm-2 align-self-center">
+			      												<p>2020.10.12</p>
+			      											</div>
+			      											<div class="col-9 col-sm-10 align-self-center">
+			      												<p>Iタイプ完売しました。</p>
+			      											</div>
+			      										</div>
+			      										<div class="row">
 			      											<div class="col-3 col-sm-2 align-self-center">
 			      												<p>2020.09.22</p>
 			      											</div>

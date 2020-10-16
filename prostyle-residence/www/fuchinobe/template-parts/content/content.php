@@ -12,8 +12,8 @@
             公開日 <?php echo get_the_time('Y年m月d日') ?> <br>
             更新日 <?php echo get_the_modified_time('Y年m月d日') ?></p>
         <div class="d-block d-lg-flex mb-5">
-            <a href="https://lmp1.net/3b6ughk0aqghkd5asjlvtmakot16kxcd/contacts/new" class="btn btn_documentrequest flex-fill text-white">資料請求</a>
-            <a href="https://lmp1.net/onl4aktwd2f3poxzihr9ms4vlyklsonf/contacts/new" class="btn btn_contactus flex-fill mr-0 text-white">お問い合わせ</a>
+            <a href="https://lmp1.net/aegniiwmauslajwuy8xrotw5hadohlml/contacts/new" class="btn btn_documentrequest flex-fill text-white">資料請求</a>
+            <a href="https://lmp1.net/nwkrdphrawvy2vsimpmsrqsm3bwbsle3/contacts/new" class="btn btn_contactus flex-fill mr-0 text-white">お問い合わせ</a>
         </div>
     </div>
     <div class="box_relation_article">

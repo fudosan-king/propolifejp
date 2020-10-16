@@ -46,7 +46,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li class="nav-item"><a target="_blank" class="nav-link"
                                                 href="https://www.presis.com/kanagawa/ichigao/">公式サイト</a></li>
                         <li class="nav-item"><a target="_blank" class="nav-link"
-                                                href="https://lmp1.net/aegniiwmauslajwuy8xrotw5hadohlml/contacts/new">資料請求</a>
+                                                href="https://lmp1.net/3b6ughk0aqghkd5asjlvtmakot16kxcd/contacts/new">資料請求</a>
                         </li>
                         <li class="nav-item active"><a target="_blank" class="nav-link"
                                                        href="https://lmp1.net/onl4aktwd2f3poxzihr9ms4vlyklsonf/contacts/new">来場予約</a>

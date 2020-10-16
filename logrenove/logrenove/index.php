@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <main>
+    <main style="padding-top: unset;">
         <section class="section_main">
             <div class="container">
                 <div class="row">

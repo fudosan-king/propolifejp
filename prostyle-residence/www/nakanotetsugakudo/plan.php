@@ -147,8 +147,8 @@
 		      										</div>
 		      										<div class="roomplan_item_footer">
 		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
+		      												101号室　5399万円 <br>
+		      												月々13万円台～ <br>
 		      												頭金<label>0</label>円　ボーナス<label>0</label>円
 		      											</p>
 		      											<a href="plan_detail_ag.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
@@ -195,8 +195,8 @@
 		      										</div>
 		      										<div class="roomplan_item_footer">
 		      											<p>
-		      												404号室　5290万円 <br>
-		      												月々13万円台～ <br>
+		      												404号室　4999万円 <br>
+		      												月々12万円台～ <br>
 		      												頭金<label>0</label>円　ボーナス<label>0</label>円
 		      											</p>
 		      											<a href="plan_detail_f.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>

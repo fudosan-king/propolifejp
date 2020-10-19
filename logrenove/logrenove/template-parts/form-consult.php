@@ -52,7 +52,7 @@
                 <textarea name="note" id="input" class="form-control" rows="4"></textarea>
             </div>
             <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                    個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
+                    個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/" rel="noopener noreferrer">プライバシーポリシー</a>をご覧ください。</small>
             </p>
             <p class="mb-0 text-center">
                 <button type="button" id="btn_confirm" name="confirm" class="btn btn_border">上記に同意して確認画面へ</button>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small></p>
+                個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/" rel="noopener noreferrer">プライバシーポリシー</a>をご覧ください。</small></p>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">

@@ -76,7 +76,7 @@ if(have_posts()):
                                     <li><div style="width: 80px;" class="fb-like" data-href="<?php echo get_field('facebook_url', 'option')?>" data-width="" data-layout="button" data-action="like" data-share="false"></div></li>
                                     <!-- <li><a href="<?php // echo get_field('instagram_url', 'option')?>" style="background: none !important; padding: 0;"><img src="/wp-content/themes/logrenove/assets/images/btn_ins.png" style="margin-bottom: 10px;"></a></li> -->
                                     <li>
-                                        <a href="<?php echo get_field('instagram_url', 'option')?>" class="insta_btn2" target="_blank">
+                                        <a href="<?php echo get_field('instagram_url', 'option')?>" class="insta_btn2" target="_blank" rel="noopener noreferrer">
                                           <i class="fab fa-instagram"></i> <span>フォローする</span>
                                         </a>
                                     </li>
@@ -96,8 +96,8 @@ if(have_posts()):
                     </div>
                     <div class="col-12 col-md-5 align-self-center">
                         <p class="text-center text-lg-right">
-                            <a class="btn btn_online font-weight-bold d-none d-md-block" target="_blank" href="<?=$section_cookie['url']?>"><?=$section_cookie['text']?></a>
-                            <a class="btn btn_online font-weight-bold d-block d-md-none" target="_blank" href="<?=$section_cookie['url']?>"><?=$section_cookie['text']?></a>
+                            <a class="btn btn_online font-weight-bold d-none d-md-block" target="_blank" rel="noopener noreferrer" href="<?=$section_cookie['url']?>"><?=$section_cookie['text']?></a>
+                            <a class="btn btn_online font-weight-bold d-block d-md-none" target="_blank" rel="noopener noreferrer" href="<?=$section_cookie['url']?>"><?=$section_cookie['text']?></a>
                         </p>
                     </div>
                 </div>

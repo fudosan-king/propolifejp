@@ -1,19 +1,19 @@
 <footer class="text-center">
   <section class="footer_top">
-      <h4><a class="logo_footer" href="<?php echo get_home_url(); ?>"><img src="<?=IMAGE_PATH;?>/1x/logo-white.svg" alt="logrenove_logo" class="img-fluid" width="257"></a></h4>
+      <h2><a class="logo_footer" href="<?php echo get_home_url(); ?>"><img src="<?=IMAGE_PATH;?>/1x/logo-white.svg" alt="logrenove_logo" class="img-fluid" width="257"></a></h2>
       <ul class="list_social">
         <?php 
           if(!empty(get_field('facebook_url', 'option')))
-            echo '<li><a href="'.get_field('facebook_url', 'option').'" target="_blank"><i class="fab fa-facebook-f"></i></a></li>';
+            echo '<li><a href="'.get_field('facebook_url', 'option').'" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>';
           if(!empty(get_field('twitter_url', 'option')))
-            echo '<li><a href="'.get_field('twitter_url', 'option').'" target="_blank"><i class="fab fa-twitter"></i></a></li>';
+            echo '<li><a href="'.get_field('twitter_url', 'option').'" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>';
           if(!empty(get_field('instagram_url', 'option')))
-            echo '<li><a href="'.get_field('instagram_url', 'option').'" target="_blank"><i class="fab fa-instagram"></i></a></li>';
+            echo '<li><a href="'.get_field('instagram_url', 'option').'" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>';
           if(!empty(get_field('line_id', 'option')))
           {
             $line_id = get_field('line_id', 'option');
             $line_url = 'https://page.line.me/'.explode('@', $line_id, 2)[1];
-            echo '<li><a href="'.$line_url.'" target="_blank"><i class="fab fa-line"></i></a></li>';
+            echo '<li><a href="'.$line_url.'" target="_blank" rel="noopener noreferrer"><i class="fab fa-line"></i></a></li>';
           }
         ?>
       </ul>
@@ -55,7 +55,7 @@
                         <p class="mb-2 mb-lg-0">関連サイト</p>
                     </div>
                     <div class="col-12 col-lg-3 align-self-center">
-                        <a target="_blank" href="https://www.chronicle-web.com/plus/"><img src="<?=IMAGE_PATH;?>/chro_plus_white.png" alt="" class="img-fluid" width="200"></a>
+                        <a target="_blank" href="https://www.chronicle-web.com/plus/" rel="noopener noreferrer"><img src="<?=IMAGE_PATH;?>/chro_plus_white.png" alt="" class="img-fluid" width="200"></a>
                     </div>
                 </div>
             </div>

@@ -8,12 +8,16 @@ if(is_single()) $item_title = the_title('', '', false);
 elseif($current_term->term_id) $item_title = $current_term->name;
 $item_title = $detect->isMobile()?wp_trim_words($item_title, 15, '...'):$item_title;
 ?>
-<nav aria-label="breadcrumb">
-  	<ol class="breadcrumb">
-	    <li class="breadcrumb-item"><a href="<?php echo get_home_url();?>">TOP</a></li>
-	    <li class="breadcrumb-item <?php echo $event_active;?>" aria-current="page"><a href="<?php echo $event_href; ?>">イベント</a></li>
-	    <?php if(is_single() || is_term($current_term->term_id) != NULL) { ?>
-	    	<li class="breadcrumb-item active" aria-current="page"><?php echo $item_title; ?></li>
-		<?php } ?>
-  	</ol>
-</nav>
+<section class="section_breakcrumb">
+    <div class="container">
+		<nav aria-label="breadcrumb">
+		  	<ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="<?php echo get_home_url();?>">TOP</a></li>
+			    <li class="breadcrumb-item <?php echo $event_active;?>" aria-current="page"><a href="<?php echo $event_href; ?>">イベント</a></li>
+			    <?php if(is_single() || is_term($current_term->term_id) != NULL) { ?>
+			    	<li class="breadcrumb-item active" aria-current="page"><?php echo $item_title; ?></li>
+				<?php } ?>
+		  	</ol>
+		</nav>
+	</div>
+</section>

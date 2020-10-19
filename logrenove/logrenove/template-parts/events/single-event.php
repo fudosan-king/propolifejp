@@ -1,11 +1,13 @@
 <?php 
 if(have_posts()):
     while(have_posts()): the_post();
-        $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
+        $thumbnails = MultiPostThumbnails::get_the_post_thumbnail(get_post_type(), 'secondary-image', get_the_ID(),  'secondary-featured-thumbnail');
+        //$thumbnails = new ThumbnailItem(get_post_thumbnail_id());
         $tags = get_the_terms(get_the_ID(), 'event_tags');
 ?>
 <div class="services_detail_banner">
-    <img src="<?php echo $thumbnails->url;?>" alt="" class="img-fluid">
+    <?php echo $thumbnails;?>
+    <!-- <img data-src="<?php //echo $thumbnails;?>" alt="" class="img-fluid"> -->
 </div>
 <ul>
     <?php 

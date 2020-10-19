@@ -11,7 +11,7 @@
 
                     ?>
                         <a href="<?php echo $left_url['url'] ?>" target="<?php echo $left_url['target'] ?>">
-                            <img src="<?php echo $left_banner['url']; ?>" class="img-fluid" alt="Responsive image">
+                            <img data-src="<?php echo $left_banner['url']; ?>" class="img-fluid" alt="Responsive image">
                         </a>
                     <?php
                 }
@@ -22,7 +22,7 @@
                 if(!empty($right_banner) && count($right_banner) > 0 && !empty($right_url) && count($right_url) > 0){
                     ?>
                         <a href="<?php echo $right_url['url'] ?>" target="<?php echo $right_url['target'] ?>">
-                            <img src="<?php echo $right_banner['url']; ?>" class="img-fluid" alt="Responsive image">
+                            <img data-src="<?php echo $right_banner['url']; ?>" class="img-fluid" alt="Responsive image">
                         </a>
                     <?php
                 }

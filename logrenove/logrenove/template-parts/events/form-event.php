@@ -1,4 +1,4 @@
-<?php $even_datetime = get_event_datetime(); ?>
+<?php $event_datetime = get_event_datetime(); ?>
 
 <style type="text/css">
     .validate-error {
@@ -19,7 +19,7 @@
                         <div class="col-6 col-lg-6">
                             <div class="box_datetime mb-2 mb-lg-0">
                                 <select name="date" class="form-control custom-select required">
-                                    <?php foreach ($even_datetime as $key => $date) { ?>
+                                    <?php foreach ($event_datetime['date'] as $key => $date) { ?>
                                         <option value="<?=$date['date']?>"><?=$date['date']?></option>
                                     <?php } ?>
                                 </select>
@@ -30,8 +30,8 @@
                         </div>
                         <div class="col-6 col-lg-6">
                             <select name="time" class="form-control custom-select required">
-                                <?php foreach ($even_datetime as $key => $date) { ?>
-                                    <option value="<?=$date['hour']?>"><?=$date['hour']?></option>
+                                <?php foreach ($event_datetime['time'] as $key => $time) { ?>
+                                    <option value="<?=$time['hour']?>"><?=$time['hour']?></option>
                                 <?php } ?>
                             </select>
                             <!-- <select name="" id="" class="form-control custom-select">

@@ -148,6 +148,11 @@ a:hover {
 	transition: all .3s linear
 }
 
+.alignnone {text-align: justify-all;}
+.aligncenter {text-align: center;}
+.alignleft {text-align: left;}
+.alignrigh {text-align: right;}
+
 .form-control:focus {
 	box-shadow: none
 }

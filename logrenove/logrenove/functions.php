@@ -904,7 +904,7 @@
         }
         else {
             $content = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $content );
-            $content = strip_tags( $content,'<br>' );
+            $content = strip_tags( $content,'<br><p>' );
             $content = mb_strimwidth($content, 0, $limit, '...');
         }
         return $content;

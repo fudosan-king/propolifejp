@@ -3264,3 +3264,7 @@ ul.list_sub_cate_event li:last-child {
 .box_thanks_mailmagazine p {
 	margin-bottom: 0;
 }
+
+.box_article_detail h1,h2,h3,h4 {
+	color: #000 !important;
+}

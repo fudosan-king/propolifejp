@@ -717,13 +717,17 @@
 
     function get_event_datetime()
     {
-        $post_id = get_queried_object_id();
-        $event_datetime = get_field('event_datetime', get_the_ID());
+        $post_id = get_the_ID();
+        $event_date = get_field('event_date', $post_id);
+        $event_time = get_field('event_time', $post_id);
         // $result = array();
         // $result['date'] = (!empty($event_datetime['date']) && count($event_datetime['date'])) ? $event_datetime['date'] : '';
         // $hour = (!empty($event_datetime['hour']) && count($event_datetime['hour'])) ? $event_datetime['hour'] : '09';
         // $minute = (!empty($event_datetime['minute']) && count($event_datetime['minute'])) ? $event_datetime['minute'] : '00';
         // $result['time'] = $hour.':'.$minute;
+        $event_datetime = array();
+        $event_datetime['date'] = !empty($event_date) && is_array($event_date) && count($event_date) ? $event_date : array();
+        $event_datetime['time'] = !empty($event_time) && is_array($event_time) && count($event_time) ? $event_time : array();
         return $event_datetime;
     }
 
@@ -896,16 +900,29 @@
         return $date;
     }
 
-    function limit_event_content($content='', $limit=370)
+    function get_event_description()
+    {
+        $post_id = get_queried_object_id();
+        $description = get_field('event_description', $post_id);
+        return $description;
+    }
+
+    function limit_event_content($content='', $limit=180, $strip_tags='<br>')
     {
         global $detect;
         if($detect->isMobile()) {
             $content = wp_trim_words($content, $limit, '...');
         }
         else {
-            $content = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $content );
-            $content = strip_tags( $content,'<br><p>' );
-            $content = mb_strimwidth($content, 0, $limit, '...');
+            $content_arr = explode('<br />', $content, 3);
+            if(is_array($content_arr) && count($content_arr) >= 3) {
+                $content_arr[2] = mb_strimwidth($content_arr[2], 0, $limit, '...');
+                $content = implode('<br>', $content_arr);
+            }
+            else return $content;
+            /* $content = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $content );
+            $content = strip_tags( $content, $strip_tags);
+            $content = mb_strimwidth($content, 0, $limit, '...'); */
         }
         return $content;
     }

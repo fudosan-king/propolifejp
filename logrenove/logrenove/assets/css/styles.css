@@ -3261,3 +3261,6 @@ ul.list_sub_cate_event li:last-child {
 	border-top: 1px solid #cdcdcc
 }
 
+.box_thanks_mailmagazine p {
+	margin-bottom: 0;
+}

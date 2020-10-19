@@ -27,7 +27,7 @@
                     <div class="row flex-sm-column-reverse">
                         <div class="col-12 col-lg-12">
                             <h3 class="d-none d-lg-block"><?php the_title();?></h3>
-                            <p><?php echo limit_event_content(get_the_content()); ?></p>
+                            <p><?php echo limit_event_content(get_the_content(), 180); ?></p>
                             <!-- <p>ご自宅から参加できる【オンライン相談会】<br>
                             外出を控えていらっしゃる方のために、急遽オンライン相談会の開催を決定いたしました。<br>
                             詳細テキストが入ります詳細テキストが入ります詳細テキストが入ります詳細テキストが入ります詳細テキストが入ります詳細テキ</p> -->

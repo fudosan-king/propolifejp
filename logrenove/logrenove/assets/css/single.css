@@ -338,3 +338,8 @@ body.single-post .logo_logrenove_small img {
         padding-left: 10px;
     }
 }
+
+.services_detail_content .wp-block-image img {
+    height: auto;
+}
+

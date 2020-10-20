@@ -1,3 +1,7 @@
+<?php 
+if($this->uri->uri_string() == 'kaiyaku')
+    redirect('contact/kaiyaku', 'refresh'); 
+?>
 <!doctype html>
 <html lang="ja">
     <head>

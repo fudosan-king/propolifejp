@@ -111,14 +111,5 @@
             </article>
         </div>
     </section>
-    <section class="row cancellation text-center">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-            <article class="content d-flex">
-                <a href="<?=base_url();?>kaiyaku" target="_blank">
-                    <h4>自宅にいながらウェブからカンタン！</h4>
-                    <p>オンライン解約申請はこちら</p>
-                </a>
-            </article>
-        </div>
-    </section>
+   
 </div>

@@ -546,7 +546,7 @@ main {
 
 .article_items_img img {
 	width: 100%;
-	height: 119px;
+	height: 80px;
 	object-fit: cover;
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
@@ -563,10 +563,10 @@ main {
 
 .article_items_name {
 	font-size: 14px;
-	line-height: 1.3em;
+	line-height: 1.2em;
 	margin-bottom: 5px;
 	font-weight: 600;
-	display: -webkit-box;
+	/*display: -webkit-box;*/
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden

@@ -536,6 +536,7 @@
 }
 
 @media (max-width:414px) {
+	.wp-block-image img{height: auto;}
 	.carousel_banner .carousel-cell {
 		margin: 0
 	}

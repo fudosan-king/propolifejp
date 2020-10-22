@@ -144,52 +144,66 @@ $(function() {
           
         });
 
-        if($('.sidebar_banner').length > 0){
-            var main = $('.main_left');
-            var side = $('.main_right');
-            var wrapper = $('.sidebar_banner');
+        $(window).on('load',function(){
+            if($('.js-sidebar-fixed').length > 0){
+                var main = $('.main_left');
+                var side = $('.main_right');
+                // var wrapper = $('.js-sidebar-fixed');
+                var wrappers = $('.js-sidebar-fixed');
+                var wrapperHeight = 0;
+                var wSidebarFixed = $('.js-sidebar-fixed').outerWidth();
+                // console.log(wSidebarFixed);
+                wrappers.each(function(index,ele){
+                    console.log(wrapperHeight)
+                    wrapperHeight += parseInt($(ele).height());
+                });
 
-            var w = $(window);
-            var wrapperHeight = wrapper.outerHeight();
-            var wrapperTop = wrapper.offset().top;
-            var sideLeft = side.offset().left;
+                var w = $(window);
+                // var wrapperHeight = wrappers.outerHeight();
+                var wrapperTop = wrappers.eq(0).offset().top;
+                var sideLeft = side.offset().left;
 
-            var sideMargin = {
-                top: side.css('margin-top') ? side.css('margin-top') : 0,
-                right: side.css('margin-right') ? side.css('margin-right') : 0,
-                bottom: side.css('margin-bottom') ? side.css('margin-bottom') : 0,
-                left: side.css('margin-left') ? side.css('margin-left') : 0
-            };
 
-            var winLeft;
-            var pos;
+                var sideMargin = {
+                    top: side.css('margin-top') ? side.css('margin-top') : 0,
+                    right: side.css('margin-right') ? side.css('margin-right') : 0,
+                    bottom: side.css('margin-bottom') ? side.css('margin-bottom') : 0,
+                    left: side.css('margin-left') ? side.css('margin-left') : 0
+                };
 
-            var scrollAdjust = function() {
-                sideHeight = side.outerHeight();
-                mainHeight = main.outerHeight();
-                mainAbs = main.offset().top + mainHeight;
-                var winTop = w.scrollTop();
-                winLeft = w.scrollLeft();
-                var winHeight = w.height();
-                var nf = (winTop > wrapperTop) && (mainHeight > sideHeight) ? true : false;
-                pos = !nf ? 'static' : (winTop + wrapperHeight) > mainAbs ? 'absolute' : 'fixed';
+                var winLeft;
+                var pos;
 
-                if (pos === 'fixed') {
-                    side.css({
-                        position: pos,
-                        top: '',
-                        bottom: winHeight - wrapperHeight,
-                        left: sideLeft - winLeft,
-                        margin: 0
-                    });
-                    $('.sidebar_banner img').removeAttr('style');
-                } else {
-                    side.removeAttr('style');
-                    $('.sidebar_banner img').css({'width':'100%'});
-                }
-            };
-            w.on('scroll', scrollAdjust);
-        }
+                var scrollAdjust = function() {
+                    sideHeight = side.outerHeight();
+                    mainHeight = main.outerHeight();
+                    mainAbs = main.offset().top + mainHeight;
+                    var winTop = w.scrollTop();
+                    winLeft = w.scrollLeft();
+                    var winHeight = w.height();
+                    var nf = (winTop > wrapperTop) && (mainHeight > sideHeight) ? true : false;
+                    
+                    pos = !nf ? 'static' : (winTop + wrapperHeight) > mainAbs ? 'absolute' : 'fixed';
+                    bottom_count = $('#wpadminbar').length > 0 ? 0 : 26;
+                    if (pos === 'fixed') {
+                        side.css({
+                            width:wSidebarFixed,
+                            position: pos,
+                            top: '',
+                            bottom: winHeight - wrapperHeight + bottom_count,
+                            left: sideLeft - winLeft,
+                            margin: 0
+                        });
+                        // $('.sidebar_banner img').removeAttr('style');
+                        $('.each_boxright').css
+                    } else {
+                        side.removeAttr('style');
+                        // $('.sidebar_banner img').css({'width':'100%'});
+                    }
+                };
+                w.on('scroll', scrollAdjust);
+            }
+        });
 
     }
     $(".btn_close").click(function(event) {

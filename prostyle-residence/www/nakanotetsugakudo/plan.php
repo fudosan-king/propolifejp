@@ -119,7 +119,7 @@
 		      							<p class="subtitle"></p>
 
 		      							<div class="row">
-
+		      								<div class="col-12 col-md-3"></div>
 		      								<div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
 		      										<div class="roomplan_item_top">
@@ -147,300 +147,16 @@
 		      										</div>
 		      										<div class="roomplan_item_footer">
 		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
+		      												101号室　5399万円 <br>
+		      												月々13万円台～ <br>
 		      												頭金<label>0</label>円　ボーナス<label>0</label>円
 		      											</p>
 		      											<a href="plan_detail_ag.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
 		      								</div>
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/b_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>3LDK <span>+WIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>54.<span class="uint">86㎡</span> <span class="approximately">（約16.59坪）</span></h2>
-				      												<p>バルコニー面積/ 4.05㎡（約1.22坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">対面型キッチン</div>
-			      										<div class="btn_sm_black">大型ウォークインクローゼット</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan02.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												502号室　5590万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_b.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/bg_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>2LDK＋S <span>+WIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>54.<span class="uint">86㎡</span> <span class="approximately">（約16.59坪）</span></h2>
-				      												<p>バルコニー面積/ 4.05㎡（約1．22坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">対面型キッチン</div>
-			      										<div class="btn_sm_black">大型ウォークインクローゼット</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan03.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_bg.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/g_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>3LDK <span>+WIC+SIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>60.<span class="uint">32㎡</span> <span class="approximately">（約18.24坪）</span></h2>
-				      												<p>バルコニー面積/ 6.39㎡（約1.93坪）</p>
-				      												<p>室外機置場面積/ 2.25㎡（約0.68坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">ワイドスパン</div>
-			      										<div class="btn_sm_black">大型ウォークインクローゼット</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan04.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												501号室　5890万円 <br>
-		      												月々15万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_g.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/h_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>3LDK <span>+WIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>60.<span class="uint">41㎡</span> <span class="approximately">（約18.27坪）</span></h2>
-				      												<p>バルコニー面積/ 6.01㎡（約1.81坪）</p>
-				      												<p>室外機置場面積/ 2.25㎡（約0.68坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">ワイドスパン</div>
-			      										<div class="btn_sm_black">通風・採光に優れた角住戸</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan05.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_h.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
-
-		      								<div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/i_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>3LDK <span>+2WIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>63.<span class="uint">88㎡</span> <span class="approximately">（約19.32坪）</span></h2>
-				      												<p>バルコニー面積/ 4.05㎡（約1.22坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">対面型キッチン</div>
-			      										<div class="btn_sm_black">ウォークインクローゼット2ヶ所</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan06.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												602号室　6190万円 <br>
-		      												月々15万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_i.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div>
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/j_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>3LDK <span>+2WIC+SIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>61.<span class="uint">37㎡</span> <span class="approximately">（約18.56坪）</span></h2>
-				      												<p>バルコニー面積/ 6.45㎡（約1.95坪）</p>
-				      												<p>室外機置場面積/ 1.75㎡（約0.52坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">3面採光角住戸</div>
-			      										<div class="btn_sm_black">ウォークインクローゼット2ヶ所</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan07.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_j.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/k_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>3LDK <span>+2WIC+FC+SIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>68.<span class="uint">81㎡</span> <span class="approximately">（約20.81坪）</span></h2>
-				      												<p>ルーフバルコニー面積/ 28.12㎡（約8.50坪）</p>
-				      												<p>専用ポーチ面積/ 4.20㎡（約1.27坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">豊富な収納</div>
-			      										<div class="btn_sm_black">最上階ルーフバルコニー</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan08.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_k.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/l_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>3LDK <span>+2WIC+SIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>56.<span class="uint">95㎡</span> <span class="approximately">（約17.22坪）</span></h2>
-				      												<p>バルコニー面積/ 6.45㎡（約1.95坪）</p>
-				      												<p>専用ポーチ面積/ 3.19㎡（約0.96坪）</p>
-				      												<p>室外機置場面積/ 1.47㎡（約0.44坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-			      									</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">3面採光角住戸</div>
-			      										<div class="btn_sm_black">豊富な収納</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan09.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_l.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
+		      								<div class="col-12 col-md-3"></div>
+		      								
 
 		      							</div>
 		      						</div>
@@ -449,76 +165,7 @@
 		      							<h3 class="title mb-5"><span>2LDK</span></h3>
 
 		      							<div class="row">
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/dg_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>2LDK <span>+WIC+SIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>48.<span class="uint">49㎡</span> <span class="approximately">（約14.66坪）</span></h2>
-				      												<p>バルコニー面積/ 3.75㎡（約1.13坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-		      										</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">シューズインクローゼット</div>
-			      										<div class="btn_sm_black">大型ウォークインクローゼット</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<img src="images/1x/roomplan10.png" alt="" class="img-fluid">
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_dg.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
-
-		      								<!-- <div class="col-12 col-md-6">
-		      									<div class="roomplan_item">
-		      										<div class="roomplan_item_top">
-			      										<div class="row no-gutters">
-			      											<div class="col-5">
-			      												<h1><img src="images/1x/fr_type.png" alt="" class="img-fluid"></h1>
-			      											</div>
-			      											<div class="col-7">
-			      												<div class="roomplan_item_info">
-				      												<h3>2LDK <span>+WIC+SIC</span></h3>
-				      												<p>住戸専有面積/</p>
-				      												<h2>52.<span class="uint">91㎡</span> <span class="approximately">（約16.00坪）</span></h2>
-				      												<p>バルコニー面積/ 3.75㎡（約1.13坪）</p>
-				      												<p>室外機置場面積/ 1.75㎡（約0.52坪）</p>
-			      												</div>
-			      											</div>
-			      										</div>
-		      										</div>
-		      										<div class="w_btn d-flex">
-			      										<div class="btn_sm_black">広々ルーフバルコニー</div>
-			      										<div class="btn_sm_black">大型ウォークインクローゼット</div>
-		      										</div>
-		      										<div class="roomplan_item_img">
-		      											<a href="plan_detail_fr.php"><img src="images/1x/roomplan11.png" alt="" class="img-fluid"></a>
-		      										</div>
-		      										<div class="roomplan_item_footer">
-		      											<p>
-		      												101号室　5690万円 <br>
-		      												月々14万円台～ <br>
-		      												頭金<label>0</label>円　ボーナス<label>0</label>円
-		      											</p>
-		      											<a href="plan_detail_fr.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
-		      										</div>
-		      									</div>
-		      								</div> -->
+		      								<div class="col-12 col-md-3"></div>
 
 		      								<div class="col-12 col-md-6">
 		      									<div class="roomplan_item">
@@ -548,15 +195,16 @@
 		      										</div>
 		      										<div class="roomplan_item_footer">
 		      											<p>
-		      												404号室　5290万円 <br>
-		      												月々13万円台～ <br>
+		      												404号室　4999万円 <br>
+		      												月々12万円台～ <br>
 		      												頭金<label>0</label>円　ボーナス<label>0</label>円
 		      											</p>
 		      											<a href="plan_detail_f.php" onclick="centeredPopup(this.href,'myWindow','1000','700','yes');return false" class="btn btnViewdetail">VIEW DETAIL</a>
 		      										</div>
 		      									</div>
 		      								</div>
-
+		      								
+		      								<div class="col-12 col-md-3"></div>
 		      							</div>
 		      						</div>
 

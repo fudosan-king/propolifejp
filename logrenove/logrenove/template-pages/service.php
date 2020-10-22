@@ -102,7 +102,7 @@
                             <button class="btn button--next"></button>
                         </div>
                         <?php $obj = get_category_by_slug( 'work' );?>
-                        <a href="<?php echo get_category_link( $obj ); ?>" class="btn btn_morecase" target="_blank">事例をもっと見る <i class="i_right"></i></a>
+                        <a href="<?php echo get_category_link( $obj ); ?>" class="btn btn_morecase" target="_blank" rel="noopener noreferrer">事例をもっと見る <i class="i_right"></i></a>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-8">
@@ -114,7 +114,7 @@
                                         <img src="<?=SERVICE_IMAGE_PATH;?>/1x/6.jpg" alt="" class="img-fluid">
                                     </div>
                                     <div class="cases_item_body">
-                                        <a href="https://www.logrenove.jp/work/471/" class="btn btnDetail" target="_blank">詳しく見る <i></i></a>
+                                        <a href="https://www.logrenove.jp/work/471/" class="btn btnDetail" target="_blank" rel="noopener noreferrer">詳しく見る <i></i></a>
                                         <h3>オーナーの「猫愛」が止まらない…猫が縦横無尽に遊ぶ家</h3>
                                         <p>物件名：<span>立松邸</span></p>
                                         <p>専有面積：<span>54.08㎡</span></p>
@@ -129,7 +129,7 @@
                                         <img src="<?=SERVICE_IMAGE_PATH;?>/1x/5.png" alt="" class="img-fluid">
                                     </div>
                                     <div class="cases_item_body">
-                                        <a href="https://www.logrenove.jp/work/569/" class="btn btnDetail" target="_blank">詳しく見る <i></i></a>
+                                        <a href="https://www.logrenove.jp/work/569/" class="btn btnDetail" target="_blank" rel="noopener noreferrer">詳しく見る <i></i></a>
                                         <h3>リビング内書斎、回遊できるキッチンが「夫婦円満」の秘訣!?</h3>
                                         <p>物件名：<span>髙山邸</span></p>
                                         <p>専有面積：<span>83.09㎡</span></p>
@@ -144,7 +144,7 @@
                                         <img src="<?=SERVICE_IMAGE_PATH;?>/1x/3.jpg" alt="" class="img-fluid">
                                     </div>
                                     <div class="cases_item_body">
-                                        <a href="https://www.logrenove.jp/work/808/" class="btn btnDetail" target="_blank">詳しく見る <i></i></a>
+                                        <a href="https://www.logrenove.jp/work/808/" class="btn btnDetail" target="_blank" rel="noopener noreferrer">詳しく見る <i></i></a>
                                         <h3>暮らし方、時間の流れさえも変えた「無垢材リノベ」との出会い</h3>
                                         <p>物件名：<span>I邸</span></p>
                                         <p>専有面積：<span>49.6㎡</span></p>
@@ -393,7 +393,7 @@
                                 </div>
 
                                 <div class="box_content_footer">
-                                    <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。個人情報の取扱に関しましては <a class="btn-link" href="https://www.propolife.co.jp/privacypolicy/" target="_blank"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+                                    <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。個人情報の取扱に関しましては <a class="btn-link" href="https://www.propolife.co.jp/privacypolicy/" target="_blank" rel="noopener noreferrer"><b>プライバシーポリシー</b></a> をご覧ください。<br>
                                     ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
                                     <div class="form-group text-center">

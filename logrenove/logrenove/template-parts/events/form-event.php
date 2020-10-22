@@ -1,4 +1,4 @@
-<?php $even_datetime = get_event_datetime(); ?>
+<?php $event_datetime = get_event_datetime(); ?>
 
 <style type="text/css">
     .validate-error {
@@ -12,24 +12,34 @@
         <div class="form-group">
             <div class="row mb-3">
                 <div class="col-12 col-lg-2 align-self-center">
-                    <label for="">開始日時</label>
+                    <label for="">開始日時<span class="red">（※）</span></label>
                 </div>
                 <div class="col-12 col-lg-10 align-self-center">
                     <div class="row">
                         <div class="col-6 col-lg-6">
                             <div class="box_datetime mb-2 mb-lg-0">
+                                <select name="date" class="form-control custom-select required">
+                                    <?php foreach ($event_datetime['date'] as $key => $date) { ?>
+                                        <option value="<?=$date['date']?>"><?=$date['date']?></option>
+                                    <?php } ?>
+                                </select>
                                 <!-- <input type="text" name="" class="form-control datepicker" placeholder="日付を選択"> -->
-                                <input type="text" name="date" class="form-control required" placeholder="日付を選択" value="<?php echo $even_datetime['date'];?>" readonly>
+                                <!-- <input type="text" name="date" class="form-control required" placeholder="日付を選択" value="<?php //echo $even_datetime['date'];?>" readonly> -->
                                 <!-- <i class="i_datetime"></i> -->
                             </div>
                         </div>
                         <div class="col-6 col-lg-6">
+                            <select name="time" class="form-control custom-select required">
+                                <?php foreach ($event_datetime['time'] as $key => $time) { ?>
+                                    <option value="<?=$time['hour']?>"><?=$time['hour']?></option>
+                                <?php } ?>
+                            </select>
                             <!-- <select name="" id="" class="form-control custom-select">
                                 <option value="">時間を選択</option>
                                 <option value="">...</option>
                                 <option value="">...</option>
                             </select> -->
-                            <input type="text" name="time" class="form-control required" value="<?php echo $even_datetime['time'];?>" readonly>
+                            <!-- <input type="text" name="time" class="form-control required" value="<?php echo $even_datetime['time'];?>" readonly> -->
                         </div>
                     </div>
                 </div>
@@ -67,7 +77,7 @@
         </div>
         <div class="box_content_footer">
             <p class="primary_policy">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。
-            個人情報の取扱に関しましては <a target="_blank" class="btn-link" href="https://www.propolife.co.jp/privacypolicy/"><b>プライバシーポリシー</b></a> をご覧ください。<br>
+            個人情報の取扱に関しましては <a target="_blank" class="btn-link" href="https://www.propolife.co.jp/privacypolicy/" rel="noopener noreferrer"><b>プライバシーポリシー</b></a> をご覧ください。<br>
             ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
 
             <div class="form-group text-center mb-0">

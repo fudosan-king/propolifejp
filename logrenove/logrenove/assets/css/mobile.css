@@ -129,7 +129,10 @@
 		float: right
 	}
 	.section_banner {
-		padding: 15px 15px 0
+		padding: 75px 15px 0;
+	}
+	.admin-bar .section_banner {
+		padding: 15px 15px 0;
 	}
 	.carousel_banner .carousel-cell {
 		width: 100%;
@@ -171,7 +174,7 @@
 		display: inline-block;
 		margin-bottom: 0;
 		position: absolute;
-		z-index: 1;
+		z-index: 999;
 		left: 5px;
 		top: 5px;
 		padding: 10px;

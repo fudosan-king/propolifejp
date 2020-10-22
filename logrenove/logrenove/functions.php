@@ -710,21 +710,25 @@
 
     function set_posts_per_page_for_events_cpt( $query ) {
         if ( !is_admin() && $query->is_main_query() && (is_post_type_archive( 'events' ) || is_tax('event_category') || is_tax('event_tags'))) {
-            $query->set( 'posts_per_page', '15' );
+            $query->set( 'posts_per_page', '10' );
         }
     }
     add_action( 'pre_get_posts', 'set_posts_per_page_for_events_cpt' );
 
     function get_event_datetime()
     {
-        $post_id = get_queried_object_id();
-        $event_datetime = get_field('event_datetime', get_the_ID());
-        $result = array();
-        $result['date'] = (!empty($event_datetime['date']) && count($event_datetime['date'])) ? $event_datetime['date'] : '';
-        $hour = (!empty($event_datetime['hour']) && count($event_datetime['hour'])) ? $event_datetime['hour'] : '09';
-        $minute = (!empty($event_datetime['minute']) && count($event_datetime['minute'])) ? $event_datetime['minute'] : '00';
-        $result['time'] = $hour.':'.$minute;
-        return $result;
+        $post_id = get_the_ID();
+        $event_date = get_field('event_date', $post_id);
+        $event_time = get_field('event_time', $post_id);
+        // $result = array();
+        // $result['date'] = (!empty($event_datetime['date']) && count($event_datetime['date'])) ? $event_datetime['date'] : '';
+        // $hour = (!empty($event_datetime['hour']) && count($event_datetime['hour'])) ? $event_datetime['hour'] : '09';
+        // $minute = (!empty($event_datetime['minute']) && count($event_datetime['minute'])) ? $event_datetime['minute'] : '00';
+        // $result['time'] = $hour.':'.$minute;
+        $event_datetime = array();
+        $event_datetime['date'] = !empty($event_date) && is_array($event_date) && count($event_date) ? $event_date : array();
+        $event_datetime['time'] = !empty($event_time) && is_array($event_time) && count($event_time) ? $event_time : array();
+        return $event_datetime;
     }
 
     if( !function_exists('get_query_pagination_events') ) {
@@ -763,13 +767,13 @@
     }
 
     function get_events($args = array()) {
-        $date_diff_events = date_diff_events('', '+2 days');
+        // $date_diff_events = date_diff_events('', '+2 days');
         $current_term = get_queried_object();
-        $d = isset($_GET['d'])?$_GET['d']:'';
+        // $d = isset($_GET['d'])?$_GET['d']:'';
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args_post = array(
                     'post_type' => 'events',
-                    'posts_per_page' => 15,
+                    'posts_per_page' => 10,
                     'paged' => $paged,
                     'post_status' => 'publish',
                     'ignore_sticky_posts' => true,
@@ -778,35 +782,37 @@
                     'cache_results'          => true,
                     'update_post_term_cache' => true,
                     'update_post_meta_cache' => true,
-                    'meta_query' => array(
-                        array(
-                            'key' => 'event_datetime_date',
-                            'value' => $date_diff_events,
-                            'compare' => '>=',
-                            'type' => 'DATE',
-                        ),
-                        'relation'  => 'AND',
-                        'event_datetime_date' => array(
-                            'key'       => 'event_datetime_date',
-                            'compare'   => 'EXISTS',
-                            'type'      => 'DATE'
-                        ),
-                        'event_datetime_hour' => array(
-                            'key'       => 'event_datetime_hour',
-                            'compare'   => 'EXISTS',
-                            'type'      => 'NUMERIC'
-                        ),
-                        'event_datetime_minute' => array(
-                            'key'       => 'event_datetime_minute',
-                            'compare'   => 'EXISTS',
-                            'type'      => 'NUMERIC'
-                        ),
-                    ),
-                    'orderby'   => array(
-                        'event_datetime_date' => 'ASC',
-                        'event_datetime_hour' => 'ASC',
-                        'event_datetime_minute' => 'ASC',
-                    ),
+                    'orderby' => 'ID',
+                    'order' => 'DESC',
+                    // 'meta_query' => array(
+                    //     array(
+                    //         'key' => 'event_datetime_date',
+                    //         'value' => $date_diff_events,
+                    //         'compare' => '>=',
+                    //         'type' => 'DATE',
+                    //     ),
+                    //     'relation'  => 'AND',
+                    //     'event_datetime_date' => array(
+                    //         'key'       => 'event_datetime_date',
+                    //         'compare'   => 'EXISTS',
+                    //         'type'      => 'DATE'
+                    //     ),
+                    //     'event_datetime_hour' => array(
+                    //         'key'       => 'event_datetime_hour',
+                    //         'compare'   => 'EXISTS',
+                    //         'type'      => 'NUMERIC'
+                    //     ),
+                    //     'event_datetime_minute' => array(
+                    //         'key'       => 'event_datetime_minute',
+                    //         'compare'   => 'EXISTS',
+                    //         'type'      => 'NUMERIC'
+                    //     ),
+                    // ),
+                    // 'orderby'   => array(
+                    //     'event_datetime_date' => 'ASC',
+                    //     'event_datetime_hour' => 'ASC',
+                    //     'event_datetime_minute' => 'ASC',
+                    // ),
                 );
         if(is_term($current_term->term_id) != NULL)
         {
@@ -819,13 +825,13 @@
               ));
             $args_post = array_merge($args_post, $args_term);
         }
-        if($d!='')
-        {
-            $posts_by_date_of_week = get_posts_by_date_of_week($d);
-            if(!count($posts_by_date_of_week)) return false;
-            $args_post_by_date_of_week = array('post__in' => $posts_by_date_of_week);
-            $args_post = array_merge($args_post, $args_post_by_date_of_week);
-        }
+        // if($d!='')
+        // {
+        //     $posts_by_date_of_week = get_posts_by_date_of_week($d);
+        //     if(!count($posts_by_date_of_week)) return false;
+        //     $args_post_by_date_of_week = array('post__in' => $posts_by_date_of_week);
+        //     $args_post = array_merge($args_post, $args_post_by_date_of_week);
+        // }
         $args_post = count($args)?array_merge($args_post, $args):$args_post;
         $event_posts = new WP_Query( $args_post );
         return $event_posts;
@@ -894,6 +900,43 @@
         return $date;
     }
 
+    function get_event_description()
+    {
+        $post_id = get_queried_object_id();
+        $description = get_field('event_description', $post_id);
+        return $description;
+    }
+
+    function limit_event_content($content='', $limit=180, $strip_tags='<br>')
+    {
+        global $detect;
+        if($detect->isMobile()) {
+            $content = wp_trim_words($content, $limit, '...');
+        }
+        else {
+            $content_arr = explode('<br />', $content, 3);
+            if(is_array($content_arr) && count($content_arr) >= 3) {
+                $content_arr[2] = mb_strimwidth($content_arr[2], 0, $limit, '...');
+                $content = implode('<br>', $content_arr);
+            }
+            else return $content;
+            /* $content = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $content );
+            $content = strip_tags( $content, $strip_tags);
+            $content = mb_strimwidth($content, 0, $limit, '...'); */
+        }
+        return $content;
+    }
+
+    if (class_exists('MultiPostThumbnails')) {
+        new MultiPostThumbnails(
+            array(
+                'label' => 'Secondary Image',
+                'id' => 'secondary-image',
+                'post_type' => 'events',
+             )
+        );
+    }
+
     # Customize social login
 
     // function get_social_login_button()
@@ -931,4 +974,17 @@
     //     return $buttons;
     // }
 
+    /*  
+        #7368: ◇LogRenove目次下設置ウィジェットの開発
+        Modify (insert) below Table of Content (if exist) - 1st priority
+        Modify (insert) below the seccond h2 tag (if exist) - 2nd priority
+    */
+
+    function func_insert_extras_content(){
+        global $post;
+        $insertContent = get_field('insert_extras_content', get_the_category( $post->ID )[0]);
+        $content = isset($insertContent) && !empty($insertContent) ? '<div class="insert-wrapper">'.$insertContent.'</div>' : '';
+        return $content;
+    }
+    add_shortcode( 'insert_extras_content', 'func_insert_extras_content' );
 ?>

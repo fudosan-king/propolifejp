@@ -12,8 +12,8 @@
             公開日 <?php echo get_the_time('Y年m月d日') ?> <br>
             更新日 <?php echo get_the_modified_time('Y年m月d日') ?></p>
         <div class="d-block d-lg-flex mb-5">
-            <a href="#" class="btn btn_documentrequest flex-fill text-white">資料請求</a>
-            <a href="#" class="btn btn_contactus flex-fill mr-0 text-white">お問い合わせ</a>
+            <a href="https://lmp1.net/aegniiwmauslajwuy8xrotw5hadohlml/contacts/new" class="btn btn_documentrequest flex-fill text-white">資料請求</a>
+            <a href="https://lmp1.net/nwkrdphrawvy2vsimpmsrqsm3bwbsle3/contacts/new" class="btn btn_contactus flex-fill mr-0 text-white">お問い合わせ</a>
         </div>
     </div>
     <div class="box_relation_article">
@@ -35,9 +35,9 @@
                     <div class="carousel-cell">
                         <div class="box_relation_article_item">
                             <div class="carousel_relation_article_img">
-                                <a href="#"><img src="<?php echo get_the_post_thumbnail($post->ID) ?>" alt="" class="img-fluid"></a>
+                                <a href="<?php echo get_post_permalink($post->ID) ?>"><img src="<?php echo get_the_post_thumbnail($post->ID) ?>" alt="" class="img-fluid"></a>
                             </div>
-                            <p>手すり設置のリフォーム費用相場は？段差をサポートするための意味と必要性</p>
+                            <p><?php echo $post->post_title ?></p>
                         </div>
                     </div>
                 <?php wp_reset_postdata(); endforeach; endif; ?>

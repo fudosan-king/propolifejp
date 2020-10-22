@@ -16,15 +16,25 @@ include 'inc/CtaWidget.php';
  * @param string $content
  * @param int $max_length
  */
-function trim_text( string $content, int $max_length) {
+function trim_text( $content, $max_length) {
     if(mb_strlen($content) > $max_length)
     {
-        echo mb_substr($content, 0, $max_length) . "...";
+        return mb_substr($content, 0, $max_length) . "...";
     }
     else {
-        echo $content;
+        return $content;
     }
 }
+
+// function trim_text( string $content, int $max_length) {
+//     if(mb_strlen($content) > $max_length)
+//     {
+//         echo mb_substr($content, 0, $max_length) . "...";
+//     }
+//     else {
+//         echo $content;
+//     }
+// }
 
 /**
  * Register widget area.
@@ -109,7 +119,7 @@ function get_ajax_posts() {
  *
  * @return array
  */
-function post_paginate(array $posts, int $page, int $limit): array {
+function post_paginate(array $posts, $page, $limit) {
     $is_last_page = 0;
 	$page = $page ? $page : 1;
 	$total = count( $posts );

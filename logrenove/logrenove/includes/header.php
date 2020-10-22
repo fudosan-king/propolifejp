@@ -36,8 +36,8 @@
                             $service_url = get_field('service_url_homepage', 'option');
                         }
                     } ?>
-                    <a target="_blank" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-none d-lg-block"><?php echo $service_text_pc; ?></a>
-                    <a target="_blank" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-block d-lg-none"><?php echo $service_text_sp; ?></a>
+                    <a target="_blank" rel="noopener noreferrer" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-none d-lg-block"><?php echo $service_text_pc; ?></a>
+                    <a target="_blank" rel="noopener noreferrer" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-block d-lg-none"><?php echo $service_text_sp; ?></a>
                 </div>
                 <div class="col-3 col-md-3 align-self-center text-right">
                     <div class="box_top_menu">

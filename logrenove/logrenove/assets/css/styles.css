@@ -1716,7 +1716,8 @@ ul.box_article_related li a {
 }
 
 .box_article_detail img {
-	margin-bottom: 10px
+	margin-bottom: 10px;
+	height: auto;
 }
 
 .card-header .card-wrapper {

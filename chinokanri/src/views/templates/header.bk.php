@@ -1,7 +1,3 @@
-<?php 
-if($this->uri->uri_string() == 'kaiyaku')
-    redirect('contact/kaiyaku', 'refresh'); 
-?>
 <!doctype html>
 <html lang="ja">
     <head>
@@ -99,25 +95,26 @@ if($this->uri->uri_string() == 'kaiyaku')
 
             <header>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-9 align-self-lg-start align-self-center">
-                            <div class="box_logo">
-                                <p class="mb-1 job">分譲マンション・賃貸物件・商業ビル管理事業・プロパティ・マネジメント・建物清掃事業</p>
-                                <a class="logo" href="/"><img src="<?=base_url();?>assets/images/1x/logo.jpg" alt="" class="img-fluid" width="210"></a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 align-self-center">
-                            <div class="header_contact">
-                                <a class="btn btnEmail" href="<?=base_url();?>contact/bunjyo">
-                                    <span>お問い合わせ</span>
-                                    <img src="<?=base_url();?>assets/images/SVG/mail.svg" alt="" class="img-fluid" width="24">
-                                </a>
-                            </div>
-                        </div>
+                  <div class="row">
+                    <div class="col-12 col-lg-9 align-self-lg-start align-self-center">
+                      <p class="mb-1 job">分譲マンション・賃貸物件・商業ビル管理事業・プロパティ・マネジメント・建物清掃事業</p>
+                      <a class="logo" href="/"><img src="<?=base_url();?>assets/images/1x/logo.jpg" alt="" class="img-fluid" width="210"></a>
                     </div>
+                    <div class="col-12 col-lg-3 align-self-center">
+                      <div class="header_contact">
+                        <div class="header_left">
+                            <p><a class="btn btnEmail" href="<?=base_url();?>contact/naiken"><img src="<?=base_url();?>assets/images/SVG/mail.svg" alt="" class="img-fluid" width="24"> お問い合わせ</a></p>    
+                        </div>
+                        <div class="header_right">
+                            <p><a class="btnPhone" href="tel:0120997950"><img src="<?=base_url();?>assets/images/SVG/phone.svg" alt="" class="img-fluid" width="24"> 0120-99-7950</a></p>
+                            <p>電話 045-581-9556（代）<br>
+                            FAX 045-575-6477</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </header>
-
 
             <main>
                 <div class="main_content">
@@ -125,23 +122,11 @@ if($this->uri->uri_string() == 'kaiyaku')
                         <?php
                             if($this->router->fetch_class() == 'home'):
                                 ?>
-                                <!-- <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-12">
+                                <div class="container">
+                                    <div class="row banner">
+                                        <div class="col-sm|md|lg|xl-1-12|auto">
                                             <div class="banner-content">
                                                 <h3 class="text-center">「マンション管理なんてどこも同じ」<br> と思ってませんか？</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-12">
-                                            <div class="banner">
-                                                <div class="banner-content">
-                                                    <h3 class="text-center">「マンション管理なんてどこも同じ」<br> と思ってませんか？</h3>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

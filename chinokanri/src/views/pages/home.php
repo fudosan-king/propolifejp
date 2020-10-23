@@ -111,5 +111,9 @@
             </article>
         </div>
     </section>
-   
+    <section class="row cancellation text-center">
+        <div class="col-12 col-lg-12">
+            <a class="btn btn_apply mb-5" href="<?=base_url();?>contact/naiken">仲介業者様専用内見依頼フォーム</a>
+        </div>
+    </section>
 </div>

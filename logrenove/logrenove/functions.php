@@ -549,6 +549,7 @@
     {
         global $detect;
         $articles_ids = get_recommend_articles_ids($post_type);
+        $articles_ids = $detect->isMobile()?array_slice($articles_ids, 0, 3):$articles_ids;
         $posts = array();
         foreach ($articles_ids as $key => $articles_id) {
             $obj = new stdClass();
@@ -641,7 +642,7 @@
         return $articles_ids;
     }
 
-    function get_recent_posts($numberposts=5, $exclude=array(), $post_type='post')
+    function get_recent_posts($numberposts=5, $exclude=array(), $post_type='post', $args=array())
     {
         $exclude[] = get_queried_object_id();
         $recent_args = array(
@@ -650,6 +651,8 @@
             'exclude'     => $exclude,
             'post_type'   => $post_type,
         );
+
+        $recent_args = count($args) ? array_merge($recent_args, $args): $recent_args;
 
         $recent_posts = wp_get_recent_posts( $recent_args, $output = 'ARRAY_A' );
 
@@ -936,6 +939,114 @@
              )
         );
     }
+
+    # Posts ranking
+    function wpb_set_post_views($postID) {
+        $count_key = 'wpb_post_views_count';
+        $count = get_post_meta($postID, $count_key, true);
+        if($count==''){
+            $count = 0;
+            delete_post_meta($postID, $count_key);
+            add_post_meta($postID, $count_key, '0');
+        }else{
+            $count++;
+            update_post_meta($postID, $count_key, $count);
+        }
+    }
+
+    remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+    function wpb_track_post_views ($post_id) {
+        if ( !is_single() ) return;
+        if ( empty ( $post_id) ) {
+            global $post;
+            $post_id = $post->ID;    
+        }
+        wpb_set_post_views($post_id);
+    }
+    add_action( 'wp_head', 'wpb_track_post_views');
+
+    function wpb_get_post_views($postID){
+        $count_key = 'wpb_post_views_count';
+        $count = get_post_meta($postID, $count_key, true);
+        if($count==''){
+            delete_post_meta($postID, $count_key);
+            add_post_meta($postID, $count_key, '0');
+            return "0 View";
+        }
+        return $count.' Views';
+    }
+
+    function get_ranking_posts($numberposts=5, $exclude=array(), $post_type='post')
+    {
+        global $detect;
+        $articles_ids = get_ranking_post_ids();
+        $posts = array();
+        $i=1;foreach ($articles_ids as $key => $articles_id) {
+            $obj = new stdClass();
+            $obj->permalink = get_permalink($articles_id);
+            $obj->title = get_the_title($articles_id);
+            $_size = $detect->isMobile() ? 'full' : 'full' ;
+            $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
+            $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
+            $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
+            $obj->rank = $i;
+            $posts[] = $obj;
+            $i++;
+        }
+
+        if(count($posts)) return $posts;
+        else return false;
+    }
+
+    function get_ranking_post_ids($numberposts=5, $post_type='post')
+    {
+        $args_post = array(
+            'numberposts'      => 5,
+            'post_type'        => $post_type,
+            'meta_key' => 'wpb_post_views_count',
+            'orderby' => 'meta_value',
+            'order' => 'DESC',
+            'post_status' => 'publish',
+        );
+        $args_term = array();
+        if(!is_home())
+        {
+            $cat_ID = get_the_category()[0]->cat_ID;
+            $args_term = array(
+                'tax_query' => [
+                    [
+                        'taxonomy' => 'category',
+                        'terms' => $cat_ID,
+                        'include_children' => false,
+                    ],
+                ],
+            );
+            $args_post = array_merge($args_post, $args_term);
+        }
+        
+        $posts = get_posts($args_post);
+        
+        $articles_ids = array();
+        foreach ($posts as $key => $post) {
+            $articles_ids[] = $post->ID;
+        }
+
+        $count_articles_ids = is_array($articles_ids)?count($articles_ids):0;
+
+        $numberposts = 5-$count_articles_ids;
+
+        if($count_articles_ids<5)
+        {
+            $recent_posts = get_recent_posts($numberposts, $articles_ids, $post_type, $args_term);
+            $articles_ids = is_array($articles_ids)?array_merge($articles_ids, array_column($recent_posts, 'ID')):array_column($recent_posts, 'ID');
+        }
+
+        return $articles_ids;
+    }
+
+    # End posts ranking
+
 
     # Customize social login
 

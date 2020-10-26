@@ -1,4 +1,5 @@
 <?php 
+global $detect;
 if(have_posts()):
     while(have_posts()): the_post();
         
@@ -11,14 +12,14 @@ if(have_posts()):
             }
         }
         $current_post_type = get_post_type();
-
+        $posts_per_page = $detect->isMobile()?3:6;
         $args = array(
             
             'post__not_in' => array( $post_id ),
             'category__in'     => $cat_ids,
             'post_type'   =>  $post->post_type,
             'post_status' => $post->post_status,
-            'posts_per_page'         => 6,
+            'posts_per_page'         => $posts_per_page,
     
             // Permission Parameters -
             'perm' => 'readable',

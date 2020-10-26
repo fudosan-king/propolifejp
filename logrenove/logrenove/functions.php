@@ -549,7 +549,7 @@
     {
         global $detect;
         $articles_ids = get_recommend_articles_ids($post_type);
-        $articles_ids = $detect->isMobile()?array_slice($articles_ids, 0, 3):$articles_ids;
+        $articles_ids =$articles_ids;
         $posts = array();
         foreach ($articles_ids as $key => $articles_id) {
             $obj = new stdClass();

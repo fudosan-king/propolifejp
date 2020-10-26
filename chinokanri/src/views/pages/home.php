@@ -20,7 +20,7 @@
             </article>
         </div>
     </section> -->
-    <section class="row company-info">
+    <section id="company-info" class="row company-info">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
             <h3 class="block-title text-center">会社概要</h3>
             <article class="content">
@@ -77,7 +77,7 @@
             </article>
         </div>
     </section>
-    <section class="row recruit">
+    <section id="recruit" class="row recruit">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
             <h3 class="block-title text-center">採用情報</h3>
             <article class="content">
@@ -103,7 +103,7 @@
             </article>
         </div>
     </section>
-    <section class="row access">
+    <section id="access"  class="row access">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
             <h3 class="block-title text-center">アクセス</h3>
             <article class="content">

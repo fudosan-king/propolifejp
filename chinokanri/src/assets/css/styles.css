@@ -808,11 +808,14 @@ header {
 	background: #f1f1f1;
 }
 .footer_top_item:first-child {
-	width: 30%;
+	width: 40%;
+}
+.footer_top_item:nth-child(3) {
+	width: 80%;
 }
 .footer_top_item:last-child {
 	margin-right: 0;
-	width: 50%;
+	width: 80%;
 }
 .footer_bottom {
 	padding-top: 12px;

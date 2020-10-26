@@ -22,4 +22,12 @@ $(document).ready(function () {
     $('.numbersOnly').keyup(function () {
         this.value = this.value.replace(/[^0-9\.]/g,'');
     });
+
+    $('[data-scroll]').on('click', function(e){
+        e.preventDefault();
+        var $hash = $(this.hash);
+        $('html, body').animate({
+            scrollTop: $hash.offset().top
+        }, 500);
+    });
 });

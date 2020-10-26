@@ -12,12 +12,9 @@
                                     <div class="footer_top_item">
                                         <h4>企業情報</h4>
                                         <ul>
-                                            <li><a target="_blank" href="#">会社概要</a></li>
-                                            <li><a target="_blank" href="">企業沿革</a></li>
-                                            <li><a target="_blank" href="">アクセス</a></li>
-                                            <li><a target="_blank" href="">NEWS</a></li>
-                                            <li><a target="_blank" href="">採用情報</a></li>
-                                            <li><a target="_blank" href="">会社案内</a></li>
+                                            <li><a <?php echo !$this->uri->segment(1) ? "data-scroll" : ""; ?> href="<?=base_url();?>#company-info">会社概要</a></li>
+                                            <li><a <?php echo !$this->uri->segment(1) ? "data-scroll" : ""; ?> href="<?=base_url();?>#recruit">採用情報</a></li>
+                                            <li><a <?php echo !$this->uri->segment(1) ? "data-scroll" : ""; ?> href="<?=base_url();?>#access">アクセス</a></li>
                                         </ul>
                                     </div>
                                     <div class="footer_top_item">
@@ -46,7 +43,7 @@
                                         </ul>
                                     </div>
                                     <div class="footer_top_item">
-                                        <h4>お問い合わせ</h4>
+                                        <h4>お電話でのお問い合わせ</h4>
                                         <ul>
                                             <li><a href="tel:0120997950">0120-99-7950</a><span>（無料）</span></li>
                                             <li><a href="tel:0455819556">045-581-9556</a><span>（代）</span></li>
@@ -69,11 +66,9 @@
                         <div class="row">
                             <div class="col-12 text-center">
                                 <ul>
-                                    <li><a href="<?=base_url();?>contact/" target="_blank">お問い合わせ</a></li>
-                                    <li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
                                     <li><a href="<?=base_url();?>privacy-policy" target="_blank">プライバシーポリシー</a></li>
                                 </ul>
-                                <p class="copyright">Copyright © <a href="index.php">CHINO-TATEMONO.INC.</a> All rights reserved.　</p>
+                                <p class="copyright">Copyright © <a href="<?=base_url();?>">CHINO-TATEMONO.INC.</a> All rights reserved.　</p>
                             </div>
                         </div>
                     </div>

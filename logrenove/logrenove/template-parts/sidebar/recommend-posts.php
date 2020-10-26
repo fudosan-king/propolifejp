@@ -1,7 +1,3 @@
-<?php
-    global $detect;
-?>
-
 <div class="each_boxright">
     <h2>おすすめ記事</h2>
     <div class="each_boxright_content">
@@ -12,12 +8,12 @@
         ?>
                         <article class="article_items">
                             <div class="row no-gutters">
-                                <div class="col-6 align-self-center">
+                                <div class="col-4">
                                     <a href="<?php echo $post->permalink; ?>" class="article_items_img">
                                         <img data-src="<?php echo $post->thumbails_url;?>" alt="<?php echo $post->title; //alt but get post title?>" title="<?php echo $post->title; //alt but get post title?>" class="img-fluid">
                                     </a>
                                 </div>
-                                <div class="col-6 align-self-center">
+                                <div class="col-8">
                                     <div class="article_items_content">
                                         <p class="article_items_name"><a href="<?php echo $post->permalink; ?>" ><?php echo $post->title; ?></a></p>
                                         <span class="badge badge-secondary badge_cate"><?php echo $post->firstCat;?></span>

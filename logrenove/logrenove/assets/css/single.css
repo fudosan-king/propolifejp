@@ -343,3 +343,45 @@ body.single-post .logo_logrenove_small img {
     height: auto;
 }
 
+/* relation article */
+.relation_article_content .badge_cate {
+    display: none;
+}
+.relation_article_content a {
+    color: #333942;
+}
+.relation_article_content a:hover {
+    color: #333942;
+}
+@media (max-width: 768px) {
+    .box_relation_article {
+        border: 1px solid #d0d6d6;
+        background: #fff;
+        margin-bottom: 0;
+    }
+    .box_relation_article_item {
+        padding: 15px 15px 0;
+    }
+    .relation_article_content {
+        padding-left: 12px;
+    }
+    .relation_article_content p {
+        margin-bottom: 5px;
+    }
+    .relation_article_content .badge_cate {
+        background: transparent;
+        color: #8c7d5e;
+        padding-left: 0;
+        display: inline-block;
+    }
+    .box_relation_article h2 {
+        padding: 15px 0;
+        font-size: .9rem;
+        font-weight: 700;
+        border-bottom: 1px solid #edeeee;
+        margin-bottom: 0;
+    }
+    .relation_article_img, .relation_article_img img {
+        height: 80px;
+    }
+}

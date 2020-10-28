@@ -51,8 +51,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body>
     <div id="page">
     		<header>
-			    <div class="navbar navbar-expand-md bsnav bsnav-transparent" style="min-height: 150px;">
-			        <a class="navbar-brand d-none d-md-block" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300" height="100"></a>
+			    <div class="navbar navbar-expand-md bsnav bsnav-transparent d-none d-md-block" style="min-height: 150px;">
+			        <a class="navbar-brand d-none d-md-block" href="index.php"><img src="images/1x/logo.svg" alt="" class="img-fluid" width="300" height="100" style="margin-top: 50px;"></a>
 			        <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
 			       
 			    </div>
@@ -91,10 +91,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 
 				<div class="last_houses">
-					<div class="box_sellingprice d-none d-lg-block">
+					<div class="box_sellingprice ">
 						<div class="box_sellingprice_content">
 							<h3>おかげさまで </h3>
-							<h3 style="font-size: 5rem;color: #e41e09;">完売御礼</h3>
+							<h3 class="box_sellingprice_title" >完売御礼</h3>
 							<h3>キャンセル待ち受付中</h3>
 						</div>
 					</div>

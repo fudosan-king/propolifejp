@@ -72,6 +72,18 @@
 
 }
 @media (max-width: 823px) {
+
+	.box_sellingprice {
+		width: 300px;
+	}
+	.box_sellingprice .box_sellingprice_content h3{
+		font-size: 20px;
+	}
+
+	.box_sellingprice .box_sellingprice_content h3.box_sellingprice_title{
+		font-size: 4rem;
+	}
+
 	.section_topbanner {
 		height: 500px;
 	}
@@ -244,7 +256,7 @@
 	}
 
 	footer {
-		padding: 15px 0 70px;
+		padding: 15px 0 15px;
 		background: rgba(196,196,196,1);
 	  background: -moz-linear-gradient(left, rgba(196,196,196,1) 0%, rgba(243,243,243,1) 50%, rgba(196,196,196,1) 100%);
 	  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(196,196,196,1)), color-stop(50%, rgba(243,243,243,1)), color-stop(100%, rgba(196,196,196,1)));
@@ -275,6 +287,7 @@
 	}
 	.w_btn_gradient {
 		margin-top: 30px;
+		margin-bottom: 30px;
 	}
 	.btn_gradient {
 		margin: 0 0 13.5px;
@@ -315,7 +328,7 @@
 		display: none;
 	}
 	.btn_gradient p:last-child {
-		font-size: 20px;
+		font-size: 27px;
 	}
 	.w_75 {
 		width: 100%;
@@ -1215,7 +1228,7 @@
 		top: 620px;
 	}
 	.section_lastbottom {
-    	padding: 15px 0 95px;
+    	padding: 15px 0 0px;
 	}
 }
 @media (min-width: 576px) {
@@ -1288,7 +1301,10 @@
 
     .last_houses {
 	    top: 50px;
-	    left: 20px;
+	    left: 0;
+	    right: 0;
+	    margin-right: auto;
+	    margin-left: auto;
 	    bottom: inherit;
 	}
 	.last_houses img {

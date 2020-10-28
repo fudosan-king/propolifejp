@@ -2955,7 +2955,7 @@ ul.list_topics li:nth-child(5) {
 .box_sellingprice {
   background: #fff;
   position: relative;
-  width: 445px;
+  width: 600px;
   padding: 18px 20px;
   color: #fff;
   text-align: center;
@@ -3274,4 +3274,10 @@ ul.box_price p span {
 .box_sellingprice_content_time{
   float: left;
   margin-left: 5px;
+}
+.box_sellingprice_content h3{font-size: 40px; }
+
+.box_sellingprice_content h3.box_sellingprice_title{
+    font-size: 6rem;
+    color: #e41e09;
 }

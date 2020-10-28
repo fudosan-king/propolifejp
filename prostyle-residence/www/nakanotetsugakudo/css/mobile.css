@@ -59,9 +59,7 @@
 	.box_sumitomo .content .text-up {
 		font-size: 30px;
 	}
-	.last_houses {
-		left: 20px;
-	}
+
 	.banner_gallery {
 		right: 2%;
 	}
@@ -72,16 +70,34 @@
 
 }
 @media (max-width: 823px) {
-
+	.last_houses {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    margin: auto;
+	}
 	.box_sellingprice {
 		width: 300px;
+		padding: 5px 20px;
 	}
 	.box_sellingprice .box_sellingprice_content h3{
 		font-size: 20px;
+		margin-bottom: 0px;
 	}
 
 	.box_sellingprice .box_sellingprice_content h3.box_sellingprice_title{
 		font-size: 4rem;
+		line-height: 1.2em;
 	}
 
 	.section_topbanner {
@@ -967,9 +983,7 @@
 	.banner_gallery {
 	    text-align: right;
 	}
-	.last_houses {
-	    margin-bottom: 200px;
-	}
+	
 	.box_price {
 	    margin-left: -15px;
 	    margin-right: -15px;
@@ -1299,14 +1313,7 @@
 
     .roomplan_item_footer p {min-height: inherit;font-size: 20px;}
 
-    .last_houses {
-	    top: 50px;
-	    left: 0;
-	    right: 0;
-	    margin-right: auto;
-	    margin-left: auto;
-	    bottom: inherit;
-	}
+  
 	.last_houses img {
 	    width: 148px;
 	}

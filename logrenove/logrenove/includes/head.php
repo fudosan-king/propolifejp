@@ -60,3 +60,4 @@
     endif;
 ?>
 
+<?php event_detail_schema(); ?>

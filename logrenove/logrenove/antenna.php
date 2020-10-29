@@ -131,8 +131,9 @@ do_action( 'rss_tag_pre', 'rss2' );
     $content = get_the_content_feed_customize('rss2');
     $img = wp_get_attachment_image_url( get_post_thumbnail_id(), $size = 'full', $icon = false ); //here
     $imgHTML = '<img class="img-fluid" src="'.$img.'"'; //here
-    $content = preg_replace('{<a [^>]+?>}i', '', $content);
-    $content = str_replace('</a>', '', $content);
+    /* $content = preg_replace('{<a [^>]+?>}i', '', $content);
+    $content = str_replace('</a>', '', $content); */
+    $content = str_replace('<a ', '<a class="text-link" ', $content);
     $content = $imgHTML.$content; //here
      ?>
     <content:encoded><![CDATA[<?php echo $content; ?>]]></content:encoded>

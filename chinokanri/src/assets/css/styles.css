@@ -53,7 +53,10 @@ h1,h2,h3,h4,h5,h6{ font-family: 'SF Pro Display Semibold', sans-serif; line-heig
 html,body{position:relative;height:100%}
 small {font-size: 10px;} p {word-wrap: break-word; font-size: 0.875em;}
 a:hover {text-decoration:none;color:#0180CD;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear;}
-
+a.none-link:link{text-decoration: none!important; cursor: default;}
+a.none-link:visited{text-decoration: none!important; cursor: default;}
+a.none-link:hover{text-decoration: none!important; cursor: default;}
+a.none-link:active{text-decoration: none!important; cursor: default;}
 .form-control {
 	font-size: 0.875em;
 	border-color: #828282;
@@ -418,7 +421,7 @@ header {
 footer {
 	background: #0180CD;
 	color: #fff;
-	padding: 10px 0;
+	padding: 0 0 10px;
 }
 footer a {
 	color: #fff;
@@ -650,6 +653,177 @@ footer .back-to-top {
     left: 20px;
     right: 0;
 }
+
+/* 08/10/2020 */
+header {
+	padding: 0;
+}
+.box_logo {
+	padding-top: 15px;
+}
+.btnEmail {
+	background: #0180CD;
+	color: #fff;
+	padding: 30px 15px;
+	font-weight: 600;
+	display: block;
+	border-radius: 0;
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+.banner {
+  	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+.banner-content h3 {
+  color: #fff;
+  text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+}
+.block-title {
+  color: #1592e6;
+  font-size: 1.875em;
+  margin: 30px auto 12px;
+  font-family: "SF Pro Display Medium";
+}
+.intro p {
+  font-size: 22px;
+  line-height: 1.6;
+  border-bottom: #0080cc 2px solid;
+  font-weight: 200;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.company-info table th, .recruit table th {
+  background-color: #eee;
+  border: 1px solid #b9b9b9;
+  padding: .35rem .75rem;
+}
+.company-info table td, .recruit table td {
+  border: 1px solid #b9b9b9;
+  padding: .35rem .75rem;
+}
+.btn_athome {
+	background-color: #0180CD;
+  max-width: 530px;
+  margin: 40px auto;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 15px 30px;
+  border-radius: 100px;
+}
+.btn_athome:hover {
+	background: #036fb0;
+	color: #fff;
+}
+.btn_athome h4 {
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 0.3pt;
+  margin-bottom: 0;
+}
+.btn_athome p {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 1.625em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+.btn_apply {
+	background-color: #0180CD;
+  max-width: 530px;
+  margin: 40px auto 30px;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 15px 30px;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 600;
+}
+.btn_apply:hover {
+	background: #036fb0;
+	color: #fff;
+}
+
+
+.footer_top {
+	background: #fff;
+	border-top: 1px solid #f1f1f1;
+	padding: 30px 0;
+}
+.footer_top h4 {
+	font-size: 1em;
+	font-weight: bold;
+}
+.footer_top ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.footer_top ul li {
+	display: block;
+	color: #333;
+	text-align: left;
+}
+.footer_top ul li a {
+	color: #333;
+	padding: 0;
+	text-align: left;
+	border-right: none;
+}
+.footer_top ul li span {
+	font-size: 0.875em;
+}
+.footer_top ul li:hover a {
+	text-decoration: underline;
+}
+.footer_top_content {
+	display: flex;
+}
+.footer_top_item {
+	width: 100%;
+	margin-right: 15px;
+	text-align: left;
+	color: #333;
+	font-size: 0.875em;
+	position: relative;
+}
+.footer_top_item::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	background: #f1f1f1;
+}
+.footer_top_item:first-child {
+	width: 40%;
+}
+.footer_top_item:nth-child(3) {
+	width: 80%;
+}
+.footer_top_item:last-child {
+	margin-right: 0;
+	width: 80%;
+}
+.footer_bottom {
+	padding-top: 12px;
+}
+.footer_bottom ul li:hover a {
+	color: #fff;
+}
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.nav-tabs .nav-link span {
 		height: 45px

@@ -28,6 +28,8 @@
 	/* top */
 	.logo {
 		display: block;
+		text-align: center;
+		margin-bottom: 10px;
 	}
 	.job {
 		line-height: 1.5em;
@@ -151,6 +153,90 @@
 		width: 80%
 	}
 
+	.footer_top_content {
+		display: block;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.footer_top_item {
+		margin-bottom: 15px;
+		text-align: center;
+		border-bottom: 1px solid #f1f1f1;
+		padding-bottom: 15px;
+	}
+	.footer_top ul li {
+		text-align: center;
+		border-bottom: 1px solid #f1f1f1;
+		padding: 5px;
+	}
+	.footer_top ul > li:last-child {border-bottom: none;}
+	.footer_top_item, .footer_top_item:first-child, .footer_top_item:last-child {
+		width: 100%;
+		margin-right: 0;
+		float: left;
+	}
+	.footer_top_item::after {
+		display: none;
+	}
+	.footer_top_item:nth-child(2n) {
+		margin-right: 0;
+	}
+	.footer_top_item:nth-child(3) {
+		width: 100%;
+	}
+	.header_contact {
+		float: none;
+		text-align: center;
+	}
+	.btnEmail {
+		margin-bottom: 15px;
+		border-radius: 100px;
+		display: inline-block; padding: 10px 25px;
+	}
+
+    .btnEmail img {margin-top: -5px; margin-left: 5px;}
+
+	.footer_top {
+		padding: 15px 0;
+	}
+	.footer_top_content .footer_top_item h4 { 
+  	cursor: pointer; 
+  	position: relative;
+  	margin-bottom: 0;
+  }
+	.footer_top_content ul {
+	  max-height: 0;
+	  overflow:hidden; 
+	  transition: max-height 1s ease-out; 
+	}
+	.footer_top ul li a {
+		/*display: block;*/
+		padding: 5px 10px;
+		text-align: center;
+		/*border-bottom: 1px solid #f1f1f1;*/
+	}
+	.footer_top ul li:last-child a {
+		border-bottom: none;
+	}
+  .footer_top_content .footer_top_item h4::after { 
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-icon' viewBox='0 0 20 20'%3E%3Cpath d='M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10'%3E%3C/path%3E%3C/svg%3E");
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 15px;
+    top: -5px;
+  }
+	.footer_top_content .footer_top_item.open h4::after { 
+	  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-icon' viewBox='0 0 20 20'%3E%3Cpath d='M10.185,1.417c-4.741,0-8.583,3.842-8.583,8.583c0,4.74,3.842,8.582,8.583,8.582S18.768,14.74,18.768,10C18.768,5.259,14.926,1.417,10.185,1.417 M10.185,17.68c-4.235,0-7.679-3.445-7.679-7.68c0-4.235,3.444-7.679,7.679-7.679S17.864,5.765,17.864,10C17.864,14.234,14.42,17.68,10.185,17.68 M10.824,10l2.842-2.844c0.178-0.176,0.178-0.46,0-0.637c-0.177-0.178-0.461-0.178-0.637,0l-2.844,2.841L7.341,6.52c-0.176-0.178-0.46-0.178-0.637,0c-0.178,0.176-0.178,0.461,0,0.637L9.546,10l-2.841,2.844c-0.178,0.176-0.178,0.461,0,0.637c0.178,0.178,0.459,0.178,0.637,0l2.844-2.841l2.844,2.841c0.178,0.178,0.459,0.178,0.637,0c0.178-0.176,0.178-0.461,0-0.637L10.824,10z'%3E%3C/path%3E%3C/svg%3E");
+	  width: 25px;
+	}
+  .footer_top_content .footer_top_item.open ul {
+  	padding-top: 10px;
+	  height:auto; 
+	  max-height: 500px; 
+	  transition: max-height 1s ease-in !important;
+	}
+
 }
 
 @media (min-width: 768px) {
@@ -166,6 +252,8 @@
 
 @media screen and (max-width: 520px){
     .cancellation .content p {font-size: 19pt;}
+    .cancellation a {margin: 20px auto;}
+    .cancellation .btn_athome p {font-size: 16pt;}
 }
 
 
@@ -213,8 +301,11 @@
 	
 	.success-submit {width: 95%; font-size: 11pt;}
 
-    footer ul li a { padding: 0 0.6rem; font-size: 11px; font-weight: bold;}
+    footer ul li a { padding: 0 0.6rem; font-size: 11px;}
+    footer .footer_bottom {font-weight: bold;}
     .copyright {font-weight: bold;}
+
+    /*.footer_top .footer_top_item ul li a {display: inline-block;}*/
 }
 
 @media (max-width: 375px) {

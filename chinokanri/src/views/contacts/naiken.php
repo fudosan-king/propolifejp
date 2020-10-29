@@ -15,14 +15,14 @@
       border: 1px solid #555;
    }
 </style>
-<?php include_once 'nav/top.php'; ?>
+
 <div class="tab-content" id="nav-tabContent">
    <div class="tab-pane fade show active" id="nav-previewrequest" role="tabpanel" aria-labelledby="nav-previewrequest-tab">
       <section class="section_content_top">
          <div class="container">
             <div class="row">
                <div class="col-12">
-                  <h1>内見依頼に関するお問い合わせ</h1>
+                  <h1>仲介業者様専用内見依頼フォーム</h1>
                   <ul class="steps d-flex">
                      <li class="active input flex-fill"><span>入力</span></li>
                      <li class="confirm flex-fill"><span>確認</span></li>

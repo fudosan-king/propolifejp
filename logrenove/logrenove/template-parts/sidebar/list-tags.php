@@ -1,4 +1,4 @@
-<div class="each_boxright">
+<div class="each_boxright <?php echo is_single()?'js-sidebar-fixed':'';?>">
     <h2>気になるキーワード</h2>
     <div class="each_boxright_content">
         <?php 

@@ -1,0 +1,226 @@
+<?php
+//add_image_size('ppl_plan_item',480,300,true); /* image for slideshow */
+function show_ppl_plan($count = "-1", $ignore_slug = "")
+{
+	$exclude_ids = array();
+
+	if(!empty($ignore_slug))
+	{
+		$ignore_slug = explode(',', $ignore_slug);
+
+		foreach ($ignore_slug as $slug)
+		{
+			$_post = get_page_by_path($slug, OBJECT, 'ppl_plan');
+			$exclude_ids[] = $_post->ID;
+		}
+	}
+
+	$query = new WP_Query( array( 
+							'post_type' => 'ppl_plan', 
+							'posts_per_page' => $count,
+							'post__not_in' => $exclude_ids
+						));
+	ob_start();
+	if($query->have_posts()) : 
+		while($query->have_posts()) : $query->the_post(); 
+			global $post, $wp_query;
+			$thumb = get_post_thumbnail_id($post->ID);
+			$thumburl = wp_get_attachment_image_src($thumb,'portfolio_image');
+
+		?>
+		 	<div class="box_normal_item">
+		        <div class="box_premium">
+		            <span class="label_new"><i>New</i></span>
+		            <ul class="list_view">
+		                <li><a href="#">眺望</a></li>
+		            </ul>
+		            <h2><?= get_the_title($post->ID)?></h2>
+		            <h3><?= $post->post_excerpt ?></h3>
+		            <div class="box_premium_img">
+		                <a href="<?= esc_url(get_permalink($post->ID)) ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
+		            </div>
+		        </div>
+	   		 </div>			
+	
+		<?php		
+		
+		endwhile;
+									
+	endif;
+
+	wp_reset_postdata();
+
+	return ob_get_contents();
+}
+
+function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
+{
+	if( absint($id) > 0 )
+	{
+		$query = new WP_Query( array( 'post_type' => 'ppl_plan', 'post__in' => array($id )) );
+	}
+	elseif( strlen(trim($slug)) > 0 )
+	{
+		$_post = get_page_by_path($slug, OBJECT, 'ppl_plan');
+		if( !is_null($_post) ){
+			$query = new WP_Query( array( 'post_type' => 'ppl_plan', 'post__in' => array($_post->ID )) );
+		}
+	}
+	
+	if($query->have_posts()) : 
+		while($query->have_posts()) : $query->the_post();
+			global $post;
+			$post_title   = get_the_title($post->ID);
+			$post_excerpt = $post->post_excerpt;
+			$post_url     = esc_url(get_permalink($post->ID));
+			$thumb        = get_post_thumbnail_id($post->ID);
+			$thumburl     = wp_get_attachment_image_src($thumb,'ppl_plan_item');
+		 	if ($style == 'special'): ?>
+				<div class="row no-gutters">
+	                <div class="col-12 col-lg-5">
+	                    <h1><?= $post_title ?></h1>
+	                    <h2><?= $post_excerpt ?></h2>
+	                </div>
+	                <div class="col-12 col-lg-7">
+	                    <div class="box_infoview_img">
+	                        <a href="<?= $post_url ?>" title=""><span class="path-hover"></span></a>
+	                        <img src="<?= $thumburl[0] ?>" alt="" class="img-fluid w-100">
+	                    </div>
+	                </div>
+	            </div>
+	            <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p>
+	        <?php else: ?>
+	        	<span class="label_new"><i>New</i></span>
+                                        
+                <ul class="list_view">
+                    <li><a href="#">眺望</a></li>
+                    <li><a href="#">３Dモデルルーム画像</a></li>
+                </ul>
+                <h2><?= $post_title ?></h2>
+                <h3><?= $post_excerpt ?></h3>
+                <div class="box_premium_img">
+                    <a href="<?= $post_url ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
+                </div>
+			<?php endif ?>
+			  		
+		<?php
+		endwhile;
+	endif;
+}
+
+function show_carousel_ppl_plan($limit = -1){
+	ob_start();
+	$query = new WP_Query( array( 'post_type' => 'ppl_plan', 'posts_per_page' => $limit) );
+	if($query->have_posts()) : ?>
+		<div class="owl-carousel owl-theme" id= 'ppl_plan-slider'>
+		<?php	while($query->have_posts()) : $query->the_post();
+				global $post;
+				$post_title = esc_html(get_the_title($post->ID));
+				$post_description = substr(strip_tags($post->post_content),0,60);
+				$post_url =  esc_url(get_permalink($post->ID));
+				$url_video = esc_url(get_post_meta($post->ID,THEME_SLUG.'video_ppl_plan',true));
+				$thumb=get_post_thumbnail_id($post->ID);
+				$thumburl=wp_get_attachment_image_src($thumb,'ppl_plan_image');
+			?>
+			<div class="ppl_plan_sc item">
+				<div class="ppl_plan_thumbnail">
+					<a class="image" href="<?php echo $post_url; ?>">
+						<?php if($thumburl[0]) { ?>
+							<img alt="<?php echo $post_title?>" title="<?php echo $post_title;?>" class="opacity_0" src="<?php echo  esc_url($thumburl[0]);?>"/>																
+							<?php } else { ?>
+							<img alt="<?php echo $post_title?>" title="<?php echo $post_title;?>" class="opacity_0" src="<?php echo get_template_directory_uri(); ?>/images/no-gallery-830x494.gif"/>
+							<?php } ?>
+						<div  class="hover-default"></div>
+					</a>
+					<a class="post-title heading-title list-title ppl_plan-grid-title" href="<?php echo $post_url; ?>">
+						<?php echo $post_title; ?>
+					</a>
+				</div>
+				<!-- <div class="thumb-tag">
+					<div class="wd_pl_des"><?php echo $post_description; ?></div>
+					<div class="wd_pf_readmore"><a alt="<?php echo $post_title; ?>" title="<?php echo $post_title; ?>" href="<?php echo $post_url; ?>" ><?php _e('Learn more','wpdance'); ?></a></div>
+				</div> -->
+			</div>   				
+		<?php endwhile; ?>
+		</div>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+			  jQuery("#ppl_plan-slider").owlCarousel({
+			    navigation : true,
+			    //autoplay:true,
+			     loop:true,
+			    autoplayTimeout:2000,
+			    autoplayHoverPause:true,
+			    responsive:{
+        			0:{
+            			items:1
+        				},
+        			600:{
+            			items:3
+       					 },
+        			1000:{
+            				items:4
+        				}
+    				}
+			  });
+			});
+  
+		</script>
+	<?php
+	endif;
+	wp_reset_postdata();
+	$content = ob_get_contents();
+	return $content;
+}
+function show_item_ppl_plan_imag($id = '',$type_image='thumbnail',$number_word='60',$id_image='',$height='',$width='', $slug = ''){
+	if( absint($id) > 0 ){
+		$query = new WP_Query( array( 'post_type' => 'ppl_plan', 'post__in' => array($id )) );
+	}elseif( strlen(trim($slug)) > 0 ){
+		$_post = get_page_by_path($slug, OBJECT, 'ppl_plan');
+		if( !is_null($_post) ){
+			$query = new WP_Query( array( 'post_type' => 'ppl_plan', 'post__in' => array($_post->ID )) );
+		}
+	}
+	ob_start();
+	if($query->have_posts()) : 
+		while($query->have_posts()) : $query->the_post();
+			global $post;
+			if($type_image === 'thumbnail'){
+				$id_image = get_post_thumbnail_id($post->ID);
+			}
+			$post_title = esc_html(get_the_title($post->ID));
+			$post_description = substr(strip_tags($post->post_content),0,$number_word);
+			$post_url =  esc_url(get_permalink($post->ID));
+			$url_video = esc_url(get_post_meta($post->ID,THEME_SLUG.'video_ppl_plan',true));
+			$thumb=get_post_thumbnail_id($post->ID);
+			$thumburl=wp_get_attachment_url($id_image);
+		?>
+		<div class="ppl_plan_sc">
+			<div class="ppl_plan_thumbnail">
+				<a class="image" href="<?php echo $post_url; ?>">
+					<?php if($thumburl) { ?>
+						<img alt="<?php echo $post_title?>" title="<?php echo $post_title;?>" class="opacity_0" src="<?php echo  esc_url($thumburl);?>" style='width:<?php echo esc_attr($width); ?>;height:<?php echo esc_attr($height); ?>'/>														
+						<?php } else { ?>
+						<img alt="<?php echo $post_title?>" title="<?php echo $post_title;?>" class="opacity_0" src="<?php echo get_template_directory_uri(); ?>/images/no-gallery-830x494.gif"/>
+						<?php } ?>
+					<div  class="hover-default"></div>
+				</a>
+				
+			</div>
+			<div class="thumb-tag">
+				<div class="wd_thumb-tag">
+					<h2><a class="post-title heading-title list-title ppl_plan-grid-title" href="<?php echo $post_url; ?>">
+						<?php echo $post_title; ?>
+					</a></h2>
+					<div class="wd_pl_des"><?php echo $post_description; ?></div>
+					<div class="wd_pf_readmore"><a alt="<?php echo $post_title; ?>" title="<?php echo $post_title; ?>" href="<?php echo $post_url; ?>" ><?php _e('Learn more','wpdance'); ?></a></div>
+				</div>
+			</div>
+		</div>   				
+		<?php
+		endwhile;
+	endif;
+	wp_reset_postdata();
+	return ob_get_contents();
+}
+?>

@@ -55,8 +55,8 @@
         wp_enqueue_style( 'bashamichi-mobile', PRIVATE_PATH.'/admin.css', array( 'bashamichi-style' ), '1.1' );
 
         // wp_enqueue_script('bashamichi-js-ex', '/assets/js_ex/script_ex.js' ), array(), '1.1');
-        wp_enqueue_script('bashamichi-js-google-api', 'https://maps.googleapis.com/maps/api/js?key='.get_option( 'rgmk_google_map_api_key' ), array(), '1.1');
-        wp_enqueue_script('bashamichi-js-google-map', PRIVATE_PATH.'/google_map_opt.js', array(), '1.1');
+        // wp_enqueue_script('bashamichi-js-google-api', 'https://maps.googleapis.com/maps/api/js?key='.get_option( 'rgmk_google_map_api_key' ), array(), '1.1');
+        // wp_enqueue_script('bashamichi-js-google-map', PRIVATE_PATH.'/google_map_opt.js', array(), '1.1');
 
 
     }

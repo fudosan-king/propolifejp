@@ -1502,6 +1502,7 @@ ul.list_information li p {
 	font-size: 33px !important;
 
 }
+section.section_notify { text-align: center; }
 .section_notify_stay_hotel{padding-bottom: 0px;}
 .section_notify_stay_hotel .row{ justify-content:center }
 

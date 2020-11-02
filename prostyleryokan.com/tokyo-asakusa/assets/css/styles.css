@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap&subset=latin-ext');
-
+[data-tripla-booking-widget="search"]{
+  cursor: pointer;
+}
 a {color: #000;} button:focus {outline: none;}
 a.link-content {
     white-space: pre-wrap;

@@ -89,7 +89,7 @@
                                     <div class="row">
                                        <div class="col-6">
                                           <div class="box_datetime">
-                                             <input type="text" name="visit-date" class="form-control datepicker required" autocomplete="off" placeholder="日付を選択">
+                                             <input type="text" name="visit-date" class="form-control visit_datetime required" autocomplete="off" placeholder="日付を選択" readonly>
                                              <i class="i_datetime"></i>
                                           </div>
                                        </div>

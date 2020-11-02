@@ -32,4 +32,19 @@ $(function($) {
 		console.log(e);
 	})
 
+	$('.visit_datetime').datepicker({
+		language: 'ja',
+		disableTouchKeyboard: true,
+        autoclose:true,
+        todayHighlight: true,
+        ignoreReadonly: true,
+        beforeShowDay: function (date) {
+
+            if(date.getTime() <= (new Date()).getTime() )
+                return false;
+            
+            return true;
+        },
+	});
+
 });

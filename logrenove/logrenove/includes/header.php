@@ -1,4 +1,8 @@
-<header>
+<?php 
+global $detect, $post;
+$header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) == 'post'?'position: fixed;':'';
+?>
+<header style="<?php echo $header_fixed; ?>">
     <div class="top_header">
         <div class="container">
             <div class="row no-gutters">

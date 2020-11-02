@@ -5,12 +5,15 @@ $header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) =
 <header style="<?php echo $header_fixed; ?>">
     <div class="top_header">
         <div class="container">
-            <div class="row no-gutters">
-                <div class="col-3 col-md-4 align-self-center">
+            <div class="row no-gutters justify-content-between justify-content-md-center">
+                <div class="col-3 col-md-3 align-self-center">
+                    
+                </div>
+                <div class="col-4 col-md-4 align-self-center">
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_md"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_sm"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" alt="logrenove_logo" class="img-fluid" width="257"></a>
                 </div>
-                <div class="col-6 col-md-5 align-self-center">
+                <!-- <div class="col-6 col-md-5 align-self-center">
                     <?php $service_url = ''; $service_text_sp = ''; $service_text_pc = ''; if (is_singular('post')) {
                         global $post;
                         $postCats = get_the_category($post->ID);
@@ -42,7 +45,7 @@ $header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) =
                     } ?>
                     <a target="_blank" rel="noopener noreferrer" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-none d-lg-block"><?php echo $service_text_pc; ?></a>
                     <a target="_blank" rel="noopener noreferrer" href="<?php echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-block d-lg-none"><?php echo $service_text_sp; ?></a>
-                </div>
+                </div> -->
                 <div class="col-3 col-md-3 align-self-center text-right">
                     <div class="box_top_menu">
                         <!-- <div class="box_top_user_md">

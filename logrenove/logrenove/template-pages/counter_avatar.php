@@ -14,26 +14,26 @@
 			<div class="col-12 col-md-5 col-left">
 				<div class="slide_text">
 					<p class="small-title">理想の住まいを紹介</p>
-					<p class="small-img"><img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-text-slide.png" alt="" title=""></p>
+					<p class="small-img"><img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/lp-text-slide.png" alt="" title=""></p>
 					<p>素敵なお部屋作りをサポートいたします。<br>
 					リノベーションやリフォームに興味を持って<br>
 					いただけたらぜひご相談ください。</p>
 					<!-- THÊM -->
-					<p class="small-img hide-mobile"><img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/cirkle-slide-reception.png" alt="" title=""></p>
+					<p class="small-img hide-mobile"><img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/cirkle-slide-reception.png" alt="" title=""></p>
 					<!-- END -->
 					<p class="slide_note">バーチャルリノベプランナー：<span>リノさん</span></p>
 				</div>	
 			</div>
 			<div class="col-sm-12 col-md-7 col-right">
 				<div class="slide_img">
-					<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-pc-mb-slide.png" alt="" title="">
+					<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/lp-pc-mb-slide.png" alt="" title="">
 				</div>
 			</div>
 		</div>
 		<div class="slide_reception">
 			<div class="reception">
 				<!-- THAY THẾ -->
-				<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-reception.png" alt="" title="">
+				<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/lp-reception.png" alt="" title="">
 				<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/lp-reception.png" alt="" title="">
 				<!-- END -->
 				<?php if($user_logged_in) { ?>
@@ -65,16 +65,16 @@
 			<div class="col-md-6">
 				<div class="about-lp_img">
 					<!-- Cập nhật lại image -->
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-left.png" alt="" title="">
-					<img class="hide-pc show-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-left.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/about-left.png" alt="" title="">
+					<img class="hide-pc show-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-left.png" alt="" title="">
 					<!-- End -->
 			    </div>	
 			</div>
 			<div class="col-md-6">
 				<div class="about-lp_img text-right">
 					<!-- Cập nhật lại image -->
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-right.png" alt="" title="">
-					<img class="hide-pc show-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-right.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/about-right.png" alt="" title="">
+					<img class="hide-pc show-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-right.png" alt="" title="">
 					<!-- End -->
 			    </div>	
 			</div>
@@ -99,7 +99,7 @@
 				</div>
 				<div class="col-12 col-auto">
 					<div class="operation-lp_img">
-						<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-1.png" alt="" title="">
+						<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/operation-1.png" alt="" title="">
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
@@ -144,7 +144,7 @@
 				</div>
 				<div class="col-auto">
 					<div class="operation-lp_img">
-						<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-6.png" alt="" title="">
+						<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/operation-6.png" alt="" title="">
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
@@ -163,7 +163,7 @@
 				</div>
 				<div class="col-auto">
 					<div class="operation-lp_img">
-						<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-3.png" alt="" title="">
+						<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/operation-3.png" alt="" title="">
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
@@ -175,14 +175,14 @@
 
 		<div class="row">
 			<div class="col-12 col-md-5">
-				<img data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-4.png" class="img-fluid" title="" alt="">
+				<img src="<?php echo COUNTER_IMAGE_PATH;?>/operation-4.png" class="img-fluid" title="" alt="">
 			</div>
 			<div class="col-12 col-md-4 width-text">
 				<p class="title">リノベコーディネーターに個別相談も！</p>
 				<p class="des">具体的なお部屋のイメージを形にしたい、住宅購入や物件探しを検討したいという方は、専任のリノベコーディネーターにご相談ください！</p>
 			</div>
 			<div class="col-12 col-md-3 width-img">
-				<img data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-5.png" class="img-fluid" title="" alt="">
+				<img src="<?php echo COUNTER_IMAGE_PATH;?>/operation-5.png" class="img-fluid" title="" alt="">
 			</div>
 		</div>
 		<?php if($user_logged_in) { ?>
@@ -205,9 +205,9 @@
 		<div class="col-md-12 p-0">
 			<div class="proposal-lp_box">
 				<div class="proposal-lp_box_img">
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-1.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-1.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-2.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-1.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-1.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-2.png" alt="" title="">
 					<p class="note">30代ご夫婦/お子様2人</p>
 				</div>
 				<div class="proposal-lp_box_text">
@@ -221,8 +221,8 @@
 
 			<div class="proposal-lp_box even-box">
 				<div class="proposal-lp_box_img">
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-2.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-3.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-2.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-3.png" alt="" title="">
 					<p class="note">40代男性</p>
 				</div>
 				<div class="proposal-lp_box_text">
@@ -236,9 +236,9 @@
 
 			<div class="proposal-lp_box">
 				<div class="proposal-lp_box_img">
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-3.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-4.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-5.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-3.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-4.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-5.png" alt="" title="">
 					<p class="note">20代ご夫婦</p>
 				</div>
 				<div class="proposal-lp_box_text">
@@ -269,7 +269,7 @@
 			<h2 class="service-lp_title-en">FAQ</h2>
 			<p class="des">スマートリノベカウンターについてのよくある質問を紹介します。</p>
 			<div class="faq-lp_img">
-				<img data-src="<?php echo COUNTER_IMAGE_PATH;?>/faq.png" class="img-fluid" alt="" title="">
+				<img src="<?php echo COUNTER_IMAGE_PATH;?>/faq.png" class="img-fluid" alt="" title="">
 			</div>
 		</div>
 	</div>	

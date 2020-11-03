@@ -20,8 +20,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.8/jquery.csv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.1.0/autoNumeric.min.js"></script>
 
-    <?php wp_enqueue_script( 'form-service-script', SCRIPT_PATH.'/form/service.js'); ?>
-    <?php wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js'); ?>
+    <?php if(is_page_template( 'template-pages/service.php' ) || is_page_template( 'template-pages/services2.php' ) || is_page_template( 'template-pages/services3.php' )): ?>
+        <?php wp_enqueue_script( 'form-service-script', SCRIPT_PATH.'/form/service.js'); ?>
+        <?php wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js'); ?>
+    <?php endif; ?>
+
+    
 
     <?php if(is_single()): ?>
         <div id="fb-root"></div>

@@ -14,7 +14,7 @@
                 <div class="row no-gutters">
                     <div class="col-4 col-lg-12">
                         <div class="box_event_item_img">
-                            <a href="<?php the_permalink(); ?>"><img data-src="<?php echo $thumbnails->url;?>" alt="" class="img-fluid"></a>
+                            <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnails->url;?>" alt="" class="img-fluid"></a>
                         </div>  
                     </div>
                     <div class="col-8 d-block d-lg-none">

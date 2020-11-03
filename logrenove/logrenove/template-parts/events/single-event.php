@@ -7,7 +7,7 @@ if(have_posts()):
 ?>
 <div class="services_detail_banner">
     <?php echo $thumbnails;?>
-    <!-- <img data-src="<?php //echo $thumbnails;?>" alt="" class="img-fluid"> -->
+    <!-- <img src="<?php //echo $thumbnails;?>" alt="" class="img-fluid"> -->
 </div>
 <ul>
     <?php 

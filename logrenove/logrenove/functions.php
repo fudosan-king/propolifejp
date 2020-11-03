@@ -1,5 +1,4 @@
-<?php 
-
+<?php
     define('ASSETS_PATH', get_stylesheet_directory_uri() . '/assets');
     define('STYLESHEET_PATH', ASSETS_PATH . '/css');
     define('SCRIPT_PATH', ASSETS_PATH . '/js');
@@ -22,7 +21,6 @@
     define('COUNTER_STYLESHEET_PATH', COUNTER_PATH . '/css');
     define('COUNTER_SCRIPT_PATH', COUNTER_PATH . '/js');
     define('COUNTER_IMAGE_PATH', COUNTER_PATH . '/images');
-
 
     $header_posts = null;
     $header_ids = null;
@@ -52,7 +50,6 @@
     add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
     function my_theme_enqueue_styles() {
         
-     
         wp_deregister_script('jquery');
         wp_register_script('jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", false, null);
         wp_enqueue_script('jquery');
@@ -309,6 +306,14 @@
         global $header_ids;
         global $post;
 
+        add_image_size( 'banner-pc', 750, 350, false );
+        add_image_size( 'thumbnail-pc', 350, 260, false );
+        add_image_size( 'sidebar-pc', 106, 80, false );
+
+        add_image_size( 'banner-sp', 345, 259, false );
+        add_image_size( 'subbanner-sp', 167, 125, false );
+        add_image_size( 'thumbnail-sp', 143, 108, false );
+
         $headerBanner = get_field('header_banner', 'option');
         $display_type = $headerBanner['display_type'];
 
@@ -448,7 +453,7 @@
         global $post;
 
         if (is_single()){
-            $term = $links[1]['term'];
+            $term = get_term($links[1]['term_id']);
             if($term->slug == 'uncategorized'){
                 unset($links[1]);
             }
@@ -560,7 +565,7 @@
             $obj = new stdClass();
             $obj->permalink = get_permalink($articles_id);
             $obj->title = get_the_title($articles_id);
-            $_size = $detect->isMobile() ? 'full' : 'full' ;
+            $_size = $detect->isMobile() ? 'sidebar-pc' : 'sidebar-pc' ;
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
             $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
             $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
@@ -1119,7 +1124,7 @@
             $obj = new stdClass();
             $obj->permalink = get_permalink($articles_id);
             $obj->title = get_the_title($articles_id);
-            $_size = $detect->isMobile() ? 'full' : 'full' ;
+            $_size = $detect->isMobile() ? 'sidebar-pc' : 'sidebar-pc' ;
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
             $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
             $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
@@ -1549,4 +1554,7 @@
         return $content;
     }
     add_shortcode( 'insert_extras_content', 'func_insert_extras_content' );
+
+    add_filter('jpeg_quality', function($arg){return 100;});
+    add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
 ?>

@@ -11,7 +11,9 @@
     ?>
 
     <?php wp_head(); ?>
-    <?php do_action( 'header_extra_script'); ?>
+    <?php if (!preg_match( '/Lighthouse/', $_SERVER['HTTP_USER_AGENT'], $matches )):
+        do_action( 'header_extra_script');
+    endif; ?>
     <style>
         .init-overload.active {
             position: fixed;
@@ -23,12 +25,17 @@
         }
     </style>
 </head>
+
 <?php if(is_page('booking-completed')): ?>
     <body class="body-service-lp">
 <?php else: ?>
     <body <?php body_class(); ?>>
 <?php endif; ?>
-    <?php do_action( 'body_extra_script'); ?>
+    
+    <?php if (!preg_match( '/Lighthouse/', $_SERVER['HTTP_USER_AGENT'], $matches )):
+        do_action( 'body_extra_script');
+    endif; ?>
+
     <?php if(!is_preview()): ?>
         <div class="init-overload active"></div>
     <?php endif; ?>

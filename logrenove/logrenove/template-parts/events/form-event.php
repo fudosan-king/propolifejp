@@ -19,13 +19,12 @@
                         <div class="col-6 col-lg-6">
                             <div class="box_datetime mb-2 mb-lg-0">
                                 <select name="date" class="form-control custom-select required">
-                                    <?php foreach ($event_datetime['date'] as $key => $date) { ?>
-                                        <option value="<?=$date['date']?>"><?=$date['date']?></option>
+                                    <?php foreach ($event_datetime['date'] as $key => $date) { 
+                                        $date = date_i18n('Fj (D)', strtotime($date));
+                                    ?>
+                                        <option value="<?=$date?>"><?=$date?></option>
                                     <?php } ?>
                                 </select>
-                                <!-- <input type="text" name="" class="form-control datepicker" placeholder="日付を選択"> -->
-                                <!-- <input type="text" name="date" class="form-control required" placeholder="日付を選択" value="<?php //echo $even_datetime['date'];?>" readonly> -->
-                                <!-- <i class="i_datetime"></i> -->
                             </div>
                         </div>
                         <div class="col-6 col-lg-6">
@@ -34,12 +33,6 @@
                                     <option value="<?=$time['hour']?>"><?=$time['hour']?></option>
                                 <?php } ?>
                             </select>
-                            <!-- <select name="" id="" class="form-control custom-select">
-                                <option value="">時間を選択</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                            </select> -->
-                            <!-- <input type="text" name="time" class="form-control required" value="<?php echo $even_datetime['time'];?>" readonly> -->
                         </div>
                     </div>
                 </div>

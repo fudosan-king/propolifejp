@@ -71,7 +71,7 @@
                     <label for="">電話番号<span class="red">（※）</span></label>
                 </div>
                 <div class="col-12 col-lg-9 align-self-center">
-                    <input type="text" name="phone-number" class="form-control required" placeholder="">
+                    <input type="text" name="phone-number" class="form-control required" placeholder="例：0312341234">
                 </div>
             </div>
         </div>

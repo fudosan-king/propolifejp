@@ -1,9 +1,16 @@
 $(function($) {
+	var availableDay = $('.datepickerCancel').val();
     $('.datepickerCancel').datepicker({
+    	format: 'yyyy/mm/dd',
         language: 'ja',
+        autoclose: true,
         disableTouchKeyboard: true,
-        startDate: '+1m',
+        beforeShowDay: function (date) {
+
+	            if(date.getTime() < (new Date(availableDay)).getTime() )
+	                return false;
+
+	            return true;
+	        },
     });
-    $(".datepickerCancel").datepicker("setDate", new Date($('.datepickerCancel').datepicker('getStartDate')));
-    $('.datepickerCancel').val(moment($('.datepickerCancel').datepicker('getStartDate')).format('YYYY/MM/DD'))
 });

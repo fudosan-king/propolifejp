@@ -7,10 +7,10 @@ $(function($) {
         disableTouchKeyboard: true,
         beforeShowDay: function (date) {
 
-	            if(date.getTime() < (new Date(availableDay)).getTime() )
-	                return false;
+            if(date.getTime() < (new Date(availableDay)).getTime() )
+                return false;
 
-	            return true;
-	        },
+            return true;
+        },
     });
 });

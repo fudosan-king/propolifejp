@@ -89,7 +89,7 @@
                                     <div class="row">
                                        <div class="col-6">
                                           <div class="box_datetime">
-                                             <input type="text" name="visit-date" class="form-control visit_datetime required" autocomplete="off" placeholder="日付を選択" readonly>
+                                             <input type="text" name="visit-date" class="form-control visit_datetime required" autocomplete="off" placeholder="日付を選択" value="<?php date_default_timezone_set('Asia/Tokyo'); echo date("Y/m/d"); ?>" readonly>
                                              <i class="i_datetime"></i>
                                           </div>
                                        </div>

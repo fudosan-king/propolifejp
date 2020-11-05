@@ -940,6 +940,70 @@
         );
     }
 
+    # Event schema
+    function event_detail_schema() {
+        global $post;
+        if(is_single() && get_post_type($post->ID) == 'events') {
+            $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
+            $metas = get_post_meta($post->ID);
+            $event_date = array();
+            foreach ($metas as $key => $val) {
+                if(preg_match('/^event_date_[0-9]_date$/', $key)) {
+                    $event_date[] = $val[0];
+                }
+            }
+            $startDate = reset($event_date);
+            $endDate = end($event_date);
+            $startDate = count($event_date)?date('Y-m-d', strtotime($startDate)):'';
+            $endDate = count($event_date)?date('Y-m-d', strtotime($endDate)):'';
+    ?>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "<?php echo the_title(); ?>",
+      "startDate": "<?php echo $startDate; ?>",
+      "endDate": "<?php echo $endDate; ?>",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "表参道ショールーム",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "北青山3-6-23",
+          "addressLocality": "港区",
+          "postalCode": "107-0061",
+          "addressRegion": "東京都",
+          "addressCountry": "日本"
+        }
+      },
+      "image": [
+        "<?php echo $thumbnails->url; ?>"
+       ],
+      "description": "<?php echo get_event_description(); ?>",
+      "offers": {
+        "@type": "Offer",
+        "url": "<?php the_permalink(); ?>",
+        "price": "0",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "<?php echo $endDate; ?>"
+      },
+      "performer": {
+        "@type": "PerformingGroup",
+        "name": "LogRenove Staff"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "LogRenove",
+        "url": "<?php echo get_site_url(); ?>"
+      }
+    }
+</script>
+    <?php }}
+    # End event schema
+
     # Posts ranking
     function wpb_set_post_views($postID) {
         $count_key = 'wpb_post_views_count';

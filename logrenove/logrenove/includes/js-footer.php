@@ -1,5 +1,5 @@
 <?php
-    global $detect;
+    global $detect, $post;
 ?>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
@@ -18,7 +18,7 @@
 
             <?php 
                 wp_enqueue_script( 'form-script', SCRIPT_PATH.'/form.js');
-                if($post_type == 'events'){
+                if(get_post_type($post->ID) == 'events'){
                     wp_enqueue_script( 'form-events-script', SCRIPT_PATH.'/form/events.js');
                 }
             ?>
@@ -42,6 +42,9 @@
     endif;
 
     wp_enqueue_script( 'main-script', SCRIPT_PATH.'/functions.js');
+    if($detect->isMobile() && is_single() && get_post_type($post->ID) == 'post') {
+        wp_enqueue_script( 'header-scroll-script', SCRIPT_PATH.'/header-scroll.js');
+    }
     wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js');
 
 ?>

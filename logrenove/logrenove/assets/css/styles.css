@@ -2848,7 +2848,6 @@ ul.list_event li a.disabled {
     }
 
 	header {
-        position: fixed;
         background: #fff;
         top: 0;
         width: 100%;

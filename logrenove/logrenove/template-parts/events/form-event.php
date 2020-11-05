@@ -11,10 +11,10 @@
     <div class="frm-input">
         <div class="form-group">
             <div class="row mb-3">
-                <div class="col-12 col-lg-2 align-self-center">
+                <div class="col-12 col-lg-3 align-self-center">
                     <label for="">開始日時<span class="red">（※）</span></label>
                 </div>
-                <div class="col-12 col-lg-10 align-self-center">
+                <div class="col-12 col-lg-9 align-self-center">
                     <div class="row">
                         <div class="col-6 col-lg-6">
                             <div class="box_datetime mb-2 mb-lg-0">
@@ -47,30 +47,40 @@
         </div>
         <div class="form-group">
             <div class="row">
-                <div class="col-12 col-lg-2 align-self-center">
-                    <label for="">氏名<span class="red">（※）</span></label>
+                <div class="col-12 col-lg-3 align-self-center">
+                    <label for="">お名前<span class="red">（※）</span></label>
                 </div>
-                <div class="col-12 col-lg-10 align-self-center">
+                <div class="col-12 col-lg-9 align-self-center">
                     <input type="text" name="name" class="form-control required" placeholder="例：山田 太郎">
                 </div>
             </div>
         </div>
         <div class="form-group">
             <div class="row">
-                <div class="col-12 col-lg-2 align-self-center">
-                    <label for="">メール<span class="red">（※）</span></label>
+                <div class="col-12 col-lg-3 align-self-center">
+                    <label for="">メールアドレス<span class="red">（※）</span></label>
                 </div>
-                <div class="col-12 col-lg-10 align-self-center">
+                <div class="col-12 col-lg-9 align-self-center">
                     <input type="text" name="email" class="form-control required" placeholder="例：xxxxxxx@logrenove.jp">
                 </div>
             </div>
         </div>
         <div class="form-group">
             <div class="row">
-                <div class="col-12 col-lg-2">
+                <div class="col-12 col-lg-3 align-self-center">
+                    <label for="">電話番号<span class="red">（※）</span></label>
+                </div>
+                <div class="col-12 col-lg-9 align-self-center">
+                    <input type="text" name="phone-number" class="form-control required" placeholder="例：0312341234">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-12 col-lg-3">
                     <label for="">気になるご質問</label>
                 </div>
-                <div class="col-12 col-lg-10">
+                <div class="col-12 col-lg-9">
                     <textarea name="inquiry_content" class="form-control" placeholder="ご質問やご希望があればご記入ください。"></textarea>
                 </div>
             </div>
@@ -103,15 +113,21 @@
           </tr>
           <tr>
              <td>
-                <label>氏名</label>
+                <label>お名前</label>
              </td>
              <td id="name" class="confirm-text"></td>
           </tr>
           <tr>
              <td>
-                <label>メール</label>
+                <label>メールアドレス</label>
              </td>
              <td id="email" class="confirm-text"></td>
+          </tr>
+          <tr>
+             <td>
+                <label>電話番号</label>
+             </td>
+             <td id="phone-number" class="confirm-text"></td>
           </tr>
           <tr>
              <td>

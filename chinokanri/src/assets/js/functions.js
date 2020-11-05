@@ -32,4 +32,28 @@ $(function($) {
 		console.log(e);
 	})
 
+	var availableDay = $('.visit_datetime').val();
+	$('.visit_datetime').datepicker({
+		format: 'yyyy/mm/dd',
+        language: 'ja',
+        autoclose: true,
+        disableTouchKeyboard: true,
+        // todayHighlight: true,
+        // ignoreReadonly: true,
+        // beforeShowDay: function (date) {
+
+        //     if(date.getTime() <= (new Date()).getTime() )
+        //         return false;
+            
+        //     return true;
+        // },
+        beforeShowDay: function (date) {
+
+            if(date.getTime() < (new Date(availableDay)).getTime() )
+                return false;
+
+            return true;
+        },
+	});
+
 });

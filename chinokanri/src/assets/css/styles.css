@@ -831,3 +831,8 @@ header {
 }
 
 .row.access{margin-bottom: 50px;}
+
+/* Contact Naiken - Changed by Chan */
+.form-control:disabled, .form-control[readonly] {
+	background-color: #fff;
+}

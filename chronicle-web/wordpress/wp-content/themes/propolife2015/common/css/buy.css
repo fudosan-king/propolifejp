@@ -60,20 +60,16 @@
 }
 
 .section_telephone ul{
-    width: 800px;
     /*display: inline-block;*/
     display: flex;
     justify-content: center;
-    margin: 0 -30px 0 0;
 }
 
 .section_telephone li{
-    width: 400px;
     margin: 0 0 15px 0;
-    float: left;
     display: inline-block;
     vertical-align: top;
-    text-align: left;
+    text-align: center;
 }
 
 .section_telephone li h4{

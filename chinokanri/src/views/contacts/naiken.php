@@ -89,7 +89,7 @@
                                     <div class="row">
                                        <div class="col-6">
                                           <div class="box_datetime">
-                                             <input type="text" name="visit-date" class="form-control datepicker required" autocomplete="off" placeholder="日付を選択">
+                                             <input type="text" name="visit-date" class="form-control visit_datetime required" autocomplete="off" placeholder="日付を選択" value="<?php date_default_timezone_set('Asia/Tokyo'); echo date("Y/m/d"); ?>" readonly>
                                              <i class="i_datetime"></i>
                                           </div>
                                        </div>
@@ -125,6 +125,75 @@
                                  </div>
                               </div>
                            </div>
+
+                           <!-- Kanji Name -->
+                           <div class="form-group">
+                              <label for="">担当者名</label>
+                              <div class="row">
+                                 <div class="col-12 col-lg-1 align-self-center">
+                                    <span class="label_sub">必須</span>
+                                 </div>
+                                 <div class="col-12 col-lg-11 align-self-center">
+                                    <div class="row">
+                                       <div class="col-12 col-lg-6">
+                                          <div class="row mb-2 mb-lg-0">
+                                             <div class="col-2 align-self-center">
+                                                <p class="mb-0">姓</p>
+                                             </div>
+                                             <div class="col-10 align-self-center">
+                                                <input type="text" name="kanji_familyname" class="form-control required" placeholder="例：千野">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-12 col-lg-6">
+                                          <div class="row">
+                                             <div class="col-2 align-self-center">
+                                                <p class="mb-0">名</p>
+                                             </div>
+                                             <div class="col-10 align-self-center">
+                                                <input type="text" name="kanji_name" class="form-control required" placeholder="例：太郎">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <!-- Kata Name -->
+                           <div class="form-group">
+                              <label for="">担当者名（フリガナ）</label>
+                              <div class="row">
+                                 <div class="col-12 col-lg-1 align-self-center">
+                                    <span class="label_sub">必須</span>
+                                 </div>
+                                 <div class="col-12 col-lg-11 align-self-center">
+                                    <div class="row">
+                                       <div class="col-12 col-lg-6">
+                                          <div class="row mb-2 mb-lg-0">
+                                             <div class="col-2 align-self-center">
+                                                <p class="mb-0">セイ</p>
+                                             </div>
+                                             <div class="col-10 align-self-center">
+                                                <input type="text" name="kata_familyname" class="form-control required" placeholder="例：チノ">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-12 col-lg-6">
+                                          <div class="row">
+                                             <div class="col-2 align-self-center">
+                                                <p class="mb-0">メイ</p>
+                                             </div>
+                                             <div class="col-10 align-self-center">
+                                                <input type="text" name="kata_name" class="form-control required" placeholder="例：タロウ">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
                            <div class="form-group">
                               <label for="">住所</label>
                               <p>郵便番号</p>
@@ -295,6 +364,29 @@
                                     <span id="branch-name" class="confirm-text"></span>
                                  </td>
                               </tr>
+
+                              <!-- Kanji Name Confirm -->
+                              <tr>
+                                 <td>
+                                    <label>担当者名</label>
+                                 </td>
+                                 <td class="confirm-text">
+                                    <span id="kanji_familyname"></span>
+                                    <span id="kanji_name"></span>
+                                 </td>
+                              </tr>
+
+                              <!-- Kata Name Confirm -->
+                              <tr>
+                                 <td>
+                                    <label>担当者名（フリガナ）</label>
+                                 </td>
+                                 <td class="confirm-text">
+                                    <span id="kata_familyname"></span>
+                                    <span id="kata_name"></span>
+                                 </td>
+                              </tr>
+
                               <tr>
                                  <td>
                                     <label>住所</label>

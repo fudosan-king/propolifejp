@@ -61,7 +61,9 @@
 
 .section_telephone ul{
     width: 800px;
-    display: inline-block;
+    /*display: inline-block;*/
+    display: flex;
+    justify-content: center;
     margin: 0 -30px 0 0;
 }
 

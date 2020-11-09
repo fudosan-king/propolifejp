@@ -56,7 +56,7 @@
                      <form action="https://go.pardot.com/l/185822/2020-07-17/q9wn7h" class="frm_general" method="post">
                         <div class="frm_general_content frm-input">
                            <div class="form-group">
-                              <label for="">お名前</label>
+                              <label for="">担当者名</label>
                               <div class="row">
                                  <div class="col-12 col-lg-1 align-self-center">
                                     <span class="label_sub">必須</span>
@@ -88,7 +88,7 @@
                               </div>
                            </div>
                            <div class="form-group">
-                              <label for="">お名前（フリガナ）</label>
+                              <label for="">担当者名（フリガナ）</label>
                               <div class="row">
                                  <div class="col-12 col-lg-1 align-self-center">
                                     <span class="label_sub">必須</span>
@@ -329,7 +329,7 @@
                            <table class="table table-bordered">
                               <tr>
                                  <td>
-                                    <label>お名前</label>
+                                    <label>担当者名</label>
                                  </td>
                                  <td class="confirm-text">
                                     <span id="kanji_familyname"></span>
@@ -338,7 +338,7 @@
                               </tr>
                               <tr>
                                  <td>
-                                    <label>お名前（フリガナ）</label>
+                                    <label>担当者名（フリガナ）</label>
                                  </td>
                                  <td class="confirm-text">
                                     <span id="kata_familyname"></span>

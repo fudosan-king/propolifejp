@@ -721,7 +721,7 @@
     function get_event_datetime()
     {
         $post_id = get_the_ID();
-        $event_date = get_field('event_date', $post_id);
+        $event_date = get_event_date(); //get_field('event_date', $post_id);
         $event_time = get_field('event_time', $post_id);
         // $result = array();
         // $result['date'] = (!empty($event_datetime['date']) && count($event_datetime['date'])) ? $event_datetime['date'] : '';
@@ -733,6 +733,75 @@
         $event_datetime['time'] = !empty($event_time) && is_array($event_time) && count($event_time) ? $event_time : array();
         return $event_datetime;
     }
+
+    # Event date http://redmine.fudosan-king.jp/issues/7562
+
+    function get_event_date() {
+        global $post;
+        $event_date_option = get_field('event_date', $post->ID);
+        $holydays = get_event_holydays();
+        $today = date('Y-m-d');
+        $event_date = array();
+        $i = 1;
+        $order_days = 100;
+        while ($i <= $order_days) {
+            $date_diff = date_diff_events($today, '+'.$i.' days');
+            $date_unix = strtotime($date_diff);
+            $date = date('D Y-m-d', $date_unix);
+            $week_day = explode(' ', $date, 2);
+            switch ($event_date_option) {
+                case 'date_2':
+                    $condition = !in_array($week_day[0], array('Tue', 'Wed', 'Sat', 'Sun')) && !in_array($week_day[1], $holydays);
+                    break;
+                case 'date_3':
+                    $condition = in_array($week_day[0], array('Sat', 'Sun')) || in_array($week_day[1], $holydays);
+                    break;
+                default: # default date_1
+                    $condition = !in_array($week_day[0], array('Tue', 'Wed')) && !in_array($week_day[1], $holydays);
+                    break;
+            }
+            if($condition) $event_date[] = $date;
+            $i++;
+        }
+        $event_date = array_slice($event_date, 0, 6);
+        return $event_date;
+    }
+
+    # End event date
+
+    # Event holydays
+
+    function get_event_holydays() {
+        $data_holydays_file_url = __DIR__.'/assets/data/jp_national_holidays_min.json';
+        $f = fopen($data_holydays_file_url, "r");
+        $data = fread($f,filesize($data_holydays_file_url));
+        fclose($f);
+        $current_year = date('Y');
+        $month = date('m');
+        $day = date('d');
+        $data = json_decode($data);
+        $holydays = array();
+        foreach ($data as $key => $month) {
+            $year = $key;
+            if(in_array($year, array($current_year, $current_year+1)))
+            {
+                foreach ($month as $key => $days) {
+                    $month = $key;
+                    foreach ($days as $key => $day) {
+                        $holyday = $year.'-'.sprintf("%02d", $month).'-'.sprintf("%02d", $day);
+                        $holyday_unix = strtotime($holyday);
+                        if($holyday_unix >= time())
+                        {
+                            $holydays[] = $holyday;
+                        }
+                    }
+                }
+            }
+        }
+        return $holydays;
+    }
+
+    # End event holydays
 
     if( !function_exists('get_query_pagination_events') ) {
     
@@ -899,13 +968,14 @@
         // $interval = date_diff($origin, $target);
         // return $interval->format('%R%a');
         $date = !empty($date)?date('Y-m-d', strtotime($date)):date('Y-m-d');
-        $date = date('Ymd', strtotime($date . $days));
+        $date = date('Y-m-d', strtotime($date . $days));
         return $date;
     }
 
     function get_event_description()
     {
-        $post_id = get_queried_object_id();
+        global $post;
+        $post_id = $post->ID;
         $description = get_field('event_description', $post_id);
         return $description;
     }
@@ -939,6 +1009,64 @@
              )
         );
     }
+
+    # Event schema
+    function event_detail_schema() {
+        global $post;
+        if(is_single() && get_post_type($post->ID) == 'events') {
+            $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
+            $event_date = get_event_date();
+            $startDate = reset($event_date);
+            $endDate = end($event_date);
+            $startDate = count($event_date)?date('Y-m-d', strtotime($startDate)):'';
+            $endDate = count($event_date)?date('Y-m-d', strtotime($endDate)):'';
+    ?>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "<?php echo the_title(); ?>",
+      "startDate": "<?php echo $startDate; ?>",
+      "endDate": "<?php echo $endDate; ?>",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "表参道ショールーム",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "北青山3-6-23",
+          "addressLocality": "港区",
+          "postalCode": "107-0061",
+          "addressRegion": "東京都",
+          "addressCountry": "日本"
+        }
+      },
+      "image": [
+        "<?php echo $thumbnails->url; ?>"
+       ],
+      "description": "<?php echo get_event_description(); ?>",
+      "offers": {
+        "@type": "Offer",
+        "url": "<?php the_permalink(); ?>",
+        "price": "0",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "<?php echo $endDate; ?>"
+      },
+      "performer": {
+        "@type": "PerformingGroup",
+        "name": "LogRenove Staff"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "LogRenove",
+        "url": "<?php echo get_site_url(); ?>"
+      }
+    }
+</script>
+    <?php }}
+    # End event schema
 
     # Posts ranking
     function wpb_set_post_views($postID) {

@@ -76,7 +76,7 @@ if(have_posts()):
                                         <div class="col-8 col-lg-12">
                                             <div class="relation_article_content">
                                                 <p>
-                                                    <a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>
+                                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                                     <?php // the_title(); ?>
                                                 </p>
                                                 <span class="badge badge-secondary badge_cate"><?php echo get_the_category()[0]->name; ?></span>

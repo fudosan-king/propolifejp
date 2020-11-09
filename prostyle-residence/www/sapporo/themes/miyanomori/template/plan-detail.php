@@ -50,20 +50,22 @@ Template Post Type: page
                     </div>
                     <div class="box_plan_detail_footer">
                         <div class="box_infoview_content">
-                            <div class="row no-gutters">
-                                <div class="col-12 col-lg-5">
-                                    <div class="box_plan_detail_footer_content">
-                                        <h1><span>S901</span>/1LDK＋S</h1>
-                                        <p>ご覧になりたいプランをタップしてください。<br>
-                                            プラン詳細をご覧いただけます</p>
+                            <a href="/S901-1LDK-S" title="">
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-lg-5">
+                                        <div class="box_plan_detail_footer_content">
+                                            <h1><span>S901</span>/1LDK＋S</h1>
+                                            <p>ご覧になりたいプランをタップしてください。<br>
+                                                プラン詳細をご覧いただけます</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-7">
+                                        <div class="box_infoview_img">
+                                            <img src="<?php bloginfo('template_directory');?>/assets/images/1x/view_inside03.png" alt="" class="img-fluid w-100">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-7">
-                                    <div class="box_infoview_img">
-                                        <img src="<?php bloginfo('template_directory');?>/assets/images/1x/view_inside03.png" alt="" class="img-fluid w-100">
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

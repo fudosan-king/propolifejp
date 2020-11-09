@@ -1,0 +1,24 @@
+/*Thi-Plan-Page*/
+
+@media (min-width: 992px) {
+	.section_plan .box_infoview_content .col-12.col-lg-5{
+		opacity: 0;
+		transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.section_plan .box_infoview_content.show .col-12.col-lg-5{
+		opacity: 1;
+	}
+}
+
+
+.path-hover{
+	background-color: rgba(180,136,86,0.5);
+	position: absolute;
+    bottom: 10%;
+    left: 14%;
+    right: 63.6%;
+    transform: translateY(-50%);
+    top: 71%;
+    cursor: pointer;
+}

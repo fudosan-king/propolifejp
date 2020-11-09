@@ -342,15 +342,15 @@ header {
 }
 
 .carousel_banner .carousel-cell {
-	width: 50%;
-	height: 554px;
+	width: 52%;
+	height: 350px;
 	background: #6d7278;
 	position: relative;
 	margin: 0 10px
 }
 
 .carousel_banner .carousel-cell img {
-	height: 554px;
+	height: 350px;
 	width: 100%;
 	object-fit: cover
 }
@@ -398,7 +398,7 @@ header {
 
 .caption h1 {
 	text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-	font-size: 32px;
+	font-size: 28px;
 	color: #fff;
 	line-height: 1.3em
 }

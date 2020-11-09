@@ -51,7 +51,7 @@
                         <div class="row no-gutters">
                             <div class="col-12 col-lg-6">
                                 <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-                                <input type="submit" class="btn btn_brown" name="login" value="<?php esc_attr_e( 'ログインする', 'miyanomori' ); ?>" />
+                                <button type="submit" class="btn w-100 btn_brown" name="login" value=""/><?php esc_attr_e( 'ログインする', 'miyanomori' ); ?></button>
                                 <input type="hidden" name="redirect" value="<?php echo get_home_url(); ?>" />
                             </div>
                             <div class="col-12 col-lg-6 text-center">
@@ -70,13 +70,13 @@
                         <p>物件エントリー者様限定サイトでは、<br>
                         未公開プランなど物件エントリー者様だけの「限定情報」を公開中です。</p>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="メールアドレス" name="userlogin" id='userlogin'>
+                            <input type="text" class="form-control" placeholder="メールアドレス" name="useremail" id='useremail'>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="パスワード" name="useremail" id='useremail'>
+                            <input type="text" class="form-control" placeholder="パスワード" name="userlogin" id='userlogin'>
                         </div>
                         <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-                        <input type="submit"  class="btn btn_brown d-block" value="<?php esc_attr_e('物件エントリーする'); ?>"  />
+                        <button type="submit"  class="btn w-100 btn_brown d-block"><?php esc_attr_e('物件エントリーする'); ?></button>
                     </div>
                 </div>
             </form>

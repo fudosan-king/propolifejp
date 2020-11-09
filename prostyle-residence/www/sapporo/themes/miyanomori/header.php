@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/assets/css/bsnav.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/styles.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/mobile.css" type="text/css">
-    
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/custom.css" type="text/css">
 </head>
 
 <body <?php body_class(); ?>>

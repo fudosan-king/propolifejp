@@ -905,7 +905,8 @@
 
     function get_event_description()
     {
-        $post_id = get_queried_object_id();
+        global $post;
+        $post_id = $post->ID;
         $description = get_field('event_description', $post_id);
         return $description;
     }

@@ -1698,7 +1698,7 @@ ul.box_article_related li a {
 }
 
 .box_article_detail ul li {
-	display: block;
+	margin-left: 20px;
 	margin-bottom: 5px
 }
 

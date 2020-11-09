@@ -1074,7 +1074,7 @@
             'post_status' => 'publish',
         );
         $args_term = array();
-        if(!is_home())
+        if(!is_home() && get_post_type() != 'page')
         {
             $cat_ID = get_the_category()[0]->cat_ID;
             $args_term = array(
@@ -1088,7 +1088,6 @@
             );
             $args_post = array_merge($args_post, $args_term);
         }
-        
         $posts = get_posts($args_post);
         
         $articles_ids = array();

@@ -350,7 +350,7 @@ header {
 }
 
 .carousel_banner .carousel-cell img {
-	height: 350px;
+	/*height: 350px;*/
 	width: 100%;
 	object-fit: cover
 }

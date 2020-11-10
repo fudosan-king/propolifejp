@@ -40,7 +40,7 @@
     <div class="news news_afterlogin">
         <div class="row">
             <div class="col-12 col-lg-2 align-self-center">
-                <h2>会員登録</h2>
+                <h2>新着情報</h2>
             </div>
             <div class="col-12 col-lg-10 align-self-center">
                 <div class="carousel carousel_news" data-flickity='{"pageDots": false, "contain": true, "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>

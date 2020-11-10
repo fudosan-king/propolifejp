@@ -25,6 +25,7 @@ jQuery(document).ready(function($) {
   });
  // VALIDATE FORM DATA
   function callErrorMessage(elem, message){
+
       var htmlError = '<span class="error-required" style="color: red">' + message + '</span>';
       var formGroup = $(elem).parents('.form-group');
 
@@ -39,7 +40,7 @@ jQuery(document).ready(function($) {
 
   function removeErrorMessage(elem){
       var formGroup = $(elem).closest('.form-group');
-      formGroup.find('.error-box').remove();
+      formGroup.find('.error-required').remove();
   }
 
   function setErrorClass(elem){
@@ -48,7 +49,34 @@ jQuery(document).ready(function($) {
 
   function removeErrorClass(elem){
     var formGroup = $(elem).parents('.form-group');
-    formGroup.find('.label_required').removeClass('error-required');
+    formGroup.find('.error-required').remove();
+  }
+
+  function invalidCheckInput(elem)
+  {
+    var ERROR_NO_INPUT = 'この項目は必須です。';
+    var isValid = true;
+    if(typeof(elem.val()) === 'undefined' || elem.val() == "" || elem.val() == "null"){
+      callErrorMessage(elem, ERROR_NO_INPUT);
+      isValid = false;
+    }else{
+      removeErrorClass(elem);
+    }
+    return isValid;
+  }
+
+  function invalidCheckSelect(elem)
+  {
+      var ERROR_NO_INPUT = 'この項目は必須です。';
+      var isValid = true;
+
+     if(typeof(elem.find('option:selected').val()) === 'undefined' || elem.find('option:selected').val() == "" || elem.find('option:selected').val() == "null"){
+        callErrorMessage(elem, ERROR_NO_INPUT);
+        isValid = false;
+      }else{
+        removeErrorClass(elem);
+      }
+      return isValid;
   }
 
   function invalidCheck() {
@@ -57,52 +85,94 @@ jQuery(document).ready(function($) {
       var isValid = true;
       errorElements = []
       
-      $('.error-text').css('display', 'none');
+      // $('.error-required').css('display', 'none');
 
       // EMPTY CHECK
       var requireInputText = $('input.required');
       var requireSelect    = $('select.required');
       
       $.each(requireInputText, function(i, e){
-        if(typeof($(e).val()) === 'undefined' || $(e).val() == "" || $(e).val() == "null"){
-          callErrorMessage($(e), ERROR_NO_INPUT);
-          isValid = false;
-        }else{
-          removeErrorClass($(e));
+        if(!invalidCheckInput($(e)))
+        {
+            isValid = false;
         }
       }); 
 
-      $.each(requireSelect, function(i, e){
+      var ischecked      = $('input[name="contact_item[]"]:checked').length > 0;
 
-        if(typeof($(e).find('option:selected').val()) === 'undefined' || $(e).find('option:selected').val() == "" || $(e).find('option:selected').val() == "null"){
-          callErrorMessage($(e), ERROR_NO_INPUT);
-          isValid = false;
-        }else{
-          removeErrorClass($(e));
-        }
-      });
-
-      if ($('input[name="contact_item[]"]').is(':checked') == false){
-          callErrorMessage('input[name="contact_item[]', ERROR_NO_INPUT);
+      if (ischecked == false){
+          callErrorMessage('#customCheck1', ERROR_NO_INPUT);
           isValid = false;
        }else{
-          removeErrorClass('input[name="contact_item[]');                  
+          removeErrorClass('#customCheck1');                  
       }
 
-      if ($('input[name="contact_ways[]"]').is(':checked') == false){
-          callErrorMessage('input[name="contact_ways[]', ERROR_NO_INPUT);
+      if($('.contact_item_document:checked').length > 0)
+      {
+        if(!invalidCheckInput($('input[name="postal_code"]')))
+        {
+           isValid = false;
+        }
+
+        if(!invalidCheckInput($('input[name="city"]')))
+        {
           isValid = false;
-      }else{
-          removeErrorClass('input[name="contact_ways[]');                  
-      }
+        }
 
-      if ($('input[name="contact_gmt[]"]').is(':checked') == false){
-          callErrorMessage('input[name="contact_gmt[]', ERROR_NO_INPUT);
+        if(!invalidCheckSelect($('select[name="prefecture"]')))
+        {
           isValid = false;
-      }else{
-          removeErrorClass('input[name="contact_gmt[]');                  
+        }
+
       }
 
+      if($('.contact_item_meet:checked').length > 0)
+      {
+          var ischeckedMeeting = true;
+
+          if(!invalidCheckInput($('input[name="date_meeting_1"]')))
+          {
+               isValid = false;
+               ischeckedMeeting = false;
+          }
+
+          if(!invalidCheckInput($('input[name="date_meeting_2"]')))
+          {
+               isValid = false;
+               ischeckedMeeting = false;
+          }
+
+          if(!invalidCheckSelect($('select[name="time_meeting_1"]')))
+          {
+             isValid = false;
+             ischeckedMeeting = false;
+          }
+
+          if(!invalidCheckSelect($('select[name="time_meeting_2"]')))
+          {
+            isValid = false;
+            ischeckedMeeting = false;
+          }
+
+          if(!ischeckedMeeting)
+          {
+            callErrorMessage('input[name="date_meeting_1"]', ERROR_NO_INPUT);
+          }
+      }
+
+
+      if($('.contact_item_staff:checked').length > 0)
+      {
+          var ischecked = $('input[name="contact_gmt[]"]:checked').length > 0;
+
+          if (ischecked == false){
+              callErrorMessage('#customCheck10', ERROR_NO_INPUT);
+              isValid = false;
+           }else{
+              removeErrorClass('#customCheck10');                  
+          }
+      }
+      
       return isValid;
   }
 

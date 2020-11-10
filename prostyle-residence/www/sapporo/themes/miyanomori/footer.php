@@ -16,6 +16,7 @@
 <script src="<?php bloginfo('template_directory');?>/assets/js/slick.min.js"></script>
 <script src="<?php bloginfo('template_directory');?>/assets/js/miyanomori-script.js"></script>
 <script src="<?php bloginfo('template_directory');?>/assets/js/functions.js"></script>
+ <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 
 </body>
 

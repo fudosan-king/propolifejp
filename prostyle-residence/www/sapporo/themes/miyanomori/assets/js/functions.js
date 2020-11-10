@@ -14,14 +14,15 @@ jQuery(document).ready(function($) {
   });
 
   $('#ibtnGoSubmit').on('click', function(e) {
-        e.preventDefault();
-        if(invalidCheck()){
-            $('.frm_contact').submit();
-        }
-
+      e.preventDefault();
+    
+      if(invalidCheck()){
+          $('.frm_contactus').submit();
+      }else{
         return $("html,body").animate({
-                scrollTop: "200"
-        })
+              scrollTop: "200"
+        });
+      }
   });
  // VALIDATE FORM DATA
   function callErrorMessage(elem, message){
@@ -91,7 +92,8 @@ jQuery(document).ready(function($) {
       var requireInputText = $('input.required');
       var requireSelect    = $('select.required');
       
-      $.each(requireInputText, function(i, e){
+      $.each(requireInputText, function(i, e)
+      {
         if(!invalidCheckInput($(e)))
         {
             isValid = false;

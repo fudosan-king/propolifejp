@@ -97,7 +97,7 @@ Template Post Type: page
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-3 align-self-center">
-                                        <label for="" class="label_required">電話番号<span class="red">（※）</span></label>
+                                        <label for="" class="label_required">お電話番号<span class="red">（※）</span></label>
                                     </div>
                                     <div class="col-12 col-lg-9 align-self-center">
                                         <input type="text" class="form-control required" placeholder="例：0312341234　(※ハイフンなしでご記入ください)" name="phone_number">
@@ -231,7 +231,7 @@ Template Post Type: page
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3 align-self-center">
-                                            <label for="" class="label_required">来場予約<span class="red">（※）</span></label>
+                                            <label for="" class="label_required">ご来場予約<span class="red">（※）</span></label>
                                         </div>
                                         <div class="col-12 col-lg-9 align-self-center">
                                             <div class="row">

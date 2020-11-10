@@ -3294,3 +3294,17 @@ ul.list_sub_cate_event li:last-child {
     background: #CD7B5D;
 }
 
+.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap_not_expand {
+	max-height: 250px;
+    overflow: hidden;
+}
+
+.box_article_detail .wp-block-uagb-table-of-contents .expand-btn {
+    color: #000;
+}
+
+.box_article_detail .wp-block-uagb-table-of-contents .expand-content {
+	text-align: center;
+    margin-top: -25px;
+    position: relative;
+}

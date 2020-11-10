@@ -1045,7 +1045,7 @@
       "image": [
         "<?php echo $thumbnails->url; ?>"
        ],
-      "description": "<?php echo strip_tags(get_event_description()); ?>",
+      "description": "<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_event_description())); ?>",
       "offers": {
         "@type": "Offer",
         "url": "<?php the_permalink(); ?>",

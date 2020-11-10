@@ -9,9 +9,9 @@ jQuery(document).ready(function($) {
   }
   $('[data-scroll]').on('click', scrollToSection);
 
-  $('.datepicker').datepicker({
-    language: 'ja',
-  });
+  // $('.datepicker').datepicker({
+  //   language: 'ja',
+  // });
 
   $('#ibtnGoSubmit').on('click', function(e) {
       e.preventDefault();

@@ -10,6 +10,9 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 if ( ! function_exists( 'miyanomori_setup' ) ) :
 	function miyanomori_setup() {
 		add_theme_support( 'post-thumbnails' );
+		// if (!current_user_can('administrator') && !is_admin()) {
+		  show_admin_bar(false);
+		// }
 	}
 endif;
 add_action( 'after_setup_theme', 'miyanomori_setup' );

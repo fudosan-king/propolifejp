@@ -59,6 +59,21 @@ function miyanomori() {
 
 
     this.onOffContactForm = function(){
+        
+        if( $('#customCheck9').is(':checked') ){
+            $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('checked',false).prop('disabled',true);
+        } else {
+            $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('disabled',false);
+        }
+        $('#customCheck9').on('change',function(e) {
+            const currentTarget = e.currentTarget;
+            if( $(currentTarget).is(':checked') ){
+                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('checked',false).prop('disabled',true);
+            } else {
+                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('disabled',false);
+            }
+        });
+
         $('#customCheck1,#customCheck2,#customCheck3_,#customCheck4_').on('change',function(e){
            const currentTarget = e.currentTarget;
            const isChecked = $(currentTarget).is(':checked');
@@ -113,6 +128,7 @@ function miyanomori() {
                                 $('.contact_sale .custom-checkradio:first-of-type input').prop('checked',true);
                                 $('.contact_sale .custom-checkbox input').prop('checked',false);
                                 $('.contact_sale .custom-checkbox:first-of-type input').prop('checked',true);
+                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('disabled',true);
                             break;
                             default:
                                 $('.contact_sale,.description').removeClass('active');
@@ -120,6 +136,7 @@ function miyanomori() {
                                 $('.contact_sale .custom-checkradio:first-of-type input').prop('checked',true);
                                 $('.contact_sale .custom-checkbox input').prop('checked',false);
                                 $('.contact_sale .custom-checkbox:first-of-type input').prop('checked',true);
+                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('disabled',true);
                                 $('.description textarea').val('');
                         }  
                     break;

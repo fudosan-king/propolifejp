@@ -365,7 +365,14 @@ Template Post Type: page
                                             <label for="">ご質問内容</label>
                                         </div>
                                         <div class="col-12 col-lg-9">
+<<<<<<< HEAD
                                             <textarea  name="contact_question" class="form-control" cols="30" rows="5" placeholder="気になることがございましたらお気軽にご記入ください。お打ち合わせ時に回答いたします。"></textarea>
+=======
+                                            <div class="placeholder">
+                                                気になることがございましたらお気軽にご記入ください。<br>お打ち合わせ時に回答いたします。
+                                            </div>
+                                            <textarea  name="contact_question" class="form-control" cols="30" rows="5"></textarea>
+>>>>>>> No. 125141 新規作成・リニュアル_業務依頼 （プロスタイル宮の森(仮)販売サイト作成）| front end
                                         </div>
                                     </div>
                                 </div>
@@ -384,9 +391,7 @@ Template Post Type: page
                             </div>
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-12 col-lg-3">
-                                    </div>
-                                    <div class="col-12 col-lg-9">
+                                    <div class="col-12 col-lg-12">
                                         <div class="frm_contactus_footer">
                                             <p class="text-center">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                                 個人情報の取扱に関しましては <a href="/privacy-policy">プライバシーポリシー</a> をご覧ください。<br>

@@ -19,4 +19,5 @@ Template Post Type: page
         </div>
     </section>
 </main>
+<?php get_template_part( 'template/home/footer'); ?>
 <?php get_footer(); ?>

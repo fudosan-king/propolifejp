@@ -2247,7 +2247,7 @@ footer address p {
 }
 
 .section_contactus .contactus_content {
-    width: 951px;
+    max-width: 951px;
     margin: auto;
 }
 

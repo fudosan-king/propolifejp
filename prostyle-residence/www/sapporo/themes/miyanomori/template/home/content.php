@@ -246,7 +246,7 @@
                             <p>「プロスタイル宮の森」の設計を手がけたのは、世界中で活躍する建築家・隈研吾氏。日本の繊細な木工技術を生かしながら、現代的なデザインの木造建築を取り入れるスタイルが特徴的だ。<br>
                                 近年日本では、新国立競技場（2019）やJR東日本高輪ゲートウェイ駅（2020）の建築が大きく話題に。</p>
                             <p class="mb-0">「プロスタイル宮の森」の設計の背景や、宮の森の地で味わえるような「上質な暮らし」について話を聞いた。</p>
-                            <a href="#" class="btn btn_watch"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_long_right.svg" width="57" alt="" class="img-fluid mr-2"> インタビューを見る</a>
+                            <a href="<?= home_url('/interview-kengo-kuma'); ?>" class="btn btn_watch"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_long_right.svg" width="57" alt="" class="img-fluid mr-2"> インタビューを見る</a>
                         </div>
                     </div>
                 </div>

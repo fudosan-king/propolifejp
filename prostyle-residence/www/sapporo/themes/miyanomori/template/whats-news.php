@@ -5,7 +5,7 @@ Template Post Type: page
 */
 ?>
 <?php get_header(); ?>
-<?php get_template_part( 'template/home/header'); ?>
+<?php get_template_part( 'template/home/header2'); ?>
 <main>
     <section class="section_general">
         <div class="container">

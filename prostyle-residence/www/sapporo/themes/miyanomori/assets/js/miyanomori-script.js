@@ -11,6 +11,18 @@ function miyanomori() {
             _this.jsSelectCss();
             _this.onOffContactForm();
             _this.hoverShowInfoPlanPage();
+            _this.placeholderText();
+        });
+    }
+
+
+    this.placeholderText = function (){
+        $('textarea').on('input propertychange',function(e){
+           const currentTarget = e.currentTarget;
+           const val = $(currentTarget).val();
+           if( $(currentTarget).prev().hasClass('placeholder') ){
+                $(currentTarget).prev().toggleClass('hidden',val !== '');
+           }
         });
     }
 
@@ -61,19 +73,27 @@ function miyanomori() {
     this.onOffContactForm = function(){
         
         if( $('#customCheck9').is(':checked') ){
-            $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('checked',false).prop('disabled',true);
+            $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('checked',false);
+            $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').next().addClass('all-time');
         } else {
-            $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('disabled',false);
+            $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').next().removeClass('all-time');
         }
         $('#customCheck9').on('change',function(e) {
             const currentTarget = e.currentTarget;
             if( $(currentTarget).is(':checked') ){
-                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('checked',false).prop('disabled',true);
+                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('checked',false);
+                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').next().addClass('all-time');
             } else {
-                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('disabled',false);
+                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').next().removeClass('all-time');
             }
         });
-
+        $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').on('change',function(e){
+            const currentTarget = e.currentTarget;
+            if( $('#customCheck9').is(':checked') ){
+                $('#customCheck9').prop('checked',false);
+                $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').next().removeClass('all-time');
+            }
+        });
         $('#customCheck1,#customCheck2,#customCheck3_,#customCheck4_').on('change',function(e){
            const currentTarget = e.currentTarget;
            const isChecked = $(currentTarget).is(':checked');
@@ -128,7 +148,8 @@ function miyanomori() {
                                 $('.contact_sale .custom-checkradio:first-of-type input').prop('checked',true);
                                 $('.contact_sale .custom-checkbox input').prop('checked',false);
                                 $('.contact_sale .custom-checkbox:first-of-type input').prop('checked',true);
-                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('disabled',true);
+                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('checked',false);
+                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').next().addClass('all-time');
                             break;
                             default:
                                 $('.contact_sale,.description').removeClass('active');
@@ -136,7 +157,8 @@ function miyanomori() {
                                 $('.contact_sale .custom-checkradio:first-of-type input').prop('checked',true);
                                 $('.contact_sale .custom-checkbox input').prop('checked',false);
                                 $('.contact_sale .custom-checkbox:first-of-type input').prop('checked',true);
-                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('disabled',true);
+                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('checked',false);
+                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').next().addClass('all-time');
                                 $('.description textarea').val('');
                         }  
                     break;

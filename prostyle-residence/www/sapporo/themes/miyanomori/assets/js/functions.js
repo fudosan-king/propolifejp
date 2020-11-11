@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 
   $('#ibtnGoSubmit').on('click', function(e) {
       e.preventDefault();
-    
+      
       if(invalidCheck()){
           goConfirm();
       }else{
@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
   function goConfirm()
   {
     var data = $('form.frm_contactus').serializeArray();
-    console.log(data);
+  
     $('.frm_contactus').fadeOut();
 
     $('.frm_confirm').fadeIn(function() {
@@ -131,6 +131,56 @@ jQuery(document).ready(function($) {
     var formGroup = $(elem).parents('.form-group');
     formGroup.find('.error-required').remove();
   }
+
+  function invalidCheckEmail(elem)
+  {
+    var ERROR_MAIL_FORMAT = '無効な形式。';
+    var isValid = true;
+    var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    if (!emailPattern.test(elem.val())) {
+        callErrorMessage(elem, ERROR_MAIL_FORMAT);
+        isValid = false;
+
+    } else {
+        removeErrorClass(elem);
+    }
+
+    return isValid;
+  }
+
+  function invalidCheckNumber(elem)
+  {
+    var ERROR_PHONE_FORMAT = '無効な形式。';
+    var isValid = true;
+  
+    if (!$.isNumeric( elem.val() )) {
+        callErrorMessage(elem, ERROR_PHONE_FORMAT);
+        isValid = false;
+
+    } else {
+        removeErrorClass(elem);
+    }
+
+    return isValid;
+  }
+
+  function invalidCheckPostalCode(elem)
+  {
+    var ERROR_FORMAT = '無効な形式。';
+    var isValid = true;
+  
+    if (elem.length > 7 || !$.isNumeric(elem.val()) ) {
+        callErrorMessage(elem, ERROR_FORMAT);
+        isValid = false;
+
+    } else {
+        removeErrorClass(elem);
+    }
+
+    return isValid;
+  }
+
+
 
   function invalidCheckInput(elem)
   {
@@ -253,6 +303,31 @@ jQuery(document).ready(function($) {
               removeErrorClass('#customCheck10');                  
           }
       }
+
+      if(!invalidCheckEmail($('input[name="email"]')))
+      {
+        isValid = false;
+      }
+
+      if(!invalidCheckNumber($('input[name="phone_number"]')))
+      {
+        isValid = false;
+      }
+
+     
+      if( !$('#ck_agree:checked').length > 0)
+      {
+        callErrorMessage('#ck_agree', ERROR_NO_INPUT);
+        isValid = false;
+      }else{
+        removeErrorClass('#ck_agree');        
+      }
+
+      // if(!invalidCheckPostalCode($('select[name="postal_code"]')))
+      // {
+      //   isValid = false;
+      // }
+
       
       return isValid;
   }

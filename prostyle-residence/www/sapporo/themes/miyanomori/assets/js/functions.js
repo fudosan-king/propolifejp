@@ -17,13 +17,92 @@ jQuery(document).ready(function($) {
       e.preventDefault();
     
       if(invalidCheck()){
-          $('.frm_contactus').submit();
+          goConfirm();
       }else{
         return $("html,body").animate({
               scrollTop: "200"
         });
       }
   });
+
+  $('#goBack').on('click', function(e) {
+      e.preventDefault();
+      goBack();
+  });
+
+  $('#goSubmit').on('click', function(e) {
+      e.preventDefault();
+      $('form.frm_contactus').submit();
+  });
+
+
+  function goConfirm()
+  {
+    var data = $('form.frm_contactus').serializeArray();
+    console.log(data);
+    $('.frm_contactus').fadeOut();
+
+    $('.frm_confirm').fadeIn(function() {
+          $("html,body").animate({scrollTop: "200"});
+    });
+
+    var tmpName = '';
+    $.each(data, function(key, value) {
+        var name = value.name;
+        var val = value.value;
+        if (name.indexOf('[]') == -1) 
+        {
+            $(".cfrm_"+name).text(val);
+        }
+        else 
+        {
+            name = name.replace('[]','');
+            if(tmpName != name){
+                $(".cfrm_"+name).html(escapeHtml(val) + '<br>');
+                tmpName = name;
+            }else{
+                $(".cfrm_"+name).append(escapeHtml(val) + '<br>');
+            }
+            
+        }
+    })
+
+    $('.section_contact_item').fadeOut();
+    
+    if($('.contact_item_document:checked').length > 0){
+      $('.cfrm_contact_item_document').fadeIn();
+    }
+
+    if($('.contact_item_meet:checked').length > 0){
+       $('.cfrm_contact_item_meet').fadeIn();
+    }
+
+    if($('.contact_item_staff:checked').length > 0){
+         $('.cfrm_contact_item_staff').fadeIn();
+    }
+
+    if($('.contact_item_other:checked').length > 0){
+        $('.cfrm_contact_item_other').fadeIn();
+    }
+  }
+
+  function goBack()
+  {
+    $('.frm_contactus').fadeIn(function(){
+          $("html,body").animate({scrollTop: "200"});
+    });
+   
+    $('.frm_confirm').fadeOut();
+  }
+
+  function escapeHtml(text) {
+      return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+  }
  // VALIDATE FORM DATA
   function callErrorMessage(elem, message){
 

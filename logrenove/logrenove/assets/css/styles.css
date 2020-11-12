@@ -342,15 +342,15 @@ header {
 }
 
 .carousel_banner .carousel-cell {
-	width: 50%;
-	height: 554px;
+	width: 52%;
+	height: 350px;
 	background: #6d7278;
 	position: relative;
 	margin: 0 10px
 }
 
 .carousel_banner .carousel-cell img {
-	height: 554px;
+	/*height: 350px;*/
 	width: 100%;
 	object-fit: cover
 }
@@ -398,7 +398,7 @@ header {
 
 .caption h1 {
 	text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-	font-size: 32px;
+	font-size: 28px;
 	color: #fff;
 	line-height: 1.3em
 }
@@ -1698,7 +1698,7 @@ ul.box_article_related li a {
 }
 
 .box_article_detail ul li {
-	display: block;
+	margin-left: 20px;
 	margin-bottom: 5px
 }
 
@@ -3294,3 +3294,17 @@ ul.list_sub_cate_event li:last-child {
     background: #CD7B5D;
 }
 
+.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap_not_expand {
+	max-height: 250px;
+    overflow: hidden;
+}
+
+.box_article_detail .wp-block-uagb-table-of-contents .expand-btn {
+    color: #000;
+}
+
+.box_article_detail .wp-block-uagb-table-of-contents .expand-content {
+	text-align: center;
+    margin-top: -25px;
+    position: relative;
+}

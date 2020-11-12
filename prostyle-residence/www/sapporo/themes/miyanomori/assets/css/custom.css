@@ -1,0 +1,28 @@
+/*Thi-Plan-Page*/
+.contact_sale .custom-checkbox label.all-time::before{
+	background-color: #e9ecef;
+}
+@media (min-width: 992px) {
+	.section_plan .box_infoview_content .col-12.col-lg-5{
+		opacity: 0;
+		transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.section_plan .box_infoview_content.show .col-12.col-lg-5{
+		opacity: 1;
+	}
+}
+
+.hidden {
+  display: none;
+}
+.placeholder {
+	top:5px;
+	left:30px;
+	pointer-events: none;
+	user-select: none;
+	position: absolute;
+	color: #828282;
+	font-size: 0.875em;
+	line-height: 1.5;
+}

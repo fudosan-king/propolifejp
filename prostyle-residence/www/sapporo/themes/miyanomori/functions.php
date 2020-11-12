@@ -97,8 +97,10 @@ function ajax_register()
     check_ajax_referer( 'ajax-login-nonce', 'security' );
 
 	//Nonce is checked, get the POST data and sign user on
-	$user_login = $_POST['userlogin'];
+	// $user_login = $_POST['userlogin'];
 	$user_email = $_POST['useremail'];
+	$user_login = explode('@', $user_email);
+	$user_login = $user_login[0];
 	
 	$register  = register_new_user( $user_login, $user_email );
 

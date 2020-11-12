@@ -73,7 +73,7 @@
                             <input type="text" class="form-control" placeholder="メールアドレス" name="useremail" id='useremail'>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="パスワード" name="userlogin" id='userlogin'>
+                            <input type="text" class="form-control" placeholder="パスワード" name="userlogin" id='userlogin' style="display: none;">
                         </div>
                         <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
                         <button type="submit"  class="btn w-100 btn_brown d-block"><?php esc_attr_e('物件エントリーする'); ?></button>

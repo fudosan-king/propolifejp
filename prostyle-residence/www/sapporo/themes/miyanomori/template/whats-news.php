@@ -12,7 +12,7 @@ Template Post Type: page
             <div class="row">
                 <div class="col-12 col-lg-12">
                     <h2 class="title_sub">新着情報</h2>
-                    <?php echo do_shortcode("[Miyanomori_Blogs]"); ?>
+                    <?php //echo do_shortcode("[Miyanomori_Blogs]"); ?>
                 </div>
             </div>
            

@@ -394,7 +394,7 @@ Template Post Type: page
                                                 ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="ck_agree" checked>
-                                                <label class="custom-control-label" for="ck_agree">同意する</label>
+                                                <label class="custom-control-label label_required" for="ck_agree">同意する</label>
                                             </div>
                                             <button type="submit" class="btn btnsubmit" id="ibtnGoSubmit" >上記に同意して確認画面へ</button>
                                         </div>

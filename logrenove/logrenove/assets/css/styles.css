@@ -444,7 +444,8 @@ main {
 }
 
 .sub_page {
-	background: #fff
+	background: #fff;
+	padding-top: 0px;
 }
 
 .box_lastproducts {
@@ -1450,7 +1451,7 @@ ul.box_article_related li a {
 }
 
 .sub_underpage {
-	padding: 60px 0 97px
+	padding: 10px 0 97px
 }
 
 .box_thanks {
@@ -2849,14 +2850,14 @@ ul.list_event li a.disabled {
 
 	header {
         background: #fff;
-        top: 0;
+        top: 0px;
         width: 100%;
         z-index: 100;
         transition: all .3s ease;
         box-shadow: 0 1px 25px rgba(0,0,0, .1);
     }
     main {
-        padding-top: 60px;
+        padding-top: 30px;
     }
     .nav-up {
         top: -160px;
@@ -3292,5 +3293,11 @@ ul.list_sub_cate_event li:last-child {
 
 .main_right .each_boxright .article_ranking.ranking-3 {
     background: #CD7B5D;
+}
+.bg-white {
+	padding-top: 0px;
+}
+.section_main {
+	padding-top: 30px;
 }
 

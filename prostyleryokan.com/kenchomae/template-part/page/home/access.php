@@ -12,14 +12,12 @@
                 $html .= sprintf('
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 %s">
-                            <h4>%s</h4>
                             %s
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 %s">
-                            <h4>%s</h4>
                             %s
                         </div>
-                    </div>', $classOrder1, $row->ltitle, $row->lcontent, $classOrder2, $row->rtitle, $row->rcontent);             
+                    </div>', $classOrder1, $row->lcontent, $classOrder2, $row->rcontent);             
             }
         }
         echo $html;

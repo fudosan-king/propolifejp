@@ -200,11 +200,13 @@ function miyanomori() {
             const currentTarget = e.currentTarget;
             const $_this = $(currentTarget);
             if( $_this.hasClass('active') ){
-                 $('.js-menuAnimation').each(function(i,el){
+                $('body').addClass('menu-show');
+                $('.js-menuAnimation').each(function(i,el){
                     $(el).css({ transition: "opacity .4s cubic-bezier(.420, .000, .580, 1.000) " + (0.5 + 0.07 * (i + 1)) + "s, transform .4s cubic-bezier(.420, .000, .580, 1.000) " + (0.5 + 0.07 * (i + 1)) + "s" });
                 });
               
             } else {
+                $('body').removeClass('menu-show');
                 $('.js-menuAnimation').each(function(i,el){     
                     $(el).css({ transition: "none" });
                 });

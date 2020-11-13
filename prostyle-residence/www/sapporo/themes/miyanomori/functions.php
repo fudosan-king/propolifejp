@@ -124,7 +124,7 @@ function get_nav_lang($isMobile=false){
 		$classBoxLang = (!$isMobile) ? '' : 'sm';
 		$classNavLink = (!$isMobile) ? '' : 'btnLang';
 
-		echo ' <li class="nav-item dropdown dropdown-right fade '.$classBoxLang.'">';
+		echo ' <li class="nav-item js-menuAnimation dropdown dropdown-right fade '.$classBoxLang.'">';
 		$locale = get_locale();
 		$lang = substr( $locale, 3, 4 );
 		echo '<a class="nav-link '.$classNavLink.'" onclick="return false;">'.$lang.'<i class="fal fa-angle-down fa-lg"></i></a>';

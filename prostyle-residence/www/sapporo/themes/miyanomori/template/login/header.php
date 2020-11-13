@@ -1,14 +1,18 @@
 <header>
     <div class="navbar navbar-expand-lg bsnav bsnav-transparent bsnav-sticky bsnav-sticky-slide">
+        <button class="navbar-toggler toggler-spring menu">
+            <span class="menuLine"></span>
+            <span class="menuLine"></span>
+            <span class="menuLine"></span>
+        </button>
         <a class="navbar-brand" href="index.php">
             <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo.svg" alt="" class="img-fluid logo_white" width="246">
             <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_black.svg" alt="" class="img-fluid logo_black" width="246">
         </a>
-        <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav navbar-mobile mr-0">
-                <li class="nav-item"><a class="nav-link" href="#modal_login" data-toggle="modal">ログイン</a></li>
-                <li class="nav-item dropdown dropdown-right">
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="#modal_login" data-toggle="modal">ログイン</a></li>
+                <li class="nav-item js-menuAnimation dropdown dropdown-right">
                     <a class="nav-link" href="index.php">JP <i class="caret"></i></a>
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">JP</a></li>

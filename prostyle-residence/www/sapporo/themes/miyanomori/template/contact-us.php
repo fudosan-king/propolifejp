@@ -219,7 +219,7 @@ Template Post Type: page
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3 align-self-center">
-                                            <label for="">建物</label>
+                                            <label for="">建物名・号室</label>
                                         </div>
                                         <div class="col-12 col-lg-9 align-self-center">
                                             <input type="text" class="form-control" name="building_name">
@@ -230,25 +230,25 @@ Template Post Type: page
                             <div class="reservation">
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-12 col-lg-3 align-self-center">
+                                        <div class="col-12 col-lg-3">
                                             <label for="" class="label_required">ご来場予約<span class="red">（※）</span></label>
                                         </div>
-                                        <div class="col-12 col-lg-9 align-self-center">
-                                            <div class="row">
-                                                <div class="col-12 col-lg-12">
-                                                    <div class="row">
-                                                        <div class="col-12 col-lg-2 align-self-center">
+                                        <div class="col-12 col-lg-9">
+                                            <div class="row  align-self-center">
+                                                <!-- <div class="col-12 col-lg-12"> -->
+                                                    <!-- <div class="row"> -->
+                                                        <div class="col-12 col-lg-2">
                                                             <label for="" class="font-weight-normal">第1希望日時</label>
                                                         </div>
-                                                        <div class="col-12 col-lg-10 align-self-center">
-                                                            <div class="row">
-                                                                <div class="col-12 col-lg-6 mb-3">
+                                                       <!--  <div class="col-12 col-lg-10">
+                                                            <div class="row"> -->
+                                                                <div class="col-12 col-lg-5 pb-3">
                                                                     <div class="box_datetime">
                                                                         <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_1">
                                                                         <i class="i_datetime"></i>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-12 col-lg-6 mb-3">
+                                                                <div class="col-12 col-lg-5 pb-3">
                                                                     <select name="time_meeting_1" class="form-control custom-select">
                                                                         <option value="" >時間を選択</option>
                                                                         <option value="10:00">10:00</option>
@@ -263,20 +263,22 @@ Template Post Type: page
                                                                         <option value="19:00">19:00</option>
                                                                     </select>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-lg-2 align-self-center">
+                                                       <!--      </div>
+                                                        </div> -->
+                                            </div>
+                                            <div class="row  align-self-center">            
+                                                        <div class="col-12 col-lg-2">
                                                             <label for="" class="font-weight-normal">第2希望日時</label>
                                                         </div>
-                                                        <div class="col-12 col-lg-10 align-self-center">
-                                                            <div class="row">
-                                                                <div class="col-12 col-lg-6 mb-3">
+                                                        <!-- <div class="col-12 col-lg-10 align-self-center"> -->
+                                                            <!-- <div class="row"> -->
+                                                                <div class="col-12 col-lg-5 pb-3">
                                                                     <div class="box_datetime">
                                                                         <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_2">
                                                                         <i class="i_datetime"></i>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-12 col-lg-6 mb-3">
+                                                                <div class="col-12 col-lg-5 pb-3">
                                                                     <select name="time_meeting_2" class="form-control custom-select">
                                                                         <option value="" >時間を選択</option>
                                                                         <option value="10:00">10:00</option>
@@ -292,10 +294,10 @@ Template Post Type: page
                                                                         <option value="20:00">20:00</option>
                                                                     </select>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                            <!-- </div> -->
+                                                        <!-- </div> -->
+                                                    <!-- </div> -->
+                                                <!-- </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -390,7 +392,7 @@ Template Post Type: page
                                     <div class="col-12 col-lg-12">
                                         <div class="frm_contactus_footer">
                                             <p class="text-center">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                                個人情報の取扱に関しましては <a href="/privacy-policy">プライバシーポリシー</a> をご覧ください。<br>
+                                                個人情報の取扱に関しましては <a href="<?= home_url('privacy-policy'); ?>" target="_blank">プライバシーポリシー</a> をご覧ください。<br>
                                                 ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="ck_agree" checked>
@@ -512,7 +514,7 @@ Template Post Type: page
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                <label for="">建物 : </label>
+                                                <label for="">建物名・号室 : </label>
                                             </div>
                                         </div>
                                     </div>

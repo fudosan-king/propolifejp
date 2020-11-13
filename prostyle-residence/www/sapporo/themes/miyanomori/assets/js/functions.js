@@ -370,16 +370,20 @@ jQuery(document).ready(function($) {
 
 
 $(function($) {
-	 AOS.init();
+	
+  AOS.init();
 
 	$(document).ready(function() {
-        return $(window).scroll(function() {
-            return $(window).scrollTop() > 200 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
-        }), $("#back-to-top").click(function() {
-            return $("html,body").animate({
-                scrollTop: "0"
-            })
-        })
-    })
+      $(window).scroll(function() {
+          $(window).scrollTop() > 200 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
+      });
+
+      $("#back-to-top").click(function() {
+          $("html,body").animate({
+              scrollTop: "0"
+          });
+      });
+  });
+
 });
 

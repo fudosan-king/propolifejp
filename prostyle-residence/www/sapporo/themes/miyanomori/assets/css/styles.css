@@ -386,9 +386,9 @@ ul.list_global li.active a {
     border-left: 1px solid #000;
 }
 
-.header_sub .navbar-brand {
+/*.header_sub .navbar-brand {
     padding: 60px 0;
-}
+}*/
 
 .header_sub .navbar-nav .nav-item .caret {
     border-top: solid 5px #000;

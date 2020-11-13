@@ -15,7 +15,7 @@ Template Post Type: page
             <div class="row">
                 <div class="col-12 col-lg-12">
                     <div class="box_interview_banner">
-                        <a href="#"><img src="<?php bloginfo('template_directory');?>/assets/images/1x/interview_banner.png" alt="" class="img-fluid"></a>
+                        <a href="<?= home_url('interview-kengo-kuma'); ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/1x/interview_banner.png" alt="" class="img-fluid"></a>
                     </div>
                     <div class="box_equipment_info clearfix">
                         <div class="box_equipment_info_top">

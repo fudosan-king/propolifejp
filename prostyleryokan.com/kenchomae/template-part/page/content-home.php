@@ -16,7 +16,7 @@
 		
 		<?php 
 			include_once 'home/concept.php';
-			include_once 'home/feature.php';
+			// include_once 'home/feature.php';
 			include_once 'home/rooms.php';
 			include_once 'home/access.php';
 			// include_once 'home/location.php';

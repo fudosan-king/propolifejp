@@ -3301,7 +3301,7 @@ ul.list_sub_cate_event li:last-child {
 	padding-top: 30px;
 }
 
-.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap_not_expand {
+/*.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap_not_expand {
 	max-height: 250px;
     overflow: hidden;
 }
@@ -3314,4 +3314,4 @@ ul.list_sub_cate_event li:last-child {
 	text-align: center;
     margin-top: -25px;
     position: relative;
-}
+}*/

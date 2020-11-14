@@ -385,3 +385,7 @@ body.single-post .logo_logrenove_small img {
         height: 80px;
     }
 }
+
+.uagb-toc__list li {
+    list-style-type: none;
+}

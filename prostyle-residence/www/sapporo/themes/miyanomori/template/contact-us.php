@@ -229,7 +229,7 @@ Template Post Type: page
                                 </div>
                             </div>
                             <div class="reservation">
-                                <p>来場予約をご希望の場合はこちもご記入ください</p>
+                                <p>来場予約をご希望の場合はこちらもご記入ください</p>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3">

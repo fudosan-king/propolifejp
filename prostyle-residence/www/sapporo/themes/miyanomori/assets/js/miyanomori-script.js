@@ -71,7 +71,7 @@ function miyanomori() {
 
 
     this.onOffContactForm = function(){
-        
+        const _this = this;
         if( $('#customCheck9').is(':checked') ){
             $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').prop('checked',false);
             $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').next().addClass('all-time');
@@ -94,6 +94,34 @@ function miyanomori() {
                 $('#customCheck10,#customCheck11,#customCheck12,#customCheck13').next().removeClass('all-time');
             }
         });
+
+        $('#customCheck1,#customCheck2,#customCheck3_,#customCheck4_').each(function(i,ele){
+      
+            const isChecked = $(ele).is(':checked');
+            const isIdName = $(ele).attr('id');
+            console.log(isIdName);
+            if ( isChecked === true ) {
+                
+                switch (isIdName) {
+                    case 'customCheck1':
+                        $('.materials').addClass('active');
+                    break;
+                    
+                    case 'customCheck2':
+                        $('.reservation').addClass('active');
+                    break;
+
+                    case 'customCheck3_':
+                        $('.contact_sale').addClass('active');
+                    break;
+                  
+                    case 'customCheck4_':
+                         $('.order-other').addClass('active');
+                    break;
+                }
+            }
+        });
+
         $('#customCheck1,#customCheck2,#customCheck3_,#customCheck4_').on('change',function(e){
            const currentTarget = e.currentTarget;
            const isChecked = $(currentTarget).is(':checked');
@@ -106,11 +134,11 @@ function miyanomori() {
                     break;
                     
                     case 'customCheck2':
-                        $('.reservation,.description').addClass('active');
+                        $('.reservation').addClass('active');
                     break;
 
                     case 'customCheck3_':
-                        $('.contact_sale,.description').addClass('active');
+                        $('.contact_sale').addClass('active');
                     break;
                   
                     case 'customCheck4_':
@@ -126,41 +154,23 @@ function miyanomori() {
                     break;
 
                     case 'customCheck2':
-                        switch(true){
-                            case ($('#customCheck3_').is(':checked') === true):
-                                $('.reservation').removeClass('active');
-                                $('.reservation select').removeClass('active');
-                                $('.reservation select,.reservation input').val('');
-                            break;
-                            default:
-                                $('.reservation,.description').removeClass('active');
-                                $('.reservation select').removeClass('active');
-                                $('.reservation select,.reservation input').val('');
-                                $('.description textarea').val('');
-                        }  
+                        $('.reservation').removeClass('active');
+                        $('.reservation select').removeClass('active');
+                        $('.reservation select,.reservation input').val('');
+                        $('.reservation textarea').val('');
+                        $('.reservation textarea').prev().removeClass('hidden');
                     break;
 
                     case 'customCheck3_':
-                        switch(true){
-                            case ($('#customCheck2').is(':checked') === true):
-                                $('.contact_sale').removeClass('active');
-                                $('.contact_sale .custom-checkradio input').prop('checked',false);
-                                $('.contact_sale .custom-checkradio:first-of-type input').prop('checked',true);
-                                $('.contact_sale .custom-checkbox input').prop('checked',false);
-                                $('.contact_sale .custom-checkbox:first-of-type input').prop('checked',true);
-                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('checked',false);
-                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').next().addClass('all-time');
-                            break;
-                            default:
-                                $('.contact_sale,.description').removeClass('active');
-                                $('.contact_sale .custom-checkradio input').prop('checked',false);
-                                $('.contact_sale .custom-checkradio:first-of-type input').prop('checked',true);
-                                $('.contact_sale .custom-checkbox input').prop('checked',false);
-                                $('.contact_sale .custom-checkbox:first-of-type input').prop('checked',true);
-                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('checked',false);
-                                $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').next().addClass('all-time');
-                                $('.description textarea').val('');
-                        }  
+                            $('.contact_sale').removeClass('active');
+                            $('.contact_sale .custom-checkradio input').prop('checked',false);
+                            $('.contact_sale .custom-checkradio:first-of-type input').prop('checked',true);
+                            $('.contact_sale .custom-checkbox input').prop('checked',false);
+                            $('.contact_sale .custom-checkbox:first-of-type input').prop('checked',true);
+                            $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').prop('checked',false);
+                            $('.contact_sale #customCheck10,.contact_sale #customCheck11,.contact_sale #customCheck12,.contact_sale #customCheck13').next().addClass('all-time');
+                            $('.contact_sale textarea').val('');
+                            $('.contact_sale textarea').prev().removeClass('hidden');
                     break;
                         
                     case 'customCheck4_':

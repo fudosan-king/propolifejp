@@ -1,5 +1,11 @@
-/*Thi-Plan-Page*/
+.contactus_content .form-group{
+	padding: 0 20px;
+}
 
+
+.logged-in .news_afterlogin{
+	display: none;
+}
 
 .contact_sale .custom-checkbox label.all-time::before{
 	background-color: #e9ecef;
@@ -24,6 +30,7 @@
 .hidden {
   display: none;
 }
+
 .placeholder {
 	top:5px;
 	left:30px;
@@ -39,8 +46,6 @@
 .reservation label{
 	line-height: 3;
 }
-
-
 
 @media (max-width: 992px){
 	.header_sub .menu .menuLine{
@@ -66,11 +71,16 @@
 		padding-top: 102px;
 	}
 }
+
 @media (max-width: 768px){
 	.menu-show .bsnav-mobile .navbar{
+		padding-top: 117px;
+	}
+	.logged-in.menu-show .bsnav-mobile .navbar{
 		padding-top: 73px;
 	}
 }
+
 @media (max-width: 641px){
 	/*Menu Top*/
 	.scroll_title{

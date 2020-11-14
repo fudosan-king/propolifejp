@@ -130,6 +130,7 @@ Template Post Type: page
                                 </div>
                             </div>
                             <div class="materials">
+                                <p>資料請求をご希望の場合はこちらもご記入ください</p>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3 align-self-center">
@@ -228,6 +229,7 @@ Template Post Type: page
                                 </div>
                             </div>
                             <div class="reservation">
+                                <p>来場予約をご希望の場合はこちもご記入ください</p>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3">
@@ -302,8 +304,22 @@ Template Post Type: page
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3">
+                                            <label for="">ご質問内容</label>
+                                        </div>
+                                        <div class="col-12 col-lg-9">
+                                            <div class="placeholder">
+                                                気になることがございましたらお気軽にご記入ください。<br>お打ち合わせ時に回答いたします。
+                                            </div>
+                                            <textarea  name="reservation_question" class="form-control" cols="30" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="contact_sale">
+                                <p>担当者からの連絡をご希望の場合はこちらもご記入ください</p>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3">
@@ -359,8 +375,6 @@ Template Post Type: page
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="description">
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3">
@@ -370,12 +384,13 @@ Template Post Type: page
                                             <div class="placeholder">
                                                 気になることがございましたらお気軽にご記入ください。<br>お打ち合わせ時に回答いたします。
                                             </div>
-                                            <textarea  name="contact_question" class="form-control" cols="30" rows="5"></textarea>
+                                            <textarea  name="sale_contact_question" class="form-control" cols="30" rows="5"></textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="order-other">
+                                <p>その他お問い合わせをご希望の場合はこちらもご記入ください</p>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-12 col-lg-3">
@@ -547,7 +562,25 @@ Template Post Type: page
                                         </div>
                                     </div>
                                 </div>
-                             
+                                <!-- お問い合わせ内容 -->
+                                <div class="row require section_contact_item cfrm_contact_item_meet">
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <label for="">ご質問内容 :</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8 col-lg-8 right-side">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="cfr cfrm_reservation_question" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <!-- お問い合わせ項目(複数選択可) -->
                                 <div class="row require section_contact_item cfrm_contact_item_staff">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
@@ -585,7 +618,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                  <!-- お問い合わせ内容 -->
-                                <div class="row require section_contact_item  cfrm_contact_item_staff cfrm_contact_item_meet">
+                                <div class="row require section_contact_item  cfrm_contact_item_staff">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -596,12 +629,13 @@ Template Post Type: page
                                     <div class="col-12 col-sm-8 col-md-8 col-lg-8 right-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                <div class="cfr cfrm_contact_question" >
+                                                <div class="cfr cfrm_sale_contact_question" >
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- お問い合わせ内容 -->
                                 <div class="row require section_contact_item cfrm_contact_item_other">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">

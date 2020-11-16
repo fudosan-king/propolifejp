@@ -1,5 +1,5 @@
 <?php 
-global $detect;
+global $detect;                   
 if(have_posts()):
     while(have_posts()): the_post();
         
@@ -69,14 +69,14 @@ if(have_posts()):
                                 <div class="relation_article_item">
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
-                                            <a class="relation_article_img" href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer">
+                                            <a class="relation_article_img" href="<?php echo the_permalink(); ?>?from=related" target="_blank" rel="noopener noreferrer">
                                                 <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="img-fluid">
                                             </a>
                                         </div>
                                         <div class="col-8 col-lg-12">
                                             <div class="relation_article_content">
                                                 <p>
-                                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                    <a href="<?php the_permalink(); ?>?from=related"><?php the_title(); ?></a>
                                                     <?php // the_title(); ?>
                                                 </p>
                                                 <span class="badge badge-secondary badge_cate"><?php echo get_the_category()[0]->name; ?></span>

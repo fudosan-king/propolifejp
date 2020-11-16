@@ -12,6 +12,11 @@ jQuery(document).ready(function($) {
   // $('.datepicker').datepicker({
   //   language: 'ja',
   // });
+    
+  $('.numbersOnly').keyup(function () {
+      this.value = this.value.replace(/[^0-9\.]/g,'');
+  });
+
 
   $('#ibtnGoSubmit').on('click', function(e) {
       e.preventDefault();

@@ -139,7 +139,7 @@ Template Post Type: page
                                         <div class="col-12 col-lg-9 align-self-center">
                                             <div class="row">
                                                 <div class="col-12 col-lg-6">
-                                                    <input type="text" class="form-control" name="postal_code" placeholder="例：1234567" maxlength="7" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')" >
+                                                    <input type="text" class="form-control numbersOnly" name="postal_code" placeholder="例：1234567" maxlength="7" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')" >
                                                 </div>
                                                 <div class="col-12 col-lg-6">
                                                     <a class="btn_autozipcode" href="#"><img src="<?php bloginfo('template_url'); ?>/assets/images/SVG/i_right.svg" alt="" class="img-fluid mr-2" width="20">郵便番号から住所を自動的入力</a>

@@ -69,7 +69,7 @@ if(have_posts()):
                                 <div class="relation_article_item">
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
-                                            <a class="relation_article_img" href="<?php echo the_permalink(); ?>?from=related" target="_blank" rel="noopener noreferrer">
+                                            <a class="relation_article_img" href="<?php the_permalink(); ?>?from=related" rel="noopener noreferrer">
                                                 <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="img-fluid">
                                             </a>
                                         </div>

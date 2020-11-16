@@ -13,7 +13,7 @@
 						<div class="col-12 col-md-5 align-self-center">
 							<div class="box_concept_content">
 								<h2 class="title mb-0"><?php _echo($data->title); ?></h2>
-								<!-- <h6><?php _echo($data->description); ?></h6> -->
+								<!-- <h6><?php //_echo($data->description); ?></h6> -->
 								<?php _echo($data->content); ?>
 							</div>
 						</div>

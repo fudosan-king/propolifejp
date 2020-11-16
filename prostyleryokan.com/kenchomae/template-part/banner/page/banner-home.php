@@ -39,8 +39,11 @@
 <section class="section_banner">
 	<div class="owl-carousel owl-theme owl_banner <?=$currentLanguage;?>">
 		<div class="item">
-			<?php _generateTag_image($data->pc_image, 'd-none d-md-block'); ?>
-			<?php _generateTag_image($data->sp_image, 'd-block d-md-none'); ?>
+
+			<div class="w-100 d-none d-md-block" style="background: url(<?php echo $data->pc_image->url; ?>); height: 719px; background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+
+			<div class="w-100 d-block d-md-none" style="background: url(<?php echo $data->pc_image->url; ?>); height: 560px; background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+
 			<div class="caption">
 				<div class="caption_content <?=$currentLanguage;?>">
 					<?php _echo($data->caption); ?>

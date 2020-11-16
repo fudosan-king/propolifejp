@@ -3315,3 +3315,31 @@ ul.list_sub_cate_event li:last-child {
     margin-top: -25px;
     position: relative;
 }*/
+
+.services_detail .section_cookie {
+	z-index: 200;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: auto;
+	background: #ffffffc9;
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 -3px 6px rgba(0,0,0,.24);
+	color: #fff;
+	padding: 5px 18px;
+}
+
+
+.services_detail .section_cookie a {
+	display: inline-block;
+    background: #1f1f1f;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,.2);
+    padding: 15px 40px;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
+}

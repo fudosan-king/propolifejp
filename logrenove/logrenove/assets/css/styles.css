@@ -2016,12 +2016,12 @@ blockquote:before {
 }
 
 .login_body_top {
-	padding: 40px 65px 30px;
-	border-bottom: 1px solid rgba(204, 204, 204, .5);
+    padding: 16px 33px 34px;
+    border-bottom: 1px solid rgba(204, 204, 204, .5);
 }
 
 .login_body_bottom {
-	padding: 30px 65px 40px;
+    padding: 31px 64px 20px;
 }
 
 .frm_main_login .form-control {
@@ -3315,6 +3315,102 @@ ul.list_sub_cate_event li:last-child {
     margin-top: -25px;
     position: relative;
 }*/
+
+/*Part Register Email*/
+.register-email .login_body_top {
+    padding: 16px 36px 9px;
+}
+
+.login_body_top .text {
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: justify;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.register-email .login_body_top .form-group{
+    padding:0 29px;
+}
+
+.register-email .login_body_top label {
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 35px;
+}
+
+
+.register-email .login_body_top .btn_login {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.register-email .login_body_bottom p{
+    text-align: center;   
+}
+
+.register-email .login_body_bottom .btn_member{
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 17px;
+    letter-spacing: 1px;
+}
+
+.register-pass .login_body_top {
+    padding: 47px 61px 15px;
+}
+
+.register-pass .login_body_top .text {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.go-login .login_body_top{
+    padding: 54px 40px 30px;
+}
+.go-login .login_body_top .text{
+    margin-bottom: 22px;
+} 
+.go-login .login_body_top p:nth-of-type(2){
+    margin-bottom: 33px;
+} 
+.go-login .login_body_top .form-group{
+    padding:0 23px;
+}
+.go-login .login_body_top .btn_login{
+   font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.login_body h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.login_body .cf-head {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.login_body .cf-note {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 14.32px;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #A0A0A0;
+    margin-bottom: 0;
+}
 
 .services_detail .section_cookie {
 	z-index: 200;

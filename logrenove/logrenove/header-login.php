@@ -11,4 +11,4 @@
 <body <?php body_class(); ?>>
     <?php do_action( 'body_extra_script'); ?>
     <div id="page">
-    	<?php require 'includes/header.php'; ?>
+    	<?php //require 'includes/header.php'; ?>

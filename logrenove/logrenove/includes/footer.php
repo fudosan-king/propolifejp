@@ -16,6 +16,11 @@
             echo '<li><a href="'.$line_url.'" target="_blank" rel="noopener noreferrer"><i class="fab fa-line"></i></a></li>';
           }
         ?>
+        <li>
+          <a href="<?php echo esc_url(network_site_url('mailmagazine')); ?>" class="btn" rel="noopener noreferrer">
+              <img src="<?=IMAGE_PATH;?>/mailmagazine/i_email_footer.svg" width="15">
+          </a>
+        </li>
       </ul>
 
       <?php 

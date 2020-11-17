@@ -137,6 +137,10 @@
     if((is_page_template( 'default' ) || is_page( 'faqs' ) || is_page( 'outline' )) && !is_single()){
         $extraClass = 'section_subbanner_article';
     }
+
+    if(is_page_template( 'page-templates/how-to-sauna.php' )){
+        $extraClass = 'banner_sauna';
+    }
 ?>
     <section class="section_subbanner p-0 <?php echo $extraClass; ?>">
         <img src="<?php echo $featureImage; ?>" alt="" class="img-fluid">

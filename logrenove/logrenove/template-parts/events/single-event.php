@@ -35,3 +35,18 @@ if(have_posts()):
     endwhile;
 endif;
 ?>
+
+<section class="section_cookie" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-12 col-md-7 align-self-center">
+                <p class="d-none d-md-block">リフォームとリノベーションは似てるけど全然別物！？<br>LogRenoveのオンラインセミナーで、リノベーションを学ぼう</p>
+            </div> -->
+            <div class="col-12 col-md-12 align-self-center">
+                <p class="text-center">
+                    <a class="btn btn_online" rel="noopener noreferrer" href="<?php the_permalink(); ?>#frm_services">参加予約する</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

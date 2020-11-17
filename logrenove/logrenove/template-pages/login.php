@@ -16,25 +16,32 @@
     $user_remember = isset($_POST['user_remember']) ? filter_var($_POST['user_remember'], FILTER_VALIDATE_BOOLEAN)  : false ;
     $home_url = get_home_url();
     if(isset($_POST['login_request'])){
-        if(!empty($user_email)){
+        if(!empty($user_email) && filter_var($user_email, FILTER_VALIDATE_EMAIL)){
             $user = get_user_by( 'email', $user_email  );
             $auth = wp_check_password( $user_password, $user->user_pass, $user->ID );
-            
             if($auth){
-
                 $creds = array(
                     'user_login'    => $user->user_login,
                     'user_password' => $user_password,
                     'remember'      => $user_remember
                 );
                 $user_ = wp_signon( $creds, false );
-                wp_redirect($home_url);
-                exit;
+                $error = !empty($user_->errors)?$user_->errors:false;
+                if(!$error) {
+                    wp_redirect($home_url);
+                    exit;
+                }
+                else {
+                    $invalid = false;
+                    $msg = 'メールアドレス、またはパスワードが正しくありませんでした。ご確認の上、もう一度お試しください ';
+                }
             }else{
                 $invalid = false;
+                $msg = 'メールアドレス、またはパスワードが正しくありませんでした。ご確認の上、もう一度お試しください ';
             }
         }else{
             $invalid = false;
+            $msg = '正しいメールアドレスを入力してください ';
         }
     }
 ?>
@@ -60,8 +67,8 @@
                     <button type="submit" class="btn btn_login" name="login_request" value="login">ログイン</button>
                 </div>
                 <?php if (!$invalid): ?>
-                    <div class="form-group text-center">
-                        <label class="login_error">メールアドレスまたはパスワードが無効です</label>
+                    <div class="form-group">
+                        <label class="login_error"><?php echo $msg; ?></label>
                     </div>
                 <?php endif; ?>
                 <p class="mb-0"><a class="btn_forgotpass" href="<?php echo esc_url(network_site_url('password-forgot')); ?>">パスワードをお忘れの方はこちら</a></p>

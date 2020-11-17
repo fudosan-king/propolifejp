@@ -16,7 +16,7 @@
     $user_remember = isset($_POST['user_remember']) ? filter_var($_POST['user_remember'], FILTER_VALIDATE_BOOLEAN)  : false ;
     $home_url = get_home_url();
     if(isset($_POST['login_request'])){
-        if(!empty($user_email)){        
+        if(!empty($user_email)){
             $user = get_user_by( 'email', $user_email  );
             $auth = wp_check_password( $user_password, $user->user_pass, $user->ID );
             
@@ -54,7 +54,7 @@
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" value="true" name="user_remember" id="keeplogin" <?php echo $user_remember ? 'checked' : ''; ?>>
-                    <label class="custom-control-label" for="keeplogin">週刊ログリノベを受け取る</label>
+                    <label class="custom-control-label" for="keeplogin">ログイン状態を保存する</label>
                 </div>
                 <div class="form-group mt-4">
                     <button type="submit" class="btn btn_login" name="login_request" value="login">ログイン</button>
@@ -64,7 +64,7 @@
                         <label class="login_error">メールアドレスまたはパスワードが無効です</label>
                     </div>
                 <?php endif; ?>
-                <p class="mb-0"><a class="btn_forgotpass" href="#">パスワードをお忘れの方はこちら</a></p>
+                <p class="mb-0"><a class="btn_forgotpass" href="<?php echo esc_url(network_site_url('password-forgot')); ?>">パスワードをお忘れの方はこちら</a></p>
             </div>
             <div class="login_body_bottom">
                 <?php // echo get_social_login_button(); ?>
@@ -72,7 +72,7 @@
                 <a href="#" class="btn btn_social btnlogin_yahoo">Yahoo!JAPANでログイン</a>
 
                 <a href="#" class="btn btn_social btnlogin_facebook">Facebookでログイン</a> -->
-                <p class="mt-5 text-center mb-2">初めての方はこちら</p>
+                <p class="text-center mb-2">初めての方はこちら</p>
                 <a href="<?php echo esc_url(network_site_url('signup')); ?>" class="btn btn_social btn_member mb-0">新規会員登録</a>
             </div>
         </form>

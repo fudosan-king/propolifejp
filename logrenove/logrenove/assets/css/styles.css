@@ -2016,7 +2016,7 @@ blockquote:before {
 }
 
 .login_body_top {
-    padding: 16px 33px 34px;
+    padding: 20px 20px 20px;
     border-bottom: 1px solid rgba(204, 204, 204, .5);
 }
 
@@ -2158,10 +2158,10 @@ blockquote:before {
 }
 
 .login_body_top h3 {
-	font-size: 1em;
+	font-size: 1.5em;
 	color: #000;
 	text-align: center;
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 }
 
 .termofuse {
@@ -3339,6 +3339,9 @@ ul.list_sub_cate_event li:last-child {
     line-height: 35px;
 }
 
+.register-email .login_body_top .login_error {
+    font-size: 0.875em !important;
+}
 
 .register-email .login_body_top .btn_login {
     font-weight: 600;

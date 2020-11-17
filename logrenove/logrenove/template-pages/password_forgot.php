@@ -29,9 +29,9 @@
     	$error = $_REQUEST['error'];
     	if($error == 'expiredkey') $msg = 'パスワードリセット用リンクの期限が切れています。以下から新しいリンクをリクエストしてください。';
     	elseif($error == 'invalidkey') $msg = 'パスワードリセット用リンクが無効のようです。以下から新しいリンクをリクエストしてください。';
-    	elseif($error == 'passempty') $msg = 'パスワードを空白のままにすることはできません';
-    	elseif($error == 'passnotmatch') $msg = 'パスワードの確認が一致しません';
-    	elseif($error == 'passmin6') $msg = 'パスワードは6文字以上である必要があります';
+    	elseif($error == 'passempty') $msg = '正しいパスワードを入力してください';
+    	elseif($error == 'passnotmatch') $msg = 'パスワードが一致しません ';
+    	elseif($error == 'passmin6') $msg = '正しいパスワードを入力してください';
     	elseif($error == 'passhalfwidth') $msg = '半角文字のパスワード';
     }
 ?>
@@ -66,7 +66,7 @@
 	                        <button type="submit" class="btn btn_login" name="action" value="reset">設定する</button>
 	                    </div>
 	                    <?php if (!empty($msg)): ?>
-		                    <div class="form-group text-center">
+		                    <div class="form-group">
 		                        <label class="login_error"><?php echo $msg; ?></label>
 		                    </div>
 		                <?php endif; ?>
@@ -78,7 +78,7 @@
 	                	<p class="text">新しいパスワードに変更いたしました。</p>
 	                    <p class="text">ログインページより新しいパスワードでログインを行ってください。</p>
 	                    <div class="form-group mt-4">
-	                        <a href="<?php echo $home_url; ?>" class="btn btn_login">ログインページへ</a>
+	                        <a href="<?php echo $home_url; ?>/login" class="btn btn_login">ログインページへ</a>
 	                    </div>
 	                </div>
 	        	</div>
@@ -94,7 +94,7 @@
 		                    <button type="submit" class="btn btn_login" name="action" value="reset-password">送信</button>
 		                </div>
 		                <?php if ($invalid): ?>
-		                    <div class="form-group text-center">
+		                    <div class="form-group">
 		                        <label class="login_error"><?php echo $msg; ?></label>
 		                    </div>
 		                <?php endif; ?>

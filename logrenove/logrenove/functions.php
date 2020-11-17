@@ -1203,12 +1203,12 @@
     function send_mail_reset_password($user_email='') {
         $invalid = true;
         if(empty($user_email)) {
-            $msg = 'まだメールを入力していません';
+            $msg = '正しいメールアドレスを入力してください ';
         }
         else {
             $user_data = get_user_by( 'email', $user_email  );
             if(!$user_data) {
-                $msg = 'ユーザーがシステムに存在しません';
+                $msg = '正しいメールアドレスを入力してください';
             }
             else {
                 $user_login = $user_data->user_login;
@@ -1284,16 +1284,16 @@
         $msg = '';
         $home_url = get_home_url();
         $mail_magazine = isset($_POST['mail_magazine']) ? filter_var($_POST['mail_magazine'], FILTER_VALIDATE_BOOLEAN)  : false ;
-        if($user_email == '') $msg = 'まだメールを入力していません';
-        elseif($pass1 == '') $msg = 'パスワードを空白のままにすることはできません';
-        elseif(strlen($pass1) < 6) $msg = 'パスワードは6文字以上である必要があります';
+        if($user_email == '' || !filter_var($user_email, FILTER_VALIDATE_EMAIL)) $msg = '正しいメールアドレスを入力してください';
+        elseif($pass1 == '') $msg = '正しいパスワードを入力してください';
+        elseif(strlen($pass1) < 6) $msg = '正しいパスワードを入力してください';
         elseif(jpn_zenkaku_only($pass1)) $msg = '半角文字のパスワード';
-        elseif($pass1 != $pass2) $msg = 'パスワードの確認が一致しません';
+        elseif($pass1 != $pass2) $msg = 'パスワードが一致しません';
         else {
             $isExisted = email_exists( $user_email );
             if(!$isExisted){
                 $invalid = false;
-                $user_id = wp_create_user($user_email, $user_password, $user_email);
+                $user_id = wp_create_user($user_email, $pass1, $user_email);
                 if($user_id) {
                     send_activation_link($user_id, $user_email);
                     if($mail_magazine) {
@@ -1306,7 +1306,7 @@
                 }
                 wp_redirect(site_url($direct_url));
                 exit;
-            } else $msg = '電子メールアドレスはすでに存在しています';
+            } else $msg = 'このメールアドレスは既に登録済みです';
         }
         return array('invalid'=> $invalid, 'msg'=> $msg);
     }
@@ -1336,16 +1336,11 @@
 
     function send_mail_confirm($user_email) {
         $home_url = get_home_url();
-        $message = __( 'LogRenove Web会員登録が完了しました。' ) . "\r\n";
-        $message .= __( '登録メールアドレス：ユーザーメールアドレス' ) . "\r\n\r\n";
-        $message .= __( '※パスワードはセキュリティ上の都合によりメールでは送信しておりません。' ) . "\r\n\r\n";
-        $message .= __( 'パスワードを忘れてしまった場合は、下記のURLから再発行を行ってください。' ) . "\r\n\r\n";
-        $message .= network_site_url('password-forgot') . "\r\n\r\n";
-        $message .= __( 'LogRenoveでは、住まいに関わる様々なサービスを行っております。「リノベ3分カウンター」にご予約頂いたお客様は別途お送りしております、参加方法のご案内をご覧ください。' ) . "\r\n\r\n";
-        $message .= __( 'LogRenove' ) . "\r\n";
-        $message .= $home_url . "\r\n";
+        $template_file = 'register_confirm.txt';
+        $template = get_email_template($template_file);
+        $message = preg_replace('/{email}/', $user_email, $template);
         $title = '【LogRenove】登録完了のお知らせ';
-        $mail_result = wp_mail( $user_email, $title , $message );
+        $mail_result = send_wp_mail( $user_email, $title , $message );
     }
 
     function active_user() {
@@ -1437,6 +1432,20 @@
         );
         $context  = stream_context_create($opts);
         $result = file_get_contents($pardot_url, false, $context);
+        return $result;
+    }
+
+    function get_email_template($template_file) {
+        $template_file_url = __DIR__.'/assets/email-templates/'.$template_file;
+        $f = fopen($template_file_url, "r");
+        $data = fread($f,filesize($template_file_url));
+        fclose($f);
+        return $data;
+    }
+
+    function send_wp_mail($to, $subject, $message, $attachments = array()) {
+        $headers = array('Content-Type: text/html;');
+        $result = wp_mail($to, $subject, $message, $headers);
         return $result;
     }
 

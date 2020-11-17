@@ -54,7 +54,7 @@
                 </div>
                 <div class="login_body_bottom">
                     <div class="form-group">
-                        <a href="<?php echo $home_url; ?>/login" class="btn btn_social btn_member mb-0">ログリノベTOPへ戻る</a>
+                        <a href="<?php echo $home_url; ?>/login" class="btn btn_social btn_member mb-0">ログインページへ</a>
                     </div>
                 </div>
             <?php } else { ?>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="login_body_bottom">
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="メールアドレス" name="user_email" value="<?php echo esc_attr($user_email); ?>" size="20" autocapitalize="off">
+                        <input type="text" class="form-control" placeholder="メールアドレス" name="user_email" value="<?php echo esc_attr($user_email); ?>" size="20" autocapitalize="off">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" placeholder="パスワード（半角英数6文字以上）" name="user_password" value="<?php echo esc_attr($user_password); ?>">
@@ -76,14 +76,14 @@
                         <input type="password" class="form-control" placeholder="パスワード確認（半角英字6文字以上）" name="user_password2" value="<?php echo esc_attr($user_password2); ?>">
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="keeplogin" name="mail_magazine" value="1">
+                        <input type="checkbox" class="custom-control-input" id="keeplogin" name="mail_magazine" value="1" checked>
                         <label class="custom-control-label" for="keeplogin">週刊ログリノベを受け取る</label>
                     </div>
                     <div class="form-group mt-4">
-                        <button type="submit" class="btn btn_login" name="login_register" value="register">入力を確認</button>
+                        <button type="submit" class="btn btn_login" name="login_register" value="register">登録</button>
                     </div>
                     <?php if ($invalid && isset($_POST['login_register'])): ?>
-                        <div class="form-group text-center">
+                        <div class="form-group">
                             <label class="login_error"><?php echo $msg; ?></label>
                         </div>
                     <?php endif; ?>

@@ -1371,6 +1371,9 @@
         if (!in_array( 'subscriber', (array) $user_data->roles)) {
             if($user) {
                 setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
+                $u = new WP_User($user_data->ID);
+                $u->remove_role( 'pending' );
+                $u->add_role( 'subscriber' );
                 send_mail_confirm($user_data->user_email);
             }
         }
@@ -1390,12 +1393,7 @@
             $wp_hasher = new PasswordHash( 8, true );
         }
         $hash_is_correct = $wp_hasher->CheckPassword( $activation_code, $user_activation_code );
-        if($hash_is_correct) {
-            $u = new WP_User($user->ID);
-            $u->remove_role( 'pending' );
-            $u->add_role( 'subscriber' );
-            return true;
-        }
+        if($hash_is_correct) return true;
         else return false;
     }
 

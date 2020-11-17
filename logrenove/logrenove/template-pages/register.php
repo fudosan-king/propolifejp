@@ -54,7 +54,7 @@
                 </div>
                 <div class="login_body_bottom">
                     <div class="form-group">
-                        <a href="<?php echo $home_url; ?>" class="btn btn_social btn_member mb-0">ログリノベTOPへ戻る</a>
+                        <a href="<?php echo $home_url; ?>/login" class="btn btn_social btn_member mb-0">ログリノベTOPへ戻る</a>
                     </div>
                 </div>
             <?php } else { ?>

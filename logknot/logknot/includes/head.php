@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fitodac/bsnav@master/dist/bsnav.min.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/masterslider.main.css" />
+<link rel="preload" href="<?php echo STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/fontawesome-pro/css/all.min.css"></noscript>
 <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/styles.css" type="text/css">
 <link rel="stylesheet" href="<?php echo STYLESHEET_PATH;?>/mobile.css" type="text/css">
 

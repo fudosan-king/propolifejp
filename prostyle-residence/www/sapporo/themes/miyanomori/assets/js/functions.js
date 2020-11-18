@@ -37,6 +37,10 @@ jQuery(document).ready(function($) {
 
   $('#goSubmit').on('click', function(e) {
       e.preventDefault();
+      if(!($('.contact_item_staff:checked').length > 0)){
+         $('input[name="contact_method"]').val('');
+         $('input[name="contact_gmt[]"]').val('');
+      }
       $('form.frm_contactus').submit();
   });
 
@@ -139,7 +143,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckEmail(elem)
   {
-    var ERROR_MAIL_FORMAT = '無効な形式。';
+    var ERROR_MAIL_FORMAT = '無効な形式です';
     var isValid = true;
     var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if (!emailPattern.test(elem.val())) {
@@ -155,7 +159,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckNumber(elem)
   {
-    var ERROR_PHONE_FORMAT = '無効な形式。';
+    var ERROR_PHONE_FORMAT = '無効な形式です';
     var isValid = true;
   
     if (!$.isNumeric( elem.val() )) {
@@ -171,7 +175,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckPostalCode(elem)
   {
-    var ERROR_FORMAT = '無効な形式。';
+    var ERROR_FORMAT = '無効な形式です';
     var isValid = true;
   
     if (elem.length > 7 || !$.isNumeric(elem.val()) ) {
@@ -189,7 +193,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckInput(elem)
   {
-    var ERROR_NO_INPUT = 'この項目は必須です。';
+    var ERROR_NO_INPUT = 'この項目は必須です';
     var isValid = true;
     if(typeof(elem.val()) === 'undefined' || elem.val() == "" || elem.val() == "null"){
       callErrorMessage(elem, ERROR_NO_INPUT);
@@ -202,7 +206,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckSelect(elem)
   {
-      var ERROR_NO_INPUT = 'この項目は必須です。';
+      var ERROR_NO_INPUT = 'この項目は必須です';
       var isValid = true;
 
      if(typeof(elem.find('option:selected').val()) === 'undefined' || elem.find('option:selected').val() == "" || elem.find('option:selected').val() == "null"){
@@ -216,7 +220,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheck() {
 
-      var ERROR_NO_INPUT = 'この項目は必須です。';
+      var ERROR_NO_INPUT = 'この項目は必須です';
       var isValid = true;
       errorElements = []
       

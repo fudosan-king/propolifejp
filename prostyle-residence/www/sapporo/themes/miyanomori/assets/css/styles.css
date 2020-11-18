@@ -248,11 +248,11 @@ ul.list_global li:hover a {
     color: #000;
 }
 
-ul.list_global li:last-child a::after {
+ul.list_global li:last-child span::after {
     display: none;
 }
 
-ul.list_global li a {
+ul.list_global li span{
     font-family: "Noto Sans JP", "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
     font-size: 0.625em;
     font-weight: 600;
@@ -263,7 +263,7 @@ ul.list_global li a {
     letter-spacing: .1em;
 }
 
-ul.list_global li a::after {
+ul.list_global li span::after {
     content: '';
     position: absolute;
     right: -3px;
@@ -275,7 +275,7 @@ ul.list_global li a::after {
     background: #828282;
 }
 
-ul.list_global li.active a {
+ul.list_global li.active span {
     color: #000;
 }
 
@@ -840,14 +840,14 @@ ul.list_global li.active a {
     display: flex;
 }
 
-.spring_summer_pictures a {
+.spring_summer_pictures > span {
     position: relative;
     margin-right: 20px;
     overflow: hidden;
     display: block;
 }
 
-.spring_summer_pictures a .overlay {
+/*.spring_summer_pictures > span .overlay {
     display: block;
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -861,25 +861,25 @@ ul.list_global li.active a {
     left: 0;
     opacity: 0;
     transition: .4s ease;
-}
+}*/
 
-.spring_summer_pictures a:hover .overlay {
+/*.spring_summer_pictures > span:hover .overlay {
     opacity: 1;
     width: 100%;
     height: 100%;
-}
+}*/
 
-.spring_summer_pictures a:last-child {
+.spring_summer_pictures > span:last-child {
     margin-right: 0;
 }
 
-.spring_summer_pictures a img {
+.spring_summer_pictures > span img {
     transition: all .5s;
 }
 
-.spring_summer_pictures a:hover img {
+/*.spring_summer_pictures > span:hover img {
     transform: scale(1.2);
-}
+}*/
 
 /* section_autmun_winter */
 .section_autmun_winter {
@@ -916,13 +916,13 @@ ul.list_global li.active a {
     margin: 0;
 }
 
-.section_area_minyanomori .area_minyanomori_pictures a {
+.section_area_minyanomori .area_minyanomori_pictures > span {
     position: relative;
     overflow: hidden;
     display: block;
 }
 
-.section_area_minyanomori .area_minyanomori_pictures a .overlay {
+.section_area_minyanomori .area_minyanomori_pictures > span .overlay {
     display: block;
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -938,20 +938,20 @@ ul.list_global li.active a {
     transition: .4s ease;
 }
 
-.section_area_minyanomori .area_minyanomori_pictures a:hover .overlay {
+/*.section_area_minyanomori .area_minyanomori_pictures > span:hover .overlay {
     opacity: 1;
     width: 100%;
     height: 100%;
-}
+}*/
 
-.section_area_minyanomori .area_minyanomori_pictures a img {
+.section_area_minyanomori .area_minyanomori_pictures > span img {
     transition: all .5s;
 }
 
-.section_area_minyanomori .area_minyanomori_pictures a:hover img {
+/*.section_area_minyanomori .area_minyanomori_pictures > span:hover img {
     transform: scale(1.2);
 }
-
+*/
 .area_minyanomori_content {
     padding: 80px 0;
 }
@@ -2251,9 +2251,9 @@ footer address p {
     margin: auto;
 }
 
-.section_contactus .contactus_content .frm_contactus {
+/*.section_contactus .contactus_content .frm_contactus {
     font-family: "Noto Sans JP", "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
-}
+}*/
 
 .section_contactus .contactus_content .frm_contactus label {
     margin-bottom: 0;
@@ -2331,6 +2331,7 @@ footer address p {
     text-align: center;
     position: relative;
     margin-bottom: 60px;
+    margin-top: 40px;
 }
 
 .title_sub::after {
@@ -3151,4 +3152,8 @@ figure {
     color: #B48856;
     font-weight: 600;
     text-decoration: underline;
+}
+a.disable {
+   pointer-events: none;
+   cursor: default;
 }

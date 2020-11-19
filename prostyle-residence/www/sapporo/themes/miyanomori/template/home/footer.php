@@ -1,7 +1,7 @@
 
 <section class="section_info_contact">
     <div class="container">
-        <div class="row no-gutters">
+        <div class="row no-gutters justify-content-center">
             <div class="col-12 col-lg-4">
                 <div class="info_contact_item">
                     <p>
@@ -11,15 +11,15 @@
                     <a href="<?= home_url(); ?>/contactus" class="btn btncontactus">お問い合わせ</a>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
+<!--             <div class="col-12 col-lg-4">
                 <div class="info_contact_item">
                     <p>
-                        <i class="i_circle"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_chat.svg" alt="" class="img-fluid" width="23"></i>
+                        <i class="i_circle"><img src="<?php //bloginfo('template_directory');?>/assets/images/SVG/i_chat.svg" alt="" class="img-fluid" width="23"></i>
                     </p>
                     <h5>チャットサポート</h5>
                     <p>スタッフ受付 10:00 - 19:00</p>
                 </div>
-            </div>
+            </div> -->
             <div class="col-12 col-lg-4">
                 <div class="info_contact_item last_child">
                     <p>
@@ -41,17 +41,18 @@
     		<div class="col-12 col-lg-12">
                 <a href="#"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
                 <ul>
-                    <li><a href="<?php echo home_url('/whatsnews/'); ?>">新着情報</a></li>
-                    <li><a href="<?php echo home_url('/about/'); ?> ">PROSTYLEについて</a></li>
+                    <!-- <li><a href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
+                    <li><a href="<?= home_url('/about/'); ?> ">PROSTYLEについて</a></li>
                     <li><a href="#">利用規約</a></li>
                     <li><a href="#">反社会的勢力排除に関する基本方針</a></li>
                     <li><a href="<?= home_url('/privacy-policy/'); ?>">プライバシーポリシー</a></li>
                     <li><a href="#">ソーシャルメディアポリシー</a></li>
                 </ul>
                 
-                <ul class="mb-0">
-                    <li><a href="">【売主】 <img src="<?php bloginfo('template_directory');?>/assets/images/1x/logo_small.png" alt="" width="116"> </a></li>
-                    <li><a href="">【販売】<img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_chronicle.svg" alt="" width="120"></a></li>
+                <ul class="my-brand mb-0">
+                    <li><a href="https://www.chronicle-web.com">【販売】<img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_chronicle.svg" alt="" width="120"></a></li>
+                    <li><a href="https://www.prostyle-residence.com">【売主】 <img src="<?php bloginfo('template_directory');?>/assets/images/1x/logo_small.png" alt="" width="116"> </a></li>
+                    <li><a href="https://www.prostyle-residence.com">【販売代理】 株式会社リアント</a></li>
                 </ul>
             </div>
 		</div>

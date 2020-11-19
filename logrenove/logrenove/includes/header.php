@@ -52,10 +52,10 @@ $header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) =
                             <a href="login.php" class="btn btnSignup float-right ml-2"><i class="fas fa-sign-in-alt"></i> <span>ログイン</span></a>
                             <a href="signin.php" class="btn btnSignup float-right"><i class="fas fa-user"></i> <span>新規登録</span></a>
                         </div> -->
-                        <?php //get_template_part( 'template-parts/login', 'header' ); ?>
-                        <a href="<?php echo esc_url(network_site_url('mailmagazine')); ?>" class="btn btn_email">
+                        <?php get_template_part( 'template-parts/login', 'header' ); ?>
+                        <!-- <a href="<?php echo esc_url(network_site_url('mailmagazine')); ?>" class="btn btn_email">
                             <img src="<?=IMAGE_PATH;?>/mailmagazine/i_email.svg" alt="" class="img-fluid mr-0 mr-lg-2" width="20"><span class="d-none d-lg-inline-block">メルマガ登録</span>
-                        </a>
+                        </a> -->
                         <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>

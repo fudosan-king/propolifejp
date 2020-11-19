@@ -444,7 +444,8 @@ main {
 }
 
 .sub_page {
-	background: #fff
+	background: #fff;
+	padding-top: 0px;
 }
 
 .box_lastproducts {
@@ -1450,7 +1451,7 @@ ul.box_article_related li a {
 }
 
 .sub_underpage {
-	padding: 60px 0 97px
+	padding: 10px 0 97px
 }
 
 .box_thanks {
@@ -2015,12 +2016,12 @@ blockquote:before {
 }
 
 .login_body_top {
-	padding: 40px 65px 30px;
-	border-bottom: 1px solid rgba(204, 204, 204, .5);
+    padding: 20px 20px 20px;
+    border-bottom: 1px solid rgba(204, 204, 204, .5);
 }
 
 .login_body_bottom {
-	padding: 30px 65px 40px;
+    padding: 31px 64px 20px;
 }
 
 .frm_main_login .form-control {
@@ -2157,10 +2158,10 @@ blockquote:before {
 }
 
 .login_body_top h3 {
-	font-size: 1em;
+	font-size: 1.5em;
 	color: #000;
 	text-align: center;
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 }
 
 .termofuse {
@@ -2849,14 +2850,14 @@ ul.list_event li a.disabled {
 
 	header {
         background: #fff;
-        top: 0;
+        top: 0px;
         width: 100%;
         z-index: 100;
         transition: all .3s ease;
         box-shadow: 0 1px 25px rgba(0,0,0, .1);
     }
     main {
-        padding-top: 60px;
+        padding-top: 30px;
     }
     .nav-up {
         top: -160px;
@@ -3293,8 +3294,14 @@ ul.list_sub_cate_event li:last-child {
 .main_right .each_boxright .article_ranking.ranking-3 {
     background: #CD7B5D;
 }
+.bg-white {
+	padding-top: 0px;
+}
+.section_main {
+	padding-top: 30px;
+}
 
-.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap_not_expand {
+/*.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap_not_expand {
 	max-height: 250px;
     overflow: hidden;
 }
@@ -3307,4 +3314,131 @@ ul.list_sub_cate_event li:last-child {
 	text-align: center;
     margin-top: -25px;
     position: relative;
+}*/
+
+/*Part Register Email*/
+.register-email .login_body_top {
+    padding: 16px 36px 9px;
+}
+
+.login_body_top .text {
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: justify;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.register-email .login_body_top .form-group{
+    padding:0 29px;
+}
+
+.register-email .login_body_top label {
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 35px;
+}
+
+.register-email .login_body_top .login_error {
+    font-size: 0.875em !important;
+}
+
+.register-email .login_body_top .btn_login {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.register-email .login_body_bottom p{
+    text-align: center;   
+}
+
+.register-email .login_body_bottom .btn_member{
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 17px;
+    letter-spacing: 1px;
+}
+
+.register-pass .login_body_top {
+    padding: 47px 61px 15px;
+}
+
+.register-pass .login_body_top .text {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.go-login .login_body_top{
+    padding: 54px 40px 30px;
+}
+.go-login .login_body_top .text{
+    margin-bottom: 22px;
+} 
+.go-login .login_body_top p:nth-of-type(2){
+    margin-bottom: 33px;
+} 
+.go-login .login_body_top .form-group{
+    padding:0 23px;
+}
+.go-login .login_body_top .btn_login{
+   font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.login_body h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.login_body .cf-head {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.login_body .cf-note {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 14.32px;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #A0A0A0;
+    margin-bottom: 0;
+}
+
+.services_detail .section_cookie {
+	z-index: 200;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: auto;
+	background: #ffffffc9;
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 -3px 6px rgba(0,0,0,.24);
+	color: #fff;
+	padding: 5px 18px;
+}
+
+
+.services_detail .section_cookie a {
+	display: inline-block;
+    background: #1f1f1f;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,.2);
+    padding: 15px 40px;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
 }

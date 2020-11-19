@@ -243,29 +243,45 @@ jQuery(function($) {
         })
     });
 
-    if($('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').length > 0) {
-        var content_list_number = $('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').find('li').length;
-        if(content_list_number > 5){
-            $('.uagb-toc__list-wrap .uagb-toc__list li').hide();
-            $('.uagb-toc__list-wrap .uagb-toc__list li').slice(0,5).show();
-            var button_expand = '<div class="expand-content"><button class="btn btn-light expand-btn">Expand</button></div>';
-            $('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__wrap').addClass('uagb-toc__wrap_not_expand');
-            $('.box_article_detail .wp-block-uagb-table-of-contents').find('.uagb-toc__wrap').after(button_expand);
-            $('.expand-btn').on('click', function(){
-                var content_wrap = $('.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap');
-                if(content_wrap.hasClass('uagb-toc__wrap_not_expand')) {
-                    content_wrap.removeClass('uagb-toc__wrap_not_expand');
-                    $('.uagb-toc__list-wrap .uagb-toc__list li').show();
-                    $(this).text('Close');
-                }
-                else {
-                    $('.uagb-toc__list-wrap .uagb-toc__list li').hide();
-                    $('.uagb-toc__list-wrap .uagb-toc__list li').slice(0,5).show();
-                    content_wrap.addClass('uagb-toc__wrap_not_expand');
-                    $(this).text('Expand');
-                }
-                // $('.expand-content').remove();
-            })
-        }
+    if($(".services_detail #frm_services").length > 0)
+    {
+        $(window).scroll(function() {
+            var scrollPositionTop = $(window).scrollTop();
+            var scrollHeight = $(document).height();
+            var scrollPositionBottom = $(window).height() + $(window).scrollTop();
+            var offsetForm = $("#frm_services").offset().top;
+            var offsetButtons = $(".box_online_seminar").offset().top + $(".box_online_seminar").innerHeight();
+            if (offsetButtons < scrollPositionTop && offsetForm > scrollPositionBottom) {
+                  $('.section_cookie').fadeIn();
+            } else {
+                  $('.section_cookie').fadeOut();
+            }
+        });
     }
+
+    // if($('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').length > 0) {
+    //     var content_list_number = $('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').find('li').length;
+    //     if(content_list_number > 5){
+    //         $('.uagb-toc__list-wrap .uagb-toc__list li').hide();
+    //         $('.uagb-toc__list-wrap .uagb-toc__list li').slice(0,5).show();
+    //         var button_expand = '<div class="expand-content"><button class="btn btn-light expand-btn">Expand</button></div>';
+    //         $('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__wrap').addClass('uagb-toc__wrap_not_expand');
+    //         $('.box_article_detail .wp-block-uagb-table-of-contents').find('.uagb-toc__wrap').after(button_expand);
+    //         $('.expand-btn').on('click', function(){
+    //             var content_wrap = $('.box_article_detail .wp-block-uagb-table-of-contents > .uagb-toc__wrap');
+    //             if(content_wrap.hasClass('uagb-toc__wrap_not_expand')) {
+    //                 content_wrap.removeClass('uagb-toc__wrap_not_expand');
+    //                 $('.uagb-toc__list-wrap .uagb-toc__list li').show();
+    //                 $(this).text('Close');
+    //             }
+    //             else {
+    //                 $('.uagb-toc__list-wrap .uagb-toc__list li').hide();
+    //                 $('.uagb-toc__list-wrap .uagb-toc__list li').slice(0,5).show();
+    //                 content_wrap.addClass('uagb-toc__wrap_not_expand');
+    //                 $(this).text('Expand');
+    //             }
+    //             // $('.expand-content').remove();
+    //         })
+    //     }
+    // }
 });

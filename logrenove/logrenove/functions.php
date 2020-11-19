@@ -1138,7 +1138,7 @@
             'post_status' => 'publish',
         );
         $args_term = array();
-        if(!is_home())
+        if(!is_home() && get_post_type() != 'page')
         {
             $cat_ID = get_the_category()[0]->cat_ID;
             $args_term = array(
@@ -1152,7 +1152,6 @@
             );
             $args_post = array_merge($args_post, $args_term);
         }
-        
         $posts = get_posts($args_post);
         
         $articles_ids = array();
@@ -1175,6 +1174,280 @@
 
     # End posts ranking
 
+    # Login and register
+
+    function block_login_user_pending($login, $user) {
+        if( $user->roles && in_array('pending',(array) $user->roles)) {
+            $logout_url = esc_url(network_site_url('login'));
+            wp_destroy_current_session();
+            wp_logout();
+            wp_redirect( $logout_url, 302 );
+            exit();
+        }
+    }
+
+    add_action('wp_login', 'block_login_user_pending',10,2);
+
+    function is_member() {
+        $user = wp_get_current_user();
+        if (in_array( 'subscriber', (array) $user->roles)) return true;
+        return false;
+    }
+
+    add_action('after_setup_theme', 'remove_admin_bar');
+ 
+    function remove_admin_bar() {
+        if (is_member()) show_admin_bar(false);
+    }
+
+    function send_mail_reset_password($user_email='') {
+        $invalid = true;
+        if(empty($user_email)) {
+            $msg = '正しいメールアドレスを入力してください ';
+        }
+        else {
+            $user_data = get_user_by( 'email', $user_email  );
+            if(!$user_data) {
+                $msg = '正しいメールアドレスを入力してください';
+            }
+            else {
+                $user_login = $user_data->user_login;
+                $user_email = $user_data->user_email;
+                $key        = get_password_reset_key( $user_data );
+
+                $message = __( 'パスワード再発行申請を受け付けました。' ) . "\r\n";
+                $message .= __( '以下のURLにアクセスして、新しいパスワードを設定してください。' ) . "\r\n";
+                $message .= '【' . network_site_url( "password-forgot?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . "】\r\n";
+                $message .= __( 'LogRenove' ) . "\r\n";
+                $message .= $home_url . "\r\n";
+                $title = '【LogRenove】パスワードの再発行';
+                // var_dump($key);
+                $mail_result = wp_mail( $user_email, $title , $message );
+                $invalid = false;
+            }
+        }
+        return array('invalid'=> $invalid, 'msg'=> $msg);
+    }
+
+    function verify_reset_password() {
+        global $wp;
+        $invalid = true;
+        $msg = '';
+        $rp_key = isset($_GET['key'])?$_GET['key']:'';
+        $rp_login = isset($_GET['login'])?$_GET['login']:'';
+        list( $rp_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
+        $rp_cookie       = 'wp-resetpass-' . COOKIEHASH;
+        if ( isset( $_GET['key'] ) ) {
+            $value = sprintf( '%s:%s', wp_unslash( $_GET['login'] ), wp_unslash( $_GET['key'] ) );
+            setcookie( $rp_cookie, $value, 0, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
+
+            wp_safe_redirect( remove_query_arg( array( 'key', 'login' ) ) );
+            exit;
+        }
+        if ( isset( $_COOKIE[ $rp_cookie ] ) && 0 < strpos( $_COOKIE[ $rp_cookie ], ':' ) ) {
+            list( $rp_login, $rp_key ) = explode( ':', wp_unslash( $_COOKIE[ $rp_cookie ] ), 2 );
+
+            $user = check_password_reset_key( $rp_key, $rp_login );
+        } else {
+            $user = false;
+        }
+
+        if ( ! $user || is_wp_error( $user ) ) {
+            setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
+
+            if ( $user && $user->get_error_code() === 'expired_key' ) {
+                wp_redirect( site_url( 'password-forgot?error=expiredkey' ) );
+            } else {
+                wp_redirect( site_url( 'password-forgot?error=invalidkey' ) );
+            }
+
+            exit;
+        }
+        if($user) {
+            if(isset($_POST['pass1']) && isset($_POST['pass2'])) {
+                if($_POST['pass1'] == '') wp_redirect( site_url( 'password-forgot?action=rp&error=passempty' ) );
+                elseif(strlen($_POST['pass1']) < 6) wp_redirect( site_url( 'password-forgot?action=rp&error=passmin6' ) );
+                elseif(jpn_zenkaku_only($_POST['pass1'])) wp_redirect( site_url( 'password-forgot?action=rp&error=passhalfwidth' ) );
+                elseif($_POST['pass1'] != $_POST['pass2']) wp_redirect( site_url( 'password-forgot?action=rp&error=passnotmatch' ) );
+                else {
+                    reset_password( $user, $_POST['pass1'] );
+                    setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
+                    wp_redirect( site_url( 'password-forgot?action=finish' ) );
+                }
+                exit;
+            }
+        }
+    }
+
+    function signup_user($user_email='', $pass1='', $pass2='', $direct_url = 'signup?action=confirm') {
+        $invalid = true;
+        $msg = '';
+        $home_url = get_home_url();
+        $mail_magazine = isset($_POST['mail_magazine']) ? filter_var($_POST['mail_magazine'], FILTER_VALIDATE_BOOLEAN)  : false ;
+        if($user_email == '' || !filter_var($user_email, FILTER_VALIDATE_EMAIL)) $msg = '正しいメールアドレスを入力してください';
+        elseif($pass1 == '') $msg = '正しいパスワードを入力してください';
+        elseif(strlen($pass1) < 6) $msg = '正しいパスワードを入力してください';
+        elseif(jpn_zenkaku_only($pass1)) $msg = '半角文字のパスワード';
+        elseif($pass1 != $pass2) $msg = 'パスワードが一致しません';
+        else {
+            $isExisted = email_exists( $user_email );
+            if(!$isExisted){
+                $invalid = false;
+                $user_id = wp_create_user($user_email, $pass1, $user_email);
+                if($user_id) {
+                    send_activation_link($user_id, $user_email);
+                    if($mail_magazine) {
+                        $pardot_data = array();
+                        $pardot_data['email'] = $user_email;
+                        $pardot_data['mail_magazine'] = 1;
+                        $pardot_url = 'http://go.pardot.com/l/185822/2020-11-12/qpj6kj';
+                        send_pardot_form($pardot_url, $pardot_data);
+                    }
+                }
+                wp_redirect(site_url($direct_url));
+                exit;
+            } else $msg = 'このメールアドレスは既に登録済みです';
+        }
+        return array('invalid'=> $invalid, 'msg'=> $msg);
+    }
+
+    function send_activation_link($user_id, $user_email, $link_active = 'signup?action=active'){
+        global $wp_hasher;
+        $key = wp_generate_password( 20, false );
+        if ( empty( $wp_hasher ) ) {
+            require_once ABSPATH . WPINC . '/class-phpass.php';
+            $wp_hasher = new PasswordHash( 8, true );
+        }
+        $hashed = $wp_hasher->HashPassword( $key );
+        add_user_meta( $user_id, 'activation_code', $hashed );
+        $user_info = get_userdata($user_id);
+        $user_login = $user_info->user_login;
+        $home_url = get_home_url();
+        $message = __( '※このメールにお心当たりのない場合は、URLにアクセスせずメールを破棄してください。' ) . "\r\n\r\n";
+        $message .= __( 'この度は、LogRenove Web会員にご登録いただきありがとうございます。' ) . "\r\n";
+        $message .= __( '登録はまだ完了しておりません。 以下のURLに接続して、本登録をおこなってください。' ) . "\r\n\r\n";
+        $message .= '【' . network_site_url($link_active.'&activation_code='.$key.'&login='.rawurlencode($user_login), 'activation_link' ) . "】\r\n\r\n";
+        $message .= __( '※URLが改行されてしまう場合は、1行につなげてブラウザのアドレスバーにご入力ください。' ) . "\r\n\r\n";
+        $message .= __( 'LogRenove' ) . "\r\n";
+        $message .= $home_url . "\r\n";
+        $title = '【LogRenove】本登録のお願い';
+        $mail_result = wp_mail( $user_email, $title , $message );
+    }
+
+    function send_mail_confirm($user_email) {
+        $home_url = get_home_url();
+        $template_file = 'register_confirm.txt';
+        $template = get_email_template($template_file);
+        $message = preg_replace('/{email}/', $user_email, $template);
+        $title = '【LogRenove】登録完了のお知らせ';
+        $mail_result = send_wp_mail( $user_email, $title , $message );
+    }
+
+    function active_user() {
+        $activation_code = isset($_GET['activation_code'])?$_GET['activation_code']:'';
+        $login = isset($_GET['login'])?$_GET['login']:'';
+        list( $rp_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
+        $rp_cookie       = 'wp-activation-' . COOKIEHASH;
+        if ( isset( $_GET['activation_code'] ) ) {
+            $value = sprintf( '%s:%s', wp_unslash( $_GET['login'] ), wp_unslash( $_GET['activation_code'] ) );
+            setcookie( $rp_cookie, $value, 0, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
+
+            wp_safe_redirect( remove_query_arg( array( 'activation_code', 'login' ) ) );
+            exit;
+        }
+        if ( isset( $_COOKIE[ $rp_cookie ] ) && 0 < strpos( $_COOKIE[ $rp_cookie ], ':' ) ) {
+            list( $login, $activation_code ) = explode( ':', wp_unslash( $_COOKIE[ $rp_cookie ] ), 2 );
+
+            $user = check_activation_code( $activation_code, $login );
+        } else {
+            $user = false;
+        }
+        $user_data = get_user_by( 'login', $login );
+        if (!in_array( 'subscriber', (array) $user_data->roles)) {
+            if($user) {
+                setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
+                $u = new WP_User($user_data->ID);
+                $u->remove_role( 'pending' );
+                $u->add_role( 'subscriber' );
+                send_mail_confirm($user_data->user_email);
+            }
+        }
+    }
+
+    function check_activation_code($activation_code, $login) {
+        global $wp_hasher;
+        $activation_code = preg_replace( '/[^a-z0-9]/i', '', $activation_code );
+        $user = get_user_by( 'login', $login );
+        $user_meta = get_user_meta($user->ID);
+        if ( ! $user ) {
+            return new WP_Error( 'invalid_key', __( 'Invalid key.' ) );
+        }
+        $user_activation_code = $user_meta['activation_code'][0];
+        if ( empty( $wp_hasher ) ) {
+            require_once ABSPATH . WPINC . '/class-phpass.php';
+            $wp_hasher = new PasswordHash( 8, true );
+        }
+        $hash_is_correct = $wp_hasher->CheckPassword( $activation_code, $user_activation_code );
+        if($hash_is_correct) return true;
+        else return false;
+    }
+
+    # Check full-width
+    function jpn_zenkaku_only($str) {
+
+        $encoding = "UTF-8";
+        
+        // Get length of string
+        $len = mb_strlen($str, $encoding);
+
+                
+        // Check each character 
+        for ($i = 0; $i < $len; $i++) {
+            $char = mb_substr($str, $i, 1, $encoding);
+        
+            // Check for non-printable characters
+            if (ctype_print($char)) {
+                return false;
+            } else return true;
+                    
+            // Convert to SHIFT-JIS to include kana characters
+            $char = mb_convert_encoding($char, 'SJIS', $encoding);
+        
+            // Check if string lengths match
+            if (strlen($char) === mb_strlen($char, 'SJIS')) {
+                return false;
+            } else return true;
+        }
+    }
+
+    function send_pardot_form($pardot_url, $pardot_data) {
+        $data = http_build_query($pardot_data);
+        $opts = array('http' =>
+            array(
+                'method'  => 'POST',
+                'header'  => 'Content-Type: application/x-www-form-urlencoded',
+                'content' => $data
+            ),
+            'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+        );
+        $context  = stream_context_create($opts);
+        $result = file_get_contents($pardot_url, false, $context);
+        return $result;
+    }
+
+    function get_email_template($template_file) {
+        $template_file_url = __DIR__.'/assets/email-templates/'.$template_file;
+        $f = fopen($template_file_url, "r");
+        $data = fread($f,filesize($template_file_url));
+        fclose($f);
+        return $data;
+    }
+
+    function send_wp_mail($to, $subject, $message, $attachments = array()) {
+        $headers = array('Content-Type: text/html;');
+        $result = wp_mail($to, $subject, $message, $headers);
+        return $result;
+    }
 
     # Customize social login
 

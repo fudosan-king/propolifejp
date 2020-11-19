@@ -38,6 +38,9 @@
 }
 
 @media (max-width: 768px) {
+	.bg-fit {
+	    height: 500px !important;
+	}
 	.bsnav-mobile {
 		display: block;
 	}
@@ -114,7 +117,7 @@
 		padding-right: 30px;
 	}
 	.section_banner {
-		padding-top: 67px;
+		padding-top: 50px;
 	}
 	.frm_booking label {
 		font-size: 11px;

@@ -39,8 +39,11 @@
 <section class="section_banner">
 	<div class="owl-carousel owl-theme owl_banner <?=$currentLanguage;?>">
 		<div class="item">
-			<?php _generateTag_image($data->pc_image, 'd-none d-md-block'); ?>
-			<?php _generateTag_image($data->sp_image, 'd-block d-md-none'); ?>
+
+			<div class="w-100 d-none d-md-block" style="background: url(<?php echo $data->pc_image->url; ?>); height: 719px; background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+
+			<div class="w-100 d-block d-md-none" style="background: url(<?php echo $data->pc_image->url; ?>); height: 560px; background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+
 			<div class="caption">
 				<div class="caption_content <?=$currentLanguage;?>">
 					<?php _echo($data->caption); ?>
@@ -48,20 +51,17 @@
 				<!-- <div class="box_notice"> -->
             		<?php //echo $noticeContent; ?>
             	<!-- </div> -->
-				<a  class="banner_goto_asakusa " href="#"  ><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_prostyle.jpg" data-tripla-booking-widget='search' alt='Search'></a>
+				<!-- <a  class="banner_goto_asakusa " href="#"  ><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_prostyle.jpg" data-tripla-booking-widget='search' alt='Search'></a> -->
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="section_note">
-    <div class="container">
+<section class="section_note py-1">
+<!--     <div class="container">
         <div class="row">
             <div class="col-12">
-            	<div class="wrap_note">
-	            	<!-- <div class="box_note mb-5">
-		            	<?php //echo $noticeContent; ?>
-	            	</div> -->
+            	<div class="wrap_note">           	
 	            	<p class="mb-4 d-block d-md-none" ><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="Search" data-tripla-booking-widget="search" class="img-fluid"></p>
 	            	<p class="mb-4 d-none d-md-block" ><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="Search" data-tripla-booking-widget="search" class="img-fluid"></p>
 	            	<div class="box_note">
@@ -76,5 +76,5 @@
 	            </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>

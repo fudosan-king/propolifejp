@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-12">
-                <a href="architectural_design.php" class="box_designsupervision d-none d-lg-block" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+                <a href="<?= home_url('interview-kengo-kuma'); ?>" class="box_designsupervision d-none d-lg-block" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
                     <div class="row no-gutters">
                         <div class="col-12 col-lg-8 align-self-center">
                             <div class="box_designsupervision_content">
@@ -37,7 +37,7 @@
     <div class="scroll_down">
         <a href="#section_living" data-scroll class="scroll_title">Scroll</a>
     </div>
-    <div class="news news_afterlogin">
+<!--     <div class="news news_afterlogin">
         <div class="row">
             <div class="col-12 col-lg-2 align-self-center">
                 <h2>新着情報</h2>
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 <section id="section_living" class="section_living">
         <div class="container">
@@ -226,7 +226,7 @@
                         <h4>PROFILE</h4>
                         <p>建築家、東京大学特別教授。東京五輪で見た丹下健三の代々木屋内競技場に衝撃を受け、幼少期より建築家を目指す。<br>
                             大学では、原広司、内田祥哉に師事し、大学院時代にアフリカのサハラ砂漠を横断。集落の美と力にめざめる。コロンビア大学客員研究員を経て、1990 年隈研吾建築都市設計事務所を設立。これまで 20か国超の国々で建築を設計し、国内外の受賞歴多数。その土地の環境、文化に溶け込む建築を目指し、ヒューマンスケールのやさしく、やわらかなデザインを提案。また、コンクリートや鉄に代わる新しい素材の探求を通じて、工業化社会の後の建築のあり方を追求している。</p>
-                        <a href="#" class="btn-link">隈研吾建築都市設計事務所</a>
+                        <a href="https://kkaa.co.jp" class="btn-link">隈研吾建築都市設計事務所</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">

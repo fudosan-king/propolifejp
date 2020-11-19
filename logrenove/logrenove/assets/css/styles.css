@@ -3415,7 +3415,8 @@ ul.list_sub_cate_event li:last-child {
     margin-bottom: 0;
 }
 
-.services_detail .section_cookie {
+/* #7604 Hidden */
+/*.services_detail .section_cookie {
 	z-index: 200;
 	position: fixed;
 	bottom: 0;
@@ -3442,3 +3443,4 @@ ul.list_sub_cate_event li:last-child {
     cursor: pointer;
     text-decoration: none;
 }
+*/

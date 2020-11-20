@@ -12,7 +12,7 @@ Template Post Type: page
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-12 text-center">
-                        <h2 class="title">THANK YOU</h2>
+                        <h2 class="title" style="margin-top: 50px;">THANK YOU</h2>
                         <div class="box_thanks">
                             <h4>お問い合わせありがとうございました。</h4>
                             <p class="text-center">

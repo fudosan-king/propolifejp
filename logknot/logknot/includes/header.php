@@ -32,6 +32,6 @@
                 </ul>
             </div>
         </div>
-        <a href="#" class="btn btn_menu navbar-toggler "><span>menu</span></a>
+        <a href="javascript:void(0)" class="btn btn_menu navbar-toggler "><span>menu</span></a>
     </div>
 </header>

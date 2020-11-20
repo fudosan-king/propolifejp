@@ -464,3 +464,22 @@ section.section_contact {
 .news_content_img img {
   width: 100%;
 }
+.list_social{
+  margin: auto;
+  padding: 5px;
+}
+
+.list_social a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    width: 34px;
+    height: 34px;
+    border-radius: 100px;
+    border: 2px solid #3091b3;
+    color: #39529a;
+    text-align: center;
+}

@@ -153,6 +153,10 @@ a:hover {
 .alignleft {text-align: left;}
 .alignrigh {text-align: right;}
 
+.wp-block-image {
+	width: 100%;
+}
+
 .form-control:focus {
 	box-shadow: none
 }

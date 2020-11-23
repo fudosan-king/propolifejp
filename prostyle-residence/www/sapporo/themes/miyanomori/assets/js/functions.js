@@ -359,12 +359,14 @@ jQuery(document).ready(function($) {
               if(date.getTime() <= (new Date()).getTime() )
                   return false;
 
-              if (date.getDay() == 3 || date.getDay() == 0)
+              if (date.getDay() == 2 || date.getDay() == 3){
+                if(data &&  data[date.getFullYear()][(date.getMonth() + 1)]){
+                  if(data[date.getFullYear()][(date.getMonth() + 1)].indexOf(date.getDate()) != -1){
+                    return true;
+                  }
                   return false;
-
-              if(data &&  data[date.getFullYear()][(date.getMonth() + 1)]){
-                if(data[date.getFullYear()][(date.getMonth() + 1)].indexOf(date.getDate()) != -1)
-                  return false;
+                }
+                return false;
               }
               
               return true;

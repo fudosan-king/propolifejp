@@ -129,7 +129,11 @@ $(function($) {
         return isValid;
     }
 
-
+    $('.bsnav-mobile .navbar').bind('DOMNodeInserted DOMNodeRemoved', function(event) {
+        $('.bsnav-mobile .nav-link').click(function(event) {
+            $('.btn_menu.navbar-toggler').click();
+        });
+    });
 });
 
 $(function($) {

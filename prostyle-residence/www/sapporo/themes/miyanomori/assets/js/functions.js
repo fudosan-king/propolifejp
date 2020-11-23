@@ -40,6 +40,15 @@ jQuery(document).ready(function($) {
       if(!($('.contact_item_staff:checked').length > 0)){
          $('input[name="contact_method"]').val('');
          $('input[name="contact_gmt[]"]').val('');
+      }else{
+        var data =  $('input[name="contact_gmt[]"]');
+        var val = '';
+
+        $.each(data, function(key, value) {
+          val = val + ' ' +value.value+',';
+        });
+
+        $('input[name="contact_gmt_text"]').val(val);
       }
       $('form.frm_contactus').submit();
   });

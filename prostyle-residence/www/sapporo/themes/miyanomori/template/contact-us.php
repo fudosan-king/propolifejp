@@ -28,7 +28,7 @@ Template Post Type: page
                                         <label for="" class="label_required" >メールアドレス<span class="red">（※）</span></label>
                                     </div>
                                     <div class="col-12 col-lg-9 align-self-center">
-                                        <input type="text" class="form-control required" placeholder="例：xxxxxxx@logrenove.jp" name="email">
+                                        <input type="text" class="form-control required" placeholder="例：xxxxxxx@miyanomori.jp" name="email">
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +246,7 @@ Template Post Type: page
                                                             <div class="row"> -->
                                                                 <div class="col-12 col-lg-5 pb-3">
                                                                     <div class="box_datetime">
-                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_1">
+                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_1" readonly>
                                                                         <i class="i_datetime"></i>
                                                                     </div>
                                                                 </div>
@@ -262,7 +262,6 @@ Template Post Type: page
                                                                         <option value="16:00">16:00</option>
                                                                         <option value="17:00">17:00</option>
                                                                         <option value="18:00">18:00</option>
-                                                                        <option value="19:00">19:00</option>
                                                                     </select>
                                                                 </div>
                                                        <!--      </div>
@@ -276,7 +275,7 @@ Template Post Type: page
                                                             <!-- <div class="row"> -->
                                                                 <div class="col-12 col-lg-5 pb-3">
                                                                     <div class="box_datetime">
-                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_2">
+                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_2" readonly>
                                                                         <i class="i_datetime"></i>
                                                                     </div>
                                                                 </div>
@@ -292,8 +291,6 @@ Template Post Type: page
                                                                         <option value="16:00">16:00</option>
                                                                         <option value="17:00">17:00</option>
                                                                         <option value="18:00">18:00</option>
-                                                                        <option value="19:00">19:00</option>
-                                                                        <option value="20:00">20:00</option>
                                                                     </select>
                                                                 </div>
                                                             <!-- </div> -->
@@ -347,6 +344,7 @@ Template Post Type: page
                                     <div class="row">
                                         <div class="col-12 col-lg-3">
                                             <label for="" class="label_required" >ご希望の連絡時間帯<span class="red">（※）</span></label>
+                                            <input type="hidden"  name="contact_gmt_text" value="">
                                         </div>
                                         <div class="col-12 col-lg-9">
                                             <div class="custom-control custom-checkbox">
@@ -358,7 +356,7 @@ Template Post Type: page
                                                 <label class="custom-control-label" for="customCheck10">平日の日中（10時～18時）</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck11" name="contact_gmt[]" value="平日の夜間（18時～21時">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck11" name="contact_gmt[]" value="平日の夜間（18時～21時) ">
                                                 <label class="custom-control-label" for="customCheck11">平日の夜間（18時～21時）</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">

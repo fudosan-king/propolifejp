@@ -18,6 +18,11 @@
     define('EVENTS_IMAGE_PATH', EVENTS_PATH . '/images');
     define('EVENTS_FAVICON_PATH', EVENTS_PATH . '/favicon');
 
+    define('COUNTER_PATH', ASSETS_PATH . '/counter');
+    define('COUNTER_STYLESHEET_PATH', COUNTER_PATH . '/css');
+    define('COUNTER_SCRIPT_PATH', COUNTER_PATH . '/js');
+    define('COUNTER_IMAGE_PATH', COUNTER_PATH . '/images');
+
 
     $header_posts = null;
     $header_ids = null;
@@ -1448,6 +1453,51 @@
         $result = wp_mail($to, $subject, $message, $headers);
         return $result;
     }
+
+    # Counter Avatar
+
+    function send_pardot_avatar($status=''){
+        $pardot_data['date'] = isset($_POST['date'])?$_POST['date']:'';
+        $pardot_data['time'] = isset($_POST['time'])?$_POST['time']:'';
+        if (is_user_logged_in()){
+            $user = wp_get_current_user();
+            $pardot_data['email'] = $user->user_email;
+            $pardot_url = 'https://go.pardot.com/l/185822/2020-11-12/qpj5x8';
+        }
+        else {
+            $email = isset($_POST['email'])?$_POST['email']:'';
+            $pardot_data['email'] = $email;
+        }
+        $result = send_pardot_form($pardot_url, $pardot_data);
+        $direct_url = 'booking-completed';
+        if($status!='') $direct_url .= '?status='.$status;
+        if($result) wp_redirect(site_url($direct_url));exit;
+    }
+
+    // add_action('wp_ajax_user_login_ajax_avatar', 'user_login_ajax_avatar');
+
+    // function user_login_ajax_avatar() {
+    //     $valid = true;
+    //     $element_name = '';
+    //     $user_email = isset($_POST['user_email'])?$_POST['user_email']:'';
+    //     $user_password = isset($_POST['user_password'])?$_POST['user_password']:'';
+    //     if(!empty($user_email)){
+    //         $user = get_user_by( 'email', $user_email  );
+    //         $auth = wp_check_password( $user_password, $user->user_pass, $user->ID );
+    //         if($auth){
+    //             $creds = array(
+    //                 'user_login'    => $user->user_login,
+    //                 'user_password' => $user_password,
+    //             );
+    //             $user_ = wp_signon( $creds, false );
+    //             $error = !empty($user_->errors)?$user_->errors:false;
+    //             if($error) {
+    //                 $valid = false;
+    //                 $result['']
+    //             }
+    //         }
+    //     }
+    // }
 
     # Customize social login
 

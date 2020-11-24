@@ -46,7 +46,7 @@
                     </div>
                 </div>
             <?php } elseif(isset($_GET['action']) && $_GET['action']=='active') { ?>
-                <div class="login_body_top">
+                <!-- <div class="login_body_top">
                     <h2>会員登録が完了しました</h2>
                     <p class="cf-head">ご登録メールアドレス宛に「会員登録完了のお知らせ」をお送りしました。</p>
                     <p class="cf-note">※メールが届くまで、数分かかる場合がございます。<br>
@@ -55,6 +55,18 @@
                 <div class="login_body_bottom">
                     <div class="form-group">
                         <a href="<?php echo $home_url; ?>/login" class="btn btn_social btn_member mb-0">ログインページへ</a>
+                    </div>
+                </div> -->
+                <div class="register-complete">
+                    <div class="login_body_top">
+                        <p class="text">会員登録が完了しました</p>
+                        <p class="img">
+                            <img src="<?php echo IMAGE_PATH; ?>/register-complete.png" class="hide-mobile img-fluid" alt="" title="">
+                           <img src="<?php echo IMAGE_PATH; ?>/parts/2x/register-complete.png" class="hide-pc show-mobile img-fluid" alt="" title="">
+                        </p>
+                        <div class="form-group mt-4">
+                            <a href="<?php echo $home_url; ?>/login" class="btn btn_social btn_member mb-0">ログインページへ</a>
+                        </div>
                     </div>
                 </div>
             <?php } else { ?>

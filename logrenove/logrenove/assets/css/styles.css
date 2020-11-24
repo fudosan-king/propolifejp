@@ -3254,6 +3254,11 @@ ul.list_sub_cate_event li:last-child {
         margin-right: -15px;
         margin-top: 30px;
     }
+
+    /* Register Complete */
+    .register-complete .login_body_top p.text {
+        margin-bottom: 35px;
+    }
 }
 
 @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
@@ -3446,5 +3451,15 @@ ul.list_sub_cate_event li:last-child {
     line-height: 1;
     cursor: pointer;
     text-decoration: none;
+} */
+
+/* Register Complete */
+.register-complete .login_body_top p.text {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 29px;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
-*/

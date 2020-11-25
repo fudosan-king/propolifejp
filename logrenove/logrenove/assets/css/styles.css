@@ -149,9 +149,9 @@ a:hover {
 }
 
 .alignnone {text-align: justify-all;}
-.aligncenter {text-align: center;}
+.aligncenter {text-align: center; margin: auto;}
 .alignleft {text-align: left;}
-.alignrigh {text-align: right;}
+.alignright {text-align: right; margin-left: auto;}
 
 .wp-block-image {
 	width: 100%;

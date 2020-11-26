@@ -23,6 +23,34 @@
 }
 
 @media (max-width: 992px) {
+    .service-lp .navbar-brand {
+        margin-left: 12px;
+    }
+
+    .service-lp .navbar {
+        padding: 28px 0 10px;
+    }
+
+    .service-lp .navbar .navbar-brand {
+        margin-bottom: 10px;
+    }
+
+    .service-lp .navbar button {
+        margin-bottom: 10px;
+    }
+
+    .service-lp .navbar ul li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .service-lp .navbar ul li:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .service-lp .navbar ul li.active a {
+        text-decoration: none;
+    }
+
     .service-lp .navbar-toggler {
         display: block;
     }
@@ -57,7 +85,7 @@
     }
 
     .booking-success-menu .btn-box {
-        width: calc( 100% - 192px);
+        width: calc( 100% - 322px);
     }
 }
 
@@ -68,6 +96,11 @@
 
     .hide-pc {
         display: none;
+    }
+
+    .operation-lp .step .btn-lp-sm-turquoise.custom-w {
+        display: block;
+        padding-top: 2px;
     }
 }
 
@@ -102,7 +135,7 @@
     }
 
     .service-lp .navbar {
-        padding: 28px 15px;
+        padding: 28px 0 10px;
     }
 
     .service-lp_slides .col-left {
@@ -153,7 +186,6 @@
     }
 
     .service-lp_slides .slide_reception .reception {
-        max-width: 180px;
         margin: 0 auto;
     }
 
@@ -203,6 +235,10 @@
         padding-bottom: 30px;
     }
 
+    .operation-lp .row .col-md-3 {
+        flex: 0 0 100%;
+    }
+
     .operation-lp .row .col-12.col-md-5 {
         padding: 0 23px;
         margin-bottom: 25px;
@@ -238,6 +274,16 @@
         margin-left: 0;
     }
 
+    .operation-lp .step .btn-lp-sm-turquoise.custom-w {
+        max-width: 280px;
+        display: flex;
+        padding-top: 6px;
+    }
+
+    .operation-lp .step .btn-lp-sm-turquoise span.custom-span {
+        margin-left: 0;
+    }
+
     .operation-lp .step .width-step {
         max-width: 100%;
     }
@@ -261,7 +307,7 @@
     .operation-lp .step .width-text {
         padding-left: 55px;
         padding-right: 15px;
-        max-width: 280px;
+        max-width: 320px;
         flex: 0 0 100%;
     }
 
@@ -433,6 +479,10 @@
 
     .booking-confirm .btn-lp-turquoise .circle-arrow-right {
         right: 24px;
+    }
+  /* Register Complete */
+    .register-complete .login_body_top p.text {
+        margin-bottom: 35px;
     }
 }
 

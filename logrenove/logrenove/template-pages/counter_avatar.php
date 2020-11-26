@@ -18,6 +18,9 @@
 					<p>素敵なお部屋作りをサポートいたします。<br>
 					リノベーションやリフォームに興味を持って<br>
 					いただけたらぜひご相談ください。</p>
+					<!-- THÊM -->
+					<p class="small-img hide-mobile"><img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/cirkle-slide-reception.png" alt="" title=""></p>
+					<!-- END -->
 					<p class="slide_note">バーチャルリノベプランナー：<span>リノさん</span></p>
 				</div>	
 			</div>
@@ -29,17 +32,22 @@
 		</div>
 		<div class="slide_reception">
 			<div class="reception">
-				<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-reception.png" alt="" title="">
+				<!-- THAY THẾ -->
+				<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-reception.png" alt="" title="">
+				<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/lp-reception.png" alt="" title="">
+				<!-- END -->
+				<?php if($user_logged_in) { ?>
+			    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+			    		今すぐ相談予約
+			    		<i class="chevron-right"></i>
+			    	</a>
+			    <?php } else { ?>
+			    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
+			    		会員登録して相談する
+			    		<i class="chevron-right"></i>
+			    	</a>
+			    <?php } ?>
 			</div>	
-			<?php if($user_logged_in) { ?>
-		    	<a class="btn btn-lp-turquoise" title="" href="#" rel="#form-lp">
-		    		今すぐ相談予約
-		    <?php } else { ?>
-		    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-		    		会員登録して相談する
-		    <?php } ?>
-				<i class="chevron-right"></i>
-			</a>
 		</div>
 	</div>
 </section>
@@ -48,22 +56,29 @@
 	<div class="container">
 		<h2 class="service-lp_title-en">ABOUT</h2>
 		<h2 class="service-lp_title-jp">スマートリノベ<span>カウンターとは？</span></h2>
-		<p>素敵なお住まいづくりをお手伝いする<span>バーチャルリノベプランナーです。</span></p>
+		<!-- Cập nhật lại text -->
+		<p>素敵なお住まいづくりをお手伝いする<span>リノベプランナーです。</span></p>
 		<p>リノベーションとリフォームの違いや、<span>マンション、戸建て、団地のお部屋作り、</span></p>
 		<p>中古物件探しなど、リノベーションや<span>リフォームのお悩みをご相談いただけます。</span></p>
+		<!-- End -->
 		<div class="row">
 			<div class="col-md-6">
 				<div class="about-lp_img">
-					<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-left.png" alt="" title="">
+					<!-- Cập nhật lại image -->
+					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-left.png" alt="" title="">
+					<img class="hide-pc show-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-left.png" alt="" title="">
+					<!-- End -->
 			    </div>	
 			</div>
 			<div class="col-md-6">
-				<div class="about-lp_img">
-					<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-right.png" alt="" title="">
+				<div class="about-lp_img text-right">
+					<!-- Cập nhật lại image -->
+					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-right.png" alt="" title="">
+					<img class="hide-pc show-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-right.png" alt="" title="">
+					<!-- End -->
 			    </div>	
 			</div>
 		</div>
-
 		<a class="btn btn-lp-brown">
 		あなたにあった事例や<span>間取りプランをご紹介</span>
 		</a>
@@ -102,18 +117,20 @@
 		<div class="step">
 			<div class="row">
 				<div class="col-12 col-md-3 width-step">
-					<p class="btn btn-lp-sm-turquoise">アバター選択
+					<!-- TẠI BƯỚC 2 ĐỔI TEXT ĐÂY -->
+					<p class="btn btn-lp-sm-turquoise">｢アバター｣か、<span>｢映像｣を選ぶ</span>
+					<!-- END -->
 						<span class="btn-lp-cirkle">2</span>
 					</p>
 				</div>
 				<div class="col-auto">
 					<div class="operation-lp_img">
-						<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-2.png" alt="" title="">
+						<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/operation-2.png" alt="" title="">
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
-					<p class="title">アバターを選ぶ</p>
-					<p class="des">ご予約の時間にメールで届いたリンクにアクセス。ご自身のアバターを選ぶと、リノベプランナーにお繋ぎします。</p>
+					<p class="title">アバターか映像を選ぶ</p>
+					<p class="des">ご予約の時間にメールで届いたリンクにアクセス。ご自身の映像もしくはアバターを選ぶと、リノベプランナーにお繋ぎします。</p>
 				</div>
 			</div>
 		</div>
@@ -169,7 +186,7 @@
 			</div>
 		</div>
 		<?php if($user_logged_in) { ?>
-    	<a class="btn btn-lp-turquoise" title="" href="#" rel="#form-lp">
+    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
 		今すぐ相談予約
 	    <?php } else { ?>
 	    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
@@ -233,7 +250,7 @@
 				</div>
 			</div>
 			<?php if($user_logged_in) { ?>
-	    	<a class="btn btn-lp-turquoise" title="" href="#">
+	    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
 			今すぐプランを聞いてみる
 		    <?php } else { ?>
 		    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
@@ -280,7 +297,7 @@
 				<div id="heading2" class="faq-content_box">
 					<div class="question" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
 						<span class="btn btn-cirkle">Q2</span>
-						<p>本当に匿名で相談できますか？</p>
+						<p>顔や映像を映さずに相談できますか？</p>
 						<i class="chevron-up"></i>
 					</div>
 					
@@ -288,7 +305,7 @@
 						<div class="g-answer">
 							<span>ANSWER</span>
 							<div class="answer">
-								<p>スマートリノベカウンターでお名前を伺うことはありません。お客様もカメラをオフにし、アバターで接続いただけます。ただし相談後に、個別相談会やセミナーへのご参加をご希望される場合には、今後のご連絡のためにお聞きする場合がございます。</p>
+								<p>接続時にアバターを選択していただければ、お客様のお顔や映像が映ることはありません。ご希望の場合にはプランナーが実映像でご対応することが可能です。</p>
 							</div>
 						</div>
 					</div>
@@ -339,7 +356,9 @@
 						<div class="g-answer">
 							<span>ANSWER</span>
 							<div class="answer">
-								<p>お客様の個別のご相談は、リノベコーディネーターが承ります。個別相談会へご参加くださいませ。</p>
+								<p>お客様の個別のご相談は、専門知識を有するコーディネーターが承ります。<br>
+									<a href="<?php echo site_url('events'); ?>">個別相談会</a>へご参加くださいませ。
+								</p>
 							</div>
 						</div>
 					</div>
@@ -356,7 +375,7 @@
 						<div class="g-answer">
 							<span>ANSWER</span>
 							<div class="answer">
-								<p><a href="#">LogKnot株式会社</a> が運営しています。</p>
+								<p><a href="https://www.logknot.co.jp/" target="_tbank">LogKnot株式会社</a> が運営しています。</p>
 							</div>
 						</div>
 					</div>
@@ -369,7 +388,7 @@
 
 <div class="scroll-home">
 	<?php if($user_logged_in) { ?>
-    	<a class="btn btn-lp-turquoise" title="" href="#" rel="#form-lp">
+    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
     		今すぐ相談予約
     <?php } else { ?>
     	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">

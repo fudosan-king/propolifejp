@@ -2005,7 +2005,7 @@ blockquote:before {
 }
 
 .login_page {
-	font-family: "SF Pro Display Regular", 'Noto Sans JP';
+	font-family: "SF Pro Display Regular", 'Noto Sans JP', '游ゴシック', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }
 
 .login_header {
@@ -3463,3 +3463,100 @@ ul.list_sub_cate_event li:last-child {
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
+
+.register-page .login_body_top{
+    padding: 40px 65px 30px;
+    border-bottom: none;
+    position: relative;
+}
+
+.register-page .login_body_top h3{
+    font-size: 1.5em;
+    color: #000;
+    text-align: center;
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 31px;
+}
+
+.register-page .login_body_top h3:after{
+    content: '';
+    position: absolute;
+    background: rgba(204, 204, 204, .5);
+    bottom: 0;
+    left:-11px;
+    right:-11px;
+    height:1px;
+}
+.register-page .login_body_top:after{
+    content: '';
+    position: absolute;
+    background: rgba(204, 204, 204, .5);
+    bottom: 0;
+    left:54px;
+    right:54px;
+    height:1px;
+}
+
+.register-page .form-group{
+    margin-bottom:20px;
+}
+
+.register-page .custom-control-label{
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 24px;
+    color: #000000;
+}
+.register-page .custom-control-label:before{
+    top: .1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.register-page .custom-control-label:after{
+    top: .1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.register-page .btn_login{
+    margin-bottom:43px;
+    font-weight: 600;
+}
+
+.register-page p.note{
+    font-size: 0.875rem;
+    line-height: 24px;
+    color: #333333;
+    letter-spacing: 1px;
+}
+.register-page p.note a{
+    font-weight:600;
+}
+
+.register-page .login_body_bottom{
+    padding: 40px 64px 1px;
+}
+.register-page .login_body_bottom p{
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 17px;
+    letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .register-page .login_body_top{
+        padding: 40px 20px 30px;
+    }
+    .register-page .login_body_top h3:after{
+        left:-8px;
+        right:-8px;
+    }
+    .register-page .login_body_top:after{
+        left:12px;
+        right:12px;
+    }
+    .register-page .login_body_bottom{
+        padding: 40px 20px 1px;
+    }
+}
+

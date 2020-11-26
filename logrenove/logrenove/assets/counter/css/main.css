@@ -1,11 +1,13 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: Antraste;
-    src: url(../fonts/Antraste.ttf) format("truetype");
+  src: url(../fonts/Antraste.ttf) format("truetype");
 }
 
 body.body-service-lp {
     background-color: #fff;
-    font-family: "SF Pro Display Regular", 'Noto Sans JP';
+    font-family: "SF Pro Display Regular", 'Noto Sans JP', '游ゴシック', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }
 
 .service-lp .container {
@@ -196,18 +198,17 @@ body.body-service-lp {
 
 .service-lp .navbar ul li a {
     font-weight: 500;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     line-height: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: -0.02em;
-    color: #000000;
+    color: #333942;
 }
 
 .service-lp .navbar ul li.active a {
-    text-decoration: underline;
-    margin-bottom: 10px;
+    /*text-decoration: underline;*/
 }
 
 .service-lp .navbar-brand {
@@ -249,7 +250,6 @@ body.body-service-lp {
 }
 
 .service-lp_slides .slide_text p {
-    margin-bottom: 147px;
     color: #FFFFFF;
     font-weight: 600;
     font-size: 20px;
@@ -295,6 +295,10 @@ body.body-service-lp {
 .about-lp {
     background-color: #fff;
     position: relative;
+}
+
+.about-lp .container {
+    max-width: 1055px;
 }
 
 .about-lp p {
@@ -361,9 +365,14 @@ body.body-service-lp {
     color: #fff;
     font-style: normal;
     font-weight: 600;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     line-height: 18px;
     margin-left: 5px;
+}
+
+.operation-lp .step .btn-lp-sm-turquoise span.custom-span {
+    margin-left: -15px;
+    display: block;
 }
 
 .operation-lp .step .btn-lp-sm-turquoise .btn-lp-cirkle {
@@ -535,7 +544,6 @@ body.body-service-lp {
 .faq-lp .faq-content {
     padding-top: 140px;
     padding-bottom: 30px;
-    /*margin-bottom: 30px;*/
     background-color: rgba(60, 188, 207, 0.2);
 }
 
@@ -639,8 +647,8 @@ body.body-service-lp {
 }
 
 .form-lp {
-    margin-bottom: 140px;
     margin-top: 30px;
+    margin-bottom: 140px;
 }
 
 .form-lp .small-title {
@@ -980,7 +988,7 @@ ul.list_menufooter li {
     font-size: 2.25rem;
     line-height: 36px;
     text-align: center;
-    color: #4D4D4D !important;
+    color: #4D4D4D;
     margin-bottom: 25px;
 }
 
@@ -1004,8 +1012,21 @@ ul.list_menufooter li {
     right: 46px;
 }
 
-.validate-error {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important;
-    border-color: #ff0000!important;
+/* Register Complete */
+.register-complete .login_body_top p.text {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 29px;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
 
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+    color: #c5c4c4;
+}
+
+.about-lp  .container {
+    max-width:1055px; 
+}

@@ -7,6 +7,8 @@
         if(is_page( 'service' )){
             require 'includes/js-footer2.php';
 
+        }elseif(is_page('counter')){
+            require 'includes/js-footer-counter.php';
         }else{
             require 'includes/js-footer.php';
         }

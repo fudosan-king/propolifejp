@@ -72,8 +72,15 @@ $(function($) {
         var target = $(this).attr('href');
         var offset = 0;
         if ($(this).data('offset') != undefined) offset = $(this).data('offset');
-        $.scrollTo(target, 800, { offset: - 93 });
+        $.scrollTo(target, 800, { offset: -93 });
     });
+
+    // set offset for anchor when redirect
+    var anchorLink = $(window.location.hash);
+    if ( anchorLink.length ) {
+        var offsetSize = 70;
+        $("html, body").animate({scrollTop: anchorLink.offset().top - offsetSize }, 10);
+    }
 
     $('#ibtnGoSubmit').on('click', function(e) {
         e.preventDefault();
@@ -129,23 +136,33 @@ $(function($) {
         return isValid;
     }
 
+    $('.bsnav-mobile .navbar').bind('DOMNodeInserted DOMNodeRemoved', function(event) {
+        $('.bsnav-mobile .nav-link').click(function(event) {
+            
+            $('.btn_menu.navbar-toggler').click();
+            var target = $(this).attr('href');
+            var offset = 70;
+            if ($(this).data('offset') != undefined) offset = $(this).data('offset');
+            $.scrollTo(target, 10,{ offset: -65 });
 
+        });
+    });
 });
 
 $(function($) {
 
-	$(document).ready(function() {
+    // $(document).ready(function() {
 
-        $('html,body').animate({
-          scrollTop: $(window.location.hash).offset().top-93
-        }, 800, 'swing');
+ //        $('html,body').animate({
+ //          scrollTop: $(window.location.hash).offset().top-93
+ //        }, 800, 'swing');
 
-        return $(window).scroll(function() {
-            return $(window).scrollTop() > 200 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
-        }), $("#back-to-top").click(function() {
-            return $("html,body").animate({
-                scrollTop: "0"
-            })
-        })
-    })
+ //        return $(window).scroll(function() {
+ //            return $(window).scrollTop() > 200 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
+ //        }), $("#back-to-top").click(function() {
+ //            return $("html,body").animate({
+ //                scrollTop: "0"
+ //            })
+ //        })
+ //    })
 });

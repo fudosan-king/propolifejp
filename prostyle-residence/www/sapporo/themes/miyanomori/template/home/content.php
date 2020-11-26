@@ -66,9 +66,9 @@
                 <div class="col-12 col-lg-6">
                     <div class="living_content" data-aos="fade-down" data-aos-duration="3000">
                         <ul class="list_global">
-                            <li><a href="#">PROSTYLE</a></li>
-                            <li><a href="#">MIYANOMORI</a></li>
-                            <li class="active"><a href="#">STORY</a></li>
+                            <li><span>PROSTYLE </span></li>
+                            <li><span>MIYANOMORI</span></li>
+                            <li class="active"><span>STORY</span></li>
                         </ul>
                         <h2 class="title">宮の森で暮らす、ということ。</h2>
                         <p class="subtitle">Living in the Miyanomori.</p>
@@ -94,12 +94,12 @@
                 <div class="col-12 col-lg-8">
                     <div class="spring_summer_content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                         <ul class="list_global">
-                            <li><a href="#">PROSTYLE</a></li>
-                            <li><a href="#">MIYANOMORI</a></li>
-                            <li class="active"><a href="#">LOCATION.01</a></li>
+                            <li><span>PROSTYLE</span></li>
+                            <li><span>MIYANOMORI</span></li>
+                            <li class="active"><span>LOCATION.01</span></li>
                         </ul>
                         <h2 class="title">爽やかな息吹抜ける丘の寛ぎ</h2>
-                        <p class="subtitle">Relaxation in the hills with comfortable breez.</p>
+                        <p class="subtitle">Relaxation in the hills with comfortable breeze.</p>
                         <p class="mb-0">徒歩6分の円山公園は、札幌を代表する桜の名所。<br>
                             天然記念物の原始林が迎える春の息吹は野鳥やエゾリスを包み、咲き誇る桜は瑞々しい夏の碧(みどり)へと移ろいます。<br>
                             居住地で、近隣で、鮮やかな自然と澄んだ空気を存分に愉しむ北海道の春夏は格別です。</p>
@@ -109,18 +109,18 @@
                 </div>
                 <div class="col-12">
                     <div class="spring_summer_pictures">
-                        <a href="#">
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/ss01.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="#">
+                        </span>
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/ss02.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="#">
+                        </span>
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/ss03.jpg" alt="" class="img-fluid">
-                        </a>
+                        </span>
                     </div>
                     <h3 class="seasons text-right"><img src="<?php bloginfo('template_directory');?>/assets/images/1x/spring_simmer.png" alt="" class="img-fluid"></h3>
                 </div>
@@ -135,9 +135,9 @@
                 <div class="col-12 col-lg-9">
                     <div class="autmun_winter_content" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                         <ul class="list_global">
-                            <li><a href="#">PROSTYLE</a></li>
-                            <li><a href="#">MIYANOMORI</a></li>
-                            <li class="active"><a href="#">LOCATION.02</a></li>
+                            <li><span>PROSTYLE</span></li>
+                            <li><span>MIYANOMORI</span></li>
+                            <li class="active"><span>LOCATION.02</span></li>
                         </ul>
                         <h2 class="title">皇室も愛した宮の森の冬</h2>
                         <p class="subtitle">Winter in Miyanomori, loved by the Imperial Family.</p>
@@ -148,18 +148,18 @@
                 </div>
                 <div class="col-12 col-lg-12">
                     <div class="spring_summer_pictures">
-                        <a href="#">
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/aw01.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="#">
+                        </span>
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/aw02.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="#">
+                        </span>
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/aw03.jpg" alt="" class="img-fluid">
-                        </a>
+                        </span>
                     </div>
                     <h3 class="seasons"><img src="<?php bloginfo('template_directory');?>/assets/images/1x/autumn_winter.png" alt="" class="img-fluid"></h3>
                 </div>
@@ -177,12 +177,12 @@
                     <div class="col-12 col-lg-7 align-self-center">
                         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                             <ul class="list_global">
-                                <li><a href="#">PROSTYLE</a></li>
-                                <li><a href="#">MIYANOMORI</a></li>
-                                <li class="active"><a href="#">LOCATION.03</a></li>
+                                <li><span>PROSTYLE</span></li>
+                                <li><span>MIYANOMORI</span></li>
+                                <li class="active"><span>LOCATION.03</span></li>
                             </ul>
                             <h2 class="title">四季に彩られた優美な時間を過ごす<br>上質な暮らしが、ここにあります</h2>
-                            <p class="subtitle">Winter in Miyanomori, loved by the Imperial Family.</p>
+                            <!-- <p class="subtitle">Winter in Miyanomori, loved by the Imperial Family.</p> -->
                             <p>どの季節も豊かな表情を見せる、緑に恵まれた宮の森。<br>
                                 桜の名所・円山公園や、札幌五輪で使用されたスキー場も、住まいの徒歩圏内で大自然を満喫できます。</p>
                         </div>
@@ -194,22 +194,22 @@
             <div class="row">
                 <div class="col-12 col-lg-12">
                     <div class="area_minyanomori_pictures d-flex">
-                        <a href="#">
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/area01.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="#">
+                        </span>
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/area02.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="#">
+                        </span>
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/area03.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="#">
+                        </span>
+                        <span class="item" >
                             <span class="overlay"></span>
                             <img src="<?php bloginfo('template_directory');?>/assets/images/1x/area04.jpg" alt="" class="img-fluid">
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -236,9 +236,9 @@
                                 <img src="<?php bloginfo('template_directory');?>/assets/images/1x/kengokuma.png" alt="" class="img-fluid" width="466">
                             </div>
                             <ul class="list_global">
-                                <li><a href="#">PROSTYLE</a></li>
-                                <li><a href="#">MIYANOMORI</a></li>
-                                <li class="active"><a href="#">INTERVEW/ KENGO KUMA</a></li>
+                                <li><span>PROSTYLE</span></li>
+                                <li><span>MIYANOMORI</span></li>
+                                <li class="active"><span>INTERVIEW/ KENGO KUMA</span></li>
                             </ul>
                             <h2 class="title">『home』としての<br>
                                 実感を得られる<br>

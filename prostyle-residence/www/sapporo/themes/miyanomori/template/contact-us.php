@@ -28,7 +28,7 @@ Template Post Type: page
                                         <label for="" class="label_required" >メールアドレス<span class="red">（※）</span></label>
                                     </div>
                                     <div class="col-12 col-lg-9 align-self-center">
-                                        <input type="text" class="form-control required" placeholder="例：xxxxxxx@logrenove.jp" name="email">
+                                        <input type="text" class="form-control required" placeholder="例：xxxxxxx@miyanomori.jp" name="email">
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ Template Post Type: page
                                             <div class="col-12 col-lg-6 align-self-center">
                                                 <div class="row">
                                                     <div class="col-12 col-lg-2 align-self-center">
-                                                        <label for="">性</label>
+                                                        <label for="">姓</label>
                                                     </div>
                                                     <div class="col-12 col-lg-10 align-self-center mb-2 mb-lg-0">
                                                         <input type="text" class="form-control required" placeholder="例：宮の森" name="kanji_familyname">
@@ -246,7 +246,7 @@ Template Post Type: page
                                                             <div class="row"> -->
                                                                 <div class="col-12 col-lg-5 pb-3">
                                                                     <div class="box_datetime">
-                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_1">
+                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_1" readonly>
                                                                         <i class="i_datetime"></i>
                                                                     </div>
                                                                 </div>
@@ -262,7 +262,6 @@ Template Post Type: page
                                                                         <option value="16:00">16:00</option>
                                                                         <option value="17:00">17:00</option>
                                                                         <option value="18:00">18:00</option>
-                                                                        <option value="19:00">19:00</option>
                                                                     </select>
                                                                 </div>
                                                        <!--      </div>
@@ -276,7 +275,7 @@ Template Post Type: page
                                                             <!-- <div class="row"> -->
                                                                 <div class="col-12 col-lg-5 pb-3">
                                                                     <div class="box_datetime">
-                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_2">
+                                                                        <input type="text" class="form-control datepicker" placeholder="日付を選択" name="date_meeting_2" readonly>
                                                                         <i class="i_datetime"></i>
                                                                     </div>
                                                                 </div>
@@ -292,8 +291,6 @@ Template Post Type: page
                                                                         <option value="16:00">16:00</option>
                                                                         <option value="17:00">17:00</option>
                                                                         <option value="18:00">18:00</option>
-                                                                        <option value="19:00">19:00</option>
-                                                                        <option value="20:00">20:00</option>
                                                                     </select>
                                                                 </div>
                                                             <!-- </div> -->
@@ -347,6 +344,7 @@ Template Post Type: page
                                     <div class="row">
                                         <div class="col-12 col-lg-3">
                                             <label for="" class="label_required" >ご希望の連絡時間帯<span class="red">（※）</span></label>
+                                            <input type="hidden"  name="contact_gmt_text" value="">
                                         </div>
                                         <div class="col-12 col-lg-9">
                                             <div class="custom-control custom-checkbox">
@@ -358,7 +356,7 @@ Template Post Type: page
                                                 <label class="custom-control-label" for="customCheck10">平日の日中（10時～18時）</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck11" name="contact_gmt[]" value="平日の夜間（18時～21時">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck11" name="contact_gmt[]" value="平日の夜間（18時～21時) ">
                                                 <label class="custom-control-label" for="customCheck11">平日の夜間（18時～21時）</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
@@ -421,7 +419,7 @@ Template Post Type: page
                         </form>
                         <section class="form_info  frm_confirm" style="display: none; max-width: 600px; margin:0 auto;">
                                 <!-- 会社名 -->
-                                <div class="row non-require">
+                                <div class="row non-require frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -438,7 +436,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- お名前 -->
-                                <div class="row require">
+                                <div class="row require frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -455,7 +453,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- フリガナ -->
-                                <div class="row require">
+                                <div class="row require frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -472,7 +470,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- ご住所 -->
-                                <div class="row require">
+                                <div class="row require frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -490,7 +488,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- ご連絡先電話番号 -->
-                                <div class="row require">
+                                <div class="row require frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -508,24 +506,44 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- メールアドレス -->
-                                <div class="row require section_contact_item cfrm_contact_item_document">
-                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
+                                <div class="row require section_contact_item cfrm_contact_item_document frm_confirm_item">
+                                    <div class="col-12 left-side">
                                         <div class="row">
-                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                <label for="" class="label_required">郵便番号 : </label>
+                                            <div class="ccol-12 col-sm-12 col-md-4 col-lg-4">
+                                                <label for="" class="label_required">郵便番号 :   </label>
+                                            </div>
+                                            <div class="ccol-12 col-sm-12 col-md-8 col-lg-8">
+                                                 <span class="cfrm_postal_code"> </span> 
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-8 col-md-8 col-lg-8 right-side">
+                                </div>
+                                <div class="row require section_contact_item cfrm_contact_item_document frm_confirm_item">
+                                    <div class="col-12 left-side">
                                         <div class="row">
-                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                <span class="cfrm_postal_code"> </span> / <span class="cfrm_prefecture"> </span> / <span class="cfrm_city"> </span>   
+                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                                <label for="" class="label_required">都道府県 :  </label>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                                                 <span class="cfrm_prefecture"> </span>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row require section_contact_item cfrm_contact_item_document frm_confirm_item">
+                                    <div class="col-12  left-side">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                                <label for="" class="label_required">住所 :   </label>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                                                <span class="cfrm_city"> </span> 
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- お問い合わせ項目(複数選択可) -->
-                                <div class="row require section_contact_item cfrm_contact_item_document">
+                                <div class="row require section_contact_item cfrm_contact_item_document frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -543,7 +561,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- お問い合わせ項目(複数選択可) -->
-                                <div class="row require section_contact_item cfrm_contact_item_meet">
+                                <div class="row require section_contact_item cfrm_contact_item_meet frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -563,7 +581,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- お問い合わせ内容 -->
-                                <div class="row require section_contact_item cfrm_contact_item_meet">
+                                <div class="row require section_contact_item cfrm_contact_item_meet frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -582,7 +600,7 @@ Template Post Type: page
                                 </div>
                                 
                                 <!-- お問い合わせ項目(複数選択可) -->
-                                <div class="row require section_contact_item cfrm_contact_item_staff">
+                                <div class="row require section_contact_item cfrm_contact_item_staff frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -600,7 +618,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <!-- お問い合わせ項目(複数選択可) -->
-                                <div class="row require section_contact_item cfrm_contact_item_staff">
+                                <div class="row require section_contact_item cfrm_contact_item_staff frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -618,7 +636,7 @@ Template Post Type: page
                                     </div>
                                 </div>
                                  <!-- お問い合わせ内容 -->
-                                <div class="row require section_contact_item  cfrm_contact_item_staff">
+                                <div class="row require section_contact_item  cfrm_contact_item_staff frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -637,7 +655,7 @@ Template Post Type: page
                                 </div>
 
                                 <!-- お問い合わせ内容 -->
-                                <div class="row require section_contact_item cfrm_contact_item_other">
+                                <div class="row require section_contact_item cfrm_contact_item_other frm_confirm_item">
                                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 left-side">
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">

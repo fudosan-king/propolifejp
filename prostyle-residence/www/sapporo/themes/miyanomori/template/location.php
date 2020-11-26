@@ -49,9 +49,9 @@ Template Post Type: page
                         </div>
                     </div>
                     <ul class="list_global">
-                        <li><a href="#">PROSTYLE</a></li>
-                        <li><a href="#">MIYANOMORI</a></li>
-                        <li class="active"><a href="#">LOCATION.01</a></li>
+                        <li><span>PROSTYLE</span></li>
+                        <li><span>MIYANOMORI</span></li>
+                        <li class="active"><span>LOCATION.01</span></li>
                     </ul>
                     <h2 class="title">新千年空港まで45分<br>
                         都市機能を持ち合わせた、大自然と生きる暮らし</h2>

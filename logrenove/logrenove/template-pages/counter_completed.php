@@ -4,7 +4,7 @@
 */
 ?>
 
-<?php get_header('counter'); ?>
+<?php get_header(); ?>
 
 <?php 
 $home_url = home_url();

@@ -23,8 +23,11 @@
         }
     </style>
 </head>
-
-<body <?php body_class(); ?>>
+<?php if(is_page('booking-completed')): ?>
+    <body class="body-service-lp">
+<?php else: ?>
+    <body <?php body_class(); ?>>
+<?php endif; ?>
     <?php do_action( 'body_extra_script'); ?>
     <?php if(!is_preview()): ?>
         <div class="init-overload active"></div>

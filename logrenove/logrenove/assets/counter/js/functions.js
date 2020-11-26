@@ -56,6 +56,9 @@ function logrenoveScripts() {
         $('.datepicker').datepicker({
             language: 'ja',
             startDate: date,
+            disableTouchKeyboard: true,
+            autoclose:true,
+            format: 'yyyy年mm月dd日',
         });
     }
 

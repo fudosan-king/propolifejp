@@ -1,7 +1,7 @@
 <section class="service-lp">
 	<nav class="navbar navbar-expand-lg">
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<?php echo home_url(); ?>">
       <img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/logo-logrenove-text.png" alt="logo" title="logo">
       <span></span>
     </a>

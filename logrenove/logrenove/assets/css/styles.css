@@ -3558,5 +3558,23 @@ ul.list_sub_cate_event li:last-child {
     .register-page .login_body_bottom{
         padding: 40px 20px 1px;
     }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-pc {
+        display: block;
+    }
+
+    .hide-pc {
+        display: none;
+    }
 }
 

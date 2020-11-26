@@ -354,9 +354,9 @@ body.body-service-lp {
 .operation-lp .step .btn-lp-sm-turquoise {
     margin-top: 9px;
     width: 100%;
-    max-width: 167px;
+    max-width: 180px;
     display: flex;
-    padding-left: 55px;
+    padding-left: 60px;
     align-items: center;
     position: relative;
     height: 40px;

@@ -118,7 +118,7 @@
 			<div class="row">
 				<div class="col-12 col-md-3 width-step">
 					<!-- TẠI BƯỚC 2 ĐỔI TEXT ĐÂY -->
-					<p class="btn btn-lp-sm-turquoise">｢アバター｣か、<span>｢映像｣を選ぶ</span>
+					<p class="btn btn-lp-sm-turquoise">｢アバター｣か、｢映像｣を選ぶ
 					<!-- END -->
 						<span class="btn-lp-cirkle">2</span>
 					</p>
@@ -357,7 +357,7 @@
 							<span>ANSWER</span>
 							<div class="answer">
 								<p>お客様の個別のご相談は、専門知識を有するコーディネーターが承ります。<br>
-									<a href="<?php echo site_url('events'); ?>">個別相談会</a>へご参加くださいませ。
+									<a href="https://www.logrenove.jp/events/16985/">個別相談会</a>へご参加くださいませ。
 								</p>
 							</div>
 						</div>

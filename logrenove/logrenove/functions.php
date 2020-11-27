@@ -394,7 +394,7 @@
     function myprefix_search_posts_per_page($query) {
         if ( $query->is_search() ) {
             $query->set( 'posts_per_page', get_option( 'posts_per_page' ) );
-            $query->set( 'post_type', array('post','event'));
+            // $query->set( 'post_type', array('post','event'));
         }
 
         if (  $query->is_main_query() && $query->is_home() ) {

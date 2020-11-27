@@ -37,19 +37,18 @@ jQuery(document).ready(function($) {
 
   $('#goSubmit').on('click', function(e) {
       e.preventDefault();
-      if(!($('.contact_item_staff:checked').length > 0)){
-         $('input[name="contact_method"]').val('');
-         $('input[name="contact_gmt[]"]').val('');
-      }else{
-        var data =  $('input[name="contact_gmt[]"]');
-        var val = '';
 
-        $.each(data, function(key, value) {
-          val = val + ' ' +value.value+',';
-        });
+      mergeValueChecked($('input[name="contact_item[]"]:checked'), $('input[name="contact_item_text"]') );
 
-        $('input[name="contact_gmt_text"]').val(val);
+      if($('.contact_item_staff:checked').length > 0)
+      {
+        mergeValueChecked($('input[name="contact_gmt[]"]:checked'), $('input[name="contact_gmt_text"]') );
       }
+      else
+      {
+         $('input[name="contact_method"]').val('');
+      }
+
       $('form.frm_contactus').submit();
   });
 
@@ -121,6 +120,27 @@ jQuery(document).ready(function($) {
           .replace(/"/g, "&quot;")
           .replace(/'/g, "&#039;");
   }
+
+  function mergeValueChecked(elemInput, elemOutput)
+  {
+    var val = '';
+    var dot = ''; 
+
+    $.each(elemInput, function(key, value)
+    {
+      if(val != '' )
+      {
+        dot = ',  ';
+      }
+
+      val = val+dot+value.value;
+     
+    });
+
+    elemOutput.val(val);
+
+  }
+
  // VALIDATE FORM DATA
   function callErrorMessage(elem, message){
 
@@ -149,6 +169,7 @@ jQuery(document).ready(function($) {
     var formGroup = $(elem).parents('.form-group');
     formGroup.find('.error-required').remove();
   }
+
 
   function invalidCheckEmail(elem)
   {
@@ -307,6 +328,14 @@ jQuery(document).ready(function($) {
           {
             callErrorMessage('input[name="date_meeting_1"]', ERROR_NO_INPUT);
           }
+
+          if(($('select[name="time_meeting_2"]').val() == $('select[name="time_meeting_1"]').val() ) && ($('input[name="date_meeting_2"]').val() == $('input[name="date_meeting_1"]').val()))
+          {
+            isValid = false;
+            callErrorMessage('input[name="date_meeting_1"]', '同じ日時が指定されています');
+          }
+
+          
       }
 
 

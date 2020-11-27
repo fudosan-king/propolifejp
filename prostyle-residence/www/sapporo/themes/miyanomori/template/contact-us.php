@@ -108,6 +108,7 @@ Template Post Type: page
                                 <div class="row">
                                     <div class="col-12 col-lg-3">
                                         <label for="" class="label_required">お問い合わせ事項<span class="red">（※）</span></label>
+                                        <input type="hidden"  name="contact_item_text" value="">
                                     </div>
                                     <div class="col-12 col-lg-9">
                                         <div class="custom-control custom-checkbox">
@@ -142,7 +143,7 @@ Template Post Type: page
                                                     <input type="text" class="form-control numbersOnly" name="postal_code" placeholder="例：1234567" maxlength="7" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','city', 'chome_address')" >
                                                 </div>
                                                 <div class="col-12 col-lg-6">
-                                                    <a class="btn_autozipcode" href="#"><img src="<?php bloginfo('template_url'); ?>/assets/images/SVG/i_right.svg" alt="" class="img-fluid mr-2" width="20">郵便番号から住所を自動的入力</a>
+                                                    <a class="btn_autozipcode" id="btn_autozipcode" href="javascript:void(0)" onclick="AjaxZip3.zip2addr('postal_code','','prefecture','city', 'chome_address')"><img src="<?php bloginfo('template_url'); ?>/assets/images/SVG/i_right.svg" alt="" class="img-fluid mr-2" width="20">郵便番号から住所を自動入力</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -356,7 +357,7 @@ Template Post Type: page
                                                 <label class="custom-control-label" for="customCheck10">平日の日中（10時～18時）</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck11" name="contact_gmt[]" value="平日の夜間（18時～21時) ">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck11" name="contact_gmt[]" value="平日の夜間（18時～21時）">
                                                 <label class="custom-control-label" for="customCheck11">平日の夜間（18時～21時）</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">

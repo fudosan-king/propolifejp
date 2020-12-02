@@ -405,3 +405,19 @@ body.single-post .logo_logrenove_small img {
 .fa-instagram {
     color: white;
 }
+
+@media (min-width:992px){
+    .single-events .section_breakcrumb .container{
+        max-width: 800px;
+    }
+
+    .section_events .container{
+        max-width: 800px;
+    }
+    .section_events .services_detail_content{
+        padding: 10px 30px 0;
+    }
+}
+
+
+

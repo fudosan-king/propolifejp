@@ -3425,7 +3425,7 @@ ul.list_sub_cate_event li:last-child {
 }
 
 /* #7604 Hidden */
-/*.services_detail .section_cookie {
+.services_detail .section_cookie {
 	z-index: 200;
 	position: fixed;
 	bottom: 0;
@@ -3437,21 +3437,21 @@ ul.list_sub_cate_event li:last-child {
 	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 	box-shadow: 0 -3px 6px rgba(0,0,0,.24);
 	color: #fff;
-	padding: 5px 18px;
+	padding: 15px 18px;
 }
 
 
 .services_detail .section_cookie a {
 	display: inline-block;
-    background: #1f1f1f;
+    background: #AD814D;
     border-radius: 4px;
     color: #fff;
     box-shadow: 0 4px 4px rgba(0,0,0,.2);
-    padding: 15px 40px;
     line-height: 1;
     cursor: pointer;
     text-decoration: none;
-} */
+    margin: 4px;
+} 
 
 /* Register Complete */
 .register-complete .login_body_top p.text {

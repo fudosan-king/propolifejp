@@ -71,16 +71,19 @@ if(have_posts()):
                         <div class="col-12 col-md-6 align-self-center text-center">
                             <div class="box_follow mt-4 mt-md-0">
                                 <p class="mb-2">LogRenoveをフォローする</p>
-                                <ul class="list_shared mb-0 justify-content-center">
-                                    <li><a class="twitter-follow-button" href="<?php echo get_field('twitter_url', 'option')?>" data-show-count="false" data-show-screen-name="false" data-lang="ja">フォロー</a></li>
-                                    <li><div style="width: 80px;" class="fb-like" data-href="<?php echo get_field('facebook_url', 'option')?>" data-width="" data-layout="button" data-action="like" data-share="false"></div></li>
-                                    <!-- <li><a href="<?php // echo get_field('instagram_url', 'option')?>" style="background: none !important; padding: 0;"><img src="/wp-content/themes/logrenove/assets/images/btn_ins.png" style="margin-bottom: 10px;"></a></li> -->
-                                    <li>
+                                <div class="col-md-12">
+                                    <div class="row-md-4 btn-twitter">
+                                        <a class="twitter-follow-button" href="<?php echo get_field('twitter_url', 'option')?>" data-show-count="false" data-show-screen-name="false" data-lang="ja">フォロー</a>
+                                    </div>
+                                    <div class="row-md-4 btn-like">
+                                        <div class="fb-like" data-href="<?php echo get_field('facebook_url', 'option')?>" data-width="" data-layout="button" data-action="like" data-share="false"></div>
+                                    </div>
+                                    <div class="row-md-4 btn-instagram">
                                         <a href="<?php echo get_field('instagram_url', 'option')?>" class="insta_btn2" target="_blank" rel="noopener noreferrer">
-                                          <i class="fab fa-instagram"></i> <span>フォローする</span>
+                                            <i class="fab fa-instagram"></i> <span class="text-instagram">フォローする</span>
                                         </a>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 body.single-post .box_article_detail a {
     text-decoration: underline;
-    color: #007bff
+   /* color: #007bff*/
 }
 
 body.single-post .box_article_detail a:hover {
@@ -14,7 +14,7 @@ body.single-post .box_article_detail a:hover {
 
 body.single-post .box_article_detail .box_tags a {
     text-decoration: none;
-    color: #666;
+    /*color: #666;*/
     font-size: 14px
 }
 
@@ -385,3 +385,20 @@ body.single-post .logo_logrenove_small img {
         height: 80px;
     }
 }
+
+.btn-twitter {
+    margin-right: 200px;
+}
+
+.btn-like {
+    margin-left: 110px; margin-top: -25px;
+}
+
+.btn-instagram {
+    margin-left: 180px; margin-top: -27px;
+}
+
+.btn-instagram .text-instagram {
+    color: white;
+}
+

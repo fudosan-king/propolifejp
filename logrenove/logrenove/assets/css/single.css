@@ -386,6 +386,10 @@ body.single-post .logo_logrenove_small img {
     }
 }
 
+.box_article_detail .btn-instagram .fa-instagram {
+    color: white;
+}
+
 .btn-twitter {
     margin-right: 200px;
 }
@@ -400,8 +404,4 @@ body.single-post .logo_logrenove_small img {
 
 .btn-instagram .text-instagram {
     color: white;
-}
-
-.fa-instagram {
-    /*color: white;*/
 }

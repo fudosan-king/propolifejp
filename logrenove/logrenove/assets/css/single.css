@@ -389,3 +389,19 @@ body.single-post .logo_logrenove_small img {
 .box_article_detail .btn-instagram .fa-instagram {
     color: white;
 }
+
+.btn-twitter {
+    margin-right: 200px;
+}
+
+.btn-like {
+    margin-left: 110px; margin-top: -25px;
+}
+
+.btn-instagram {
+    margin-left: 180px; margin-top: -27px;
+}
+
+.btn-instagram .text-instagram {
+    color: white;
+}

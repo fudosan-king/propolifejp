@@ -18,9 +18,9 @@ Template Post Type: page
                 <div class="col-12 col-lg-9">
                     <div class="interview_content bg-white pt-5 pl-0 pb-0">
                         <ul class="list_global">
-                            <li><a href="#">PROSTYLE</a></li>
-                            <li><a href="#">MIYANOMORI</a></li>
-                            <li class="active"><a href="#">INTERVEW/ KENGO KUMA</a></li>
+                            <li><span>PROSTYLE</span></li>
+                            <li><span>MIYANOMORI</span></li>
+                            <li class="active"><span>INTERVIEW/ KENGO KUMA</span></li>
                         </ul>
                         <h2 class="title mb-3">『home』としての実感を得られる<br>
                             木と寄り添う上質な暮らし</h2>

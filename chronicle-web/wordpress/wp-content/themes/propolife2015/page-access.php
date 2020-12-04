@@ -51,7 +51,7 @@ $office_nav_row = ($office_length/4 > $office_nav_row_num? $office_nav_row_num +
                             else{ $class = ''; }
                             
                             if($j < $office_length){ echo '<li'; echo ' ' . $class; echo'><a href="#office' . $j . '">' . $office[$j] .'</a></li>' . "\n"; }
-                            if($j >= $office_length){ echo '<li class="blank"></li>' . "\n"; }
+                            // if($j >= $office_length){ echo '<li class="blank"></li>' . "\n"; }
                         }
                         echo '</ul>' . "\n";
                     }

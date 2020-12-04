@@ -144,7 +144,7 @@ $(function() {
           
         });
 
-        $(window).on('load',function(){
+       $(window).on('load',function(){
             if($('.js-sidebar-fixed').length > 0){
                 var main = $('.main_left');
                 var side = $('.main_right');
@@ -154,15 +154,13 @@ $(function() {
                 var wSidebarFixed = $('.js-sidebar-fixed').outerWidth();
                 // console.log(wSidebarFixed);
                 wrappers.each(function(index,ele){
-                    console.log(wrapperHeight)
                     wrapperHeight += parseInt($(ele).height());
                 });
 
                 var w = $(window);
                 // var wrapperHeight = wrappers.outerHeight();
-                var wrapperTop = wrappers.eq(0).offset().top;
                 var sideLeft = side.offset().left;
-
+                var wrapperTop = wrappers.eq(0).offset().top;
 
                 var sideMargin = {
                     top: side.css('margin-top') ? side.css('margin-top') : 0,
@@ -173,7 +171,8 @@ $(function() {
 
                 var winLeft;
                 var pos;
-
+                var bottomHeight = 0;
+               
                 var scrollAdjust = function() {
                     sideHeight = side.outerHeight();
                     mainHeight = main.outerHeight();
@@ -182,15 +181,23 @@ $(function() {
                     winLeft = w.scrollLeft();
                     var winHeight = w.height();
                     var nf = (winTop > wrapperTop) && (mainHeight > sideHeight) ? true : false;
-                    
-                    pos = !nf ? 'static' : (winTop + wrapperHeight) > mainAbs ? 'absolute' : 'fixed';
+
+                    pos = !nf ? 'static' : 'fixed';
                     bottom_count = $('#wpadminbar').length > 0 ? 0 : 26;
+
+                    var scrollOverMainAbs = 0;
+                    if( (winTop + wrapperHeight) > mainAbs ){
+                        scrollOverMainAbs = (winTop + wrapperHeight) - mainAbs;
+                    }
+                    bottomHeight = 100 + scrollOverMainAbs;
+                 
+
                     if (pos === 'fixed') {
                         side.css({
                             width:wSidebarFixed,
                             position: pos,
                             top: '',
-                            bottom: winHeight - wrapperHeight + bottom_count,
+                            bottom: bottomHeight, //winHeight - wrapperHeight + bottom_count,
                             left: sideLeft - winLeft,
                             margin: 0
                         });
@@ -200,6 +207,9 @@ $(function() {
                         side.removeAttr('style');
                         // $('.sidebar_banner img').css({'width':'100%'});
                     }
+
+
+
                 };
                 w.on('scroll', scrollAdjust);
             }
@@ -242,6 +252,23 @@ jQuery(function($) {
             $(el).val(sanitizeHtml($(this).val()));
         })
     });
+
+    /* #7604 Hidden */
+    // if($(".services_detail #frm_services").length > 0)
+    // {
+    //     $(window).scroll(function() {
+    //         var scrollPositionTop = $(window).scrollTop();
+    //         var scrollHeight = $(document).height();
+    //         var scrollPositionBottom = $(window).height() + $(window).scrollTop();
+    //         var offsetForm = $("#frm_services").offset().top;
+    //         var offsetButtons = $(".box_online_seminar").offset().top + $(".box_online_seminar").innerHeight();
+    //         if (offsetButtons < scrollPositionTop && offsetForm > scrollPositionBottom) {
+    //               $('.section_cookie').fadeIn();
+    //         } else {
+    //               $('.section_cookie').fadeOut();
+    //         }
+    //     });
+    // }
 
     // if($('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').length > 0) {
     //     var content_list_number = $('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').find('li').length;

@@ -26,9 +26,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo home_url(); ?>/contact">CONTACT</a>
                     </li>
+                    <li class="nav-item list_social">
+                       <a  lass="nav-link" href="https://www.facebook.com/logknot" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <a href="#" class="btn btn_menu navbar-toggler "><span>menu</span></a>
+        <a href="javascript:void(0)" class="btn btn_menu navbar-toggler "><span>menu</span></a>
     </div>
 </header>

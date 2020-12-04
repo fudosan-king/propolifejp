@@ -1,7 +1,6 @@
 <?php
 	global $detect;
 ?>
-<script src="<?=SCRIPT_PATH;?>/functions.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" async></script>
 
 

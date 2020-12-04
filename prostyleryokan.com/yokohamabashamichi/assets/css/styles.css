@@ -1516,3 +1516,15 @@ section.section_notify { text-align: center; }
 .section_notify .row{
 	justify-content:center
 }
+
+/* how to sauna */
+.section_experience.sauna::after {
+	background-image: url('../images/1x/sauna/line_suana.png');
+	top: 0;
+}
+.section_subbanner.banner_sauna {
+	height: 510px;
+}
+.section_subbanner.banner_sauna  img {
+	height: 510px;
+}

@@ -63,7 +63,7 @@ if (!function_exists('display_nav_menus')){
 			$active = is_front_page() ? 'active' : "";
 			echo '<ul class="navbar-nav navbar-mobile mr-0">';
 			echo '<li class="nav-item box_logo_sm">
-			<a class="logo_sm" href="'.home_url().'"><img src="'.ASSETS_IMG_PATH.'/1x/asakusa-wide_logo_white@2x@2x.png" alt="" class="img-responsive" width="186"></a>
+			<a class="logo_sm" href="'.home_url().'"><img src="'.ASSETS_IMG_PATH.'/nahakenchomae.png" alt="" class="img-responsive" width="186"></a>
 			</li>';
 			foreach ($topNav as $nav){
 				/* Action here */
@@ -111,7 +111,7 @@ if (!function_exists('display_nav_menus')){
 
 			echo '<li class="nav-item"><a class="nav-link btnBooking btn_locationtohotel mt-0" href="https://goo.gl/maps/w4LWooKFUsoipf1v5" target="_blank">'.__('最寄り駅からホテルまでのルート', 'uniquek').'<i class="fal fa-angle-right fa-lg"></i></a></li>';
 
-			get_nav_lang(true);
+			// get_nav_lang(true);
 			
 			
 			echo '</ul>';

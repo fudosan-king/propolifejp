@@ -206,6 +206,7 @@
 }
 
 @media (max-width: 768px) {
+
   /* bsnav */
     .navbar-brand {
         margin: auto;
@@ -684,6 +685,8 @@
     #plandesign .equip-spec_note, #plandesign2 .equip-spec_note {
         font-size: 0.8rem;
     }
+
+    .frm_confirm_item {margin-bottom: 30px;}
 }
 
 @media (max-width: 736px) {

@@ -12,6 +12,11 @@ jQuery(document).ready(function($) {
   // $('.datepicker').datepicker({
   //   language: 'ja',
   // });
+    
+  $('.numbersOnly').keyup(function () {
+      this.value = this.value.replace(/[^0-9\.]/g,'');
+  });
+
 
   $('#ibtnGoSubmit').on('click', function(e) {
       e.preventDefault();
@@ -32,6 +37,18 @@ jQuery(document).ready(function($) {
 
   $('#goSubmit').on('click', function(e) {
       e.preventDefault();
+
+      mergeValueChecked($('input[name="contact_item[]"]:checked'), $('input[name="contact_item_text"]') );
+
+      if($('.contact_item_staff:checked').length > 0)
+      {
+        mergeValueChecked($('input[name="contact_gmt[]"]:checked'), $('input[name="contact_gmt_text"]') );
+      }
+      else
+      {
+         $('input[name="contact_method"]').val('');
+      }
+
       $('form.frm_contactus').submit();
   });
 
@@ -103,6 +120,27 @@ jQuery(document).ready(function($) {
           .replace(/"/g, "&quot;")
           .replace(/'/g, "&#039;");
   }
+
+  function mergeValueChecked(elemInput, elemOutput)
+  {
+    var val = '';
+    var dot = ''; 
+
+    $.each(elemInput, function(key, value)
+    {
+      if(val != '' )
+      {
+        dot = ',  ';
+      }
+
+      val = val+dot+value.value;
+     
+    });
+
+    elemOutput.val(val);
+
+  }
+
  // VALIDATE FORM DATA
   function callErrorMessage(elem, message){
 
@@ -132,9 +170,10 @@ jQuery(document).ready(function($) {
     formGroup.find('.error-required').remove();
   }
 
+
   function invalidCheckEmail(elem)
   {
-    var ERROR_MAIL_FORMAT = '無効な形式。';
+    var ERROR_MAIL_FORMAT = '無効な形式です';
     var isValid = true;
     var emailPattern = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if (!emailPattern.test(elem.val())) {
@@ -150,7 +189,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckNumber(elem)
   {
-    var ERROR_PHONE_FORMAT = '無効な形式。';
+    var ERROR_PHONE_FORMAT = '無効な形式です';
     var isValid = true;
   
     if (!$.isNumeric( elem.val() )) {
@@ -166,7 +205,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckPostalCode(elem)
   {
-    var ERROR_FORMAT = '無効な形式。';
+    var ERROR_FORMAT = '無効な形式です';
     var isValid = true;
   
     if (elem.length > 7 || !$.isNumeric(elem.val()) ) {
@@ -184,7 +223,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckInput(elem)
   {
-    var ERROR_NO_INPUT = 'この項目は必須です。';
+    var ERROR_NO_INPUT = 'この項目は必須です';
     var isValid = true;
     if(typeof(elem.val()) === 'undefined' || elem.val() == "" || elem.val() == "null"){
       callErrorMessage(elem, ERROR_NO_INPUT);
@@ -197,7 +236,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheckSelect(elem)
   {
-      var ERROR_NO_INPUT = 'この項目は必須です。';
+      var ERROR_NO_INPUT = 'この項目は必須です';
       var isValid = true;
 
      if(typeof(elem.find('option:selected').val()) === 'undefined' || elem.find('option:selected').val() == "" || elem.find('option:selected').val() == "null"){
@@ -211,7 +250,7 @@ jQuery(document).ready(function($) {
 
   function invalidCheck() {
 
-      var ERROR_NO_INPUT = 'この項目は必須です。';
+      var ERROR_NO_INPUT = 'この項目は必須です';
       var isValid = true;
       errorElements = []
       
@@ -289,6 +328,14 @@ jQuery(document).ready(function($) {
           {
             callErrorMessage('input[name="date_meeting_1"]', ERROR_NO_INPUT);
           }
+
+          if(($('select[name="time_meeting_2"]').val() == $('select[name="time_meeting_1"]').val() ) && ($('input[name="date_meeting_2"]').val() == $('input[name="date_meeting_1"]').val()))
+          {
+            isValid = false;
+            callErrorMessage('input[name="date_meeting_1"]', '同じ日時が指定されています');
+          }
+
+          
       }
 
 
@@ -350,12 +397,14 @@ jQuery(document).ready(function($) {
               if(date.getTime() <= (new Date()).getTime() )
                   return false;
 
-              if (date.getDay() == 3 || date.getDay() == 0)
+              if (date.getDay() == 2 || date.getDay() == 3){
+                if(data &&  data[date.getFullYear()][(date.getMonth() + 1)]){
+                  if(data[date.getFullYear()][(date.getMonth() + 1)].indexOf(date.getDate()) != -1){
+                    return true;
+                  }
                   return false;
-
-              if(data &&  data[date.getFullYear()][(date.getMonth() + 1)]){
-                if(data[date.getFullYear()][(date.getMonth() + 1)].indexOf(date.getDate()) != -1)
-                  return false;
+                }
+                return false;
               }
               
               return true;

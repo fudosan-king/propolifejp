@@ -35,3 +35,16 @@ if(have_posts()):
     endwhile;
 endif;
 ?>
+
+<!-- /* #7604 Hidden */ -->
+<!-- <section class="section_cookie" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 align-self-center">
+                <p class="text-center">
+                    <a class="btn btn_online" rel="noopener noreferrer" href="<?php //the_permalink(); ?>#frm_services">参加予約する</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section> -->

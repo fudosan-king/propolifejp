@@ -434,7 +434,26 @@
     add_action( 'login_enqueue_scripts', 'logrenove_login_logo' );
 
     function add_extra_header_script(){
-        echo get_field('header_extend_script', 'option');
+        $header_extend_script = get_field('header_extend_script', 'option');
+        if(
+            (is_page('booking-completed') && isset($_GET['status']) && ($_GET['status']=='wait-confirm' || $_GET['status']=='confirm')) || 
+            (is_page('signup') && isset($_GET['action']) && ($_GET['action']=='confirm' || $_GET['action']=='active')) || 
+            is_page('events/thanks')
+        ) {
+            $pattern = '/GTM-.*?;/sm';
+            if(preg_match($pattern, $header_extend_script, $tmpGTM)) {
+                $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                $gtm = $tmpGTM[0];
+                $random = '';
+                for ( $i = 0; $i < 10; $i++ ) {
+                    $random .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
+                }
+                $gtm .= 'var mdsmaf_m_v = \''.$random.'\';';
+                $header_extend_script = preg_replace($pattern, $gtm, $header_extend_script);
+                // $header_extend_script .= '<script>var mdsmaf_m_v = '.$random.';</script>';
+            }
+        }
+        echo $header_extend_script;
     }
     add_action( 'header_extra_script', 'add_extra_header_script');
 

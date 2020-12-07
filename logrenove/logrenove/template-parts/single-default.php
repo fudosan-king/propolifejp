@@ -1,7 +1,10 @@
 <?php 
+global $detect;
+
 if(have_posts()):
     while(have_posts()): the_post();
-        $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
+        $_size = $detect->isMobile() ? 'banner-sp' : 'large' ;
+        $thumbnails = new ThumbnailItem(get_post_thumbnail_id(), $_size);
         $caption = wp_get_attachment_caption( get_post_thumbnail_id() );
     ?>
         <div class="box_article_detail">
@@ -13,7 +16,7 @@ if(have_posts()):
                             if(!empty($thumbnails)){
                                 ?>
                                     <div class="thumbnail-wrapper">
-                                        <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); //alt but get post title?>" title="<?php the_title(); //alt but get post title?>" class="img-fluid">
+                                        <img src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); //alt but get post title?>" title="<?php the_title(); //alt but get post title?>" class="img-fluid">
                                     </div>
                                 <?php
                             }
@@ -64,9 +67,9 @@ if(have_posts()):
                     <div class="row">
                         <div class="col-12 col-md-6 align-self-center text-center">
                             <p class="mb-0">この記事をシェアする</p>
-                            <img style="cursor: pointer;padding: 3px;" data-src="/wp-content/themes/logrenove/assets/images/i_twitter.png" alt="Share on Twitter" onclick="window.open('https://twitter.com/share?text=<?php wp_title(); ?>&amp;url=<?php the_permalink(); ?>','_blank'); return false;" width="60">
-                            <img style="cursor: pointer;padding: 3px;" data-src="/wp-content/themes/logrenove/assets/images/i_face_book.png" alt="<?php the_title(); ?>" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('<?php the_permalink(); ?>'),'facebook-share-dialog','width=626,height=436'); return false;" width="60">
-                            <img style="cursor: pointer;padding: 3px;" data-src="/wp-content/themes/logrenove/assets/images/i_line.png" alt="<?php the_title(); ?>" onclick="window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent('<?php the_permalink(); ?>'),'line-share-dialog','width=626,height=436'); return false;" width="60">
+                            <img style="cursor: pointer;padding: 3px;" src="/wp-content/themes/logrenove/assets/images/i_twitter.png" alt="Share on Twitter" onclick="window.open('https://twitter.com/share?text=<?php wp_title(); ?>&amp;url=<?php the_permalink(); ?>','_blank'); return false;" width="60">
+                            <img style="cursor: pointer;padding: 3px;" src="/wp-content/themes/logrenove/assets/images/i_face_book.png" alt="<?php the_title(); ?>" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('<?php the_permalink(); ?>'),'facebook-share-dialog','width=626,height=436'); return false;" width="60">
+                            <img style="cursor: pointer;padding: 3px;" src="/wp-content/themes/logrenove/assets/images/i_line.png" alt="<?php the_title(); ?>" onclick="window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent('<?php the_permalink(); ?>'),'line-share-dialog','width=626,height=436'); return false;" width="60">
                         </div>
                         <div class="col-12 col-md-6 align-self-center text-center">
                             <div class="box_follow mt-4 mt-md-0">

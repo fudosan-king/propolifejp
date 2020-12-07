@@ -41,8 +41,8 @@
                     <?php get_template_part( 'template-parts/events/archive', 'default' ); ?>
 
                     <div class="banner_online">
-                        <a href="https://www.logrenove.jp/service/" target="_tbank"><img data-src="<?=IMAGE_PATH;?>/1x/online_consultation.png" alt="" class="img-fluid d-none d-lg-block"></a>
-                        <a href="https://www.logrenove.jp/service/" target="_tbank"><img data-src="<?=IMAGE_PATH;?>/1x/online_consultation_sp.png" alt="" class="img-fluid d-block d-lg-none"></a>
+                        <a href="https://www.logrenove.jp/service/" target="_tbank"><img src="<?=IMAGE_PATH;?>/1x/online_consultation.png" alt="" class="img-fluid d-none d-lg-block"></a>
+                        <a href="https://www.logrenove.jp/service/" target="_tbank"><img src="<?=IMAGE_PATH;?>/1x/online_consultation_sp.png" alt="" class="img-fluid d-block d-lg-none"></a>
                     </div>
 
                 </div>

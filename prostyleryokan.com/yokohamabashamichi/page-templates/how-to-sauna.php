@@ -7,7 +7,7 @@
 <?php get_template_part( 'template-parts/banner', 'top' ); ?>
 
 <main>
-    <section class="section_experience sauna pb-5">
+    <section class="section_experience sauna sauna_update pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">

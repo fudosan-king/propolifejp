@@ -657,6 +657,14 @@ footer ul li:hover a {
 	margin-bottom: 0;
 	text-shadow: 0 2px 4px rgba(0,0,0,0.50);
 }
+
+.sauna_update .box_experience_img p {
+    position: unset;
+    color: unset;
+    text-shadow: unset;
+    margin-top: 140px;
+}
+
 .box_more_step {
 	text-align: center;
 	margin: 0 0 65px;

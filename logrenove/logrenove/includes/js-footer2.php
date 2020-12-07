@@ -17,6 +17,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.1.0/autoNumeric.min.js"></script>
 
 <?php wp_enqueue_script( 'estimation-script', SCRIPT_PATH.'/estimation.js'); ?>
-<?php wp_enqueue_script( 'form-service-script', SCRIPT_PATH.'/form/service.js'); ?>
 
-<?php wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js'); ?>
+<?php if(is_page_template( 'template-pages/service.php' ) || is_page_template( 'template-pages/services2.php' ) || is_page_template( 'template-pages/services3.php' )): ?>
+    <?php wp_enqueue_script( 'form-service-script', SCRIPT_PATH.'/form/service.js'); ?>
+    <?php wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js'); ?>
+<?php endif; ?>

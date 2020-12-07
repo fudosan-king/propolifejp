@@ -56,4 +56,16 @@
     </section>
 </main>
 
+<script>
+    jQuery(function($) {
+        $('#pardotFormHandler_Contact').on('submit', function(event) {
+            // event.preventDefault();
+            /* Act on the event */
+            $.each($('input, textarea'), function(index, el) {
+                $(el).val(sanitizeHtml($(this).val()));
+            })
+        });
+    });
+</script>
+
 <?php get_footer(); ?>

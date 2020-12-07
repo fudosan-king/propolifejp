@@ -44,7 +44,7 @@ if(have_posts()):
                         //     ?>
                         //         <div class="carousel-cell">
                         //             <a class="relation_article_img" href="<?php //the_permalink(); ?>" target="_blank">
-                        //                 <img data-src="<?php //echo $thumbnails->url;?>" alt="<?php //the_title(); //alt but get post title?>" title="<?php //the_title(); //alt but get post title?>" class="img-fluid">
+                        //                 <img src="<?php //echo $thumbnails->url;?>" alt="<?php //the_title(); //alt but get post title?>" title="<?php //the_title(); //alt but get post title?>" class="img-fluid">
                         //             </a>
                         //             <p><?php //the_title(); ?></p>
                         //         </div>                            
@@ -60,7 +60,8 @@ if(have_posts()):
                         <div class="row">
                         <?php
                             while($query->have_posts()): $query->the_post();
-                                $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
+                                $_size = $detect->isMobile() ? 'thumbnail-sp' : 'thumbnail-pc' ;
+                                $thumbnails = new ThumbnailItem(get_post_thumbnail_id(), $_size);
                                 $articles_id = get_the_ID();
                                 // var_dump(get_the_category());
                                 // $firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
@@ -70,7 +71,7 @@ if(have_posts()):
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
                                             <a class="relation_article_img" href="<?php the_permalink(); ?>?from=related" rel="noopener noreferrer">
-                                                <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="img-fluid">
+                                                <img src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="img-fluid">
                                             </a>
                                         </div>
                                         <div class="col-8 col-lg-12">

@@ -18,16 +18,25 @@ $(function($) {
 
     $('form.frm_avatar_login .btnAgree').on('click',function(e){
         var form = $('form.frm_avatar_login'),
-            isValid = check_valid(form);
-        if(isValid === false) {
-            $('html').animate({
-                scrollTop: $('.form-lp').offset().top
-            }, 1000, function() {});
-        }
-        else
-        {
-            form.submit();
-        }
+            isValid = check_valid(form),
+            isValidLogin = isValid?check_login(form):false,
+            scrollToForm = $('html').animate({scrollTop: $('.form-lp').offset().top}, 1000);
+        if(isValid === false) scrollToForm;
+        else if(isValidLogin === false) scrollToForm;
+        else form.submit();
+        e.preventDefault();
+        return false;
+    });
+
+    $('form.frm_avatar_register .btnAgree').on('click',function(e){
+        var form = $('form.frm_avatar_register'),
+            isValid = check_valid(form),
+            isValidRegister = isValid?check_register(form):false,
+            scrollToForm = $('html').animate({scrollTop: $('.form-lp').offset().top}, 1000);
+        console.log(isValidRegister);
+        if(isValid === false) scrollToForm;
+        else if(isValidRegister === false) scrollToForm;
+        else form.submit();
         e.preventDefault();
         return false;
     });
@@ -73,7 +82,7 @@ $(function($) {
                     }
 
                 }
-                else if(name == 'email') {
+                else if(name == 'user_email') {
                     if(!isEmail(val))
                     {
                         element.addClass('validate-error');
@@ -82,6 +91,15 @@ $(function($) {
                     else {
                         element.removeClass('validate-error');
                         // element.addClass('is-valid');
+                    }
+                }
+                else if(name == 'user_password') {
+                    if(val.length < 6) {
+                        element.addClass('validate-error');
+                        invalid.push(name);
+                    }
+                    else {
+                        element.removeClass('validate-error');
                     }
                 }
                 else {
@@ -93,6 +111,64 @@ $(function($) {
                 }
             }
         });
+        if(invalid.length > 0) return false;
+        else return true;
+    }
+
+    function check_login(form) {
+        var url = '/wp-admin/admin-ajax.php?action=user_login_ajax_avatar',
+        user_email = form.find('input[name=user_email]').val(),
+        user_password = form.find('input[name=user_password]').val();
+        var invalid = $();
+        $.ajax({
+            'async': false,
+            'type': "POST",
+            'url': url,
+            'data': {'user_email': user_email, 'user_password': user_password},
+            'success': function (data) {
+                data = JSON.parse(data)
+                $.each(data, function(key, value) {
+                    var element = form.find('[name^='+key+']');
+                    if(value === false) {
+                        element.addClass('validate-error');
+                        invalid.push(key);
+                    }
+                });
+            }
+        })
+        if(invalid.length > 0) return false;
+        else return true;
+    }
+    function check_register(form) {
+        var url = '/wp-admin/admin-ajax.php?action=user_signup_ajax_avatar',
+        date = form.find('input[name=date]').val(),
+        time = form.find('select[name=time]').val(),
+        user_email = form.find('input[name=user_email]').val(),
+        user_password = form.find('input[name=user_password]').val(),
+        user_password2 = form.find('input[name=user_password2]').val();
+        var invalid = $();
+        if(user_password != user_password2) {
+            form.find('input[name=user_password]').addClass('validate-error');
+            form.find('input[name=user_password2]').addClass('validate-error');
+            invalid.push('user_password');
+            invalid.push('user_password2');
+        }
+        $.ajax({
+            'async': false,
+            'type': "POST",
+            'url': url,
+            'data': {'user_email': user_email, 'user_password': user_password, 'date': date, 'time': time},
+            'success': function (data) {
+                data = JSON.parse(data)
+                $.each(data, function(key, value) {
+                    var element = form.find('[name^='+key+']');
+                    if(value === false) {
+                        element.addClass('validate-error');
+                        invalid.push(key);
+                    }
+                });
+            }
+        })
         if(invalid.length > 0) return false;
         else return true;
     }

@@ -1353,7 +1353,7 @@
         $mail_result = send_wp_mail( $user_email, $title , $message );
     }
 
-    function active_user() {
+    function active_user($page = 'signup') {
         $activation_code = isset($_GET['activation_code'])?$_GET['activation_code']:'';
         $login = isset($_GET['login'])?$_GET['login']:'';
         list( $rp_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
@@ -1379,7 +1379,8 @@
                 $u = new WP_User($user_data->ID);
                 $u->remove_role( 'pending' );
                 $u->add_role( 'subscriber' );
-                send_mail_confirm($user_data->user_email);
+                if($page == 'signup') send_mail_confirm($user_data->user_email);
+                else if($page == 'avatar') send_mail_confirm_avatar($user_data->user_email);
             }
         }
     }
@@ -1462,6 +1463,7 @@
     # Counter Avatar
 
     function send_pardot_avatar($status=''){
+        $pardot_data = array();
         $pardot_data['date'] = isset($_POST['date'])?$_POST['date']:'';
         $pardot_data['time'] = isset($_POST['time'])?$_POST['time']:'';
         if (is_user_logged_in()){
@@ -1470,8 +1472,11 @@
             $pardot_url = 'https://go.pardot.com/l/185822/2020-11-12/qpj5x8';
         }
         else {
-            $email = isset($_POST['email'])?$_POST['email']:'';
+            $email = isset($_POST['user_email'])?$_POST['user_email']:'';
+            $mail_magazine = isset($_POST['mail_magazine']) ? filter_var($_POST['mail_magazine'], FILTER_VALIDATE_BOOLEAN)  : false ;
             $pardot_data['email'] = $email;
+            $pardot_data['mail_magazine'] = $mail_magazine?1:0;
+            $pardot_url = 'http://go.pardot.com/l/185822/2020-11-12/qpj61l';
         }
         $result = send_pardot_form($pardot_url, $pardot_data);
         $direct_url = 'booking-completed';
@@ -1479,31 +1484,92 @@
         if($result) wp_redirect(site_url($direct_url));exit;
     }
 
-    // add_action('wp_ajax_user_login_ajax_avatar', 'user_login_ajax_avatar');
+    function user_login_ajax_avatar() {
+        $data = array();
+        $data['user_email'] = false;
+        $data['user_password'] = false;
+        $user_email = isset($_POST['user_email'])?$_POST['user_email']:'';
+        $user_password = isset($_POST['user_password'])?$_POST['user_password']:'';
+        if(!empty($user_email)){
+            $user = get_user_by( 'email', $user_email  );
+            if($user && $user->roles && !in_array('pending',(array) $user->roles)) {
+                $data['user_email'] = true;
+                $auth = wp_check_password( $user_password, $user->user_pass, $user->ID );
+                if($auth) {
+                    $data['user_password'] = true;
+                    $creds = array(
+                        'user_login'    => $user->user_login,
+                        'user_password' => $user_password,
+                    );
+                    $user_ = wp_signon( $creds, false );
+                    $error = !empty($user_->errors)?$user_->errors:false;
+                }
+            }
+        }
+        echo json_encode($data);die;
+    }
 
-    // function user_login_ajax_avatar() {
-    //     $valid = true;
-    //     $element_name = '';
-    //     $user_email = isset($_POST['user_email'])?$_POST['user_email']:'';
-    //     $user_password = isset($_POST['user_password'])?$_POST['user_password']:'';
-    //     if(!empty($user_email)){
-    //         $user = get_user_by( 'email', $user_email  );
-    //         $auth = wp_check_password( $user_password, $user->user_pass, $user->ID );
-    //         if($auth){
-    //             $creds = array(
-    //                 'user_login'    => $user->user_login,
-    //                 'user_password' => $user_password,
-    //             );
-    //             $user_ = wp_signon( $creds, false );
-    //             $error = !empty($user_->errors)?$user_->errors:false;
-    //             if($error) {
-    //                 $valid = false;
-    //                 $result['']
-    //             }
-    //         }
-    //     }
-    // }
+    function user_signup_ajax_avatar() {
+        $data = array();
+        $data['user_email'] = false;
+        $date = isset($_POST['date'])?$_POST['date']:'';
+        $time = isset($_POST['time'])?$_POST['time']:'';
+        $user_email = isset($_POST['user_email'])?$_POST['user_email']:'';
+        $user_password = isset($_POST['user_password'])?$_POST['user_password']:'';
+        $mail_magazine = isset($_POST['mail_magazine']) ? filter_var($_POST['mail_magazine'], FILTER_VALIDATE_BOOLEAN)  : false ;
+        $isExisted = email_exists( $user_email );
+        if(!$isExisted){
+            $data['user_email'] = true;
+            $user_id = wp_create_user($user_email, $user_password, $user_email);
+            if($user_id) {
+                $template_file = 'counter/register_confirm.txt';
+                $booking_data = array();
+                $booking_data['date'] = $date;
+                $booking_data['time'] = $time;
+                add_user_meta( $user_id, 'booking_data', json_encode($booking_data, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) );
+                send_activation_link_avatar($user_id, $user_email, $template_file);
+            }
+        }
+        echo json_encode($data);die;
+    }
 
+    function send_activation_link_avatar($user_id, $user_email, $template_file, $link_active = 'booking-completed/?status=confirm'){
+        global $wp_hasher;
+        $key = wp_generate_password( 20, false );
+        if ( empty( $wp_hasher ) ) {
+            require_once ABSPATH . WPINC . '/class-phpass.php';
+            $wp_hasher = new PasswordHash( 8, true );
+        }
+        $hashed = $wp_hasher->HashPassword( $key );
+        add_user_meta( $user_id, 'activation_code', $hashed );
+        $user_info = get_userdata($user_id);
+        $user_login = $user_info->user_login;
+        $template = get_email_template($template_file);
+        $active_link = network_site_url($link_active.'&activation_code='.$key.'&login='.rawurlencode($user_login), 'activation_link' );
+        $message = preg_replace('/{active_link}/', $active_link, $template);
+        $title = '【スマートリノベカウンター】予約を確定してください。';
+        $mail_result = send_wp_mail( $user_email, $title , $message );
+    }
+
+    function send_mail_confirm_avatar($user_email) {
+        $home_url = get_home_url();
+        $template_file = 'counter/booking_completed.txt';
+        $template = get_email_template($template_file);
+        $user = get_user_by( 'email', $user_email);
+        $booking_data = get_usermeta($user->ID, 'booking_data');
+        $booking_data = json_decode($booking_data);
+        $booking_date = $booking_data->date;
+        $booking_time = $booking_data->time;
+        $date_time = $booking_date.$booking_time;
+        $message = preg_replace('/{date_time}/', $date_time, $template);
+        $title = '【スマートリノベカウンター】ご予約ありがとうございます。';
+        $mail_result = send_wp_mail( $user_email, $title , $message );
+    }
+
+    add_action('wp_ajax_user_login_ajax_avatar', 'user_login_ajax_avatar');
+    add_action('wp_ajax_nopriv_user_login_ajax_avatar', 'user_login_ajax_avatar');
+    add_action('wp_ajax_user_signup_ajax_avatar', 'user_signup_ajax_avatar');
+    add_action('wp_ajax_nopriv_user_signup_ajax_avatar', 'user_signup_ajax_avatar');
     # Customize social login
 
     // function get_social_login_button()

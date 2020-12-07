@@ -34,19 +34,12 @@
 			<div class="reception">
 				<!-- THAY THẾ -->
 				<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/lp-reception.png" alt="" title="">
-				<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/lp-reception.png" alt="" title="">
+				<img class="show-mobile hide-pc img-fluid reception" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/lp-reception.png" alt="" title="">
 				<!-- END -->
-				<?php if($user_logged_in) { ?>
-			    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
-			    		今すぐ相談予約
-			    		<i class="chevron-right"></i>
-			    	</a>
-			    <?php } else { ?>
-			    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-			    		会員登録して相談する
-			    		<i class="chevron-right"></i>
-			    	</a>
-			    <?php } ?>
+				<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+		    		今すぐ相談予約
+		    		<i class="chevron-right"></i>
+		    	</a>
 			</div>	
 		</div>
 	</div>
@@ -103,13 +96,8 @@
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
-				<?php if($user_logged_in) { ?>
 					<p class="title">相談予約をする</p>
 					<p class="des">ご予約時に予約希望日、メールアドレスをご記入ください。</p>
-				<?php } else { ?>
-					<p class="title">会員登録＆相談予約</p>
-					<p class="des">Web会員にご登録いただき、ご予約時に予約希望日をご記入ください。<br>※登録・相談どちらも無料です。</p>
-				<?php } ?>
 				</div>
 			</div>
 		</div>
@@ -185,13 +173,8 @@
 				<img src="<?php echo COUNTER_IMAGE_PATH;?>/operation-5.png" class="img-fluid" title="" alt="">
 			</div>
 		</div>
-		<?php if($user_logged_in) { ?>
-    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+		<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
 		今すぐ相談予約
-	    <?php } else { ?>
-	    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-	    		会員登録して相談する
-	    <?php } ?>
 		<i class="chevron-right"></i>
 		</a>
 
@@ -249,13 +232,8 @@
 					</p>
 				</div>
 			</div>
-			<?php if($user_logged_in) { ?>
-	    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+			<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
 			今すぐプランを聞いてみる
-		    <?php } else { ?>
-		    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-		    		登録してプランを聞いてみる
-		    <?php } ?>
 			<i class="chevron-right"></i>
 			</a>
 
@@ -387,27 +365,21 @@
 </section>
 
 <div class="scroll-home">
-	<?php if($user_logged_in) { ?>
-    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
     		今すぐ相談予約
-    <?php } else { ?>
-    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-    		会員登録して相談する
-    <?php } ?>
     <i class="chevron-right"></i>
     </a>
 </div>
 
 <?php 
-
+if(isset($_POST['action']) && $_POST['action']=='send_pardot') {
+	$status = isset($_REQUEST['status'])?$_REQUEST['status']:'';
+	send_pardot_avatar($status);
+}
 if ($user_logged_in):
-	if(isset($_POST['action']) && $_POST['action']=='send_pardot') {
-		$status = isset($_REQUEST['status'])?$_REQUEST['status']:'';
-		send_pardot_avatar($status);
-	}
 	get_template_part('template-parts/counter-avatar/form','logined');
-// else:
-// 	get_template_part('template-parts/counter-avatar/form','notlogin');
+else:
+	get_template_part('template-parts/counter-avatar/form','notlogin');
 endif;
 ?>
 

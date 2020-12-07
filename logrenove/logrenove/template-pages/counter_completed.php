@@ -14,6 +14,7 @@ if($status == 'wait-confirm') {
     $image = 'booking-not-success.png';
 }
 elseif($status == 'confirm') {
+    active_user('avatar');
 	$subject = '会員登録<br>スマートリノベカウンター予約<br>完了しました！';
     $image = 'booking-not-success.png';
 }

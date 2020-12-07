@@ -1640,6 +1640,61 @@
     }
     add_shortcode( 'insert_extras_content', 'func_insert_extras_content' );
 
+    /* http://redmine.fudosan-king.jp/issues/7700 */
+
+    function check_member_status_post() {
+        global $post;
+        if(is_page() || is_single()) {
+            $category = get_the_category( $post->ID )[0];
+            $parent = get_term( $category->category_parent, 'category' );
+            $category_parent_status = get_field('member_post_status', $parent);
+            $category_status = get_field('member_post_status', $category);
+            $status = get_field('member_post_status', $post->ID);
+            if(($category_parent_status == 'member_only' || $category_status == 'member_only' || $status == 'member_only') && !is_user_logged_in()) {
+                wp_redirect(site_url('login'));
+                exit;
+            }
+        }
+    }
+    add_action( 'wp_head', 'check_member_status_post');
+
+    function func_insert_short_code_login(){
+        global $post;
+        $insertContent = '<div class="btn-only-member">
+            <div class="btn-only-member_ct">
+                <p><i class="btn-only-member_i-clock"></i>この記事は会員限定です。</p>
+                <p>会員登録（無料）すると続きをお読みいただけます。</p>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <p>新規登録の方はこちら</p>
+                        <a class="btn btn-only-member_brown" href="'.site_url('signup').'" target="_tbank">今すぐ登録</a>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <p>会員の方はこちら</p>
+                        <a class="btn btn-only-member_blue" href="'.site_url('login').'" target="_tbank">ログイン</a>
+                    </div>
+                </div>
+            </div>
+        </div>';
+        $content = $insertContent;
+        return $content;
+    }
+    add_shortcode( 'insert_short_code_login', 'func_insert_short_code_login' );
+
+    add_filter( 'the_content', 'filter_the_content_login' );
+
+    function filter_the_content_login($content) {
+        $has_short_code_login = has_shortcode($content, 'insert_short_code_login');
+        if( is_single() || is_page() ) {
+            if($has_short_code_login && !is_user_logged_in()) {
+                $content = preg_replace('/\[insert_short_code_login\].*/sm', '', $content);
+                $content .= '[insert_short_code_login]';
+            }
+            else $content = preg_replace('/\[insert_short_code_login\]/', '', $content);
+            return $content;
+        }
+    }
+
     add_filter('jpeg_quality', function($arg){return 100;});
     add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
 ?>

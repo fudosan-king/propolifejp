@@ -859,7 +859,7 @@
                     'cache_results'          => true,
                     'update_post_term_cache' => true,
                     'update_post_meta_cache' => true,
-                    'orderby' => 'ID',
+                    'orderby' => 'modified',
                     'order' => 'DESC',
                     // 'meta_query' => array(
                     //     array(

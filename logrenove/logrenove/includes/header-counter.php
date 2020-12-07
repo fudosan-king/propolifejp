@@ -24,11 +24,9 @@
         <li class="nav-item">
           <a class="nav-link" rel="#faq-lp" href="#">FAQ</a>
         </li>
-        <?php if(is_user_logged_in()) { ?>
-          <li class="nav-item">
-            <a class="nav-link" rel="#form-lp" href="#">ご予約フォーム</a>
-          </li>
-        <?php } ?>
+        <li class="nav-item">
+          <a class="nav-link" rel="#form-lp" href="#">ご予約フォーム</a>
+        </li>
       </ul>
 
     </div>

@@ -7,7 +7,7 @@
 				<label class="title">必 須</label>
 			</div>
 			<div class="col-10 col-md">
-				<input placeholder="例：xxxxxxx@logrenove.jp" class="form-control datepicker required" type="text" name="user_email" value="<?php echo esc_attr($user_email); ?>">
+				<input placeholder="例：xxxxxxx@logrenove.jp" class="form-control required" type="text" name="user_email" value="">
 			</div>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 				<label class="title">必 須</label>
 			</div>
 			<div class="col-10 col-md">
-				<input placeholder="例：password1234" class="form-control datepicker required" type="text" name="user_password" value="">
+				<input placeholder="例：password1234" class="form-control required" type="password" name="user_password" value="">
 			</div>
 		</div>
 	</div>

@@ -28,7 +28,7 @@
                 $user_ = wp_signon( $creds, false );
                 $error = !empty($user_->errors)?$user_->errors:false;
                 if(!$error) {
-                    wp_redirect(site_url('counter/#form-lp'));
+                    wp_redirect($home_url);
                     exit;
                 }
                 else {

@@ -145,6 +145,7 @@ $(function() {
         });
 
        $(window).on('load',function(){
+
             if($('.js-sidebar-fixed').length > 0){
                 var main = $('.main_left');
                 var side = $('.main_right');
@@ -159,7 +160,7 @@ $(function() {
 
                 var w = $(window);
                 // var wrapperHeight = wrappers.outerHeight();
-                var sideLeft = side.offset().left;
+              
                 var wrapperTop = wrappers.eq(0).offset().top;
 
                 var sideMargin = {
@@ -172,29 +173,36 @@ $(function() {
                 var winLeft;
                 var pos;
                 var bottomHeight = 0;
-               
+                var sideLeft;
+                var wSidebarFixed = 0;
+
                 var scrollAdjust = function() {
+                    var winTop = w.scrollTop();
+                    var winHeight = w.height();
+                    
+                    var scrollOverMainAbs = 0;
+
+                    sideLeft = side.offset().left;
                     sideHeight = side.outerHeight();
                     mainHeight = main.outerHeight();
                     mainAbs = main.offset().top + mainHeight;
-                    var winTop = w.scrollTop();
                     winLeft = w.scrollLeft();
-                    var winHeight = w.height();
+                    wSidebarFixed = $('.js-sidebar-fixed').outerWidth();
+
                     var nf = (winTop > wrapperTop) && (mainHeight > sideHeight) ? true : false;
 
                     pos = !nf ? 'static' : 'fixed';
                     bottom_count = $('#wpadminbar').length > 0 ? 0 : 26;
 
-                    var scrollOverMainAbs = 0;
+                    
                     if( (winTop + wrapperHeight) > mainAbs ){
                         scrollOverMainAbs = (winTop + wrapperHeight) - mainAbs;
                     }
                     bottomHeight = 100 + scrollOverMainAbs;
-                 
 
-                    if (pos === 'fixed') {
+                    if (pos === 'fixed' && w.width() >= 768 ) {
                         side.css({
-                            width:wSidebarFixed,
+                            width: wSidebarFixed,
                             position: pos,
                             top: '',
                             bottom: bottomHeight, //winHeight - wrapperHeight + bottom_count,
@@ -207,11 +215,22 @@ $(function() {
                         side.removeAttr('style');
                         // $('.sidebar_banner img').css({'width':'100%'});
                     }
-
-
-
                 };
+                
+                
+                w.resize(function(){
+                    console.log(w.width());
+                    if( w.width() >= 768 ){
+                        console.log('AA');
+                        side.removeAttr('style');
+                        scrollAdjust();
+                    } else {
+                        side.removeAttr('style');
+                    }
+                });
+
                 w.on('scroll', scrollAdjust);
+
             }
         });
 

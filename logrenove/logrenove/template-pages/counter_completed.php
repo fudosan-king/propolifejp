@@ -45,8 +45,8 @@ else {
             <h2><?php echo $subject; ?></h2>
             <div class="booking-success_ct">
                 <div class="img">
-                    <img data-src="<?php echo COUNTER_IMAGE_PATH;?>/<?php echo $image; ?>" class="hide-mobile img-fluid" title="" alt="">
-                    <img data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/<?php echo $image; ?>" class="hide-pc show-mobile img-fluid" title="" alt="">
+                    <img src="<?php echo COUNTER_IMAGE_PATH;?>/<?php echo $image; ?>" class="hide-mobile img-fluid" title="" alt="">
+                    <img src="<?php echo COUNTER_IMAGE_PATH;?>/2x/<?php echo $image; ?>" class="hide-pc show-mobile img-fluid" title="" alt="">
                 </div>
             </div>
         </div>

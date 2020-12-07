@@ -13,7 +13,7 @@
                     <div class="row no-gutters">
                         <div class="col-3">
                             <a href="<?php the_permalink(); ?>" class="article_main_items_img">
-                                <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); //alt but get post title?>" title="<?php the_title(); //alt but get post title?>" class="img-fluid">
+                                <img src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); //alt but get post title?>" title="<?php the_title(); //alt but get post title?>" class="img-fluid">
                             </a>
                         </div>
                         <div class="col-9">

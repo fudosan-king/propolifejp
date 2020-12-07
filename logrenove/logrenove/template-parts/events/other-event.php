@@ -8,7 +8,7 @@
         <div class="carousel-cell">
             <div class="box_otherevents_item">
                 <div class="box_otherevents_item_img">
-                    <a href="<?php echo $p->permalink; ?>"><img data-src="<?php echo $p->thumbails_url;?>" alt="<?php echo $p->title;?>" class="img-fluid"></a>
+                    <a href="<?php echo $p->permalink; ?>"><img src="<?php echo $p->thumbails_url;?>" alt="<?php echo $p->title;?>" class="img-fluid"></a>
                 </div>
                 <h3><?php echo $p->title;?></h3>
             </div>

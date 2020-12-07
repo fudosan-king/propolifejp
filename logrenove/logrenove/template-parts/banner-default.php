@@ -57,19 +57,21 @@
                 <div class="carousel carousel_banner">
             <?php
             while($query->have_posts()): $query->the_post();
-                $_size = $detect->isMobile() ? 'full' : 'full' ;
+                $_size = $detect->isMobile() ? 'banner-sp' : 'banner-pc' ;
                 $thumbnails = new ThumbnailItem(get_post_thumbnail_id(), $_size);
                 $firstCat = get_the_category()[0];
                 ?>
                     <div class="carousel-cell">
-                        <p class="badge badge-secondary badge_cate badge_cate_sm"><?php echo $firstCat->name; ?></p>
                         <a href="<?php the_permalink(); ?>" >
-                            <img data-src="<?php echo $thumbnails->url;?>" alt="<?php the_title(); //alt but get post title?>" title="<?php the_title(); //alt but get post title?>" class="img-fluid">
+                            <div class="badge badge-secondary badge_cate badge_cate_sm"><?php echo $firstCat->name; ?></div>
+                            <div class="content">
+                                <img src="<?php echo $thumbnails->url;?>" class="img-fluid">
+                            </div>
+                            <div class="caption">
+                                <div class="badge badge-secondary badge_cate"><?php echo $firstCat->name; ?></div>
+                                <h1><?php the_title(); ?></h1>
+                            </div>
                         </a>
-                        <div class="caption">
-                            <p class="badge badge-secondary badge_cate"><?php echo $firstCat->name; ?></p>
-                            <h1><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h1>
-                        </div>
                     </div>
                 <?php
             endwhile;

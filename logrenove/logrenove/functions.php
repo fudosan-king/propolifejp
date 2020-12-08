@@ -1200,7 +1200,7 @@
     {
         global $detect;
         $articles_ids = get_ranking_event_ids();
-        $posts = array();
+        $events = array();
         $i=1;foreach ($articles_ids as $key => $articles_id) {
             $obj = new stdClass();
             $obj->permalink = get_permalink($articles_id);
@@ -1208,32 +1208,28 @@
             $_size = $detect->isMobile() ? 'full' : 'full' ;
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
             $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
-            // $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
             $obj->rank = $i;
-            $posts[] = $obj;
+            $events[] = $obj;
             $i++;
         }
 
-        if(count($posts)) return $posts;
+        if(count($events)) return $events;
         else return false;
     }
 
     function get_ranking_event_ids($numberposts=5, $post_type='events')
     {
-        $args_post = array(
+        $args_event = array(
             'numberposts'      => 5,
             'post_type'        => $post_type,
-            'meta_key' => 'wpb_post_views_count',
-            'orderby' => 'meta_value',
             'order' => 'DESC',
             'post_status' => 'publish',
         );
-        $args_term = array();
         
-        $posts = get_posts($args_post);
+        $events = get_posts($args_event);
         
         $articles_ids = array();
-        foreach ($posts as $key => $post) {
+        foreach ($events as $key => $post) {
             $articles_ids[] = $post->ID;
         }
 
@@ -1243,11 +1239,25 @@
 
         if($count_articles_ids<5)
         {
-            $recent_posts = get_recent_posts($numberposts, $articles_ids, $post_type, $args_term);
+            $recent_posts = get_recent_events($numberposts, $articles_ids, $post_type, $args_term);
             $articles_ids = is_array($articles_ids)?array_merge($articles_ids, array_column($recent_posts, 'ID')):array_column($recent_posts, 'ID');
         }
 
         return $articles_ids;
+    }
+
+    function get_recent_events($numberposts=5, $exclude=array())
+    {
+        $exclude[] = get_queried_object_id();
+        $recent_args = array(
+            'numberposts' => $numberposts,
+            'post_status' => 'publish',
+            'exclude'     => $exclude
+        );
+
+        $recent_posts = wp_get_recent_posts( $recent_args, $output = 'ARRAY_A' );
+
+        return $recent_posts;
     }
 
     # End posts ranking

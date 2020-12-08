@@ -1940,13 +1940,14 @@ blockquote:before {
 
 @media (max-width: 375px) {
 	.btn_online {
-		font-size: .9em;
+		font-size: 1.1em;
 	}
 }
 
 @media (max-width: 320px) {
 	.btn_online {
-		font-size: .8em;
+		font-size: .9em;
+		font-weight: 600;
 	}
 }
 
@@ -3430,6 +3431,7 @@ ul.list_sub_cate_event li:last-child {
 
 /* #7604 Hidden */
 .services_detail .section_cookie {
+	display: none;
 	z-index: 200;
 	position: fixed;
 	bottom: 0;
@@ -3441,7 +3443,7 @@ ul.list_sub_cate_event li:last-child {
 	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 	box-shadow: 0 -3px 6px rgba(0,0,0,.24);
 	color: #fff;
-	padding: 15px 18px;
+	padding: 10px 10px;
 }
 
 

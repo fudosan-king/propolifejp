@@ -283,7 +283,7 @@ jQuery(function($) {
 
     $(".see-event").click(function(){
         $('html, body').animate({
-            scrollTop: $('#attent-event').offset().top
+            scrollTop: $('#eventinfo').offset().top
         }, 1000, function() {});
     });
 

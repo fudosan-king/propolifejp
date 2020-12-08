@@ -44,8 +44,8 @@
 			<div class="col-2 col-md-1"></div>
 			<div class="col-10 col-md">
 				<div class="custom-checkbox">
-					<label>メルマガに登録する
-					  <input type="checkbox" name="mail_magazine" value="1">
+					<label>リノベ情報を受け取る
+					  <input type="checkbox" name="mail_magazine" value="1" checked>
 					  <span class="checkmark"></span>
 					</label>
                 </div>

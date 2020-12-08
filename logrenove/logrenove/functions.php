@@ -440,25 +440,45 @@
             (is_page('signup') && isset($_GET['action']) && ($_GET['action']=='confirm' || $_GET['action']=='active')) || 
             is_page('events/thanks')
         ) {
-            $pattern = '/GTM-.*?;/sm';
-            if(preg_match($pattern, $header_extend_script, $tmpGTM)) {
-                $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-                $gtm = $tmpGTM[0];
-                $random = '';
-                for ( $i = 0; $i < 10; $i++ ) {
-                    $random .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
-                }
-                $gtm .= 'var mdsmaf_m_v = \''.$random.'\';';
-                $header_extend_script = preg_replace($pattern, $gtm, $header_extend_script);
-                // $header_extend_script .= '<script>var mdsmaf_m_v = '.$random.';</script>';
+            // $pattern = '/GTM-.*?;/sm';
+            $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            $random = '';
+            for ( $i = 0; $i < 10; $i++ ) {
+                $random .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
             }
+            // if(preg_match($pattern, $header_extend_script, $tmpGTM)) {
+            //     $gtm = $tmpGTM[0];
+            //     $gtm .= 'var mdsmaf_m_v = \''.$random.'\';';
+            //     $header_extend_script = preg_replace($pattern, $gtm, $header_extend_script);
+            //     // $header_extend_script .= '<script>var mdsmaf_m_v = '.$random.';</script>';
+            // }
+            $header_extend_script .= "
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({‘gtm.start’:
+new Date().getTime(),event:‘gtm.js’});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src=
+’https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KXQJ38M');var mdsmaf_m_v = '".$random."';</script>
+<!-- End Google Tag Manager -->";
         }
         echo $header_extend_script;
     }
     add_action( 'header_extra_script', 'add_extra_header_script');
 
     function add_extra_body_script(){
-        echo get_field('body_extend_script', 'option');
+        $body_extend_script = get_field('body_extend_script', 'option');
+        if(
+            (is_page('booking-completed') && isset($_GET['status']) && ($_GET['status']=='wait-confirm' || $_GET['status']=='confirm')) || 
+            (is_page('signup') && isset($_GET['action']) && ($_GET['action']=='confirm' || $_GET['action']=='active')) || 
+            is_page('events/thanks')
+        ) {
+            $body_extend_script .= '
+<!-- Google Tag Manager (noscript) --> 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXQJ38M" 
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+<!-- End Google Tag Manager (noscript) -->';
+        }
+        echo $body_extend_script;
     }
     add_action( 'body_extra_script', 'add_extra_body_script');
 

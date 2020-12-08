@@ -1,5 +1,6 @@
 <form method="post" class="frm_avatar_login">
 	<?php include 'form-pardot.php'; ?>
+	<input type="hidden" name="status" value="login-booking">
 	<div class="form-group">
 		<p>メールアドレス（半角英数字）</p>
 		<div class="row">

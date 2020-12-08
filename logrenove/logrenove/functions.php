@@ -437,7 +437,7 @@
         global $post;
         $header_extend_script = get_field('header_extend_script', 'option');
         $mdsmaf_m_v_condition = (
-            (is_page('booking-completed') && isset($_GET['status']) && ($_GET['status']=='wait-confirm' || $_GET['status']=='confirm' || $_GET['status']=='login-booking')) || 
+            is_page('booking-completed') || 
             (is_page('signup') && isset($_GET['action']) && ($_GET['action']=='confirm' || $_GET['action']=='active')) || 
             is_page('events/thanks')
         );
@@ -468,7 +468,7 @@ j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src
         global $post;
         $body_extend_script = get_field('body_extend_script', 'option');
         $mdsmaf_m_v_condition = (
-            (is_page('booking-completed') && isset($_GET['status']) && ($_GET['status']=='wait-confirm' || $_GET['status']=='confirm' || $_GET['status']=='login-booking')) || 
+            is_page('booking-completed') || 
             (is_page('signup') && isset($_GET['action']) && ($_GET['action']=='confirm' || $_GET['action']=='active')) || 
             is_page('events/thanks')
         );

@@ -281,18 +281,6 @@ jQuery(function($) {
         });
     }
 
-    $(".see-event").click(function(){
-        $('html, body').animate({
-            scrollTop: $('#eventinfo').offset().top
-        }, 1000, function() {});
-    });
-
-    $('.register-event').on('click',function() {
-        $('html, body').animate({
-            scrollTop: $('#frm_services').offset().top
-        }, 1000, function() {});
-    });
-
     // if($('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').length > 0) {
     //     var content_list_number = $('.box_article_detail .wp-block-uagb-table-of-contents .uagb-toc__list').find('li').length;
     //     if(content_list_number > 5){

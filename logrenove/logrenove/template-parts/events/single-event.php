@@ -39,8 +39,8 @@ if(have_posts()):
             </div> -->
             <div class="col-12 col-md-12 align-self-center">
                 <p class="text-center">
-                    <a class="btn btn_online see-event" rel="noopener noreferrer">開催情報をみる</a>
-                    <a class="btn btn_online register-event" rel="noopener noreferrer">参加予約をする</a>
+                    <a class="btn btn_online" rel="noopener noreferrer" href="<?php the_permalink(); ?>#eventinfo">開催情報をみる</a>
+                    <a class="btn btn_online" rel="noopener noreferrer" href="<?php the_permalink(); ?>#frm_services">参加予約をする</a>
                 </p>
             </div>
         </div>

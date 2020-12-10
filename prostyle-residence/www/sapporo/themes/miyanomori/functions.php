@@ -124,7 +124,6 @@ function get_nav_lang($isMobile=false){
 		$classBoxLang = (!$isMobile) ? '' : 'sm';
 		$classNavLink = (!$isMobile) ? '' : 'btnLang';
 
-		echo ' <li class="nav-item js-menuAnimation dropdown dropdown-right fade '.$classBoxLang.'">';
 		$locale = get_locale();
 		$lang = substr( $locale, 3, 4 );
 		echo '<a class="nav-link '.$classNavLink.'" onclick="return false;">'.$lang.'<i class="fal fa-angle-down fa-lg"></i></a>';
@@ -136,7 +135,6 @@ function get_nav_lang($isMobile=false){
 			echo '<li class="nav-item"><a class="nav-link" href="' . qtranxf_convertURL( '', $language, false, true ) . '">' . $lang . '</a></li>';
 		}
 		echo '</ul>';
-		echo '</li>';
 	}
 }
 

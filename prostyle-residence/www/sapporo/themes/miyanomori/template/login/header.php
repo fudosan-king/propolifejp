@@ -1,26 +1,38 @@
 <header>
     <div class="navbar navbar-expand-lg bsnav bsnav-transparent bsnav-sticky bsnav-sticky-slide">
-        <button class="navbar-toggler toggler-spring menu">
-            <span class="menuLine"></span>
-            <span class="menuLine"></span>
-            <span class="menuLine"></span>
-        </button>
         <a class="navbar-brand" href="index.php">
             <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo.svg" alt="" class="img-fluid logo_white" width="246">
             <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_black.svg" alt="" class="img-fluid logo_black" width="246">
         </a>
+
+        <div class="btn-action">
+            <button class="user-login class="nav-link" href="#modal_login" data-toggle="modal">
+                <span class="user-login_icon"></span>
+            </button>
+            <button class="navbar-toggler toggler-spring menu hide-mobile">
+                <span class="menuLine"></span>
+                <span class="menuLine"></span>
+                <!-- <span class="menuLine"></span> -->
+            </button>
+        </div>
+
         <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav navbar-mobile mr-0">
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="#modal_login" data-toggle="modal">ログイン</a></li>
-                <li class="nav-item js-menuAnimation dropdown dropdown-right">
-                    <a class="nav-link" href="index.php">JP <i class="caret"></i></a>
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">JP</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">EN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">CH</a></li>
-                    </ul>
+                 <li class="nav-item js-menuAnimation dropdown dropdown-right hide-mobile fade">
+                    <?php do_action('miyanomori_nav_language'); ?>
                 </li>
             </ul>
+            <ul class="navbar-nav navbar-mobile mr-0 lang hide-pc show-mobile">
+                 <li class="nav-item js-menuAnimation dropdown dropdown-right fade">
+                    <?php do_action('miyanomori_nav_language'); ?>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-mobile mr-0 hide-pc show-mobile">
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="#modal_login" data-toggle="modal"><span>ログアウト</span></a></li>
+            </ul>
+            <ul class="navbar-nav navbar-mobile mr-0  hide-pc show-mobile"></ul>
+            
         </div>
     </div>
 </header>
@@ -67,8 +79,8 @@
             </form>
             <form  method="post" class="frm_login" id="frm_regiter" >
                 <div class="frm_login_bottom">
-                    <h4>まだ物件エントリーされていない方は下記よりエントリーください。<br>
-                    限定サイトへのログインパスワードをお送りします。</h4>
+                    <h4>まだ物件エントリーされていない方は<span>下記よりエントリーください。</span>
+                    <span>限定サイトへのログインパスワードをお送りします。</span></h4>
                     <p class="status"></p>
                     <div class="frm_login_bottom_content">
                         <p>物件エントリー者様限定サイトでは、<br>

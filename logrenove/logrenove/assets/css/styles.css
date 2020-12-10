@@ -3693,10 +3693,10 @@ ul.list_sub_cate_event li:last-child {
         max-width: 800px;
     }
 
-    .section_events .container{
+    .single-events .section_events .container{
         max-width: 800px;
     }
-    .section_events .services_detail_content{
+    .single-events .section_events .services_detail_content{
         padding: 10px 30px 0;
     }
 }

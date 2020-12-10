@@ -10,7 +10,7 @@
                             <div class="row no-gutters">
                                 <div class="col-4">
                                     <a href="<?php echo $post->permalink.'?from=ranking'; ?>" class="article_items_img">
-                                        <img data-src="<?php echo $post->thumbails_url;?>" alt="<?php echo $post->title;?>" title="<?php echo $post->title;?>" class="img-fluid">
+                                        <img src="<?php echo $post->thumbails_url;?>" alt="<?php echo $post->title;?>" title="<?php echo $post->title;?>" class="img-fluid">
                                     </a>
                                     <span class="article_ranking ranking-<?php echo $post->rank;?>"><?php echo $post->rank;?></span>
                                 </div>

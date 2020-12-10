@@ -14,39 +14,32 @@
 			<div class="col-12 col-md-5 col-left">
 				<div class="slide_text">
 					<p class="small-title">理想の住まいを紹介</p>
-					<p class="small-img"><img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-text-slide.png" alt="" title=""></p>
+					<p class="small-img"><img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/lp-text-slide.png" alt="" title=""></p>
 					<p>素敵なお部屋作りをサポートいたします。<br>
 					リノベーションやリフォームに興味を持って<br>
 					いただけたらぜひご相談ください。</p>
 					<!-- THÊM -->
-					<p class="small-img hide-mobile"><img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/cirkle-slide-reception.png" alt="" title=""></p>
+					<p class="small-img hide-mobile"><img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/cirkle-slide-reception.png" alt="" title=""></p>
 					<!-- END -->
 					<p class="slide_note">バーチャルリノベプランナー：<span>リノさん</span></p>
 				</div>	
 			</div>
 			<div class="col-sm-12 col-md-7 col-right">
 				<div class="slide_img">
-					<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-pc-mb-slide.png" alt="" title="">
+					<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/lp-pc-mb-slide.png" alt="" title="">
 				</div>
 			</div>
 		</div>
 		<div class="slide_reception">
 			<div class="reception">
 				<!-- THAY THẾ -->
-				<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/lp-reception.png" alt="" title="">
-				<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/lp-reception.png" alt="" title="">
+				<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/lp-reception.png" alt="" title="">
+				<img class="show-mobile hide-pc img-fluid reception" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/lp-reception.png" alt="" title="">
 				<!-- END -->
-				<?php if($user_logged_in) { ?>
-			    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
-			    		今すぐ相談予約
-			    		<i class="chevron-right"></i>
-			    	</a>
-			    <?php } else { ?>
-			    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-			    		会員登録して相談する
-			    		<i class="chevron-right"></i>
-			    	</a>
-			    <?php } ?>
+				<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+		    		今すぐ相談予約
+		    		<i class="chevron-right"></i>
+		    	</a>
 			</div>	
 		</div>
 	</div>
@@ -65,16 +58,16 @@
 			<div class="col-md-6">
 				<div class="about-lp_img">
 					<!-- Cập nhật lại image -->
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-left.png" alt="" title="">
-					<img class="hide-pc show-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-left.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/about-left.png" alt="" title="">
+					<img class="hide-pc show-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-left.png" alt="" title="">
 					<!-- End -->
 			    </div>	
 			</div>
 			<div class="col-md-6">
 				<div class="about-lp_img text-right">
 					<!-- Cập nhật lại image -->
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/about-right.png" alt="" title="">
-					<img class="hide-pc show-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-right.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/about-right.png" alt="" title="">
+					<img class="hide-pc show-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/about-right.png" alt="" title="">
 					<!-- End -->
 			    </div>	
 			</div>
@@ -99,17 +92,12 @@
 				</div>
 				<div class="col-12 col-auto">
 					<div class="operation-lp_img">
-						<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-1.png" alt="" title="">
+						<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/operation-1.png" alt="" title="">
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
-				<?php if($user_logged_in) { ?>
 					<p class="title">相談予約をする</p>
 					<p class="des">ご予約時に予約希望日、メールアドレスをご記入ください。</p>
-				<?php } else { ?>
-					<p class="title">会員登録＆相談予約</p>
-					<p class="des">Web会員にご登録いただき、ご予約時に予約希望日をご記入ください。<br>※登録・相談どちらも無料です。</p>
-				<?php } ?>
 				</div>
 			</div>
 		</div>
@@ -118,7 +106,7 @@
 			<div class="row">
 				<div class="col-12 col-md-3 width-step">
 					<!-- TẠI BƯỚC 2 ĐỔI TEXT ĐÂY -->
-					<p class="btn btn-lp-sm-turquoise">｢アバター｣か、<span>｢映像｣を選ぶ</span>
+					<p class="btn btn-lp-sm-turquoise">｢アバター｣か、｢映像｣を選ぶ
 					<!-- END -->
 						<span class="btn-lp-cirkle">2</span>
 					</p>
@@ -144,7 +132,7 @@
 				</div>
 				<div class="col-auto">
 					<div class="operation-lp_img">
-						<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-6.png" alt="" title="">
+						<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/operation-6.png" alt="" title="">
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
@@ -163,7 +151,7 @@
 				</div>
 				<div class="col-auto">
 					<div class="operation-lp_img">
-						<img class="img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-3.png" alt="" title="">
+						<img class="img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/operation-3.png" alt="" title="">
 					</div>
 				</div>
 				<div class="col-12 col-md-4 width-text">
@@ -175,23 +163,18 @@
 
 		<div class="row">
 			<div class="col-12 col-md-5">
-				<img data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-4.png" class="img-fluid" title="" alt="">
+				<img src="<?php echo COUNTER_IMAGE_PATH;?>/operation-4.png" class="img-fluid" title="" alt="">
 			</div>
 			<div class="col-12 col-md-4 width-text">
 				<p class="title">リノベコーディネーターに個別相談も！</p>
 				<p class="des">具体的なお部屋のイメージを形にしたい、住宅購入や物件探しを検討したいという方は、専任のリノベコーディネーターにご相談ください！</p>
 			</div>
 			<div class="col-12 col-md-3 width-img">
-				<img data-src="<?php echo COUNTER_IMAGE_PATH;?>/operation-5.png" class="img-fluid" title="" alt="">
+				<img src="<?php echo COUNTER_IMAGE_PATH;?>/operation-5.png" class="img-fluid" title="" alt="">
 			</div>
 		</div>
-		<?php if($user_logged_in) { ?>
-    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+		<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
 		今すぐ相談予約
-	    <?php } else { ?>
-	    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-	    		会員登録して相談する
-	    <?php } ?>
 		<i class="chevron-right"></i>
 		</a>
 
@@ -205,9 +188,9 @@
 		<div class="col-md-12 p-0">
 			<div class="proposal-lp_box">
 				<div class="proposal-lp_box_img">
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-1.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-1.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-2.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-1.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-1.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-2.png" alt="" title="">
 					<p class="note">30代ご夫婦/お子様2人</p>
 				</div>
 				<div class="proposal-lp_box_text">
@@ -221,8 +204,8 @@
 
 			<div class="proposal-lp_box even-box">
 				<div class="proposal-lp_box_img">
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-2.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-3.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-2.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-3.png" alt="" title="">
 					<p class="note">40代男性</p>
 				</div>
 				<div class="proposal-lp_box_text">
@@ -236,9 +219,9 @@
 
 			<div class="proposal-lp_box">
 				<div class="proposal-lp_box_img">
-					<img class="hide-mobile img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-3.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-4.png" alt="" title="">
-					<img class="show-mobile hide-pc img-fluid" data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-5.png" alt="" title="">
+					<img class="hide-mobile img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/proposal-3.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-4.png" alt="" title="">
+					<img class="show-mobile hide-pc img-fluid" src="<?php echo COUNTER_IMAGE_PATH;?>/2x/proposal-5.png" alt="" title="">
 					<p class="note">20代ご夫婦</p>
 				</div>
 				<div class="proposal-lp_box_text">
@@ -249,13 +232,8 @@
 					</p>
 				</div>
 			</div>
-			<?php if($user_logged_in) { ?>
-	    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+			<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
 			今すぐプランを聞いてみる
-		    <?php } else { ?>
-		    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-		    		登録してプランを聞いてみる
-		    <?php } ?>
 			<i class="chevron-right"></i>
 			</a>
 
@@ -269,7 +247,7 @@
 			<h2 class="service-lp_title-en">FAQ</h2>
 			<p class="des">スマートリノベカウンターについてのよくある質問を紹介します。</p>
 			<div class="faq-lp_img">
-				<img data-src="<?php echo COUNTER_IMAGE_PATH;?>/faq.png" class="img-fluid" alt="" title="">
+				<img src="<?php echo COUNTER_IMAGE_PATH;?>/faq.png" class="img-fluid" alt="" title="">
 			</div>
 		</div>
 	</div>	
@@ -357,7 +335,7 @@
 							<span>ANSWER</span>
 							<div class="answer">
 								<p>お客様の個別のご相談は、専門知識を有するコーディネーターが承ります。<br>
-									<a href="<?php echo site_url('events'); ?>">個別相談会</a>へご参加くださいませ。
+									<a href="https://www.logrenove.jp/events/16985/">個別相談会</a>へご参加くださいませ。
 								</p>
 							</div>
 						</div>
@@ -387,27 +365,21 @@
 </section>
 
 <div class="scroll-home">
-	<?php if($user_logged_in) { ?>
-    	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
+	<a class="btn btn-lp-turquoise" title="" rel="#form-lp">
     		今すぐ相談予約
-    <?php } else { ?>
-    	<a class="btn btn-lp-turquoise" title="" href="<?php echo site_url('signup'); ?>">
-    		会員登録して相談する
-    <?php } ?>
     <i class="chevron-right"></i>
     </a>
 </div>
 
 <?php 
-
+if(isset($_POST['action']) && $_POST['action']=='send_pardot') {
+	$status = isset($_REQUEST['status'])?$_REQUEST['status']:'';
+	send_pardot_avatar($status);
+}
 if ($user_logged_in):
-	if(isset($_POST['action']) && $_POST['action']=='send_pardot') {
-		$status = isset($_REQUEST['status'])?$_REQUEST['status']:'';
-		send_pardot_avatar($status);
-	}
 	get_template_part('template-parts/counter-avatar/form','logined');
-// else:
-// 	get_template_part('template-parts/counter-avatar/form','notlogin');
+else:
+	get_template_part('template-parts/counter-avatar/form','notlogin');
 endif;
 ?>
 

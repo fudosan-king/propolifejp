@@ -29,7 +29,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
                                             <div class="registration_option_img">
-                                                <img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo.jpg" alt="" class="img-fluid">
+                                                <img src="<?=IMAGE_PATH;?>/mailmagazine/photo.jpg" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-12">
@@ -46,7 +46,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
                                             <div class="registration_option_img">
-                                                <img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo02.jpg" alt="" class="img-fluid">
+                                                <img src="<?=IMAGE_PATH;?>/mailmagazine/photo02.jpg" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-12">
@@ -63,7 +63,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-4 col-lg-12">
                                             <div class="registration_option_img">
-                                                <img data-src="<?=IMAGE_PATH;?>/mailmagazine/photo03.jpg" alt="" class="img-fluid">
+                                                <img src="<?=IMAGE_PATH;?>/mailmagazine/photo03.jpg" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col-8 col-lg-12">

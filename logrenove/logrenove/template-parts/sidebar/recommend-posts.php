@@ -10,7 +10,7 @@
                             <div class="row no-gutters">
                                 <div class="col-4">
                                     <a href="<?php echo $post->permalink.'?from=recommend'; ?>" class="article_items_img">
-                                        <img data-src="<?php echo $post->thumbails_url;?>" alt="<?php echo $post->title; //alt but get post title?>" title="<?php echo $post->title; //alt but get post title?>" class="img-fluid">
+                                        <img src="<?php echo $post->thumbails_url;?>" alt="<?php echo $post->title; //alt but get post title?>" title="<?php echo $post->title; //alt but get post title?>" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="col-8">

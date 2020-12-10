@@ -1,4 +1,2 @@
 .git
-wordpress/wp-content/uploads
-www/line
-excludes_wp
+.DS_Store

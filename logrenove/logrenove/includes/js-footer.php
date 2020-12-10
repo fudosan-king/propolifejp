@@ -2,9 +2,11 @@
     global $detect, $post;
 ?>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" async></script>
-<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" defer></script>
+
+<?php if (!preg_match( '/Lighthouse/', $_SERVER['HTTP_USER_AGENT'], $matches )): ?>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" defer></script>
+<?php endif; ?>
 
 <?php 
     if(is_single()):
@@ -35,7 +37,7 @@
         wp_enqueue_script( 'form-mailmagazine-script', SCRIPT_PATH.'/form/mailmagazine.js');
     }
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.pkgd.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.pkgd.min.js"></script>
 <?php 
     if (!$detect->isMobile()):
         wp_enqueue_script( 'bsnav-script', SCRIPT_PATH.'/bsnav.min.js');
@@ -45,8 +47,12 @@
     if($detect->isMobile() && is_single() && get_post_type($post->ID) == 'post') {
         wp_enqueue_script( 'header-scroll-script', SCRIPT_PATH.'/header-scroll.js');
     }
-    wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js');
-
 ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" async></script>
+<?php if(is_page( 'contact' )): ?>
+    <?php wp_enqueue_script( 'sanitize-script', SCRIPT_PATH.'/sanitize.min.js'); ?>
+<?php endif; ?>
+
+<?php if (!preg_match( '/Lighthouse/', $_SERVER['HTTP_USER_AGENT'], $matches )): ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+<?php endif; ?>

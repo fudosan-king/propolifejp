@@ -353,8 +353,10 @@ header {
 	margin: 0 10px
 }
 
+.carousel_banner .carousel-cell .content{height: 350px;}
+
 .carousel_banner .carousel-cell img {
-	/*height: 350px;*/
+	height: 100%;
 	width: 100%;
 	object-fit: cover
 }
@@ -402,7 +404,7 @@ header {
 
 .caption h1 {
 	text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-	font-size: 28px;
+	font-size: 26px;
 	color: #fff;
 	line-height: 1.3em
 }
@@ -417,14 +419,16 @@ header {
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 600;
-	background: #8c7d5e
+	background: #8c7d5e;
+	height: 39px;
+	min-width: 100px;
 }
 
 .btn_badge_cate {
 	color: #8c7d5e;
 	display: inline-block;
 	margin-bottom: 0;
-	font-size: 14px
+	font-size: 14px;
 }
 
 .badge_cate.badge_cate_sm {
@@ -475,7 +479,7 @@ main {
 
 .products_item_img {
 	width: 100%;
-	height: 263px;
+	height: 260px;
 	overflow: hidden;
 	margin-bottom: 15px;
 	display: block;
@@ -484,7 +488,7 @@ main {
 
 .products_item_img img {
 	width: 100%;
-	height: 263px;
+	height: 260px;
 	object-fit: cover;
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
@@ -1936,13 +1940,14 @@ blockquote:before {
 
 @media (max-width: 375px) {
 	.btn_online {
-		font-size: .9em;
+		font-size: 1.1em;
 	}
 }
 
 @media (max-width: 320px) {
 	.btn_online {
-		font-size: .8em;
+		font-size: .9em;
+		font-weight: 600;
 	}
 }
 
@@ -3425,7 +3430,8 @@ ul.list_sub_cate_event li:last-child {
 }
 
 /* #7604 Hidden */
-/*.services_detail .section_cookie {
+.services_detail .section_cookie {
+	display: none;
 	z-index: 200;
 	position: fixed;
 	bottom: 0;
@@ -3437,21 +3443,21 @@ ul.list_sub_cate_event li:last-child {
 	-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 	box-shadow: 0 -3px 6px rgba(0,0,0,.24);
 	color: #fff;
-	padding: 5px 18px;
+	padding: 10px 10px;
 }
 
 
 .services_detail .section_cookie a {
 	display: inline-block;
-    background: #1f1f1f;
+    background: #AD814D;
     border-radius: 4px;
     color: #fff;
     box-shadow: 0 4px 4px rgba(0,0,0,.2);
-    padding: 15px 40px;
     line-height: 1;
     cursor: pointer;
     text-decoration: none;
-} */
+    margin: 4px;
+} 
 
 /* Register Complete */
 .register-complete .login_body_top p.text {
@@ -3557,6 +3563,24 @@ ul.list_sub_cate_event li:last-child {
     }
     .register-page .login_body_bottom{
         padding: 40px 20px 1px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-pc {
+        display: block;
+    }
+
+    .hide-pc {
+        display: none;
     }
 }
 

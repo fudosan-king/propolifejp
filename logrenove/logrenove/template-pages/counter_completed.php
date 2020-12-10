@@ -4,7 +4,7 @@
 */
 ?>
 
-<?php get_header('counter'); ?>
+<?php get_header(); ?>
 
 <?php 
 $home_url = home_url();
@@ -14,8 +14,9 @@ if($status == 'wait-confirm') {
     $image = 'booking-not-success.png';
 }
 elseif($status == 'confirm') {
+    active_user('avatar');
 	$subject = '会員登録<br>スマートリノベカウンター予約<br>完了しました！';
-    $image = 'booking-not-success.png';
+    $image = 'booking-success-1.png';
 }
 else {
     $subject = 'スマートリノベカウンター<br>予約完了';
@@ -45,8 +46,8 @@ else {
             <h2><?php echo $subject; ?></h2>
             <div class="booking-success_ct">
                 <div class="img">
-                    <img data-src="<?php echo COUNTER_IMAGE_PATH;?>/<?php echo $image; ?>" class="hide-mobile img-fluid" title="" alt="">
-                    <img data-src="<?php echo COUNTER_IMAGE_PATH;?>/2x/<?php echo $image; ?>" class="hide-pc show-mobile img-fluid" title="" alt="">
+                    <img src="<?php echo COUNTER_IMAGE_PATH;?>/<?php echo $image; ?>" class="hide-mobile img-fluid" title="" alt="">
+                    <img src="<?php echo COUNTER_IMAGE_PATH;?>/2x/<?php echo $image; ?>" class="hide-pc show-mobile img-fluid" title="" alt="">
                 </div>
             </div>
         </div>

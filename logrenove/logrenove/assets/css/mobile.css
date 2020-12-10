@@ -129,7 +129,7 @@
 		float: right
 	}
 	.section_banner {
-		padding: 10px 15px 0;
+		padding: 15px;
 	}
 	.admin-bar .section_banner {
 		padding: 15px 15px 0;
@@ -142,7 +142,7 @@
 	.carousel_banner .carousel-cell {
 		height: 320px
 	}
-	.carousel_banner .carousel-cell img {
+	.carousel_banner .carousel-cell .content {
 		height: 259px
 	}
 	.carousel_banner .carousel-cell::after {
@@ -178,7 +178,8 @@
 		left: 5px;
 		top: 5px;
 		padding: 10px;
-		font-size: 12px
+		font-size: 12px;
+		height: 32px;
 	}
 	.carousel_banner .flickity-prev-next-button {
 		display: none
@@ -203,7 +204,7 @@
 	.box_lastproducts {
 		margin-bottom: 30px
 	}
-	.products_item_content {
+	.products_item .products_item_content {
 		padding-left: 10px
 	}
 	.products_item {

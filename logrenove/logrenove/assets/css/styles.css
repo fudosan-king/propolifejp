@@ -1903,8 +1903,9 @@ blockquote:before {
 .btn_online {
 	background: #3CBCCF;
 	color: #fff;
-	padding: 10px 15px;
 	font-size: 1em;
+	font-weight: 600;
+	padding: 15px 35px;
 }
 
 .btn_online:hover {

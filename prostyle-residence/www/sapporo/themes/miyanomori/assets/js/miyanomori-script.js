@@ -1,5 +1,16 @@
 function miyanomori() {
 
+    this.getDevice = function() {
+        const ua = navigator.userAgent;
+        if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+            return 'sp';
+        } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+            return 'tab';
+        } else {
+            return 'other';
+        }
+    };
+
     this.ready = function() {
         const _this = this;
         $(document).ready(function() {
@@ -12,9 +23,190 @@ function miyanomori() {
             _this.onOffContactForm();
             _this.hoverShowInfoPlanPage();
             _this.placeholderText();
+            _this.slickSlider();
+            _this.callBack();
+            _this.view360();
+            _this.interactiveImages();
         });
     }
 
+    this.interactiveImages = function(){
+        const _this = this;
+        $('#planvr-tab').on('shown.bs.tab', function (e) {
+            _this.calcInteractiveImages();
+        });
+        $(window).resize(function(){
+            _this.calcInteractiveImages();
+        });
+    }
+
+    this.calcInteractiveImages = function (){
+        const eleBoxImgVR = $('#planvr').find('.box_plan_detail_img');
+        const eleBoxImgVR_Img = $('#planvr').find('.box_plan_detail_img img');
+        const eleIconVR = $('#planvr').find('a i');
+        const w = $(window);
+
+        const posIconVR = [
+            {   name:'s301', 
+                l1:{top:138,left:334},
+                l2:{top:282,left:495},
+                l3:{top:500,left:585},
+            }
+        ];
+
+        if(eleBoxImgVR.offset() !== undefined) {
+            const eleBoxImgVR_Y = eleBoxImgVR.offset().top ?  eleBoxImgVR.offset().top : 0;
+            const eleBoxImgVR_X = eleBoxImgVR.offset().left ?  eleBoxImgVR.offset().left : 0;
+
+            const theImage = new Image();
+            theImage.src = eleBoxImgVR_Img.attr("src");
+            const realWidth = theImage.width;
+            const realHeight = theImage.height;
+            const eleBoxImgVR_Height = eleBoxImgVR.height();
+            const eleBoxImgVR_Width =  eleBoxImgVR.width();
+            const w_width = w.width();
+            const w_height = w.height();
+
+            const eleBoxImgVR_ChangeHeight = (realHeight - eleBoxImgVR_Height)/realHeight;
+            const eleBoxImgVR_ChangeWidth = (realWidth - eleBoxImgVR_Width)/realWidth;     
+
+            eleIconVR.each(function(i,ele){
+                const iconVR_Y = $(ele).offset().top;
+                const iconVR_X = $(ele).offset().left;
+                const originX_IconVR = parseInt( $(ele).css('left').replace('px','') );
+                const originY_IconVR = parseInt( $(ele).css('top').replace('px','') );
+
+                let keyPlan = $(ele).data('plan');
+                let posKeyPlan = keyPlan.indexOf('-');
+                let getKey = keyPlan.substring(0,posKeyPlan);
+               
+
+                const vrIntoBoxImg_Y = 138 - ( 138*eleBoxImgVR_ChangeHeight );
+                const vrIntoBoxImg_X = 334- ( 334*eleBoxImgVR_ChangeWidth );
+                            
+                console.log(vrIntoBoxImg_Y,vrIntoBoxImg_X,originX_IconVR,originY_IconVR);
+
+
+                $(ele).css({
+                    top: vrIntoBoxImg_Y,
+                    left: vrIntoBoxImg_X, 
+                });
+                // console.log(vrIntoBoxImg_Y,vrIntoBoxImg_X);
+            });
+        }
+    }
+
+    this.view360 = function() {
+        const _this = this;
+        const getDevice = _this.getDevice();
+        let speed = 0;
+        let imgX = 0;
+        let f_moveView = false;
+
+        if (getDevice == 'sp' || getDevice == 'tab') {
+            $('#btn_control_left').bind("touchstart", function() {
+                speed = 5;
+            });
+            $('#btn_control_left').bind("touchend", function() {
+                speed = 0;
+            });
+            $('#btn_control_right').bind("touchstart", function() {
+                speed = -5;
+            });
+            $('#btn_control_right').bind("touchend", function() {
+                speed = 0;
+            });
+
+            $('#block_carousel_view').bind("touchstart", function() {
+                f_moveView = false;
+                mouseDown = true;
+            });
+            $('.section.num2').bind('touchmove', function() {
+                mouseDownX = event.changedTouches[0].pageX;
+            });
+            $('#block_carousel_view').bind('touchmove', function() {
+                console.log(mouseDownX - event.changedTouches[0].pageX);
+                if (mouseDown && mouseDownX - event.changedTouches[0].pageX < 30 && mouseDownX - event.changedTouches[0].pageX > -30) {
+                    imgX = imgX + (mouseDownX - event.changedTouches[0].pageX) * -1;
+                    $('#block_carousel_view').css({ 'background-position': imgX + 'px ' + 0 + 'px' });
+                }
+            });
+            $('#block_carousel_view').bind("touchend", function() {
+                f_moveView = true;
+                mouseDown = false;
+            });
+
+        } else if (getDevice == 'other') {
+            $('#btn_control_left').hover(function() {
+                speed = 1.2;
+            }, function() {
+                speed = 0;
+            });
+            $('#btn_control_left').bind("dragend", function() {
+                speed = 0;
+            });
+            $('#btn_control_right').hover(function() {
+                speed = -1.2;
+            }, function() {
+                speed = 0;
+            });
+            $('#btn_control_right').bind("dragend", function() {
+                speed = 0;
+            });
+        }
+
+        f_moveView = true;
+        setInterval(function(){
+            if(f_moveView) {
+                imgX += speed;
+                $('#block_carousel_view').css({'background-position': imgX + 'px ' + 0 + 'px'});
+            }
+        }, 1);
+
+
+        $('#btn_day').on('click',function () {
+            $("#btn_night").removeClass('active');
+            $(this).addClass('active');
+            $("#block_carousel_view").addClass('carousel_view_day').removeClass('carousel_view_night');
+        });
+        
+        $('#btn_night').on('click',function () {
+            $("#btn_day").removeClass('active');
+            $(this).addClass('active');
+            $("#block_carousel_view").addClass('carousel_view_night').removeClass('carousel_view_day');
+        });
+
+    }
+
+    this.callBack = function(){
+        const _this = this;
+
+        $('#plandesign3-tab').on('shown.bs.tab', function (e) {
+            const $carousel = $('.carousel').flickity();
+            $carousel.flickity('destroy');
+            $carousel.flickity({'prevNextButtons': false});
+        });
+
+        $('#plandesign4-tab').on('shown.bs.tab', function (e) {
+            $('.ct-slider').slick('unslick');
+            $('.ct-slider').slick({
+                slidesToShow: 1,
+                infinite: true,
+                dots: true,
+                arrows: false,
+            });
+        });
+
+    }
+
+    this.slickSlider = function(){
+        $('.ct-slider').slick({
+            slidesToShow: 1,
+            infinite: true,
+            dots: true,
+            arrows: false,
+        });
+    }
 
     this.placeholderText = function (){
         $('textarea').on('input propertychange',function(e){
@@ -65,6 +257,11 @@ function miyanomori() {
                 }
             } else {
                 $('.box_infoview_content').removeClass('show');
+            }
+        });
+        $(window).resize(function(){
+            if( $(window).width() >= 992 ){
+                $('.section_plan .box_infoview_content .col-12.col-lg-5').removeAttr('style');
             }
         });
     }

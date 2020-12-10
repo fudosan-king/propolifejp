@@ -30,7 +30,6 @@
 .hidden {
   display: none;
 }
-
 .placeholder {
 	top:5px;
 	left:30px;
@@ -48,34 +47,19 @@
 }
 
 @media (max-width: 992px){
+	/*Menu*/
 	.header_sub .menu .menuLine{
 		background: #000;
 	}
-	/*Menu*/
 	.menu-show .header_sub,.menu-show .header_afterlogin {
 		position: fixed;
 		right:0;
 		left:0;
 		z-index: 9999;
 	}
-
-	.menu-show .logo_white{
-		display: none;
-	}
-
-	.menu-show .logo_black{
-		display: block;
-	}
-
-	.menu-show .bsnav-mobile .navbar{
-		padding-top: 102px;
-	}
 }
 
 @media (max-width: 768px){
-	.menu-show .bsnav-mobile .navbar{
-		padding-top: 117px;
-	}
 	.logged-in.menu-show .bsnav-mobile .navbar{
 		padding-top: 73px;
 	}
@@ -105,7 +89,14 @@
 	    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 	    -webkit-animation-iteration-count: infinite;
 	}
+	/*Slide*/
+    .before-login .slide-main .slideContent {
+        height: 100vh;
+    }
 
+    .before-login .slideContent .slide {
+        height: 100vh;
+    }
 	@-webkit-keyframes scrollBar1 {
 	    0% {
 	        bottom: 100px;
@@ -138,13 +129,5 @@
 	        bottom: -55px;
 	        height: 55px;
 	    }
-	}
-	/*Slide*/
-	.before-login .slide-main .slideContent{
-		height:100vh;
-	}
-
-	.before-login .slideContent .slide{
-		height:100vh;
 	}
 }

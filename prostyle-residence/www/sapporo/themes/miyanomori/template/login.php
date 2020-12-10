@@ -1,8 +1,8 @@
 <?php get_template_part( 'template/login/header'); ?>
 
-<section class="slide-main">
+<section class="slide-main before-login">
 
-    <div class="before-login slides">
+    <div class="slides">
         <div class="slideContent">
             <div class="slide slide-init js-slide" style="background-image: url(<?php bloginfo('template_directory');?>/assets/images/main/bg_top.jpg)">
             </div>
@@ -14,28 +14,23 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-12">
-                <a href="#modal_login" data-toggle="modal" class="box_designsupervision d-none d-lg-block" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
-                    <div class="row no-gutters">
-                        <div class="col-12 col-lg-8 align-self-center">
-                            <div class="box_designsupervision_content">
-                                <p>宮の森レジデンス 設計・監修</p>
-                                <img src="<?php bloginfo('template_directory');?>/assets/images/1x/text_kengokuma.png" alt="" class="img-fluid" width="249">
-                                <div class="box_designsupervision_img">
-                                    <img src="<?php bloginfo('template_directory');?>/assets/images/1x/text_interview.png" alt="" class="img-fluid" width="175">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4 align-self-center">
-                            <div class="box_designsupervision_img_right">
-                                <img src="<?php bloginfo('template_directory');?>/assets/images/1x/mr_kengo.jpg" alt="" class="img-fluid">
-                            </div>
+        <a href="#modal_login" data-toggle="modal" class="box_designsupervision" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+            <div class="row no-gutters">
+                <div class="col-8">
+                    <div class="box_designsupervision_content">
+                        <p>宮の森レジデンス 設計・監修</p>
+                        <div class="box_designsupervision_img">
+                            <img src="<?php bloginfo('template_directory');?>/assets/images/main/logo-interview-2x.png" alt="" class="img-fluid">
                         </div>
                     </div>
-                </a>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="box_designsupervision_img_right">
+                        <img src="<?php bloginfo('template_directory');?>/assets/images/1x/mr_kengo.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
     <div class="news notlogin">

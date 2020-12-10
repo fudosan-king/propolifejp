@@ -1,71 +1,107 @@
 <?php
 /* 
-Template Name: Plan Detail
+Template Name: Plan Detail 1
 Template Post Type: page
 */
 ?>
 <?php get_header(); ?>
-<?php get_template_part( 'template/home/header'); ?>
+<?php get_template_part( 'template/home/header2'); ?>
 <main>
     <section class="section_plan_detail">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-12">
-                    <div class="box_plan_detail_top">
-                        <h1><span>S201</span>/2LDK</h1>
+            <div class="box_plan_detail_top">
+                <h1><span>S301</span>/2LDK</h1>
+                <div class="row no-gutters">
+                    <div class="col-12 col-lg-5 align-self-center">
+                        <h2 class="title">おだやかに、解き放たれる</h2>
+                    </div>
+                    <div class="col-12 col-lg-7 align-self-center">
+                        <p>大きなガラス越しに望む自然の大借景、清々しく空に抜けていくガラスの吹き抜け。<br>｢プロスタイル宮の森｣でもっとも贅を尽くした一室は、<br>
+                            どこにいても開放感溢れる極上の空間です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box_plan_detail_body">
+                <div class="box_plan_detail_body_top">
+                    <div class="box_infoview_content">
                         <div class="row no-gutters">
-                            <div class="col-12 col-lg-5 align-self-center">
-                                <h2 class="title">おだやかに、解き放たれる</h2>
+                            <div class="col-12 col-lg-6 align-self-center">
+                                <h2>専有面積 <span class="number">176</span><span class="sub_number">.65㎡</span>［約53.43坪］<br>
+                                    テラス面積 49.48㎡［約14.96坪］</h2>
                             </div>
-                            <div class="col-12 col-lg-7 align-self-center">
-                                <p>大きなガラス越しに望む自然の大借景、清々しく空に抜けていくガラスの吹き抜け。<br>｢プロスタイル宮の森｣でもっとも贅を尽くした一室は、<br>
-                                    どこにいても開放感溢れる極上の空間です。</p>
+                            <div class="col-12 col-lg-6 align-self-center">
+                                <div class="box_infoview_img">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/images/main/S201-2d.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#modal_video" data-toggle="modal" class="see_video hide-mobile">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/3D_img.png" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="tabs-center-u-shaped">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true"><i class="i-house-plan"></i>間取り</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="plandetail-tab" data-toggle="tab" href="#plandetail" role="tab" aria-controls="plandetail" aria-selected="false"><i class="i-armchair"></i>家具の配置イメージ</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="planvr-tab" data-toggle="tab" href="#planvr" role="tab" aria-controls="planvr" aria-selected="false"><i class="i-webcam"></i>室内VR</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="plandesign" role="tabpanel" aria-labelledby="plandesign-tab">
+                            <div class="box_plan_detail_img">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/plan-detail-s301.png" alt="" class="img-fluid">
+                                <p class="compass"><i class="i-compass"></i></p>
+                            </div>
+                            <p class="text-center btn-find"><a href="#" class="btn btnEnlarge"><i class="i_search"></i> <span>図面を拡大する</span></a></p>
+                        </div>
+                        <div class="tab-pane fade" id="plandetail" role="tabpanel" aria-labelledby="plandetail-tab">
+                            <div class="box_plan_detail_img">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/plan-2d-s301.png" alt="" class="img-fluid">
+                                <p class="compass"><i class="i-compass"></i></p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="planvr" role="tabpanel" aria-labelledby="planvr-tab">
+                            <div class="box_plan_detail_img">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/vr-s301.png" alt="" class="img-fluid">
+                                <a href="#" tilte=""><i data-plan="s301-l1" class="vr-l vr-s301-l1"></i></a>
+                                <a href="#" tilte=""><i data-plan="s301-l2" class="vr-l vr-s301-l2"></i></a>
+                                <a href="#" tilte=""><i data-plan="s301-l2" class="vr-l vr-s301-l3"></i></a>
+                                <p class="compass"><i class="i-compass"></i></p>
                             </div>
                         </div>
                     </div>
-                    <div class="box_plan_detail_body">
-                        <div class="box_plan_detail_body_top">
-                            <div class="box_infoview_content">
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-lg-6 align-self-center">
-                                        <h2>専有面積 <span class="number">129</span><span class="sub_number">.39㎡</span>［約39.14坪］<br>
-                                            テラス面積 52.00㎡［約15.73坪］<br>
-                                            プライベートガーデン面積 113.23㎡［約34.25坪］</h2>
-                                    </div>
-                                    <div class="col-12 col-lg-6 align-self-center">
-                                        <div class="box_infoview_img">
-                                            <img src="<?php bloginfo('template_directory');?>/assets/images/1x/view_inside02.png" alt="" class="img-fluid w-100">
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#modal_video" data-toggle="modal" class="see_video">
-                                    <img src="<?php bloginfo('template_directory');?>/assets/images/1x/3D_img.png" alt="" class="img-fluid" width="253">
-                                </a>
+                </div>
+            </div>
+            <div class="box_plan_detail_footer">
+                <div class="vr-3d show-mobile hide-pc">
+                    <div class="vr-3d_img">
+                        <a href="#" title="">
+                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/main/3r-vr-img.jpg" alt="" title="">
+                        </a>
+                    </div>
+                    <a class="btn btn-find"><i class="i-find-zoom"></i>テラスからの眺望を体験する</a>
+                </div>
+                <div class="box_infoview_content">
+                    <div class="row no-gutters">
+                        <div class="col-12 col-lg-5">
+                            <div class="box_plan_detail_footer_content">
+                                <h1><span>S301</span>/3LDK</h1>
+                                <p>ご覧になりたいプランをタップしてください。<br>
+                                    プラン詳細をご覧いただけます</p>
                             </div>
                         </div>
-                        <div class="box_plan_detail_img">
-                            <img src="<?php bloginfo('template_directory');?>/assets/images/1x/plan_detail.png" alt="" class="img-fluid">
-                        </div>
-                        <p class="text-center mb-0"><a href="#" class="btn btnEnlarge"><i class="i_search"></i> <span>図面を拡大する</span></a></p>
-                    </div>
-                    <div class="box_plan_detail_footer">
-                        <div class="box_infoview_content">
-                            <a href="/S901-1LDK-S" title="">
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="box_plan_detail_footer_content">
-                                            <h1><span>S901</span>/1LDK＋S</h1>
-                                            <p>ご覧になりたいプランをタップしてください。<br>
-                                                プラン詳細をご覧いただけます</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-7">
-                                        <div class="box_infoview_img">
-                                            <img src="<?php bloginfo('template_directory');?>/assets/images/1x/view_inside03.png" alt="" class="img-fluid w-100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="col-12 col-lg-7">
+                            <div class="box_infoview_img">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/S201-2d.png" alt="" class="img-fluid">
+                            </div>
                         </div>
                     </div>
                 </div>

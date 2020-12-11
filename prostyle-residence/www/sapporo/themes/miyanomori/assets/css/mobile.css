@@ -142,18 +142,18 @@
     .bsnav-mobile .navbar-nav.lang {
         position: absolute;
         top: 100px;
-        right: 0;
+        right: 20px;
         width: -webkit-max-content;
         width: -moz-max-content;
         width: max-content;
     }
 
-    .bsnav-mobile .navbar-nav.lang .nav-link {
+    .bsnav-mobile .navbar .navbar-nav.lang .nav-item .nav-link {
         margin-bottom: 0;
     }
 
     .bsnav-mobile .navbar-nav.lang .nav-item {
-        padding: 0 9px;
+        padding: 0;
     }
 
     .bsnav-mobile .navbar-nav.lang .nav-item:last-child:before {
@@ -161,14 +161,18 @@
     }
 
     .bsnav-mobile .navbar-nav.lang .nav-item:last-child ul {
-        padding-left: 5px;
+        padding-left: 0;
+        padding-top: 0;
+        padding-right: 0;
+        margin-right: 0;
+        margin-left: 0;
     }
 
-    .bsnav-mobile .navbar-nav:first-of-type .nav-item:nth-child(6) {
+    .bsnav-mobile .navbar-nav:first-of-type .nav-item:nth-child(7) {
         position: relative;
     }
 
-    .bsnav-mobile .navbar-nav:first-of-type .nav-item:nth-child(6):before {
+    .bsnav-mobile .navbar-nav:first-of-type .nav-item:nth-child(7):before {
         position: absolute;
         background-color: #fff;
         background-repeat: no-repeat;
@@ -308,7 +312,6 @@
     }
 
     .close {
-        top: -50px;
         right: 10px;
     }
 
@@ -1138,7 +1141,7 @@
         padding-top: 70px;
     }
 
-    .bsnav-mobile .navbar .navbar-nav:not(.lang) .nav-item .nav-link {
+    .bsnav-mobile .navbar .navbar-nav .nav-item .nav-link {
         font-size: 0.875rem;
         margin-bottom: 15px;
     }
@@ -1219,6 +1222,8 @@
     .frm_login .frm_login_bottom h4 {
         margin-top: 30px;
         font-size: 0.875rem;
+        padding: 0 10px;
+        letter-spacing: -0.5px;
     }
 
     .frm_login .frm_login_bottom h4 span {
@@ -1248,6 +1253,16 @@
 
     .section_places .box_born {
         margin-top: 50px;
+    }
+
+    .equip-spec_box .col-md-4{
+        padding-right:15px;
+        padding-left:15px;
+    }
+
+    .equip-spec_box_items .col-md-8{
+        padding-left:15px;
+        padding-right:15px;
     }
 
     .section_access {
@@ -1544,9 +1559,21 @@
 }
 
 @media (max-width: 425px) {
-  /*Slide*/
+    .vr-l{
+        max-width: 20px;
+    }
+    /*Slide*/
+    .box_designsupervision .box_designsupervision_content {
+        padding: 20px 0 40px 20px;
+    }
+
     .box_designsupervision .box_designsupervision_content p {
         font-size: 0.75rem;
+    }
+
+    .box_designsupervision .box_designsupervision_content .box_designsupervision_img {
+        top: 48px;
+        left: 20px;
     }
 
     .box_designsupervision {
@@ -1665,6 +1692,13 @@
 }
 
 @media (max-width: 320px) {
+    .box_designsupervision .box_designsupervision_content {
+        padding: 10px 0 40px 20px;
+    }
+    .box_designsupervision .box_designsupervision_content .box_designsupervision_img {
+        top:38px;
+    }
+
     .title {
         font-size: 1.5rem;
     }

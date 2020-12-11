@@ -142,21 +142,16 @@ class PPL_Plan {
 		<div class="ppl-plan-meta-section">
 			<div class="form-wrap">
 				<div class="form-field">
-					<label for="ppl_plan"><?php _e('Image/Video URL', 'ppl_plan_context')?></label>
-					<input type="text" id="ppl_plan" name="ppl_plan" value="<?php echo htmlspecialchars($this->ppl_plan_get_meta('ppl-plan')); ?>" style="width:70%;" />
-					<a id="ppl_plan_media_lib" href="javascript:void(0);" class="button" rel="ppl_plan">URL from Media Library</a>
-					<p><?php _e('Enter URL for the full-size image or video (youtube, vimeo, swf, quicktime) you want to display in the lightbox gallery. You can also choose Image URL from your Media gallery', 'ppl_plan_context')?></p>
+					<label for="ppl_plan"><?php _e('Apartment code', 'ppl_plan_context')?></label>
+					<input type="text" id="ppl_plan" name="ppl_plan" value="<?php echo htmlspecialchars($this->ppl_plan_get_meta('ppl-plan')); ?>" style="width:70%;" />	
 				</div>            
-				<div class="form-field">
-					<label for="ppl_plan_url"><?php _e('PPL Plan URL', 'ppl_plan_context')?></label>
-					<input type="text" name="ppl_plan_url" value="<?php echo htmlspecialchars($this->ppl_plan_get_meta('ppl-plan-url')); ?>" />
-					<p><?php _e('Enter URL to the live version of the project.', 'ppl_plan_context')?></p>
-				</div>   
-
+				<!-- <div class="form-field">
+					<label for="ppl_plan_url"><?php //_e('PPL Plan URL', 'ppl_plan_context')?></label>
+					<input type="text" name="ppl_plan_url" value="<?php //echo htmlspecialchars($this->ppl_plan_get_meta('ppl-plan-url')); ?>" />
+				</div>    -->
 				<?php
-					require_once( WDP_TEMPLATE.DIRECTORY_SEPARATOR."admin".DIRECTORY_SEPARATOR."slideshow.php" );
+					//require_once( WDP_TEMPLATE.DIRECTORY_SEPARATOR."admin".DIRECTORY_SEPARATOR."slideshow.php" );
 				?>
-				
 			</div>
 			<input type="hidden" name="ppl_plan_noncename" id="ppl_plan_noncename" value="<?php echo wp_create_nonce(plugin_basename(__FILE__)); ?>" />
 		</div>
@@ -328,8 +323,8 @@ class PPL_Plan {
 	}
 	
 	public function ppl_plan_create_section() {
-		//add_meta_box('ppl-plan-section-options', __('Options', 'ppl_plan_context'), array($this,'ppl_plan_section_options') , 'ppl_plan', 'normal', 'high');
-		//add_meta_box('ppl-plan-section-options', __('Options', 'ppl_plan_context'), array($this,'ppl_plan_section_options') , 'ppl_plan', 'normal', 'high');
+		add_meta_box('ppl-plan-section-options', __('Options', 'ppl_plan_context'), array($this,'ppl_plan_section_options') , 'ppl_plan', 'normal', 'high');
+		add_meta_box('ppl-plan-section-options', __('Options', 'ppl_plan_context'), array($this,'ppl_plan_section_options') , 'ppl_plan', 'normal', 'high');
 	}
 
 

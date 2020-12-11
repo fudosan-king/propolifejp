@@ -442,14 +442,15 @@
             is_page('events/thanks')
         );
         $is_event_detail = (is_single() && get_post_type($post->ID) == 'events');
-        if($is_event_detail || $mdsmaf_m_v_condition) {
+        if(is_page('counter') || $is_event_detail || $mdsmaf_m_v_condition) {
             $header_extend_script .= "
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({‘gtm.start’:
-new Date().getTime(),event:‘gtm.js’});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src=
-’https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXQJ38M');</script>";
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGH3X2H');</script>
+<!-- End Google Tag Manager -->";
         }
         if($mdsmaf_m_v_condition) {
             $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -466,20 +467,22 @@ j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src
 
     function add_extra_body_script(){
         global $post;
-        $body_extend_script = get_field('body_extend_script', 'option');
+        $body_extend_script = '';
         $mdsmaf_m_v_condition = (
             is_page('booking-completed') || 
             (is_page('signup') && isset($_GET['action']) && ($_GET['action']=='confirm' || $_GET['action']=='active')) || 
             is_page('events/thanks')
         );
         $is_event_detail = (is_single() && get_post_type($post->ID) == 'events');
-        if($is_event_detail || $mdsmaf_m_v_condition) {
+        if(is_page('counter') || $is_event_detail || $mdsmaf_m_v_condition) {
             $body_extend_script .= '
 <!-- Google Tag Manager (noscript) --> 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXQJ38M" 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGH3X2H" 
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
-<!-- End Google Tag Manager (noscript) -->';
+<!-- End Google Tag Manager (noscript) -->
+';
         }
+        $body_extend_script .= get_field('body_extend_script', 'option');
         echo $body_extend_script;
     }
     add_action( 'body_extra_script', 'add_extra_body_script');

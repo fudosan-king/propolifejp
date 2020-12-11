@@ -41,8 +41,7 @@ Template Post Type: page
                         </div>
                         <div class="col-12 col-lg-6 align-self-center">
                             <p>春夏はBBQ、秋冬はストーブを携えた天体観測も。<br>
-                            居住空間にいながら大自然を味わえる、視界を遮るものの<br>
-                            ない開放感溢れるルーフトップバルコニー。</p>
+                            居住空間にいながら大自然を味わえる、視界を遮るもののない開放感溢れるルーフトップバルコニー。</p>
                         </div>
                     </div>
                 </div>
@@ -131,7 +130,7 @@ Template Post Type: page
                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equi05.jpg" alt="" class="img-fluid border-bottom">
                         </div>
                     </div>
-                    <a href="#" class="btn btn-equip">共用サービスをを見る</a>
+                    <a href="<?php echo home_url('/equipment-specific/')?>" class="btn btn-equip">共用サービスを見る</a>
                 </div>
             </div>
 
@@ -159,7 +158,7 @@ Template Post Type: page
                 <div class="box_equipment_info_top">
                     <div class="row">
                         <div class="col-12 col-lg-6 align-self-center">
-                            <h2>リフレッシュしながら<span class="block-pc">自分と向き合う時間を楽しむフットネスルーム</span></h2>
+                            <h2>リフレッシュしながら<span class="block-pc">自分と向き合う時間を楽しむフィットネスルーム</span></h2>
                         </div>
                         <div class="col-12 col-lg-6 align-self-center">
                             <p>入居者専用のフィットネスルームでは、備え付けのフィットネスマシンが利用できます。日常的に運動を取り入れ、体力づくりやリフレッシュを、時間や天気を気にすることなく楽しめます。</p>
@@ -169,7 +168,7 @@ Template Post Type: page
                 <div class="equipment-img">
                     <img src="<?php bloginfo('template_directory');?>/assets/images/main/equi07.jpg" alt="" class="img-fluid">
                 </div>
-                <a href="#" class="btn btn-equip">共用施設を見る</a>
+                <a href="<?php echo home_url('/equipment-specific/')?>" class="btn btn-equip">共用施設を見る</a>
             </div>
 
             <div class="box_equipment_info clearfix">
@@ -188,7 +187,7 @@ Template Post Type: page
                 <div class="equipment-img">
                     <img src="<?php bloginfo('template_directory');?>/assets/images/main/equi08.jpg" alt="" class="img-fluid">
                 </div>
-                <a href="#" class="btn btn-equip">共用施設を見る</a>
+                <a href="<?php echo home_url('/equipment-specific/')?>" class="btn btn-equip">共用施設を見る</a>
             </div>
 
         </div>

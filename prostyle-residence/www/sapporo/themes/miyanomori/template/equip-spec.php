@@ -52,7 +52,7 @@ Template Post Type: page
                         <div class="equip-spec">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a rel="#斜行エレベータ" class="nav-link" id="">斜行エレベータ</a>
+                                    <a rel="#斜行エレベーター" class="nav-link" id="">斜行エレベーター</a>
                                 </li>
                                 <li class="nav-item">
                                     <a rel="#フィットネスルーム" class="nav-link" id="">フィットネスルーム</a>
@@ -88,7 +88,7 @@ Template Post Type: page
                         </div>
                         <div id="フィットネスルーム" class="equip-spec_box inclined">
                             <h4>フィットネスルーム</h4>
-                            <p class="equip-spec_box-title">リフレッシュしながら自分と向き合う時間を楽しむフットネスルーム</p>
+                            <p class="equip-spec_box-title">リフレッシュしながら自分と向き合う時間を楽しむフィットネスルーム</p>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="equip-spec_box_img">

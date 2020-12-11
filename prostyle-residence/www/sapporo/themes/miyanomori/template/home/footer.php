@@ -26,7 +26,7 @@
                         <i class="i_circle"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_tel.svg" alt="" class="img-fluid" width="17"></i>
                     </p>
                     <h5>お電話でのお問い合わせ</h5>
-                    <h3>Tel. <a href="tel:0000000000">0000-00-0000</a></h3>
+                    <h3>Tel. <a href="tel:0120853133">0120-853-133</a></h3>
                     <p>スタッフ受付 10:00 - 19:00</p>
                 </div>
             </div>

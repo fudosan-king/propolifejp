@@ -73,7 +73,7 @@ Template Post Type: page
                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/vr-s301.png" alt="" class="img-fluid">
                                 <a href="#" tilte=""><i data-plan="s301-l1" class="vr-l vr-s301-l1"></i></a>
                                 <a href="#" tilte=""><i data-plan="s301-l2" class="vr-l vr-s301-l2"></i></a>
-                                <a href="#" tilte=""><i data-plan="s301-l2" class="vr-l vr-s301-l3"></i></a>
+                                <a href="#" tilte=""><i data-plan="s301-l3" class="vr-l vr-s301-l3"></i></a>
                                 <p class="compass"><i class="i-compass"></i></p>
                             </div>
                         </div>

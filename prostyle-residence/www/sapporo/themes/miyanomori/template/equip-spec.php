@@ -27,7 +27,7 @@ Template Post Type: page
         </div>
     </section>
     <main>
-        <section class="section_plan">
+        <section class="section_equip-spec">
             <div class="container">
                <div class="tabs-center-u-shaped">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -239,7 +239,6 @@ Template Post Type: page
                                         <p class="equip-spec_box-title">ダブルロック仕様ディンプルキー</p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-t-15.png" alt="" title="">
-                                            <span>参考写真</span>
                                         </div>
                                         <p class="equip-spec_box-des">防犯性を高めるため、玄関ドアには上下2ヶ所で施錠できるダブルロック仕様を採用しました。また、玄関キーはピッキングなどの不正解錠への対応を強化したリバーシブルタイプのディンプルキーを採用しています。不正に解錠しようとしても時間がかかるため、犯罪の未遂率が高まります。</p>
                                     </div>
@@ -325,7 +324,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-title">整流板付レンジフード</p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-4.jpg" alt="" title="">
-                                            <span class="txt-black">参考写真</span>
+                                            <span>参考写真</span>
                                         </div>
                                         <p class="equip-spec_box-des">フィルターレス仕様で面倒なフィルター掃除も不要。清潔感のあるつぎ目のないシャープな一体フォルム。</p>
                                     </div>
@@ -520,13 +519,13 @@ Template Post Type: page
                             <h4>敷地配置図</h4>
                             <div class="ct-slider floor-plans">
                                 <div class="ct-slider_item">
-                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-2.jpg" class="img-fluid" alt="" title="" >
+                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/plan-floor-1-2.png" class="img-fluid" alt="" title="" >
                                 </div>
                                 <div class="ct-slider_item">
-                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-2.jpg" class="img-fluid" alt="" title="" >
+                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/plan-floor-1-2.png" class="img-fluid" alt="" title="" >
                                 </div>
                                 <div class="ct-slider_item">
-                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-2.jpg" class="img-fluid" alt="" title="" >
+                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/plan-floor-1-2.png" class="img-fluid" alt="" title="" >
                                 </div>
                             </div>
                         </div>

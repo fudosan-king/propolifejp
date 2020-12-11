@@ -502,22 +502,22 @@ ul.list_global li.active span {
     background: #000;
 }
 
-.header_sub .navbar-nav .nav-item:nth-child(7) .nav-link {
+.header_sub .navbar-nav .nav-item:nth-child(8) .nav-link {
     font-size: 1em;
     border-left: 1px solid #000;
     padding-left: 15px;
 }
 
-.header_sub .navbar-nav .nav-item:nth-child(7) .nav-link:hover::after {
+.header_sub .navbar-nav .nav-item:nth-child(8) .nav-link:hover::after {
     display: none;
 }
 
-.header_sub .navbar-nav .nav-item:nth-child(8) .nav-link {
+.header_sub .navbar-nav .nav-item:nth-child(9) .nav-link {
     border: 1px solid #000;
     padding: 0 10px;
 }
 
-.header_sub .navbar-nav .nav-item:nth-child(8) .nav-link:hover::after {
+.header_sub .navbar-nav .nav-item:nth-child(9) .nav-link:hover::after {
     display: none;
 }
 
@@ -643,6 +643,11 @@ ul.list_global li.active span {
     color: #F0ECE9;
 }
 
+
+.bsnav-has-right-sidebar .bsnav-sidebar-right, .nav-item.dropdown.dropdown-right>.navbar-nav{
+    right: -9px;
+}
+
 /* section_topbanner */
 .section_topbanner {
     height: 100vh;
@@ -713,7 +718,7 @@ ul.list_global li.active span {
 }
 
 .box_designsupervision .box_designsupervision_content {
-    padding: 20px 0 40px 20px;
+    padding: 30px 0 40px 30px;
     color: #fff;
     position: relative;
     z-index: 1;
@@ -725,20 +730,17 @@ ul.list_global li.active span {
 
 .box_designsupervision .box_designsupervision_content .box_designsupervision_img {
     position: absolute;
-    top: 44px;
-    left: -18px;
+    top: 60px;
+    left: 30px;
     width: 100%;
 }
 
-.box_designsupervision .box_designsupervision_content .box_designsupervision_img img {
-    position: absolute;
-    z-index: 100;
-    top: 5px;
-    right: -40px;
-}
+
 
 .box_designsupervision .box_designsupervision_img_right {
     z-index: -1;
+    max-width: 150px;
+    margin-left:auto;
 }
 
 .scroll_down {
@@ -1398,8 +1400,8 @@ footer address p {
     color: #fff;
     opacity: 1;
     position: absolute;
-    top: 60px;
-    right: -30px;
+    top: 0;
+    right: 0;
     text-shadow: none;
 }
 
@@ -1454,6 +1456,7 @@ footer address p {
 
 .frm_login .frm_login_bottom h4 {
     margin-top: 50px;
+    padding:0 50px;
 }
 
 .frm_login .frm_login_bottom .frm_login_bottom_content {
@@ -1537,7 +1540,7 @@ footer address p {
     color: #fff;
     background: #144686;
 }
-
+/*Equipment*/
 .section_equipment .box_interview_banner {
     margin-top: 100px;
 }
@@ -1591,6 +1594,16 @@ footer address p {
     border-left: none;
 }
 
+.box_equipment_info:nth-child(9) .box_equipment_info_top .row > .col-12,
+.box_equipment_info:last-child .box_equipment_info_top .row > .col-12{
+    padding-right: 0;
+}
+
+.box_equipment_info:nth-child(9) p,
+.box_equipment_info:last-child p{
+    padding-left: 20px;
+    letter-spacing: -0.5px;
+}
 /*Interview Kengo Kuma*/
 .section_kengokuma_architect {
     padding: 0 0 289px;
@@ -1713,7 +1726,11 @@ footer address p {
 }
 
 .section_access .box_map_img {
-    margin-bottom: 30px;
+    background-image:url('../images/1x/img_map.jpg');
+    background-repeat:no-repeat;
+    background-position: 4% center;
+    height:480px;
+    margin-bottom:30px;
 }
 
 .section_access .box_map_info-img {
@@ -3532,7 +3549,7 @@ i.chevron-left {
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
-    padding-right: 45px;
+    padding-right: 30px;
 }
 
 .box_equipment_info .btn-equip {
@@ -3976,6 +3993,9 @@ i.chevron-left {
 
 .ct-slider.floor-plans .ct-slider_item {
     margin-left: 18px;
+}
+.ct-slider.floor-plans .ct-slider_item:focus{
+    outline:none;
 }
 
 .ct-slider.floor-plans ul {

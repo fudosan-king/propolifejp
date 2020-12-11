@@ -157,10 +157,12 @@ Template Post Type: page
             <div class="box_equipment_info clearfix">
                 <div class="box_equipment_info_top">
                     <div class="row">
-                        <div class="col-12 col-lg-6 align-self-center">
-                            <h2>リフレッシュしながら<span class="block-pc">自分と向き合う時間を楽しむフィットネスルーム</span></h2>
+
+                        <div class="col-12 col-lg-5 align-self-center">
+                            <h2>リフレッシュしながら<span class="block-pc">自分と向き合う時間を楽しむフットネスルーム</span></h2>
+
                         </div>
-                        <div class="col-12 col-lg-6 align-self-center">
+                        <div class="col-12 col-lg-7 align-self-center">
                             <p>入居者専用のフィットネスルームでは、備え付けのフィットネスマシンが利用できます。日常的に運動を取り入れ、体力づくりやリフレッシュを、時間や天気を気にすることなく楽しめます。</p>
                         </div>
                     </div>
@@ -174,10 +176,10 @@ Template Post Type: page
             <div class="box_equipment_info clearfix">
                 <div class="box_equipment_info_top">
                     <div class="row">
-                        <div class="col-12 col-lg-6 align-self-center">
+                        <div class="col-12 col-lg-5 align-self-center">
                             <h2>愛車を守る、<span class="block-pc">リモコン自動ゲート付き<br>屋内平面駐車場</span></h2>
                         </div>
-                        <div class="col-12 col-lg-6 align-self-center">
+                        <div class="col-12 col-lg-7 align-self-center">
                             <p>本物件にはリモコン自動ゲート付きの屋内平面駐車場を採用しています。<br>
                                 天候の影響を受けにくく、北海道の積雪から大切な愛車を守ります。<br>
                                 また、自動ゲートの設置によりセキュリティ面でも安心してご利用頂けます。</p>

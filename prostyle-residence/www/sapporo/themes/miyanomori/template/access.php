@@ -16,9 +16,7 @@ Template Post Type: page
                 <div class="col-12 col-lg-12">
                     <div class="box_map">
                         <h2 class="title">生活利便性と、古き良き情緒も味わえる<br>｢宮の森｣の魅力</h2>
-                        <div class="box_map_img">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/img_map.jpg" alt="" class="img-fluid">
-                        </div>
+                        <div class="box_map_img"></div>
                         <div class="row">
                             <div class="box_map_info-img">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/info-img.jpg" class="img-fluid" alt="" title="">
@@ -38,7 +36,7 @@ Template Post Type: page
                             <div class="info_location">
                                 <p>当物件に関するお問い合わせは</p>
                                 <h4>コンセプトルーム</h4>
-                                <p class="address"></p>
+                                <p class="address">&nbsp</p>
                                 <p>-営業時間／10：00～18：00<br>
                                     -定休日／水・木曜日（祝祭日は通常営業しております）<br>
                                     -携帯電話・PHSからもご利用いただけます。</p>

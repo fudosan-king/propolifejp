@@ -79,7 +79,7 @@
             </form>
             <form  method="post" class="frm_login" id="frm_regiter" >
                 <div class="frm_login_bottom">
-                    <h4>まだ物件エントリーされていない方は<span>下記よりエントリーください。</span>
+                    <h4>まだ物件エントリーされていない方は<span>下記よりエントリーください。</span><br>
                     <span>限定サイトへのログインパスワードをお送りします。</span></h4>
                     <p class="status"></p>
                     <div class="frm_login_bottom_content">

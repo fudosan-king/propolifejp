@@ -1722,4 +1722,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     add_filter('jpeg_quality', function($arg){return 100;});
     add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
+
+    /* http://redmine.fudosan-king.jp/issues/7753 */
+
+    function get_homepage_posts($homepage_setting = 'useful_content') {
+        global $detect;
+        $homepage_posts = get_field($homepage_setting, 'option');
+        if(count($homepage_posts)) {
+            $posts = array();
+            foreach ($homepage_posts as $key => $homepage_post) {
+                $homepage_post = $homepage_post['post'];
+                $obj = new stdClass();
+                $obj->ID = $homepage_post->ID;
+                $obj->title = $homepage_post->post_title;
+                $_size = $detect->isMobile() ? 'sidebar-pc' : 'sidebar-pc' ;
+                $thumbnails = new ThumbnailItem(get_post_thumbnail_id($homepage_post), $_size);
+                $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
+                $obj->permalink = get_permalink($homepage_post);
+                if($homepage_setting=='homepage_events') {
+                    $obj->categories = get_the_terms($obj->ID, 'event_category');
+                }
+                else {
+                    $obj->categories = (!empty(get_the_category($homepage_post)) && count(get_the_category($homepage_post))) ?get_the_category($homepage_post) :array();
+                }
+                $obj->description = $homepage_setting=='homepage_events'?get_field('event_description', $obj->ID):'';
+                $posts[] = $obj;
+            }
+            $posts = $detect->isMobile()&&$homepage_setting=='useful_content'?array_slice($posts, 0, 10):$posts;
+            return $posts;
+        }
+        return false;
+    }
 ?>

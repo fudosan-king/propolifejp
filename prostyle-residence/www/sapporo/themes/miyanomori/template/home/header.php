@@ -22,10 +22,10 @@
             <ul class="navbar-nav navbar-mobile mr-0">
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">宮の森で暮らすということ</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">デザイン</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン・眺望</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment-specification/'); ?>">設備仕様・構造</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
                 <li class="nav-item js-menuAnimation hide-mobile"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
                 <li class="nav-item js-menuAnimation hide-mobile"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>">ログアウト</a></li>

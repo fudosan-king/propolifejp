@@ -449,10 +449,6 @@
         margin-bottom: 60px;
     }
 
-    #plandesign .equip-spec_box .equip-spec_box-title, #plandesign2 .equip-spec_box .equip-spec_box-title {
-        font-size: 0.8rem;
-    }
-
     .menu-show .bsnav-sticky.bsnav-sticky-slide.sticked.in .logo_white {
         display: block;
     }
@@ -1113,8 +1109,23 @@
         padding-right: 30px;
     }
 
-    .equip-spec_box.inclined .col-md-8 p, .equip-spec_box.inclined .col-md-4 p {
+    .equip-spec_box .equip-spec_box-title{
+        font-size: 0.875rem;
+    }
+
+    .equip-spec_box.inclined .col-md-8 p, .equip-spec_box.inclined .col-md-4 .p-right {
         padding-left: 0;
+        padding-right: 0;
+    }
+
+    .equip-spec_box_items .col-md-8 .row{
+        margin-left:-15px;
+        margin-right: -15px;
+    }
+
+    .equip-spec_box_items .col-md-8 .col-md-6{
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .scroll_down {

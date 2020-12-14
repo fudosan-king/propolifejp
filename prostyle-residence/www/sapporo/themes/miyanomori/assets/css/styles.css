@@ -66,6 +66,11 @@ button:focus {
     text-shadow: none;
 }
 
+button span,a span,h4 span {
+    position: relative;
+    top:2px;
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -1870,6 +1875,15 @@ footer address p {
 .section_plan .tabs-center-u-shaped ul.nav-tabs li.nav-item {
     max-width: 345px;
 }
+.section_plan .tabs-center-u-shaped ul.nav-tabs li.nav-item a.nav-link.active {
+    top: -8px;
+}
+.section_plan .tabs-center-u-shaped ul.nav-tabs li.nav-item a.nav-link{
+    padding: 14px 0px;
+}
+.section_plan .tabs-center-u-shaped ul.nav-tabs::after{
+    bottom: 6px;
+}
 
 .embed-responsive {
     padding-top: 150px;
@@ -2234,37 +2248,6 @@ footer address p {
     border-bottom: none;
 }
 
-.outline .row {
-    align-items: center;
-    justify-content: center;
-}
-
-.outline .col-1 {
-    writing-mode: horizontal-tb;
-    vertical-align: middle;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.outline .list_global {
-    display: flex;
-    writing-mode: vertical-rl;
-    transform: rotate(-180deg);
-}
-
-.outline .col-1 ul.list_global li span::after{
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    right: 19px;
-    margin: auto;
-    width: 1px;
-    height: 10px;
-    background: #828282;
-    transform: rotate(-90deg);
-    top:unset;
-}
 
 .section_plan_detail {
     background: #F0ECE9;
@@ -3382,7 +3365,6 @@ figure {
 .equip-spec_box h4 {
     font-weight: 600;
     font-size: 1.125rem;
-    line-height: 1.40;
     color: #FFFFFF;
     background-color: #B48856;
     display: flex;
@@ -3406,12 +3388,13 @@ figure {
 .equip-spec_box .equip-spec_box-title {
     font-weight: 600;
     font-size: 1.125rem;
-    line-height: 1.40;
-    margin-bottom: 0;
+    height: 40px;
+    line-height: 1.6em;
     position: relative;
     padding: 7.5px 0;
     text-align: left;
     margin-bottom: 10px;
+    color:#333333;
 }
 
 .equip-spec_box .equip-spec_box-title:before, .equip-spec_box .equip-spec_box-title:after {
@@ -3450,7 +3433,7 @@ figure {
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.80;
-    color: #000000;
+    color: #333333;
     margin-bottom: 0;
 }
 
@@ -3788,19 +3771,6 @@ i.chevron-left {
     border-right: 1px solid #B48856;
 }
 
-.equip-spec_box h4 {
-    font-weight: 600;
-    font-size: 1.125rem;
-    line-height: 1.40;
-    color: #FFFFFF;
-    background-color: #B48856;
-    display: flex;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 43px;
-}
-
 .equip-spec_box {
     margin-bottom: 90px;
 }
@@ -3844,6 +3814,7 @@ i.chevron-left {
     width: 223px;
     vertical-align: middle;
     padding: 10px 30px;
+    border-right: 0.5px solid #828282;
 }
 
 .equip-spec_box .outline-table th[rowspan] {
@@ -3967,12 +3938,6 @@ i.chevron-left {
     margin: 0 auto 20px auto;
 }
 
-.equip-spec_box.equipment-box p {
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.8;
-    color: #333333;
-}
 
 .equip-spec_box.equipment-box .equip-spec_ct_box-note {
     letter-spacing: -1.1px;

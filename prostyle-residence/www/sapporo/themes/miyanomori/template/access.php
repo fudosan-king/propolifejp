@@ -5,7 +5,7 @@ Template Post Type: page
 */
 ?>
 <?php get_header(); ?>
-<?php get_template_part( 'template/home/header2'); ?>
+<?php get_template_part( 'template/home/header'); ?>
 <section class="section_subbanner">
 <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/bg_access.jpg" alt="" class="img-fluid w-100">
 </section>
@@ -28,7 +28,7 @@ Template Post Type: page
                                 <p>-営業時間／10：00～18：00<br>
                                     -定休日／水・木曜日（祝祭日は通常営業しております）<br>
                                     -携帯電話・PHSからもご利用いただけます。</p>
-                                <a class="btn btnCheckgoogle" href="#">Googleで確認</a>
+                                <a class="btn btnCheckgoogle" href="#"><span>Googleで確認</span></a>
                             </div>
                             <div class="box_map_info-img">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/info-img1.jpg" class="img-fluid" alt="" title="">
@@ -40,7 +40,7 @@ Template Post Type: page
                                 <p>-営業時間／10：00～18：00<br>
                                     -定休日／水・木曜日（祝祭日は通常営業しております）<br>
                                     -携帯電話・PHSからもご利用いただけます。</p>
-                                <a class="btn btnCheckgoogle" href="#">Googleで確認</a>
+                                <a class="btn btnCheckgoogle" href="#"><span>Googleで確認</span></a>
                             </div>
                         </div>
                         <div class="box_schedule">

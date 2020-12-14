@@ -18,7 +18,7 @@
 
         <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav navbar-mobile mr-0">
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="#modal_login" data-toggle="modal">ログイン</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="#modal_login" data-toggle="modal"><span>ログイン</span></a></li>
                  <li class="nav-item js-menuAnimation dropdown dropdown-right hide-mobile fade">
                     <?php do_action('miyanomori_nav_language'); ?>
                 </li>

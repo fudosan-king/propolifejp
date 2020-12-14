@@ -8,7 +8,7 @@
                         <i class="i_circle"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_email.svg" alt="" class="img-fluid" width="17"></i>
                     </p>
                     <h5 class="mb-2">お問い合わせフォーム</h5>
-                    <a href="<?= home_url(); ?>/contactus" class="btn btncontactus">お問い合わせ</a>
+                    <a href="<?= home_url(); ?>/contactus" class="btn btncontactus"><span>お問い合わせ</span></a>
                 </div>
             </div>
 <!--             <div class="col-12 col-lg-4">

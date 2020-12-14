@@ -28,7 +28,7 @@
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
                 <li class="nav-item js-menuAnimation hide-mobile"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
-                <li class="nav-item js-menuAnimation hide-mobile"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>">ログアウト</a></li>
+                <li class="nav-item js-menuAnimation hide-mobile"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>
                 <li class="nav-item js-menuAnimation dropdown dropdown-right lang hide-mobile fade">
                     <?php do_action('miyanomori_nav_language'); ?>
                 </li>
@@ -39,7 +39,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav navbar-mobile mr-0 hide-pc show-mobile">
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>">ログアウト</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>
                 <li class="nav-item js-menuAnimation">
                     <a class="nav-link tel" href="tel:0120853133">
                         Tel.0120-853-133

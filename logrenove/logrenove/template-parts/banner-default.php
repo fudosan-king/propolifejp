@@ -1,5 +1,5 @@
 <?php 
-    global $detect;
+    /*global $detect;
     global $header_ids;
 
     if (count($header_ids) > 0):
@@ -83,6 +83,45 @@
         wp_reset_query();
 
         echo '</section>';
-    endif;
+    endif;*/
     
 ?>
+
+<section class="section_banner">
+    <div class="carousel carousel_banner" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 3000 }'>
+        <div class="carousel-cell">
+            <a href="https://www.logrenove.jp/basic/23287/">
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_1.jpg" class="img-fluid">
+                </div>
+            </a>
+        </div>
+        <div class="carousel-cell">
+            <a href="https://www.logrenove.jp/basic/23359/">
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_2.jpg" class="img-fluid">
+                </div>
+            </a>
+        </div>
+        <div class="carousel-cell">
+            <a href="https://www.logrenove.jp/basic/23264/">
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_3.jpg" class="img-fluid">
+                </div>
+            </a>
+        </div>
+        <div class="carousel-cell">
+            <a href="https://www.logrenove.jp/basic/23264/">
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_4.jpg" class="img-fluid">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="w_content_text">
+        <div class="content_text">
+            <p>プライベートレーベル・リノベーション</p>
+            <img src="<?php echo IMAGE_PATH; ?>/1x/logo-white.svg" alt="" class="img-fluid" width="378">
+        </div>
+    </div>
+</section>

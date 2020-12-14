@@ -1,6 +1,6 @@
 
 <div class="each_boxright">
-    <h2>Recommend Events</h2>
+    <h2>人気イベントランキング</h2>
     <div class="each_boxright_content">
         <?php
 

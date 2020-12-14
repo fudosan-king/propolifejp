@@ -21,9 +21,9 @@
         <div class="collapse navbar-collapse justify-content-end">
            <ul class="navbar-nav navbar-mobile mr-0">
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">宮の森で暮らすということ</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">デザイン</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">デザイン</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン・眺望</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment-specification/'); ?>">設備仕様・構造</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">設備仕様・構造</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
@@ -39,7 +39,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav navbar-mobile mr-0 hide-pc show-mobile">
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="index.php">ログアウト</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>">ログアウト</a></li>
                 <li class="nav-item js-menuAnimation">
                     <a class="nav-link tel" href="tel:0120853133">
                         Tel.0120-853-133
@@ -55,10 +55,10 @@
             </ul>
             <ul class="navbar-nav navbar-mobile mr-0  hide-pc show-mobile">
                 <!-- <li class="nav-item js-menuAnimation "><a class="nav-link" href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?= home_url('/about/'); ?> ">PROSTYLEについて</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="">利用規約</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="">反社会的勢力排除に関する基本方針</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?= home_url('/privacy-policy/'); ?>">プライバシーポリシー</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="">ソーシャルメディアポリシー</a></li>
             </ul>
         </div>

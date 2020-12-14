@@ -42,10 +42,10 @@
                 <a href="#"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
                 <ul>
                     <!-- <li><a href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
-                    <li><a href="<?= home_url('/about/'); ?> ">PROSTYLEについて</a></li>
+                    <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
                     <li><a href="#">利用規約</a></li>
                     <li><a href="#">反社会的勢力排除に関する基本方針</a></li>
-                    <li><a href="<?= home_url('/privacy-policy/'); ?>">プライバシーポリシー</a></li>
+                    <li><a href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
                     <li><a href="#">ソーシャルメディアポリシー</a></li>
                 </ul>
                 

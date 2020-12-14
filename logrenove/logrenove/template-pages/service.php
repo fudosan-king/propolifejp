@@ -517,11 +517,11 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <p>新規登録の方はこちら</p>
-                            <a class="btn btn-only-member_brown" href="<?php echo site_url('signup'); ?>">今すぐ登録</a>
+                            <a class="btn btn-only-member_brown" href="<?php echo site_url('signup'); ?>" target="_blank">今すぐ登録</a>
                         </div>
                         <div class="col-12 col-md-6">
                             <p>会員の方はこちら</p>
-                            <a class="btn btn-only-member_blue" href="<?php echo site_url('login'); ?>">ログイン</a>
+                            <a class="btn btn-only-member_blue" href="<?php echo site_url('login'); ?>" target="_blank">ログイン</a>
                         </div>
                     </div>
                 </div>

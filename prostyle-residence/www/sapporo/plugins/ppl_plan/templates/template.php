@@ -101,7 +101,7 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
                 </ul>
                 <h2><?= $post_title ?></h2>
                 <h3><?= $post_excerpt ?></h3>
-                <div class="box_premium_img">
+                <div class="box_premium_list-img">
                 	<div class="box_premium_img">
                     	<a href="<?= $post_url ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
                 	</div>

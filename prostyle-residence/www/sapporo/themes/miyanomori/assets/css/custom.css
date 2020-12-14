@@ -131,13 +131,11 @@
 	    }
 	}
 }
+
 .section_general.outline {
     margin-bottom: 40px;
 }
-.header_afterlogin .navbar-expand-lg .navbar-nav .nav-item:nth-child(8) .nav-link{
-	border: 1px solid #fff;
-	padding: 2px 5px;
-}
+
 .btn_brown {
 	border-radius: 3px;
 }

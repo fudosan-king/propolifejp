@@ -1770,6 +1770,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         return $post_ids;
+    }
 
     /* http://redmine.fudosan-king.jp/issues/7753 */
 

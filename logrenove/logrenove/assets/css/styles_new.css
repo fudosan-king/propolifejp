@@ -476,7 +476,7 @@ body {
 
 .box_merit ul li span {
     display: block;
-    width: 195px;
+    width: 200px;
 }
 
 .box_merit .btn_registermember {
@@ -612,7 +612,12 @@ body {
 }
 
 .footer_contact {
-    margin-top: 40px;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #8c7d5e;
 }
 
 .footer_contact a {
@@ -751,6 +756,7 @@ body {
 
     .section_banner .w_content_text {
         top: 0;
+        width: 100%;
     }
 
     .section_banner .w_content_text .content_text img {
@@ -915,3 +921,8 @@ body {
         font-size: .5em;
     }
 }
+
+footer .footer_bottom {
+    padding-bottom: 80px;
+}
+

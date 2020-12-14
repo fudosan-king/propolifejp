@@ -92,28 +92,32 @@
         <div class="carousel-cell">
             <a>
                 <div class="content">
-                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_1.jpg" class="img-fluid">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_1.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_1_sp.png" class="img-fluid d-block d-lg-none">
                 </div>
             </a>
         </div>
         <div class="carousel-cell">
             <a>
                 <div class="content">
-                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_2.jpg" class="img-fluid">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_2.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_2_sp.png" class="img-fluid d-block d-lg-none">
                 </div>
             </a>
         </div>
         <div class="carousel-cell">
             <a>
                 <div class="content">
-                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_3.jpg" class="img-fluid">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_3.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_3_sp.png" class="img-fluid d-block d-lg-none">
                 </div>
             </a>
         </div>
         <div class="carousel-cell">
             <a>
                 <div class="content">
-                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_4.jpg" class="img-fluid">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_4.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_4_sp.png" class="img-fluid d-block d-lg-none">
                 </div>
             </a>
         </div>

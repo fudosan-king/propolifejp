@@ -28,9 +28,10 @@
                     ?>
                         <li><a href="<?php echo $cat_link; ?>"><?php echo $cat->name; ?></a></li>
                     <?php endforeach;endif ?>
+                    <li><a href="<?php echo site_url('events/category/free'); ?>">参加無料</a></li>
                 </ul>
                 <h3><a href="<?php echo $event->permalink; ?>"><?php echo $event->title; ?></a></h3>
-                <p class="d-none d-lg-block"><?php echo limit_event_content($event->description, 180); ?></p>
+                <p class="d-none d-lg-block"><?php echo limit_event_content($event->description, 130, 3); ?></p>
             </div>
         </div>
     </div>

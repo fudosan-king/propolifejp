@@ -2869,9 +2869,9 @@ ul.list_event li a.disabled {
     main {
         padding-top: 30px;
     }
-    .nav-up {
+    /*.nav-up {
         top: -160px;
-    }
+    }*/
     .section_cookie {
         transition: visibility 0s linear 300ms, opacity 300ms;
     }

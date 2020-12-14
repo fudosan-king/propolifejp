@@ -962,6 +962,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         $event_posts = new WP_Query( $args_post );
         return $event_posts;
     }
+
+    // function get_ranking_events($args = array()) {
+    //     // $date_diff_events = date_diff_events('', '+2 days');
+    //     $current_term = get_queried_object();
+    //     // $d = isset($_GET['d'])?$_GET['d']:'';
+    //     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+    //     $args_post = array(
+    //                 'post_type' => 'events',
+    //                 'posts_per_page' => 5,
+    //                 'paged' => $paged,
+    //                 //'meta_key' => 'wpb_post_views_count',
+    //                 'post_status' => 'publish',
+                    
+    //                 'order' => 'DESC',
+    //             );
+    //     $args_post = count($args)?array_merge($args_post, $args):$args_post;
+    //     $event_posts = new WP_Query( $args_post );
+    //     return $event_posts;
+    // }
  
     function get_posts_by_date_of_week($d) {
         $current_term = get_queried_object();
@@ -1171,7 +1190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $_size = $detect->isMobile() ? 'sidebar-pc' : 'sidebar-pc' ;
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
             $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
-            $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
+            // $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';
             $obj->rank = $i;
             $posts[] = $obj;
             $i++;
@@ -1224,6 +1243,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         return $articles_ids;
+    }
+
+    function get_ranking_events($numberposts=5, $exclude=array(), $post_type='events')
+    {
+        global $detect;
+        $articles_ids = get_ranking_event_ids();
+        $events = array();
+        $i=1;foreach ($articles_ids as $key => $articles_id) {
+            $obj = new stdClass();
+            $obj->permalink = get_permalink($articles_id);
+            $obj->title = get_the_title($articles_id);
+            $_size = $detect->isMobile() ? 'full' : 'full' ;
+            $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
+            $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
+            $obj->rank = $i;
+            $events[] = $obj;
+            $i++;
+        }
+
+        if(count($events)) return $events;
+        else return false;
+    }
+
+    function get_ranking_event_ids($numberposts=5, $post_type='events')
+    {
+        $args_event = array(
+            'numberposts'      => 5,
+            'post_type'        => $post_type,
+            'order' => 'DESC',
+            'post_status' => 'publish',
+        );
+        
+        $events = get_posts($args_event);
+        
+        $articles_ids = array();
+        foreach ($events as $key => $post) {
+            $articles_ids[] = $post->ID;
+        }
+
+        $count_articles_ids = is_array($articles_ids)?count($articles_ids):0;
+
+        $numberposts = 5-$count_articles_ids;
+
+        if($count_articles_ids<5)
+        {
+            $recent_posts = get_recent_events($numberposts, $articles_ids, $post_type, $args_term);
+            $articles_ids = is_array($articles_ids)?array_merge($articles_ids, array_column($recent_posts, 'ID')):array_column($recent_posts, 'ID');
+        }
+
+        return $articles_ids;
+    }
+
+    function get_recent_events($numberposts=5, $exclude=array())
+    {
+        $exclude[] = get_queried_object_id();
+        $recent_args = array(
+            'numberposts' => $numberposts,
+            'post_status' => 'publish',
+            'exclude'     => $exclude
+        );
+
+        $recent_posts = wp_get_recent_posts( $recent_args, $output = 'ARRAY_A' );
+
+        return $recent_posts;
     }
 
     # End posts ranking

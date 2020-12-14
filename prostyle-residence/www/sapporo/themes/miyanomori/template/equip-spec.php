@@ -204,7 +204,7 @@ Template Post Type: page
                             <div class="equip-spec_box_items">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <p class="equip-spec_box-title">IH 平面ヒーター</p>
+                                        <p class="equip-spec_box-title">ハンズフリーキー</p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-t-6.png" alt="" title="">
                                             <span class="txt-black">参考写真</span>
@@ -220,7 +220,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-des">共用部各所に防犯カメラを設置。24 時間作動し、管理室の記録装置にリアルタイムで送り続けています。長時間録画が可能なため、監視機能としてはもちろん。犯罪等の抑止効果も高まります。</p>
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="equip-spec_box-title">IH 平面ヒーター</p>
+                                        <p class="equip-spec_box-title">カラーモニター付きインターホン</p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-t-8.png" alt="" title="">
                                             <span class="txt-black">参考写真</span>
@@ -228,12 +228,12 @@ Template Post Type: page
                                         <p class="equip-spec_box-des">各住戸のカラーモニターでエントランスホールにいる来訪者を映像と音声で確認してから解錠できるので安心です。</p>
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="equip-spec_box-title">防犯サムターン</p>
+                                        <p class="equip-spec_box-title">防犯センサー</p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-t-9.jpg" alt="" title="">
                                             <span>参考写真</span>
                                         </div>
-                                        <p class="equip-spec_box-des">工具をドアの内側に入れサムターンを回してしまう不正解錠に対応したスイッチ式防犯サムターンを採用しています。</p>
+                                        <p class="equip-spec_box-des">玄関ドアには防犯センサーを設置。警戒設定時に扉が開けられるとセンサーが反応し、管理室と管理会社へ異常信号を発信します。</p>
                                     </div>
                                     <div class="col-md-4">
                                         <p class="equip-spec_box-title">ダブルロック仕様ディンプルキー</p>

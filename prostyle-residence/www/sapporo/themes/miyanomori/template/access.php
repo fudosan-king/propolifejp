@@ -7,7 +7,7 @@ Template Post Type: page
 <?php get_header(); ?>
 <?php get_template_part( 'template/home/header2'); ?>
 <section class="section_subbanner">
-    <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/bg_access.jpg" alt="" class="img-fluid w-100">
+<img src="<?php bloginfo('template_url'); ?>/assets/images/1x/bg_access.jpg" alt="" class="img-fluid w-100">
 </section>
 <main>
     <section class="section_access">
@@ -48,13 +48,8 @@ Template Post Type: page
                             <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/schedule02.png" alt="" class="img-fluid w-100">
                         </div>
                     </div>
-                    <ul class="list_global">
-                        <li><a href="#"><span>PROSTYLE</span></a></li>
-                        <li><a href="#"><span>MIYANOMORI</span></a></li>
-                        <li class="active"><a href="#"><span>LOCATION.01</span></a></li>
-                    </ul>
-                    <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
-                    <h3>札幌市営地下鉄東西線<span>「丸山公園」</span>駅利用時</h3>
+                                        <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
+                    <h3>札幌市営地下鉄東西線<span>「円山公園」</span>駅利用時</h3>
                     <div class="box_station">
                         <div class="row">
                             <div class="col-12 col-lg-7">
@@ -118,7 +113,7 @@ Template Post Type: page
                                     </tr>
                                     <tr>
                                         <th><span>定山渓温泉</span></th>
-                                        <td><span>約28.3 ㎞ / 車41 分</span></td>
+                                        <td><span>約28.3 ㎞ / 約41 分</span></td>
                                     </tr>
                                     <tr>
                                         <th><span>小樽運河</span></th>

@@ -428,6 +428,9 @@ ul.list_global li.active span {
     font-size: 1em;
     border-left: 1px solid #fff;
     padding-left: 15px;
+    position: relative;
+    top:2px;
+    padding-top:2px;
 }
 
 .header_afterlogin .navbar-expand-lg .navbar-nav .nav-item:nth-child(8) .nav-link:hover::after {
@@ -472,6 +475,7 @@ ul.list_global li.active span {
 
 .header_afterlogin .bsnav-sticky.bsnav-sticky-slide.sticked.in .navbar-nav .nav-item:nth-child(8) .nav-link {
     border-left: 1px solid #000;
+    padding-top: 2px;
 }
 
 /*.header_sub .navbar-brand {
@@ -2228,6 +2232,38 @@ footer address p {
 .section_general.outline {
     padding-bottom: 0;
     border-bottom: none;
+}
+
+.outline .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.outline .col-1 {
+    writing-mode: horizontal-tb;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.outline .list_global {
+    display: flex;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+}
+
+.outline .col-1 ul.list_global li span::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 19px;
+    margin: auto;
+    width: 1px;
+    height: 10px;
+    background: #828282;
+    transform: rotate(-90deg);
+    top:unset;
 }
 
 .section_plan_detail {

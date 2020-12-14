@@ -14,7 +14,7 @@ Template Post Type: page
         <div class="container">
             
             <div class="box_interview_banner">
-                <a href="<?= home_url('interview-kengo-kuma'); ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/1x/interview_banner.png" alt="" class="img-fluid"></a>
+                <a href="<?= home_url('message'); ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/1x/interview_banner.png" alt="" class="img-fluid"></a>
             </div>
             <div class="box_equipment_info clearfix">
                 <div class="box_equipment_info_top">
@@ -130,7 +130,7 @@ Template Post Type: page
                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equi05.jpg" alt="" class="img-fluid border-bottom">
                         </div>
                     </div>
-                    <a href="<?php echo home_url('/equipment-specific/')?>" class="btn btn-equip">共用サービスを見る</a>
+                    <a href="<?php echo home_url('/equipment/')?>" class="btn btn-equip">共用サービスを見る</a>
                 </div>
             </div>
 
@@ -170,7 +170,7 @@ Template Post Type: page
                 <div class="equipment-img">
                     <img src="<?php bloginfo('template_directory');?>/assets/images/main/equi07.jpg" alt="" class="img-fluid">
                 </div>
-                <a href="<?php echo home_url('/equipment-specific/')?>" class="btn btn-equip">共用施設を見る</a>
+                <a href="<?php echo home_url('/equipment/')?>" class="btn btn-equip">共用施設を見る</a>
             </div>
 
             <div class="box_equipment_info clearfix">
@@ -189,7 +189,7 @@ Template Post Type: page
                 <div class="equipment-img">
                     <img src="<?php bloginfo('template_directory');?>/assets/images/main/equi08.jpg" alt="" class="img-fluid">
                 </div>
-                <a href="<?php echo home_url('/equipment-specific/')?>" class="btn btn-equip">共用施設を見る</a>
+                <a href="<?php echo home_url('/equipment/')?>" class="btn btn-equip">共用施設を見る</a>
             </div>
 
         </div>

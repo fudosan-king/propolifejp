@@ -15,6 +15,9 @@
 
             if ( $query->have_posts() ) {
 
+                $rankup_class = 0;
+                $rankup_display = 0;
+
                 while ( $query->have_posts() ) {
 
                     $query->the_post();
@@ -26,6 +29,7 @@
                                     <a href="<?php the_permalink(); ?>" class="article_items_img">
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title();?>" title="<?php the_title(); ?>" class="img-fluid">
                                     </a>
+                                    <span class="article_ranking ranking-<?php echo ++$rankup_class;?>"><?php echo ++$rankup_display;?></span>
                                 </div>
                                 <div class="col-8">
                                     <div class="article_items_content">

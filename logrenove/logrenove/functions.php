@@ -1034,7 +1034,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return $description;
     }
 
-    function limit_event_content($content='', $limit=180, $strip_tags='<br>')
+    function limit_event_content($content='', $limit=180, $remove_line = false, $strip_tags='<br>')
     {
         global $detect;
         if($detect->isMobile()) {
@@ -1043,7 +1043,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         else {
             $content_arr = explode('<br />', $content, 3);
             if(is_array($content_arr) && count($content_arr) >= 3) {
-                $content_arr[2] = mb_strimwidth($content_arr[2], 0, $limit, '...');
+                if($remove_line) {
+                    unset($content_arr[$remove_line-1]);
+                    $content_arr[$remove_line-2] = mb_strimwidth($content_arr[$remove_line-2], 0, $limit, '...');
+                }
+                else $content_arr[2] = mb_strimwidth($content_arr[2], 0, $limit, '...');
                 $content = implode('<br>', $content_arr);
             }
             else return $content;

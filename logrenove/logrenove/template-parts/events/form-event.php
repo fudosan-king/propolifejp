@@ -39,6 +39,35 @@
             </div>
         </div>
         <div class="form-group">
+          <div class="row mb-3">
+             <div class="col-12 col-lg-3 align-self-center">
+                  <label for="">参加方法<span class="red">（※）</span></label>
+              </div>
+              <div class="col-12 col-lg-9 align-self-center">
+                <div class="row seminer_method">
+                    <div class="col-12 col-md-4 custom-checkradio">
+                        <label class="check-radio">オンライン
+                            <input type="radio" value="オンライン" name="seminer_method" class="required">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="col-12 col-md-4 custom-checkradio">
+                        <label class="check-radio">表参道ショールーム
+                            <input type="radio" value="表参道ショールーム" name="seminer_method" class="required">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="col-12 col-md-4 custom-checkradio">
+                        <label class="check-radio">バーチャルプランナー
+                            <input type="radio" value="バーチャルプランナー" name="seminer_method" class="required">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
             <div class="row">
                 <div class="col-12 col-lg-3 align-self-center">
                     <label for="">お名前<span class="red">（※）</span></label>
@@ -102,6 +131,14 @@
              </td>
              <td class="confirm-text">
                  <span id="date"></span> <span id="time"></span>
+             </td>
+          </tr>
+          <tr>
+             <td>
+                <label>参加方法</label>
+             </td>
+             <td class="confirm-text">
+                 <span id="seminer_method"></span>
              </td>
           </tr>
           <tr>

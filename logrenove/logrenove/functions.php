@@ -1723,6 +1723,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     add_filter('jpeg_quality', function($arg){return 100;});
     add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
 
+    function get_recommend_events_ids($post_type = 'events')
+    {
+        $articles_ids = [];
+        for($i=1;$i<=5;$i++)
+        {
+            $articles = get_field('recommend_event_'.$i, 'option');
+            $articles_url = !empty($articles['url'])?$articles['url']:'';
+            if(!empty($articles_url))
+            {
+                $articles_ids[] = intval(filter_var($articles_url, FILTER_SANITIZE_NUMBER_INT));
+            }
+            
+        }
+
+        $count_articles_ids = is_array($articles_ids)?count($articles_ids):0;
+        $numberposts = 5 - $count_articles_ids;
+
+        if($count_articles_ids < 5)
+        {
+            $recent_posts = get_mostviewed_event($numberposts, $articles_ids, $post_type);
+            // $articles_ids = is_array($articles_ids)?array_merge($articles_ids, array_column($post_ids, 'ID')):array_column($post_ids, 'ID');
+            $articles_ids = array_merge($articles_ids, $recent_posts);
+        }
+
+        return $articles_ids;
+
+
+    }
+
+    function get_mostviewed_event($numberposts = 5, $list_id = array(), $post_type = "events") {
+        $args = array(
+            'post_type'             =>      'events',
+            'posts_per_page'        =>      $numberposts,
+            'meta_key'              =>      'wpb_post_views_count',
+            'orderby'               =>      'meta_value',
+            'exclude'               =>      $list_id,
+        );
+
+        $get_id = new WP_Query($args);
+        if ( $get_id->have_posts() ) {
+            while ($get_id->have_posts()) {
+                $get_id->the_post();
+                $post_ids = wp_list_pluck( $get_id->posts, 'ID' );
+            }
+        }
+
+        return $post_ids;
+
     /* http://redmine.fudosan-king.jp/issues/7753 */
 
     function get_homepage_posts($homepage_setting = 'useful_content') {

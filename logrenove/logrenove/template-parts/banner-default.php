@@ -90,28 +90,28 @@
 <section class="section_banner">
     <div class="carousel carousel_banner" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 3000 }'>
         <div class="carousel-cell">
-            <a href="https://www.logrenove.jp/basic/23287/">
+            <a>
                 <div class="content">
                     <img src="<?php echo IMAGE_PATH; ?>/banner/KV_1.jpg" class="img-fluid">
                 </div>
             </a>
         </div>
         <div class="carousel-cell">
-            <a href="https://www.logrenove.jp/basic/23359/">
+            <a>
                 <div class="content">
                     <img src="<?php echo IMAGE_PATH; ?>/banner/KV_2.jpg" class="img-fluid">
                 </div>
             </a>
         </div>
         <div class="carousel-cell">
-            <a href="https://www.logrenove.jp/basic/23264/">
+            <a>
                 <div class="content">
                     <img src="<?php echo IMAGE_PATH; ?>/banner/KV_3.jpg" class="img-fluid">
                 </div>
             </a>
         </div>
         <div class="carousel-cell">
-            <a href="https://www.logrenove.jp/basic/23264/">
+            <a>
                 <div class="content">
                     <img src="<?php echo IMAGE_PATH; ?>/banner/KV_4.jpg" class="img-fluid">
                 </div>

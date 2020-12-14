@@ -17,10 +17,10 @@ Template Post Type: page
             <div class="tabs-center-u-shaped">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true">プランデザイン</a>
+                        <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true"><span>プランデザイン</span></a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="view-tab" data-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="false">眺望</a>
+                        <a class="nav-link" id="view-tab" data-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="false"><span>眺望</span></a>
                     </li>
                 </ul>
             </div>

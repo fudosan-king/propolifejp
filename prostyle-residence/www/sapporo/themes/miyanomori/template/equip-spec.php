@@ -32,16 +32,16 @@ Template Post Type: page
                <div class="tabs-center-u-shaped">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true">共用設備</a>
+                            <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true"><span>共用設備</span></a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="plandesign2-tab" data-toggle="tab" href="#plandesign2" role="tab" aria-controls="plandesign2" aria-selected="false">サービス</a>
+                            <a class="nav-link" id="plandesign2-tab" data-toggle="tab" href="#plandesign2" role="tab" aria-controls="plandesign2" aria-selected="false"><span>サービス</span></a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="plandesign3-tab" data-toggle="tab" href="#plandesign3" role="tab" aria-controls="plandesign3" aria-selected="false">設備</a>
+                            <a class="nav-link" id="plandesign3-tab" data-toggle="tab" href="#plandesign3" role="tab" aria-controls="plandesign3" aria-selected="false"><span>設備</span></a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="plandesign4-tab" data-toggle="tab" href="#plandesign4" role="tab" aria-controls="plandesign4" aria-selected="false">構造</a>
+                            <a class="nav-link" id="plandesign4-tab" data-toggle="tab" href="#plandesign4" role="tab" aria-controls="plandesign4" aria-selected="false"><span>構造</span></a>
                         </li>
                     </ul>
                 </div>
@@ -52,21 +52,21 @@ Template Post Type: page
                         <div class="equip-spec">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a rel="#斜行エレベーター" class="nav-link" id="">斜行エレベーター</a>
+                                    <a rel="#斜行エレベーター" class="nav-link" id=""><span>斜行エレベーター</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a rel="#フィットネスルーム" class="nav-link" id="">フィットネスルーム</a>
+                                    <a rel="#フィットネスルーム" class="nav-link" id=""><span>フィットネスルーム</span></a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a rel="#屋内駐車場" class="nav-link" id="">屋内駐車場</a>
+                                    <a rel="#屋内駐車場" class="nav-link" id=""><span>屋内駐車場</span></a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a rel="#その他" class="nav-link" id="">その他</a>
+                                    <a rel="#その他" class="nav-link" id=""><span>その他</span></a>
                                 </li>
                             </ul>
                         </div>
                         <div id="斜行エレベーター" class="equip-spec_box inclined">
-                            <h4>斜行エレベーター</h4>
+                            <h4><span><span>斜行エレベーター</span></h4>
                             <p class="equip-spec_box-title">斜行エレベーター</p>
                             <div class="row">
                                 <div class="col-md-4">
@@ -82,12 +82,12 @@ Template Post Type: page
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <p>宮の森の傾斜地を利用した斜行エレベーターを採用しています。エレベーターの窓からは、宮の森の豊かな自然、札幌の美しい景観を日々体感することができます。車椅子やベビーカーも安心・快適に乗ることが可能です。</p>
+                                    <p class="equip-spec_box-des">宮の森の傾斜地を利用した斜行エレベーターを採用しています。エレベーターの窓からは、宮の森の豊かな自然、札幌の美しい景観を日々体感することができます。車椅子やベビーカーも安心・快適に乗ることが可能です。</p>
                                 </div>
                             </div>    
                         </div>
                         <div id="フィットネスルーム" class="equip-spec_box inclined">
-                            <h4>フィットネスルーム</h4>
+                            <h4><span>フィットネスルーム</span></h4>
                             <p class="equip-spec_box-title">リフレッシュしながら自分と向き合う時間を楽しむフィットネスルーム</p>
                             <div class="row">
                                 <div class="col-md-8">
@@ -101,7 +101,7 @@ Template Post Type: page
                             </div>
                         </div>
                         <div id="屋内駐車場" class="equip-spec_box inclined ">
-                            <h4>屋内駐車場</h4>
+                            <h4><span>屋内駐車場</span></h4>
                             <p class="equip-spec_box-title">愛車を守る、リモコン自動ゲート付き屋内平面駐車場</p>
                             <div class="row">
                                 <div class="col-md-4">
@@ -115,7 +115,7 @@ Template Post Type: page
                             </div>
                         </div>
                         <div id="その他" class="equip-spec_box">
-                            <h4>その他</h4>
+                            <h4><span>その他</span></h4>
                             <div class="row">
                                 <div class="col-md-4">
                                     <p class="equip-spec_box-title">ドライルーム</p>
@@ -142,7 +142,7 @@ Template Post Type: page
                             </ul>
                         </div>
                         <div id="コンシェルジュサービス" class="equip-spec_box inclined">
-                            <h4>コンシェルジュサービス</h4>
+                            <h4><span>コンシェルジュサービス</span></h4>
                             <p class="equip-spec_box-title">毎日の暮らしをサポートする コンシェルジュサービス</p>
                             <div class="row">
                                 <div class="col-md-4">
@@ -185,7 +185,7 @@ Template Post Type: page
                             </div>
                         </div>
                         <div id="セキュリティ" class="equip-spec_box equipment-box">
-                            <h4>セキュリティ</h4>
+                            <h4><span>セキュリティ</span></h4>
                             <p class="equip-spec_box-title">綜合警備保障の24 時間集中監視システム</p>
                             <div class="row no-gutters">
                                 <div class="col-md-6">
@@ -297,7 +297,7 @@ Template Post Type: page
                             </ul>
                         </div>
                         <div id="キッチン" class="equip-spec_box">
-                            <h4>キッチン</h4>
+                            <h4><span>キッチン</span></h4>
                             <div class="equip-spec_box_img">
                                 <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-1.jpg" alt="" title="">
                             </div>
@@ -359,7 +359,7 @@ Template Post Type: page
                             </div>
                         </div>
                         <div id="洗面室・浴室" class="equip-spec_box">
-                            <h4>洗面室・浴室</h4>
+                            <h4><span>洗面室・浴室</span></h4>
                             <div class="equip-spec_box_img slide-flickity">
                                 <div class="carousel" data-flickity data-flickity-options='{ "prevNextButtons": false }'>
                                     <div class="carousel-cell">
@@ -464,7 +464,7 @@ Template Post Type: page
                             </div>
                         </div>
                         <div id="プライベートサウナ" class="equip-spec_box inclined">
-                            <h4>プライベートサウナ</h4>
+                            <h4><span>プライベートサウナ</span></h4>
                             <p class="equip-spec_box-title">札幌の冬を健康的に。最高のくつろぎを生むプライベートサウナ</p>
                             <div class="row">
                                 <div class="col-md-4">
@@ -510,13 +510,13 @@ Template Post Type: page
                             </ul>
                         </div>
                         <div id="立面図" class="equip-spec_box">
-                            <h4>立面図</h4>
+                            <h4><span>立面図</span></h4>
                             <div class="equip-spec_box_img">
                                 <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-1.jpg" alt="" title="">
                             </div>
                         </div>
                         <div id="敷地配置図" class="equip-spec_box">
-                            <h4>敷地配置図</h4>
+                            <h4><span>敷地配置図</span></h4>
                             <div class="ct-slider floor-plans">
                                 <div class="ct-slider_item">
                                     <img src="<?php bloginfo('template_directory');?>/assets/images/main/plan-floor-1-2.png" class="img-fluid" alt="" title="" >
@@ -530,7 +530,7 @@ Template Post Type: page
                             </div>
                         </div>
                         <div id="構造" class="equip-spec_box">
-                            <h4>構造</h4>
+                            <h4><span>構造</span></h4>
                             <div class="equip-spec_box_items">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -562,7 +562,7 @@ Template Post Type: page
                             </div>
                         </div>
                         <div id="アメニティ" class="equip-spec_box">
-                            <h4>アメニティ</h4>
+                            <h4><span>アメニティ</span></h4>
                             <p class="equip-spec_box-title">J:COM テレビ / インターネット / 電話</p>
                             <div class="equip-spec_box_img">
                                 <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-6.jpg" alt="" title="">
@@ -570,7 +570,7 @@ Template Post Type: page
                             <p>本物件はアンテナケーブルをTV 端子に接続することで、地上デジタル放送をご覧いただけます。 また、地域情報をお届けするJ:COM チャンネル（コミュニティチャンネル）の他、J:COMと加入契約をすることにより、スポーツ、アニメなどの専門チャンネル（CS デジタル放送）やビデオオンデマンドがお楽しみいただけます。<br>インターネットはT V 端子よりケーブルモデムを介して、LAN ケーブルをパソコンに接続してご利用いただけます。<br>電話はT V 端子からeMTA（電話専用端末）を介して、一般の固定電話に接続しご利用いただけます。</p>
                         </div>
                         <div id="エコシステム" class="equip-spec_box">
-                            <h4>エコシステム</h4>
+                            <h4><span>エコシステム</span></h4>
                              <div class="equip-spec_box_items">
                                 <div class="row">
                                     <div class="col-md-4">

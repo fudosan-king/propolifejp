@@ -412,7 +412,7 @@ Template Post Type: page
                                                 <input type="checkbox" class="custom-control-input" id="ck_agree" checked>
                                                 <label class="custom-control-label label_required" for="ck_agree">同意する</label>
                                             </div>
-                                            <button type="submit" class="btn btnsubmit" id="ibtnGoSubmit" >上記に同意して確認画面へ</button>
+                                            <button type="submit" class="btn btnsubmit" id="ibtnGoSubmit" ><span>上記に同意して確認画面へ</span></button>
                                         </div>
                                     </div>
                                 </div>

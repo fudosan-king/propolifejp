@@ -62,7 +62,7 @@ Template Post Type: page
                              <?php echo get_field('design_furnitures') ?>
                         </div>
                         <div class="tab-pane fade" id="planvr" role="tabpanel" aria-labelledby="planvr-tab">
-                            <?php echo get_field('design_planvr') ?>
+                            <?php echo get_field('design_planvr_view') ?>
                         </div>
                     </div>
                 </div>

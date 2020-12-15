@@ -10,7 +10,7 @@ Template Post Type: page
    <section class="section_plan_detail">
         <div class="container">
             <div class="box_plan_detail_top">
-                <h1><span>S301</span>/2LDK</h1>
+                <h1><?= get_the_title($post->ID)?></h1>
                 <div class="row no-gutters">
                     <div class="col-12 col-lg-5 align-self-center">
                         <h2 class="title">おだやかに、解き放たれる</h2>
@@ -26,8 +26,7 @@ Template Post Type: page
                     <div class="box_infoview_content">
                         <div class="row no-gutters">
                             <div class="col-12 col-lg-6 align-self-center">
-                                <h2>専有面積 <span class="number">176</span><span class="sub_number">.65㎡</span>［約53.43坪］<br>
-                                    テラス面積 49.48㎡［約14.96坪］</h2>
+                                <h2><?= $post->post_excerpt ?></h2>
                             </div>
                             <div class="col-12 col-lg-6 align-self-center">
                                 <div class="box_infoview_img">
@@ -80,7 +79,7 @@ Template Post Type: page
                     <div class="row no-gutters">
                         <div class="col-12 col-lg-5">
                             <div class="box_plan_detail_footer_content">
-                                <h1><span>S301</span>/3LDK</h1>
+                                <h1><?= get_the_title($post->ID)?></h1>
                                 <p>ご覧になりたいプランをタップしてください。<br>
                                     プラン詳細をご覧いただけます</p>
                             </div>

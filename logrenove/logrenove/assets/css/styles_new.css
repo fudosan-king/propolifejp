@@ -206,10 +206,6 @@ body {
     margin-top: 0;
 }
 
-.section_main .box_constructionexample {
-    margin: 50px 0;
-}
-
 .section_main .box_constructionexample h2 {
     font-size: 1.5em;
 }
@@ -666,7 +662,7 @@ body {
     }
 
     .logo img {
-        width: 135px;
+        /*width: 135px;*/
     }
 
     .navbar-collapse {
@@ -782,10 +778,6 @@ body {
 
     .section_intro .box_intro h1 {
         top: -15px;
-    }
-
-    .section_main .box_constructionexample {
-        margin-top: 30px;
     }
 
     .section_main .box_constructionexample h2 {

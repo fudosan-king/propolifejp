@@ -97,7 +97,7 @@ Template Post Type: page
                                         <tbody>
                                             <tr>
                                                 <th>札幌新井山簡易郵便局</th>
-                                                <td>約 3800m / 車 1 分</td>
+                                                <td>約 380m / 車 1 分</td>
                                             </tr>
                                             <tr>
                                                 <th>札幌宮の森郵便局</th>

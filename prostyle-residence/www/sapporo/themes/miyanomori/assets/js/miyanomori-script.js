@@ -157,7 +157,19 @@ function miyanomori() {
                 l1:{top:138,left:334},
                 l2:{top:282,left:495},
                 l3:{top:500,left:585},
-            }
+            },
+            {
+                name:'s201', 
+                l1:{top:66,left:365},
+                l2:{top:214,left:525},
+                l3:{top:430,left:607},
+            },
+            {
+                name:'n302',
+                l1:{top:63,left:354},
+                l2:{top:215,left:525},
+                l3:{top:424,left:600},
+            },
         ];
 
         if(eleBoxImgVR.offset() !== undefined) {

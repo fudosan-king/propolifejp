@@ -120,7 +120,7 @@ Template Post Type: page
                                         <tbody>
                                             <tr>
                                                 <th>市立大倉山小学校</th>
-                                                <td>約 210m / 車 4 分</td>
+                                                <td>約 210m / 徒歩 4 分</td>
                                             </tr>
                                             <tr>
                                                 <th>市立宮の森中学校</th>

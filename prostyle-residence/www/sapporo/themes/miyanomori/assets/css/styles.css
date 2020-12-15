@@ -1805,14 +1805,43 @@ footer address p {
     margin-top: 30px;
 }
 
-.section_access .box_map .box_schedule img {
-    margin-bottom: 40px;
+.section_access .box_schedule .title-utilities{
+    font-size: 1.125rem;
+    color: #B48856;
+    border-bottom: 1px solid #B48856;
+    font-weight: 600;
 }
 
-.section_access .access_sightseeing .access_img {
-    width: 100%;
-    max-width: 257px;
-    margin: 0 auto;
+.section_access .box_schedule .table {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.section_access .box_schedule .table:before{
+    left: 202px;
+    content: '';
+    position: absolute;
+    top: 4px;
+    bottom: 13px;
+    width: 1px;
+    background-color: #000;
+}
+
+.section_access .box_schedule .table td, .section_access .box_schedule .table th{
+    border-top:none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0;
+    line-height: 2.2em;
+}
+
+.section_access .box_schedule .table th{
+    width:202px;
+}
+
+
+.section_access .box_schedule .table td{
+    padding-left: 20px;
 }
 
 .section_access .access_sightseeing p {

@@ -43,7 +43,7 @@
                 <li class="nav-item js-menuAnimation">
                     <a class="nav-link tel" href="tel:0120853133">
                         Tel.0120-853-133
-                        <p>受付時間 9:00 ～ 20:00</p>
+                        <p>受付時間 10:00 ～ 18:00</p>
                     </a>
                 </li>
                 <li class="nav-item js-menuAnimation">

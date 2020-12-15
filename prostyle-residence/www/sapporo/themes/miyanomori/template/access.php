@@ -44,11 +44,154 @@ Template Post Type: page
                             </div>
                         </div>
                         <div class="box_schedule">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/schedule01.png" alt="" class="img-fluid w-100">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/schedule02.png" alt="" class="img-fluid w-100">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <p class="title-utilities">商業施設</p>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>まいばすけっと宮の森２条店</th>
+                                                <td>約 1690m / 車 ３ 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>ラッキー山の手店</th>
+                                                <td>約 1710m / 車 ３ 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>ホーマック山の手店</th>
+                                                <td>約 1790m / 車 ３ 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>マルヤマクラス</th>
+                                                <td>約 2080m / 車 4 分</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <p class="title-utilities">公共施設</p>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>宮の森交番</th>
+                                                <td>約 1030m / 車 2 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>札幌市山の手図書館</th>
+                                                <td>約 3030m / 車 5 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>さっぽろ子育てサポートセンター</th>
+                                                <td>約 3050m / 車 5 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>中央区役所</th>
+                                                <td>約 4110m / 車 7 分</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <p class="title-utilities">金融機関</p>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>札幌新井山簡易郵便局</th>
+                                                <td>約 3800m / 車 1 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>札幌宮の森郵便局</th>
+                                                <td>約 970m / 車 2 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>北海道銀行宮の森パーソナル支店</th>
+                                                <td>約 1610m / 車 ３ 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>北洋銀行宮の森支店</th>
+                                                <td>約 2120m / 車 4 分</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <p class="title-utilities">教育施設</p>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>市立大倉山小学校</th>
+                                                <td>約 210m / 車 4 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>市立宮の森中学校</th>
+                                                <td>約 770m / 徒歩 2 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>宮の森幼稚園</th>
+                                                <td>約 1100m / 車 2 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>宮の森保育園</th>
+                                                <td>約 1710m / 車 ３ 分</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <p class="title-utilities">公園・文化・レジャー施設 </p>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>荒井山緑地</th>
+                                                <td>約 370m / 徒歩 5 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>本郷新記念札幌彫刻美術館</th>
+                                                <td>約 410m / 徒歩 6 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>円山公園</th>
+                                                <td>約 460m / 徒歩 6 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>札幌市円山動物園</th>
+                                                <td>約 1150m / 車 2 分</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <p class="title-utilities">医療施設 </p>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>うすい歯料クリニック</th>
+                                                <td>約 900m / 徒歩 12 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>宮の森記念病院</th>
+                                                <td>約 1360m / 車 ３ 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>宮の森皮膚科</th>
+                                                <td>約 1390m / 車 ３ 分</td>
+                                            </tr>
+                                            <tr>
+                                                <th>宮の森三条内科クリニック</th>
+                                                <td>約 1460m / 車 ３ 分</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                                        <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
+                    <ul class="list_global">
+                        <li><span>PROSTYLE </span></li>
+                        <li><span>MIYANOMORI</span></li>
+                        <li class="active"><span>LOCATION.01</span></li>
+                    </ul>
+                    <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
                     <h3>札幌市営地下鉄東西線<span>「円山公園」</span>駅利用時</h3>
                     <div class="box_station">
                         <div class="row">

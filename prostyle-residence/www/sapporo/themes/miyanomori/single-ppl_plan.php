@@ -26,11 +26,11 @@ Template Post Type: page
                     <div class="box_infoview_content">
                         <div class="row no-gutters">
                             <div class="col-12 col-lg-6 align-self-center">
-                                <h2><?= $post->post_excerpt ?></h2>
+                                <h2><?= get_the_content($post->ID) ?></h2>
                             </div>
                             <div class="col-12 col-lg-6 align-self-center">
                                 <div class="box_infoview_img">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/images/main/S201-2d.png" alt="" class="img-fluid">
+                                    <img src="<?php echo get_field('design_apartment') ?>" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>

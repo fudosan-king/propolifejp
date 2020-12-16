@@ -410,7 +410,7 @@ body.single-post .logo_logrenove_small img {
 .frm_services .check-radio{
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 26px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -486,3 +486,21 @@ body.single-post .logo_logrenove_small img {
         padding-left: 27px;
     }
 }
+
+/* Update radio button label no break line */
+.frm_services {
+    padding: 60px;
+}
+.frm_services .check-radio {
+    font-size: 0.7rem;
+    letter-spacing: -0.5px;
+}
+@media (max-width:768px){
+    .frm_services {
+        padding: 15px;
+    }
+    .frm_services .check-radio {
+        margin-bottom: 10px
+    }
+}
+

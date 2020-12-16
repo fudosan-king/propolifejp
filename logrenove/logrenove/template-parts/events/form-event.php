@@ -47,7 +47,7 @@
                 <div class="row seminer_method">
                     <div class="col-12 col-md-4 custom-checkradio">
                         <label class="check-radio">オンライン
-                            <input type="radio" value="オンライン" name="seminer_method" class="required">
+                            <input type="radio" value="オンライン" name="seminer_method" class="required" checked>
                             <span class="checkmark"></span>
                         </label>
                     </div>

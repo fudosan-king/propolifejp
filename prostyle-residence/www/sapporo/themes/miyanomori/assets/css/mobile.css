@@ -86,8 +86,14 @@
         display: block;
     }
 
+   .header_afterlogin .btn-action{
+        display:flex;
+   }
+
+
     .navbar.navbar-expand-lg {
         padding: 20px 15px;
+        align-items: center;
     }
 
     .navbar.navbar-expand-lg .navbar-brand {
@@ -340,6 +346,7 @@
         padding: 0;
         position: relative;
         border-radius: 0;
+        vertical-align: middle;
     }
 
     .user-login:before {
@@ -1111,6 +1118,7 @@
 
     .equip-spec_box .equip-spec_box-title{
         font-size: 0.875rem;
+        height:auto;
     }
 
     .equip-spec_box.inclined .col-md-8 p, .equip-spec_box.inclined .col-md-4 .p-right {

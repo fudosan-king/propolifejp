@@ -46,6 +46,7 @@ Template Post Type: page
                                 </th>
                                 <td>
                                     <p>法22 条指定区域・戸建住環境保全地区・第二種風致地区・景観計画区域</p>
+                                    <p>北側斜線高度地区・宅地造成工事規制地区</p>
                                 </td>
                             </tr>
                             <tr>
@@ -53,7 +54,7 @@ Template Post Type: page
                                     <p>用途地域</p>
                                 </th>
                                 <td>
-                                    <p>北側斜線高度地区・宅地造成工事規制地区</p>
+                                    <p>第一種低層住居専用地域</p>
                                 </td>
                             </tr>
                             <tr>
@@ -61,7 +62,7 @@ Template Post Type: page
                                     <p>建ぺい率</p>
                                 </th>
                                 <td>
-                                    <p>第一種低層住居専用地域</p>
+                                    <p>39.32%≦40%</p>
                                 </td>
                             </tr>
                             <tr>
@@ -69,7 +70,7 @@ Template Post Type: page
                                     <p>容積率</p>
                                 </th>
                                 <td>
-                                    <p>39.32%≦40%</p>
+                                    <p>59.70%≦60%</p>
                                 </td>
                             </tr>
                             <tr>
@@ -77,7 +78,7 @@ Template Post Type: page
                                     <p>敷地面積</p>
                                 </th>
                                 <td>
-                                    <p>59.70%≦60%</p>
+                                    <p>4,413.25m²</p>
                                 </td>
                             </tr>
                             <tr>
@@ -85,7 +86,7 @@ Template Post Type: page
                                     <p>建築面積</p>
                                 </th>
                                 <td>
-                                    <p>4,413.25m²</p>
+                                    <p>1,735.35m²</p>
                                 </td>
                             </tr>
                             <tr>
@@ -93,7 +94,7 @@ Template Post Type: page
                                     <p>延床面積</p>
                                 </th>
                                 <td>
-                                    <p>1,735.35m²</p>
+                                    <p>4,997.72m²</p>
                                 </td>
                             </tr>
                             <tr>
@@ -101,7 +102,7 @@ Template Post Type: page
                                     <p>容積対象床面積</p>
                                 </th>
                                 <td>
-                                    <p>4,997.72m²</p>
+                                    <p>2,634.33m²</p>
                                 </td>
                             </tr>
                             <tr>
@@ -109,7 +110,7 @@ Template Post Type: page
                                     <p>間取り</p>
                                 </th>
                                 <td>
-                                    <p>2,634.33m²</p>
+                                    <p>1LDK+S～ 3LDK</p>
                                 </td>
                             </tr>
                             <tr>
@@ -117,7 +118,7 @@ Template Post Type: page
                                     <p>専有面積</p>
                                 </th>
                                 <td>
-                                    <p>1LDK+S～ 3LDK</p>
+                                    <p>124.26㎡ ～ 176.65㎡</p>
                                 </td>
                             </tr>
                             <tr>
@@ -125,7 +126,7 @@ Template Post Type: page
                                     <p>バルコニー面積</p>
                                 </th>
                                 <td>
-                                    <p>124.26㎡ ～ 176.65㎡</p>
+                                    <p>3.17㎡ ～ 3.45 ㎡</p>
                                 </td>
                             </tr>
                             <tr>
@@ -133,7 +134,7 @@ Template Post Type: page
                                     <p>テラス面積</p>
                                 </th>
                                 <td>
-                                    <p>3.17㎡ ～ 3.45 ㎡</p>
+                                    <p>26.77㎡ ～ 122.75㎡</p>
                                 </td>
                             </tr>
                             <tr>
@@ -141,7 +142,7 @@ Template Post Type: page
                                     <p>構造 規模</p>
                                 </th>
                                 <td>
-                                    <p>26.77㎡ ～ 122.75㎡</p>
+                                    <p>鉄筋コンクリート造一部鉄骨造 / 地上3 階地下2 階建て（11層）</p>
                                 </td>
                             </tr>
                             <tr>
@@ -149,7 +150,7 @@ Template Post Type: page
                                     <p>総戸数</p>
                                 </th>
                                 <td>
-                                    <p>鉄筋コンクリート造一部鉄骨造 / 地上3 階地下2 階建て（11層）</p>
+                                    <p>21 戸（管理事務室含む）</p>
                                 </td>
                             </tr>
                             <tr>
@@ -165,7 +166,7 @@ Template Post Type: page
                                     <p>建築確認番号</p>
                                 </th>
                                 <td>
-                                    <p>21 戸（管理事務室含む）</p>
+                                    <p>第BCJ16 本建確252 号 （2017 年2月1日付）</p>
                                 </td>
                             </tr>
                             <tr>
@@ -173,7 +174,7 @@ Template Post Type: page
                                     <p>竣工予定日</p>
                                 </th>
                                 <td>
-                                    <p>第BCJ16 本建確252 号 （2017 年2月1日付）</p>
+                                    <p>2022 年7月31日（予定）</p>
                                 </td>
                             </tr>
                             <tr>
@@ -181,7 +182,7 @@ Template Post Type: page
                                     <p>入居予定日</p>
                                 </th>
                                 <td>
-                                    <p>2022 年7月31日（予定）2022 年8月上旬（予定）</p>
+                                    <p>2022 年8月上旬（予定）</p>
                                 </td>
                             </tr>
                             <tr>

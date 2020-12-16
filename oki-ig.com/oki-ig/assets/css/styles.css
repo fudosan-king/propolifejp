@@ -324,6 +324,7 @@ section {
 .footer_bottom p {
   margin-bottom: 0;
   font-size: 13px;
+  text-align: center;
 }
 ul.list_menu_footer {
   padding: 0;

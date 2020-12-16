@@ -380,7 +380,7 @@ ul.naviBox ul li {
   background: url('../images/1x/icon01.png') no-repeat left center;
   padding-left: 15px;
 }
-ul.naviBox ul li a {
+ul.naviBox ul li a, ul.naviBox ul li span {
   font-size: 13px;
 }
 ul.naviBox ul li:hover a {

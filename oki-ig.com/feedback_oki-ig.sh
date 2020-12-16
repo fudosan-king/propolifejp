@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -rlpcDvz php.intra.fudosan-king.jp:/var/www/oki-ig/wp-content/themes/oki-ig ./
+rsync -rlpcDvz websv-prod:/var/www/sources/igeto/wp-content/themes/oki-ig/ ./oki-ig/

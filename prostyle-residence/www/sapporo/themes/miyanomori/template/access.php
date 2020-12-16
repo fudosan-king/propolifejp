@@ -48,11 +48,6 @@ Template Post Type: page
                             <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/schedule02.png" alt="" class="img-fluid w-100">
                         </div>
                     </div>
-                    <ul class="list_global">
-                        <li><a href="#"><span>PROSTYLE</span></a></li>
-                        <li><a href="#"><span>MIYANOMORI</span></a></li>
-                        <li class="active"><a href="#"><span>LOCATION.01</span></a></li>
-                    </ul>
                     <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
                     <h3>札幌市営地下鉄東西線<span>「丸山公園」</span>駅利用時</h3>
                     <div class="box_station">

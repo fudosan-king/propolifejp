@@ -393,7 +393,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-des">サーモスタットバス シャワー混合水栓</p>
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="equip-spec_box-title">ユーフォリア モノ ハンドシャワー</p>
+                                        <p class="equip-spec_box-title">ダブル配筋</p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-11.jpg" alt="" title="">
                                             <span class="txt-black">参考写真</span>
@@ -548,7 +548,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-des">本物件は、住戸のある建物は構造躯体の耐久性を高めるために、設計基準強度（Fc）を約24N/ ㎟ ～ 約27N / ㎟に設定しています。これは1㎡当たり約2,400～2,700トンの重量を支えられることを示しています。</p>
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="equip-spec_box-title">ユーフォリア モノ ハンドシャワー</p>
+                                        <p class="equip-spec_box-title">ダブル配筋</p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-5.jpg" alt="" title="">
                                         </div>

@@ -337,6 +337,7 @@ function miyanomori() {
         }
         $('.path-hover').hover(function(){
             if( $(window).width() <= 992 ){
+                console.log(123);
                 if( !$('.box_infoview_content').hasClass('show') ){
                     $('.box_infoview_content').addClass('show');
                     $('.section_plan .box_infoview_content .col-12.col-lg-5').css('opacity',0);

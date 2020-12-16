@@ -198,7 +198,7 @@ class PPL_Plan {
 			update_post_meta($post_id,'_wd_slider',$ret_str);	
 		}		
 		
-		if( isset($_POST) && isset($_POST['ppl_plan']) && isset($_POST['ppl_plan_url']) ) {
+		if( isset($_POST) && isset($_POST['ppl_plan']) ) {
 			$mydata = array();
 			$mydata['ppl-plan'] = $_POST['ppl_plan'];
 			$mydata['ppl-plan-url'] = $_POST['ppl_plan_url'];

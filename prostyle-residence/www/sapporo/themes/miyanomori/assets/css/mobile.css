@@ -86,8 +86,16 @@
         display: block;
     }
 
+    .header_before-login .btn-action{
+        display:flex;
+        position: relative;
+        top: -5px;
+    }
+
    .header_afterlogin .btn-action{
         display:flex;
+        position: relative;
+        top: -5px;
    }
 
 

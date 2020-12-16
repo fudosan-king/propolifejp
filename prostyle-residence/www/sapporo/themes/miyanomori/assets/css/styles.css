@@ -3401,6 +3401,7 @@ figure {
     align-items: center;
     justify-content: center;
     margin-bottom: 43px;
+    line-height:1em;
 }
 
 .equip-spec_box .row {
@@ -4171,14 +4172,19 @@ i.chevron-left {
     }
 }
 
-.box_infoview_img .path-hover_s301 {
+.box_infoview_img .path-hover{
     position: absolute;
+    cursor: pointer;
+    opacity: 0.2;
+}
+
+.box_infoview_img.S301 .path-hover{
+    background-image: url('../images/SVG/apartment-code/N302-01.svg');
     bottom: 15%;
     left: 15%;
     right: 63.6%;
     transform: translateY(-50%);
     top: 75%;
-    cursor: pointer;
 }
 
 .vr-l {

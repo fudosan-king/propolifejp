@@ -331,6 +331,7 @@ ul.list_menu_footer {
   margin: 0 auto;
   float: right;
   text-align: center;
+  width: 100%;
 }
 ul.list_menu_footer li {
   display: inline-block;

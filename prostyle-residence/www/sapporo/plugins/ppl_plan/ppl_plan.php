@@ -367,7 +367,7 @@ class PPL_Plan {
 	public function ppl_plan_show($atts = array()) {
 
 		extract(shortcode_atts(array(
-			'count' 				=>  '6',
+			'count' 				=>  -1,
 			'ignore_slug' 			=>  ''
 		),$atts));		
 		show_ppl_plan( $count, $ignore_slug );	

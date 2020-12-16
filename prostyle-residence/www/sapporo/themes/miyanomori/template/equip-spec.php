@@ -66,7 +66,7 @@ Template Post Type: page
                             </ul>
                         </div>
                         <div id="斜行エレベーター" class="equip-spec_box inclined">
-                            <h4><span><span>斜行エレベーター</span></h4>
+                            <h4><span>斜行エレベーター</span></h4>
                             <p class="equip-spec_box-title">斜行エレベーター</p>
                             <div class="row">
                                 <div class="col-md-4">

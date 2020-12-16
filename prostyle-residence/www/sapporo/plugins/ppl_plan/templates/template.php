@@ -78,6 +78,7 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 			$post_url     = esc_url(get_permalink($post->ID));
 			$thumb        = get_post_thumbnail_id($post->ID);
 			$thumburl     = wp_get_attachment_image_src($thumb,'ppl_plan_item');
+			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
 		 	if ($style == 'special'): ?>
 				<div class="row no-gutters">
 	                <div class="col-12 col-lg-5">
@@ -85,7 +86,7 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 	                    <h2><?= $post_excerpt ?></h2>
 	                </div>
 	                <div class="col-12 col-lg-7">
-	                    <div class="box_infoview_img">
+	                    <div class="box_infoview_img <?= $codeApartment; ?>">
 	                        <a href="<?= $post_url ?>" title=""><span class="path-hover"></span></a>
 	                        <img src="<?= $thumburl[0] ?>" alt="" class="img-fluid w-100">
 	                    </div>

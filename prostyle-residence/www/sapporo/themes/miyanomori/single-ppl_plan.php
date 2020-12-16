@@ -86,7 +86,7 @@ Template Post Type: page
                         </div>
                         <div class="col-12 col-lg-7">
                             <div class="box_infoview_img">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/S201-2d.png" alt="" class="img-fluid">
+                                <img src="<?php echo get_field('design_apartment') ?>" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>

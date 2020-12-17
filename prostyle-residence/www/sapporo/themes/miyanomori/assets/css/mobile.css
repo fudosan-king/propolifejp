@@ -202,8 +202,7 @@
     }
 
     .bsnav-mobile .navbar-nav:nth-of-type(3) .nav-item:first-child .nav-link {
-        border: 1px solid #fff;
-        padding: 2px 33px;
+        padding: 2px;
         margin-bottom: 22px;
     }
 

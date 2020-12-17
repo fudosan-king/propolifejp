@@ -1713,15 +1713,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     add_filter( 'the_content', 'filter_the_content_login' );
 
     function filter_the_content_login($content) {
-        $has_short_code_login = has_shortcode($content, 'insert_short_code_login');
         if( is_single() || is_page() ) {
+            $has_short_code_login = has_shortcode($content, 'insert_short_code_login');
             if($has_short_code_login && !is_user_logged_in()) {
                 $content = preg_replace('/\[insert_short_code_login\].*/sm', '', $content);
                 $content .= '[insert_short_code_login]';
             }
             else $content = preg_replace('/\[insert_short_code_login\]/', '', $content);
-            return $content;
         }
+        return $content;
     }
 
     add_filter('jpeg_quality', function($arg){return 100;});

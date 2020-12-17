@@ -9,11 +9,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Prostyle - MIYANOMORI</title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-
+   
+    <meta name="title" content="<?= get_the_title(); ?>">
     <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/favicon-16x16.png">

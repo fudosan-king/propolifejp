@@ -14,8 +14,8 @@ Template Post Type: page
                     <div class="contactus_top">
                         <h2 class="title_sub">お問い合わせ</h2>
                         <p class="mb-0"><i class="i_tel"><img src="<?php bloginfo('template_url'); ?>/assets/images/SVG/i_tel.svg" alt="" class="img-fluid" width="17"></i></p>
-                        <h3>Tel. <a href="tel:0000000000">0000-00-0000</a></h3>
-                        <p class="op-cl-time">受付時間：10：00〜18:00（火曜・水曜は除く）</p>
+                        <h3>Tel. <a href="tel:0120853133">0120-853-133</a></h3>
+                        <p class="op-cl-time">受付時間：10:00 ～ 18:00（火曜・水曜は除く）</p>
                         <p><small>※火曜水曜が祝日の場合は営業</small></p>
                         <p>物件のご相談・ご依頼や資料請求について、お問い合わせフォームよりお気軽にお問い合わせください。<br>
                             <span class="red">※</span>は必須項目です。</p>
@@ -412,7 +412,7 @@ Template Post Type: page
                                                 <input type="checkbox" class="custom-control-input" id="ck_agree" checked>
                                                 <label class="custom-control-label label_required" for="ck_agree">同意する</label>
                                             </div>
-                                            <button type="submit" class="btn btnsubmit" id="ibtnGoSubmit" >上記に同意して確認画面へ</button>
+                                            <button type="submit" class="btn btnsubmit" id="ibtnGoSubmit" ><span>上記に同意して確認画面へ</span></button>
                                         </div>
                                     </div>
                                 </div>

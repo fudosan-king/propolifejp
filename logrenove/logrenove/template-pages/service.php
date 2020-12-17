@@ -196,7 +196,11 @@
                             </div>
 
                             <div class="form-group text-center">
-                                <a href="" id="iEstimate" class="btn btnStart">START</a>
+                                <?php if(is_user_logged_in()) { ?>
+                                    <a href="" id="iEstimate" class="btn btnStart">START</a>
+                                <?php } else { ?>
+                                    <a href="" class="btn btnStart" data-toggle="modal" data-target="#choose_tree">START</a>
+                                <?php } ?>
                             </div>
                             <p class="renovation_fee"><a href="#">物件</a>+<a href="#">リノベーション</a>費用</p>
 
@@ -497,5 +501,37 @@
     </section>
 
 </main>
+
+<?php if(!is_user_logged_in()) { ?>
+
+<!-- Thêm đoạn Popup -->
+<section class="choose_modal">
+    <div class="modal fade" id="choose_tree" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="btn-only-member">
+                <div class="btn-only-member_ct">
+                    <p><i class="btn-only-member_i-clock"></i>シミュレーション結果は会員限定です。</p>
+                    <p>会員登録（無料）すると結果をご覧いただけます。</p>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <p>新規登録の方はこちら</p>
+                            <a class="btn btn-only-member_brown" href="<?php echo site_url('signup'); ?>" target="_blank">今すぐ登録</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <p>会員の方はこちら</p>
+                            <a class="btn btn-only-member_blue" href="<?php echo site_url('login'); ?>" target="_blank">ログイン</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- End -->
+<?php } ?>
 
 <?php get_footer(); ?>

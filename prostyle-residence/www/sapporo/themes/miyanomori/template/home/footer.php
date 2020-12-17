@@ -8,7 +8,7 @@
                         <i class="i_circle"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_email.svg" alt="" class="img-fluid" width="17"></i>
                     </p>
                     <h5 class="mb-2">お問い合わせフォーム</h5>
-                    <a href="<?= home_url(); ?>/contactus" class="btn btncontactus">お問い合わせ</a>
+                    <a href="<?= home_url(); ?>/contactus" class="btn btncontactus"><span>お問い合わせ</span></a>
                 </div>
             </div>
 <!--             <div class="col-12 col-lg-4">
@@ -26,8 +26,8 @@
                         <i class="i_circle"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_tel.svg" alt="" class="img-fluid" width="17"></i>
                     </p>
                     <h5>お電話でのお問い合わせ</h5>
-                    <h3>Tel. <a href="tel:0000000000">0000-00-0000</a></h3>
-                    <p>スタッフ受付 10:00 - 19:00</p>
+                    <h3>Tel. <a href="tel:0120853133">0120-853-133</a></h3>
+                    <p>スタッフ受付 10:00 ～ 18:00</p>
                 </div>
             </div>
         </div>
@@ -42,10 +42,10 @@
                 <a href="#"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
                 <ul>
                     <!-- <li><a href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
-                    <li><a href="<?= home_url('/about/'); ?> ">PROSTYLEについて</a></li>
+                    <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
                     <li><a href="#">利用規約</a></li>
                     <li><a href="#">反社会的勢力排除に関する基本方針</a></li>
-                    <li><a href="<?= home_url('/privacy-policy/'); ?>">プライバシーポリシー</a></li>
+                    <li><a href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
                     <li><a href="#">ソーシャルメディアポリシー</a></li>
                 </ul>
                 

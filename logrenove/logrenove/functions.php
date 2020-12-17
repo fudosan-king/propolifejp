@@ -442,14 +442,15 @@
             is_page('events/thanks')
         );
         $is_event_detail = (is_single() && get_post_type($post->ID) == 'events');
-        if($is_event_detail || $mdsmaf_m_v_condition) {
+        if(is_page('counter') || $is_event_detail || $mdsmaf_m_v_condition) {
             $header_extend_script .= "
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({‘gtm.start’:
-new Date().getTime(),event:‘gtm.js’});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src=
-’https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXQJ38M');</script>";
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGH3X2H');</script>
+<!-- End Google Tag Manager -->";
         }
         if($mdsmaf_m_v_condition) {
             $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -466,20 +467,22 @@ j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src
 
     function add_extra_body_script(){
         global $post;
-        $body_extend_script = get_field('body_extend_script', 'option');
+        $body_extend_script = '';
         $mdsmaf_m_v_condition = (
             is_page('booking-completed') || 
             (is_page('signup') && isset($_GET['action']) && ($_GET['action']=='confirm' || $_GET['action']=='active')) || 
             is_page('events/thanks')
         );
         $is_event_detail = (is_single() && get_post_type($post->ID) == 'events');
-        if($is_event_detail || $mdsmaf_m_v_condition) {
+        if(is_page('counter') || $is_event_detail || $mdsmaf_m_v_condition) {
             $body_extend_script .= '
 <!-- Google Tag Manager (noscript) --> 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXQJ38M" 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGH3X2H" 
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
-<!-- End Google Tag Manager (noscript) -->';
+<!-- End Google Tag Manager (noscript) -->
+';
         }
+        $body_extend_script .= get_field('body_extend_script', 'option');
         echo $body_extend_script;
     }
     add_action( 'body_extra_script', 'add_extra_body_script');
@@ -905,7 +908,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     'cache_results'          => true,
                     'update_post_term_cache' => true,
                     'update_post_meta_cache' => true,
-                    'orderby' => 'ID',
+                    'orderby' => 'modified',
                     'order' => 'DESC',
                     // 'meta_query' => array(
                     //     array(
@@ -1031,7 +1034,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return $description;
     }
 
-    function limit_event_content($content='', $limit=180, $strip_tags='<br>')
+    function limit_event_content($content='', $limit=180, $remove_line = false, $strip_tags='<br>')
     {
         global $detect;
         if($detect->isMobile()) {
@@ -1040,7 +1043,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         else {
             $content_arr = explode('<br />', $content, 3);
             if(is_array($content_arr) && count($content_arr) >= 3) {
-                $content_arr[2] = mb_strimwidth($content_arr[2], 0, $limit, '...');
+                if($remove_line) {
+                    unset($content_arr[$remove_line-1]);
+                    $content_arr[$remove_line-2] = mb_strimwidth($content_arr[$remove_line-2], 0, $limit, '...');
+                }
+                else $content_arr[2] = mb_strimwidth($content_arr[2], 0, $limit, '...');
                 $content = implode('<br>', $content_arr);
             }
             else return $content;
@@ -1719,4 +1726,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     add_filter('jpeg_quality', function($arg){return 100;});
     add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
+
+    function get_recommend_events_ids($post_type = 'events')
+    {
+        $articles_ids = [];
+        for($i=1;$i<=5;$i++)
+        {
+            $articles = get_field('recommend_event_'.$i, 'option');
+            $articles_url = !empty($articles['url'])?$articles['url']:'';
+            if(!empty($articles_url))
+            {
+                $articles_ids[] = intval(filter_var($articles_url, FILTER_SANITIZE_NUMBER_INT));
+            }
+            
+        }
+
+        $count_articles_ids = is_array($articles_ids)?count($articles_ids):0;
+        $numberposts = 5 - $count_articles_ids;
+
+        if($count_articles_ids < 5)
+        {
+            $recent_posts = get_mostviewed_event($numberposts, $articles_ids, $post_type);
+            // $articles_ids = is_array($articles_ids)?array_merge($articles_ids, array_column($post_ids, 'ID')):array_column($post_ids, 'ID');
+            $articles_ids = array_merge($articles_ids, $recent_posts);
+        }
+
+        return $articles_ids;
+
+
+    }
+
+    function get_mostviewed_event($numberposts = 5, $list_id = array(), $post_type = "events") {
+        $args = array(
+            'post_type'             =>      'events',
+            'posts_per_page'        =>      $numberposts,
+            'meta_key'              =>      'wpb_post_views_count',
+            'orderby'               =>      'meta_value',
+            'exclude'               =>      $list_id,
+        );
+
+        $get_id = new WP_Query($args);
+        if ( $get_id->have_posts() ) {
+            while ($get_id->have_posts()) {
+                $get_id->the_post();
+                $post_ids = wp_list_pluck( $get_id->posts, 'ID' );
+            }
+        }
+
+        return $post_ids;
+    }
+
+    /* http://redmine.fudosan-king.jp/issues/7753 */
+
+    function get_homepage_posts($homepage_setting = 'useful_content') {
+        global $detect;
+        $homepage_posts = get_field($homepage_setting, 'option');
+        if(count($homepage_posts)) {
+            $posts = array();
+            foreach ($homepage_posts as $key => $homepage_post) {
+                $homepage_post = $homepage_post['post'];
+                $obj = new stdClass();
+                $obj->ID = $homepage_post->ID;
+                $obj->title = $homepage_post->post_title;
+                $_size = $detect->isMobile() ? 'sidebar-pc' : 'sidebar-pc' ;
+                $thumbnails = new ThumbnailItem(get_post_thumbnail_id($homepage_post), $_size);
+                $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
+                $obj->permalink = get_permalink($homepage_post);
+                if($homepage_setting=='homepage_events') {
+                    $obj->categories = get_the_terms($obj->ID, 'event_category');
+                }
+                else {
+                    $obj->categories = (!empty(get_the_category($homepage_post)) && count(get_the_category($homepage_post))) ?get_the_category($homepage_post) :array();
+                }
+                $obj->description = $homepage_setting=='homepage_events'?get_field('event_description', $obj->ID):'';
+                $posts[] = $obj;
+            }
+            $posts = $detect->isMobile()&&$homepage_setting=='useful_content'?array_slice($posts, 0, 10):$posts;
+            return $posts;
+        }
+        return false;
+    }
 ?>

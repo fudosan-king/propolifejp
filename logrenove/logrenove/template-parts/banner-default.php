@@ -1,5 +1,5 @@
 <?php 
-    global $detect;
+    /*global $detect;
     global $header_ids;
 
     if (count($header_ids) > 0):
@@ -83,6 +83,49 @@
         wp_reset_query();
 
         echo '</section>';
-    endif;
+    endif;*/
     
 ?>
+
+<section class="section_banner">
+    <div class="carousel carousel_banner" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 3000 }'>
+        <div class="carousel-cell">
+            <a>
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_1.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_1_sp.png" class="img-fluid d-block d-lg-none">
+                </div>
+            </a>
+        </div>
+        <div class="carousel-cell">
+            <a>
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_2.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_2_sp.png" class="img-fluid d-block d-lg-none">
+                </div>
+            </a>
+        </div>
+        <div class="carousel-cell">
+            <a>
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_3.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_3_sp.png" class="img-fluid d-block d-lg-none">
+                </div>
+            </a>
+        </div>
+        <div class="carousel-cell">
+            <a>
+                <div class="content">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_4.jpg" class="img-fluid d-none d-lg-block">
+                    <img src="<?php echo IMAGE_PATH; ?>/banner/KV_4_sp.png" class="img-fluid d-block d-lg-none">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="w_content_text">
+        <div class="content_text">
+            <p>プライベートレーベル・リノベーション</p>
+            <img src="<?php echo IMAGE_PATH; ?>/1x/logo-white.svg" alt="" class="img-fluid" width="378">
+        </div>
+    </div>
+</section>

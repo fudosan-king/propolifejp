@@ -40,7 +40,7 @@
 
 <?php 
     wp_enqueue_style( 'main', STYLESHEET_PATH.'/styles.css');
-
+    
     if(is_single()):
         ?>
             <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -67,6 +67,7 @@
         wp_enqueue_style( 'main-booking', COUNTER_STYLESHEET_PATH.'/main.css');
         wp_enqueue_style( 'main-counter-sp', COUNTER_STYLESHEET_PATH.'/mobile.css');
     }
+    wp_enqueue_style( 'main-new', STYLESHEET_PATH.'/styles_new.css');
 ?>
 
 <?php event_detail_schema(); ?>

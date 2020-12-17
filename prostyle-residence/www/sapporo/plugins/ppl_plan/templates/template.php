@@ -33,11 +33,14 @@ function show_ppl_plan($count = "-1", $ignore_slug = "")
 		            <span class="label_new"><i>New</i></span>
 		            <ul class="list_view">
 		                <li><a href="#">眺望</a></li>
+		                <li><a href="#">３Dモデルルーム画像</a></li>
 		            </ul>
 		            <h2><?= get_the_title($post->ID)?></h2>
 		            <h3><?= $post->post_excerpt ?></h3>
-		            <div class="box_premium_img">
-		                <a href="<?= esc_url(get_permalink($post->ID)) ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
+		            <div class="box_premium_list-img">
+		            	<div class="box_premium_img">
+		                	<a href="<?= esc_url(get_permalink($post->ID)) ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
+		            	</div>
 		            </div>
 		        </div>
 	   		 </div>			
@@ -75,6 +78,7 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 			$post_url     = esc_url(get_permalink($post->ID));
 			$thumb        = get_post_thumbnail_id($post->ID);
 			$thumburl     = wp_get_attachment_image_src($thumb,'ppl_plan_item');
+			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
 		 	if ($style == 'special'): ?>
 				<div class="row no-gutters">
 	                <div class="col-12 col-lg-5">
@@ -82,7 +86,7 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 	                    <h2><?= $post_excerpt ?></h2>
 	                </div>
 	                <div class="col-12 col-lg-7">
-	                    <div class="box_infoview_img">
+	                    <div class="box_infoview_img <?= $codeApartment; ?>">
 	                        <a href="<?= $post_url ?>" title=""><span class="path-hover"></span></a>
 	                        <img src="<?= $thumburl[0] ?>" alt="" class="img-fluid w-100">
 	                    </div>
@@ -98,8 +102,10 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
                 </ul>
                 <h2><?= $post_title ?></h2>
                 <h3><?= $post_excerpt ?></h3>
-                <div class="box_premium_img">
-                    <a href="<?= $post_url ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
+                <div class="box_premium_list-img">
+                	<div class="box_premium_img">
+                    	<a href="<?= $post_url ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
+                	</div>
                 </div>
 			<?php endif ?>
 			  		

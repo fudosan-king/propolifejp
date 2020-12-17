@@ -406,118 +406,101 @@ body.single-post .logo_logrenove_small img {
     color: white;
 }
 
-.btn-only-member {
-    border: 1px solid #4F4F4F;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.btn-only-member .btn-only-member_ct {
-    width: 100%;
-    max-width: 460px;
-    margin:0 auto;
-    padding:31px 15px 35px;
-}
-
-.btn-only-member .btn-only-member_ct > p{
-    font-size: 1rem;
-    line-height: 24px;
-    text-align: center;
-    color: #333333;
-    margin-bottom: 0;
+/*CSS CHECKBOX*/
+.frm_services .check-radio{
+    display: block;
     position: relative;
-}
-
-
-.btn-only-member .btn-only-member_ct > p:first-child > .btn-only-member_i-clock{
-    position: relative;
-    padding-left: 20px;
-}
-
-.btn-only-member .btn-only-member_ct > p:first-child > .btn-only-member_i-clock::before{
-    content:'';
-    background-image: url('../images/i-clock.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    position:absolute;
-    top: 2px;
-    left: 4px;
-    height:16px;
-    width: 11px;
-}
-
-.btn-only-member .btn-only-member_ct > p:nth-child(2){
-    margin-bottom: 16px;
-    letter-spacing: -1px;
-}
-
-.btn-only-member .col-md-6 > p {
-    text-align: center;
-    color:#000;
-    font-size: 0.875rem;
-    margin-bottom: 2px;
-}
-
-.btn-only-member .col-md-6 > .btn {
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.875rem;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     font-weight: 600;
-    line-height: 17px;
-    color:#fff;
-    text-decoration: none;
-    height:40px;
+    font-size: 0.75rem;
+    line-height: 14px;
+    color: #000000;
 }
 
-.btn-only-member .col-md-6 > .btn:hover {
-    color:#fff;
-    opacity: 0.8;
+.frm_services .custom-checkradio {
+    padding-left: 33px;
+    padding-right: 0;
+    max-width: 200px;
 }
 
-.btn-only-member .col-md-6 > .btn-only-member_brown {
-    background-color: #AD814D;
-
+.frm_services .custom-checkradio:first-child{
+    padding-left:15px;
+    max-width: max-content;
 }
 
-.btn-only-member .col-md-6 > .btn-only-member_blue {
-    background: #3CBBCF;
+.frm_services .check-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.frm_services .check-radio .checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #828282;
+    border-radius: 50%;
+}
+
+.frm_services .check-radio  .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.frm_services .check-radio input:checked ~ .checkmark:after {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #B48856;
+    display: block;
 }
 
 
-@media (max-width: 768px) {
-    .btn-only-member .btn-only-member_ct{
-        padding: 12px 15px 16px;
+@media (max-width:768px){
+    .frm_services .custom-checkradio {
+        padding-left: 30px;
+        max-width: 100%;
+        margin-bottom: 15px;
     }
-
-    .btn-only-member .col-md-6:first-child {
-        padding-right: 5px;
+    .frm_services .custom-checkradio:first-child{
+        padding-left:30px;
+        margin-top:10px;
     }
-
-    .btn-only-member .col-md-6:last-child {
-        padding-left: 5px;
+    .frm_services .check-radio{
+        font-size: 0.6875rem;
+        margin-bottom:3px;
+        padding-left: 27px;
     }
+}
 
-    .btn-only-member .btn-only-member_ct > p {
-        font-size: 0.875rem;
+/* Update radio button label no break line */
+.frm_services {
+    padding: 60px;
+}
+.frm_services .check-radio {
+    font-size: 0.7rem;
+    letter-spacing: -0.5px;
+}
+@media (max-width:768px){
+    .frm_services {
+        padding: 15px;
+    }
+    .frm_services .check-radio {
+        margin-bottom: 10px
     }
 }
 
-@media (max-width: 320px) {
-    .btn-only-member .col-md-6 > p {
-        font-size: 0.65rem;
-    }
-}
-@media (min-width:992px){
-    .single-events .section_breakcrumb .container{
-        max-width: 800px;
-    }
-
-    .section_events .container{
-        max-width: 800px;
-    }
-    .section_events .services_detail_content{
-        padding: 10px 30px 0;
-    }
-}

@@ -1,15 +1,12 @@
 <?php 
 global $detect, $post;
-$header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) == 'post' ? 'style="position: fixed;"' : '';
+$header_fixed = $detect->isMobile() && (is_home() || (is_single() && get_post_type($post->ID) == 'post')) ? 'class="header_fixed"' : '';
 ?>
 <header <?php echo $header_fixed; ?>>
     <div class="top_header">
         <div class="container">
             <div class="row no-gutters justify-content-between justify-content-md-center">
-                <div class="col-3 col-md-3 align-self-center">
-
-                </div>
-                <div class="col-4 col-md-4 align-self-center">
+                <div class="col-6 col-md-6 align-self-center">
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_md"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" class="img-fluid" width="257"></a>
                     <a href="<?php echo get_home_url(); ?>" class="logo logo_sm"><img src="<?=IMAGE_PATH;?>/1x/logo_.svg" class="img-fluid" width="257"></a>
                 </div>
@@ -47,14 +44,10 @@ $header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) =
                     <a target="_blank" rel="noopener noreferrer" href="<?php //echo $service_url; ?>" class="btn-link btn btn_applyconsultation d-block d-lg-none"><?php //echo $service_text_sp; ?></a>
                 </div> -->
 
-                <div class="col-3 col-md-3 align-self-center text-right">
+                <div class="col-6 col-md-6 align-self-center text-right">
                     <div class="box_top_menu">
-                        <!-- <div class="box_top_user_md">
-                            <a href="login.php" class="btn btnSignup float-right ml-2"><i class="fas fa-sign-in-alt"></i> <span>ログイン</span></a>
-                            <a href="signin.php" class="btn btnSignup float-right"><i class="fas fa-user"></i> <span>新規登録</span></a>
-                        </div> -->
                         <?php get_template_part( 'template-parts/login', 'header' ); ?>
-                        <!-- <a href="<?php echo esc_url(network_site_url('mailmagazine')); ?>" class="btn btn_email">
+                        <!-- <a href="<?php //echo esc_url(network_site_url('mailmagazine')); ?>" class="btn btn_email">
                             <img src="<?php //echo IMAGE_PATH;?>/mailmagazine/i_email.svg" alt="" class="img-fluid mr-0 mr-lg-2" width="20"><span class="d-none d-lg-inline-block">メルマガ登録</span>
                         </a> -->
                         <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,70 +61,38 @@ $header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) =
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- <div class="box_top_user_sm d-flex">
-                <a href="signin.php" class="btn btnSignup flex-fill"><i class="fas fa-user"></i> <span>新規登録</span></a>
-                <a href="login.php" class="btn btnSignup flex-fill"><i class="fas fa-sign-in-alt"></i> <span>ログイン</span></a>
-            </div> -->
-            <?php // get_template_part( 'template-parts/searchform', 'sp' ); ?>
-
-            <?php 
-                $menuLocations = get_nav_menu_locations();
-                $menuID = $menuLocations['side'];
-                $sideNav = wp_get_nav_menu_items($menuID);
-                $category_show = ['0','4'];
-                
-                if (count($sideNav)>0){
-                   
-                    echo '<div class="accordion accordionNav" id="accordionNav">';
-                    foreach ($sideNav as $index => $nav){
-                        /* Action here */
-
-                        if( in_array($index, $category_show)){
-                            $firstExpand = 'true';
-                            $firstShow = 'show';
-                        }else{
-                            $firstExpand = 'false';
-                            $firstShow = '';
-                        }
-
-                        if ($nav->menu_item_parent == 0){
-                            $childMenu = get_nav_child_menu($sideNav, $nav->ID);
-                            $isCollapsed = count($childMenu)>0 ? 'collapsed' : '';
-                            ?>
-
-                                <div class="card">
-                                    <div class="card-header" id="heading-<?php echo $index; ?>">
-                                        <div class="card-wrapper mb-0">
-                                            <a href="<?php echo $nav->url; ?>"><?php echo $nav->title; ?></a>
-                                            <button class="btn btn-link <?php echo ($firstExpand=='false')?'collapsed':''; ?>" type="button" data-toggle="collapse" data-target="#collapse-sp-<?php echo $index; ?>" aria-expanded="<?php echo $firstExpand; ?>" aria-controls="collapse-sp-<?php echo $index; ?>"  data-child="<?php echo count($childMenu)>0 ? 'true' : 'false'; ?>"><?php if (count($childMenu)>0): ?><i class="fal fa-chevron-right"></i><?php endif; ?></button>
-                                        </div>
-                                    </div>
-                                    
-                                    <?php
-                                        if (count($childMenu)>0){
-                                    
-                                            echo '<div id="collapse-sp-'.$index.'" class="collapse '.$firstShow.'" aria-labelledby="heading-'.$index.'" data-parent="#accordionNav_right">
-                                                    <div class="card-body">
-                                                        <ul>';
-                                                foreach($childMenu as $jndex => $cmenu){
-                                                    ?>
-                                                    <li><a href="<?php echo $cmenu->url; ?>"><?php echo $cmenu->title; ?></a></li>
-                                                    <?php
-                                                }
-                                            echo '      </ul>
-                                                    </div>
-                                                </div>';
-                                        }
-                                    ?>
-                                </div>
-                            <?php
-                        }else{
-                            
-                        }                    
-                    }
-                    echo '</div>';
-                }
-            ?>
+            <ul class="nav_mobile navbar-mobile">
+                <li><a href="<?php echo site_url('events'); ?>">セミナーを探す</a></li>
+                <li><a href="<?php echo site_url('service'); ?>">LogRenoveを知る</a></li>
+                <li><a href="<?php echo site_url('work'); ?>">施工事例を見る</a></li>
+                <li><a href="<?php echo site_url('counter'); ?>">プランナーに相談する</a></li>
+                <li><a href="<?php echo site_url('documents'); ?>">資料を探す</a></li>
+                <li><a href="<?php echo site_url('signup'); ?>">リノベ情報を受け取る</a></li>
+                <li><a href="<?php echo site_url('contact'); ?>">お問い合わせ</a></li>
+            </ul>
+        </div>
     </nav>
 
 </header>
+
+<div class="<?=$detect->isMobile() && (is_home() || (is_single() && get_post_type($post->ID) == 'post')) ? 'spacing_top' : ''?> d-block d-lg-none"></div>
+
+<div class="nav_slider <?=$detect->isMobile() && (is_home() || (is_single() && get_post_type($post->ID) == 'post')) ? 'nav_slider_fixed' : ''?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="box_nav_slider">
+                    <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+                        <div class="carousel-cell"><a href="<?php echo site_url('events'); ?>">セミナーを探す</a></div>
+                        <div class="carousel-cell"><a href="<?php echo site_url('service'); ?>">LogRenoveを知る</a></div>
+                        <div class="carousel-cell"><a href="<?php echo site_url('work'); ?>">施工事例を見る</a></div>
+                        <div class="carousel-cell"><a href="<?php echo site_url('counter'); ?>">プランナーに相談する</a></div>
+                        <div class="carousel-cell"><a href="<?php echo site_url('documents'); ?>">資料を探す</a></div>
+                        <div class="carousel-cell"><a href="<?php echo site_url('signup'); ?>">リノベ情報を受け取る</a></div>
+                        <div class="carousel-cell"><a href="<?php echo site_url('contact'); ?>">お問い合わせ</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

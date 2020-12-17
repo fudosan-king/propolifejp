@@ -186,7 +186,8 @@ Template Post Type: page
                             </div>
                         </div>
                     </div>
-
+ 
+ 
                     <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
                     <h3>札幌市営地下鉄東西線<span>「円山公園」</span>駅利用時</h3>
                     <div class="box_station">

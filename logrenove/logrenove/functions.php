@@ -1788,7 +1788,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 $obj = new stdClass();
                 $obj->ID = $homepage_post->ID;
                 $obj->title = $homepage_post->post_title;
-                $_size = $detect->isMobile() ? 'sidebar-pc' : 'sidebar-pc' ;
+                $_size = $detect->isMobile() ? 'thumbnail-sp' : 'thumbnail-pc' ;
                 $thumbnails = new ThumbnailItem(get_post_thumbnail_id($homepage_post), $_size);
                 $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
                 $obj->permalink = get_permalink($homepage_post);

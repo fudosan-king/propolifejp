@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <title><?= get_the_title(); ?></title>
+    <title><?= strip_tags(get_the_title()); ?></title>
    
     <meta name="title" content="<?= get_the_title(); ?>">
     <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/apple-touch-icon.png">

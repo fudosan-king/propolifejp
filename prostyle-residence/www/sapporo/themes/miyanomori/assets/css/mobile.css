@@ -727,11 +727,15 @@
         max-width: 335px;
     }
 
-    footer ul li a {
-        padding: 0;
+
+    footer .footer-top ul li a {
+        padding: 0 10px;
     }
 
-    footer ul li a:after {
+    footer .footer-top ul li a:after {
+        height:1em;
+    }
+    footer .footer-top ul.my-brand li a:after {
         width: 0;
     }
 
@@ -1671,9 +1675,6 @@
         text-align: left;
     }
 
-    .section_info_contact .info_contact_item p a, .section_info_contact .info_contact_item h3 a {
-        text-decoration: underline;
-    }
 
     .section_info_contact .info_contact_item p:first-child {
         position: absolute;

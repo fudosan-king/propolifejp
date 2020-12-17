@@ -6,7 +6,6 @@ Template Post Type: page
 ?>
 <?php get_header(); ?>
 <?php get_template_part( 'template/home/header'); ?>
-<main>
     <section class="section_subbanner slide-flickity">
         <div class="carousel" data-flickity data-flickity-options='{ "prevNextButtons": false }'>
             <div class="carousel-cell">

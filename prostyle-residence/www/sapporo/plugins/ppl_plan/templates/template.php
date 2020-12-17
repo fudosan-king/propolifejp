@@ -87,7 +87,9 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 	                </div>
 	                <div class="col-12 col-lg-7">
 	                    <div class="box_infoview_img <?= $codeApartment; ?>">
-	                        <a href="<?= $post_url ?>" title=""><span class="path-hover"></span></a>
+	                        <a href="<?= $post_url ?>" title="">
+	                        	<svg id="i_s301" class="path-hover" fill="#c9bc9c" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.71 31.35"><rect class="cls-1" width="206.71" height="31.35"/></svg>
+	                        </a>
 	                        <img src="<?= $thumburl[0] ?>" alt="" class="img-fluid w-100">
 	                    </div>
 	                </div>

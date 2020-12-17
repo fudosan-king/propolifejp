@@ -1,5 +1,5 @@
 <?php  
-    if (!is_home() && !is_user_logged_in())
+    if (!is_home() && !is_front_page() && !is_user_logged_in())
     {
         wp_redirect(home_url());
     }

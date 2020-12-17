@@ -141,7 +141,7 @@ if (!function_exists('display_footer_menus')){
 					$childMenu = get_nav_child_menu($footerMenu, $nav->ID);
 					// $classOffset = $count == 0 ? 'offset-md-1' : '';
 					echo '
-					<div class="col-12 col-md-3">
+					<div class="col-12 col-md">
                     	<div class="row">
 		                    <div class="col-4 col-md-12">
 		                        <h6>'.$nav->title.'</h6>

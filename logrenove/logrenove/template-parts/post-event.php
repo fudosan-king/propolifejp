@@ -15,7 +15,7 @@
     <div class="row no-gutters">
         <div class="col-4 col-lg-4">
             <div class="seminar_event_item_img">
-                <a href="<?php echo $event->permalink; ?>"><img data-src="<?php echo $event->thumbails_url; ?>" alt="" class="img-fluid"></a>
+                <a href="<?php echo $event->permalink; ?>"><img src="<?php echo $event->thumbails_url; ?>" alt="" class="img-fluid"></a>
             </div>
         </div>
         <div class="col-8 col-lg-8">

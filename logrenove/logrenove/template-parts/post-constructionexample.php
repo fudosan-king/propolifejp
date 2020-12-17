@@ -17,7 +17,7 @@
             <div class="construction_item">
                 <a href="<?php echo $construction_example->permalink; ?>">
                     <div class="construction_item_img">
-                        <img data-src="<?php echo $construction_example->thumbails_url; ?>" alt="" class="img-fluid">
+                        <img src="<?php echo $construction_example->thumbails_url; ?>" alt="" class="img-fluid">
                     </div>
                     <h3><span><?php echo $construction_example->title; ?></span></h3>
                 </a>
@@ -36,7 +36,7 @@
           <div class="construction_item">
                 <a href="<?php echo $construction_example->permalink; ?>">
                     <div class="construction_item_img">
-                        <img data-src="<?php echo $construction_example->thumbails_url; ?>" alt="" class="img-fluid">
+                        <img src="<?php echo $construction_example->thumbails_url; ?>" alt="" class="img-fluid">
                     </div>
                     <h3><span><?php echo $construction_example->title; ?>!?</span></h3>
                 </a>

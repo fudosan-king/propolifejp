@@ -1,3 +1,7 @@
+<?php 
+	$data = ACFTermsFields::_sectionNotice();
+?>
+
 <div class="main_content">
 	<section class="section_social_media_policy mb-0">
 		<div class="container">

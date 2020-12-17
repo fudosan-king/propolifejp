@@ -25,6 +25,10 @@ class ACFTermsFields
 	public static function _sectionNotice(){
 		return json_decode(json_encode(get_field('section_notice')));
 	}
+
+	public static function listItem() {
+		return json_decode(json_encode(get_field('list_item')));
+	}
 }
 
 ?>

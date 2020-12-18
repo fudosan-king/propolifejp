@@ -1,6 +1,6 @@
 <?php
 //add_image_size('ppl_plan_item',480,300,true); /* image for slideshow */
-function show_ppl_plan($count = "-1", $ignore_slug = "")
+function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = 'false')
 {
 	$exclude_ids = array();
 
@@ -26,8 +26,17 @@ function show_ppl_plan($count = "-1", $ignore_slug = "")
 			global $post, $wp_query;
 			$thumb = get_post_thumbnail_id($post->ID);
 			$thumburl = wp_get_attachment_image_src($thumb,'portfolio_image');
-
+		
+			if($only_info === 'true'):
+			$post_title   = get_the_title($post->ID);
+			$post_excerpt = $post->post_excerpt;
+			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
 		?>
+			<div class="col-12 col-lg-5 <?= $codeApartment; ?>" style="display:none" >
+                <h1><?= $post_title; ?></h1>
+                <h2><?= $post_excerpt; ?></h2>
+            </div>
+		<?php else: ?>
 		 	<div class="box_normal_item">
 		        <div class="box_premium">
 		            <span class="label_new"><i>New</i></span>
@@ -44,8 +53,8 @@ function show_ppl_plan($count = "-1", $ignore_slug = "")
 		            </div>
 		        </div>
 	   		 </div>			
-	
-		<?php		
+		<?php
+			endif;		
 		
 		endwhile;
 									
@@ -79,22 +88,12 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 			$thumb        = get_post_thumbnail_id($post->ID);
 			$thumburl     = wp_get_attachment_image_src($thumb,'ppl_plan_item');
 			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
+
 		 	if ($style == 'special'): ?>
-				<div class="row no-gutters">
-	                <div class="col-12 col-lg-5">
-	                    <h1><?= $post_title ?></h1>
-	                    <h2><?= $post_excerpt ?></h2>
+	                <div class="col-12 col-lg-5 <?= $codeApartment; ?>">
+	                    <h1><?= $post_title; ?></h1>
+	                    <h2><?= $post_excerpt; ?></h2>
 	                </div>
-	                <div class="col-12 col-lg-7">
-	                    <div class="box_infoview_img <?= $codeApartment; ?>">
-	                        <a href="<?= $post_url ?>" title="">
-	                        	<svg id="i_s301" class="path-hover" fill="#c9bc9c" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.71 31.35"><rect class="cls-1" width="206.71" height="31.35"/></svg>
-	                        </a>
-	                        <img src="<?= $thumburl[0] ?>" alt="" class="img-fluid w-100">
-	                    </div>
-	                </div>
-	            </div>
-	            <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p>
 	        <?php else: ?>
 	        	<span class="label_new"><i>New</i></span>
                                         

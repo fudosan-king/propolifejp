@@ -772,10 +772,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     add_action( 'pre_get_posts', 'set_posts_per_page_for_events_cpt' );
 
-    function get_event_datetime()
+    function get_event_datetime($event_id = false)
     {
-        $post_id = get_the_ID();
-        $event_date = get_event_date(); //get_field('event_date', $post_id);
+        $post_id = $event_id?$event_id:get_the_ID();
+        $event_date = get_event_date($post_id); //get_field('event_date', $post_id);
+        $event_date = array_slice($event_date, 0, 6);
         $event_time = get_field('event_time', $post_id);
         // $result = array();
         // $result['date'] = (!empty($event_datetime['date']) && count($event_datetime['date'])) ? $event_datetime['date'] : '';
@@ -790,15 +791,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     # Event date http://redmine.fudosan-king.jp/issues/7562
 
-    function get_event_date() {
+    function get_event_date($event_id = false, $order_days = 365) {
         global $post;
-        $event_date_option = get_field('event_date', $post->ID);
+        $event_id = $event_id?$event_id:$post->ID;
+        $event_date_option = get_field('event_date', $event_id);
         $holydays = get_event_holydays();
         $event_excluded_days = get_event_excluded_days();
         $today = date('Y-m-d');
         $event_date = array();
         $i = 1;
-        $order_days = 100;
         while ($i <= $order_days) {
             $date_diff = date_diff_events($today, '+'.$i.' days');
             $date_unix = strtotime($date_diff);
@@ -818,7 +819,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             if($condition && !in_array($week_day[1], $event_excluded_days)) $event_date[] = $date;
             $i++;
         }
-        $event_date = array_slice($event_date, 0, 6);
         return $event_date;
     }
 
@@ -1019,7 +1019,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return $post_ids;
     }
 
-    function date_diff_events($date = '', $days = '-2 days') 
+    function date_diff_events($date = '', $days = '-2 days', $format='Y-m-d') 
     {
         // $timezone = get_option('timezone_string');
         // $date_2 = !empty($date_2) ? date('Y-m-d H:i', strtotime($date_2)) : date('Y-m-d H:i');
@@ -1028,8 +1028,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         // $target = date_create($date_2, timezone_open($timezone));
         // $interval = date_diff($origin, $target);
         // return $interval->format('%R%a');
-        $date = !empty($date)?date('Y-m-d', strtotime($date)):date('Y-m-d');
-        $date = date('Y-m-d', strtotime($date . $days));
+        $date = !empty($date)?date($format, strtotime($date)):date($format);
+        $date = date($format, strtotime($date . $days));
         return $date;
     }
 
@@ -1076,21 +1076,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     # Event schema
-    function event_detail_schema() {
+    function event_detail_schema($event_id=false) {
         global $post;
-        if(is_single() && get_post_type($post->ID) == 'events') {
+        $event_id=$event_id?$event_id:$post->ID;
+        if(get_post_type($event_id) == 'events') {
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
-            $event_date = get_event_date();
+            $event_date = get_event_date($event_id);
+            $event_date = array_slice($event_date, 0, 6);
             $startDate = reset($event_date);
             $endDate = end($event_date);
             $startDate = count($event_date)?date('Y-m-d', strtotime($startDate)):'';
             $endDate = count($event_date)?date('Y-m-d', strtotime($endDate)):'';
+            if(is_single()) {
     ?>
 <script type="application/ld+json">
+    <?php } ?>
     {
       "@context": "https://schema.org",
       "@type": "Event",
-      "name": "<?php echo the_title(); ?>",
+      "name": "<?php echo get_the_title($event_id); ?>",
       "startDate": "<?php echo $startDate; ?>",
       "endDate": "<?php echo $endDate; ?>",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -1113,7 +1117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "description": "<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_event_description())); ?>",
       "offers": {
         "@type": "Offer",
-        "url": "<?php the_permalink(); ?>",
+        "url": "<?php echo get_permalink($event_id); ?>",
         "price": "0",
         "priceCurrency": "JPY",
         "availability": "https://schema.org/InStock",
@@ -1129,8 +1133,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         "url": "<?php echo get_site_url(); ?>"
       }
     }
+    <?php if(is_single()) { ?>
 </script>
-    <?php }}
+    <?php }}}
     # End event schema
 
     # Posts ranking
@@ -1813,4 +1818,250 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         return false;
     }
+
+    /* http://redmine.fudosan-king.jp/issues/7804 */
+
+    function get_event_terms($taxonomy = 'event_category') {
+        $args = array(
+                'taxonomy' => $taxonomy,
+                'hide_empty' => false,
+            );
+        $terms = get_terms($args);
+        return $terms;
+    }
+
+    function get_popular_seminar() {
+        global $detect;
+        $popular_seminars = get_field('popular_seminar', 'option');
+        if(count($popular_seminars)) {
+            $posts = array();
+            foreach ($popular_seminars as $key => $popular_seminar) {
+                $popular_seminar = $popular_seminar['post'];
+                $obj = get_event_detail($popular_seminar->ID);
+                $obj->rank = $key+1;
+                $posts[$key] = $obj;
+            }
+            $posts = $detect->isMobile()?array_slice($posts, 0, 3):$posts;
+            return $posts;
+        }
+        return false;
+    }
+
+    function event_popular_seminar_schema() {
+        if((is_page( 'events' ) || is_tax('event_category') || is_tax('event_tags'))) {
+            $popular_seminar = get_popular_seminar();
+            if($popular_seminar) {
+                echo "<script type=\"application/ld+json\">\n";
+                foreach ($popular_seminar as $key => $event) {
+                    $event_id = $event->ID;
+                    event_detail_schema($event_id);
+                }
+                echo "\n</script>";
+            }
+        }
+    }
+
+    function get_event_detail($event_id) {
+        global $detect;
+        $event_id = is_object($event_id)?$event_id->ID:$event_id;
+        $event_datetime = get_event_datetime($event_id);
+        $obj = new stdClass();
+        $obj->ID = $event_id;
+        $obj->title = get_the_title($event_id);
+        $_size = $detect->isMobile() ? 'thumbnail-pc' : 'thumbnail-pc' ;
+        $thumbnails = new ThumbnailItem(get_post_thumbnail_id($event_id), $_size);
+        $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
+        $obj->permalink = get_permalink($event_id);
+        $obj->categories = get_the_terms($obj->ID, 'event_category');
+        $obj->tags = get_the_terms($obj->ID, 'event_tags');
+        $obj->description = get_field('event_description', $obj->ID);
+        $obj->date_rand = date_i18n('Fj (D)', strtotime($event_datetime['date'][array_rand($event_datetime['date'], 1)]));
+        $obj->time_rand = is_array($event_datetime['time'])&&count($event_datetime['time'])?$event_datetime['time'][array_rand($event_datetime['time'], 1)]['hour']:'';
+        return $obj;
+    }
+
+    function get_event_list_by_date($date, $posts_per_page=30, $args=array()) {
+        $current_term = get_queried_object();
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        $args_post = array(
+                    'post_type' => 'events',
+                    'post_status' => 'publish',
+                    'ignore_sticky_posts' => true,
+                    'perm' => 'readable',
+                    'no_found_rows'          => false,
+                    'cache_results'          => true,
+                    'update_post_term_cache' => true,
+                    'update_post_meta_cache' => true,
+                    'posts_per_page' => $posts_per_page,
+                    'orderby' => 'rand',
+                    'meta_query' => array(
+                        array(
+                            'key'       => 'event_date_list',
+                            'value'     => preg_quote($date),
+                            'compare'   => 'REGEXP',
+                        )
+                    )
+                );
+        if(is_term($current_term->term_id) != NULL)
+        {
+            $args_term = array('tax_query' => array(
+                array(
+                'taxonomy' => get_query_var('taxonomy'),
+                'field' => 'term_id',
+                'terms' => array($current_term->term_id),
+                 )
+              ));
+            $args_post = array_merge($args_post, $args_term);
+        }
+        $args_post = count($args)?array_merge($args_post, $args):$args_post;
+        $event_posts = new WP_Query( $args_post );
+        if($event_posts->have_posts()) {
+            $event_ids = wp_list_pluck( $event_posts->posts, 'ID' );
+            $event_detail = array($event_detail);
+            foreach ($event_ids as $key => $event_id) {
+                $event_detail[$key] = get_event_detail($event_id);
+            }
+            return $event_detail;
+        }
+        return false;
+    }
+
+    function get_event_date_list($fromdate=false, $limit=30, $args=array()) {
+        $timezone = get_option('timezone_string');
+        $fromdate = $fromdate?$fromdate:date('Y-m-d');
+        $d = isset($_REQUEST['d'])?$_REQUEST['d']:'';
+        $holydays = get_event_holydays();
+        $event_excluded_days = get_event_excluded_days();
+        $count_post = 0;
+        $events = array();
+        $i = 1;
+        while ($count_post < $limit) {
+            $limit_by_date = 0;
+            $next_day = date_diff_events($fromdate, '+'.$i.' days', 'D Y-m-d');
+            $week_day = explode(' ', $next_day, 2);
+            if(!in_array($week_day[1], $event_excluded_days)) {
+                switch ($d) {
+                    case 'sat':
+                    case 'sun':
+                        if($d==strtolower($week_day[0])) $limit_by_date = 10;
+                        break;
+                    case 'week':
+                        if(!in_array($week_day[0], array('Sat', 'Sun', 'Fri')) && !in_array($week_day[1], $holydays)) $limit_by_date = 2;
+                        elseif(in_array($week_day[0], array('Fri')) && !in_array($week_day[1], $holydays)) $limit_by_date = 6;
+                        elseif(!in_array($week_day[0], array('Sat', 'Sun')) && in_array($week_day[1], $holydays)) $limit_by_date = 10;
+                        break;
+                    default:
+                        if(in_array($week_day[0], array('Mon', 'Thu')) && !in_array($week_day[1], $holydays)) $limit_by_date = 2;
+                        elseif (in_array($week_day[0], array('Fri')) && !in_array($week_day[1], $holydays)) $limit_by_date = 6;
+                        elseif (in_array($week_day[0], array('Sat', 'Sun')) || in_array($week_day[1], $holydays)) $limit_by_date = 10;
+                        break;
+                }
+                if($limit_by_date) {
+                    $event_list_by_date = get_event_list_by_date($next_day, $limit_by_date, $args);
+                    if($event_list_by_date) $events[$next_day] = $event_list_by_date;
+                }
+            }
+            $count_post = $count_post+$limit_by_date;
+            $i++;
+        }
+        return $events;
+    }
+
+    function get_event_date_list_ajax() {
+        $fromdate = isset($_REQUEST['fromdate'])?$_REQUEST['fromdate']:date('Y-m-d');
+        $term_id = isset($_REQUEST['term_id'])?intval($_REQUEST['term_id']):'';
+        $taxonomy = isset($_REQUEST['taxonomy'])?$_REQUEST['taxonomy']:'';
+        $args = array();
+        if(is_term($term_id) != NULL) {
+            $args = array('tax_query' => array(
+                array(
+                    'taxonomy' => $taxonomy,
+                    'field' => 'term_id',
+                    'terms' => $term_id,
+                 )
+            ));
+        }
+        $event_lists = get_event_date_list($fromdate, 30, $args);
+        $event_html = '';
+        foreach ($event_lists as $date => $event_list):
+            $event_html .= '<div class="event-lists" data-date="'.$date.'">
+                <h2>'.date_i18n('Fj (D)', strtotime($date)).'</h2>';
+                foreach ($event_list as $key => $event):
+                $event_html .= '<div class="box_list_services_item">
+                    <div class="row no-gutters">
+                        <div class="col-12 col-lg-12">
+                            <h3 class="d-block d-lg-none"><a href="'.$event->permalink.'">'.$event->title.'</a></h3>
+                        </div>
+                        <div class="col-4 col-lg-4 align-self-center">
+                            <div class="box_list_services_item_img">
+                                <a href="'.$event->permalink.'"><img src="'.$event->thumbails_url.'" alt="" class="img-fluid"></a>
+                            </div>
+                        </div>
+                        <div class="col-8 col-lg-8 align-self-center">
+                            <div class="box_list_services_item_body">
+                                <h3 class="d-none d-lg-block"><a href="'.$event->permalink.'">'.$event->title.'</a></h3>
+                                <p>'.$event->description.'</p>
+                                <ul>
+                                    <li><img src="'.IMAGE_PATH.'/i_date.svg" alt="" class="img-fluid" width="10"> '.$event->date_rand.' '.$event->time_rand.'〜</li>
+                                    <li><img src="'.IMAGE_PATH.'/i_map.svg" alt="" class="img-fluid" width="10"> オンライン</li>
+                                </ul>
+                                <ul>';
+                                        if(is_array($event->categories) && count($event->categories)) { 
+                                            foreach ($event->categories as $key => $cat) { 
+                                                $cat_link = get_category_link($cat);
+                                                $event_html .= '<li><a href="'.$cat_link.'">'.$cat->name.'</a></li>';
+                                            }
+                                        }
+                                $event_html .= '</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>';
+            endforeach;
+            $event_html .= '</div>';
+        endforeach;
+        echo $event_html;die;
+    }
+
+    add_action('wp_ajax_event_date_list', 'get_event_date_list_ajax');
+    add_action('wp_ajax_nopriv_event_date_list', 'get_event_date_list_ajax');
+
+    function update_event_date_list($event_id) {
+        if(get_post_type($event_id) == 'events') {
+            $event_date = get_event_date($event_id, 2000);
+            $event_date_key = 'event_date_list';
+            $check = get_post_meta($event_id, $event_date_key, true);
+            $date_list = json_encode($event_date, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+            if($check==''){
+                delete_post_meta($event_id, $event_date_key);
+                add_post_meta($event_id, $event_date_key, $date_list);
+            }else{
+                update_post_meta($event_id, $event_date_key, $date_list);
+            }
+        }
+    }
+
+    function update_event_date_all_events() {
+        $args_post = array(
+                    'post_type' => 'events',
+                    'post_status' => 'publish',
+                    'ignore_sticky_posts' => true,
+                    'perm' => 'readable',
+                    'no_found_rows'          => false,
+                    'cache_results'          => true,
+                    'update_post_term_cache' => true,
+                    'update_post_meta_cache' => true,
+                    'posts_per_page' => -1,
+                );
+
+        $event_posts = new WP_Query( $args_post );
+        if ( $event_posts->have_posts() ) $event_ids = wp_list_pluck( $event_posts->posts, 'ID' );
+        foreach ($event_ids as $key => $event_id) {
+            update_event_date_list($event_id);
+        }
+    }
+    add_action( 'save_post', 'update_event_date_list', 10, 2 );
+
+    /* WARNING: update_event_date_all_events run only first time and one time when event exclude days setting has change */
+    // add_action( 'after_setup_theme', 'update_event_date_all_events' );
 ?>

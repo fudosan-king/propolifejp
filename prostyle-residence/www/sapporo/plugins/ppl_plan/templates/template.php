@@ -1,6 +1,6 @@
 <?php
 //add_image_size('ppl_plan_item',480,300,true); /* image for slideshow */
-function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = 'false')
+function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 {
 	$exclude_ids = array();
 
@@ -26,17 +26,25 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = 'false')
 			global $post, $wp_query;
 			$thumb = get_post_thumbnail_id($post->ID);
 			$thumburl = wp_get_attachment_image_src($thumb,'portfolio_image');
-		
-			if($only_info === 'true'):
+			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
+		switch ($only_info):
+			case 'plan-page':
 			$post_title   = get_the_title($post->ID);
 			$post_excerpt = $post->post_excerpt;
-			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
 		?>
 			<div class="col-12 col-lg-5 <?= $codeApartment; ?>" style="display:none" >
                 <h1><?= $post_title; ?></h1>
                 <h2><?= $post_excerpt; ?></h2>
             </div>
-		<?php else: ?>
+		<?php 
+			break; 
+			case 'plan-detail-page':
+		?>
+			<h2 class="<?= $codeApartment; ?>" style="display: none;"><?= get_the_content($post->ID) ?></h2>
+		<?php 
+			break;
+			default: 
+		?>
 		 	<div class="box_normal_item">
 		        <div class="box_premium">
 		            <span class="label_new"><i>New</i></span>
@@ -54,7 +62,7 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = 'false')
 		        </div>
 	   		 </div>			
 		<?php
-			endif;		
+			endswitch;		
 		
 		endwhile;
 									
@@ -94,9 +102,10 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 	                    <h1><?= $post_title; ?></h1>
 	                    <h2><?= $post_excerpt; ?></h2>
 	                </div>
+	        <?php elseif($style == 'plan-detail-page'): ?>
+	        		<h2 class="<?= $codeApartment; ?> js_info-default"><?= get_the_content($post->ID) ?></h2>
 	        <?php else: ?>
-	        	<span class="label_new"><i>New</i></span>
-                                        
+	        	<span class="label_new"><i>New</i></span>               
                 <ul class="list_view">
                     <li><a href="#">眺望</a></li>
                     <li><a href="#">３Dモデルルーム画像</a></li>

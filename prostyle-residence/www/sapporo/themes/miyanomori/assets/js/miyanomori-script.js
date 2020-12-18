@@ -40,22 +40,53 @@ function miyanomori() {
     this.sub_hoverShowInfoPlanPage = function(e){
         const currentTarget = e.currentTarget;
         const apartmentCode = $(currentTarget).data('shape-title');
-        const eleNeedShow = $(currentTarget).parents('.col-lg-7').prevAll('.'+apartmentCode);
-        const s301Default = $(currentTarget).parents('.col-lg-7').prevAll('.S301');
+        const elePlanPage_NeedShow = $(currentTarget).parents('.js_img-map').prevAll('.'+apartmentCode);
+        const eleDetailPage_NeedShow = $(currentTarget).parents('.js_img-map').prev().find('.'+apartmentCode);
+        const s301Default = $(currentTarget).parents('.js_img-map').prevAll('.S301');
+        const planDetailDefault = $(currentTarget).parents('.js_img-map').prev().find('.js_info-default');
 
-        if(apartmentCode === 'S301'){
-            eleNeedShow.removeAttr('style');
-            eleNeedShow.css({
+        if(apartmentCode === '') return;
+
+        if( elePlanPage_NeedShow.hasClass('col-lg-5') && apartmentCode === 'S301'){
+            elePlanPage_NeedShow.removeAttr('style');
+            elePlanPage_NeedShow.css({
                 opacity:1,
             });
             return;
         }
-        if(apartmentCode){
-            eleNeedShow.removeAttr('style');
-            s301Default.css('display','none');
-            eleNeedShow.css({
+
+        if( eleDetailPage_NeedShow.hasClass('js_info-default') ){
+            eleDetailPage_NeedShow.css({
                 opacity:1,
             });
+            return;
+        }
+
+        if( elePlanPage_NeedShow.length !== 0 ){
+            elePlanPage_NeedShow.removeAttr('style');
+            s301Default.css('display','none');
+            elePlanPage_NeedShow.css({
+                opacity:1,
+            });
+        } else {
+            eleDetailPage_NeedShow.removeAttr('style');
+            planDetailDefault.css('display','none');
+            eleDetailPage_NeedShow.css({
+                opacity:1,
+            });
+        }
+    }
+
+    this.sub_hoverHideInfoPlanPage = function(e){
+        $('.single .box_infoview_content').find('h2').removeAttr('style');
+        $('.single .box_infoview_content').find('h2:not(.js_info-default)').css('display','none');
+        if($(window).width() <= 992 ){
+            $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
+            $('.box_infoview_content').find('.col-lg-5').css('display','none');
+        } else {
+            $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
+            $('.box_infoview_content').find('.col-lg-5').css('display','none');
+            $('.box_infoview_content').find('.col-lg-5.S301').removeAttr('style');
         }
     }
 
@@ -65,23 +96,12 @@ function miyanomori() {
             $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
         }
       
-        $('.box_infoview_img').on('mouseover','[data-shape-title]',function (e) {
+        $('.box_infoview_content').on('mouseover','[data-shape-title]',function (e) {
             _this.sub_hoverShowInfoPlanPage(e);
         });
 
-        $('.box_infoview_img').on('click','[data-shape-title]',function (e) {
-            _this.sub_hoverShowInfoPlanPage(e);
-        });
-
-        $('.box_infoview_img').on('mouseout','[data-shape-title]',function (e) {
-            if($(window).width() <= 992 ){
-                $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
-                $('.box_infoview_content').find('.col-lg-5').css('display','none');
-            } else {
-                $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
-                $('.box_infoview_content').find('.col-lg-5').css('display','none');
-                $('.box_infoview_content').find('.col-lg-5.S301').removeAttr('style');
-            }
+        $('.box_infoview_content').on('mouseout','[data-shape-title]',function (e) {
+            _this.sub_hoverHideInfoPlanPage(e);
         });
 
         $(window).resize(function(){

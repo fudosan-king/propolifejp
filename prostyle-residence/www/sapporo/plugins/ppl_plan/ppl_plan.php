@@ -370,7 +370,7 @@ class PPL_Plan {
 		extract(shortcode_atts(array(
 			'count' 				=>  -1,
 			'ignore_slug' 			=>  '',
-			'only_info'				=> 'false'
+			'only_info'				=> ''
 		),$atts));		
 		show_ppl_plan( $count, $ignore_slug, $only_info );	
 	}

@@ -41,11 +41,9 @@ Template Post Type: page
 
                             <div class="box_infoview_content">
                                 <div class="row no-gutters">
-                                    <?php echo do_shortcode("[ppl-plan only_info='true' ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
-
+                                    <?php echo do_shortcode("[ppl-plan only_info='plan-page' ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
                                     <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='special']"); ?>
-
-                                    <div class="col-12 col-lg-7">
+                                    <div class="col-12 col-lg-7 js_img-map">
                                         <div class="box_infoview_img">
                                             <?php echo do_shortcode("[apartment-plan]"); ?>
                                         </div>

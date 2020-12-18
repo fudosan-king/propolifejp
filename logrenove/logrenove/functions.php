@@ -794,6 +794,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         global $post;
         $event_date_option = get_field('event_date', $post->ID);
         $holydays = get_event_holydays();
+        $event_excluded_days = get_event_excluded_days();
         $today = date('Y-m-d');
         $event_date = array();
         $i = 1;
@@ -814,11 +815,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     $condition = !in_array($week_day[0], array('Tue', 'Wed')) && !in_array($week_day[1], $holydays);
                     break;
             }
-            if($condition) $event_date[] = $date;
+            if($condition && !in_array($week_day[1], $event_excluded_days)) $event_date[] = $date;
             $i++;
         }
         $event_date = array_slice($event_date, 0, 6);
         return $event_date;
+    }
+
+    function get_event_excluded_days() {
+        $event_excluded_days = get_field('event_excluded_days', 'option');
+        $event_excluded_days = (is_array($event_excluded_days) && count($event_excluded_days))?array_column($event_excluded_days, 'date'):array();
+        return $event_excluded_days;
     }
 
     # End event date

@@ -364,13 +364,15 @@ class PPL_Plan {
 		}
 		return $custom_field;
 	}
+
 	public function ppl_plan_show($atts = array()) {
 
 		extract(shortcode_atts(array(
 			'count' 				=>  -1,
-			'ignore_slug' 			=>  ''
+			'ignore_slug' 			=>  '',
+			'only_info'				=> 'false'
 		),$atts));		
-		show_ppl_plan( $count, $ignore_slug );	
+		show_ppl_plan( $count, $ignore_slug, $only_info );	
 	}
 	public function ppl_plan_item_show($atts = array()) {
 
@@ -438,7 +440,6 @@ class PPL_Plan {
 
 
 	public function ppl_plan($atts = array()) {
-	
 		ob_start();
 		$this->ppl_plan_show($atts);
 		$content = ob_get_clean();

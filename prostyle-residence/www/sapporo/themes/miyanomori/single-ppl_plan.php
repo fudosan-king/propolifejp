@@ -26,11 +26,16 @@ Template Post Type: page
                     <div class="box_infoview_content">
                         <div class="row no-gutters">
                             <div class="col-12 col-lg-6 align-self-center">
-                                <h2><?= get_the_content($post->ID) ?></h2>
+                               <?php 
+                                   $post_url = $post_slug = $post->post_name; 
+                                   echo do_shortcode("[ppl-plan only_info='plan-detail-page' ignore_slug ='ppl_plan_feature,".$post_url."']"); 
+                               ?>
+                                <?php echo do_shortcode("[ppl-plan-item slug='".$post_url."' style='plan-detail-page']"); ?>
                             </div>
-                            <div class="col-12 col-lg-6 align-self-center">
+                            <div class="col-12 col-lg-6 align-self-center js_img-map">
                                 <div class="box_infoview_img">
-                                    <img src="<?php echo get_field('design_apartment') ?>" alt="" class="img-fluid">
+                                    <?php $codeApartment = get_post_meta($post->ID, 'ppl-plan', true); ?>
+                                    <?php echo do_shortcode("[".$codeApartment."]"); ?>
                                 </div>
                             </div>
                         </div>

@@ -10,8 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <title><?= strip_tags(get_the_title()); ?></title>
-   
+
+    <?php if ( !is_user_logged_in()) : ?>
+        <title>【公式】プロスタイル札幌 宮の森｜新築分譲マンション </title>
+    <?php else: ?>
+         <title><?= strip_tags(get_the_title()); ?></title>
+    <?php endif; ?>
+
     <meta name="title" content="<?= get_the_title(); ?>">
     <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/favicon-32x32.png">

@@ -16,28 +16,28 @@
 }
 
 @media (max-width: 1024px) {
-    .section_plan .box_infoview_content {
+    .box_infoview_content {
         margin-bottom: 50px;
     }
 
-    .section_plan .box_premium {
+    .box_premium {
         margin-bottom: 15px;
     }
 
-    .section_plan .box_normal .box_normal_item {
+    .box_normal .box_normal_item {
         width: 49%;
         margin-right: 15px;
     }
 
-    .section_plan .box_normal .box_normal_item:nth-of-type(odd) {
+    .box_normal .box_normal_item:nth-of-type(odd) {
         margin-right: 15px;
     }
 
-    .section_plan .box_normal .box_normal_item:nth-of-type(even) {
+    .box_normal .box_normal_item:nth-of-type(even) {
         margin-right: 0;
     }
 
-    .section_plan .box_normal .box_normal_item:last-child {
+    .box_normal .box_normal_item:last-child {
         margin-right: 0;
     }
 }
@@ -1084,10 +1084,7 @@
     }
 
     .section_plan_detail .box_plan_detail_footer .box_infoview_content:after {
-        left: 0;
-        top: 80px;
-        height: auto;
-        width: auto;
+        height: 0;
     }
 
     .section_plan_detail .box_plan_detail_footer .box_infoview_content .box_plan_detail_footer_content h1 {
@@ -1096,6 +1093,9 @@
 
     .section_plan_detail .box_plan_detail_footer .row {
         flex-direction: column-reverse;
+    }
+    .section_plan_detail .box_plan_detail_footer .box_infoview_content{
+        padding:0;
     }
 }
 
@@ -1374,17 +1374,18 @@
         height: 52px;
     }
 
-    .section_plan .box_normal .box_normal_item {
+    .box_normal .box_normal_item {
         width: 48.5%;
         margin-right: 15px;
     }
 
-    .section_plan .box_normal .box_normal_item:last-child {
+    .box_normal .box_normal_item:last-child {
         margin-right: 0;
     }
 
-    .section_plan .box_normal .box_normal_item .box_premium {
+    .box_normal .box_normal_item .box_premium {
         margin-bottom: 15px;
+        height:585px;
     }
 
     .section_plan .carousel_view .carousel-cell {
@@ -1568,7 +1569,7 @@
 }
 
 @media (max-width: 736px) {
-    .section_plan .box_normal .box_normal_item {
+    .box_normal .box_normal_item {
         width: 100%;
         margin-right: 0;
     }
@@ -1699,7 +1700,7 @@
         margin-bottom: 0;
     }
 
-    .section_plan .box_normal .box_normal_item:nth-of-type(odd) {
+    .box_normal .box_normal_item:nth-of-type(odd) {
         margin-right: 0;
     }
 

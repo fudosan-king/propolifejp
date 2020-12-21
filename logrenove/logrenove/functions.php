@@ -1033,10 +1033,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return $date;
     }
 
-    function get_event_description()
+    function get_event_description($event_id=false)
     {
         global $post;
-        $post_id = $post->ID;
+        $post_id = $event_id?$event_id:$post->ID;
         $description = get_field('event_description', $post_id);
         return $description;
     }
@@ -1087,10 +1087,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $endDate = end($event_date);
             $startDate = count($event_date)?date('Y-m-d', strtotime($startDate)):'';
             $endDate = count($event_date)?date('Y-m-d', strtotime($endDate)):'';
-            if(is_single()) {
     ?>
 <script type="application/ld+json">
-    <?php } ?>
     {
       "@context": "https://schema.org",
       "@type": "Event",
@@ -1114,7 +1112,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "image": [
         "<?php echo $thumbnails->url; ?>"
        ],
-      "description": "<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_event_description())); ?>",
+      "description": "<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_event_description($event_id))); ?>",
       "offers": {
         "@type": "Offer",
         "url": "<?php echo get_permalink($event_id); ?>",
@@ -1133,9 +1131,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         "url": "<?php echo get_site_url(); ?>"
       }
     }
-    <?php if(is_single()) { ?>
 </script>
-    <?php }}}
+    <?php }}
     # End event schema
 
     # Posts ranking
@@ -1851,12 +1848,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if((is_page( 'events' ) || is_tax('event_category') || is_tax('event_tags'))) {
             $popular_seminar = get_popular_seminar();
             if($popular_seminar) {
-                echo "<script type=\"application/ld+json\">\n";
                 foreach ($popular_seminar as $key => $event) {
                     $event_id = $event->ID;
                     event_detail_schema($event_id);
                 }
-                echo "\n</script>";
             }
         }
     }

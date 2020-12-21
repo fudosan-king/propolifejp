@@ -55,7 +55,7 @@
                                         </div>
                                         <div class="col-9 col-lg-12">
                                             <div class="benefit_smember_content">
-                                                <a href="#" class="btn btn_benefit">特典1</a>
+                                                <span href="#" class="btn btn_benefit">特典1</span>
                                                 <p>専任のプランナーがあなたの<br>
                                                 リノベーションをサポート</p>
                                             </div>
@@ -65,14 +65,14 @@
                                 <li class="flex-fill">
                                     <div class="row no-gutters">
                                         <div class="col-3 col-lg-12">
-                                            <a href="http://html-static.fudosan-king.jp/logrenove/signup.php#">
+                                            <a href="#">
                                                 <img src="<?php echo get_stylesheet_directory_uri(). '/assets/images/i_02.svg' ?>" alt="" class="img-fluid d-none d-lg-block" width="100">
                                                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/i_02_sp.svg' ?>" alt="" class="img-fluid d-block d-lg-none" width="100">
                                             </a>
                                         </div>
                                         <div class="col-9 col-lg-12">
                                             <div class="benefit_smember_content">
-                                                <a href="#" class="btn btn_benefit">特典2</a>
+                                                <span href="#" class="btn btn_benefit">特典2</span>
                                                 <p>リノベーション設計料<br>
                                                 完全無料</p>
                                             </div>
@@ -88,7 +88,7 @@
                                         </div>
                                         <div class="col-9 col-lg-12">
                                             <div class="benefit_smember_content">
-                                                <a href="http://html-static.fudosan-king.jp/logrenove/signup.php#" class="btn btn_benefit">特典3</a>
+                                                <span href="#" class="btn btn_benefit">特典3</span>
                                                 <p>物件探しやリノベーションの<br>コツがわかるセミナー勉強会</p>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@
                                         </div>
                                         <div class="col-9 col-lg-12">
                                             <div class="benefit_smember_content">
-                                                <a href="http://html-static.fudosan-king.jp/logrenove/signup.php#" class="btn btn_benefit">特典4</a>
+                                                <span href="#" class="btn btn_benefit">特典4</span>
                                                 <p>施工事例をはじめ、<br>お役立ち資料をプレゼント</p>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@
                                         </div>
                                         <div class="col-9 col-lg-12">
                                             <div class="benefit_smember_content">
-                                                <a href="#" class="btn btn_benefit">特典5</a>
+                                                <span href="#" class="btn btn_benefit">特典5</span>
                                                 <p>会員限定のリノベーション<br>物件情報の公開</p>
                                             </div>
                                         </div>

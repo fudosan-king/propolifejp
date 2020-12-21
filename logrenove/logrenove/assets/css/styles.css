@@ -1701,7 +1701,7 @@ ul.box_article_related li a {
 }
 
 .box_article_detail ul {
-	list-style: none;
+	/*list-style: none;*/
 	padding-left: 0;
 	margin: 20px 0
 }
@@ -3699,6 +3699,10 @@ ul.list_sub_cate_event li:last-child {
     .single-events .section_events .services_detail_content{
         padding: 10px 30px 0;
     }
+}
+
+ul.uagb-toc__list li {
+	list-style: none;
 }
 
 /* Registration */

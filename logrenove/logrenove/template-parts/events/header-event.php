@@ -22,6 +22,7 @@
     ?>
         <li <?php echo ($current_term->term_id == $cat->term_id)?'class="active"':''; ?>><a href="<?php echo $cat_link; ?>"><?php echo $cat->name; ?></a></li>
     <?php }} ?>
+        <li <?php echo ($current_term->slug == 'free')?'class="active"':''; ?>><a href="<?=site_url('events/tags/free/')?>">無料</a></li>
         <li <?php echo (is_term($current_term->term_id) == NULL)?'class="active"':''; ?> ><a href="<?php echo esc_url(network_site_url('events'));?>">すべて</a></li>
 </ul>
 <h2><img src="<?=IMAGE_PATH;?>/i_date.svg" alt="" class="img-fluid" width="20"> 開催スケジュールを選ぶ</h2>

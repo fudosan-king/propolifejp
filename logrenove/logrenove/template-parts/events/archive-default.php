@@ -2,9 +2,11 @@
 <input type="hidden" name="taxonomy" value="<?=get_query_var('taxonomy')?>">
 <input type="hidden" name="d" value="<?=isset($_GET['d'])?$_GET['d']:''?>">
 <?php $event_lists = get_event_date_list();
-foreach ($event_lists as $date => $event_list):?>
+foreach ($event_lists as $date => $event_list):
+    $date_format = date_i18n('Fj (D)', strtotime($date));
+?>
     <div class="event-lists" data-date="<?=$date?>">
-        <h2><?=date_i18n('Fj (D)', strtotime($date))?></h2>
+        <h2><?=$date_format?></h2>
         <?php foreach ($event_list as $key => $event) : ?>
         <div class="box_list_services_item">
             <div class="row no-gutters">
@@ -21,7 +23,7 @@ foreach ($event_lists as $date => $event_list):?>
                         <h3 class="d-none d-lg-block"><a href="<?=$event->permalink?>"><?=$event->title?></a></h3>
                         <p><?=$event->description?></p>
                         <ul>
-                            <li><img src="<?=IMAGE_PATH;?>/i_date.svg" alt="" class="img-fluid" width="10"> <?=$event->date_rand.' '.$event->time_rand?>〜</li>
+                            <li><img src="<?=IMAGE_PATH;?>/i_date.svg" alt="" class="img-fluid" width="10"> <?=$date_format.' '.$event->time_rand?>〜</li>
                             <li><img src="<?=IMAGE_PATH;?>/i_map.svg" alt="" class="img-fluid" width="10"> オンライン</li>
                         </ul>
                         <ul>

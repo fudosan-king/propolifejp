@@ -4230,6 +4230,7 @@ ul.uagb-toc__list li {
 
 .body_services .box_list_services_item .box_list_services_item_body ul:first-of-type {
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .body_services .box_list_services_item .box_list_services_item_body ul:first-of-type li {
@@ -4414,6 +4415,7 @@ ul.uagb-toc__list li {
     line-height: 1em;
     padding: 3px 5px;
     font-size: 0.99em;
+    border-radius: 4px;
 }
 
 .banner_services {

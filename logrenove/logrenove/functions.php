@@ -1870,7 +1870,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         $obj->categories = get_the_terms($obj->ID, 'event_category');
         $obj->tags = get_the_terms($obj->ID, 'event_tags');
         $obj->description = get_field('event_description', $obj->ID);
-        $obj->date_rand = date_i18n('Fj (D)', strtotime($event_datetime['date'][array_rand($event_datetime['date'], 1)]));
+        $obj->date_rand = date_i18n('Fj (D)', strtotime($event_datetime['date'][0]));
         $obj->time_rand = is_array($event_datetime['time'])&&count($event_datetime['time'])?$event_datetime['time'][array_rand($event_datetime['time'], 1)]['hour']:'';
         return $obj;
     }
@@ -1979,8 +1979,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         $event_lists = get_event_date_list($fromdate, 30, $args);
         $event_html = '';
         foreach ($event_lists as $date => $event_list):
+            $date_format = date_i18n('Fj (D)', strtotime($date));
             $event_html .= '<div class="event-lists" data-date="'.$date.'">
-                <h2>'.date_i18n('Fj (D)', strtotime($date)).'</h2>';
+                <h2>'.$date_format.'</h2>';
                 foreach ($event_list as $key => $event):
                 $event_html .= '<div class="box_list_services_item">
                     <div class="row no-gutters">
@@ -1997,7 +1998,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h3 class="d-none d-lg-block"><a href="'.$event->permalink.'">'.$event->title.'</a></h3>
                                 <p>'.$event->description.'</p>
                                 <ul>
-                                    <li><img src="'.IMAGE_PATH.'/i_date.svg" alt="" class="img-fluid" width="10"> '.$event->date_rand.' '.$event->time_rand.'〜</li>
+                                    <li><img src="'.IMAGE_PATH.'/i_date.svg" alt="" class="img-fluid" width="10"> '.$date_format.' '.$event->time_rand.'〜</li>
                                     <li><img src="'.IMAGE_PATH.'/i_map.svg" alt="" class="img-fluid" width="10"> オンライン</li>
                                 </ul>
                                 <ul>';

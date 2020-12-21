@@ -2444,13 +2444,27 @@ footer address p {
 }
 
 .section_plan_detail .box_plan_detail_footer .box_infoview_content .box_plan_detail_footer_content h1 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     margin-top: 90px;
 }
 
 .section_plan_detail .box_plan_detail_footer .box_infoview_content .box_plan_detail_footer_content h1 span {
     color: #B48856;
 }
+
+.section_plan_detail .box_plan_detail_footer_content h2{
+    font-size: 1rem;
+}
+
+.section_plan_detail .box_plan_detail_footer_content h2 .number{
+    font-size: 2.25rem;
+}
+
+.section_plan_detail .box_plan_detail_footer_content h2 .sub_number{
+     font-size: 1.5rem;
+}
+
+
 
 .section_plan_detail .box_plan_detail_footer .box_infoview_content .box_plan_detail_footer_content p {
     font-family: "Noto Sans JP", "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;

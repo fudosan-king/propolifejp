@@ -41,22 +41,26 @@ function miyanomori() {
         const currentTarget = e.currentTarget;
         const apartmentCode = $(currentTarget).data('shape-title');
         const elePlanPage_NeedShow = $(currentTarget).parents('.js_img-map').prevAll('.'+apartmentCode);
-        const eleDetailPage_NeedShow = $(currentTarget).parents('.js_img-map').prev().find('.'+apartmentCode);
+        // const eleDetailPage_NeedShow = $(currentTarget).parents('.js_img-map').prev().find('.'+apartmentCode);
         const s301Default = $(currentTarget).parents('.js_img-map').prevAll('.S301');
-        const planDetailDefault = $(currentTarget).parents('.js_img-map').prev().find('.js_info-default');
+        const planDetailDefault = $(currentTarget).parents('.js_img-map').prevAll('.js_info-default');
 
         if(apartmentCode === '') return;
 
-        if( elePlanPage_NeedShow.hasClass('col-lg-5') && apartmentCode === 'S301'){
+        if ( $('.box_infoview_content').find('.col-lg-5').hasClass('js_info-default') && elePlanPage_NeedShow.hasClass('js_info-default') ){
             elePlanPage_NeedShow.removeAttr('style');
-            elePlanPage_NeedShow.css({
-                opacity:1,
-            });
             return;
         }
 
-        if( eleDetailPage_NeedShow.hasClass('js_info-default') ){
-            eleDetailPage_NeedShow.css({
+        if ( $('.box_infoview_content').find('.col-lg-5').hasClass('js_info-default') ){
+            elePlanPage_NeedShow.removeAttr('style');
+            planDetailDefault.css('display','none');
+            return;
+        }
+
+        if( elePlanPage_NeedShow.hasClass('col-lg-5') && apartmentCode === 'S301' ){
+            elePlanPage_NeedShow.removeAttr('style');
+            elePlanPage_NeedShow.css({
                 opacity:1,
             });
             return;
@@ -68,26 +72,28 @@ function miyanomori() {
             elePlanPage_NeedShow.css({
                 opacity:1,
             });
-        } else {
-            eleDetailPage_NeedShow.removeAttr('style');
-            planDetailDefault.css('display','none');
-            eleDetailPage_NeedShow.css({
-                opacity:1,
-            });
-        }
+        } 
+        
     }
 
     this.sub_hoverHideInfoPlanPage = function(e){
-        $('.single .box_infoview_content').find('h2').removeAttr('style');
-        $('.single .box_infoview_content').find('h2:not(.js_info-default)').css('display','none');
+
+        if ( $('.box_infoview_content').find('.col-lg-5').hasClass('js_info-default') ){
+            $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
+            $('.box_infoview_content').find('.col-lg-5').css('display','none');  
+            $('.box_infoview_content').find('.js_info-default').removeAttr('style');
+            return;
+        }
+
         if($(window).width() <= 992 ){
             $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
             $('.box_infoview_content').find('.col-lg-5').css('display','none');
         } else {
             $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
-            $('.box_infoview_content').find('.col-lg-5').css('display','none');
+            $('.box_infoview_content').find('.col-lg-5').css('display','none');  
             $('.box_infoview_content').find('.col-lg-5.S301').removeAttr('style');
         }
+
     }
 
     this.hoverShowInfoPlanPage = function(){
@@ -105,6 +111,8 @@ function miyanomori() {
         });
 
         $(window).resize(function(){
+            if ( $('.box_infoview_content').find('.col-lg-5').hasClass('js_info-default') ) return;
+        
             if($(window).width() >= 992 ){
                 $('.box_infoview_content').find('.col-lg-5.S301').removeAttr('style');
             } else{

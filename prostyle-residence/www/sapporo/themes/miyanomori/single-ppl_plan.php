@@ -26,16 +26,11 @@ Template Post Type: page
                     <div class="box_infoview_content">
                         <div class="row no-gutters">
                             <div class="col-12 col-lg-6 align-self-center">
-                               <?php 
-                                   $post_url = $post_slug = $post->post_name; 
-                                   echo do_shortcode("[ppl-plan only_info='plan-detail-page' ignore_slug ='ppl_plan_feature,".$post_url."']"); 
-                               ?>
-                                <?php echo do_shortcode("[ppl-plan-item slug='".$post_url."' style='plan-detail-page']"); ?>
+                                <h2><?= get_the_content($post->ID) ?></h2>
                             </div>
-                            <div class="col-12 col-lg-6 align-self-center js_img-map">
+                            <div class="col-12 col-lg-6 align-self-center">
                                 <div class="box_infoview_img">
-                                    <?php $codeApartment = get_post_meta($post->ID, 'ppl-plan', true); ?>
-                                    <?php echo do_shortcode("[".$codeApartment."]"); ?>
+                                    <img src="<?php echo get_field('design_apartment') ?>" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -82,16 +77,16 @@ Template Post Type: page
                 </div>
                 <div class="box_infoview_content">
                     <div class="row no-gutters">
-                        <div class="col-12 col-lg-5">
-                            <div class="box_plan_detail_footer_content">
-                                <h1><?= get_the_title($post->ID)?></h1>
-                                <p>ご覧になりたいプランをタップしてください。<br>
-                                    プラン詳細をご覧いただけます</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-7">
+                        <?php 
+                           $post_url = $post_slug = $post->post_name; 
+                           echo do_shortcode("[ppl-plan only_info='plan-detail-page' ignore_slug ='ppl_plan_feature,".$post_url."']"); 
+                        ?>
+                        <?php echo do_shortcode("[ppl-plan-item slug='".$post_url."' style='plan-detail-page']"); ?>
+                       
+                        <div class="col-12 col-lg-7 js_img-map">
                             <div class="box_infoview_img">
-                                <img src="<?php echo get_field('design_apartment') ?>" alt="" class="img-fluid">
+                                <?php $codeApartment = get_post_meta($post->ID, 'ppl-plan', true); ?>
+                                <?php echo do_shortcode("[".$codeApartment."]"); ?>
                             </div>
                         </div>
                     </div>

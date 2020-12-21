@@ -40,7 +40,14 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 			break; 
 			case 'plan-detail-page':
 		?>
-			<h2 class="<?= $codeApartment; ?>" style="display: none;"><?= get_the_content($post->ID) ?></h2>
+			<div class="col-12 col-lg-5 <?= $codeApartment; ?>" style="display: none;">
+                <div class="box_plan_detail_footer_content">
+					<h1><?= get_the_title($post->ID)?></h1>
+					<h2><?= get_the_content($post->ID) ?></h2>
+					<p>ご覧になりたいプランをタップしてください。<br>
+                            プラン詳細をご覧いただけます</p>
+			    </div>
+            </div>
 		<?php 
 			break;
 			default: 
@@ -103,7 +110,13 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 	                    <h2><?= $post_excerpt; ?></h2>
 	                </div>
 	        <?php elseif($style == 'plan-detail-page'): ?>
-	        		<h2 class="<?= $codeApartment; ?> js_info-default"><?= get_the_content($post->ID) ?></h2>
+	        <div class="col-12 col-lg-5 <?= $codeApartment; ?> js_info-default">
+                <div class="box_plan_detail_footer_content">
+					<h1><?= get_the_title($post->ID)?></h1>
+					<h2><?= get_the_content($post->ID) ?></h2>
+					<p>ご覧になりたいプランをタップしてください。<br>プラン詳細をご覧いただけます</p>
+			    </div>
+            </div>
 	        <?php else: ?>
 	        	<span class="label_new"><i>New</i></span>               
                 <ul class="list_view">

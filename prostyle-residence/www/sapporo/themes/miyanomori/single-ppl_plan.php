@@ -76,7 +76,7 @@ Template Post Type: page
                     <a class="btn btn-find"><i class="i-find-zoom"></i>テラスからの眺望を体験する</a>
                 </div>
                 <div class="box_infoview_content">
-                    <div class="row no-gutters">
+                    <div class="row no-gutters hide-mobile">
                         <?php 
                            $post_url = $post_slug = $post->post_name; 
                            echo do_shortcode("[ppl-plan only_info='plan-detail-page' ignore_slug ='ppl_plan_feature,".$post_url."']"); 
@@ -89,6 +89,9 @@ Template Post Type: page
                                 <?php echo do_shortcode("[".$codeApartment."]"); ?>
                             </div>
                         </div>
+                    </div>
+                    <div class="box_normal show-mobile hide-pc">
+                        <?php echo do_shortcode("[ppl-plan ignore_slug ='ppl_plan_special,ppl_plan_feature' ignore_slug ='ppl_plan_feature,".$post_url."']"); ?>
                     </div>
                 </div>
             </div>

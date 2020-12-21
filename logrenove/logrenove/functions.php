@@ -1701,6 +1701,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     function func_insert_short_code_login(){
         global $post;
+        $permalink = get_permalink($post->ID);
         $insertContent = '<div class="btn-only-member">
             <div class="btn-only-member_ct">
                 <p><i class="btn-only-member_i-clock"></i>この記事は会員限定です。</p>
@@ -1712,7 +1713,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="col-6 col-md-6">
                         <p>会員の方はこちら</p>
-                        <a class="btn btn-only-member_blue" href="'.site_url('login').'" target="_tbank">ログイン</a>
+                        <a class="btn btn-only-member_blue" href="'.site_url('login/?redirect_to='.$permalink).'">ログイン</a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,108 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Unique K\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-25 09:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3"
+
+#: functions.php:105 template-part/content/home/booking.php:26
+msgid "Booking"
+msgstr ""
+
+#: functions.php:23
+msgid "Footer Menu"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.facebook.com/khanhnp91"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.propolifevietnam.com/"
+msgstr ""
+
+#. Author of the theme
+msgid "Khanh Nguyen"
+msgstr ""
+
+#. Name of the template
+msgid "Outline"
+msgstr ""
+
+#. Name of the template
+msgid "Policy"
+msgstr ""
+
+#: functions.php:22
+msgid "Primary"
+msgstr ""
+
+#. Description of the theme
+msgid "Prosyleryokan Tokyo Asakusa Project"
+msgstr ""
+
+#. Name of the template
+msgid "Rooms"
+msgstr ""
+
+#. Name of the template
+msgid "Table Outline Simple"
+msgstr ""
+
+#. Name of the template
+msgid "Terms of Use"
+msgstr ""
+
+#. Name of the theme
+msgid "Unique K"
+msgstr ""
+
+#: template-part/content/home/booking.php:64
+msgid "カレンダー検索"
+msgstr ""
+
+#: template-part/content/home/booking.php:61
+msgid "プラン検索"
+msgstr ""
+
+#: template-part/content/home/booking.php:45
+msgid "人数"
+msgstr ""
+
+#: template-part/content/home/booking.php:39
+msgid "御出発日"
+msgstr ""
+
+#: template-part/content/home/booking.php:33
+msgid "御到着日"
+msgstr ""
+
+#: template-part/content/home/booking.php:63
+msgid "料金検索"
+msgstr ""
+
+#: template-part/content/home/booking.php:58
+msgid "検索方法"
+msgstr ""
+
+#: functions.php:107
+msgid "現在地からホテルまでのルート"
+msgstr ""
+
+#: template-part/content/home/booking.php:70
+msgid "空室を検索"
+msgstr ""
+
+#: template-part/content/home/booking.php:62
+msgid "部屋検索"
+msgstr ""

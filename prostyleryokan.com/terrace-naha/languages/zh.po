@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Unique K\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-26 02:25+0000\n"
+"PO-Revision-Date: 2019-11-27 01:07+0000\n"
+"Last-Translator: khanhnp <khanh@fudosan-king.jp>\n"
+"Language-Team: Chinese\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3"
+
+#: functions.php:22
+msgid "Primary"
+msgstr ""
+
+#: functions.php:23
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:105 template-part/content/home/booking.php:26
+msgid "Booking"
+msgstr ""
+
+#: functions.php:107
+msgid "現在地からホテルまでのルート"
+msgstr "查看從這裏到旅館的路線"
+
+#. Name of the template
+msgid "Terms of Use"
+msgstr ""
+
+#. Name of the template
+msgid "Policy"
+msgstr ""
+
+#. Name of the template
+msgid "Rooms"
+msgstr ""
+
+#. Name of the template
+msgid "Table Outline Simple"
+msgstr ""
+
+#. Name of the template
+msgid "Outline"
+msgstr ""
+
+#: template-part/content/content-rooms.php:63
+msgid "詳しく見る"
+msgstr "查看詳情"
+
+#: template-part/content/home/booking.php:33
+msgid "御到着日"
+msgstr "入住日期"
+
+#: template-part/content/home/booking.php:39
+msgid "御出発日"
+msgstr "退房日期"
+
+#: template-part/content/home/booking.php:45
+msgid "人数"
+msgstr "人數"
+
+#: template-part/content/home/booking.php:58
+msgid "検索方法"
+msgstr "查詢方式"
+
+#: template-part/content/home/booking.php:61
+msgid "プラン検索"
+msgstr "方案查詢"
+
+#: template-part/content/home/booking.php:62
+msgid "部屋検索"
+msgstr "房型查詢"
+
+#: template-part/content/home/booking.php:63
+msgid "料金検索"
+msgstr "費用查詢"
+
+#: template-part/content/home/booking.php:64
+msgid "カレンダー検索"
+msgstr "日曆查詢"
+
+#: template-part/content/home/booking.php:70
+msgid "空室を検索"
+msgstr "查詢空房"
+
+#. Name of the theme
+msgid "Unique K"
+msgstr ""
+
+#. Description of the theme
+msgid "Prosyleryokan Tokyo Asakusa Project"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.propolifevietnam.com/"
+msgstr ""
+
+#. Author of the theme
+msgid "Khanh Nguyen"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.facebook.com/khanhnp91"
+msgstr ""

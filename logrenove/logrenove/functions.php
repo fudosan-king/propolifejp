@@ -2008,6 +2008,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 $event_html .= '<li><a href="'.$cat_link.'">'.$cat->name.'</a></li>';
                                             }
                                         }
+                                        $event_html .= '<li><a href="'.site_url('events/tags/free/').'">無料</a></li>';
                                 $event_html .= '</ul>
                             </div>
                         </div>

@@ -324,12 +324,14 @@ section {
 .footer_bottom p {
   margin-bottom: 0;
   font-size: 13px;
+  text-align: center;
 }
 ul.list_menu_footer {
   padding: 0;
   margin: 0 auto;
   float: right;
   text-align: center;
+  width: 100%;
 }
 ul.list_menu_footer li {
   display: inline-block;
@@ -380,7 +382,7 @@ ul.naviBox ul li {
   background: url('../images/1x/icon01.png') no-repeat left center;
   padding-left: 15px;
 }
-ul.naviBox ul li a {
+ul.naviBox ul li a, ul.naviBox ul li span {
   font-size: 13px;
 }
 ul.naviBox ul li:hover a {

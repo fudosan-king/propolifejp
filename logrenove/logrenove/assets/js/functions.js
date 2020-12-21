@@ -306,4 +306,26 @@ jQuery(function($) {
     //         })
     //     }
     // }
+
+    $('.body_services').on('click', '.btn_more', function(){
+        var url = '/wp-admin/admin-ajax.php?action=event_date_list',
+            fromdate = $('div.event-lists').last().data('date').split(' ').pop(),
+            term_id = $('input[name=term_id]').val(),
+            taxonomy = $('input[name=taxonomy]').val(),
+            d = $('input[name=d]').val();
+        $('.btn_more').html('もっと見る <i class="fa fa-spinner fa-spin"></i>');
+        $.ajax({
+            'async': true,
+            'type': "POST",
+            'url': url,
+            'data': {'fromdate': fromdate, 'term_id': term_id, 'taxonomy': taxonomy, 'd': d},
+            'success': function (data) {
+                if(data == '') $('.btn_more').remove();
+                else $('div.event-lists').last().after(data);
+                $('.btn_more').html('もっと見る <i class="fas fa-chevron-down"></i>');
+            }
+        })
+        return false;
+    })
+
 });

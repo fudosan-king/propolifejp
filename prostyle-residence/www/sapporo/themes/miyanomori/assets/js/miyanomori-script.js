@@ -37,6 +37,84 @@ function miyanomori() {
         });
     }
 
+    this.sub_hoverShowInfoPlanPage = function(e){
+        const currentTarget = e.currentTarget;
+        const apartmentCode = $(currentTarget).data('shape-title');
+        const elePlanPage_NeedShow = $(currentTarget).parents('.js_img-map').prevAll('.'+apartmentCode);
+        const eleDetailPage_NeedShow = $(currentTarget).parents('.js_img-map').prev().find('.'+apartmentCode);
+        const s301Default = $(currentTarget).parents('.js_img-map').prevAll('.S301');
+        const planDetailDefault = $(currentTarget).parents('.js_img-map').prev().find('.js_info-default');
+
+        if(apartmentCode === '') return;
+
+        if( elePlanPage_NeedShow.hasClass('col-lg-5') && apartmentCode === 'S301'){
+            elePlanPage_NeedShow.removeAttr('style');
+            elePlanPage_NeedShow.css({
+                opacity:1,
+            });
+            return;
+        }
+
+        if( eleDetailPage_NeedShow.hasClass('js_info-default') ){
+            eleDetailPage_NeedShow.css({
+                opacity:1,
+            });
+            return;
+        }
+
+        if( elePlanPage_NeedShow.length !== 0 ){
+            elePlanPage_NeedShow.removeAttr('style');
+            s301Default.css('display','none');
+            elePlanPage_NeedShow.css({
+                opacity:1,
+            });
+        } else {
+            eleDetailPage_NeedShow.removeAttr('style');
+            planDetailDefault.css('display','none');
+            eleDetailPage_NeedShow.css({
+                opacity:1,
+            });
+        }
+    }
+
+    this.sub_hoverHideInfoPlanPage = function(e){
+        $('.single .box_infoview_content').find('h2').removeAttr('style');
+        $('.single .box_infoview_content').find('h2:not(.js_info-default)').css('display','none');
+        if($(window).width() <= 992 ){
+            $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
+            $('.box_infoview_content').find('.col-lg-5').css('display','none');
+        } else {
+            $('.box_infoview_content').find('.col-lg-5').removeAttr('style');
+            $('.box_infoview_content').find('.col-lg-5').css('display','none');
+            $('.box_infoview_content').find('.col-lg-5.S301').removeAttr('style');
+        }
+    }
+
+    this.hoverShowInfoPlanPage = function(){
+        const _this = this;
+        if( $(window).width() <= 992 ){
+            $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
+        }
+      
+        $('.box_infoview_content').on('mouseover','[data-shape-title]',function (e) {
+            _this.sub_hoverShowInfoPlanPage(e);
+        });
+
+        $('.box_infoview_content').on('mouseout','[data-shape-title]',function (e) {
+            _this.sub_hoverHideInfoPlanPage(e);
+        });
+
+        $(window).resize(function(){
+            if($(window).width() >= 992 ){
+                $('.box_infoview_content').find('.col-lg-5.S301').removeAttr('style');
+            } else{
+                 $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
+            }
+        });
+
+    }
+
+
     this.interactiveImages = function(){
         const _this = this;
         _this.calcInteractiveImages();
@@ -157,7 +235,19 @@ function miyanomori() {
                 l1:{top:138,left:334},
                 l2:{top:282,left:495},
                 l3:{top:500,left:585},
-            }
+            },
+            {
+                name:'s201', 
+                l1:{top:66,left:365},
+                l2:{top:214,left:525},
+                l3:{top:430,left:607},
+            },
+            {
+                name:'n302',
+                l1:{top:63,left:354},
+                l2:{top:215,left:525},
+                l3:{top:424,left:600},
+            },
         ];
 
         if(eleBoxImgVR.offset() !== undefined) {
@@ -319,53 +409,7 @@ function miyanomori() {
         });
     }
 
-    this.hoverShowInfoPlanPage = function(){
-        if( $(window).width() <= 992 ){
-            $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
-        }
-        $('.path-hover').hover(function(){
-            if( $(window).width() <= 992 ){
-                if( !$('.box_infoview_content').hasClass('show') ){
-                    $('.box_infoview_content').addClass('show');
-                    $('.section_plan .box_infoview_content .col-12.col-lg-5').css('opacity',0);
-                    $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','block');
-                    $('.section_plan .box_infoview_content .col-12.col-lg-5').css('transition','opacity 1s cubic-bezier(0.23, 1, 0.32, 1)');
-                    setTimeout(function(){
-                        $('.section_plan .box_infoview_content .col-12.col-lg-5').css('opacity',1);
-                    },500);
-                }
-            } else {
-                $('.box_infoview_content').addClass('show');
-            }
-        });
-        $('.box_infoview_content').on('mouseleave',function(event) {
-            if( $(window).width() <= 992 ){
-                if( $('.box_infoview_content').hasClass('show') ){
-                    $('.box_infoview_content').removeClass('show');
-                    $('.section_plan .box_infoview_content .col-12.col-lg-5').css('opacity',0);
-                    $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
-                }
-            } else {
-                $('.box_infoview_content').removeClass('show');
-            }
-        });
-        $("div[class^='box_premium'],div[class^='box_infoview_top']").on('touchstart', function(e){ 
-            if( $(window).width() <= 992 ){
-                if( $('.box_infoview_content').hasClass('show') ){
-                    $('.box_infoview_content').removeClass('show');
-                    $('.section_plan .box_infoview_content .col-12.col-lg-5').css('opacity',0);
-                    $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
-                }
-            } else {
-                $('.box_infoview_content').removeClass('show');
-            }
-        });
-        $(window).resize(function(){
-            if( $(window).width() >= 992 ){
-                $('.section_plan .box_infoview_content .col-12.col-lg-5').removeAttr('style');
-            }
-        });
-    }
+    
 
 
     this.onOffContactForm = function(){

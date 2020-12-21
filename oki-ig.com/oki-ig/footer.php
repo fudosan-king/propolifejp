@@ -21,9 +21,15 @@
                     if (count($child_menu_lv1)>0){
                       echo '<ul>';
                       foreach($child_menu_lv1 as $child){
+                        if(!empty( $child->url)):
                         ?>
                           <li><a href="<?php echo $child->url; ?>" target="<?php echo $child->target; ?>"><?php echo $child->title; ?></a></li>
                         <?php
+                        else:
+                          ?>
+                          <li><span><?php echo $child->title; ?></span></li>
+                          <?php
+                        endif;
                       }
                       echo '</ul>';
                     }

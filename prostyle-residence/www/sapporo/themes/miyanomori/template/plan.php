@@ -40,7 +40,16 @@ Template Post Type: page
                             </div>
 
                             <div class="box_infoview_content">
-                                <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='special']"); ?>
+                                <div class="row no-gutters">
+                                    <?php echo do_shortcode("[ppl-plan only_info='plan-page' ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
+                                    <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='special']"); ?>
+                                    <div class="col-12 col-lg-7 js_img-map">
+                                        <div class="box_infoview_img">
+                                            <?php echo do_shortcode("[apartment-plan]"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p>
                             </div>
 
                             <div class="box_premium">
@@ -48,7 +57,7 @@ Template Post Type: page
                             </div>
 
                             <div class="box_normal">
-                                <?php echo do_shortcode("[ppl-plan , ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
+                                <?php echo do_shortcode("[ppl-plan ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
                             </div>          
                         </div>
                     </div>

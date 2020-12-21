@@ -67,7 +67,7 @@
         </div>
     </div>
   </section>
-  <div class="footer_contact d-flex d-lg-none">
+  <div class="footer_contact d-flex d-lg-none <?=is_home()?'fixed_bottom':''?>">
       <a href="<?php echo site_url('contact'); ?>" class="flex-fill">
           <img src="<?php echo IMAGE_PATH; ?>/i_mail.svg" alt="" class="img-fluid" width="20">
           <span>お問い合わせ</span>

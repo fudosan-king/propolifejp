@@ -7,9 +7,7 @@
         </a>
         
         <div class="btn-action">
-            <button class="user-login">
-                <span class="user-login_icon"></span>
-            </button>
+            <a class="user-login" href="<?php echo wp_logout_url(home_url()); ?>"><span class="user-login_icon"></span></a>
 
             <button class="navbar-toggler toggler-spring menu">
                 <span class="menuLine"></span>
@@ -39,7 +37,6 @@
                 </li>
             </ul>
             <ul class="navbar-nav navbar-mobile mr-0 hide-pc show-mobile">
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>
                 <li class="nav-item js-menuAnimation">
                     <a class="nav-link tel" href="tel:0120853133">
                         Tel.0120-853-133

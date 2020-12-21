@@ -39,7 +39,7 @@
 	<div class="container">
 		<div class="row">
     		<div class="col-12 col-lg-12">
-                <a href="#"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
+                <a href="<?= home_url() ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
                 <ul>
                     <!-- <li><a href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
                     <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
@@ -50,8 +50,8 @@
                 </ul>
                 
                 <ul class="my-brand mb-0">
-                    <li><a href="https://www.chronicle-web.com">【販売】<img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_chronicle.svg" alt="" width="120"></a></li>
-                    <li><a href="https://www.prostyle-residence.com">【売主】 <img src="<?php bloginfo('template_directory');?>/assets/images/1x/logo_small.png" alt="" width="116"> </a></li>
+                    <li><a href="https://www.chronicle-web.com" target="blank_">【販売】<img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_chronicle.svg" alt="" width="120"></a></li>
+                    <li><a href="https://www.prostyle-residence.com" target="blank_">【売主】 <img src="<?php bloginfo('template_directory');?>/assets/images/1x/logo_small.png" alt="" width="116"> </a></li>
                 </ul>
             </div>
 		</div>
@@ -62,6 +62,7 @@
         </address>
     </div>
 </footer>
+
 <div class="bsnav-mobile d-block d-xl-none">
     <div class="bsnav-mobile-overlay"></div>
     <div class="navbar"></div>

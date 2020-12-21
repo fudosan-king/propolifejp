@@ -86,8 +86,22 @@
         display: block;
     }
 
+    .header_before-login .btn-action{
+        display:flex;
+        position: relative;
+        top: -5px;
+    }
+
+   .header_afterlogin .btn-action{
+        display:flex;
+        position: relative;
+        top: -5px;
+   }
+
+
     .navbar.navbar-expand-lg {
         padding: 20px 15px;
+        align-items: center;
     }
 
     .navbar.navbar-expand-lg .navbar-brand {
@@ -188,8 +202,7 @@
     }
 
     .bsnav-mobile .navbar-nav:nth-of-type(3) .nav-item:first-child .nav-link {
-        border: 1px solid #fff;
-        padding: 2px 33px;
+        padding: 2px;
         margin-bottom: 22px;
     }
 
@@ -340,6 +353,7 @@
         padding: 0;
         position: relative;
         border-radius: 0;
+        vertical-align: middle;
     }
 
     .user-login:before {
@@ -712,11 +726,15 @@
         max-width: 335px;
     }
 
-    footer ul li a {
-        padding: 0;
+
+    footer .footer-top ul li a {
+        padding: 0 10px;
     }
 
-    footer ul li a:after {
+    footer .footer-top ul li a:after {
+        height:1em;
+    }
+    footer .footer-top ul.my-brand li a:after {
         width: 0;
     }
 
@@ -928,7 +946,7 @@
     }
 
     .section_plan .box_infoview_top p {
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         margin-bottom: 0;
         font-size: 0.875rem;
     }
@@ -1111,6 +1129,7 @@
 
     .equip-spec_box .equip-spec_box-title{
         font-size: 0.875rem;
+        height:auto;
     }
 
     .equip-spec_box.inclined .col-md-8 p, .equip-spec_box.inclined .col-md-4 .p-right {
@@ -1655,9 +1674,6 @@
         text-align: left;
     }
 
-    .section_info_contact .info_contact_item p a, .section_info_contact .info_contact_item h3 a {
-        text-decoration: underline;
-    }
 
     .section_info_contact .info_contact_item p:first-child {
         position: absolute;

@@ -186,11 +186,8 @@ Template Post Type: page
                             </div>
                         </div>
                     </div>
-                    <ul class="list_global">
-                        <li><span>PROSTYLE </span></li>
-                        <li><span>MIYANOMORI</span></li>
-                        <li class="active"><span>LOCATION.01</span></li>
-                    </ul>
+ 
+ 
                     <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
                     <h3>札幌市営地下鉄東西線<span>「円山公園」</span>駅利用時</h3>
                     <div class="box_station">

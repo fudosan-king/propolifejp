@@ -1,6 +1,6 @@
 <?php 
 global $detect, $post;
-$header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) == 'post' ? 'style="position: fixed;"' : '';
+$header_fixed = $detect->isMobile() && (is_home() || (is_single() && get_post_type($post->ID) == 'post')) ? 'class="header_fixed"' : '';
 ?>
 <header <?php echo $header_fixed; ?>>
     <div class="top_header">
@@ -75,9 +75,9 @@ $header_fixed = $detect->isMobile() && is_single() && get_post_type($post->ID) =
 
 </header>
 
-<div class="spacing_top d-block d-lg-none"></div>
+<div class="<?=$detect->isMobile() && (is_home() || (is_single() && get_post_type($post->ID) == 'post')) ? 'spacing_top' : ''?> d-block d-lg-none"></div>
 
-<div class="nav_slider">
+<div class="nav_slider <?=$detect->isMobile() && (is_home() || (is_single() && get_post_type($post->ID) == 'post')) ? 'nav_slider_fixed' : ''?>">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-12">

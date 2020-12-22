@@ -894,6 +894,15 @@ body {
 }
 
 @media (max-width: 375px) {
+    .box_top_user_md a {
+        font-size: .6em;
+        padding: 3px;
+    }
+
+    .nav_slider {
+        top: 55px;
+    }
+
     .box_seminar_event .seminar_event_item ul li a {
         padding: 2px;
     }

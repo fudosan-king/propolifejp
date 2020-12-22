@@ -24,22 +24,7 @@
         margin-bottom: 15px;
     }
 
-    .box_normal .box_normal_item {
-        width: 49%;
-        margin-right: 15px;
-    }
-
-    .box_normal .box_normal_item:nth-of-type(odd) {
-        margin-right: 15px;
-    }
-
-    .box_normal .box_normal_item:nth-of-type(even) {
-        margin-right: 0;
-    }
-
-    .box_normal .box_normal_item:last-child {
-        margin-right: 0;
-    }
+    
 }
 
 @media (min-width: 992px) {
@@ -57,6 +42,11 @@
 }
 
 @media (max-width: 992px) {
+
+    .box_normal .box_normal_item {
+        width: calc(100%/2);
+    }
+
     .tabs-center-u-shaped {
         margin-top: 0;
     }
@@ -1374,18 +1364,18 @@
         height: 52px;
     }
 
-    .box_normal .box_normal_item {
-        width: 48.5%;
-        margin-right: 15px;
+    .box_normal{
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
-    .box_normal .box_normal_item:last-child {
-        margin-right: 0;
+    .box_normal .box_normal_item {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .box_normal .box_normal_item .box_premium {
         margin-bottom: 15px;
-        height:585px;
     }
 
     .section_plan .carousel_view .carousel-cell {
@@ -1571,7 +1561,10 @@
 @media (max-width: 736px) {
     .box_normal .box_normal_item {
         width: 100%;
-        margin-right: 0;
+    }
+
+    .box_normal .box_premium{
+        height:max-content;
     }
 }
 
@@ -1671,7 +1664,7 @@
         margin-left: 15px;
     }
 
-    .section_info_contact .info_contact_item p, .section_info_contact .info_contact_item h3 {
+    /*.section_info_contact .info_contact_item p, .section_info_contact .info_contact_item h3 {
         text-align: left;
     }
 
@@ -1690,7 +1683,7 @@
 
     .section_info_contact .info_contact_item .btncontactus {
         margin: 0 auto 0 0;
-    }
+    }*/
 
     .section_interview .interview_content {
         margin-bottom: 350px;
@@ -1698,10 +1691,6 @@
 
     .section_kengokuma_architect .interview_content {
         margin-bottom: 0;
-    }
-
-    .box_normal .box_normal_item:nth-of-type(odd) {
-        margin-right: 0;
     }
 
     .section_plan .tabs-center-u-shaped ul.nav-tabs li.nav-item a.nav-link {

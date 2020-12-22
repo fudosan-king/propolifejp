@@ -14,10 +14,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ja.min.js"></script>
+<script src="<?php bloginfo('template_directory');?>/assets/js/jquery.fancybox.min.js"></script>
 <script src="<?php bloginfo('template_directory');?>/assets/js/slick.min.js"></script>
 <script src="<?php bloginfo('template_directory');?>/assets/js/miyanomori-script.js"></script>
 <script src="<?php bloginfo('template_directory');?>/assets/js/functions.js"></script>
- <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 
 </body>
 

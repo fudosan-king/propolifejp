@@ -396,6 +396,11 @@ function miyanomori() {
             });
         });
 
+        $('[data-fancybox=images]').on('click',function(){});
+        $('.btnEnlarge').on('click',function(){
+            $('[data-fancybox=images]').trigger( "click" );
+        });
+
     }
 
     this.slickSlider = function(){

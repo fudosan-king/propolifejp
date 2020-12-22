@@ -135,6 +135,8 @@ a:hover {
     transition: all .3s linear;
 }
 
+
+
 .red {
     color: #eb5757;
 }
@@ -372,7 +374,7 @@ ul.list_global li.active span {
 }
 
 .bsnav-sticky {
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .bsnav-sticky.bsnav-sticky-slide.sticked.in {
@@ -2054,7 +2056,7 @@ footer address p {
     margin-right: 0;
 }
 
-.box_premium ul.list_view li a {
+.box_premium ul.list_view li span {
     font-family: "Noto Sans JP", "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
     line-height: 1.7em;
     font-size: .75em;
@@ -2070,10 +2072,13 @@ footer address p {
     display: flex !important;
     flex-flow: row wrap;
     margin-bottom: 60px;
+    margin-left: -21px;
+    margin-right: -21px;
 }
 
 .box_normal .box_premium {
     border: 1px solid #B48856;
+    height:528px;
 }
 
 .box_normal .box_premium::after {
@@ -2086,8 +2091,9 @@ footer address p {
 
 .box_normal .box_normal_item {
     display: block;
-    width: 362px;
-    margin-right: 42px;
+    width: calc(100%/3);
+    padding-left: 21px;
+    padding-right: 21px;
 }
 
 .box_normal .box_normal_item:nth-of-type(3n) {
@@ -2394,10 +2400,13 @@ footer address p {
     font-family: "Noto Sans JP", "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
     font-size: 0.875em;
     line-height: 1em;
-    min-width: 212px;
+    width: 100%;
     margin: auto;
-    display: inline-block;
+    display: flex;
     padding: 10px 15px;
+    max-width: 212px;
+    align-items: center;
+    justify-content: center;
 }
 
 .section_plan_detail .box_plan_detail_body a.btnEnlarge:hover {
@@ -2417,11 +2426,6 @@ footer address p {
     margin-right: 5px;
 }
 
-.section_plan_detail .box_plan_detail_body a.btnEnlarge span {
-    display: inline-block;
-    position: relative;
-    top: -6px;
-}
 
 .section_plan_detail .box_plan_detail_footer {
     position: relative;
@@ -2441,6 +2445,7 @@ footer address p {
 .section_plan_detail .box_plan_detail_footer .box_infoview_content .box_plan_detail_footer_content {
     position: relative;
     z-index: 10;
+    height:274px;
 }
 
 .section_plan_detail .box_plan_detail_footer .box_infoview_content .box_plan_detail_footer_content h1 {
@@ -2453,7 +2458,7 @@ footer address p {
 }
 
 .section_plan_detail .box_plan_detail_footer_content h2{
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 .section_plan_detail .box_plan_detail_footer_content h2 .number{

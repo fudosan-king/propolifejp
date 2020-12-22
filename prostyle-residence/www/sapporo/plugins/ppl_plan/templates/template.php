@@ -18,7 +18,10 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 	$query = new WP_Query( array( 
 							'post_type' => 'ppl_plan', 
 							'posts_per_page' => $count,
-							'post__not_in' => $exclude_ids
+							'post__not_in' => $exclude_ids,
+							'orderby'	=> 'meta_value_num',
+							'meta_key'  => 'ppl-plan-url',
+							'order'		=> 'ASC'
 						));
 	ob_start();
 	if($query->have_posts()) : 
@@ -53,20 +56,22 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 			default: 
 		?>
 		 	<div class="box_normal_item">
-		        <div class="box_premium">
-		            <span class="label_new"><i>New</i></span>
-		            <ul class="list_view">
-		                <li><a href="#">眺望</a></li>
-		                <li><a href="#">３Dモデルルーム画像</a></li>
-		            </ul>
-		            <h2><?= get_the_title($post->ID)?></h2>
-		            <h3><?= $post->post_excerpt ?></h3>
-		            <div class="box_premium_list-img">
-		            	<div class="box_premium_img">
-		                	<a href="<?= esc_url(get_permalink($post->ID)) ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
-		            	</div>
-		            </div>
-		        </div>
+		 		<a href="<?= esc_url(get_permalink($post->ID)) ?>" >
+			        <div class="box_premium">
+			            <span class="label_new"><i>New</i></span>
+			            <ul class="list_view">
+			                <li><span>眺望</span></li>
+			                <li><span>３Dモデルルーム画像</span></li>
+			            </ul>
+			            <h2><?= get_the_title($post->ID)?></h2>
+			            <h3><?= $post->post_excerpt ?></h3>
+			            <div class="box_premium_list-img">
+			            	<div class="box_premium_img">
+			                	<img src="<?= $thumburl[0] ?>" alt="" class="img-fluid">
+			            	</div>
+			            </div>
+			        </div>
+		        </a>
 	   		 </div>			
 		<?php
 			endswitch;		
@@ -118,18 +123,22 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 			    </div>
             </div>
 	        <?php else: ?>
-	        	<span class="label_new"><i>New</i></span>               
-                <ul class="list_view">
-                    <li><a href="#">眺望</a></li>
-                    <li><a href="#">３Dモデルルーム画像</a></li>
-                </ul>
-                <h2><?= $post_title ?></h2>
-                <h3><?= $post_excerpt ?></h3>
-                <div class="box_premium_list-img">
-                	<div class="box_premium_img">
-                    	<a href="<?= $post_url ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
-                	</div>
-                </div>
+	        	<a href="<?= $post_url ?>">
+		        	<div class="box_premium">
+			        	<span class="label_new"><i>New</i></span>               
+		                <ul class="list_view">
+		                    <li><span>眺望</span></li>
+		                    <li><span>３Dモデルルーム画像</span></li>
+		                </ul>
+		                <h2><?= $post_title ?></h2>
+		                <h3><?= $post_excerpt ?></h3>
+		                <div class="box_premium_list-img">
+		                	<div class="box_premium_img">
+		                    	<img src="<?= $thumburl[0] ?>" alt="" class="img-fluid">
+		                	</div>
+		                </div>
+	            	</div>
+            	</a>
 			<?php endif ?>
 			  		
 		<?php

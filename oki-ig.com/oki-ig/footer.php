@@ -98,6 +98,10 @@
 
 	<script src="<?php echo TEMPLATE_DIR; ?>/js/functions.js"></script>
 
+  <?php if(is_page( 'contact' )): ?>
+    <script src="<?php echo TEMPLATE_DIR; ?>/js/contact.js"></script>    
+  <?php endif; ?>
+
 	<script type="text/javascript">
 		$(window).on('load', function() {
 			// Animate loader off screen

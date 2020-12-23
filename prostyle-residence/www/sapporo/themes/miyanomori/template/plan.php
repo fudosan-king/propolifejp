@@ -50,7 +50,7 @@ Template Post Type: page
                         <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p>
                     </div>
                     <div class="box-feature">
-                         <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_feature' style='feature']"); ?>
+                         <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='feature']"); ?>
                     </div>
 
                     <div class="box_normal">

@@ -1038,7 +1038,7 @@ ul.list_global li.active span {
 .spring_summer_pictures > span {
     position: relative;
     margin-right: 20px;
-    overflow: hidden;
+    width: 100%;
     display: block;
 }
 
@@ -2070,7 +2070,6 @@ footer address p {
 
 .box_premium .box_premium_list-img .box_premium_img {
     margin: 0 auto;
-    max-width: 635px;
     width: 100%;
 }
 

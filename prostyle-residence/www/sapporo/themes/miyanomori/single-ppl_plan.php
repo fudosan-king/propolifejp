@@ -79,7 +79,7 @@ Template Post Type: page
                     <div class="row no-gutters hide-mobile">
                         <?php 
                            $post_url = $post_slug = $post->post_name; 
-                           echo do_shortcode("[ppl-plan only_info='plan-detail-page' ignore_slug ='ppl_plan_special,".$post_url."']"); 
+                           echo do_shortcode("[ppl-plan only_info='plan-detail-page' ignore_slug ='ppl_plan_feature,".$post_url."']"); 
                         ?>
                         <?php echo do_shortcode("[ppl-plan-item slug='".$post_url."' style='plan-detail-page']"); ?>
                        
@@ -91,7 +91,7 @@ Template Post Type: page
                         </div>
                     </div>
                     <div class="box_normal show-mobile hide-pc">
-                        <?php echo do_shortcode("[ppl-plan ignore_slug ='ppl_plan_special,ppl_plan_feature' ignore_slug ='ppl_plan_feature,".$post_url."']"); ?>
+                        <?php echo do_shortcode("[ppl-plan ignore_slug ='ppl_plan_feature,".$post_url."']"); ?>
                     </div>
                 </div>
             </div>

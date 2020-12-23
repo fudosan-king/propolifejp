@@ -328,4 +328,16 @@ jQuery(function($) {
         return false;
     })
 
+    $(".btn_viewmember").click(function() {
+            $("body,html").animate({
+                    scrollTop: $(".detail-mBB").offset().top - 98
+            }, 800);
+    });
+
+    $(".btn_registermember").click(function() {
+            $("body,html").animate({
+                    scrollTop: $("#frm_signup").offset().top - 150
+            }, 800);
+    });
+
 });

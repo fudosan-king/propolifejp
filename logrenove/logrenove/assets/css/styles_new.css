@@ -940,3 +940,19 @@ footer .footer_bottom {
     padding-bottom: 20px;
 }
 
+.btn_comeback {
+    font-weight: bold;
+    padding: 15px;
+    background: #3CBCCF;
+    color: #fff;
+    font-size: 0.875em;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn_comeback:hover {
+    background: #1f97a9;
+    color: #fff;
+}
+
+

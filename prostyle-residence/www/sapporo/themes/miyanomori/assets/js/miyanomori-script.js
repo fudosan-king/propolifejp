@@ -285,7 +285,7 @@ function miyanomori() {
                 $.each(posIconVRs,function(i,val){
                     if( val.name == getKey ){
                         const vrIntoBoxImg_Y = val[getPos].top - ( val[getPos].top*eleBoxImgVR_ChangeHeight );
-                        const vrIntoBoxImg_X = val[getPos].left- ( val[getPos].left*eleBoxImgVR_ChangeWidth );
+                        const vrIntoBoxImg_X = val[getPos].left - ( val[getPos].left*eleBoxImgVR_ChangeWidth );
                         $(ele).css({
                             top: vrIntoBoxImg_Y,
                             left: vrIntoBoxImg_X, 
@@ -404,6 +404,14 @@ function miyanomori() {
     }
 
     this.slickSlider = function(){
+        $('.js-auto-slider').slick({
+            slidesToShow: 1,
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 4000,
+        });
+
         $('.ct-slider').slick({
             slidesToShow: 1,
             infinite: true,

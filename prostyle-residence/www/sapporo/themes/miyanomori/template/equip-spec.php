@@ -6,25 +6,21 @@ Template Post Type: page
 ?>
 <?php get_header(); ?>
 <?php get_template_part( 'template/home/header'); ?>
-    <section class="section_subbanner slide-flickity">
-        <div class="carousel" data-flickity data-flickity-options='{ "prevNextButtons": false }'>
-            <div class="carousel-cell">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-            </div>
-            <div class="carousel-cell">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-            </div>
-            <div class="carousel-cell">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-            </div>
-            <div class="carousel-cell">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-            </div>
-            <div class="carousel-cell">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-            </div>
+    <section class="js-auto-slider slide-dot-slick">
+        <div class="slide-dot-slick_item">
+            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
+        </div>
+        <div class="slide-dot-slick_item">
+            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
+        </div>
+        <div class="slide-dot-slick_item">
+            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
+        </div>
+        <div class="slide-dot-slick_item">
+            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
         </div>
     </section>
+
     <main>
         <section class="section_equip-spec">
             <div class="container">

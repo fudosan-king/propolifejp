@@ -43,10 +43,10 @@
                 <ul>
                     <!-- <li><a href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
                     <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
-                    <li><a href="#">利用規約</a></li>
-                    <li><a href="#">反社会的勢力排除に関する基本方針</a></li>
+                    <li><a href="https://www.propolife.co.jp/terms/">利用規約</a></li>
+                    <li><a href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>
                     <li><a href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
-                    <li><a href="#">ソーシャルメディアポリシー</a></li>
+                    <li><a href="https://www.propolife.co.jp/socialpolicy/">ソーシャルメディアポリシー</a></li>
                 </ul>
                 
                 <ul class="my-brand mb-0">

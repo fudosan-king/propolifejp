@@ -112,7 +112,7 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 		 	if ($style == 'special'): ?>
 	                <div class="col-12 col-lg-5 <?= $codeApartment; ?>">
 	                    <h1><?= $post_title; ?></h1>
-	                    <h2><?= $post_excerpt; ?></h2>
+	                    <h2><?= get_the_content($post->ID); ?></h2>
 	                </div>
 	        <?php elseif($style == 'plan-detail-page'): ?>
 	        <div class="col-12 col-lg-5 <?= $codeApartment; ?> js_info-default">

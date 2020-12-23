@@ -33,11 +33,11 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 		switch ($only_info):
 			case 'plan-page':
 			$post_title   = get_the_title($post->ID);
-			$post_excerpt = $post->post_excerpt;
+			$post_content = get_the_content($post->ID);
 		?>
 			<div class="col-12 col-lg-5 <?= $codeApartment; ?>" style="display:none" >
                 <h1><?= $post_title; ?></h1>
-                <h2><?= $post_excerpt; ?></h2>
+                <h2><?= $post_content; ?></h2>
             </div>
 		<?php 
 			break; 

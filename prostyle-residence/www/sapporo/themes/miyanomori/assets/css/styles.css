@@ -135,8 +135,6 @@ a:hover {
     transition: all .3s linear;
 }
 
-
-
 .red {
     color: #eb5757;
 }
@@ -145,6 +143,42 @@ a:hover {
     font-size: 0.875em;
     border-color: #828282;
     height: calc(1.5em + .75rem + 7px);
+}
+
+/*.slide-dot-slick {
+    width:100%;
+}
+*/
+.slide-dot-slick .slide-dot-slick_item img{
+    width: 100%;
+}
+
+.slide-dot-slick .slick-dots{
+    display: flex;
+    justify-content:center;
+    list-style-type: none;
+    padding-top: 10px;
+
+}
+
+.slide-dot-slick .slick-dots li{
+    margin-right:10px;
+}
+
+.slide-dot-slick .slick-dots li button{
+    font-size:0;
+    background-color: #333;
+    opacity: .25;
+    border-radius:50%;
+    height:6px;
+    padding:6px;
+    outline:none;
+    border:none;
+}
+
+.slide-dot-slick .slick-dots li.slick-active button{
+    background-color: #B48856;
+    opacity: 1;
 }
 
 .tabs-center-u-shaped {

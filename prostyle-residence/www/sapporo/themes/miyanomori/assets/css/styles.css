@@ -1051,8 +1051,8 @@ header .menu-list a {
 
 .section_area_minyanomori .area_minyanomori_pictures > span {
     position: relative;
-    overflow: hidden;
     display: block;
+    width:100%;
 }
 
 .section_area_minyanomori .area_minyanomori_pictures > span .overlay {

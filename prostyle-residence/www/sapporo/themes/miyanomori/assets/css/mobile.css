@@ -16,30 +16,15 @@
 }
 
 @media (max-width: 1024px) {
-    .section_plan .box_infoview_content {
+    .box_infoview_content {
         margin-bottom: 50px;
     }
 
-    .section_plan .box_premium {
+    .box_premium {
         margin-bottom: 15px;
     }
 
-    .section_plan .box_normal .box_normal_item {
-        width: 49%;
-        margin-right: 15px;
-    }
-
-    .section_plan .box_normal .box_normal_item:nth-of-type(odd) {
-        margin-right: 15px;
-    }
-
-    .section_plan .box_normal .box_normal_item:nth-of-type(even) {
-        margin-right: 0;
-    }
-
-    .section_plan .box_normal .box_normal_item:last-child {
-        margin-right: 0;
-    }
+    
 }
 
 @media (min-width: 992px) {
@@ -57,6 +42,11 @@
 }
 
 @media (max-width: 992px) {
+
+    .box_normal .box_normal_item {
+        width: calc(100%/2);
+    }
+
     .tabs-center-u-shaped {
         margin-top: 0;
     }
@@ -202,8 +192,7 @@
     }
 
     .bsnav-mobile .navbar-nav:nth-of-type(3) .nav-item:first-child .nav-link {
-        border: 1px solid #fff;
-        padding: 2px 33px;
+        padding: 2px;
         margin-bottom: 22px;
     }
 
@@ -727,11 +716,15 @@
         max-width: 335px;
     }
 
-    footer ul li a {
-        padding: 0;
+
+    footer .footer-top ul li a {
+        padding: 0 10px;
     }
 
-    footer ul li a:after {
+    footer .footer-top ul li a:after {
+        height:1em;
+    }
+    footer .footer-top ul.my-brand li a:after {
         width: 0;
     }
 
@@ -943,7 +936,7 @@
     }
 
     .section_plan .box_infoview_top p {
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         margin-bottom: 0;
         font-size: 0.875rem;
     }
@@ -1081,10 +1074,7 @@
     }
 
     .section_plan_detail .box_plan_detail_footer .box_infoview_content:after {
-        left: 0;
-        top: 80px;
-        height: auto;
-        width: auto;
+        height: 0;
     }
 
     .section_plan_detail .box_plan_detail_footer .box_infoview_content .box_plan_detail_footer_content h1 {
@@ -1093,6 +1083,9 @@
 
     .section_plan_detail .box_plan_detail_footer .row {
         flex-direction: column-reverse;
+    }
+    .section_plan_detail .box_plan_detail_footer .box_infoview_content{
+        padding:0;
     }
 }
 
@@ -1371,16 +1364,17 @@
         height: 52px;
     }
 
-    .section_plan .box_normal .box_normal_item {
-        width: 48.5%;
-        margin-right: 15px;
+    .box_normal{
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
-    .section_plan .box_normal .box_normal_item:last-child {
-        margin-right: 0;
+    .box_normal .box_normal_item {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .section_plan .box_normal .box_normal_item .box_premium {
+    .box_normal .box_normal_item .box_premium {
         margin-bottom: 15px;
     }
 
@@ -1565,9 +1559,12 @@
 }
 
 @media (max-width: 736px) {
-    .section_plan .box_normal .box_normal_item {
+    .box_normal .box_normal_item {
         width: 100%;
-        margin-right: 0;
+    }
+
+    .box_normal .box_premium{
+        height:max-content;
     }
 }
 
@@ -1667,13 +1664,10 @@
         margin-left: 15px;
     }
 
-    .section_info_contact .info_contact_item p, .section_info_contact .info_contact_item h3 {
+    /*.section_info_contact .info_contact_item p, .section_info_contact .info_contact_item h3 {
         text-align: left;
     }
 
-    .section_info_contact .info_contact_item p a, .section_info_contact .info_contact_item h3 a {
-        text-decoration: underline;
-    }
 
     .section_info_contact .info_contact_item p:first-child {
         position: absolute;
@@ -1689,7 +1683,7 @@
 
     .section_info_contact .info_contact_item .btncontactus {
         margin: 0 auto 0 0;
-    }
+    }*/
 
     .section_interview .interview_content {
         margin-bottom: 350px;
@@ -1697,10 +1691,6 @@
 
     .section_kengokuma_architect .interview_content {
         margin-bottom: 0;
-    }
-
-    .section_plan .box_normal .box_normal_item:nth-of-type(odd) {
-        margin-right: 0;
     }
 
     .section_plan .tabs-center-u-shaped ul.nav-tabs li.nav-item a.nav-link {

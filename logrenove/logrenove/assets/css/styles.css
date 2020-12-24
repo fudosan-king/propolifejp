@@ -1701,7 +1701,7 @@ ul.box_article_related li a {
 }
 
 .box_article_detail ul {
-	list-style: none;
+	/*list-style: none;*/
 	padding-left: 0;
 	margin: 20px 0
 }
@@ -2016,7 +2016,7 @@ blockquote:before {
 
 .login_header {
 	text-align: center;
-	padding: 90px 0 55px;
+	padding: 90px 0 30px;
 }
 
 .login_body {
@@ -2185,7 +2185,7 @@ blockquote:before {
 
 @media (max-width: 768px) {
 	.login_header {
-		padding: 30px 0;
+		padding: 120px 0 30px;
 	}
 	.login_body {
 		width: 100%;
@@ -3478,15 +3478,15 @@ ul.list_sub_cate_event li:last-child {
 }
 
 .register-page .login_body_top h3{
-    font-size: 1.5em;
     color: #000;
     text-align: center;
     position: relative;
-    padding-bottom: 40px;
-    margin-bottom: 31px;
+    font-size: 1.125em;
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
-.register-page .login_body_top h3:after{
+/*.register-page .login_body_top h3:after{
     content: '';
     position: absolute;
     background: rgba(204, 204, 204, .5);
@@ -3494,7 +3494,7 @@ ul.list_sub_cate_event li:last-child {
     left:-11px;
     right:-11px;
     height:1px;
-}
+}*/
 .register-page .login_body_top:after{
     content: '';
     position: absolute;
@@ -3701,5 +3701,780 @@ ul.list_sub_cate_event li:last-child {
     }
 }
 
+ul.uagb-toc__list li {
+	list-style: none;
+}
 
+/* Registration */
+/*.login-detail {
+	position: relative;
+}
 
+.login-detail .row {
+	background-color: #fff;
+	border: 2px solid #BDBDBD;
+	padding: 30px 0;
+	border-radius: 6px;
+	box-sizing: border-box;
+}
+
+#LoginForm {
+	border-radius: 6px;
+	background-color: #fff;
+}
+
+.login-detail p {
+	font-size: 13px;
+	color: #333;
+	font-style: normal;
+	font-weight: 600;
+}
+
+.login-detail .yl-box {
+	background: #F2C94C;
+	border: 1px solid #333333;
+	box-sizing: border-box;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	color: #333333;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 14px;
+	width: 64px;
+	margin: 20px auto;
+}
+
+.login-detail h2 {
+    background: #fff;
+    width: 25%;
+    margin: 0px auto;
+    position: absolute;
+    left: 37.5%;
+    top: -8%;
+    border: 2px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+.login-detail img {
+	height: 80px;
+	width: 100%;
+}
+
+.login-detail .col {
+    padding: 0px 20px;
+    border-right: 0.5px solid #333333;
+}
+
+.login-detail .col:last-child {
+    border: none;
+}
+
+.detail-anchor {
+	padding: 20px 0;
+}
+
+.detail-anchor a {
+    text-align: center;
+    text-decoration-line: underline;
+    color: #3CBCCF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.gap-small {
+	height: 4rem;
+}
+
+@media (max-width: 800px) {
+
+	#detail-mb .yl-box {
+	    margin: 6px 0;
+	    text-align: center;
+	}
+
+	.ld-box {
+	    display: flex;
+	    flex-wrap: wrap;
+	    flex-direction: row;
+	}
+
+	.ld-img {
+	    width: 25%;
+	}
+
+	.ld-img img {
+		height: unset;
+	}
+
+	.ld-content {
+	    width: 70%;
+	    text-align: left;
+	    margin-left: 5%;
+	}
+
+	.login-detail h2 {
+	    width: 55%;
+	    position: absolute;
+	    left: 23%;
+	    top: -4%;
+	    padding: 8px 0;
+	    text-align: center;
+	}
+
+	#detail-mb .row {
+		padding: 10px 15px;
+	}
+
+	.login-detail .col-12 {
+	    border-bottom: 0.5px solid #333333;
+	    padding: 20px 15px;
+	}
+
+	.login-detail .col-12:last-child {
+		border: none;
+	}
+
+}*/
+
+#LoginForm {
+	border-radius: 6px;
+	background-color: #fff;
+}
+
+/* Csan */
+
+.head_services h2 {
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.head_services h2 img {
+    margin-right: 5px;
+}
+
+.head_services ul {
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.head_services ul li {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.head_services ul li:last-child a {
+    /*background: #AD814D;
+    color: #fff;
+    border-color: #AD814D;*/
+}
+
+.head_services ul li:hover a {
+    background: #AD814D;
+    color: #fff;
+    border-color: #AD814D;
+}
+
+.head_services ul li a {
+    display: block;
+    border: 1px solid #333;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    line-height: 1em;
+}
+
+.body_services h2 {
+    font-size: 0.75em;
+    background: #f2f2f2;
+    padding: 5px 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.body_services h2 span {
+    color: #2f80ed;
+}
+
+.body_services .box_list_services_item {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.body_services .box_list_services_item h3 {
+    font-size: 1.125em;
+}
+
+.body_services .box_list_services_item h3 a {
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.body_services .box_list_services_item .box_list_services_item_img img {
+    width: 100%;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body {
+    padding-left: 20px;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body p {
+    font-size: 0.75em;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul:first-of-type {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul:first-of-type li {
+    font-size: 0.625em;
+    line-height: 1em;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul li {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul li img {
+    position: relative;
+    top: -1px;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul li:last-child {
+    margin-right: 0;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul li:hover a {
+    background: #AD814D;
+    color: #fff;
+}
+
+.body_services .box_list_services_item .box_list_services_item_body ul li a {
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #AD814D;
+    color: #AD814D;
+    font-size: 0.75em;
+    line-height: 1em;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.body_services .btn_more {
+    border: 1px solid #AD814D;
+    color: #AD814D;
+    border-radius: 4px;
+    margin-top: 30px;
+    padding: 8px 40px;
+    font-size: 0.875em;
+    position: relative;
+}
+
+.body_services .btn_more::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /*background: url("../images/i_brown_down.svg") no-repeat;*/
+    width: 10px;
+    height: 10px;
+}
+
+.box_popular_seminar {
+    border: 1px solid #bdbdbd;
+}
+
+.box_popular_seminar h2.title {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #bdbdbd;
+    line-height: 1em;
+}
+
+.box_popular_seminar h2.title span {
+    position: relative;
+}
+
+.box_popular_seminar h2.title img {
+    position: absolute;
+    top: -40px;
+}
+
+.box_popular_seminar .box_popular_seminar_body {
+    padding: 12px;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item:last-of-type {
+    border-bottom: none;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item h2 {
+    font-size: 1em;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item h2 a {
+    color: #333;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_img {
+    position: relative;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_img img {
+    width: 100%;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_img span {
+    display: inline-block;
+    /*background: #AD814D;*/
+    color: #fff;
+    padding: 7px 10px;
+    font-weight: bold;
+    line-height: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_img span.brown {
+    background: #AD814D;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_img span.gray {
+    background: #999;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_img span.puce {
+    background: #CD7B5D;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_img span.black {
+    background: #333;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body {
+    padding-left: 10px;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body p {
+    font-size: 0.625em;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: .9em;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body ul li {
+    display: inline-block;
+    font-size: 0.625em;
+    line-height: 1.5em;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body ul li:last-child {
+    margin-right: 0;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body ul:last-child {
+    line-height: 1.5em;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body ul:last-child li:hover a {
+    background: #AD814D;
+    color: #fff;
+}
+
+.box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body ul:last-child li a {
+    border: 1px solid #AD814D;
+    color: #AD814D;
+    line-height: 1em;
+    padding: 3px 5px;
+    font-size: 0.99em;
+    border-radius: 4px;
+}
+
+.banner_services {
+    margin: 80px 0;
+}
+
+@media (max-width: 768px) {
+    .body_services h2 {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .body_services .box_list_services_item .box_list_services_item_body {
+        padding-left: 10px;
+    }
+
+    .body_services .box_list_services_item .box_list_services_item_body ul:first-of-type {
+        margin-bottom: 0;
+    }
+
+    .body_services .box_list_services_item .box_list_services_item_body ul li a {
+        font-size: 0.6em;
+        padding: 5px;
+    }
+
+    .body_services .box_list_services_item .box_list_services_item_body p {
+        line-height: 1.5em;
+    }
+
+    .banner_services {
+        margin-bottom: 0;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .box_popular_seminar .box_popular_seminar_body .box_popular_seminar_item .box_popular_seminar_item_body ul li {
+        margin-bottom: 10px;
+    }
+}
+
+.head_services .active a {
+	background: #AD814D;
+    color: #fff;
+    border-color: #AD814D;
+}
+
+.event_ranking span {
+    background-color: #333333;
+}
+
+.event_ranking span.ranking-1 {
+    background: #AD814D;
+}
+
+.event_ranking span.ranking-2 {
+    background: #999999;
+}
+
+.event_ranking span.ranking-3 {
+    background: #CD7B5D;
+}
+
+.btn_registermember {
+    border-radius: 4px;
+    border: 2px solid #333;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 20px;
+    position: relative;
+}
+
+.btn_registermember::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("../images/i_chevron_right_black.svg") no-repeat;
+    width: 6px;
+    height: 10px;
+}
+
+.btn_registermember:hover {
+    color: #000;
+}
+
+@media (max-width: 414px) {
+    .box_seminar_event .seminar_event_item ul li a {
+        padding: 4px;
+        font-size: 0.65em;
+    }
+}
+
+.breadcrumb-item {
+    font-weight: 500;
+}
+
+.breadcrumb-item.active {
+    color: #333;
+}
+
+.breadcrumb-item a {
+    color: #333;
+}
+
+.top_signup {
+/*    margin-top: 60px;*/
+    text-align: center;
+}
+
+.top_signup p {
+    margin-top: 20px;
+}
+
+.top_signup p a {
+    font-weight: 600;
+    color: #3CBCCF;
+    text-decoration: underline;
+}
+
+.box_benefit_smember h3 {
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0;
+    position: relative;
+    top: 20px;
+}
+
+.box_benefit_smember h3 span {
+    border: 2px solid #bdbdbd;
+    border-radius: 100px;
+    display: inline-block;
+    padding: 8px 50px;
+    background: #fff;
+}
+
+.box_benefit_smember .box_benefit_smember_main {
+    background: #fff;
+    border-radius: 6px;
+    border: 2px solid #bdbdbd;
+    padding: 35px 27px 25px;
+}
+
+.box_benefit_smember .box_benefit_smember_main ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.box_benefit_smember .box_benefit_smember_main ul li {
+    border-right: 1px solid rgba(51, 51, 51, 0.28);
+    text-align: center;
+}
+
+.box_benefit_smember .box_benefit_smember_main ul li:last-child {
+    border-right: none;
+}
+
+.box_benefit_smember .box_benefit_smember_main ul li img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.box_benefit_smember .box_benefit_smember_main ul li .btn_benefit {
+    background: #f1c94c;
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1em;
+    padding: 3px 15px;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 2px;
+    margin-bottom: 13px;
+}
+
+/*.box_benefit_smember .box_benefit_smember_main ul li .btn_benefit:hover {
+    background: #000;
+    color: #fff;
+}*/
+
+.box_benefit_smember .box_benefit_smember_main ul li p {
+    margin-bottom: 0;
+    font-size: 0.8125em;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.box_benefit_smember .btn_registermember {
+    display: block;
+}
+
+.box_register {
+    background: #fff;
+    border-radius: 4px;
+    padding: 40px 0;
+}
+
+.box_register h2 {
+    text-align: center;
+    font-size: 1.125em;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.box_register .frm_register {
+    width: 330px;
+    margin: auto;
+}
+
+.box_register .frm_register .custom-control-input:checked ~ .custom-control-label:before {
+    border-color: #8a612d;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+.box_register .frm_register .custom-control-label::before, .box_register .frm_register .custom-control-label::after {
+    width: 20px;
+    height: 20px;
+}
+
+.box_register .frm_register p {
+    font-size: 0.875em;
+}
+
+.box_register .frm_register p a {
+    color: #3CBCCF;
+    font-weight: bold;
+}
+
+.box_register .frm_register .form-group {
+    margin-bottom: 20px;
+}
+
+.box_register .frm_register label {
+    font-size: 0.875em;
+    line-height: 2em;
+}
+
+.box_register .frm_register .form-control {
+    font-size: 0.875em;
+    height: calc(1.5em + .75rem + 17px);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.box_register .frm_register .btn_register {
+    display: block;
+    background: #3CBCCF;
+    color: #fff;
+    font-size: 0.875em;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.box_register .frm_register .btn_register:hover {
+    background: #128292;
+}
+
+.box_register .frm_register .btn_login {
+    font-weight: 600;
+}
+
+.section_constructionexample .box_constructionexample ul.list_construction li {
+    width: 32%;
+}
+
+.section_constructionexample .box_constructionexample ul.list_construction li:nth-child(2n) {
+    margin-right: 20px;
+}
+
+.section_constructionexample .box_constructionexample ul.list_construction li:nth-child(3n) {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .top_signup {
+        margin-top: 0;
+    }
+
+    .top_signup p {
+        margin-bottom: 0;
+    }
+
+    .box_register {
+        margin-top: 30px;
+    }
+
+    .box_register .frm_register {
+        width: 100%;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .box_benefit_smember h3 {
+        margin-top: 20px;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main {
+        padding: 25px;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main ul {
+        display: block;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main ul li {
+        border-bottom: 1px solid rgba(51, 51, 51, 0.28);
+        border-right: none;
+        padding: 15px 0;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main ul li:last-child {
+        border-bottom: none;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main ul li img {
+        margin-bottom: 0;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main ul li .benefit_smember_content {
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main ul li .benefit_smember_content .btn_benefit {
+        margin-bottom: 5px;
+    }
+
+    .box_benefit_smember .box_benefit_smember_main .btn_registermember {
+        margin-top: 0;
+        border-color: #bdbdbd;
+        padding: 10px;
+    }
+}

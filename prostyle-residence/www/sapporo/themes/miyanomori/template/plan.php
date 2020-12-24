@@ -28,31 +28,36 @@ Template Post Type: page
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="plandesign" role="tabpanel" aria-labelledby="plandesign-tab">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-12">
-
-                            <div class="box_infoview_top">
-                                <h2 class="title hide-mobile">大きなガラス越しに望む自然の大借景を愉しむ<br>
-                                リゾートコンドミニアムのような集合邸宅</h2>
-                                <h2 class="hide-pc show-mobile">理想の都市居住に応える<br>
-                                    プランニング。</h2>
-                                <p class="hide-pc show-mobile">シングルやディンクス、ファミリー、セカンドユースまで、ライフスタイルなどに合わせてお選びいただける、住居専有面積約39㎡～130㎡超までをご用意。</p>                                            
-                            </div>
-
-                            <div class="box_infoview_content">
-                                <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='special']"); ?>
-                            </div>
-
-                            <div class="box_premium">
-                                <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_feature' style='feature']"); ?>
-                            </div>
-
-                            <div class="box_normal">
-                                <?php echo do_shortcode("[ppl-plan , ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
-                            </div>          
-                        </div>
+                   
+                    <div class="box_infoview_top">
+                        <h2 class="title hide-mobile">大きなガラス越しに望む自然の大借景を愉しむ<br>
+                        リゾートコンドミニアムのような集合邸宅</h2>
+                        <h2 class="hide-pc show-mobile">理想の都市居住に応える<br>
+                            プランニング。</h2>
+                        <p class="hide-pc show-mobile">シングルやディンクス、ファミリー、セカンドユースまで、ライフスタイルなどに合わせてお選びいただける、住居専有面積約39㎡～130㎡超までをご用意。</p>                                            
                     </div>
+
+                    <div class="box_infoview_content">
+                        <div class="row no-gutters">
+                            <?php echo do_shortcode("[ppl-plan only_info='plan-page' ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
+                            <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='special']"); ?>
+                            <div class="col-12 col-lg-7 js_img-map">
+                                <div class="box_infoview_img">
+                                    <?php echo do_shortcode("[apartment-plan]"); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p>
+                    </div>
+                    <div class="box-feature">
+                         <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='feature']"); ?>
+                    </div>
+
+                    <div class="box_normal">
+                        <?php echo do_shortcode("[ppl-plan ignore_slug ='ppl_plan_special,ppl_plan_feature' ]"); ?>
+                    </div>          
                 </div>
+               
             </div>
             <div class="tab-pane fade " id="view" role="tabpanel" aria-labelledby="view-tab">
                 <div class="box_infoview_top mb-3">

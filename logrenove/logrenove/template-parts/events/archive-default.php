@@ -1,59 +1,46 @@
-<div class="box_event_content">
-    <?php 
-    $posts = get_events();
-    if($posts) {
-    if($posts->have_posts()):
-        while($posts->have_posts()): $posts->the_post();
-            $thumbnails = new ThumbnailItem(get_post_thumbnail_id());
-            $tags = get_the_terms(get_the_ID(), 'event_tags');
-            $even_datetime = get_event_datetime();
-            ?>
-    <div class="box_event_itemv2">
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                <div class="row no-gutters">
-                    <div class="col-4 col-lg-12">
-                        <div class="box_event_item_img">
-                            <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnails->url;?>" alt="" class="img-fluid"></a>
-                        </div>  
+<input type="hidden" name="term_id" value="<?=get_queried_object()->term_id?>">
+<input type="hidden" name="taxonomy" value="<?=get_query_var('taxonomy')?>">
+<input type="hidden" name="d" value="<?=isset($_GET['d'])?$_GET['d']:''?>">
+<?php $event_lists = get_event_date_list();
+foreach ($event_lists as $date => $event_list):
+    $date_format = date_i18n('Fj (D)', strtotime($date));
+?>
+    <div class="event-lists" data-date="<?=$date?>">
+        <h2><?=$date_format?></h2>
+        <?php foreach ($event_list as $key => $event) : ?>
+        <div class="box_list_services_item">
+            <div class="row no-gutters">
+                <div class="col-12 col-lg-12">
+                    <h3 class="d-block d-lg-none"><a href="<?=$event->permalink?>"><?=$event->title?></a></h3>
+                </div>
+                <div class="col-4 col-lg-4 align-self-center">
+                    <div class="box_list_services_item_img">
+                        <a href="<?=$event->permalink?>"><img src="<?=$event->thumbails_url?>" alt="" class="img-fluid"></a>
                     </div>
-                    <div class="col-8 d-block d-lg-none">
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
+                </div>
+                <div class="col-8 col-lg-8 align-self-center">
+                    <div class="box_list_services_item_body">
+                        <h3 class="d-none d-lg-block"><a href="<?=$event->permalink?>"><?=$event->title?></a></h3>
+                        <p><?=$event->description?></p>
+                        <ul>
+                            <li><img src="<?=IMAGE_PATH;?>/i_date.svg" alt="" class="img-fluid" width="10"> <?=$date_format.' '.$event->time_rand?>〜</li>
+                            <li><img src="<?=IMAGE_PATH;?>/i_map.svg" alt="" class="img-fluid" width="10"> オンライン</li>
+                        </ul>
+                        <ul>
+                            <?php
+                                if(is_array($event->categories) && count($event->categories)) { 
+                                foreach ($event->categories as $key => $cat) { 
+                                $cat_link = get_category_link($cat);
+                            ?>
+                                <li><a href="<?=$cat_link?>"><?=$cat->name?></a></li>
+                            <?php }} ?>
+                            <li><a href="<?=site_url('events/tags/free/')?>">無料</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-9">
-                <a href="<?php the_permalink(); ?>" class="box_event_item_content">
-                    <div class="row flex-sm-column-reverse">
-                        <div class="col-12 col-lg-12">
-                            <h3 class="d-none d-lg-block"><?php the_title();?></h3>
-                            <p><?php echo limit_event_content(get_event_description(), 180); ?></p>
-                            <!-- <p>ご自宅から参加できる【オンライン相談会】<br>
-                            外出を控えていらっしゃる方のために、急遽オンライン相談会の開催を決定いたしました。<br>
-                            詳細テキストが入ります詳細テキストが入ります詳細テキストが入ります詳細テキストが入ります詳細テキストが入ります詳細テキ</p> -->
-                        </div>
-                        <div class="col-12 col-lg-12">
-                            <ul class="list_sub_cate_event">
-                                <?php 
-                                foreach ( $tags as $tag ) {
-                                $tag_link = get_tag_link( $tag->term_id );
-                                ?>
-                                    <li><a href="<?php echo $tag_link ?>"><?php echo $tag->name; ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </div>
-                    </div>
-                    </a><a href="<?php the_permalink(); ?>" class="btn btn_eventdetail2 d-block d-lg-none">イベントの詳細を見る</a>
-                
-            </div>
         </div>
+<?php endforeach; ?>
     </div>
-    <?php
-        endwhile;
-        $pagination = get_query_pagination_events($posts->max_num_pages);
-        endif;
-        wp_reset_postdata();
-        wp_reset_query();
-    ?>
-    <?php echo $pagination;} ?>
-</div>
+<?php endforeach; ?>
+<p class="text-center"><a href="#" class="btn btn_more">もっと見る <i class="fas fa-chevron-down"></i></a></p>

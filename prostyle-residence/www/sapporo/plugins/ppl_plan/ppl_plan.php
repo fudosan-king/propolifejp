@@ -145,10 +145,10 @@ class PPL_Plan {
 					<label for="ppl_plan"><?php _e('Apartment code', 'ppl_plan_context')?></label>
 					<input type="text" id="ppl_plan" name="ppl_plan" value="<?php echo htmlspecialchars($this->ppl_plan_get_meta('ppl-plan')); ?>" style="width:70%;" />	
 				</div>            
-				<!-- <div class="form-field">
-					<label for="ppl_plan_url"><?php //_e('PPL Plan URL', 'ppl_plan_context')?></label>
-					<input type="text" name="ppl_plan_url" value="<?php //echo htmlspecialchars($this->ppl_plan_get_meta('ppl-plan-url')); ?>" />
-				</div>    -->
+				<div class="form-field">
+					<label for="ppl_plan_url"><?php _e('Order', 'ppl_plan_context')?></label>
+					<input type="text" name="ppl_plan_url" value="<?php echo htmlspecialchars($this->ppl_plan_get_meta('ppl-plan-url')); ?>" />
+				</div>   
 				<?php
 					//require_once( WDP_TEMPLATE.DIRECTORY_SEPARATOR."admin".DIRECTORY_SEPARATOR."slideshow.php" );
 				?>
@@ -364,13 +364,15 @@ class PPL_Plan {
 		}
 		return $custom_field;
 	}
+
 	public function ppl_plan_show($atts = array()) {
 
 		extract(shortcode_atts(array(
 			'count' 				=>  -1,
-			'ignore_slug' 			=>  ''
+			'ignore_slug' 			=>  '',
+			'only_info'				=> ''
 		),$atts));		
-		show_ppl_plan( $count, $ignore_slug );	
+		show_ppl_plan( $count, $ignore_slug, $only_info );	
 	}
 	public function ppl_plan_item_show($atts = array()) {
 
@@ -438,7 +440,6 @@ class PPL_Plan {
 
 
 	public function ppl_plan($atts = array()) {
-	
 		ob_start();
 		$this->ppl_plan_show($atts);
 		$content = ob_get_clean();

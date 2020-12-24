@@ -206,10 +206,6 @@ body {
     margin-top: 0;
 }
 
-.section_main .box_constructionexample {
-    margin: 50px 0;
-}
-
 .section_main .box_constructionexample h2 {
     font-size: 1.5em;
 }
@@ -675,7 +671,7 @@ body {
     }
 
     .logo img {
-        width: 135px;
+        /*width: 135px;*/
     }
 
     .navbar-collapse {
@@ -793,10 +789,6 @@ body {
         top: -15px;
     }
 
-    .section_main .box_constructionexample {
-        margin-top: 30px;
-    }
-
     .section_main .box_constructionexample h2 {
         font-size: 1.3333em;
     }
@@ -902,6 +894,15 @@ body {
 }
 
 @media (max-width: 375px) {
+    .box_top_user_md a {
+        font-size: .6em;
+        padding: 3px;
+    }
+
+    .nav_slider {
+        top: 55px;
+    }
+
     .box_seminar_event .seminar_event_item ul li a {
         padding: 2px;
     }

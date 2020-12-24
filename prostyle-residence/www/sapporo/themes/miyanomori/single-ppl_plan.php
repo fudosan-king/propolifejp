@@ -76,19 +76,22 @@ Template Post Type: page
                     <a class="btn btn-find"><i class="i-find-zoom"></i>テラスからの眺望を体験する</a>
                 </div>
                 <div class="box_infoview_content">
-                    <div class="row no-gutters">
-                        <div class="col-12 col-lg-5">
-                            <div class="box_plan_detail_footer_content">
-                                <h1><?= get_the_title($post->ID)?></h1>
-                                <p>ご覧になりたいプランをタップしてください。<br>
-                                    プラン詳細をご覧いただけます</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-7">
+                    <div class="row no-gutters hide-mobile">
+                        <?php 
+                           $post_url = $post_slug = $post->post_name; 
+                           echo do_shortcode("[ppl-plan only_info='plan-detail-page' ignore_slug ='ppl_plan_feature,".$post_url."']"); 
+                        ?>
+                        <?php echo do_shortcode("[ppl-plan-item slug='".$post_url."' style='plan-detail-page']"); ?>
+                       
+                        <div class="col-12 col-lg-7 js_img-map">
                             <div class="box_infoview_img">
-                                <img src="<?php echo get_field('design_apartment') ?>" alt="" class="img-fluid">
+                                <?php $codeApartment = get_post_meta($post->ID, 'ppl-plan', true); ?>
+                                <?php echo do_shortcode("[".$codeApartment."]"); ?>
                             </div>
                         </div>
+                    </div>
+                    <div class="box_normal show-mobile hide-pc">
+                        <?php echo do_shortcode("[ppl-plan ignore_slug ='ppl_plan_feature,".$post_url."']"); ?>
                     </div>
                 </div>
             </div>

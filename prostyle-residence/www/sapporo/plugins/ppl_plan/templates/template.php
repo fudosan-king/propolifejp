@@ -1,6 +1,6 @@
 <?php
 //add_image_size('ppl_plan_item',480,300,true); /* image for slideshow */
-function show_ppl_plan($count = "-1", $ignore_slug = "")
+function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 {
 	$exclude_ids = array();
 
@@ -18,7 +18,10 @@ function show_ppl_plan($count = "-1", $ignore_slug = "")
 	$query = new WP_Query( array( 
 							'post_type' => 'ppl_plan', 
 							'posts_per_page' => $count,
-							'post__not_in' => $exclude_ids
+							'post__not_in' => $exclude_ids,
+							'orderby'	=> 'meta_value_num',
+							'meta_key'  => 'ppl-plan-url',
+							'order'		=> 'ASC'
 						));
 	ob_start();
 	if($query->have_posts()) : 
@@ -26,26 +29,52 @@ function show_ppl_plan($count = "-1", $ignore_slug = "")
 			global $post, $wp_query;
 			$thumb = get_post_thumbnail_id($post->ID);
 			$thumburl = wp_get_attachment_image_src($thumb,'portfolio_image');
-
+			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
+		switch ($only_info):
+			case 'plan-page':
+			$post_title   = get_the_title($post->ID);
+			$post_content = get_the_content($post->ID);
+		?>
+			<div class="col-12 col-lg-5 <?= $codeApartment; ?>" style="display:none" >
+                <h1><?= $post_title; ?></h1>
+                <h2><?= $post_content; ?></h2>
+            </div>
+		<?php 
+			break; 
+			case 'plan-detail-page':
+		?>
+			<div class="col-12 col-lg-5 <?= $codeApartment; ?>" style="display: none;">
+                <div class="box_plan_detail_footer_content">
+					<h1><?= get_the_title($post->ID)?></h1>
+					<h2><?= get_the_content($post->ID) ?></h2>
+					<p>ご覧になりたいプランをタップしてください。<br>
+                            プラン詳細をご覧いただけます</p>
+			    </div>
+            </div>
+		<?php 
+			break;
+			default: 
 		?>
 		 	<div class="box_normal_item">
-		        <div class="box_premium">
-		            <span class="label_new"><i>New</i></span>
-		            <ul class="list_view">
-		                <li><a href="#">眺望</a></li>
-		                <li><a href="#">３Dモデルルーム画像</a></li>
-		            </ul>
-		            <h2><?= get_the_title($post->ID)?></h2>
-		            <h3><?= $post->post_excerpt ?></h3>
-		            <div class="box_premium_list-img">
-		            	<div class="box_premium_img">
-		                	<a href="<?= esc_url(get_permalink($post->ID)) ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
-		            	</div>
-		            </div>
-		        </div>
+		 		<a href="<?= esc_url(get_permalink($post->ID)) ?>" >
+			        <div class="box_premium">
+			            <span class="label_new"><i>New</i></span>
+			            <ul class="list_view">
+			                <li><span>眺望</span></li>
+			                <li><span>３Dモデルルーム画像</span></li>
+			            </ul>
+			            <h2><?= get_the_title($post->ID)?></h2>
+			            <h3><?= $post->post_excerpt ?></h3>
+			            <div class="box_premium_list-img">
+			            	<div class="box_premium_img">
+			                	<img src="<?= $thumburl[0] ?>" alt="" class="img-fluid">
+			            	</div>
+			            </div>
+			        </div>
+		        </a>
 	   		 </div>			
-	
-		<?php		
+		<?php
+			endswitch;		
 		
 		endwhile;
 									
@@ -79,34 +108,37 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 			$thumb        = get_post_thumbnail_id($post->ID);
 			$thumburl     = wp_get_attachment_image_src($thumb,'ppl_plan_item');
 			$codeApartment = get_post_meta($post->ID, 'ppl-plan', true);
+
 		 	if ($style == 'special'): ?>
-				<div class="row no-gutters">
-	                <div class="col-12 col-lg-5">
-	                    <h1><?= $post_title ?></h1>
-	                    <h2><?= $post_excerpt ?></h2>
+	                <div class="col-12 col-lg-5 <?= $codeApartment; ?>">
+	                    <h1><?= $post_title; ?></h1>
+	                    <h2><?= get_the_content($post->ID); ?></h2>
 	                </div>
-	                <div class="col-12 col-lg-7">
-	                    <div class="box_infoview_img <?= $codeApartment; ?>">
-	                        <a href="<?= $post_url ?>" title=""><span class="path-hover"></span></a>
-	                        <img src="<?= $thumburl[0] ?>" alt="" class="img-fluid w-100">
-	                    </div>
-	                </div>
-	            </div>
-	            <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p>
+	        <?php elseif($style == 'plan-detail-page'): ?>
+	        <div class="col-12 col-lg-5 <?= $codeApartment; ?> js_info-default">
+                <div class="box_plan_detail_footer_content">
+					<h1><?= get_the_title($post->ID)?></h1>
+					<h2><?= get_the_content($post->ID) ?></h2>
+					<p>ご覧になりたいプランをタップしてください。<br>プラン詳細をご覧いただけます</p>
+			    </div>
+            </div>
 	        <?php else: ?>
-	        	<span class="label_new"><i>New</i></span>
-                                        
-                <ul class="list_view">
-                    <li><a href="#">眺望</a></li>
-                    <li><a href="#">３Dモデルルーム画像</a></li>
-                </ul>
-                <h2><?= $post_title ?></h2>
-                <h3><?= $post_excerpt ?></h3>
-                <div class="box_premium_list-img">
-                	<div class="box_premium_img">
-                    	<a href="<?= $post_url ?>"><img src="<?= $thumburl[0] ?>" alt="" class="img-fluid"></a>
-                	</div>
-                </div>
+	        	<a href="<?= $post_url ?>">
+		        	<div class="box_premium">
+			        	<span class="label_new"><i>New</i></span>               
+		                <ul class="list_view">
+		                    <li><span>眺望</span></li>
+		                    <li><span>３Dモデルルーム画像</span></li>
+		                </ul>
+		                <h2><?= $post_title ?></h2>
+		                <h3><?= $post_excerpt ?></h3>
+		                <div class="box_premium_list-img">
+		                	<div class="box_premium_img">
+		                    	<img src="<?= $thumburl[0] ?>" alt="" class="img-fluid">
+		                	</div>
+		                </div>
+	            	</div>
+            	</a>
 			<?php endif ?>
 			  		
 		<?php

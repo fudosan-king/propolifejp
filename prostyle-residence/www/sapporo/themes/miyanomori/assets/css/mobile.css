@@ -193,6 +193,10 @@
         display: block;
     }
 
+    .menu-show .header_sub .menu-list li:hover > a{
+        color:#fff;
+    }
+
     .menu-show .header_sub .user-login:before {
         background-image: url("../images/SVG/i_user_login.svg");
     }

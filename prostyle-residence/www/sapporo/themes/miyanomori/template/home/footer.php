@@ -63,10 +63,9 @@
     </div>
 </footer>
 
-<div class="bsnav-mobile d-block d-xl-none">
-    <div class="bsnav-mobile-overlay"></div>
-    <div class="navbar"></div>
-</div>
+
+<div class="bsnav-mobile-overlay"></div>
+
 
 <div class="modal fade" id="modal_video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">

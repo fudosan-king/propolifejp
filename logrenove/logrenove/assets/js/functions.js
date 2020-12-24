@@ -328,4 +328,23 @@ jQuery(function($) {
         return false;
     })
 
+    $('.register-page').on('click', '.resend-activation', function(){
+        var url = '/wp-admin/admin-ajax.php?action=resend_activation_link_ajax',
+            user_email = $('input[name=user_email]').val();
+        $('.login_error').html('<i class="fa fa-spinner fa-spin"></i>'); 
+        $.ajax({
+            'async': true,
+            'type': "POST",
+            'url': url,
+            'data': {'user_email': user_email},
+            'success': function (data) {
+                if(data == 'ok') {
+                    $('.login_error').html('登録用のリンクを送信いたしました。受信ボックスをご確認いただき、登録を完了してください。');
+                    $('.login_error').css('color', '#000');
+                }      
+            }
+        })
+        return false;
+    })
+
 });

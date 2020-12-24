@@ -4478,3 +4478,8 @@ ul.uagb-toc__list li {
         padding: 10px;
     }
 }
+
+.register-page .resend-activation {
+	color: #3CBCCF;
+	cursor: pointer;
+}

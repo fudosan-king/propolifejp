@@ -557,29 +557,60 @@ function miyanomori() {
     }
 
     this.menuOpenClose = function(){
-        if( $(window).width() <= 991){
-            $('.js-menuAnimation.dropdown-right').removeClass('fade');
+        const headerHeight = $('header').outerHeight();
+        const win = $(window);
+        const _header = $('header');
+        //Header Scroll
+        if( win.scrollTop() >= headerHeight ){
+            _header.addClass('js_animation-scroll');    
+        } else {
+            _header.removeClass('js_animation-scroll');    
+        }
+        $(window).scroll(function(e){
+            if( $('body').hasClass('menu-show') ) return;
+            if( win.scrollTop() >= headerHeight ){
+                _header.addClass('js_animation-scroll');    
+            } else {
+                _header.removeClass('js_animation-scroll');    
+            }
+        });
+        //Header On/Off
+        if( $(window).width() > 1280){
+            $('body').removeClass('menu-show');
+            $('.menu-list').removeClass('js_in-animation');
+            $('.btn-action button').removeClass('active');
         }
         $(window).on('resize',function(e){
-            let win = $(e.target);
-            if(win.width() <= 991){
-                $('.js-menuAnimation.dropdown-right').removeClass('fade');
-            } 
-            if(win.width() > 991){
-                $('.js-menuAnimation.dropdown-right').addClass('fade');
+            if(win.width() > 1280){
+                $('body').removeClass('menu-show');
+                $('.menu-list').removeClass('js_in-animation');
+                $('.btn-action button').removeClass('active');
             }
         });
         $('.menu').on('click', function (e) {
             const currentTarget = e.currentTarget;
             const $_this = $(currentTarget);
-            if( $_this.hasClass('active') ){
+            if( !$_this.hasClass('active') ){
+                $_this.addClass('active');
                 $('body').addClass('menu-show');
+                //Hide Header Scroll
+                _header.removeClass('js_animation-scroll');
                 $('.js-menuAnimation').each(function(i,el){
                     $(el).css({ transition: "opacity .4s cubic-bezier(.420, .000, .580, 1.000) " + (0.5 + 0.07 * (i + 1)) + "s, transform .4s cubic-bezier(.420, .000, .580, 1.000) " + (0.5 + 0.07 * (i + 1)) + "s" });
                 });
-              
-            } else {
+                setTimeout(function(){
+                    $('.menu-list').addClass('js_in-animation')
+                },200);
+            } else{
+                //Hide Or Show Header Scroll
+                if( win.scrollTop() <= headerHeight ){
+                    _header.removeClass('js_animation-scroll');
+                } else {
+                    _header.addClass('js_animation-scroll');
+                }
+                $_this.removeClass('active');
                 $('body').removeClass('menu-show');
+                $('.menu-list').removeClass('js_in-animation')
                 $('.js-menuAnimation').each(function(i,el){     
                     $(el).css({ transition: "none" });
                 });

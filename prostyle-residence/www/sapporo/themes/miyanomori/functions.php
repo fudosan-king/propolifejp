@@ -126,15 +126,16 @@ function get_nav_lang($isMobile=false){
 
 		$locale = get_locale();
 		$lang = substr( $locale, 3, 4 );
-		echo '<a class="nav-link '.$classNavLink.'" onclick="return false;">'.$lang.'<i class="fal fa-angle-down fa-lg"></i></a>';
-		echo '<ul class="navbar-nav">';
+          
+		echo '<a class="nav-link dropdown-toggle '.$classNavLink.'" onclick="return false;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$lang.'<i class="fa fa-angle-down fa-lg"></i></a>';
+		echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
 		foreach ( qtranxf_getSortedLanguages() as $language ) {
 			$name 	 = strtoupper(qtranxf_getLanguageNameNative( $language ));
 			$locale = $q_config['locale'][ $language ];
 			$lang = substr( $locale, 3, 4 );
-			echo '<li class="nav-item"><a class="nav-link" href="' . qtranxf_convertURL( '', $language, false, true ) . '">' . $lang . '</a></li>';
+			echo '<a class="dropdown-item" href="' . qtranxf_convertURL( '', $language, false, true ) . '">' . $lang . '</a>';
 		}
-		echo '</ul>';
+		echo '</div>';
 	}
 }
 

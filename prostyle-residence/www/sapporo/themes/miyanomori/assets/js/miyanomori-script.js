@@ -559,13 +559,23 @@ function miyanomori() {
     this.menuOpenClose = function(){
         const headerHeight = $('header').outerHeight();
         const win = $(window);
+        const doc = $(document);
         const _header = $('header');
+        let winHeight;
         //Header Scroll
         if( win.scrollTop() >= headerHeight ){
             _header.addClass('js_animation-scroll');    
         } else {
             _header.removeClass('js_animation-scroll');    
         }
+
+        $(window).on('load resize', function(){
+            winHeight = window.innerHeight;
+            if( win.width() < 1280 && $('body').hasClass('menu-show') ){
+                $('.menu-list').height(winHeight - 93);
+            }
+        });
+
         $(window).scroll(function(e){
             if( $('body').hasClass('menu-show') ) return;
             if( win.scrollTop() >= headerHeight ){
@@ -575,12 +585,7 @@ function miyanomori() {
             }
         });
         //Header On/Off
-        if( $(window).width() > 1280){
-            $('body').removeClass('menu-show');
-            $('.menu-list').removeClass('js_in-animation');
-            $('.btn-action button').removeClass('active');
-        }
-        $(window).on('resize',function(e){
+        $(window).on('load resize',function(e){
             if(win.width() > 1280){
                 $('body').removeClass('menu-show');
                 $('.menu-list').removeClass('js_in-animation');
@@ -590,11 +595,16 @@ function miyanomori() {
         $('.menu').on('click', function (e) {
             const currentTarget = e.currentTarget;
             const $_this = $(currentTarget);
+            winHeight = window.innerHeight;
+
             if( !$_this.hasClass('active') ){
+                //Heigh Menu Scroll
+                $('.menu-list').height(winHeight - 93);
                 $_this.addClass('active');
                 $('body').addClass('menu-show');
-                //Hide Header Scroll
+                //Menu fixed scroll
                 _header.removeClass('js_animation-scroll');
+                //Menu Open
                 $('.js-menuAnimation').each(function(i,el){
                     $(el).css({ transition: "opacity .4s cubic-bezier(.420, .000, .580, 1.000) " + (0.5 + 0.07 * (i + 1)) + "s, transform .4s cubic-bezier(.420, .000, .580, 1.000) " + (0.5 + 0.07 * (i + 1)) + "s" });
                 });
@@ -608,9 +618,13 @@ function miyanomori() {
                 } else {
                     _header.addClass('js_animation-scroll');
                 }
+                //Heigh Menu Scroll
+                $('.menu-list').removeAttr('style');
+                //Menu fixed scroll
+                $('.menu-list').removeClass('js_in-animation')
+                //Menu close
                 $_this.removeClass('active');
                 $('body').removeClass('menu-show');
-                $('.menu-list').removeClass('js_in-animation')
                 $('.js-menuAnimation').each(function(i,el){     
                     $(el).css({ transition: "none" });
                 });

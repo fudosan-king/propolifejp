@@ -170,7 +170,7 @@
     .menu-show .menu-list {
         opacity: 1;
         display: block !important;
-        height: 75vh;
+        height: 85vh;
         width: 100vw;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -217,7 +217,7 @@
         display: inline-block;
         z-index: 9999;
         width: 23px;
-        height: 30px;
+        height: 31px;
         font-size: 1.25rem;
         line-height: 1;
         background-color: transparent;
@@ -241,10 +241,14 @@
   /*BTN Action*/
     .btn-action {
         position: absolute;
-        right: 30px;
+        right: 20px;
         top: 20px;
         display: flex;
         align-items: center;
+    }
+    .header_before-login .user-login:before {
+        left: unset;
+        width:100%;
     }
   /*Button Menu*/
     header .btn-action .menu {
@@ -270,7 +274,7 @@
     }
 
     .menu .menuLine:nth-of-type(1) {
-        top: 10px;
+        top: 12px;
         -webkit-animation: initBar_1 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
         animation: initBar_1 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
@@ -396,12 +400,6 @@
 
     .title span {
         display: block;
-    }
-
-    .header_before-login .btn-action{
-        display:flex;
-        position: relative;
-        top: -5px;
     }
 
     .equip-spec li a {
@@ -1146,15 +1144,27 @@
     .subtitle {
         margin-bottom: 30px;
     }
-  /* login */
-    .frm_login .frm_login_top {
-        padding: 30px;
+    /* login */
+    .btn-link {
+        padding: 0;
+    }
+    #modal_login{
+        background-color:#404040;
+    }
+    #modal_login .modal-dialog{
+        padding:50px 2px;
+    }
+    .frm_login:nth-of-type(1) .frm_login_top{
+        padding: 30px 30px 10px;
+    }
+    .frm_login:nth-of-type(2) .frm_login_top{
+        padding: 0 30px;
     }
 
     .frm_login .frm_login_bottom h4 {
         margin-top: 30px;
+        padding: 30px 10px;
         font-size: 0.875rem;
-        padding: 0 10px;
         letter-spacing: -0.5px;
     }
 
@@ -1616,13 +1626,13 @@
         align-items: normal;
     }
 
-    .btn-action{
-        right: 17px;
-    }
-
     .navbar-brand {
         max-width: 150px;
     }
+    .btn-action{
+        top:12.5px;
+    }
+
 
 }
 

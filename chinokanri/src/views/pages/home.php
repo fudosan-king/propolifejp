@@ -7,19 +7,18 @@
             </p>
         </div>
     </section>
-    <!-- <section class="row news">
+    <section class="row news">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
             <h3 class="block-title text-center">お知らせ</h3>
             <article class="content">
                 <p>
-                    【年末年始休業のお知らせ】<br>
                     平素は格別のご高配を賜り、厚く御礼申し上げます。<br>
-                    誠に勝手ながら2019年12月29日から2020年1月4日までお休みとさせていただきます。<br>
+                    誠に勝手ながら2020年12月29日から2021年1月6日までお休みとさせていただきます。<br>
                     来年もより一層のご支援を賜りますよう、心よりお願い申し上げます。
                 </p>
             </article>
         </div>
-    </section> -->
+    </section>
     <section id="company-info" class="row company-info">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
             <h3 class="block-title text-center">会社概要</h3>

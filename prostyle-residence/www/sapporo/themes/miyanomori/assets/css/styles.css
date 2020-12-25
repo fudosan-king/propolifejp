@@ -3197,7 +3197,7 @@ figure {
     }
 
     100% {
-        transform: translate(-50%, -3px) rotate(-45deg);
+        transform: translate(-50%, 5px) rotate(-45deg);
     }
 }
 
@@ -3207,7 +3207,7 @@ figure {
     }
 
     100% {
-        transform: translate(-50%, -3px) rotate(-45deg);
+        transform: translate(-50%, 5px) rotate(-45deg);
     }
 }
 

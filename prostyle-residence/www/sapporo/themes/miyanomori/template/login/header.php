@@ -64,15 +64,24 @@
                                 <input type="hidden" name="redirect" value="<?php echo get_home_url(); ?>" />
                             </div>
                             <div class="col-12 col-lg-6 text-center">
-                                <a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="btn btn-link btn_forgotpass">パスワードをお忘れの方はこちら</a>
+                                <button class="btn btn-link btn_forgotpass" type="button" data-toggle="collapse" data-target="#forgot_password" aria-expanded="false" aria-controls="forgot_password">パスワードをお忘れの方はこちら</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
+            <form method="post" class="frm_login">
+                <div class="frm_login_top collapse" id="forgot_password">
+                    <h4>パスワードをお忘れの方</h4>
+                    <div class="form-group confirm-email">
+                        <input class="form-control" type="text" name="forgot_email" value="" >
+                    </div>
+                    <button type="submit" class="btn w-100 btn_brown" name="" value=""/><?php esc_attr_e( 'パスワードをリセットする', 'miyanomori' ); ?></button>
+                </div>
+            </form>
             <form  method="post" class="frm_login" id="frm_regiter" >
                 <div class="frm_login_bottom">
-                    <h4>まだ物件エントリーされていない方は<span>下記よりエントリーください。</span><br>
+                    <h4>まだ物件エントリーされていない方は<span>下記よりエントリーください。</span>
                     <span>限定サイトへのログインパスワードをお送りします。</span></h4>
                     <p class="status"></p>
                     <div class="frm_login_bottom_content">

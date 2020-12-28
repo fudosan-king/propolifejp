@@ -1728,7 +1728,7 @@
                     </div>
                     <div class="col-6 col-md-6">
                         <p>会員の方はこちら</p>
-                        <a class="btn btn-only-member_blue" href="'.site_url('login').'" target="_tbank">ログイン</a>
+                        <a class="btn btn-only-member_blue" href="'.site_url('login/?redirect_to='.$permalink).'">ログイン</a>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,16 @@
     }
     $user_password = isset($_POST['user_password']) ? $_POST['user_password'] : '' ;
     $user_remember = isset($_POST['user_remember']) ? filter_var($_POST['user_remember'], FILTER_VALIDATE_BOOLEAN)  : false ;
+    $redirect_cookie = 'wp-redirect_to-'.COOKIEHASH;
+    list( $cookie_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
+    if(!empty($_GET['redirect_to'])) {
+        $redirect_value = sprintf( '%s', wp_unslash( $_GET['redirect_to'] ) );
+        setcookie( $redirect_cookie, $redirect_value, 0, $redirect_path, COOKIE_DOMAIN, is_ssl(), true );
+        wp_safe_redirect( remove_query_arg( array( 'redirect_to' ) ) );
+        exit;
+    }
     $home_url = get_home_url();
+    $redirect_to = !empty($_COOKIE[ $redirect_cookie ])?$_COOKIE[ $redirect_cookie ]:$home_url;
     if(isset($_POST['login_request'])){
         if(!empty($user_email) && filter_var($user_email, FILTER_VALIDATE_EMAIL)){
             $user = get_user_by( 'email', $user_email  );
@@ -28,7 +37,7 @@
                 $user_ = wp_signon( $creds, false );
                 $error = !empty($user_->errors)?$user_->errors:false;
                 if(!$error) {
-                    wp_redirect($home_url);
+                    wp_safe_redirect($redirect_to);
                     exit;
                 }
                 else {

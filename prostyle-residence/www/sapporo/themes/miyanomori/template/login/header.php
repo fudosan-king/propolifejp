@@ -74,7 +74,7 @@
                 <div class="frm_login_top collapse" id="forgot_password">
                     <h4>パスワードをお忘れの方</h4>
                     <div class="form-group confirm-email">
-                        <input class="form-control" type="text" name="forgot_email" value="" >
+                        <input class="form-control" type="text" name="forgot_email" value="" placeholder="メールアドレスをご入力ください" >
                     </div>
                     <button type="submit" class="btn w-100 btn_brown" name="" value=""/><?php esc_attr_e( 'パスワードをリセットする', 'miyanomori' ); ?></button>
                 </div>

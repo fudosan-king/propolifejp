@@ -189,7 +189,7 @@ Template Post Type: page
  
  
                     <h2 class="title">都市機能を持ち合わせた、大自然と生きる暮らし</h2>
-                    <h3>札幌市営地下鉄東西線<span>「円山公園」</span>駅利用時</h3>
+                    <h3>札幌市営地下鉄東西線<span>「円山公園」</span>駅利用時アクセス</h3>
                     <div class="box_station">
                         <div class="row">
                             <div class="col-12 col-lg-7">

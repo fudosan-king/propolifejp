@@ -1369,7 +1369,11 @@
                 }
                 wp_redirect(site_url($direct_url));
                 exit;
-            } else $msg = 'このメールアドレスは既に登録済みです';
+            } else {
+                $user = get_userdata($isExisted);
+                if(in_array( 'pending', (array) $user->roles)) $msg = 'こちらメールアドレスは、登録が完了しておりません。<span class="resend-activation">こちら</span>から再度メール認証を行って、会員登録を完了してください。';
+                else $msg = 'このメールアドレスは既に登録済みです';
+            }
         }
         return array('invalid'=> $invalid, 'msg'=> $msg);
     }
@@ -1398,6 +1402,17 @@
         $title = '【LogRenove】本登録のお願い';
         $mail_result = wp_mail( $user_email, $title , $message );
     }
+
+    function resend_activation_link_ajax() {
+        $user_email = isset($_POST['user_email'])?$_POST['user_email']:'';
+        $user = get_user_by( 'email', $user_email );
+        if(in_array( 'pending', (array) $user->roles)) {
+            send_activation_link($user->ID, $user_email);
+            echo 'ok';die; 
+        }
+        echo 'fail';die; 
+    }
+    add_action('wp_ajax_nopriv_resend_activation_link_ajax', 'resend_activation_link_ajax');
 
     function send_mail_confirm($user_email) {
         $home_url = get_home_url();

@@ -4429,4 +4429,29 @@ header {
 }
 /*End*/
 
+/* Forgot Password */
+#modal_forgot_password .forgot_new-password{
+    position: relative;
+}
 
+#modal_forgot_password  .dashicons.i-password{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    right:15px;
+    cursor: pointer;
+}
+
+#modal_forgot_password .note-pass{
+    height:40px;
+    background-color: #B48856;
+    border-radius:5px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#modal_forgot_password .link-back{
+    margin-top:16px;
+}

@@ -64,6 +64,7 @@ function ajax_miyanomori_init() {
     // Enable the user with no privileges to run ajax_login() in AJAX
     add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
     add_action( 'wp_ajax_nopriv_ajaxregister', 'ajax_register' );
+    add_action( 'wp_ajax_nopriv_ajaxforgotpassword', 'ajax_forgot_password' );
 }
 
 add_action( 'init', 'ajax_miyanomori_init' );
@@ -112,6 +113,134 @@ function ajax_register()
 	die();
 }
 
+
+function ajax_forgot_password()
+{ 
+	$login = isset( $_POST['user_login'] ) ? sanitize_user( wp_unslash( $_POST['user_login'] ) ) : ''; // WPCS: input var ok, CSRF ok.
+
+	if ( empty( $login ) ) 
+	{
+		echo json_encode( array( 'status'=>false, 'message'=> ["Enter a username or email address."]));
+		die();
+		
+	} 
+
+	// Check on username first, as customers can use emails as usernames.
+	$user_data = get_user_by( 'login', $login );
+	
+
+	// If no user found, check if it login is email and lookup user based on email.
+	if ( ! $user_data && is_email( $login )  ) 
+	{
+		$user_data = get_user_by( 'email', $login );
+	}
+
+	$errors = new WP_Error();
+
+	do_action( 'lostpassword_post', $errors );
+
+	if ( $errors->get_error_code() )
+	{
+		echo json_encode( array( 'status'=>false, 'message'=> $errors->get_error_message()));
+		die();
+	}
+
+	if ( ! $user_data ) {
+		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.']));
+		die();
+	}
+
+	if ( is_multisite() && ! is_user_member_of_blog( $user_data->ID, get_current_blog_id() ) )
+	{
+		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.']));
+		die();
+	}
+
+	// Redefining user_login ensures we return the right case in the email.
+	$user_login = $user_data->user_login;
+
+	do_action( 'retrieve_password', $user_login );
+
+	$allow = apply_filters( 'allow_password_reset', true, $user_data->ID );
+
+	if ( ! $allow )
+	{
+		echo json_encode( array( 'status'=>false, 'message'=> ['Password reset is not allowed for this user']));
+		die();
+	} 
+
+	if ( is_wp_error( $allow ) )
+	{
+		echo json_encode( array( 'status'=>false, 'message'=> $allow->get_error_message()));
+		die();
+	}
+
+	// Redefining user_login ensures we return the right case in the email.
+	$user_login = $user_data->user_login;
+	$user_email = $user_data->user_email;
+	$key = get_password_reset_key( $user_data );
+
+	if ( is_wp_error( $key ) )
+	{
+		echo json_encode( array( 'status'=>false, 'message'=> $key->get_error_message()));
+		die();
+	}
+
+
+	/*
+	 * The blogname option is escaped with esc_html on the way into the database
+	 * in sanitize_option we want to reverse this for the plain text arena of emails.
+	 */
+	$site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+	
+	$message = __( 'Someone has requested a password reset for the following account:' ) . "\r\n\r\n";
+	/* translators: %s: site name */
+	$message .= sprintf( __( 'Site Name: %s'), $site_name ) . "\r\n\r\n";
+	/* translators: %s: user login */
+	$message .= sprintf( __( 'Username: %s'), $user_login ) . "\r\n\r\n";
+	$message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
+	$message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
+	$message .= '<' . network_site_url( "lostpassword?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . ">\r\n";
+
+	/* translators: Password reset email subject. %s: Site name */
+	$title = sprintf( __( '[%s] Password Reset' ), $site_name );
+
+	/**
+	 * Filters the subject of the password reset email.
+	 *
+	 * @since 2.8.0
+	 * @since 4.4.0 Added the `$user_login` and `$user_data` parameters.
+	 *
+	 * @param string  $title      Default email title.
+	 * @param string  $user_login The username for the user.
+	 * @param WP_User $user_data  WP_User object.
+	 */
+	$title = apply_filters( 'retrieve_password_title', $title, $user_login, $user_data );
+
+	/**
+	 * Filters the message body of the password reset mail.
+	 *
+	 * If the filtered message is empty, the password reset email will not be sent.
+	 *
+	 * @since 2.8.0
+	 * @since 4.1.0 Added `$user_login` and `$user_data` parameters.
+	 *
+	 * @param string  $message    Default mail message.
+	 * @param string  $key        The activation key.
+	 * @param string  $user_login The username for the user.
+	 * @param WP_User $user_data  WP_User object.
+	 */
+	$message = apply_filters( 'retrieve_password_message', $message, $key, $user_login, $user_data );
+
+	if ( $message && !wp_mail( $user_email, wp_specialchars_decode( $title ), $message ) )
+	{
+		echo json_encode( array( 'status'=>false, 'message'=> ['The email could not be sent.Possible reason: your host may have disabled the mail() function.']));
+		die();
+	}
+
+	echo json_encode( array( 'status'=>true, 'message'=> "Reset Password successful!! Please check email to create the new password  "));
+	die();
+}
 
 function get_nav_lang($isMobile=false){
     global $q_config;
@@ -215,6 +344,21 @@ function logout_without_confirmation($action, $result){
     }
 }
 add_action( 'check_admin_referer', 'logout_without_confirmation', 1, 2);
+
+/**
+ * Filter the new user notification email.
+ *
+ * @param $email array New user notification email parameters.
+ * @return $email array New user notification email parameters.
+ */
+function new_user_notification_email_callback( $email ) {
+    $email['message'] =str_replace("wp-login.php?action","lostpassword?action", $email['message']);
+    $email['message'] =str_replace("wp-login.php","", $email['message']);
+    return $email;
+}
+ 
+add_filter( 'wp_new_user_notification_email', 'new_user_notification_email_callback' );
+
 
 // add_action( 'admin_enqueue_scripts', 'miyanomori_admin_enqueue' );
 

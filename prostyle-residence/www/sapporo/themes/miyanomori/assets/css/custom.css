@@ -48,7 +48,7 @@
 
 @media (max-width: 992px){
 	/*Menu*/
-	.header_sub .menu .menuLine{
+	/*.header_sub .menu .menuLine{
 		background: #000;
 	}
 	.menu-show .header_sub,.menu-show .header_afterlogin {
@@ -56,7 +56,7 @@
 		right:0;
 		left:0;
 		z-index: 9999;
-	}
+	}*/
 }
 
 @media (max-width: 768px){

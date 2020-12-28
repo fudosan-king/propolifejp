@@ -126,15 +126,16 @@ function get_nav_lang($isMobile=false){
 
 		$locale = get_locale();
 		$lang = substr( $locale, 3, 4 );
-		echo '<a class="nav-link '.$classNavLink.'" onclick="return false;">'.$lang.'<i class="fal fa-angle-down fa-lg"></i></a>';
-		echo '<ul class="navbar-nav">';
+          
+		echo '<a class="nav-link dropdown-toggle '.$classNavLink.'" onclick="return false;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$lang.'<i class="fa fa-angle-down fa-lg"></i></a>';
+		echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
 		foreach ( qtranxf_getSortedLanguages() as $language ) {
 			$name 	 = strtoupper(qtranxf_getLanguageNameNative( $language ));
 			$locale = $q_config['locale'][ $language ];
 			$lang = substr( $locale, 3, 4 );
-			echo '<li class="nav-item"><a class="nav-link" href="' . qtranxf_convertURL( '', $language, false, true ) . '">' . $lang . '</a></li>';
+			echo '<a class="dropdown-item" href="' . qtranxf_convertURL( '', $language, false, true ) . '">' . $lang . '</a>';
 		}
-		echo '</ul>';
+		echo '</div>';
 	}
 }
 
@@ -196,7 +197,25 @@ function miyanomori_blogs_type($atts){
 }
 
 
+/**
+ * Generates custom logout URL
+ */
+function getLogoutUrl($redirectUrl = ''){
+    if(!$redirectUrl) $redirectUrl = site_url();
+    $return = str_replace("&amp;", '&', wp_logout_url($redirectUrl));
+    return $return;
+}
 
+/**
+ * Bypass logout confirmation on nonce verification failure
+ */
+function logout_without_confirmation($action, $result){
+    if(!$result && ($action == 'log-out')){ 
+        wp_safe_redirect(getLogoutUrl()); 
+        exit(); 
+    }
+}
+add_action( 'check_admin_referer', 'logout_without_confirmation', 1, 2);
 
 // add_action( 'admin_enqueue_scripts', 'miyanomori_admin_enqueue' );
 

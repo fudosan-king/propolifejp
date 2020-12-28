@@ -34,7 +34,6 @@ foreach ($event_lists as $date => $event_list):
                             ?>
                                 <li><a href="<?=$cat_link?>"><?=$cat->name?></a></li>
                             <?php }} ?>
-                            <li><a href="<?=site_url('events/tags/free/')?>">無料</a></li>
                         </ul>
                     </div>
                 </div>

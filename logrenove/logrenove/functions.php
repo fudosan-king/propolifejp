@@ -1223,6 +1223,23 @@
 
     # Login and register
 
+    function set_cookie_redirect_post_url() {
+        $redirect_cookie = 'wp-signup_redirect_to';
+        list( $cookie_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
+        if(!empty($_GET['redirect_to'])) {
+            $redirect_value = sprintf( '%s', wp_unslash( $_GET['redirect_to'] ) );
+            setcookie( $redirect_cookie, $redirect_value, 0, $cookie_path, COOKIE_DOMAIN, is_ssl(), true );
+            wp_safe_redirect(remove_query_arg( array( 'redirect_to' )));
+            exit;
+        }
+    }
+
+    function auto_login_user_active($user_id) {
+        wp_clear_auth_cookie();
+        wp_set_current_user($user_id);
+        wp_set_auth_cookie($user_id);
+    }
+
     function block_login_user_pending($login, $user) {
         if( $user->roles && in_array('pending',(array) $user->roles)) {
             $logout_url = esc_url(network_site_url('login'));
@@ -1329,7 +1346,6 @@
     function signup_user($user_email='', $pass1='', $pass2='', $direct_url = 'signup?action=confirm') {
         $invalid = true;
         $msg = '';
-        $home_url = get_home_url();
         $mail_magazine = isset($_POST['mail_magazine']) ? filter_var($_POST['mail_magazine'], FILTER_VALIDATE_BOOLEAN)  : false ;
         if($user_email == '' || !filter_var($user_email, FILTER_VALIDATE_EMAIL)) $msg = '正しいメールアドレスを入力してください';
         elseif($pass1 == '') $msg = '正しいパスワードを入力してください';
@@ -1364,6 +1380,8 @@
 
     function send_activation_link($user_id, $user_email, $link_active = 'signup?action=active'){
         global $wp_hasher;
+        $home_url = get_home_url();
+        $signup_redirect_to = !empty($_COOKIE['wp-signup_redirect_to'])?$_COOKIE['wp-signup_redirect_to']:$home_url;
         $key = wp_generate_password( 20, false );
         if ( empty( $wp_hasher ) ) {
             require_once ABSPATH . WPINC . '/class-phpass.php';
@@ -1371,9 +1389,9 @@
         }
         $hashed = $wp_hasher->HashPassword( $key );
         add_user_meta( $user_id, 'activation_code', $hashed );
+        add_user_meta( $user_id, 'signup_redirect_to', $signup_redirect_to );
         $user_info = get_userdata($user_id);
         $user_login = $user_info->user_login;
-        $home_url = get_home_url();
         $message = __( '※このメールにお心当たりのない場合は、URLにアクセスせずメールを破棄してください。' ) . "\r\n\r\n";
         $message .= __( 'この度は、LogRenove Web会員にご登録いただきありがとうございます。' ) . "\r\n";
         $message .= __( '登録はまだ完了しておりません。 以下のURLに接続して、本登録をおこなってください。' ) . "\r\n\r\n";
@@ -1427,14 +1445,19 @@
         $user_data = get_user_by( 'login', $login );
         if (!in_array( 'subscriber', (array) $user_data->roles)) {
             if($user) {
+                $user_meta = get_user_meta($user_data->ID);
+                $signup_redirect_to = $user_meta['signup_redirect_to'][0];
                 setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
                 $u = new WP_User($user_data->ID);
                 $u->remove_role( 'pending' );
                 $u->add_role( 'subscriber' );
+                auto_login_user_active($user_data->ID);
                 if($page == 'signup') send_mail_confirm($user_data->user_email);
                 else if($page == 'avatar') send_mail_confirm_avatar($user_data->user_email);
+                return $signup_redirect_to;
             }
         }
+        return false;
     }
 
     function check_activation_code($activation_code, $login) {
@@ -1693,6 +1716,7 @@
 
     function func_insert_short_code_login(){
         global $post;
+        $permalink = get_permalink($post->ID);
         $insertContent = '<div class="btn-only-member">
             <div class="btn-only-member_ct">
                 <p><i class="btn-only-member_i-clock"></i>この記事は会員限定です。</p>
@@ -1700,7 +1724,7 @@
                 <div class="row">
                     <div class="col-6 col-md-6">
                         <p>新規登録の方はこちら</p>
-                        <a class="btn btn-only-member_brown" href="'.site_url('signup').'" target="_tbank">今すぐ登録</a>
+                        <a class="btn btn-only-member_brown" href="'.site_url('signup/?redirect_to='.$permalink).'" target="_tbank">今すぐ登録</a>
                     </div>
                     <div class="col-6 col-md-6">
                         <p>会員の方はこちら</p>
@@ -2003,7 +2027,6 @@
                                                 $event_html .= '<li><a href="'.$cat_link.'">'.$cat->name.'</a></li>';
                                             }
                                         }
-                                        $event_html .= '<li><a href="'.site_url('events/tags/free/').'">無料</a></li>';
                                 $event_html .= '</ul>
                             </div>
                         </div>

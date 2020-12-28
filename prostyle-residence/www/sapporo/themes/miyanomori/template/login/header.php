@@ -75,7 +75,7 @@
                     <h4>パスワードをお忘れの方</h4>
                      <p class="status"></p>
                     <div class="form-group confirm-email">
-                        <input class="form-control" type="text" name="forgot_email"  id="forgot_email">
+                        <input class="form-control" type="text" name="forgot_email"  id="forgot_email" placeholder="メールアドレスをご入力ください">
                     </div>
                     <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
                     <button type="submit" class="btn w-100 btn_brown" name="" /><?php esc_attr_e( 'パスワードをリセットする', 'miyanomori' ); ?></button>

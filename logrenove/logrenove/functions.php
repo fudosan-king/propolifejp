@@ -1388,8 +1388,18 @@
             $wp_hasher = new PasswordHash( 8, true );
         }
         $hashed = $wp_hasher->HashPassword( $key );
-        add_user_meta( $user_id, 'activation_code', $hashed );
-        add_user_meta( $user_id, 'signup_redirect_to', $signup_redirect_to );
+        $activation_code = get_user_meta($user_id, 'activation_code', true);
+        if($activation_code=='') {
+            delete_user_meta($user_id, 'activation_code');
+            add_user_meta( $user_id, 'activation_code', $hashed );
+        }
+        else update_user_meta( $user_id, 'activation_code', $hashed );
+        $signup_redirect_to_meta = get_user_meta($user_id, 'signup_redirect_to', true);
+        if($signup_redirect_to_meta == '') {
+            delete_user_meta($user_id, 'signup_redirect_to');
+            add_user_meta( $user_id, 'signup_redirect_to', $signup_redirect_to );
+        }
+        else update_user_meta( $user_id, 'signup_redirect_to', $signup_redirect_to );
         $user_info = get_userdata($user_id);
         $user_login = $user_info->user_login;
         $message = __( '※このメールにお心当たりのない場合は、URLにアクセスせずメールを破棄してください。' ) . "\r\n\r\n";

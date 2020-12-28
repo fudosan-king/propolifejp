@@ -1,8 +1,8 @@
-<?php  
-    if (!is_home() && !is_front_page() && !is_user_logged_in())
-    {
-        wp_redirect(home_url());
-    }
+<?php
+if (!is_home() && !is_front_page() && !is_user_logged_in() && !is_page('lostpassword') )
+{
+    wp_redirect(home_url());
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

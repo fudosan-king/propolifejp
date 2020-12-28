@@ -70,13 +70,15 @@
                     </div>
                 </div>
             </form>
-            <form method="post" class="frm_login">
+            <form method="post" class="frm_login" id="form_forgot_password">
                 <div class="frm_login_top collapse" id="forgot_password">
                     <h4>パスワードをお忘れの方</h4>
+                     <p class="status"></p>
                     <div class="form-group confirm-email">
-                        <input class="form-control" type="text" name="forgot_email" value="" placeholder="メールアドレスをご入力ください" >
+                        <input class="form-control" type="text" name="forgot_email"  id="forgot_email" placeholder="メールアドレスをご入力ください">
                     </div>
-                    <button type="submit" class="btn w-100 btn_brown" name="" value=""/><?php esc_attr_e( 'パスワードをリセットする', 'miyanomori' ); ?></button>
+                    <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+                    <button type="submit" class="btn w-100 btn_brown" name="" /><?php esc_attr_e( 'パスワードをリセットする', 'miyanomori' ); ?></button>
                 </div>
             </form>
             <form  method="post" class="frm_login" id="frm_regiter" >

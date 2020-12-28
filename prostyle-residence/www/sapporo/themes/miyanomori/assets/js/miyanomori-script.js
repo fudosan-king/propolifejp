@@ -34,6 +34,24 @@ function miyanomori() {
             _this.callBack();
             _this.view360();
             _this.interactiveImages();
+            _this.showHidePassword();
+        });
+    }
+
+    this.showHidePassword = function(){
+        
+        $('#modal_forgot_password').on('click','.i-password',function(e){
+            const currentTarget = e.currentTarget;
+            console.log(123,e);
+            if($(currentTarget).hasClass('dashicons-visibility')){
+                $(currentTarget).removeClass('dashicons-visibility');
+                $(currentTarget).addClass('dashicons-hidden');
+                $(currentTarget).prev().attr('type','text');
+            } else {
+                $(currentTarget).addClass('dashicons-visibility');
+                $(currentTarget).removeClass('dashicons-hidden');
+                $(currentTarget).prev().attr('type','password');
+            }
         });
     }
 

@@ -17,13 +17,12 @@ if ( ! function_exists( 'miyanomori_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'miyanomori_setup' );
 
-
 /**
  * Register and Enqueue Styles.
  */
 function miyanomori_register_styles() {
 	$theme_version = wp_get_theme()->get( 'Version' );
-
+	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'miyanomori-style', get_stylesheet_uri(), array(), $theme_version );
 
 	// Add print CSS.

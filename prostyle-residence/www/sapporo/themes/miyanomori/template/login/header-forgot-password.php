@@ -37,33 +37,30 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
 <div class="modal fade show" id="modal_forgot_password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" style="display:block;">
   <div class="modal-dialog modal-md modal-dialog-centered">
     <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">物件エントリー者様限定サイト ログイン</h5>
-        </div>
         <div class="modal-body">
             <?php if(!empty($message)) { ?> 
                 <?php echo $message; ?>
             <?php }else{ ?> 
                 <form action="<?php echo home_url('/lostpassword'); ?>?key=<?= $_GET['key'] ?>&login=<?= $_GET['login'] ?>" method="post" class="frm_login" id="frm_forgot_new_password" name="resetpassform" >
                     <div class="frm_login_top">
-                        <h4>GET NEW PASSWORD</h4>
+                        <h4>パスワード更新</h4>
                         <p class="status"></p>
                         <div class="form-group forgot_new-password">
-                            <input autocomplete="off" type="passsword" class="form-control" size="24" placeholder="New Password" name="pass1" id="pass1" value="<?php echo esc_attr( wp_generate_password( 16 ) ); ?>">
+                            <input autocomplete="off" type="passsword" class="form-control" size="24" placeholder="新しいパスワードをご入力ください" name="pass1" id="pass1" value="<?php echo esc_attr( wp_generate_password( 16 ) ); ?>">
                             <span class="dashicons dashicons-visibility i-password"></span>
                         </div>
 
                         <div class="form-group" >
                             <p class="note-pass" style="display: none;">STRONG</p>
-                            <p>Hint: The password should be at least twelve characters long. To make it stronger, user upper and lower case letters, numbers, and symbold like ! - / $ % ^ & )</p>
+                            <p>パスワードは12文字以上の長さで大文字、小文字数字、<br>記号を含めてください。　※　記号の例（ ! - / $ % ^ & )</p>
                         </div>
                           
                         <div class="form-group">
                             <div class="row no-gutters">
                                 <div class="col-md-12">
                                     <input type="hidden" name="rp_key" value="<?php echo esc_attr( $_GET['key'] ); ?>" />
-                                    <button type="submit" class="btn w-100 btn_brown" name="wp-submit" value=""/><?php esc_attr_e( 'Reset Password', 'miyanomori' ); ?></button>
-                                    <p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span>Back to [name-title-home-page]</p>
+                                    <button type="submit" class="btn w-100 btn_brown" name="wp-submit" value=""/><?php esc_attr_e( 'パスワードをリセット', 'miyanomori' ); ?></button>
+                                    <p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span>トップページに戻る</p>
                                 </div>
                             </div>
                         </div>

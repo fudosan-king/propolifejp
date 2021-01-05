@@ -886,10 +886,10 @@ body {
     }
 
     /*Menu Header*/
-    .logo_md {
+    .top_header .logo_md {
         display: none;
     }
-    .logo_sm{
+    .top_header .logo_sm{
         max-width: 135px;
         margin:initial;
     }

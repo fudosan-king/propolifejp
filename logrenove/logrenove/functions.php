@@ -1899,7 +1899,7 @@
         $obj->categories = get_the_terms($obj->ID, 'event_category');
         $obj->tags = get_the_terms($obj->ID, 'event_tags');
         $obj->description = get_field('event_description', $obj->ID);
-        $obj->date_rand = date_i18n('Fj (D)', strtotime($event_datetime['date'][0]));
+        $obj->date_rand = date_i18n('Fj日 (D)', strtotime($event_datetime['date'][0]));
         $obj->time_rand = is_array($event_datetime['time'])&&count($event_datetime['time'])?$event_datetime['time'][array_rand($event_datetime['time'], 1)]['hour']:'';
         return $obj;
     }
@@ -2008,7 +2008,7 @@
         $event_lists = get_event_date_list($fromdate, 30, $args);
         $event_html = '';
         foreach ($event_lists as $date => $event_list):
-            $date_format = date_i18n('Fj (D)', strtotime($date));
+            $date_format = date_i18n('Fj日 (D)', strtotime($date));
             $event_html .= '<div class="event-lists" data-date="'.$date.'">
                 <h2>'.$date_format.'</h2>';
                 foreach ($event_list as $key => $event):

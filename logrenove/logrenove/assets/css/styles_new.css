@@ -884,6 +884,31 @@ body {
     footer .footer_bottom.footer_bottom_custom {
         padding-bottom: 80px;
     }
+
+    /*Menu Header*/
+    .logo_md {
+        display: none;
+    }
+    .logo_sm{
+        max-width: 135px;
+        margin:initial;
+    }
+    header{
+        padding: 13px 5px 3px;
+    }
+    .box_top_menu{
+        margin-right: 0;
+    }
+    .box_top_menu .btnRegistration{
+        right: 8px;
+        position: relative;
+        padding: 5px 15px;
+    }
+    .navbar-toggler{
+        width: 26px;
+        top:-4px;
+    }
+
 }
 
 @media (max-width: 414px) {

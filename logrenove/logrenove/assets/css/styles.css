@@ -4483,3 +4483,22 @@ ul.uagb-toc__list li {
 	color: #3CBCCF;
 	cursor: pointer;
 }
+
+
+/*Menu Header*/
+header{
+    padding: 25px 0 14px;
+}
+.logo_md {
+	max-width:218px;
+	display: block;
+}
+.box_top_menu{
+	margin-top: 6px;
+    margin-right: 37px;
+}
+.box_top_menu .btnRegistration{
+    padding: 5px 18px;
+}
+
+

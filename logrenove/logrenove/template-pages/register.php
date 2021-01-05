@@ -158,8 +158,10 @@
                     </div>
                     <div class="login_body_bottom">
                         <div class="form-group">
+                            <?php if(!in_array($signup_redirect_to, array($home_url, ''))) { ?>
                             <a href="<?php echo $signup_redirect_to; ?>" class="btn btn_comeback">読んでいたページに戻る</a>
-                            <a href="<?php echo $home_url; ?>" class="btn btn_social btn_member mb-0">ログインページへ</a>
+                            <?php } ?>
+                            <a href="<?php echo $home_url; ?>" class="btn btn_social btn_member mb-0">ログリノベTOPへ戻る</a>
                         </div>
                     </div>
                     <?php } else { ?>

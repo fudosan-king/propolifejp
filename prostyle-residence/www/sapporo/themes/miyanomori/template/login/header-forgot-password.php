@@ -19,10 +19,10 @@ if ( ! $user || is_wp_error( $user ) )
 {
     if ( $user && $user->get_error_code() === 'expired_key' ) 
     {
-       $message =  '<p class="message reset-pass">' . __( 'Your password reset link appears to be invalid. Please request a new link below. ' ) . '</p>';
+       $message =  '<p class="message reset-pass">' . __( 'パスワード再設定リンクが無効です。下記より新たにリクエストを行ってください。' ) . '</p>';
 
     } else {
-        $message =  '<p class="message reset-pass">' . __( 'Your password reset link has expired. Please request a new link below. ' ) . '</p>';
+        $message =  '<p class="message reset-pass">' . __( 'パスワード再設定リンクの有効期限が切れています。下記より新たにリクエストを行ってください。' ) . '</p>';
     }
 }
 

@@ -31,7 +31,7 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
 {
     reset_password( $user, $_POST['pass1'] );
  
-    $message = '<p class="message reset-pass">Your password has been reset. <a href="' .  home_url()  . '">Log in</a></p>';
+    $message = '<p class="message reset-pass">パスワードをリセットしました。 <a href="' .  home_url()  . '">Log in</a></p>';
 }
 ?>
 <div class="modal fade show" id="modal_forgot_password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" style="display:block;">
@@ -60,7 +60,7 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
                                 <div class="col-md-12">
                                     <input type="hidden" name="rp_key" value="<?php echo esc_attr( $_GET['key'] ); ?>" />
                                     <button type="submit" class="btn w-100 btn_brown" name="wp-submit" value=""/><?php esc_attr_e( 'パスワードをリセット', 'miyanomori' ); ?></button>
-                                    <p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span>トップページに戻る</p>
+                                    <a href="<?= get_site_url(); ?>" ><p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span>トップページに戻る</p></a>
                                 </div>
                             </div>
                         </div>

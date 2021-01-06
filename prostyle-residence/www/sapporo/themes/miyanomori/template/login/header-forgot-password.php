@@ -39,7 +39,10 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
     <div class="modal-content">
         <div class="modal-body">
             <?php if(!empty($message)) { ?> 
-                <?php echo $message; ?>
+                <div class="reset-password-success">
+                    <?php echo $message; ?>
+                    <a href="<?= get_site_url(); ?>" ><p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span>トップページに戻る</p></a>
+                </div>
             <?php }else{ ?> 
                 <form action="<?php echo home_url('/lostpassword'); ?>?key=<?= $_GET['key'] ?>&login=<?= $_GET['login'] ?>" method="post" class="frm_login" id="frm_forgot_new_password" name="resetpassform" >
                     <div class="frm_login_top">

@@ -4454,4 +4454,28 @@ header {
 
 #modal_forgot_password .link-back{
     margin-top:16px;
+    color: #B48856;
+    text-decoration: underline;
 }
+
+#modal_forgot_password  p.link-back .dashicons{
+    position: relative;
+    left: -4px;
+    top: 2px;
+    text-decoration: none;
+     font-size:1rem;
+}
+
+#modal_forgot_password .reset-password-success{
+    padding:30px;
+}
+
+#modal_forgot_password .reset-password-success p.link-back{
+    font-size:0.875rem;
+}
+
+#modal_forgot_password .reset-password-success p.link-back .dashicons{
+    top:7px;
+    font-size:1rem;
+}
+

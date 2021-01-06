@@ -39,18 +39,21 @@ function miyanomori() {
     }
 
     this.showHidePassword = function(){
-        
+        if($('#modal_forgot_password .i-password').hasClass('dashicons-visibility')){
+            $('#modal_forgot_password .i-password').prev().attr('type','text');
+        } else {
+            $('#modal_forgot_password .i-password').prev().attr('type','password');
+        }
         $('#modal_forgot_password').on('click','.i-password',function(e){
             const currentTarget = e.currentTarget;
-            console.log(123,e);
             if($(currentTarget).hasClass('dashicons-visibility')){
                 $(currentTarget).removeClass('dashicons-visibility');
                 $(currentTarget).addClass('dashicons-hidden');
-                $(currentTarget).prev().attr('type','text');
+                $(currentTarget).prev().attr('type','password');
             } else {
                 $(currentTarget).addClass('dashicons-visibility');
                 $(currentTarget).removeClass('dashicons-hidden');
-                $(currentTarget).prev().attr('type','password');
+                $(currentTarget).prev().attr('type','text');
             }
         });
     }

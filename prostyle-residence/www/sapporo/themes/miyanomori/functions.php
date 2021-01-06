@@ -102,7 +102,7 @@ function ajax_register()
 	$user_login = explode('@', $user_email);
 	$user_login = $user_login[0];
 	
-	$register  = register_new_user( $user_login, $user_email );
+	$register  = register_new_user( $user_email, $user_email );
 
 	if ( is_wp_error( $register )) {
 	    echo json_encode( array( 'loggedin'=>false, 'message'=> $register->errors));

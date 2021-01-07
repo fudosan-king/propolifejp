@@ -1252,6 +1252,10 @@
         min-width: auto;
     }
 
+    .section_plan .box_infoview_top h2{
+        margin-bottom:100px;
+    }
+
     .section_plan .box_infoview_content h1 {
         font-size: 1.5rem;
     }

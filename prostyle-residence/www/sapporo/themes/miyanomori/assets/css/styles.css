@@ -1003,6 +1003,7 @@ header .menu-list a {
     margin-right: 20px;
     width: 100%;
     display: block;
+    height:100%;
 }
 
 .spring_summer_pictures > span:last-child {

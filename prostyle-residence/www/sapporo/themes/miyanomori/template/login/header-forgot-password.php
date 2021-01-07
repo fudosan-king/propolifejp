@@ -50,7 +50,7 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
                         <p class="status"></p>
                         <div class="form-group forgot_new-password">
                             <input autocomplete="off" type="passsword" class="form-control" size="24" placeholder="新しいパスワードをご入力ください" name="pass1" id="pass1" value="<?php echo esc_attr( wp_generate_password( 16 ) ); ?>">
-                            <span class="dashicons dashicons-visibility i-password"></span>
+                            <span class="dashicons dashicons-hidden i-password"></span>
                         </div>
 
                         <div class="form-group" >

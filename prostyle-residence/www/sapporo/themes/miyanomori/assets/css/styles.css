@@ -4492,4 +4492,8 @@ header {
     top:7px;
     font-size:1rem;
 }
-
+@media (max-width: 768px){
+    #modal_forgot_password .modal-dialog{
+        padding:0;
+    }
+}

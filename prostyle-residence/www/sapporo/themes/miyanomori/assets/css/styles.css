@@ -4430,16 +4430,24 @@ header {
 /*End*/
 
 /* Forgot Password */
+#modal_forgot_password  .modal-dialog{
+    max-width:569px;
+}
+
 #modal_forgot_password .forgot_new-password{
     position: relative;
 }
 
 #modal_forgot_password  .dashicons.i-password{
     position: absolute;
-    top:50%;
-    transform:translateY(-50%);
-    right:15px;
+    top:0;
+    display: flex;
+    right:0;
     cursor: pointer;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
 #modal_forgot_password .note-pass{
@@ -4463,15 +4471,21 @@ header {
     left: -4px;
     top: 2px;
     text-decoration: none;
-     font-size:1rem;
+    font-size:1rem;
 }
 
 #modal_forgot_password .reset-password-success{
-    padding:30px;
+    padding:20px;
+    text-align:center;
+}
+
+#modal_forgot_password .reset-password-success p{
+    margin-bottom: 0;
 }
 
 #modal_forgot_password .reset-password-success p.link-back{
     font-size:0.875rem;
+    margin-top: 0;
 }
 
 #modal_forgot_password .reset-password-success p.link-back .dashicons{

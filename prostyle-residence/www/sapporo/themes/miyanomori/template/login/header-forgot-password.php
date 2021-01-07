@@ -31,7 +31,7 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
 {
     reset_password( $user, $_POST['pass1'] );
  
-    $message = '<p class="message reset-pass">パスワードをリセットしました。 <a href="' .  home_url()  . '">Log in</a></p>';
+    $message = '<p class="message reset-pass">パスワードをリセットしました。</p>';
 }
 ?>
 <div class="modal fade show" id="modal_forgot_password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" style="display:block;">

@@ -11,7 +11,7 @@ if (!is_home() && !is_front_page() && !is_user_logged_in() && !is_page('lostpass
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
-    <?php if ( !is_user_logged_in()) : ?>
+    <?php if ( !is_user_logged_in() && is_front_page()) : ?>
         <title>【公式】プロスタイル札幌 宮の森｜新築分譲マンション </title>
     <?php else: ?>
          <title><?= strip_tags(get_the_title()); ?></title>

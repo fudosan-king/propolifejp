@@ -192,18 +192,35 @@ function ajax_forgot_password()
 	 * in sanitize_option we want to reverse this for the plain text arena of emails.
 	 */
 	$site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
-	
-	$message = __( 'Someone has requested a password reset for the following account:' ) . "\r\n\r\n";
-	/* translators: %s: site name */
-	$message .= sprintf( __( 'Site Name: %s'), $site_name ) . "\r\n\r\n";
-	/* translators: %s: user login */
-	$message .= sprintf( __( 'Username: %s'), $user_login ) . "\r\n\r\n";
-	$message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
-	$message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
-	$message .= '<' . network_site_url( "lostpassword?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . ">\r\n";
 
+	$message  = __( '※本メールは【プロスタイル札幌宮の森】公式サイトのパスワード再設定処理の自動送信メールです。'). "\r\n\r\n";
+
+    $message .= __('---------------------------------------------------------------------------------'). "\r\n";
+    $message .= __('ログインパスワード再設定のお手続きはまだ完了しておりません。'). "\r\n";
+    $message .= __('---------------------------------------------------------------------------------'). "\r\n";
+    $message .= __('下記リンクをクリックしますとパスワードの再設定画面に遷移いたします。こちらより新しいパスワードをご設定くださいますようお願いいたします。') . "\r\n\r\n";
+	/* translators: %s: site name */
+	$message .= __( '▼パスワード再設定URL') . "\r\n";
+	$message .= '<' . network_site_url( "lostpassword?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . ">\r\n";
+	/* translators: %s: user login */
+	$message .= __('※上記リンクがクリックできない場合は、大変お手数ですがURLをコピーしてお使いのブラウザのアドレスバーに貼り付けていただき、パスワード再設定画面へお進みください。'). "\r\n\r\n";
+
+    $message .= __('※本メールの送信アドレスは送信専用です。こちらにご返信いただいてもご回答できませんのでご了承ください。'). "\r\n";
+    $message .= __('※本メールにお心当たりのない方は、お手数ではございますがこのメールを破棄ください。'). "\r\n";
+    $message .= __('■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□'). "\r\n";
+    $message .= __('プロスタイル宮の森｜お問い合わせ窓口') . "\r\n";
+	$message .= __( 'フリーダイヤル：0120-853-133') . "\r\n";
+	$message .= __( '※携帯電話・PHSからもご利用いただけます') . "\r\n";
+	$message .= __( '営業時間：　10:00～18:00') . "\r\n";
+    $message .= __( '定休日：　火・水曜日　※祝祭日は営業いたします') . "\r\n";
+	$message .= __( 'お問い合わせ窓口：miyanomori@propolife.co.jp' ) . "\r\n";
+	$message .= __( 'お問い合わせフォーム' ) . "\r\n";
+	$message .= '<' . network_site_url( "contactus", 'login' ) . ">\r\n";
+	$message .= __( '<売主・共同事業主>　株式会社クロニクル' ) . "\r\n";
+	$message .= __( '<共同事業主>　株式会社プロスタイル' ) . "\r\n";
+	$message .= __( '■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□' ) . "\r\n";
 	/* translators: Password reset email subject. %s: Site name */
-	$title = sprintf( __( '[%s] Password Reset' ), $site_name );
+	$title =  __( '【プロスタイル札幌宮の森】公式サイト｜パスワード再設定' );
 
 	/**
 	 * Filters the subject of the password reset email.
@@ -351,9 +368,57 @@ add_action( 'check_admin_referer', 'logout_without_confirmation', 1, 2);
  * @param $email array New user notification email parameters.
  * @return $email array New user notification email parameters.
  */
-function new_user_notification_email_callback( $email ) {
-    $email['message'] =str_replace("wp-login.php?action","lostpassword?action", $email['message']);
-    $email['message'] =str_replace("wp-login.php","", $email['message']);
+function new_user_notification_email_callback( $email )
+{
+	preg_match("/http(.)*\s/i", $email['message'] ,$url_login);
+	$url_login = str_replace("wp-login.php?action","lostpassword?action", $url_login[0] ); 
+
+	$message  = __( '※本メールは【プロスタイル札幌宮の森】公式サイトのパスワード設定の自動送信メールです。'). "\r\n\r\n";
+
+    $message .= __('---------------------------------------------------------------------------------'). "\r\n";
+    $message .= __('会員登録のお手続きはまだ完了しておりません'). "\r\n";
+    $message .= __('---------------------------------------------------------------------------------'). "\r\n\r\n";
+
+    $message .= __('下記リンクをクリックしますとパスワードの再設定画面に遷移いたします。こちらより新しいパスワードをご設定くださいますようお願いいたします。') . "\r\n\r\n";
+	/* translators: %s: site name */
+	$message .= __( '▼パスワード設定URL') . "\r\n";
+	$message .= '<' .$url_login . ">\r\n";
+	/* translators: %s: user login */
+	$message .= __('※上記リンクがクリックできない場合は、大変お手数ですがURLをコピーしてお使いのブラウザのアドレスバーに貼り付けていただき、パスワード再設定画面へお進みください。'). "\r\n\r\n";
+
+	$message .= __('この度は新築分譲マンション【プロスタイル札幌宮の森】にご関心をお寄せいただき、誠にありがとうございます。'). "\r\n\r\n";
+
+	$message .= __('【プロスタイル札幌宮の森】公式サイトでは、ご登録いただいたお客様だけがご覧いただける物件情報他、各種限定コンテンツをご案内してまいります。情報は順次追加・更新してまいりますのでどうぞご期待くださいませ。お知りになりたいことがございましたら、お気軽にお問い合わせいただければ幸いでございます。'). "\r\n\r\n";
+
+	$message .= __('どうぞ【プロスタイル札幌宮の森】をご検討賜りますようお願い申し上げます。'). "\r\n\r\n";
+
+	$message .= __('▼ご登録メールアドレス'). "\r\n";
+	$message .= '<' .$email['to'] . ">\r\n\r\n";
+
+	$message .= __('▼公式サイト'). "\r\n";
+	$message .= '<' .network_site_url() . ">\r\n\r\n";
+
+	$message .= __('▼資料請求、来場予約、その他お問い合わせはこちら'). "\r\n";
+	$message .= '<' .network_site_url("contactus") . ">\r\n\r\n";
+
+    $message .= __('※本メールの送信アドレスは送信専用です。こちらにご返信いただいてもご回答できませんのでご了承ください。'). "\r\n";
+    $message .= __('※本メールにお心当たりのない方は、お手数ではございますがこのメールを破棄ください。'). "\r\n";
+    $message .= __('■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□'). "\r\n";
+    $message .= __('プロスタイル宮の森｜お問い合わせ窓口') . "\r\n";
+	$message .= __( 'フリーダイヤル：0120-853-133') . "\r\n";
+	$message .= __( '※携帯電話・PHSからもご利用いただけます') . "\r\n";
+	$message .= __( '営業時間：　10:00～18:00') . "\r\n";
+    $message .= __( '定休日：　火・水曜日　※祝祭日は営業いたします') . "\r\n";
+	$message .= __( 'お問い合わせ窓口：miyanomori@propolife.co.jp' ) . "\r\n";
+	$message .= __( 'お問い合わせフォーム' ) . "\r\n";
+	$message .= '<' . network_site_url( "contactus", 'login' ) . ">\r\n";
+	$message .= __( '<売主・共同事業主>　株式会社クロニクル' ) . "\r\n";
+	$message .= __( '<共同事業主>　株式会社プロスタイル' ) . "\r\n";
+	$message .= __( '■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□' ) . "\r\n";
+
+    $email['message'] = $message;
+    $email['subject'] = '【プロスタイル札幌宮の森】公式サイト｜パスワード設定のお願い';
+   
     return $email;
 }
  

@@ -13,11 +13,10 @@ Template Post Type: page
                 <h1><?= get_the_title($post->ID)?></h1>
                 <div class="row no-gutters">
                     <div class="col-12 col-lg-5 align-self-center">
-                        <h2 class="title">おだやかに、解き放たれる</h2>
+                        <h2 class="title"><?php echo get_field('single_plan_title') ?></h2>
                     </div>
                     <div class="col-12 col-lg-7 align-self-center">
-                        <p>大きなガラス越しに望む自然の大借景、清々しく空に抜けていくガラスの吹き抜け。<br>｢プロスタイル宮の森｣でもっとも贅を尽くした一室は、<br>
-                            どこにいても開放感溢れる極上の空間です。</p>
+                        <p><?php echo get_field('single_plan_description') ?></p>
                     </div>
                 </div>
             </div>

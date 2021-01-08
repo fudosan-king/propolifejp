@@ -62,7 +62,7 @@ $(function($) {
     // slider setup
     masterslider.setup("masterslider", {
         width           : 1300,
-        height          : 768,
+        height          : 600,
         minHeight       : 0,
         space           : 0,
         start           : 1,
@@ -72,7 +72,7 @@ $(function($) {
         keyboard        : false,
         layout          : "fullscreen",
         wheel           : false,
-        autoplay        : true,
+        autoplay        : false,
         instantStartLayers:true,
         loop            : true,
         shuffle         : false,

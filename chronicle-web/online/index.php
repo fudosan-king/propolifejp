@@ -105,6 +105,17 @@
                                             <div class="placeholder-custom placeholder-fix">abc@propolife.co.jp</div>
                                         </div>
                                         <div class="form-group mb-5">
+                                            <label>参加形式<span class="require">（必須）</span></label>
+                                            <br>
+                                            <label class="radio">
+                                                <input type="radio" name="pd_participation_format[]" id="inlineRadio1" value="物件の見学（内覧）" checked> 物件の見学（内覧）
+                                            </label>
+                                            <br>
+                                            <label class="radio">
+                                                <input type="radio" name="pd_participation_format[]" id="inlineRadio1" value="オンライン相談"> オンライン相談
+                                            </label>
+                                        </div>
+                                        <div class="form-group mb-5">
                                             <label>第1希望日時<span class="require">（必須）</span></label>
                                             <div class="row">
                                                 <div class="col-6">
@@ -180,7 +191,7 @@
                                         <div class="form-group">
                                             <label>備考</label>
                                             <textarea name="note" id="input" class="form-control" rows="3" placeholder=""><?php echo !empty($inquiry) ? $inquiry : '' ?></textarea>
-                                            <div class="placeholder-custom placeholder-fix">ご質問やご要望などあればご記入下さい。オンライン相談時に回答いたします。</div>
+                                            <div class="placeholder-custom placeholder-fix">ご質問やご要望などあればご記入くださいませ。</div>
                                         </div>
                                         <p class="text-center text_information"><small>ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
                                                 個人情報の取扱に関しましては<a target="_blank" href="https://www.chronicle-web.com/policy/">プライバシーポリシー</a>をご覧ください。</small>
@@ -207,6 +218,12 @@
                                                 <div class="col-8 col-md-6 align-self-center">
                                                     <label class="cfr cfr_email"><span id="cfr_email"></span></label>
                                                     <input type="hidden" name="pd_email" value="">
+                                                </div>
+                                                <div class="col-4 col-md-6 align-self-center">
+                                                    <label for="">参加形式</label>
+                                                </div>
+                                                <div class="col-8 col-md-6 align-self-center">
+                                                    <label class="cfr cfr_pd_participation_format"><span id="cfr_pd_participation_format"></span></label>
                                                 </div>
                                                 <div class="col-4 col-md-6 align-self-center">
                                                     <label for=""> 第1希望日時</label>

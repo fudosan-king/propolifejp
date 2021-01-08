@@ -93,7 +93,7 @@ Template Post Type: page
                         <img src="<?php bloginfo('template_directory');?>/assets/images/1x/equi06.jpg" alt="" class="img-fluid border-right">
                     </div>
                     <div class="col-12 col-lg-6 align-self-center">
-                        <img src="<?php bloginfo('template_directory');?>/assets/images/1x/equi08.png" alt="" class="img-fluid">
+                        <img src="<?php bloginfo('template_directory');?>/assets/images/1x/equi08.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

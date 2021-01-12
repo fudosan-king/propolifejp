@@ -150,7 +150,7 @@ Template Post Type: page
                                     <p>総戸数</p>
                                 </th>
                                 <td>
-                                    <p>21 戸（管理事務室含む）</p>
+                                    <p>20戸　（他管理人室1戸）</p>
                                 </td>
                             </tr>
                             <tr>

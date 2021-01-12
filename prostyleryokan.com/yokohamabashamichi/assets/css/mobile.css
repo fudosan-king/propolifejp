@@ -185,7 +185,11 @@
 		font-size: 1.4rem;
 	}
 	.ms-layer-mask {
-		margin-top: -75px;
+		margin-top: -50px;
+	}
+	.section_banner .msp-cn-136-5{
+		font-size: 32px !important;
+
 	}
 	.ms-parent-id-27 h2 {
 		font-size: 1.5rem !important;
@@ -394,6 +398,7 @@
 
 @media (max-width: 414px) {
 	.box_more_step h4 {font-size: 1.8rem;}
+}
 
 @media (max-width: 375px) {
   	

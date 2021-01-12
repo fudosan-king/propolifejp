@@ -7,39 +7,8 @@
 <?php get_template_part( 'template-parts/banner', 'top' ); ?>
 
 <main>
-     <section class="section_notify_stay_hotel">
-        <div class="container">
-            <div class="row">
-                <div class="box_concept">
-                    <p class="d-block d-md-none">                       
-                        <img src="<?= IMAGES_PATH?>/1x/stay_hotel.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid">
-                    </p>
-                    <p class="d-none d-md-block">
-                        <img src="<?= IMAGES_PATH ?>/1x/stay_hotel.jpg" alt="Search" data-tripla-booking-widget="search" class="img-fluid">                       
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="section_notify">
-        <div class="container">
-            <div class="row">
-                <div class="box_concept ">
-                    <h3>【STAY HOTELのお知らせ】</h3>
-
-                    <p>昨今の新型コロナウイルス感染症（COVID-19）の防止策として、 国内でのテレワークの普及は急速に拡大している中、</p>
-                    <p>自宅以外のホテルに住まう感覚でご活用いただけるように、素泊まり5泊6日で1室最低20,000円～</p>
-                    <p>という料金設定の「STAY HOTEL」プランを開始することとなりました。</p>
-                    <br>
-                    <p>※清掃およびアメニティ交換のタイミングは宿泊期間中1回となっています。</p>
-                    <br>
-                    <p>【自社ＨＰリニューアルに伴うおしらせ】</p>
-                    <p>自社ＨＰリニューアルに伴い9月18日までにご予約いただいたお客様は下記ＵＲＬよりキャンセル、変更をお願いいたします。</p>
-                    <p><a href="https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1" class="link-content">https://advance.reservation.jp/prostyleryokan/stay_pc/rsv/cnf_rsv_ent.aspx?lang=ja-JP&hi_id=1</a></p>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- CONCEPT -->
     <?php 

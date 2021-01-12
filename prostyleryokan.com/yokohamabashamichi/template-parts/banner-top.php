@@ -48,10 +48,10 @@
                     data-ease="easeOutQuint"
                     data-masked="true"
                     data-offset-x="0"
-                    data-offset-y="-200"
+                    data-offset-y="-100"
                     data-origin="mc"
                     data-position="normal"
-                    data-mask-width="214"><h1><img src="<?php echo IMAGES_PATH; ?>/1x/logo_banner.png" alt="PROSTYLE旅館 横浜馬車道" width="214"></h1>
+                    data-mask-width="230"><h1><img src="<?php echo IMAGES_PATH; ?>/1x/logo_banner.png" alt="PROSTYLE旅館 横浜馬車道" width="214"></h1>
                     </div>
                     <h2 class="ms-layer msp-cn-136-5"
                     style=""
@@ -60,14 +60,14 @@
                     data-delay="400"
                     data-ease="easeOutQuint"
                     data-offset-x="-3"
-                    data-offset-y="-50"
+                    data-offset-y="80"
                     data-origin="mc"
                     data-position="normal"
                     data-masked="true"
                     data-mask-width="1300">文明開化の地で心地よい安らぎを
                     </h2>
 
-                    <div class="ms-layer d-none d-md-block "
+                    <!-- <div class="ms-layer d-none d-md-block "
                     style=""
                     data-effect="t(true,n,30,n,n,n,n,n,n,n,n,n,n,n,n)"
                     data-duration="4000"
@@ -78,7 +78,7 @@
                     data-origin="mc"
                     data-position="normal"
                     data-masked="true"
-                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
+                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php // echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
                     </div>
 
                     <div class="ms-layer d-block d-md-none"
@@ -92,8 +92,8 @@
                     data-origin="mc"
                     data-position="normal"
                     data-masked="true"
-                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php  echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
-                    </div>
+                    data-mask-width="900"><p class="d-block" style="text-align: center;"><a href="#"><img src="<?php // echo IMAGES_PATH; ?>/1x/goto_prostyle_r.jpg"  alt='Search' data-tripla-booking-widget='search' ></a></p>
+                    </div> -->
 
                 
 

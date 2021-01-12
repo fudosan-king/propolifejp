@@ -48,26 +48,23 @@
 				<!-- <div class="box_notice"> -->
             		<?php //echo $noticeContent; ?>
             	<!-- </div> -->
-				<a  class="banner_goto_asakusa " href="#"  ><img src="<?php echo ASSETS_IMG_PATH; ?>/1x/goto_prostyle.jpg" data-tripla-booking-widget='search' alt='Search'></a>
+				<!-- <a  class="banner_goto_asakusa " href="#"  ><img src="<?php //echo ASSETS_IMG_PATH; ?>/1x/goto_prostyle.jpg" data-tripla-booking-widget='search' alt='Search'></a> -->
 			</div>
 		</div>
 	</div>
 </section>
 
 <section class="section_note">
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-12">
             	<div class="wrap_note">
-	            	<!-- <div class="box_note mb-5">
+	            	<div class="box_note mb-5">
 		            	<?php //echo $noticeContent; ?>
-	            	</div> -->
+	            	</div>
 	            	<p class="mb-4 d-block d-md-none" ><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="Search" data-tripla-booking-widget="search" class="img-fluid"></p>
 	            	<p class="mb-4 d-none d-md-block" ><img src="https://www.prostyleryokan.com/tokyo-asakusa/wp-content/uploads/2020/08/stay_hotel.png" alt="Search" data-tripla-booking-widget="search" class="img-fluid"></p>
 	            	<div class="box_note">
-	            		<h3>【STAY HOTELのお知らせ】</h3>
-	            		<p>昨今の新型コロナウイルス感染症（COVID-19）の防止策として、 国内でのテレワークの普及は急速に拡大している中、自宅以外のホテルに住まう感覚での活用を提案すべく、素泊まり5泊6日で1室最低20,000円～という料金設定の「STAY HOTEL」プランを開始することとなりました。<br>
-	            		※清掃およびアメニティ交換のタイミングは宿泊期間中1回となっています。</p>
 
 	            		<h3>【自社ＨＰリニューアルに伴うおしらせ】</h3>
 	            		<p>自社ＨＰリニューアルに伴い9月18日までにご予約いただいたお客様は下記ＵＲＬよりキャンセル、変更をお願いいたします。<br>
@@ -76,5 +73,5 @@
 	            </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>

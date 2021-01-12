@@ -312,7 +312,7 @@
 
 @media (max-width: 736px) {
 	.owl_banner, .owl_banner .item img {
-		height: 560px;
+		height: 400px;
 	}
 
 	.owl_banner.en, .owl_banner.en .item img {

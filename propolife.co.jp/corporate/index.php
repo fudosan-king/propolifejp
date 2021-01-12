@@ -132,6 +132,13 @@ get_header(); ?>
 						</a>
 						<span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
 				    </li>
+				    <li>
+						<a href="https://www.logknot.co.jp/" style="border: 1px solid #d6d6d6; text-align: center;">
+							<img class="pc" src="<?php bloginfo('template_directory'); ?>/common/img/LogKnot_logo-2.png" width="200" height="101" alt="株式会社沖縄イゲトー" style="object-fit: contain;">
+							<img class="sp" src="<?php bloginfo('template_directory'); ?>/common/img/LogKnot_logo-2.png" width="100%" alt="株式会社沖縄イゲトー">
+						</a>
+						<span><a href="https://www.logknot.co.jp/">LogKnot株式会社</a></span>
+				    </li>
 			    </ul>
 		    </div>
 			</div>

@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -v -rlptgoDz blog.intra.fudosan-king.jp:/var/www/propolifejp/wordpress/wp-content/themes/propolife2015 ./
+rsync -v -rlptgoDz websv-prod:/var/www/sources/propolife-group/wordpress/wp-content/themes/propolife2015 ./

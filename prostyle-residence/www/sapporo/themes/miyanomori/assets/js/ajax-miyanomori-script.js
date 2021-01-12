@@ -3,7 +3,9 @@ jQuery(document).ready(function($){
     // Perform AJAX login on form submit
     $('form#frm_login').on('submit', function(e){
         e.preventDefault();
-        $('form#frm_login p.status').show().text(ajax_miyanomori_object.loadingmessage);
+        $('form#frm_login p.status').show().text('ログイン情報を送信中です、しばらくお待ちください...');
+        $('form#frm_login p.status').append('<br>'+ajax_miyanomori_object.loadingmessage);
+        
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -14,7 +16,10 @@ jQuery(document).ready(function($){
                 'password': $('form#frm_login #password').val(), 
                 'security': $('form#frm_login #security').val() },
             success: function(data){
-                $('form#frm_login p.status').text(data.message);
+                $('form#frm_login p.status').text();
+                $('form#frm_login p.status').text(data.message_jp);
+                $('form#frm_login p.status').append('<br>'+data.message);
+
                 if (data.loggedin == true){
                     document.location.href = ajax_miyanomori_object.redirecturl;
                 }
@@ -25,7 +30,8 @@ jQuery(document).ready(function($){
     // Perform AJAX login on form submit
     $('form#frm_regiter').on('submit', function(e){
         e.preventDefault();
-        $('form#frm_regiter p.status').show().text(ajax_miyanomori_object.loadingmessage);
+        $('form#frm_regiter p.status').show().text('ログイン情報を送信中です、しばらくお待ちください...');
+        $('form#frm_regiter p.status').append('<br>'+ajax_miyanomori_object.loadingmessage);
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -36,18 +42,23 @@ jQuery(document).ready(function($){
                 'useremail': $('form#frm_regiter #useremail').val(), 
                 'security' : $('form#frm_regiter #security').val() },
             success: function(data){
+
                 if (data.loggedin == true){
-
-                    $('form#frm_regiter p.status').text(data.message);
-
+                    $('form#frm_regiter p.status').text();
+                    $('form#frm_regiter p.status').text(data.message_jp);
+                    $('form#frm_regiter p.status').append('<br>'+data.message);
                 }else{
                     var message = "";
-
+                    var message_jp = "";
                     $.each( data.message, function( key, value ) {
                         message  = message + value;
                     });
-
-                    $('form#frm_regiter p.status').html(message);
+                    $.each( data.message_jp, function( key, value ) {
+                        message_jp  = message_jp + value;
+                    });
+                    console.log(message,message_jp);
+                    $('form#frm_regiter p.status').html(message_jp);
+                    $('form#frm_regiter p.status').append('<br>'+message);
                 } 
             }
         });
@@ -56,7 +67,8 @@ jQuery(document).ready(function($){
     // Perform AJAX login on form submit
     $('form#form_forgot_password').on('submit', function(e){
         e.preventDefault();
-        $('form#form_forgot_password p.status').show().text(ajax_miyanomori_object.loadingmessage);
+        $('form#frm_regiter p.status').show().text('ログイン情報を送信中です、しばらくお待ちください...');
+        $('form#form_forgot_password p.status').append('<br>'+ajax_miyanomori_object.loadingmessage);
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -67,15 +79,21 @@ jQuery(document).ready(function($){
                 'security'  : $('form#form_forgot_password #security').val() },
             success: function(data){
                 if (data.status == true){
-                    $('form#form_forgot_password p.status').text(data.message);
+                    $('form#form_forgot_password p.status').text();
+                    $('form#form_forgot_password p.status').text(data.message_jp);
+                    $('form#form_forgot_password p.status').append('<br>'+data.message);
                 }else{
                     var message = "";
-
+                    var message_jp = "";
                     $.each( data.message, function( key, value ) {
                         message  = message + value;
                     });
+                    $.each( data.message_jp, function( key, value ) {
+                        message_jp  = message_jp + value;
+                    });
 
-                    $('form#form_forgot_password p.status').html(message);
+                    $('form#form_forgot_password p.status').html(message_jp);
+                    $('form#form_forgot_password p.status').append('<br>'+message);
                 } 
             }
         });

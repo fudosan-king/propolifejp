@@ -58,7 +58,7 @@ function ajax_miyanomori_init() {
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'jp_national_holidays_min' => get_template_directory_uri().'/assets/data/jp_national_holidays_min.json',
         'redirecturl' => home_url(),
-        'loadingmessage' => __( 'Sending user info, please wait...' )
+        'loadingmessage' => __( 'Sending user info, please wait ...' )
     ));
 
     // Enable the user with no privileges to run ajax_login() in AJAX
@@ -82,9 +82,9 @@ function ajax_login() {
 
 	$user_signon = wp_signon( $info, false );
 	if ( is_wp_error( $user_signon )) {
-	    echo json_encode( array( 'loggedin'=>false, 'message'=>__( 'Wrong username or password!' )));
+	    echo json_encode( array( 'loggedin'=>false, 'message'=>__( 'Wrong username or password!' ), 'message_jp'=>__('ユーザー名またはパスワード が正しくありません') ) );
 	} else {
-	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Login successful, redirecting...' )));
+	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Login successful! redirecting...' ),'message_jp'=>__('ログインに成功しました。リダイレクトしています...') ));
 	}
 
 	die();
@@ -105,9 +105,9 @@ function ajax_register()
 	$register  = register_new_user( $user_email, $user_email );
 
 	if ( is_wp_error( $register )) {
-	    echo json_encode( array( 'loggedin'=>false, 'message'=> $register->errors));
+	    echo json_encode( array( 'loggedin'=>false, 'message'=> ['This username is already registered. Please choose another one.'], 'message_jp'=> ['このユーザー名は既に登録されています']  ));
 	} else {
-	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Register successful, PLEASE CHECK EMAIL TO GET PASSWORD ...' )));
+	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Register successful! Please check email to get password.' ), 'message_jp'=> __('会員登録に成功しました。メールを送信しましたのでパスワードをご確認ください') ));
 	}
 
 	die();
@@ -146,13 +146,13 @@ function ajax_forgot_password()
 	}
 
 	if ( ! $user_data ) {
-		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.']));
+		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.'], 'message_jp' => ['ユーザー名またはメールアドレスが正しくありません']));
 		die();
 	}
 
 	if ( is_multisite() && ! is_user_member_of_blog( $user_data->ID, get_current_blog_id() ) )
 	{
-		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.']));
+		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.'],'message_jp' => ['ユーザー名またはメールアドレスが正しくありません']));
 		die();
 	}
 
@@ -255,7 +255,7 @@ function ajax_forgot_password()
 		die();
 	}
 
-	echo json_encode( array( 'status'=>true, 'message'=> "Reset Password successful!! Please check email to create the new password  "));
+	echo json_encode( array( 'status'=>true, 'message'=> "Reset Password successful!! Please check email to create the new password  ", 'message_jp' => "パスワードのリセットに成功しました。メールをご確認いただき、新しいパスワードを作成ください" ));
 	die();
 }
 

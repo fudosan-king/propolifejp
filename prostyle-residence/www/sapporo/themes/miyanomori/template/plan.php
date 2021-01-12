@@ -40,11 +40,17 @@ Template Post Type: page
                             <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='special']"); ?>
                             <div class="col-12 col-lg-7 js_img-map">
                                 <div class="box_infoview_img">
-                                    <?php echo do_shortcode("[apartment-plan]"); ?>
+                                    <div class="hide-mobile">
+                                        <?php echo do_shortcode("[apartment-plan]"); ?>
+                                    </div>
+                                    <div class="show-mobile hide-pc">
+                                        <img src="<?php bloginfo('template_directory');?>/assets/images/main/plan-S301.png" class="imp-main-image">
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
-                        <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p>
+                        <!-- <p class="text-center">※ご覧になりたいプランをタップしてください。プラン詳細をご覧いただけます。</p> -->
                     </div>
                     <div class="box-feature">
                          <?php echo do_shortcode("[ppl-plan-item slug='ppl_plan_special' style='feature']"); ?>

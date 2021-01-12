@@ -4,7 +4,10 @@
 */
 ?>
 
-<?php get_header(); ?>
+<?php 
+get_header(); 
+send_pardot_event();
+?>
 
 <main class="bg-white">
     <?php get_template_part( 'template-parts/breadcrumb', 'default' ); ?>

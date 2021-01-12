@@ -119,10 +119,11 @@ function miyanomori() {
 
     this.hoverShowInfoPlanPage = function(){
         const _this = this;
+        const eleParent =  '';
         if( $(window).width() <= 992 ){
             $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
-        }
-      
+        } 
+
         $('.box_infoview_content').on('mouseover','[data-shape-title]',function (e) {
             _this.sub_hoverShowInfoPlanPage(e);
         });
@@ -130,19 +131,17 @@ function miyanomori() {
         $('.box_infoview_content').on('mouseout','[data-shape-title]',function (e) {
             _this.sub_hoverHideInfoPlanPage(e);
         });
-
+        
         $(window).resize(function(){
             if ( $('.box_infoview_content').find('.col-lg-5').hasClass('js_info-default') ) return;
-        
             if($(window).width() >= 992 ){
                 $('.box_infoview_content').find('.col-lg-5.S301').removeAttr('style');
             } else{
-                 $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
+                $('.section_plan .box_infoview_content .col-12.col-lg-5').css('display','none');
             }
         });
 
     }
-
 
     this.interactiveImages = function(){
         const _this = this;
@@ -154,8 +153,7 @@ function miyanomori() {
             _this.calcInteractiveImages();
         });
 
-        _this.accessPageTouchImage();
-        
+        _this.accessPageTouchImage(); 
     }
 
     this.accessPageTouchImage = function(){
@@ -395,7 +393,6 @@ function miyanomori() {
             $(this).addClass('active');
             $("#block_carousel_view").addClass('carousel_view_night').removeClass('carousel_view_day');
         });
-
     }
 
     this.callBack = function(){
@@ -421,7 +418,6 @@ function miyanomori() {
         $('.btnEnlarge').on('click',function(){
             $('[data-fancybox=images]').trigger( "click" );
         });
-
     }
 
     this.slickSlider = function(){
@@ -450,9 +446,6 @@ function miyanomori() {
            }
         });
     }
-
-    
-
 
     this.onOffContactForm = function(){
         const _this = this;
@@ -683,7 +676,6 @@ function miyanomori() {
         });
     }
     
-
     this.scrollToEle = function() {
         const _this = this;
         $("body").on("click", 'a[rel^="#"], a[rel^="."]', function(e) {
@@ -703,12 +695,7 @@ function miyanomori() {
             }, 1000);
           
         });
-
     }
-
-
-
-
 
     this.slideTextillate = function() {
         $('.js-tlt p:nth-child(1)').textillate({ initialDelay: 1300, autoStart: !0, in: { effect: "fadeInUp", delayScale: 1 } });
@@ -770,7 +757,11 @@ function miyanomori() {
 
     };
 }
-
-
 const run = new miyanomori();
 run.ready();
+
+
+
+
+
+

@@ -139,3 +139,11 @@
 .btn_brown {
 	border-radius: 3px;
 }
+
+
+@media (max-width: 991.98px){
+	.imp-shape,.imp-shape-background-image{
+		pointer-events: none;
+	}
+}
+

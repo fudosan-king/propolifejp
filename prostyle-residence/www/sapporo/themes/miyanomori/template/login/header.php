@@ -1,5 +1,5 @@
 <header class="header_before-login">
-    <div class="navbar navbar-expand-lg bsnav bsnav-transparent bsnav-sticky bsnav-sticky-slide">
+    <div class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.php">
             <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo.svg" alt="" class="img-fluid logo_white" width="246">
             <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_black.svg" alt="" class="img-fluid logo_black" width="246">
@@ -16,23 +16,16 @@
             </button>
         </div>
 
-        <div class="collapse navbar-collapse justify-content-end">
+        <div class="collapse navbar-collapse menu-list">
             <ul class="navbar-nav navbar-mobile mr-0">
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="#modal_login" data-toggle="modal"><span>ログイン</span></a></li>
-                 <li class="nav-item js-menuAnimation dropdown dropdown-right hide-mobile fade">
+                <li class="nav-item dropdown">
                     <?php do_action('miyanomori_nav_language'); ?>
                 </li>
             </ul>
-            <ul class="navbar-nav navbar-mobile mr-0 lang hide-pc show-mobile">
-                 <li class="nav-item js-menuAnimation dropdown dropdown-right fade">
-                    <?php do_action('miyanomori_nav_language'); ?>
-                </li>
-            </ul>
-            <ul class="navbar-nav navbar-mobile mr-0 hide-pc show-mobile">
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="#modal_login" data-toggle="modal"><span>ログアウト</span></a></li>
-            </ul>
-            <ul class="navbar-nav navbar-mobile mr-0  hide-pc show-mobile"></ul>
-            
+            <ul class="navbar-nav lang menu-mobile"></ul>
+            <ul class="navbar-nav menu-mobile"></ul>
+            <ul class="navbar-nav menu-mobile"></ul>
         </div>
     </div>
 </header>
@@ -71,15 +64,26 @@
                                 <input type="hidden" name="redirect" value="<?php echo get_home_url(); ?>" />
                             </div>
                             <div class="col-12 col-lg-6 text-center">
-                                <a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="btn btn-link btn_forgotpass">パスワードをお忘れの方はこちら</a>
+                                <button class="btn btn-link btn_forgotpass" type="button" data-toggle="collapse" data-target="#forgot_password" aria-expanded="false" aria-controls="forgot_password">パスワードをお忘れの方はこちら</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
+            <form method="post" class="frm_login" id="form_forgot_password">
+                <div class="frm_login_top collapse" id="forgot_password">
+                    <h4>パスワードをお忘れの方</h4>
+                     <p class="status"></p>
+                    <div class="form-group confirm-email">
+                        <input class="form-control" type="text" name="forgot_email"  id="forgot_email" placeholder="メールアドレスをご入力ください">
+                    </div>
+                    <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+                    <button type="submit" class="btn w-100 btn_brown" name="" /><?php esc_attr_e( 'パスワードをリセットする', 'miyanomori' ); ?></button>
+                </div>
+            </form>
             <form  method="post" class="frm_login" id="frm_regiter" >
                 <div class="frm_login_bottom">
-                    <h4>まだ物件エントリーされていない方は<span>下記よりエントリーください。</span><br>
+                    <h4>まだ物件エントリーされていない方は<span>下記よりエントリーください。</span>
                     <span>限定サイトへのログインパスワードをお送りします。</span></h4>
                     <p class="status"></p>
                     <div class="frm_login_bottom_content">

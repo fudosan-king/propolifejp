@@ -3,7 +3,7 @@
 <input type="hidden" name="d" value="<?=isset($_GET['d'])?$_GET['d']:''?>">
 <?php $event_lists = get_event_date_list();
 foreach ($event_lists as $date => $event_list):
-    $date_format = date_i18n('Fj (D)', strtotime($date));
+    $date_format = date_i18n('Fj日 (D)', strtotime($date));
 ?>
     <div class="event-lists" data-date="<?=$date?>">
         <h2><?=$date_format?></h2>
@@ -34,7 +34,6 @@ foreach ($event_lists as $date => $event_list):
                             ?>
                                 <li><a href="<?=$cat_link?>"><?=$cat->name?></a></li>
                             <?php }} ?>
-                            <li><a href="<?=site_url('events/tags/free/')?>">無料</a></li>
                         </ul>
                     </div>
                 </div>

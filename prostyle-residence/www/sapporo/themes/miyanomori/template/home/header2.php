@@ -1,5 +1,5 @@
 <header class="header_sub clearfix">
-    <div class="navbar navbar-expand-lg bsnav bsnav-sticky bsnav-sticky-slide">
+    <div class="navbar navbar-expand-lg">
 
         <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
             <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo.svg" alt="" class="img-fluid logo_white" width="246">
@@ -16,8 +16,8 @@
             </button>
         </div>
 
-        <div class="collapse navbar-collapse justify-content-end">
-           <ul class="navbar-nav navbar-mobile mr-0">
+        <div id="navbarSupportedContent" class="collapse navbar-collapse menu-list">
+            <ul class="navbar-nav">
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">宮の森で暮らすということ</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">デザイン</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン・眺望</a></li>
@@ -25,18 +25,18 @@
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
-                <li class="nav-item js-menuAnimation hide-mobile"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
-                <li class="nav-item js-menuAnimation hide-mobile"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>
-                <li class="nav-item js-menuAnimation dropdown dropdown-right hide-mobile fade">
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>
+                <li class="nav-item dropdown">
                     <?php do_action('miyanomori_nav_language'); ?>
                 </li>
             </ul>
-            <ul class="navbar-nav navbar-mobile mr-0 lang hide-pc show-mobile">
-                <li class="nav-item js-menuAnimation dropdown dropdown-right fade">
-                    <?php do_action('miyanomori_nav_language'); ?>
+            <ul class="navbar-nav lang menu-mobile">
+                <li class="nav-item js-menuAnimation dropdown dropdown-right">
+                <?php do_action('miyanomori_nav_language'); ?>
                 </li>
             </ul>
-            <ul class="navbar-nav navbar-mobile mr-0 hide-pc show-mobile">
+            <ul class="navbar-nav menu-mobile">
                 <li class="nav-item js-menuAnimation">
                     <a class="nav-link tel" href="tel:0120853133">
                         Tel.0120-853-133
@@ -50,14 +50,15 @@
                     </a>
                 </li>
             </ul>
-            <ul class="navbar-nav navbar-mobile mr-0  hide-pc show-mobile">
+            <ul class="navbar-nav  menu-mobile">
                 <!-- <li class="nav-item js-menuAnimation "><a class="nav-link" href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="">利用規約</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="">反社会的勢力排除に関する基本方針</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" target="_blank" href="https://www.propolife.co.jp/terms/">利用規約</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" target="_blank" href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="">ソーシャルメディアポリシー</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" target="_blank" href="https://www.propolife.co.jp/socialpolicy/">ソーシャルメディアポリシー</a></li>
             </ul>
         </div>
+
     </div>
 </header>

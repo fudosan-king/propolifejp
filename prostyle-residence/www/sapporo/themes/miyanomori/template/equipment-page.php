@@ -55,7 +55,7 @@ Template Post Type: page
                 <div class="box_equipment_info_top">
                     <div class="row">
                         <div class="col-12 col-lg-5 align-self-center">
-                            <h2>足元から天井まで<br>無垢材に囲まれる悦び</h2>
+                            <h2>五感で感じる自然の質感<br>木に囲まれる悦び</h2>
                         </div>
                         <div class="col-12 col-lg-7 align-self-center">
                              <p>床材はもちろん、窓から見えるファサードまで、<br>
@@ -75,7 +75,7 @@ Template Post Type: page
                             <div class="box_box_equipment_info_top_custom">
                                 <h2>上質な時に身を委ね<span class="block-pc">のびやかに暮らす<span>贅沢な暮らし</span></span></h2>
                                 <p>一つひとつの暮らしが独立しながらも、<br>
-                                寄り添い合うように集うまるで<br>
+                                寄り添い合うように集う<br>
                                 リゾートコンドミニアムのような集合邸宅では、<br>
                                 独立した穏やかな時間が流れます。</p>
                             </div>
@@ -93,7 +93,7 @@ Template Post Type: page
                         <img src="<?php bloginfo('template_directory');?>/assets/images/1x/equi06.jpg" alt="" class="img-fluid border-right">
                     </div>
                     <div class="col-12 col-lg-6 align-self-center">
-                        <img src="<?php bloginfo('template_directory');?>/assets/images/1x/equi08.png" alt="" class="img-fluid">
+                        <img src="<?php bloginfo('template_directory');?>/assets/images/1x/equi08.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

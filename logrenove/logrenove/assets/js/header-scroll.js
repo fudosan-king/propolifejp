@@ -1,7 +1,7 @@
 jQuery(function($) {
     if (isMobile) {
 // Hide Header on on scroll down
-    var didScroll;
+    // var didScroll;
     var lastScrollTop = 0;
 // var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 // var lastScrollBottom = 0;
@@ -10,14 +10,15 @@ jQuery(function($) {
     var navbarHeight = $('header').outerHeight();
 // var footerHeight = $('.section_cookie').outerHeight();
     $(window).scroll(function (event) {
-        didScroll = true;
+        // didScroll = true;
+        hasScrolled();
     });
-    setInterval(function () {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
-        }
-    }, 250);
+    // setInterval(function () {
+    //     if (didScroll) {
+    //         hasScrolled();
+    //         didScroll = false;
+    //     }
+    // }, 250);
 
     function hasScrolled() {
         var st = $(this).scrollTop();
@@ -36,14 +37,14 @@ jQuery(function($) {
             }
         }
         lastScrollTop = st;
-        window.onscroll = function (e) {
-            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-            var footer = document.querySelector('.section_cookie');
-            scrollY <= this.lastScroll
-                ? footer.style.visibility = 'hidden'
-                : footer.style.visibility = 'visible';
-            this.lastScroll = scrollY;
-        }
+        // window.onscroll = function (e) {
+        //     var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        //     var footer = document.querySelector('.section_cookie');
+        //     scrollY <= this.lastScroll
+        //         ? footer.style.visibility = 'hidden'
+        //         : footer.style.visibility = 'visible';
+        //     this.lastScroll = scrollY;
+        // }
     }
     }
 })

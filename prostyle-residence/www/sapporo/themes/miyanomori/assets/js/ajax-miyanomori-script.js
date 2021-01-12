@@ -53,4 +53,60 @@ jQuery(document).ready(function($){
         });
     });
 
+    // Perform AJAX login on form submit
+    $('form#form_forgot_password').on('submit', function(e){
+        e.preventDefault();
+        $('form#form_forgot_password p.status').show().text(ajax_miyanomori_object.loadingmessage);
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: ajax_miyanomori_object.ajaxurl,
+            data: { 
+                'action'    : 'ajaxforgotpassword', //calls wp_ajax_nopriv_ajaxlogin
+                'user_login': $('form#form_forgot_password #forgot_email').val(), 
+                'security'  : $('form#form_forgot_password #security').val() },
+            success: function(data){
+                if (data.status == true){
+                    $('form#form_forgot_password p.status').text(data.message);
+                }else{
+                    var message = "";
+
+                    $.each( data.message, function( key, value ) {
+                        message  = message + value;
+                    });
+
+                    $('form#form_forgot_password p.status').html(message);
+                } 
+            }
+        });
+    });
+
+    // Perform AJAX login on form submit
+    // $('form#form_reset_password').on('submit', function(e){
+    //     e.preventDefault();
+    //     $('form#form_reset_password p.status').show().text(ajax_miyanomori_object.loadingmessage);
+    //     $.ajax({
+    //         type: 'POST',
+    //         dataType: 'json',
+    //         url: ajax_miyanomori_object.ajaxurl,
+    //         data: { 
+    //             'action'    : 'ajaxforgotpassword', //calls wp_ajax_nopriv_ajaxlogin
+    //             'user_login': $('form#form_reset_password #forgot_email').val(), 
+    //             'security'  : $('form#form_reset_password #security').val() },
+    //         success: function(data){
+    //             if (data.status == true){
+    //                 $('form#form_reset_password p.status').text(data.message);
+    //             }else{
+    //                 var message = "";
+
+    //                 $.each( data.message, function( key, value ) {
+    //                     message  = message + value;
+    //                 });
+
+    //                 $('form#form_reset_password p.status').html(message);
+    //             } 
+    //         }
+    //     });
+    // });
+
 });

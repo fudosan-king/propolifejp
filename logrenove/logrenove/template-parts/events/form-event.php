@@ -20,7 +20,7 @@
                             <div class="box_datetime mb-2 mb-lg-0">
                                 <select name="date" class="form-control custom-select required">
                                     <?php foreach ($event_datetime['date'] as $key => $date) { 
-                                        $date = date_i18n('Fj (D)', strtotime($date));
+                                        $date = date_i18n('Fj日 (D)', strtotime($date));
                                     ?>
                                         <option value="<?=$date?>"><?=$date?></option>
                                     <?php } ?>

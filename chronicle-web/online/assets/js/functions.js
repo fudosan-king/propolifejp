@@ -105,6 +105,7 @@ $(function($) {
             $('.cfr_date_time_2').html(mapValue($('input[name="datepicker2"]').val()) + ' ' + mapValue($('select[name="time2"] option:selected').val()));
             $('.cfr_date_time_3').html(mapValue($('input[name="datepicker3"]').val()) + ' ' + mapValue($('select[name="time3"] option:selected').val()));
             $('.cfr_note').html($('textarea[name="note"]').val());
+            $('.cfr_pd_participation_format').html($('input[name="pd_participation_format[]"]').val());
 
             $('input[name="pd_name"]').val($('input[name="name"]').val());
             $('input[name="pd_email"]').val($('input[name="email"]').val());

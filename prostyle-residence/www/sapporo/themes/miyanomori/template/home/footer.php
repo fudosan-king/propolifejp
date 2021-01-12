@@ -43,10 +43,10 @@
                 <ul>
                     <!-- <li><a href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
                     <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
-                    <li><a href="https://www.propolife.co.jp/terms/">利用規約</a></li>
-                    <li><a href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>
+                    <li><a target="_blank" href="https://www.propolife.co.jp/terms/">利用規約</a></li>
+                    <li><a target="_blank" href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>
                     <li><a href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
-                    <li><a href="https://www.propolife.co.jp/socialpolicy/">ソーシャルメディアポリシー</a></li>
+                    <li><a target="_blank" href="https://www.propolife.co.jp/socialpolicy/">ソーシャルメディアポリシー</a></li>
                 </ul>
                 
                 <ul class="my-brand mb-0">
@@ -63,10 +63,9 @@
     </div>
 </footer>
 
-<div class="bsnav-mobile d-block d-xl-none">
-    <div class="bsnav-mobile-overlay"></div>
-    <div class="navbar"></div>
-</div>
+
+<div class="bsnav-mobile-overlay"></div>
+
 
 <div class="modal fade" id="modal_video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">

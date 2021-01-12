@@ -30,11 +30,8 @@ Template Post Type: page
                 <div class="container">
                    
                     <div class="box_infoview_top">
-                        <h2 class="title hide-mobile">大きなガラス越しに望む自然の大借景を愉しむ<br>
+                        <h2 class="title">大きなガラス越しに望む自然の大借景を愉しむ<br>
                         リゾートコンドミニアムのような集合邸宅</h2>
-                        <h2 class="hide-pc show-mobile">理想の都市居住に応える<br>
-                            プランニング。</h2>
-                        <p class="hide-pc show-mobile">シングルやディンクス、ファミリー、セカンドユースまで、ライフスタイルなどに合わせてお選びいただける、住居専有面積約39㎡～130㎡超までをご用意。</p>                                            
                     </div>
 
                     <div class="box_infoview_content">

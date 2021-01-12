@@ -1,8 +1,8 @@
-<?php  
-    if (!is_home() && !is_front_page() && !is_user_logged_in())
-    {
-        wp_redirect(home_url());
-    }
+<?php
+if (!is_home() && !is_front_page() && !is_user_logged_in() && !is_page('lostpassword') )
+{
+    wp_redirect(home_url());
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
-    <?php if ( !is_user_logged_in()) : ?>
+    <?php if ( !is_user_logged_in() && is_front_page()) : ?>
         <title>【公式】プロスタイル札幌 宮の森｜新築分譲マンション </title>
     <?php else: ?>
          <title><?= strip_tags(get_the_title()); ?></title>
@@ -36,11 +36,12 @@
     <?php wp_head(); ?>
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/assets/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/assets/css/bsnav.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="<?php //bloginfo('template_directory');?>/assets/css/bsnav.min.css"> -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/assets/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/styles.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/mobile.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/custom.css" type="text/css">
+    
 </head>
 
 <body <?php body_class(); ?>>

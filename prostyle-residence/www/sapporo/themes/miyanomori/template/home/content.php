@@ -32,7 +32,7 @@
     <div class="scroll_down">
         <a href="#section_living" data-scroll class="scroll_title">Scroll</a>
     </div>
-<!--     <div class="news news_afterlogin">
+    <div class="news news_afterlogin">
         <div class="row">
             <div class="col-12 col-lg-2 align-self-center">
                 <h2>新着情報</h2>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </section>
 <section id="section_living" class="section_living">
         <div class="container">

@@ -1145,7 +1145,7 @@
         margin-bottom: 30px;
     }
     /* login */
-    .btn-link {
+    .frm_login .btn-link {
         padding: 0;
     }
     #modal_login{
@@ -1526,12 +1526,6 @@
         left: 20px;
     }
 
-    .box_designsupervision {
-        width: auto;
-        right: 15px;
-        left: 15px;
-    }
-
     .slide-main .slideText {
         right: 5.8%;
         bottom: 23%;
@@ -1541,7 +1535,6 @@
         right: 15px;
         left: 15px;
         width: auto;
-        bottom: 22px;
     }
 
     .slideScroll a {

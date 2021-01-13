@@ -266,6 +266,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</a>
 						<span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
 					</li>
+					<li>
+						<a href="https://www.logknot.co.jp/" style="background-color: #fff; text-align: center;" target="_blank" >
+							<img src="<?php bloginfo('template_directory'); ?>/common/img/LogKnot_logo-2.png" width="200" height="98" alt="株式会社沖縄イゲトー" style="object-fit: contain;">
+						</a>
+						<span><a href="https://www.logknot.co.jp/">LogKnot株式会社</a></span>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -352,8 +358,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li><span>煙台提案生活木業有限公司</span></li>
 					<li><a href="http://www.propolifevietnam.com/">PROPOLIFE VIETNAM</a></li>
 					<li><a href="http://nikuan-kotakino.com" target="_blank">株式会社小滝野</a></li>
-<li><a href="https://www.prostyleryokan.com">株式会社プロスタイル旅館</a></li>
-<li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>
+					<li><a href="https://www.prostyleryokan.com">株式会社プロスタイル旅館</a></li>
+					<li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>
+					<li><a href="https://www.logknot.co.jp/">LogKnot株式会社</a></li>
 				</ul>
 			</li>
 			<li>

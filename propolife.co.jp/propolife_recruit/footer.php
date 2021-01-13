@@ -49,8 +49,9 @@
                         <li><span>煙台提案生活木業有限公司</span></li>
                         <li><a href="https://www.propolifevietnam.com/" target="_blank">PROPOLIFE VIETNAM</a></li>
                         <li><a href="http://www.nikuan-kotakino.com/" target="_blank">株式会社小滝野</a></li>
-<li><a href="https://www.prostyleryokan.com">株式会社プロスタイル旅館</a></li>
-<li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>
+                        <li><a href="https://www.prostyleryokan.com">株式会社プロスタイル旅館</a></li>
+                        <li><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></li>
+                        <li><a href="https://www.logknot.co.jp/">LogKnot株式会社</a></li>
                     </ul>
                 </li>
                 <li class="sp">

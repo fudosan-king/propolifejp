@@ -44,7 +44,7 @@ Template Post Type: page
                                         <?php echo do_shortcode("[apartment-plan]"); ?>
                                     </div>
                                     <div class="show-mobile hide-pc">
-                                        <img src="<?php bloginfo('template_directory');?>/assets/images/main/plan-S301.png" class="imp-main-image">
+                                        <img src="<?php bloginfo('template_directory');?>/assets/images/1x/s301-origin.png" class="imp-main-image">
                                     </div>
                                 </div>
 

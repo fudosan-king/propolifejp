@@ -216,7 +216,7 @@ Template Post Type: page
                                                 ｢大通｣駅より札幌市営地下鉄南北線乗換え</p>
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/odori_station.jpg" alt="" class="img-fluid w-100">
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/odori_station1.jpg" alt="" class="img-fluid w-100">
                                         </div>
                                     </div>
                                 </div>
@@ -230,7 +230,7 @@ Template Post Type: page
                                                 ｢札幌｣駅よりJR快速エアポート乗換え</p>
                                         </div>
                                         <div class="col-12 col-lg-6">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/odori_station.jpg" alt="" class="img-fluid w-100">
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/airport_chitose.jpg" alt="" class="img-fluid w-100">
                                         </div>
                                     </div>
                                 </div>

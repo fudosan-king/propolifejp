@@ -41,7 +41,7 @@
     		<div class="col-12 col-lg-12">
                 <a href="<?= home_url() ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
                 <ul>
-                    <!-- <li><a href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
+                    <li><a href="<?php echo home_url('/whatsnews/'); ?>">新着情報</a></li>
                     <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
                     <li><a target="_blank" href="https://www.propolife.co.jp/terms/">利用規約</a></li>
                     <li><a target="_blank" href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>

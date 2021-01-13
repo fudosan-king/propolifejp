@@ -7,6 +7,7 @@
                     <div class="col-12">
                         <ul class="nav_footer">
                             <li><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>" target="_blank">会社概要</a></li>
+                            <li><a href="<?php echo get_category_link(2); ?>" target="_blank">IR</a></li>
                             <li><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></li>
                             <li><a href="<?php echo get_permalink( get_page_by_path( 'terms-of-use' ) ); ?>" target="_blank">利用規約</a></li>
                             <li><a href="<?php echo get_permalink( get_page_by_path( 'privacy-policy' ) ); ?>" target="_blank">プライバシーポリシー</a></li>

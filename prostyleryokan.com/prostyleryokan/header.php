@@ -76,6 +76,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="gHeader_col gHeader_col-no1">
                         <p class="gHeader_link"><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>" target="_blank">会社概要</a></p>
                     </div>
+                    <div class="gHeader_col gHeader_col-no1">
+                        <p class="gHeader_link"><a href="<?php echo get_category_link(2) ?>" target="_blank">IR</a></p>
+                    </div>
                     <div class="gHeader_col gHeader_col-no3">
                         <p class="gHeader_link"><a href="https://www.propolife.co.jp/recruit/" target="_blank">採用情報</a></p>
                     </div>

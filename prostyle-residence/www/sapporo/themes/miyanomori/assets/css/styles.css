@@ -4498,3 +4498,43 @@ header {
         padding:0;
     }
 }
+
+/* CSS What's new */
+.content_blog article{
+    margin-bottom: 130px;
+}
+.content_blog article .date{
+    margin-bottom: 50px;
+    font-size: 1rem;
+    padding-bottom: 3px;
+    font-weight: normal;
+    border-bottom: 1px solid #dcdcdc;
+}
+.content_blog article .title{
+    margin: 0 0 40px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.content_blog article .content p{
+    margin-top: 30px;
+    margin-bottom:0;
+}
+
+.pagenav_box{
+    font-family: "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN"; 
+}
+
+.pagenav_box .pagenavigation{
+    width: max-content;
+    margin: 0 auto;
+}
+
+.pagenav_box span, .pagenav_box a{
+    border: none;
+    margin: 2px;
+    padding: 5px 13px;
+    text-decoration: none;
+    background-color: #B48856;
+    color:#fff;
+}

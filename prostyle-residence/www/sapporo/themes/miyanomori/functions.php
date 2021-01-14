@@ -326,67 +326,69 @@ function miyanomori_blogs_type($atts){
 				wp_reset_postdata();
 				$total = $blogs->max_num_pages;
 			?>
-			<div class="pagenav_box">
-				<div class="pagenavigation">
-					<span class="total-on-page"><?= ($paged ? $paged : 1).' / '.$total?></span>
-					<?php 
-						$GLOBALS['wp_query']->max_num_pages = $blogs->max_num_pages;
-		                // the_posts_pagination( array(
-		                //    'mid_size' => 2,
-		                //    'end_size' => 0,
-		                //    'prev_text' => __( '«', 'green' ),
-		                //    'next_text' => __( '»', 'green' ),
-		                //    'screen_reader_text' => ' ',
-		                //    'current' => ($paged ? $paged : 1),
-		                //    'total' => $blogs->max_num_pages,
-		                // ) );
-						$pag_args1 = array(
-							'type'         	=> 'array',
-							'end_size'     	=> 0,
-							'mid_size'      => 2,
-							'add_fragment'  => '',
-							'show_all' 		=> false,
-						    'current' 		=> $paged,
-						    'total'   		=> $blogs->max_num_pages,
-						    'prev_text'		=> '«',
-						    'next_text'		=> '»',
-						);
-	    				$paginate_links = paginate_links( $pag_args1 );
-	    				$c=$pag_args1['current'];
-	    				$dots3 =  __( '&hellip;' );
+			<?php  if($paged > 1) : ?>
+				<div class="pagenav_box">
+					<div class="pagenavigation">
+						<span class="total-on-page"><?= ($paged ? $paged : 1).' / '.$total?></span>
+						<?php 
+							$GLOBALS['wp_query']->max_num_pages = $blogs->max_num_pages;
+			                // the_posts_pagination( array(
+			                //    'mid_size' => 2,
+			                //    'end_size' => 0,
+			                //    'prev_text' => __( '«', 'green' ),
+			                //    'next_text' => __( '»', 'green' ),
+			                //    'screen_reader_text' => ' ',
+			                //    'current' => ($paged ? $paged : 1),
+			                //    'total' => $blogs->max_num_pages,
+			                // ) );
+							$pag_args1 = array(
+								'type'         	=> 'array',
+								'end_size'     	=> 0,
+								'mid_size'      => 2,
+								'add_fragment'  => '',
+								'show_all' 		=> false,
+							    'current' 		=> $paged,
+							    'total'   		=> $blogs->max_num_pages,
+							    'prev_text'		=> '«',
+							    'next_text'		=> '»',
+							);
+		    				$paginate_links = paginate_links( $pag_args1 );
+		    				$c=$pag_args1['current'];
+		    				$dots3 =  __( '&hellip;' );
 
 
-	    				$allowed=[
-	    					'current',
-						    'prev ',
-						    'next ',
-						    $dots3,
-						    sprintf( '/page/%d/', $c+1 ),
-						    sprintf( '/page/%d/', $c+2 ),
-						    sprintf( '/page/%d/', $c-1 ),
-						    sprintf( '/page/%d/', $c+2 ),
-	    				];
+		    				$allowed=[
+		    					'current',
+							    'prev ',
+							    'next ',
+							    $dots3,
+							    sprintf( '/page/%d/', $c+1 ),
+							    sprintf( '/page/%d/', $c+2 ),
+							    sprintf( '/page/%d/', $c-1 ),
+							    sprintf( '/page/%d/', $c+2 ),
+		    				];
 
-	    				$paginate_links=array_filter(
-					        $paginate_links,
-						    function( $value ) use ( $allowed ) {
-						        foreach( (array) $allowed as $tag )
-						        {			        	
-						            if( false !== strpos( $value, $tag ) )
-						                return true;
-						        }
-						        return false;
-						    }
-						);
+		    				$paginate_links=array_filter(
+						        $paginate_links,
+							    function( $value ) use ( $allowed ) {
+							        foreach( (array) $allowed as $tag )
+							        {			        	
+							            if( false !== strpos( $value, $tag ) )
+							                return true;
+							        }
+							        return false;
+							    }
+							);
 
-	    				if( ! empty( $paginate_links ) )
-					    printf(
-					        "%s",
-					        join( "", $paginate_links )
-					    );
-					?>
+		    				if( ! empty( $paginate_links ) )
+						    printf(
+						        "%s",
+						        join( "", $paginate_links )
+						    );
+						?>
+					</div>
 				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 		
 	<?php endif; /* end if*/ 		

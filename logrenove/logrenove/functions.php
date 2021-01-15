@@ -22,6 +22,11 @@
     define('COUNTER_SCRIPT_PATH', COUNTER_PATH . '/js');
     define('COUNTER_IMAGE_PATH', COUNTER_PATH . '/images');
 
+    define('BRANDING_PATH', ASSETS_PATH . '/branding');
+    define('BRANDING_STYLESHEET_PATH', BRANDING_PATH . '/css');
+    define('BRANDING_SCRIPT_PATH', BRANDING_PATH . '/js');
+    define('BRANDING_IMAGE_PATH', BRANDING_PATH . '/images');
+
     $header_posts = null;
     $header_ids = null;
 

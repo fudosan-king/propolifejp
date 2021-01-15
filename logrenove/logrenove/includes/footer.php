@@ -51,6 +51,12 @@
   <section class="footer_bottom">
     <div class="container">
         <div class="row">
+          <?php if(is_page('branding')){ ?>
+            <div class="col-12 col-lg-12">
+                  <p><?php echo get_field('footer_copyright', 'option'); ?></p>
+                  <p class="mb-0"><a target="_blank" href="https://www.chronicle-web.com/plus/" rel="noopener noreferrer"><img src="<?=IMAGE_PATH;?>/SVG/logo_chronicleplus.svg" alt="" class="img-fluid" width="118"></a></p>
+            </div>
+          <?php } else { ?>
             <div class="col-12 col-lg-8 mx-auto">
                 <div class="row">
                     <div class="col-12 col-lg-7 align-self-center text-center">
@@ -60,10 +66,11 @@
                         <p class="mb-2 mb-lg-0">関連サイト</p>
                     </div>
                     <div class="col-12 col-lg-3 align-self-center">
-                        <a target="_blank" href="https://www.chronicle-web.com/plus/" rel="noopener noreferrer"><img src="<?=IMAGE_PATH;?>/chro_plus_white.png" alt="" class="img-fluid" width="200"></a>
+                        <a target="_blank" href="https://www.chronicle-web.com/plus/" rel="noopener noreferrer"><img src="<?=IMAGE_PATH;?>/SVG/logo_chronicleplus.svg" alt="" class="img-fluid" width="200"></a>
                     </div>
                 </div>
             </div>
+          <?php } ?>
         </div>
     </div>
   </section>

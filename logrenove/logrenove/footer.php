@@ -9,6 +9,8 @@
 
         }elseif(is_page('counter')){
             require 'includes/js-footer-counter.php';
+        }elseif(is_page('branding')){
+            require 'includes/js-footer-branding.php';
         }else{
             require 'includes/js-footer.php';
         }

@@ -66,7 +66,6 @@ Template Post Type: page
                 <div class="box_infoview_top mb-3">
                     <h2 class="title hide-mobile">視界を遮るもののない開放感溢れる眺望</h2>
                     <h2 class="hide-pc show-mobile">キャッチコピーが<br>入ります</h2>
-                    <p>30F VIEW30階相当の眺望</p>
                 </div>
                 <div class="carousel_view">
                     <div id="block_carousel_view" class="day carousel_view_day"></div>

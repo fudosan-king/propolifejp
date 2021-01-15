@@ -82,10 +82,12 @@ Template Post Type: page
                         ?>
                         <?php echo do_shortcode("[ppl-plan-item slug='".$post_url."' style='plan-detail-page']"); ?>
                        
-                        <div class="col-12 col-lg-7 js_img-map">
+                        <div class="col-12 col-lg-7 img-map_single js_img-map">
                             <div class="box_infoview_img">
                                 <?php $codeApartment = get_post_meta($post->ID, 'ppl-plan', true); ?>
                                 <?php echo do_shortcode("[".$codeApartment."]"); ?>
+                                <p>ご覧になりたいプランをタップしてください。<br>
+                            プラン詳細をご覧いただけます</p>
                             </div>
                         </div>
                     </div>

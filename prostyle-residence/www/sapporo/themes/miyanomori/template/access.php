@@ -22,21 +22,21 @@ Template Post Type: page
                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/info-img.jpg" class="img-fluid" alt="" title="">
                             </div>
                             <div class="info_location">
-                                <p>当物件に関するお問い合わせは</p>
+                                <p>物件所在地</p>
                                 <h4>プロスタイル札幌 宮の森</h4>
                                 <p class="address"><i class="i-address"></i>北海道札幌市中央区宮の森4 条13 丁目893-37</p>
-                                <p>-営業時間／10：00～18：00<br>
-                                    -定休日／水・木曜日（祝祭日は通常営業しております）<br>
-                                    -携帯電話・PHSからもご利用いただけます。</p>
+                                <p>-定休日／水・木曜日（祝祭日は通常営業しております）</p>
                                 <a class="btn btnCheckgoogle" href="#"><span>Googleで確認</span></a>
                             </div>
                             <div class="box_map_info-img">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/info-img1.jpg" class="img-fluid" alt="" title="">
                             </div>
                             <div class="info_location">
-                                <p>当物件に関するお問い合わせは</p>
+                                <p>物件所在地</p>
                                 <h4>コンセプトルーム</h4>
-                                <p class="address">&nbsp</p>
+                                <p class="address"><i class="i-address"></i>〒060-0001<br>
+                                札幌市中央区北1条西4丁目<br>
+                                札幌グランドホテル2階（グランビスタギャラリーサッポロ内</p>
                                 <p>-営業時間／10：00～18：00<br>
                                     -定休日／水・木曜日（祝祭日は通常営業しております）<br>
                                     -携帯電話・PHSからもご利用いただけます。</p>
@@ -293,8 +293,16 @@ Template Post Type: page
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-3">
-                        <div class="access_img">
-                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/1x/access-1.jpg" alt="" title="">
+                        <div class="access_block-img">
+                            <div class="access_img">
+                                <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/main/access-cool-1.jpg" alt="" title="">
+                            </div>
+                            <div class="access_img">
+                                <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/main/access-cool-2.jpg" alt="" title="">
+                            </div>
+                            <div class="access_img">
+                                <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/main/access-cool-3.jpg" alt="" title="">
+                            </div>
                         </div>
                     </div>
                 </div>

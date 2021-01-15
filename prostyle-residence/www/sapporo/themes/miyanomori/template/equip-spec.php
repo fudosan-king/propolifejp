@@ -512,11 +512,7 @@ Template Post Type: page
                         </div>
                         <div id="敷地配置図" class="equip-spec_box">
                             <h4><span>敷地配置図</span></h4>
-                            <div class="ct-slider floor-plans">
-                                <div class="ct-slider_item">
-                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/map-1.png" class="img-fluid" alt="" title="" >
-                                    <img src="<?php bloginfo('template_directory');?>/assets/images/main/map-2.png" class="img-fluid" alt="" title="" >
-                                </div>
+                            <div class="floor-plans">
                                 <div class="ct-slider_item">
                                     <img src="<?php bloginfo('template_directory');?>/assets/images/main/map-1.png" class="img-fluid" alt="" title="" >
                                     <img src="<?php bloginfo('template_directory');?>/assets/images/main/map-2.png" class="img-fluid" alt="" title="" >

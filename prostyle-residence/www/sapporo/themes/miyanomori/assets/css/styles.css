@@ -1980,7 +1980,7 @@ footer address p {
     position: relative;
 }
 
-.section_plan #plandesign h2::after {
+.section_plan #plandesign .box_infoview_top h2::after {
     content: '';
     position: absolute;
     left: 0;
@@ -2639,6 +2639,7 @@ footer address p {
     padding:20px;
     font-size: 0.875rem;
     font-weight: 600;
+    text-align: center;
 }
 
 
@@ -3559,6 +3560,11 @@ figure {
     padding: 28px 100px;
 }
 
+.equip-spec_box .floor-plans .ct-slider_item{
+    max-width: 920px;
+    margin: 0 auto;
+}
+
 .privacy-policy p {
     font-size: 0.875rem;
     line-height: 1.8;
@@ -3643,7 +3649,7 @@ i.chevron-left {
 }
 
 .carousel_view .day {
-    height: 548px;
+    height: 627px;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 }
@@ -4271,7 +4277,7 @@ i.chevron-left {
 .vr-l {
     position: absolute;
     width: 100%;
-    max-width: 80px;
+    max-width: 50px;
     height: 10%;
 }
 

@@ -26,21 +26,22 @@ Template Post Type: page
                                 <h4>プロスタイル札幌 宮の森</h4>
                                 <p class="address"><i class="i-address"></i>北海道札幌市中央区宮の森4 条13 丁目893-37</p>
                                 <p>-定休日／水・木曜日（祝祭日は通常営業しております）</p>
-                                <a class="btn btnCheckgoogle" href="#"><span>Googleで確認</span></a>
+                                <a class="btn btnCheckgoogle" href="https://goo.gl/maps/VhfZv7pSYdjR51QbA"><span>Googleで確認</span></a>
                             </div>
                             <div class="box_map_info-img">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/info-img1.jpg" class="img-fluid" alt="" title="">
                             </div>
                             <div class="info_location">
-                                <p>物件所在地</p>
+                                <p>当物件に関するお問い合わせは</p>
                                 <h4>コンセプトルーム</h4>
                                 <p class="address"><i class="i-address"></i>〒060-0001<br>
-                                札幌市中央区北1条西4丁目<br>
-                                札幌グランドホテル2階（グランビスタギャラリーサッポロ内</p>
-                                <p>-営業時間／10：00～18：00<br>
+                                札幌市中央区北1条西4丁目札幌グランドホテル2階<br>
+                                （グランビスタギャラリーサッポロ内）</p>
+                                <p>-電話番号／0120-853-133<br>
+                                    -営業時間／10：00～18：00<br>
                                     -定休日／水・木曜日（祝祭日は通常営業しております）<br>
                                     -携帯電話・PHSからもご利用いただけます。</p>
-                                <a class="btn btnCheckgoogle" href="#"><span>Googleで確認</span></a>
+                                <a class="btn btnCheckgoogle" href="https://g.page/SAPPOROGRAND?share"><span>Googleで確認</span></a>
                             </div>
                         </div>
                         <div class="box_schedule">

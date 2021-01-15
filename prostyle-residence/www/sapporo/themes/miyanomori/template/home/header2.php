@@ -51,7 +51,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav  menu-mobile">
-                <!-- <li class="nav-item js-menuAnimation "><a class="nav-link" href="<?php //echo home_url('/whatsnews/'); ?>">新着情報</a></li> -->
+                <li class="nav-item js-menuAnimation "><a class="nav-link" href="<?php echo home_url('/news/'); ?>">新着情報</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" target="_blank" href="https://www.propolife.co.jp/terms/">利用規約</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" target="_blank" href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>

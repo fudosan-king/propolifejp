@@ -47,8 +47,6 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
                 <div class="box_plan_detail_footer_content">
 					<h1><?= get_the_title($post->ID)?></h1>
 					<h2><?= get_the_content($post->ID) ?></h2>
-					<p>ご覧になりたいプランをタップしてください。<br>
-                            プラン詳細をご覧いただけます</p>
 			    </div>
             </div>
 		<?php 
@@ -119,7 +117,6 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
                 <div class="box_plan_detail_footer_content">
 					<h1><?= get_the_title($post->ID)?></h1>
 					<h2><?= get_the_content($post->ID) ?></h2>
-					<p>ご覧になりたいプランをタップしてください。<br>プラン詳細をご覧いただけます</p>
 			    </div>
             </div>
 	        <?php else: ?>

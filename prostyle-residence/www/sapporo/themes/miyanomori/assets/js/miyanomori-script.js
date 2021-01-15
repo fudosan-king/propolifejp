@@ -146,9 +146,11 @@ function miyanomori() {
     this.interactiveImages = function(){
         const _this = this;
         _this.calcInteractiveImages();
+
         $('#planvr-tab').on('shown.bs.tab', function (e) {
             _this.calcInteractiveImages();
         });
+
         $(window).resize(function(){
             _this.calcInteractiveImages();
         });
@@ -254,20 +256,21 @@ function miyanomori() {
     this.calcInteractiveImages = function (){
         const eleBoxImgVR = $('#planvr').find('.box_plan_detail_img');
         const eleBoxImgVR_Img = $('#planvr').find('.box_plan_detail_img img');
-        const eleIconVR = $('#planvr').find('a i');
+        const eleIconVR = $('#planvr .box_plan_detail_img').find('a i');
         const w = $(window);
 
         const posIconVRs = [
             {   name:'s301', 
-                l1:{top:138,left:334},
-                l2:{top:282,left:495},
-                l3:{top:500,left:585},
+                l1:{top:74,left:334},
+                l2:{top:326,left:150},
+                l3:{top:477,left:585},
+                l4:{top:532,left:136},
             },
             {
-                name:'s201', 
-                l1:{top:66,left:365},
-                l2:{top:214,left:525},
-                l3:{top:430,left:607},
+                name:'s601', 
+                l1:{top:20,left:238},
+                l2:{top:127,left:267},
+                l3:{top:295,left:250},
             },
             {
                 name:'n302',
@@ -284,12 +287,11 @@ function miyanomori() {
             theImage.src = eleBoxImgVR_Img.attr("src");
             const realWidth = theImage.width;
             const realHeight = theImage.height;
-            const eleBoxImgVR_Height = eleBoxImgVR.height();
-            const eleBoxImgVR_Width =  eleBoxImgVR.width();
-            const w_width = w.width();
-            const w_height = w.height();
+            const eleBoxImgVR_Height = eleBoxImgVR_Img.height();
+            const eleBoxImgVR_Width =  eleBoxImgVR_Img.width();
             const eleBoxImgVR_ChangeHeight = (realHeight - eleBoxImgVR_Height)/realHeight;
-            const eleBoxImgVR_ChangeWidth = (realWidth - eleBoxImgVR_Width)/realWidth;     
+            const eleBoxImgVR_ChangeWidth = (realWidth - eleBoxImgVR_Width)/realWidth;  
+
             eleIconVR.each(function(i,ele){
                 const iconVR_Y = $(ele).offset().top;
                 const iconVR_X = $(ele).offset().left;
@@ -300,7 +302,7 @@ function miyanomori() {
                 let posKeyPlan = keyPlan.indexOf('-');
                 let getKey = keyPlan.substring(0,posKeyPlan);
                 let getPos = keyPlan.substring(posKeyPlan+1,keyPlanLength);
-               
+
                 $.each(posIconVRs,function(i,val){
                     if( val.name == getKey ){
                         const vrIntoBoxImg_Y = val[getPos].top - ( val[getPos].top*eleBoxImgVR_ChangeHeight );

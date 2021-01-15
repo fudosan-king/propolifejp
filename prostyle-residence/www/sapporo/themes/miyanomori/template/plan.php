@@ -64,8 +64,7 @@ Template Post Type: page
             </div>
             <div class="tab-pane fade " id="view" role="tabpanel" aria-labelledby="view-tab">
                 <div class="box_infoview_top mb-3">
-                    <h2 class="title hide-mobile">視界を遮るもののない開放感溢れる眺望</h2>
-                    <h2 class="hide-pc show-mobile">キャッチコピーが<br>入ります</h2>
+                    <h2 class="title">視界を遮るもののない開放感溢れる眺望</h2>
                 </div>
                 <div class="carousel_view">
                     <div id="block_carousel_view" class="day carousel_view_day"></div>

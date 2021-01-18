@@ -293,7 +293,7 @@ function miyanomori_blogs_type($atts){
 		'type' => 'small_image',
 		"ignore_sticky_posts" => "top",
 		"orderby" => "ID",
-		"order" => "ASC"
+		"order" => "DESC"
 		), $atts));
 
 	if(get_query_var('paged')):
@@ -305,94 +305,100 @@ function miyanomori_blogs_type($atts){
 	endif;
 
 	$args = array(
-		'post_type' 			=> 'post',
+		'post_type' => 'post',
 		'orderby' => $orderby,
 		'order'   => $order,
 		'paged' => $paged,
 	);	
-
-	
-
-	$blogs = new WP_Query($args);	
+	$blogs = new WP_Query($args);
+	$posts_show_home = 1;	
 	ob_start();
 	$maxpage = $blogs->max_num_pages;
+
 	if($blogs->have_posts()):?>
-		<div class="content_blog">
-			<?php while ($blogs->have_posts()):?>
-				<?php $blogs->the_post(); ?>
-				<?php get_template_part( 'template-parts/content'); ?>
-			<?php 
-				endwhile;
-				wp_reset_postdata();
-				$total = $blogs->max_num_pages;
-			?>
-			<?php  if($paged > 1) : ?>
-				<div class="pagenav_box">
-					<div class="pagenavigation">
-						<span class="total-on-page"><?= ($paged ? $paged : 1).' / '.$total?></span>
-						<?php 
-							$GLOBALS['wp_query']->max_num_pages = $blogs->max_num_pages;
-			                // the_posts_pagination( array(
-			                //    'mid_size' => 2,
-			                //    'end_size' => 0,
-			                //    'prev_text' => __( '«', 'green' ),
-			                //    'next_text' => __( '»', 'green' ),
-			                //    'screen_reader_text' => ' ',
-			                //    'current' => ($paged ? $paged : 1),
-			                //    'total' => $blogs->max_num_pages,
-			                // ) );
-							$pag_args1 = array(
-								'type'         	=> 'array',
-								'end_size'     	=> 0,
-								'mid_size'      => 2,
-								'add_fragment'  => '',
-								'show_all' 		=> false,
-							    'current' 		=> $paged,
-							    'total'   		=> $blogs->max_num_pages,
-							    'prev_text'		=> '«',
-							    'next_text'		=> '»',
-							);
-		    				$paginate_links = paginate_links( $pag_args1 );
-		    				$c=$pag_args1['current'];
-		    				$dots3 =  __( '&hellip;' );
+		<?php if( $atts['page'] === 'home_logged') : ?>
+			<?php while ($blogs->have_posts()): 
+				$blogs->the_post();
+			if($posts_show_home > 5) { break; } ?>	
+				<div class="carousel-cell">
+	                <a href="<?= get_the_permalink(); ?>"><p><?= get_the_title(); ?></p></a>
+	            </div>	
+            <?php
+            	$posts_show_home++; 
+        		endwhile; 
+        	?>
+		<?php else: ?>
+			<div class="content_blog">
+				<?php while ($blogs->have_posts()):?>
+					<?php $blogs->the_post(); ?>
+					<?php get_template_part( 'template-parts/content'); ?>
+				<?php endwhile; ?>
+				<?php  if($maxpage > 1) : ?>
+					<div class="pagenav_box">
+						<div class="pagenavigation">
+							<span class="total-on-page"><?= ($paged ? $paged : 1).' / '.$maxpage?></span>
+							<?php 
+								$GLOBALS['wp_query']->max_num_pages = $blogs->max_num_pages;
+				                // the_posts_pagination( array(
+				                //    'mid_size' => 2,
+				                //    'end_size' => 0,
+				                //    'prev_text' => __( '«', 'green' ),
+				                //    'next_text' => __( '»', 'green' ),
+				                //    'screen_reader_text' => ' ',
+				                //    'current' => ($paged ? $paged : 1),
+				                //    'total' => $blogs->max_num_pages,
+				                // ) );
+								$pag_args1 = array(
+									'type'         	=> 'array',
+									'end_size'     	=> 0,
+									'mid_size'      => 2,
+									'add_fragment'  => '',
+									'show_all' 		=> false,
+								    'current' 		=> $paged,
+								    'total'   		=> $blogs->max_num_pages,
+								    'prev_text'		=> '«',
+								    'next_text'		=> '»',
+								);
+			    				$paginate_links = paginate_links( $pag_args1 );
+			    				$c=$pag_args1['current'];
+			    				$dots3 =  __( '&hellip;' );
 
+			    				$allowed=[
+			    					'current',
+								    'prev ',
+								    'next ',
+								    $dots3,
+								    sprintf( '/page/%d/', $c+1 ),
+								    sprintf( '/page/%d/', $c+2 ),
+								    sprintf( '/page/%d/', $c-1 ),
+								    sprintf( '/page/%d/', $c+2 ),
+			    				];
 
-		    				$allowed=[
-		    					'current',
-							    'prev ',
-							    'next ',
-							    $dots3,
-							    sprintf( '/page/%d/', $c+1 ),
-							    sprintf( '/page/%d/', $c+2 ),
-							    sprintf( '/page/%d/', $c-1 ),
-							    sprintf( '/page/%d/', $c+2 ),
-		    				];
+			    				$paginate_links=array_filter(
+							        $paginate_links,
+								    function( $value ) use ( $allowed ) {
+								        foreach( (array) $allowed as $tag )
+								        {			        	
+								            if( false !== strpos( $value, $tag ) )
+								                return true;
+								        }
+								        return false;
+								    }
+								);
 
-		    				$paginate_links=array_filter(
-						        $paginate_links,
-							    function( $value ) use ( $allowed ) {
-							        foreach( (array) $allowed as $tag )
-							        {			        	
-							            if( false !== strpos( $value, $tag ) )
-							                return true;
-							        }
-							        return false;
-							    }
-							);
-
-		    				if( ! empty( $paginate_links ) )
-						    printf(
-						        "%s",
-						        join( "", $paginate_links )
-						    );
-						?>
+			    				if( ! empty( $paginate_links ) )
+							    printf(
+							        "%s",
+							        join( "", $paginate_links )
+							    );
+							?>
+						</div>
 					</div>
-				</div>
-			<?php endif; ?>
-		</div>
-		
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
+		<?php wp_reset_postdata(); ?>
 	<?php endif; /* end if*/ 		
-	
 	$content=ob_get_contents();
 	ob_get_clean();
 	return $content;
@@ -507,3 +513,35 @@ add_filter( 'wp_new_user_notification_email', 'new_user_notification_email_callb
 //     );
 //     wp_enqueue_script( 'miyanomori_admin_script' );
 // }
+// 
+// 
+
+function menu_active(){
+	global $wp;
+	$current_url = home_url( $wp->request );
+	$active = '';
+	switch (true) {
+		case is_numeric(strpos($current_url,'feature')):
+			$active = 'feature';
+			break;
+		case is_numeric(strpos($current_url,'plan')):
+			$active = 'plan';
+			break;
+		case is_numeric(strpos($current_url,'equipment')):
+			$active = 'equipment';
+			break;
+		case is_numeric(strpos($current_url,'access')):
+			$active = 'access';
+			break;
+		case is_numeric(strpos($current_url,'outline')):
+			$active = 'outline';
+			break;
+		case is_numeric(strpos($current_url,'contactus')):
+			$active = 'contactus';
+			break;
+		default:
+			$active = 'home';
+		break;
+	}
+	return $active;
+}

@@ -7,8 +7,8 @@
                     <p>
                         <i class="i_circle"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_email.svg" alt="" class="img-fluid" width="17"></i>
                     </p>
-                    <h5 class="mb-2">お問い合わせフォーム</h5>
-                    <a href="<?= home_url(); ?>/contactus" class="btn btncontactus"><span>お問い合わせ</span></a>
+                    <h5 class="mb-2"><?php the_field('contact_text','option'); ?></h5>
+                    <a href="<?= home_url(); ?>/contactus" class="btn btncontactus"><span><?php the_field('contact_button_text','option'); ?></span></a>
                 </div>
             </div>
 <!--             <div class="col-12 col-lg-4">
@@ -25,9 +25,7 @@
                     <p>
                         <i class="i_circle"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/i_tel.svg" alt="" class="img-fluid" width="17"></i>
                     </p>
-                    <h5>お電話でのお問い合わせ</h5>
-                    <h3>Tel. <a href="tel:0120853133">0120-853-133</a></h3>
-                    <p>スタッフ受付 10:00 ～ 18:00</p>
+                    <?php the_field('contact_info','option'); ?>
                 </div>
             </div>
         </div>
@@ -40,13 +38,25 @@
 		<div class="row">
     		<div class="col-12 col-lg-12">
                 <a href="<?= home_url() ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
-                <ul>
+                <!-- <ul>
                     <li><a href="<?php echo home_url('/news/'); ?>">新着情報</a></li>
                     <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
                     <li><a target="_blank" href="https://www.propolife.co.jp/terms/">利用規約</a></li>
                     <li><a target="_blank" href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>
                     <li><a href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
                     <li><a target="_blank" href="https://www.propolife.co.jp/socialpolicy/">ソーシャルメディアポリシー</a></li>
+                </ul> -->
+
+                <ul>
+                    <?php if ( have_rows('footer_menu', 'option') ) {
+                        while ( have_rows('footer_menu', 'option') ) { the_row();
+                            $text = get_sub_field('text');
+                            $url = get_sub_field('url');
+                            ?>
+                                <li><a href="<?php echo $url; ?>"><?php echo $text; ?></a></li>
+                            <?php
+                        }
+                    } ?>
                 </ul>
                 
                 <ul class="my-brand mb-0">

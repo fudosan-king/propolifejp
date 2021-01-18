@@ -51,6 +51,7 @@
     </div>
 </section>
 <section id="section_living" class="section_living">
+        <?php $living_section = get_field('living_section'); ?>
         <div class="container">
             <div class="row living">
                 <div class="col-12 col-lg-6">
@@ -65,25 +66,16 @@
                             <li><span>MIYANOMORI</span></li>
                             <li class="active"><span>STORY</span></li>
                         </ul>
-                        <h2 class="title">宮の森で暮らす、<span>ということ。</span></h2>
-                        <p class="subtitle">Living in the Miyanomori.</p>
-                        <p class="mb-0">豊かな自然と歴史ある風土に包まれた、北海道・札幌宮の森。<br>
-                            札幌市全 10 区のなかでも、<br>
-                            開拓当初から計画的なまちづくりがなされ都市機能の高い中央区。<br>
-                            一方で天然記念物の原始林や野生動物も暮らす穏やかな側面もある魅力的なエリアです。<br>
-                            その山の手に佇む「プロスタイル札幌 宮の森」は、本物のラグジュアリー・レジデンス。<br>
-                            大きく息を吸い込めば木の芳香に満たされ、<br>
-                            風光明媚な周囲の山々を借景に、穏やかな時間が流れます。<br>
-                            木を贅沢に使ったぬくもりと静謐な環境のなかで、<br>
-                            まるでヴィンテージのワインや家具のように<br>
-                            じっくり時間をかけて「あなただけの上質な暮らし」を育みませんか。
-                        </p>
+                        <h2 class="title"><?php echo $living_section['title']; ?></h2>
+                        <p class="subtitle"><?php echo $living_section['sub_title']; ?></p>
+                        <div class="mb-0"><?php echo $living_section['content']; ?></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="section_spring_summer">
+        <?php $spring_summer_section = get_field('spring_summer_section'); ?>
         <img src="<?php bloginfo('template_directory');?>/assets/images/1x/bg_spring_summer.png" alt="" class="img-fluid hide-mobile">
         <img src="<?php bloginfo('template_directory');?>/assets/images/main/sp/spring-summer-3x.jpg" alt="" class="img-fluid hide-pc show-mobile">
         <div class="container">
@@ -95,13 +87,9 @@
                             <li><span>MIYANOMORI</span></li>
                             <li class="active"><span>LOCATION.01</span></li>
                         </ul>
-                        <h2 class="title">爽やかな息吹抜ける<span>丘の寛ぎ</span></h2>
-                        <p class="subtitle">Relaxation in the hills with comfortable breeze.</p>
-                        <p class="mb-0">徒歩 6 分の円山公園は、札幌を代表する桜の名所。<br>
-                        天然記念物の原始林が迎える春の息吹は野鳥やエゾリスを包み、<br>
-                        咲き誇る桜は瑞々しい夏の碧(みどり)へと移ろいます。<br>
-                        居住地で、近隣で、鮮やかな自然と澄んだ空気を存分に愉しむ
-                        北海道の春夏は格別です。</p>
+                        <h2 class="title"><?php echo $spring_summer_section['title']; ?></h2>
+                        <p class="subtitle"><?php echo $spring_summer_section['sub_title']; ?></p>
+                        <div class="mb-0"><?php echo $spring_summer_section['content']; ?></div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -127,6 +115,7 @@
         </div>
     </section>
     <section class="section_autmun_winter">
+        <?php $autumn_winter_section = get_field('autumn_winter_section'); ?>
         <img src="<?php bloginfo('template_directory');?>/assets/images/1x/bg_autmun_winter.jpg" alt="" class="img-fluid">
         <div class="container">
             <div class="row">
@@ -138,13 +127,9 @@
                             <li><span>MIYANOMORI</span></li>
                             <li class="active"><span>LOCATION.02</span></li>
                         </ul>
-                        <h2 class="title">皇室も愛した<span>宮の森の冬</span></h2>
-                        <p class="subtitle">Winter in Miyanomori, loved by the Imperial Family.</p>
-                        <p>秩父宮殿下・高松宮殿下の来札を機に命名された「宮の森」。<br>
-                                札幌五輪で使用されたジャンプ競技場や数々の文化施設は、
-                                深々と雪深くなる冬の時間を充実させます。<br>
-                                もちろん秋の紅葉の時期には、
-                                居室からの大パノラマを鮮やかに彩ります。</p>
+                        <h2 class="title"><?php echo $autumn_winter_section['title']; ?></h2>
+                        <p class="subtitle"><?php echo $autumn_winter_section['sub_title']; ?></p>
+                        <div class="mb-0"><?php echo $autumn_winter_section['content']; ?></div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-12">
@@ -168,13 +153,14 @@
         </div>
     </section>
     <section class="section_area_minyanomori">
+        <?php $area_miyanomori_section = get_field('area_miyanomori_section'); ?>
         <img src="<?php bloginfo('template_directory');?>/assets/images/1x/miyanomori_area.jpg" alt="" class="img-fluid hide-mobile">
         <img src="<?php bloginfo('template_directory');?>/assets/images/main/area-view-2x.jpg" alt="" class="img-fluid hide-pc show-mobile m-auto">
         <div class="area_minyanomori_content">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-5 align-self-center">
-                        <h1>宮の森エリア</h1>
+                        <h1><?php echo $area_miyanomori_section['heading']; ?></h1>
                     </div>
                     <div class="col-12 col-lg-7 align-self-center">
                         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
@@ -183,10 +169,8 @@
                                 <li><span>MIYANOMORI</span></li>
                                 <li class="active"><span>LOCATION.03</span></li>
                             </ul>
-                            <h2 class="title">四季に彩られた<span>優美な時間を過ごす<span><span class="block-pc"><span>上質な暮らしが、</span>ここにあります</span></h2>
-                            <!-- <p class="subtitle">Winter in Miyanomori, loved by the Imperial Family.</p> -->
-                            <p>どの季節も豊かな表情を見せる、緑に恵まれた宮の森。<br>
-                                    桜の名所・円山公園や、札幌五輪で使用されたスキージャンプ台も、住まいの徒歩圏内で大自然を満喫できます。</p>
+                            <h2 class="title"><?php echo $area_miyanomori_section['title']; ?></h2>
+                            <div class="mb-0"><?php echo $area_miyanomori_section['content']; ?></div>
                         </div>
                     </div>
                 </div>
@@ -218,6 +202,7 @@
         </div>
     </section>
     <section class="section_interview">
+        <?php $interview_section = get_field('interview_section'); ?>
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-12 col-lg-6">
@@ -226,8 +211,8 @@
                     </div>
                     <div class="box_interview_info">
                         <h4>PROFILE</h4>
-                        <p>建築家、東京大学特別教授。東京五輪で見た丹下健三の代々木屋内競技場に衝撃を受け、幼少期より建築家を目指す。大学では、原広司、内田祥哉に師事し、大学院時代にアフリカのサハラ砂漠を横断。集落の美と力にめざめる。コロンビア大学客員研究員を経て、1990年隈研吾建築都市設計事務所を設立。これまで20か国超の国々で建築を設計し、国内外の受賞歴多数。その土地の環境、文化に溶け込む建築を目指し、ヒューマンスケールのやさしく、やわらかなデザインを提案。また、コンクリートや鉄に代わる新しい素材の探求を通じて、工業化社会の後の建築のあり方を追求している。</p>
-                        <a href="https://kkaa.co.jp" target="_blank" class="btn-link">隈研吾建築都市設計事務所</a>
+                        <p><?php echo $interview_section['profile']; ?></p>
+                        <a href="https://kkaa.co.jp" target="_blank" class="btn-link"><?php echo $interview_section['profile_button_text']; ?></a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
@@ -241,13 +226,9 @@
                                 <li><span>MIYANOMORI</span></li>
                                 <li class="active"><span>INTERVIEW/ KENGO KUMA</span></li>
                             </ul>
-                            <h2 class="title">『home』としての<br>
-                                    実感を得られる<br>
-                                    木と寄り添う上質な暮らし</h2>
-                            <p>「プロスタイル札幌 宮の森」の設計を手がけたのは、世界中で活躍する建築家・隈研吾氏。日本の繊細な木工技術を生かしながら、現代的なデザインの木造建築を取り入れるスタイルが特徴的だ。<br>
-                               近年日本では、新国立競技場(2019)やJR東日本高輪ゲートウェイ駅(2020)の建築が大きく話題に。</p>
-                            <p class="mb-0">「プロスタイル札幌 宮の森」の設計の背景や、宮の森の地で味わえるような「上質な暮らし」について話を聞いた。</p>
-                            <a href="<?= home_url('/message'); ?>" class="btn btn-itv"> <span>インタビューを見る</span></a>
+                            <h2 class="title"><?php echo $interview_section['title']; ?></h2>
+                            <?php echo $interview_section['content']; ?>
+                            <a href="<?= home_url('/message'); ?>" class="btn btn-itv"> <span><?php echo $interview_section['message_button']; ?></span></a>
 
                         </div>
                     </div>

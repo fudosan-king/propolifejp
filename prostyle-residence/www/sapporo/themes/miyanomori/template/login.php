@@ -33,6 +33,10 @@
         </a>
     </div>
 
+    <div class="slide-main_video">
+        <a href="#modal_login" data-toggle="modal"><p><i class="i-video"></i>プロスタイル札幌 宮の森　ブランド動画はこちら</p></a>
+    </div>
+
     <div class="news notlogin">
         <a href="#modal_login" data-toggle="modal">
             <div class="row">

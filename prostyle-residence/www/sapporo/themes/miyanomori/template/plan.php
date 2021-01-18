@@ -7,8 +7,12 @@ Template Post Type: page
 <?php get_header(); ?>
 <?php get_template_part( 'template/home/header'); ?>
 <section class="section_subbanner">
-    <div class="embed-responsive embed-responsive-4by3">
-        <iframe class="embed-responsive-item" width="100%" height="700" src="https://my.matterport.com/show/?m=VHEQdZ6QNAh" frameborder="0" allowfullscreen></iframe>
+    <div class="embed-responsive">
+        <h1>クロニクル　東京日本橋ショールーム</h1>
+        <!-- <div class="embed-responsive_bg-img"></div> -->
+        <!-- <img class="<?php //bloginfo('template_url'); ?>/assets/images/1x/plan-bg-top.jpg" alt="plan bg"> -->
+
+        <!-- <iframe class="embed-responsive-item" width="100%" height="700" src="https://my.matterport.com/show/?m=VHEQdZ6QNAh" frameborder="0" allowfullscreen></iframe> -->
     </div>
 </section>
 <main>

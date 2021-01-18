@@ -846,7 +846,7 @@ header .menu-list a {
 }
 
 .news a {
-    padding: 30px 0;
+    padding: 30px;
     display: block;
 }
 
@@ -868,6 +868,9 @@ header .menu-list a {
     width: 24px;
     height: 24px;
     right: 30px;
+}
+.news.notlogin h2{
+    margin-bottom: 20px;
 }
 
 .news .row{
@@ -1976,6 +1979,27 @@ footer address p {
 
 .embed-responsive {
     padding-top: 150px;
+    position: relative;
+}
+
+.embed-responsive {
+    background-image:url('../images/1x/plan-bg-top.jpg');
+    background-repeat: no-repeat;
+    padding-top:75.51%;
+    background-size:cover;
+    background-position: center;
+}
+
+.embed-responsive h1{
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    color: #fff;
+    font-size: 3.5rem;
+    right: 14%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .section_plan .box_infoview_top {

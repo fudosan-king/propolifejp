@@ -32,19 +32,19 @@
     <div class="scroll_down">
         <a href="#section_living" data-scroll class="scroll_title">Scroll</a>
     </div>
+    <div class="slide-main_video">
+        <a href="#"><p><i class="i-video"></i>プロスタイル札幌 宮の森　ブランド動画はこちら</p></a>
+    </div>
     <div class="news news_afterlogin">
         <div class="row">
             <div class="col-12 col-lg-2">
-                <h2>新着情報</h2>
+                <a href="<?= home_url('/news'); ?>"><h2>新着情報</h2></a>
             </div>
             <div class="col-12 col-lg-10">
                 <div class="carousel carousel_news" data-flickity='{"pageDots": false, "contain": true, "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
-                    <div class="carousel-cell">
-                        <p>「プロスタイル札幌宮の森レジデンス」、10月0日（土）より事前案内会を開始</p>
-                    </div>
-                    <div class="carousel-cell">
-                        <p>会員登録いただいたお客者様限定に、未公開間取りほか特別コンテンツを公開しております。</p>
-                    </div>
+                    <?php 
+                       echo do_shortcode("[Miyanomori_Blogs  page='home_logged' ]");
+                    ?>
                 </div>
             </div>
         </div>

@@ -6,16 +6,7 @@ Template Post Type: page
 ?>
 <?php get_header(); ?>
 <?php get_template_part( 'template/home/header'); ?>
-    <section class="js-auto-slider slide-dot-slick">
-        <div class="slide-dot-slick_item">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-        </div>
-        <div class="slide-dot-slick_item">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-        </div>
-        <div class="slide-dot-slick_item">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
-        </div>
+    <section class="slide-dot-slick">
         <div class="slide-dot-slick_item">
             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
         </div>
@@ -357,9 +348,6 @@ Template Post Type: page
                             <h4><span>洗面室・浴室</span></h4>
                             <div class="equip-spec_box_img slide-flickity">
                                 <div class="carousel" data-flickity data-flickity-options='{ "prevNextButtons": false }'>
-                                    <div class="carousel-cell">
-                                        <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-8a.jpg" alt="" title="">
-                                    </div>
                                     <div class="carousel-cell">
                                         <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-8b.jpg" alt="" title="">
                                     </div>

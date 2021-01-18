@@ -319,6 +319,11 @@
         -webkit-animation: circle 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         animation: circle 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
+
+    .box_designsupervision{
+        bottom: 200px;
+    }
+
 }
 /*End*/
 
@@ -394,8 +399,12 @@
         bottom: 160px;
     }
 
-    .news a {
-        padding: 8px 0;
+    .news h2:before{
+        width: 0;
+    }
+
+    .news .carousel_news .carousel-cell{
+        padding:0 30px;
     }
 
     .title span {
@@ -1130,7 +1139,7 @@
     }
 
     .news .carousel_news .flickity-prev-next-button.previous {
-        right: -30px;
+        right: -26px;
     }
 
     .news .flickity-prev-next-button.next {
@@ -1615,6 +1624,12 @@
     .section_plan .tabs-center-u-shaped ul.nav-tabs li.nav-item a.nav-link {
         padding: 5px 0;
     }
+
+    .slide-main_video{
+        right:15px;
+        left:15px;
+    }
+
 }
 
 @media (max-width: 375px) {

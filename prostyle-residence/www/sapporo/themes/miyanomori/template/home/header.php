@@ -14,16 +14,15 @@
                 <!-- <span class="menuLine"></span> -->
             </button>
         </div>
-
         <div id="navbarSupportedContent" class="collapse navbar-collapse menu-list">
             <ul class="navbar-nav">
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">宮の森で暮らすということ</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">デザイン</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン・眺望</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">設備仕様・構造</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
-                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
+                <li class="<?= ( menu_active() === 'home' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">宮の森で暮らすということ</a></li>
+                <li class="<?= ( menu_active() === 'feature' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">デザイン</a></li>
+                <li class="<?= ( menu_active() === 'plan' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン・眺望</a></li>
+                <li class="<?= ( menu_active() === 'equipment' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">設備仕様・構造</a></li>
+                <li class="<?= ( menu_active() === 'access' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
+                <li class="<?= ( menu_active() === 'outline' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
+                <li class="<?= ( menu_active() === 'contactus' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>
                 <li class="nav-item dropdown">

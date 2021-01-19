@@ -1,9 +1,20 @@
 <header class="header_before-login">
     <div class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="index.php">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo.svg" alt="" class="img-fluid logo_white" width="246">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_black.svg" alt="" class="img-fluid logo_black" width="246">
-        </a>
+        
+       <?php  
+            $lang = qtranxf_getLanguage(); 
+            if($lang === 'en') :            
+        ?>
+            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_white">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-b-en.png" alt="" class="img-fluid logo_black">
+            </a>
+        <?php elseif ($lang === 'ja' || $lang === 'tw' || $lang === 'zh') : ?>
+            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-y.png" alt="" class="img-fluid logo_white">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-b.png" alt="" class="img-fluid logo_black">
+            </a>
+        <?php endif; ?>
 
         <div class="btn-action">
             <button class="user-login class="nav-link" href="#modal_login" data-toggle="modal">
@@ -78,7 +89,7 @@
                         <input class="form-control" type="text" name="forgot_email"  id="forgot_email" placeholder="メールアドレスをご入力ください">
                     </div>
                     <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-                    <button type="submit" class="btn w-100 btn_brown" name="" /><?php esc_attr_e( 'パスワードをリセットする', 'miyanomori' ); ?></button>
+                    <button type="submit" class="btn w-100 btn_brown" name="" /><?php esc_attr_e( 'パスワードを再設定する', 'miyanomori' ); ?></button>
                 </div>
             </form>
             <form  method="post" class="frm_login" id="frm_regiter" >

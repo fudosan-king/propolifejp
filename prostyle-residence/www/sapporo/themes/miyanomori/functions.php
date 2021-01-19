@@ -263,7 +263,7 @@ function get_nav_lang($isMobile=false){
     global $q_config;
 
     if(function_exists('qtranxf_getLanguage')){
-    	$sortedLanguages = array(0 => "ja", 1=>"en", 2=>"cn", 3=>"tw" );
+    	$sortedLanguages = array(0 => "ja", 1=>"en", 2=>"zh", 3=>"tw" );
 
     	$sortedLanguages = $sortedLanguages + qtranxf_getSortedLanguages(); 
     	

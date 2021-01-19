@@ -2674,6 +2674,41 @@ footer address p {
     text-align: center;
 }
 
+.section_plan_detail .equip-spec_box{
+    margin-top:20px;
+    margin-bottom:0;
+}
+
+    
+.section_plan_detail .equip-spec_box .row {
+    margin-left:-8px;
+    margin-right:-8px;
+}
+
+.section_plan_detail .equip-spec_box .col-md-4 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.section_plan_detail .equip-spec_box .equip-spec_box-des{
+    font-size:0.75rem;
+}
+
+.section_plan_detail .equip-spec_box img{
+    max-width:100%;
+    height:auto;
+}
+
+.section_plan_detail .equip-spec_box .equip-spec_box-title{
+    color:#B48856;
+}
+
+.section_plan_detail .equip-spec_box .equip-spec_box-title:before{
+    background-color: #B48856;
+}
+
+.section_plan_detail .equip-spec_box .equip-spec_box-title:after{
+    background-color: #B48856;
+}
 
 #modal_video .modal-header .close {
     padding: 0;

@@ -10,52 +10,53 @@ Template Post Type: page
     <section class="section_contactus">
         <div class="container">
             <div class="row">
+                <?php $contact_us_headings = get_field('contact_us_headings'); ?>
                 <div class="col-12 col-lg-12">
                     <div class="contactus_top">
-                        <h2 class="title_sub">お問い合わせ</h2>
+                        <h2 class="title_sub"><?php echo $contact_us_headings['heading_text']; ?></h2>
                         <p class="mb-0"><i class="i_tel"><img src="<?php bloginfo('template_url'); ?>/assets/images/SVG/i_tel.svg" alt="" class="img-fluid" width="17"></i></p>
-                        <h3>Tel. <a href="tel:0120853133">0120-853-133</a></h3>
-                        <p class="op-cl-time">受付時間：10:00 ～ 18:00（火曜・水曜は除く）</p>
-                        <p><small>※火曜水曜が祝日の場合は営業</small></p>
-                        <p>物件のご相談・ご依頼や資料請求について、お問い合わせフォームよりお気軽にお問い合わせください。<br>
-                            <span class="red">※</span>は必須項目です。</p>
+                        <h3>Tel. <a href="tel:0120853133"><?php echo $contact_us_headings['tel_number'] ?></a></h3>
+                        <p class="op-cl-time"><?php echo $contact_us_headings['work_time']; ?></p>
+                        <p><small><?php echo $contact_us_headings['small_note'] ?></small></p>
+                        <p><?php echo $contact_us_headings['big_note']; ?></p>
                     </div>
                     <div class="contactus_content">
+                        <?php $form_labels = get_field('form_labels'); ?>
                         <form action="https://go.pardot.com/l/185822/2020-11-01/qmzh5l" class="frm_contactus" method="POST">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-3 align-self-center">
-                                        <label for="" class="label_required" >メールアドレス<span class="red">（※）</span></label>
+                                        <label for="" class="label_required" ><?php echo $form_labels['email']; ?><span class="red">（※）</span></label>
                                     </div>
                                     <div class="col-12 col-lg-9 align-self-center">
-                                        <input type="text" class="form-control required" placeholder="例：xxxxxxx@miyanomori.jp" name="email">
+                                        <input type="text" class="form-control required" placeholder="<?php echo $form_labels['email_placeholder']; ?>" name="email">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-3 align-self-center">
-                                        <label for="" class="label_required" >お名前<span class="red">（※）</span></label>
+                                        <label for="" class="label_required" ><?php echo $form_labels['name']; ?><span class="red">（※）</span></label>
                                     </div>
                                     <div class="col-12 col-lg-9 align-self-center">
                                         <div class="row">
                                             <div class="col-12 col-lg-6 align-self-center">
                                                 <div class="row">
                                                     <div class="col-12 col-lg-2 align-self-center">
-                                                        <label for="">姓</label>
+                                                        <label for=""><?php echo $form_labels['kanji_familyname'] ?></label>
                                                     </div>
                                                     <div class="col-12 col-lg-10 align-self-center mb-2 mb-lg-0">
-                                                        <input type="text" class="form-control required" placeholder="例：宮の森" name="kanji_familyname">
+                                                        <input type="text" class="form-control required" placeholder="<?php echo $form_labels['kanji_family_name_placeholder']; ?>" name="kanji_familyname">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-lg-6 align-self-center">
                                                 <div class="row">
                                                     <div class="col-12 col-lg-2 align-self-center">
-                                                        <label for="">名</label>
+                                                        <label for=""><?php echo $form_labels['kanji_name'] ?></label>
                                                     </div>
                                                     <div class="col-12 col-lg-10 align-self-center mb-2 mb-lg-0">
-                                                        <input type="text" class="form-control required" placeholder="例：太郎" name="kanji_name">
+                                                        <input type="text" class="form-control required" placeholder="<?php echo $form_labels['kanji_name_placeholder']; ?>" name="kanji_name">
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,27 +67,27 @@ Template Post Type: page
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-3 align-self-center">
-                                        <label for="">お名前（フリガナ）</label>
+                                        <label for=""><?php echo $form_labels['name_2'] ?></label>
                                     </div>
                                     <div class="col-12 col-lg-9 align-self-center">
                                         <div class="row">
                                             <div class="col-12 col-lg-6 align-self-center">
                                                 <div class="row">
                                                     <div class="col-12 col-lg-2 align-self-center">
-                                                        <label for="">セイ</label>
+                                                        <label for=""><?php echo $form_labels['kata_familyname'] ?></label>
                                                     </div>
                                                     <div class="col-12 col-lg-10 align-self-center mb-2 mb-lg-0">
-                                                        <input type="text" class="form-control" placeholder="例：ミヤノモリ" name="kata_familyname">
+                                                        <input type="text" class="form-control" placeholder="<?php echo $form_labels['kata_family_name_placeholder'] ?>" name="kata_familyname">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-lg-6 align-self-center">
                                                 <div class="row">
                                                     <div class="col-12 col-lg-2 align-self-center">
-                                                        <label for="">メイ</label>
+                                                        <label for=""><?php echo $form_labels['kata_name'] ?></label>
                                                     </div>
                                                     <div class="col-12 col-lg-10 align-self-center mb-2 mb-lg-0">
-                                                        <input type="text" class="form-control" placeholder="例：タロウ" name="kata_name">
+                                                        <input type="text" class="form-control" placeholder="<?php echo $form_labels['kata_name_placeholder'] ?>" name="kata_name">
                                                     </div>
                                                 </div>
                                             </div>
@@ -97,35 +98,35 @@ Template Post Type: page
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-3 align-self-center">
-                                        <label for="" class="label_required">お電話番号<span class="red">（※）</span></label>
+                                        <label for="" class="label_required"><?php echo $form_labels['phone'] ?><span class="red">（※）</span></label>
                                     </div>
                                     <div class="col-12 col-lg-9 align-self-center">
-                                        <input type="text" class="form-control required" placeholder="例：0312341234　(※ハイフンなしでご記入ください)" name="phone_number">
+                                        <input type="text" class="form-control required" placeholder="<?php echo $form_labels['phone_placeholder'] ?>" name="phone_number">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-3">
-                                        <label for="" class="label_required">お問い合わせ事項<span class="red">（※）</span></label>
+                                        <label for="" class="label_required"><?php echo $form_labels['check_box_text'] ?><span class="red">（※）</span></label>
                                         <input type="hidden"  name="contact_item_text" value="">
                                     </div>
                                     <div class="col-12 col-lg-9">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input contact_item_document" id="customCheck1" name="contact_item[]" value="資料請求したい">
-                                            <label class="custom-control-label" for="customCheck1"><span>資料請求したい</span></label>
+                                            <label class="custom-control-label" for="customCheck1"><span><?php echo $form_labels['check_1'] ?></span></label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input contact_item_meet " id="customCheck2" name="contact_item[]" value="来場予約したい">
-                                            <label class="custom-control-label" for="customCheck2"><span>来場予約したい</span></label>
+                                            <label class="custom-control-label" for="customCheck2"><span><?php echo $form_labels['check_2'] ?></span></label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input contact_item_staff" id="customCheck3_" name="contact_item[]" value="担当者から連絡が欲しい">
-                                            <label class="custom-control-label" for="customCheck3_"><span>担当者から連絡が欲しい</span></label>
+                                            <label class="custom-control-label" for="customCheck3_"><span><?php echo $form_labels['check_3'] ?></span></label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input contact_item_other" id="customCheck4_" name="contact_item[]" value="その他お問い合わせ">
-                                            <label class="custom-control-label" for="customCheck4_"><span>その他お問い合わせ</span></label>
+                                            <label class="custom-control-label" for="customCheck4_"><span><?php echo $form_labels['check_4'] ?></span></label>
                                         </div>
                                     </div>
                                 </div>
@@ -405,14 +406,12 @@ Template Post Type: page
                                 <div class="row">
                                     <div class="col-12 col-lg-12">
                                         <div class="frm_contactus_footer">
-                                            <p class="text-center">ご入力いただいた情報は、当社のプライバシーポリシーに従って厳重に管理いたします。<br>
-                                                個人情報の取扱に関しましては <a href="<?= home_url('privacy-policy'); ?>" target="_blank">プライバシーポリシー</a> をご覧ください。<br>
-                                                ご確認の上、ご同意いただける方は下の「同意する」をチェックしてください。</p>
+                                            <?php echo $form_labels['confirmation_text'] ?>
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="ck_agree" checked>
-                                                <label class="custom-control-label label_required" for="ck_agree">同意する</label>
+                                                <label class="custom-control-label label_required" for="ck_agree"><?php echo $form_labels['agree_label'] ?></label>
                                             </div>
-                                            <button type="submit" class="btn btnsubmit" id="ibtnGoSubmit" ><span>上記に同意して確認画面へ</span></button>
+                                            <button type="submit" class="btn btnsubmit" id="ibtnGoSubmit" ><span><?php echo $form_labels['submit_button'] ?></span></button>
                                         </div>
                                     </div>
                                 </div>

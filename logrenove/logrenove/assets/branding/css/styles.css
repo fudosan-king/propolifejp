@@ -564,3 +564,32 @@ footer .footer_bottom p a {
 .footer_top, .footer_bottom{
     padding: unset;
 }
+
+.footer_contact {
+    width: 100%;
+    background: #8c7d5e;
+}
+
+.footer_contact a {
+    display: block;
+    padding: 6.5px 20px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.footer_contact a:last-child {
+    border-right: none;
+}
+
+.footer_contact a img {
+    margin-bottom: 2px;
+}
+
+.footer_contact a span {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1em;
+}
+
+

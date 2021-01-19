@@ -1296,9 +1296,9 @@ footer .footer_bottom {
 }
 
 @media (max-width: 768px) {
-    .navbar-collapse.collapse:not(.show) {
+    /*.navbar-collapse.collapse:not(.show) {
         display: block;
-    }
+    }*/
 
     .navbar-expand-lg .navbar-nav {
         text-align: right;

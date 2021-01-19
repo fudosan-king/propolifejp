@@ -263,6 +263,10 @@ function get_nav_lang($isMobile=false){
     global $q_config;
 
     if(function_exists('qtranxf_getLanguage')){
+    	$sortedLanguages = array(0 => "ja", 1=>"en", 2=>"cn", 3=>"tw" );
+
+    	$sortedLanguages = $sortedLanguages + qtranxf_getSortedLanguages(); 
+    	
 		$currentLanguage = qtranxf_getLanguage();
 		$currentLangName = strtoupper(qtranxf_getLanguageNameNative( $currentLanguage ));
 
@@ -274,7 +278,7 @@ function get_nav_lang($isMobile=false){
           
 		echo '<a class="nav-link dropdown-toggle '.$classNavLink.'" onclick="return false;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$lang.'<i class="fa fa-angle-down fa-lg"></i></a>';
 		echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
-		foreach ( qtranxf_getSortedLanguages() as $language ) {
+		foreach ( $sortedLanguages as $language ) {
 			$name 	 = strtoupper(qtranxf_getLanguageNameNative( $language ));
 			$locale = $q_config['locale'][ $language ];
 			$lang = substr( $locale, 3, 4 );

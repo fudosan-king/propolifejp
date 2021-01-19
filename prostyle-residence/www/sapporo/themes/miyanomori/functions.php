@@ -323,9 +323,9 @@ function miyanomori_blogs_type($atts){
 		<?php if( $atts['page'] === 'home_logged') : ?>
 			<?php while ($blogs->have_posts()): 
 				$blogs->the_post();
-			if($posts_show_home > 5) { break; } ?>	
+			if($posts_show_home > 1) { break; } ?>	
 				<div class="carousel-cell">
-	                <a href="<?= get_the_permalink(); ?>"><p><?= get_the_title(); ?></p></a>
+	                <p><?= get_the_title(); ?></p>
 	            </div>	
             <?php
             	$posts_show_home++; 

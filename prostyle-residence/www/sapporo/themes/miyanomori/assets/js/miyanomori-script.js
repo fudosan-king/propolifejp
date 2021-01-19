@@ -269,7 +269,7 @@ function miyanomori() {
     this.calcInteractiveImages = function (){
         const eleBoxImgVR = $('#planvr').find('.box_plan_detail_img');
         const eleBoxImgVR_Img = $('#planvr').find('.box_plan_detail_img img');
-        const eleIconVR = $('#planvr .box_plan_detail_img').find('a i');
+        const eleIconVR = $('#planvr .box_plan_detail_img').find('i');
         const w = $(window);
 
         const posIconVRs = [

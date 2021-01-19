@@ -35,20 +35,24 @@
     <div class="slide-main_video">
         <a href="#videoPopup" data-toggle="modal"><p><i class="i-video"></i>プロスタイル札幌 宮の森　ブランド動画はこちら</p></a>
     </div>
+
     <div class="news news_afterlogin">
-        <div class="row">
-            <div class="col-12 col-lg-2">
-                <a href="<?= home_url('/news'); ?>"><h2>新着情報</h2></a>
-            </div>
-            <div class="col-12 col-lg-10">
-                <div class="carousel carousel_news" data-flickity='{"pageDots": false, "contain": true, "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
-                    <?php 
-                       echo do_shortcode("[Miyanomori_Blogs  page='home_logged' ]");
-                    ?>
+        <a href="<?= home_url('/news'); ?>">
+            <div class="row">
+                <div class="col-12 col-lg-2">
+                    <h2>新着情報</h2>
+                </div>
+                <div class="col-12 col-lg-10">
+                    <div class="carousel carousel_news">
+                        <?php 
+                           echo do_shortcode("[Miyanomori_Blogs  page='home_logged' ]");
+                        ?>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
+
 </section>
 <section id="section_living" class="section_living">
         <?php $living_section = get_field('living_section'); ?>

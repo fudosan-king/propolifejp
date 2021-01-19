@@ -599,7 +599,7 @@
             $obj = new stdClass();
             $obj->permalink = get_permalink($articles_id);
             $obj->title = get_the_title($articles_id);
-            $_size = $detect->isMobile() ? 'sidebar-pc' : 'sidebar-pc' ;
+            $_size = $detect->isMobile() ? 'thumbnail-pc' : 'thumbnail-pc' ;
             $thumbnails = new ThumbnailItem(get_post_thumbnail_id($articles_id), $_size);
             $obj->thumbails_url = !empty($thumbnails)?$thumbnails->url:'';
             $obj->firstCat = (!empty(get_the_category($articles_id)) && count(get_the_category($articles_id))) ?get_the_category($articles_id)[0]->name :'';

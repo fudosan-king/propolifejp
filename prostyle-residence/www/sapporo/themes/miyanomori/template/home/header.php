@@ -6,13 +6,13 @@
             if($lang === 'en') :            
         ?>
             <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-y-en.png" alt="" class="img-fluid logo_white">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-b-en.png" alt="" class="img-fluid logo_black">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_white">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-b-en.png" alt="" class="img-fluid logo_black">
             </a>
-        <?php elseif ($lang === 'jp' || $lang === 'tw' || $lang === 'zh') : ?>
+        <?php elseif ($lang === 'ja' || $lang === 'tw' || $lang === 'zh') : ?>
             <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-y.png" alt="" class="img-fluid logo_white">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-b.png" alt="" class="img-fluid logo_black">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-y.png" alt="" class="img-fluid logo_white">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-b.png" alt="" class="img-fluid logo_black">
             </a>
         <?php endif; ?>
        
@@ -33,7 +33,7 @@
                 <li class="<?= ( menu_active() === 'plan' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン・眺望</a></li>
                 <li class="<?= ( menu_active() === 'equipment' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">設備仕様・構造</a></li>
                 <li class="<?= ( menu_active() === 'access' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
-                <li class="<?= ( menu_active() === 'outline' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">アウトライン</a></li>
+                <li class="<?= ( menu_active() === 'outline' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">物件概要</a></li>
                 <li class="<?= ( menu_active() === 'contactus' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>

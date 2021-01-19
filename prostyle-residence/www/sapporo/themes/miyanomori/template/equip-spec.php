@@ -50,9 +50,9 @@ Template Post Type: page
                     <div class="container">
                         <div class="equip-spec">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a rel="#斜行エレベーター" class="nav-link" id=""><span><?php the_field('etab1_anchor_1'); ?></span></a>
-                                </li>
+                                <!-- <li class="nav-item">
+                                    <a rel="#斜行エレベーター" class="nav-link" id=""><span><?php //the_field('etab1_anchor_1'); ?></span></a>
+                                </li> -->
                                 <li class="nav-item">
                                     <a rel="#フィットネスルーム" class="nav-link" id=""><span><?php the_field('etab1_anchor_2'); ?></span></a>
                                 </li>
@@ -110,12 +110,13 @@ Template Post Type: page
 
                         <!-- Section 3 -->
                         <?php $e1_section_3 = get_field('e1_section_3'); ?>
-                        <div id="屋内駐車場" class="equip-spec_box inclined ">
-                            <!-- <h4><span>屋内駐車場</span></h4> -->
-                            <h4><span><?php echo $e1_section_3['title'] ?></span></h4>
-                            <!-- <p class="equip-spec_box-title">愛車を守る、リモコン自動ゲート付き屋内平面駐車場</p> -->
+                        
+                        <!-- Section 4 -->
+                        <?php $e1_section_4 = get_field('e1_section_4'); ?>
+                        <div id="その他" class="equip-spec_box">
+                            <h4><span><?php echo $e1_section_4['title']; ?></span></h4>
                             <p class="equip-spec_box-title"><?php echo $e1_section_3['sub_title'] ?></p>
-                            <div class="row">
+                            <div class="row mb-4">
                                 <div class="col-md-4">
                                     <!-- <p class="equip-spec_box-des p-right">本物件にはリモコン自動ゲート付きの屋内平面駐車場を採用しています。天候の影響を受けにくく、北海道の積雪から大切な愛車を守ります。また、自動ゲートの設置によりセキュリティ面でも安心してご利用頂けます。</p> -->
                                     <p class="equip-spec_box-des p-right"><?php echo $e1_section_3['content'] ?></p>
@@ -126,13 +127,6 @@ Template Post Type: page
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-
-                        <!-- Section 4 -->
-                        <?php $e1_section_4 = get_field('e1_section_4'); ?>
-                        <div id="その他" class="equip-spec_box">
-                            <h4><span><?php echo $e1_section_4['title']; ?></span></h4>
                             <div class="row">
                                 <div class="col-md-4">
                                     <p class="equip-spec_box-title"><?php echo $e1_section_4['box_1_title']; ?></p>
@@ -144,6 +138,7 @@ Template Post Type: page
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 

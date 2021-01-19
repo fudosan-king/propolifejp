@@ -65,27 +65,23 @@ if(have_posts()):
                  ?>
                  <div class="box_shared">
                     <div class="row">
-                        <div class="col-12 col-md-6 align-self-center text-center">
+                        <div class="col-12 col-md-5 align-self-center text-center">
                             <p class="mb-0">この記事をシェアする</p>
                             <img style="cursor: pointer;padding: 3px;" src="/wp-content/themes/logrenove/assets/images/i_twitter.png" alt="Share on Twitter" onclick="window.open('https://twitter.com/share?text=<?php wp_title(); ?>&amp;url=<?php the_permalink(); ?>','_blank'); return false;" width="60">
                             <img style="cursor: pointer;padding: 3px;" src="/wp-content/themes/logrenove/assets/images/i_face_book.png" alt="<?php the_title(); ?>" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('<?php the_permalink(); ?>'),'facebook-share-dialog','width=626,height=436'); return false;" width="60">
                             <img style="cursor: pointer;padding: 3px;" src="/wp-content/themes/logrenove/assets/images/i_line.png" alt="<?php the_title(); ?>" onclick="window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent('<?php the_permalink(); ?>'),'line-share-dialog','width=626,height=436'); return false;" width="60">
                         </div>
-                        <div class="col-12 col-md-6 align-self-center text-center">
+                        <div class="col-12 col-md-7 align-self-center text-center">
                             <div class="box_follow mt-4 mt-md-0">
                                 <p class="mb-2">LogRenoveをフォローする</p>
                                 <div class="col-md-12">
-                                    <div class="row-md-4 btn-twitter">
+                                    <div class="d-flex">
                                         <a class="twitter-follow-button" href="<?php echo get_field('twitter_url', 'option')?>" data-show-count="false" data-show-screen-name="false" data-lang="ja">フォロー</a>
-                                    </div>
-                                    <div class="row-md-4 btn-like">
                                         <div class="fb-like" data-href="<?php echo get_field('facebook_url', 'option')?>" data-width="" data-layout="button" data-action="like" data-share="false"></div>
-                                    </div>
-                                    <div class="row-md-4 btn-instagram">
-                                        <a href="<?php echo get_field('instagram_url', 'option')?>" class="insta_btn2" target="_blank" rel="noopener noreferrer">
+                                        <a style="color: #fff;" href="<?php echo get_field('instagram_url', 'option')?>" class="insta_btn2" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-instagram"></i> <span class="text-instagram">フォローする</span>
                                         </a>
-                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>

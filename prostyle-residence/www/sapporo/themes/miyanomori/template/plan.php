@@ -8,8 +8,6 @@ Template Post Type: page
 <?php get_template_part( 'template/home/header'); ?>
 <section class="section_subbanner">
     <div class="embed-responsive">
-        <!-- <h1>クロニクル　東京日本橋ショールーム</h1> -->
-        <h1><?php the_field('page_heading'); ?></h1>
         <!-- <div class="embed-responsive_bg-img"></div> -->
         <!-- <img class="<?php //bloginfo('template_url'); ?>/assets/images/1x/plan-bg-top.jpg" alt="plan bg"> -->
 

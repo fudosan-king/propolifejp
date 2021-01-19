@@ -21,6 +21,7 @@ function miyanomori() {
     this.ready = function() {
         const _this = this;
         $(document).ready(function() {
+            _this.introSite();
             _this.slide();
             _this.scrollToEle();
             // _this.slideTextillate();
@@ -35,6 +36,18 @@ function miyanomori() {
             _this.view360();
             _this.interactiveImages();
             _this.showHidePassword();
+            _this.popupVideoAllLoaded();
+        });
+    }
+
+    this.popupVideoAllLoaded = function(){
+        $('.before-login #videoPopup').modal('show');
+        const video = document.getElementById('video_miyanomori');
+        $('#videoPopup').on('shown.bs.modal', function (e) {
+           video.play();
+        });
+        $('#videoPopup').on('hidden.bs.modal', function (e) {
+            video.pause();
         });
     }
 
@@ -711,8 +724,14 @@ function miyanomori() {
         });
     };
 
-    this.slide = function() {
 
+    this.triggerIntroEnd = function(){
+        const _this = this;
+        _this.popupVideoAllLoaded();
+    }
+
+    this.introSite = function(){
+        const _this = this;
         setTimeout(function(){ 
             $('.intro').addClass('is-complete');
         },1500);
@@ -722,11 +741,13 @@ function miyanomori() {
         },2000);
         setTimeout(function(){ 
             $('.intro').remove();
+            _this.triggerIntroEnd();
         },2500);
+    }
 
+    this.slide = function() {
         $('.slideContent').on('init', function(event, slick, currentSlide, nextSlide){
             $('.slide').eq(0).addClass('animated');  
-
         });
 
         $('.slideContent').slick({
@@ -741,9 +762,11 @@ function miyanomori() {
             pauseOnFocus: false,
             pauseOnHover: false,
         });
+        
         $('.slideContent').on('beforeChange', function(event, slick, currentSlide, nextSlide){
             $('.slide').eq(nextSlide).addClass('animated');
         });
+
         $('.slideContent').on('afterChange', function(event, slick, currentSlide){
             $('.slide').eq(currentSlide).addClass('animated');
             const slideLast = $('.slide').length;

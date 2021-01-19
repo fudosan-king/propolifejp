@@ -21,7 +21,7 @@ Template Post Type: page
                             <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true"><span>共用設備</span></a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="plandesign2-tab" data-toggle="tab" href="#plandesign2" role="tab" aria-controls="plandesign2" aria-selected="false"><span>サービス</span></a>
+                            <a class="nav-link" id="plandesign2-tab" data-toggle="tab" href="#plandesign2" role="tab" aria-controls="plandesign2" aria-selected="false"><span>共用サービス</span></a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" id="plandesign3-tab" data-toggle="tab" href="#plandesign3" role="tab" aria-controls="plandesign3" aria-selected="false"><span>設備</span></a>
@@ -38,14 +38,17 @@ Template Post Type: page
                         <div class="equip-spec">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
+                                    <a rel="#エントランス" class="nav-link" id=""><span>エントランス</span></a>
+                                </li>
+                                <li class="nav-item">
                                     <a rel="#斜行エレベーター" class="nav-link" id=""><span>斜行エレベーター</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a rel="#フィットネスルーム" class="nav-link" id=""><span>フィットネスルーム</span></a>
+                                    <a rel="#ジム" class="nav-link" id=""><span>ジム</span></a>
                                 </li>
-                                <li class="nav-item" role="presentation">
+                               <!--  <li class="nav-item" role="presentation">
                                     <a rel="#屋内駐車場" class="nav-link" id=""><span>屋内駐車場</span></a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item" role="presentation">
                                     <a rel="#その他" class="nav-link" id=""><span>その他</span></a>
                                 </li>
@@ -72,8 +75,8 @@ Template Post Type: page
                                 </div>
                             </div>    
                         </div>
-                        <div id="フィットネスルーム" class="equip-spec_box inclined">
-                            <h4><span>フィットネスルーム</span></h4>
+                        <div id="ジム" class="equip-spec_box inclined">
+                            <h4><span>ジム</span></h4>
                             <p class="equip-spec_box-title">リフレッシュしながら自分と向き合う時間を楽しむフィットネスルーム</p>
                             <div class="row">
                                 <div class="col-md-8">
@@ -86,7 +89,7 @@ Template Post Type: page
                                 </div>
                             </div>
                         </div>
-                        <div id="屋内駐車場" class="equip-spec_box inclined ">
+                        <!-- <div id="屋内駐車場" class="equip-spec_box inclined ">
                             <h4><span>屋内駐車場</span></h4>
                             <p class="equip-spec_box-title">愛車を守る、リモコン自動ゲート付き屋内平面駐車場</p>
                             <div class="row">
@@ -95,11 +98,11 @@ Template Post Type: page
                                 </div>
                                 <div class="col-md-8">
                                     <div class="equip-spec_box_img">
-                                        <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-o-4.jpg" alt="" title="">
+                                        <img src="<?php //bloginfo('template_directory');?>/assets/images/main/equip-spec-o-4.jpg" alt="" title="">
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div id="その他" class="equip-spec_box">
                             <h4><span>その他</span></h4>
                             <div class="row">

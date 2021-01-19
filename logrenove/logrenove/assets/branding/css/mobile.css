@@ -144,6 +144,10 @@
         margin-right: -15px;
     }
 
+    footer {
+        padding: 55px 0 0px;
+    }
+
     footer .footer_top ul:first-of-type {
         margin-bottom: 15px;
     }

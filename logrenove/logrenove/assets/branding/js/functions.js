@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
     }, 500);
   }
 
-  $('[data-scroll]').on('click', scrollToSection);
+  // $('[data-scroll]').on('click', scrollToSection);
 
   $( "#features01 .btndetail" ).click(function(event) {
     event.preventDefault();

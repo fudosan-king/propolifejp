@@ -52,8 +52,8 @@
                             <div class="box_features_left">
                                 <p>FEATURES</p>
                                 <h1>01</h1>
-                                <p>専属のコーディネーターと進める<br>
-                                ムリ、ムダのない身近なリノベーション</p>
+                                <p>各領域の専門家がしっかりサポートして<br>
+                                ムリ、ムダのないリノベーションを実現</p>
                             </div>
                             <div class="box_features_right">
                                 <div class="box_features_img">
@@ -67,11 +67,11 @@
                             <div class="box_features_item_more">
                                 <p class="text-center mt-0"><a class="btn_up" href="#w_features01" data-scroll><img src="<?=BRANDING_IMAGE_PATH?>/SVG/arrow-up-circle-black.svg" alt="" class="img-fluid" width="20"></a></p>
                                 <h2>【手軽・効率的】</h2>
-                                <p>「プライベートレーベル・リノベーション」は、木材の製造、卸し、物件の仲介、施工、アフターサービスまで、リノベーションの工程をすべて自社内で完結することで、業者間の余分な中間マージンをカット。製品の受発注時のタイムロスも防ぎ、施工期間も短縮できます（最短で64日での施工）。自社の素材を使い、自社で施工するからこそ、リノベーション費用の見積もりも高精度であげられます。</p>
+                                <p>「プライベートレーベル・リノベーション」は、木材の製造、卸し、物件の仲介、施工、アフターサービスまで、リノベーションの工程をすべて自社内で完結することで、余分な中間マージンをカット。製品の受発注時のタイムロスも防ぎ、施工期間も短縮できます（最短で64日での施工）。自社の素材を使い、自社で施工するからこそ、リノベーション費用の見積もりも高精度であげられます。</p>
                                 <div class="box_features_item_more_img">
                                     <img src="<?=BRANDING_IMAGE_PATH?>/01_.jpg" alt="" class="img-fluid" width="w-100">
                                 </div>
-                                <p>LogRenoveでは一貫して、専任のインテリアコーディネーターがお客様の窓口となります。最初のご相談から、物件引き渡しまで、しっかりとサポートしていきます。物件から探す場合でも、社内の不動産仲介担当者と連携を取りながら、候補物件を提案。住宅ローンの案内まで行います。住まいのデザイン提案だけでなく、リノベーションの工程すべての窓口をインテリアコーディネーターが担うので、「この件は誰に相談すればいいんだろう…」といったストレスなくリノベーションを楽しんでいただけます。</p>
+                                <p>リノベーションは物件探し、デザイン、設計、施工、アフターサービス……とさまざまな工程が存在します。LogRenoveは最初のご相談から、物件引き渡しまで、すべて自社内のスタッフが担当。工程ごとに各領域のスペシャリストたちがしっかりサポートしていくことで、ストレスなくスムーズに「理想のリノベーション」を楽しんでいただけます。</p>
                                 <p class="text-center mb-0"><a href="<?=site_url('work')?>" class="btn btnwhat"><img src="<?=BRANDING_IMAGE_PATH?>/SVG/arrow-down-circle-black.svg" alt="" class="img-fluid" width="20">「プライベートレーベル・リノベーション」による理想のリノベーション</a></p>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                             <div class="box_features_item_more">
                                 <p class="text-center mt-0"><a class="btn_up" href="#w_features02" data-scroll><img src="<?=BRANDING_IMAGE_PATH?>/SVG/arrow-up-circle-black.svg" alt="" class="img-fluid" width="20"></a></p>
                                 <h2>【上質】</h2>
-                                <p>LogRenoveはあえて、本物の木、無垢材を使ったリノベーションのみを提案しています。無垢材は天然木材ならではの質感、香り、肌ざわりが特徴です。年を経る毎に風合いが増し、経年変化も楽しめます。私たちLogRenoveの強みのひとつに、自社内に無垢材の製材工場を抱えている点があります。自社製だから、上質な素材を中間マージンなしで供給可能でき、そして1500件を超える無垢材施工を行った自社スタッフが適切な施工を行えるのです。</p>
+                                <p>LogRenoveはあえて、本物の木、無垢材を使ったリノベーションのみを提案しています。無垢材は天然木材ならではの質感、香り、肌ざわりが特徴です。年を経る毎に風合いが増し、経年変化も楽しめます。私たちLogRenoveの強みのひとつに、自社内に無垢材の製材工場を抱えている点があります。自社製だから、上質な素材を中間マージンなしで供給でき、そして1500件を超える無垢材施工を行った自社スタッフが適切な施工を行えるのです。</p>
                                 <div class="box_features_item_more_img">
                                     <img src="<?=BRANDING_IMAGE_PATH?>/02_.jpg" alt="" class="img-fluid" width="w-100">
                                 </div>
@@ -113,7 +113,7 @@
                                 <p>FEATURES</p>
                                 <h1>03</h1>
                                 <p>プライベートレーベルだから実現した<br>
-                                「不安」のないリノベーション</p>
+                                「不明点」のないリノベーション</p>
                             </div>
                             <div class="box_features_right">
                                 <div class="box_features_img">
@@ -127,12 +127,11 @@
                             <div class="box_features_item_more">
                                 <p class="text-center mt-0"><a class="btn_up" href="#w_features03" data-scroll><img src="<?=BRANDING_IMAGE_PATH?>/SVG/arrow-up-circle-black.svg" alt="" class="img-fluid" width="20"></a></p>
                                 <h2>【信頼】</h2>
-                                <p>リノベーションには興味あるけれど「難しそう」「高そう」と二の足を踏んでいる方は多いと思います。仕上がりのイメージもつかなければ、実際にいくらかかるのかもわからない――。<br>
-                                「プライベートレーベル・リノベーション」のLogRenoveは自社の無垢材フローリングや建具を使ったリノベーション。ある程度の予算感と仕上がりのイメージがつきやすいのがポイントす。</p>
+                                <p>リノベーションには興味あるけれど「難しそう」「高そう」と二の足を踏んでいる方は多いと思います。仕上がりのイメージもつかなければ、実際にいくらかかるのかもわからない――。「プライベートレーベル・リノベーション」のLogRenoveは自社の無垢材フローリングや建具を使ったリノベーション。ある程度の予算感と仕上がりのイメージがつきやすいのがポイントです。仕上がりと価格において「不明点」がない、リノベーションを不安なく楽しめるのがLogRenoveの美点です。</p>
                                 <div class="box_features_item_more_img">
                                     <img src="<?=BRANDING_IMAGE_PATH?>/03_.jpg" alt="" class="img-fluid" width="w-100">
                                 </div>
-                                <p>リノベーションへの不安でいちばん多いのは「施工技術」「アフターフォロー」だと思います。LogRenoveは全工程を自社でまかなう「プライベートレーベル・リノベーション」。自社設計のリノベーションを、自社建材を使って、自社で施工。だからこそアフターフォローも自社で責任をもって行います。</p>
+                                <p>さらに、リノベーションへの不安でよく耳にするのは「施工技術」と「アフターフォロー」です。LogRenoveは全工程を自社でまかなう「プライベートレーベル・リノベーション」。自社設計のリノベーションを、自社建材を使って、自社で施工――だからこそ、アフターフォローも自社で責任をもって行います。</p>
                                 <p class="text-center mb-0"><a href="<?=site_url('documents')?>" class="btn btnwhat"><img src="<?=BRANDING_IMAGE_PATH?>/SVG/arrow-down-circle-black.svg" alt="" class="img-fluid" width="20">不安なく楽しめる「プライベートレーベル」のさらなる特徴</a></p>
                             </div>
                         </div>

@@ -2612,6 +2612,20 @@ ul.list_event li a.disabled {
 	font-weight: 600;
 }
 
+.section_events .frm_confirm .btnAgree {
+	background: #AE8148;
+	border-radius: 100px;
+	color: #fff;
+	padding: 15px 20px;
+	min-width: 320px;
+	display: block;
+	margin: 15px auto 0;
+	font-family: 'SF Pro Display Semibold', "Noto Sans JP";
+	font-size: 1.125em;
+	position: relative;
+	font-weight: 600;
+}
+
 .btnAgree:hover {
 	color: #fff;
 	background-color: #775327;

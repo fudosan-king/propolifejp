@@ -156,10 +156,10 @@ a:hover {
     height: calc(1.5em + .75rem + 7px);
 }
 
-/*.slide-dot-slick {
-    width:100%;
+.slide-dot-slick {
+    margin-bottom:20px;
 }
-*/
+
 .slide-dot-slick .slide-dot-slick_item img{
     width: 100%;
 }
@@ -1327,9 +1327,10 @@ header .menu-list a {
 
 /* footer */
 footer {
-    background: #333;
+    background: #fff;
     padding: 40px 0 20px;
     text-align: center;
+    border-top: 1px solid #dbdbdb;
 }
 
 footer ul {
@@ -1343,7 +1344,7 @@ footer ul li {
 }
 
 footer ul li:hover a {
-    color: #fff;
+    color: #333;
     text-decoration: underline;
 }
 
@@ -1352,7 +1353,7 @@ footer ul li:last-child a::after {
 }
 
 footer ul li a {
-    color: #fff;
+    color: #333;
     display: block;
     padding: 0 15px;
     font-size: 0.75em;
@@ -1373,16 +1374,16 @@ footer ul li a::after {
 }
 
 footer p {
-    color: #dbdbdb;
+    color: #333;
 }
 
 footer p a {
-    color: #dbdbdb;
+    color: #333;
 }
 
 footer .footer_bottom {
     margin-top: 30px;
-    border-top: 1px solid #4F4F4F;
+    border-top: 1px solid #dbdbdb;
     padding-top: 20px;
 }
 
@@ -1985,9 +1986,9 @@ footer address p {
 .embed-responsive {
     background-image:url('../images/1x/plan-bg-top.jpg');
     background-repeat: no-repeat;
-    padding-top:75.51%;
-    background-size:cover;
-    background-position: center;
+    padding-top: 48.7%;
+    background-size: cover;
+    background-position: 100% 90%;
 }
 
 .embed-responsive h1{
@@ -3396,6 +3397,7 @@ figure {
     color: #FFF;
     margin-bottom: 0;
     padding-left: 50px;
+    background-color:;
 }
 
 .slide-main_video p .i-video:before{
@@ -4710,4 +4712,19 @@ header {
     text-decoration: none;
     background-color: #B48856;
     color:#fff;
+}
+
+.video-miyanomori .modal-dialog{
+    max-width: 1200px;
+}
+
+.video-miyanomori .modal-body{
+    background:transparent;
+}
+
+
+.video-miyanomori video{
+    max-width:100%;
+    background-color: transparent;
+        
 }

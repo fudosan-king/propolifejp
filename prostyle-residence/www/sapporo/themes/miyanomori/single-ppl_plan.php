@@ -65,7 +65,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ダイニングテーブル</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-1.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-1.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">飛騨産業<br>
                                             クマヒダ　ダイニングテーブル<br>
@@ -76,7 +76,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ダイニングチェア</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-2.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-2.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">飛騨産業<br>
                                             クマヒダ　アームチェア張り座<br>
@@ -88,7 +88,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ペンダントライト</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-3.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-3.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">LASVIT( 日本代理店YAMAGIWA)<br>
                                             AKISUGI LARGE<br>
@@ -100,7 +100,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ソファ</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-4.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-4.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">Time & Style<br>
                                             MA Sofa<br>
@@ -113,7 +113,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ローテーブル</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-5.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-5.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">Time & Style<br>
                                             FL Low Table<br>
@@ -126,7 +126,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">TV台</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-6.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-6.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">Time & Style<br>
                                                 特注<br>
@@ -139,7 +139,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ペンダントライト</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-7.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-7.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">Herman Miller<br>
                                             NELSON CIGAR LOTUS FLOOR LAMP<br>
@@ -151,7 +151,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ラグ</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-8.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-8.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">山形緞通<br>
                                             KOKE<br>
@@ -162,7 +162,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">ベッド</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-9.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-9.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">Time & Style<br>
                                             FU Bed<br>
@@ -174,7 +174,7 @@ Template Post Type: page
                                         <div class="col-md-4">
                                             <p class="equip-spec_box-title">サイドテーブル</p>
                                             <div class="equip-spec_box_img">
-                                                <img src="http://wp-miyanomori.local/wp-content/themes/miyanomori/assets/images/main/detail-furniture-10.png" alt="" title="">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-10.png" alt="" title="">
                                             </div>
                                             <p class="equip-spec_box-des">Time & Style<br>
                                             PE<br>

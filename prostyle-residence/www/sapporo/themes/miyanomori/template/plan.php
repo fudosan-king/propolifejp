@@ -8,7 +8,8 @@ Template Post Type: page
 <?php get_template_part( 'template/home/header'); ?>
 <section class="section_subbanner">
     <div class="embed-responsive">
-        <h1>クロニクル　東京日本橋ショールーム</h1>
+        <!-- <h1>クロニクル　東京日本橋ショールーム</h1> -->
+        <h1><?php the_field('page_heading'); ?></h1>
         <!-- <div class="embed-responsive_bg-img"></div> -->
         <!-- <img class="<?php //bloginfo('template_url'); ?>/assets/images/1x/plan-bg-top.jpg" alt="plan bg"> -->
 
@@ -21,21 +22,30 @@ Template Post Type: page
             <div class="tabs-center-u-shaped">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true"><span>プランデザイン</span></a>
+                        <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true">
+                            <!-- <span>プランデザイン</span> -->
+                            <span><?php the_field('planft_tab_title'); ?></span>
+                        </a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="view-tab" data-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="false"><span>眺望</span></a>
+                        <a class="nav-link" id="view-tab" data-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="false">
+                            <!-- <span>眺望</span> -->
+                            <span><?php the_field('plansc_tab_title'); ?></span>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
+
+        <!-- Tab 1 Content -->
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="plandesign" role="tabpanel" aria-labelledby="plandesign-tab">
                 <div class="container">
                    
                     <div class="box_infoview_top">
-                        <h2 class="title">大きなガラス越しに望む自然の大借景を愉しむ<br>
-                        リゾートコンドミニアムのような集合邸宅</h2>
+                        <!-- <h2 class="title">大きなガラス越しに望む自然の大借景を愉しむ<br>
+                        リゾートコンドミニアムのような集合邸宅</h2> -->
+                        <h2 class="title"><?php the_field('planft_box_title'); ?></h2>
                     </div>
 
                     <div class="box_infoview_content">
@@ -66,9 +76,12 @@ Template Post Type: page
                 </div>
                
             </div>
+
+            <!-- Tab 2 Content -->
             <div class="tab-pane fade " id="view" role="tabpanel" aria-labelledby="view-tab">
                 <div class="box_infoview_top mb-3">
-                    <h2 class="title">視界を遮るもののない開放感溢れる眺望</h2>
+                    <!-- <h2 class="title">視界を遮るもののない開放感溢れる眺望</h2> -->
+                    <h2 class="title"><?php the_field('plansc_box_title'); ?></h2>
                 </div>
                 <div class="carousel_view">
                     <div id="block_carousel_view" class="day carousel_view_day"></div>
@@ -78,8 +91,10 @@ Template Post Type: page
                     </div>
                 </div>
                 <ul class="list_view_time">
-                    <li class="list_view_time_day active" id="btn_day"><i class="i_sun"></i>昼景</li>
-                    <li class="list_view_time_night" id="btn_night"><i class="i_moon"></i>夜景</li>
+                    <!-- <li class="list_view_time_day active" id="btn_day"><i class="i_sun"></i>昼景</li> -->
+                    <li class="list_view_time_day active" id="btn_day"><i class="i_sun"></i><?php the_field('plan_day_button'); ?></li> 
+                    <!-- <li class="list_view_time_night" id="btn_night"><i class="i_moon"></i>夜景</li> -->
+                    <li class="list_view_time_night" id="btn_night"><i class="i_moon"></i><?php the_field('plan_night_button'); ?></li>
                 </ul>
             </div>
         </div>

@@ -118,11 +118,11 @@ Template Post Type: page
                             <div class="row">
                                 <div class="col-md-4">
                                     <!-- <p class="equip-spec_box-des p-right">本物件にはリモコン自動ゲート付きの屋内平面駐車場を採用しています。天候の影響を受けにくく、北海道の積雪から大切な愛車を守ります。また、自動ゲートの設置によりセキュリティ面でも安心してご利用頂けます。</p> -->
-                                    <p class="equip-spec_box-des"><?php echo $e1_section_3['content'] ?></p>
+                                    <p class="equip-spec_box-des p-right"><?php echo $e1_section_3['content'] ?></p>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="equip-spec_box_img">
-                                        <img src="<?php //bloginfo('template_directory');?>/assets/images/main/equip-spec-o-4.jpg" alt="" title="">
+                                        <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-o-4.jpg" alt="" title="">
                                     </div>
                                 </div>
                             </div>
@@ -429,7 +429,7 @@ Template Post Type: page
                         <!-- Section 2 -->
                         <?php $e3_section_2 = get_field('e3_section_2');  ?>
                         <div id="洗面室・浴室" class="equip-spec_box">
-                            <h4><span><?php echo $e3_section_2['title']; ?>/span></h4>
+                            <h4><span><?php echo $e3_section_2['title']; ?></span></h4>
                             <div class="equip-spec_box_img slide-flickity">
                                 <div class="carousel" data-flickity data-flickity-options='{ "prevNextButtons": false }'>
                                     <div class="carousel-cell">

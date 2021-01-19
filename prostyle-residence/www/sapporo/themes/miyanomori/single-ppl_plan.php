@@ -47,9 +47,9 @@ Template Post Type: page
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="plandetail-tab" data-toggle="tab" href="#plandetail" role="tab" aria-controls="plandetail" aria-selected="false"><i class="i-armchair"></i>家具の配置イメージ</a>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="planvr-tab" data-toggle="tab" href="#planvr" role="tab" aria-controls="planvr" aria-selected="false"><i class="i-webcam"></i>室内VR</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="tab-content" id="myTabContent">
@@ -187,9 +187,9 @@ Template Post Type: page
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="planvr" role="tabpanel" aria-labelledby="planvr-tab">
-                            <?php echo get_field('design_planvr_view') ?>
-                        </div>
+                        <!-- <div class="tab-pane fade" id="planvr" role="tabpanel" aria-labelledby="planvr-tab"> -->
+                            <?php //echo get_field('design_planvr_view') ?>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>

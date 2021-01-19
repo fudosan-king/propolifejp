@@ -1,10 +1,20 @@
 <header class="header_sub clearfix">
     <div class="navbar navbar-expand-lg">
 
-        <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo.svg" alt="" class="img-fluid logo_white" width="246">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_black.svg" alt="" class="img-fluid logo_black" width="246">
-        </a>
+        <?php  
+            $lang = qtranxf_getLanguage(); 
+            if($lang === 'en') :            
+        ?>
+            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-y-en.png" alt="" class="img-fluid logo_white">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-b-en.png" alt="" class="img-fluid logo_black">
+            </a>
+        <?php elseif ($lang === 'jp' || $lang === 'tw' || $lang === 'zh') : ?>
+            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-y.png" alt="" class="img-fluid logo_white">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/logo-b.png" alt="" class="img-fluid logo_black">
+            </a>
+        <?php endif; ?>
         
         <div class="btn-action">
             <a class="user-login" href="<?php echo wp_logout_url(home_url()); ?>"><span class="user-login_icon"></span></a>
@@ -43,12 +53,12 @@
                         <p>受付時間 10:00 ～ 18:00</p>
                     </a>
                 </li>
-                <li class="nav-item js-menuAnimation">
+<!--                 <li class="nav-item js-menuAnimation">
                     <a class="nav-link zip-code" href="#">
                         〒869-2402
                         <p>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
                     </a>
-                </li>
+                </li> -->
             </ul>
             <ul class="navbar-nav  menu-mobile">
                 <li class="nav-item js-menuAnimation "><a class="nav-link" href="<?php echo home_url('/news/'); ?>">新着情報</a></li>

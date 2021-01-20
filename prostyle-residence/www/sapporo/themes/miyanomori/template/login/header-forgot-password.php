@@ -13,6 +13,7 @@
 </div>
 
 <?php 
+$lang = qtranxf_getLanguage();
 $user = check_password_reset_key( $_GET['key'], $_GET['login']);
 
 if ( ! $user || is_wp_error( $user ) ) 

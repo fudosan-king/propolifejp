@@ -58,7 +58,6 @@ Template Post Type: page
                         </div>
                         <div class="tab-pane fade" id="plandetail" role="tabpanel" aria-labelledby="plandetail-tab">
                             <?php echo get_field('design_furnitures') ?>
-                            <p>12334</p>
                             <div class="equip-spec_box">
                                 <div class="equip-spec_box_items">
                                     <div class="row">
@@ -194,14 +193,14 @@ Template Post Type: page
                 </div>
             </div>
             <div class="box_plan_detail_footer">
-               <!--  <div class="vr-3d show-mobile hide-pc">
-                    <div class="vr-3d_img">
+                <div class="vr-3d show-mobile hide-pc">
+                    <!-- div class="vr-3d_img">
                         <a href="#videoPopup" data-toggle="modal" title="">
                             <img class="img-fluid" src="<?php //bloginfo('template_url'); ?>/assets/images/main/3r-vr-img.jpg" alt="" title="">
                         </a>
-                    </div>
-                    <a class="btn btn-find"><i class="i-find-zoom"></i>テラスからの眺望を体験する</a>
-                </div> -->
+                    </div> -->
+                    <a href="#panoromaPopup" data-toggle="modal" class="btn btn-find"><i class="i-find-zoom"></i>テラスからの眺望を体験する</a>
+                </div>
                 <div class="box_infoview_content">
                     <div class="row no-gutters hide-mobile">
                         <?php 

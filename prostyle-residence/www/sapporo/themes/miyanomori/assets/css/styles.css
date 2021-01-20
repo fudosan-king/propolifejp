@@ -3740,6 +3740,9 @@ i.chevron-left {
     height: 627px;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+    background-repeat:repeat-x;
+    background-position:center bottom;
+    background-size:cover; 
 }
 
 .carousel_view .carousel_view_control_left, .carousel_view .carousel_view_control_right {
@@ -3767,6 +3770,10 @@ i.chevron-left {
 
 .carousel_view .carousel_view_control_right {
     right: 0;
+}
+
+#panoromaPopup .carousel_view .day{
+    height:534px;
 }
 
 .box_equipment_info .box_equipment_info_top .row > .col-12 {

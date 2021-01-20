@@ -1054,6 +1054,13 @@
         height:auto;
         padding-top: 47.223%;
     }
+
+    #panoromaPopup .carousel_view .day{
+        height:auto;
+        padding-top: 75%;
+    }
+
+
 }
 
 @media (min-width: 768px) {

@@ -7,7 +7,8 @@ Template Post Type: page
 <?php get_header(); ?>
 <?php get_template_part( 'template/home/header'); ?>
 <section class="section_subbanner">
-<img src="<?php bloginfo('template_url'); ?>/assets/images/1x/bg_access.jpg" alt="" class="img-fluid w-100">
+    <div class="subbanner_img access-img"></div>
+<!-- <img src="<?php //bloginfo('template_url'); ?>/assets/images/1x/bg_access.jpg" alt="" class="img-fluid"> -->
 </section>
 <main>
     <section class="section_access">
@@ -20,7 +21,7 @@ Template Post Type: page
                         <div class="row">
 
                             <div class="box_map_info-img">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/info-img.jpg" class="img-fluid" alt="" title="">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/info-img.jpg" alt="" title="">
                             </div>
 
                             <div class="info_location">

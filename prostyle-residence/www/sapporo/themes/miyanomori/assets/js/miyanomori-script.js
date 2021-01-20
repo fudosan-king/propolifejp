@@ -602,6 +602,8 @@ function miyanomori() {
             winHeight = window.innerHeight;
             if( win.width() < 1280 && $('body').hasClass('menu-show') ){
                 $('.menu-list').height(winHeight - 93);
+            } else {
+                $('.menu-list').removeAttr('style');
             }
         });
 

@@ -1,20 +1,10 @@
 <header class="header_afterlogin clearfix">
     <div class="navbar navbar-expand-lg ">
-        
-        <?php  
-            $lang = qtranxf_getLanguage(); 
-            if($lang === 'en') :            
-        ?>
             <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
                 <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_white">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-b-en.png" alt="" class="img-fluid logo_black">
+                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_black">
             </a>
-        <?php elseif ($lang === 'ja' || $lang === 'tw' || $lang === 'zh') : ?>
-            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-y.png" alt="" class="img-fluid logo_white">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-b.png" alt="" class="img-fluid logo_black">
-            </a>
-        <?php endif; ?>
+       
        
 
         <div class="btn-action">
@@ -53,12 +43,13 @@
                         <p>受付時間 10:00 ～ 18:00</p>
                     </a>
                 </li>
-<!--                 <li class="nav-item js-menuAnimation">
+                <li class="nav-item js-menuAnimation">
                     <a class="nav-link zip-code" href="#">
-                        〒869-2402
-                        <p>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                        〒060-0001
+                        <p>札幌市中央区北1条西4丁目<br>
+                        札幌グランドホテル2階（グランビスタギャラリーサッポロ内</p>
                     </a>
-                </li> -->
+                </li>
             </ul>
             <ul class="navbar-nav  menu-mobile">
                 <li class="nav-item js-menuAnimation "><a class="nav-link" href="<?php echo home_url('/news/'); ?>">新着情報</a></li>

@@ -1,20 +1,11 @@
 <header class="header_before-login">
     <div class="navbar navbar-expand-lg">
         
-       <?php  
-            $lang = qtranxf_getLanguage(); 
-            if($lang === 'en') :            
-        ?>
-            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_white">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-b-en.png" alt="" class="img-fluid logo_black">
-            </a>
-        <?php elseif ($lang === 'ja' || $lang === 'tw' || $lang === 'zh') : ?>
-            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-y.png" alt="" class="img-fluid logo_white">
-                <img src="<?php bloginfo('template_directory');?>/assets/images/lang/jp/logo-b.png" alt="" class="img-fluid logo_black">
-            </a>
-        <?php endif; ?>
+        <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+            <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_white">
+            <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_black">
+        </a>
+      
 
         <div class="btn-action">
             <button class="user-login class="nav-link" href="#modal_login" data-toggle="modal">

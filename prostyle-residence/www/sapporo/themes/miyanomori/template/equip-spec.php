@@ -8,7 +8,7 @@ Template Post Type: page
 <?php get_template_part( 'template/home/header'); ?>
     <section class="slide-dot-slick">
         <div class="slide-dot-slick_item">
-            <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title="">
+            <!-- <img src="<?php //bloginfo('template_directory');?>/assets/images/main/equip-spec-slide.jpg" alt="" title=""> -->
         </div>
     </section>
 

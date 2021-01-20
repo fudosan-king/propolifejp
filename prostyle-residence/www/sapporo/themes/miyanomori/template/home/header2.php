@@ -1,19 +1,20 @@
 <header class="header_sub clearfix">
-    <?php $lang = qtranxf_getLanguage(); ?>
     <div class="navbar navbar-expand-lg">
+        <div class="navbar-top">
             <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
                 <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_white">
                 <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_black">
             </a>
-        
-        <div class="btn-action">
-            <a class="user-login" href="<?php echo wp_logout_url(home_url()); ?>"><span class="user-login_icon"></span></a>
+            
+            <div class="btn-action">
+                <a class="user-login" href="<?php echo wp_logout_url(home_url()); ?>"><span class="user-login_icon"></span></a>
 
-            <button class="navbar-toggler toggler-spring menu">
-                <span class="menuLine"></span>
-                <span class="menuLine"></span>
-                <!-- <span class="menuLine"></span> -->
-            </button>
+                <button class="navbar-toggler toggler-spring menu">
+                    <span class="menuLine"></span>
+                    <span class="menuLine"></span>
+                    <!-- <span class="menuLine"></span> -->
+                </button>
+            </div>
         </div>
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse menu-list">

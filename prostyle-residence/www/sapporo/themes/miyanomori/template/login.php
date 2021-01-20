@@ -17,7 +17,7 @@
             <div class="row no-gutters">
                 <div class="col-8">
                     <div class="box_designsupervision_content">
-                        <p>宮の森レジデンス 設計・監修</p>
+                        <p><?= _e('宮の森レジデンス 設計・監修','miyanomori'); ?></p>
                         <div class="box_designsupervision_img">
                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/logo-interview-2x.png" alt="" class="img-fluid">
                         </div>
@@ -33,17 +33,17 @@
     </div>
 
     <div class="slide-main_video">
-        <a href="#videoPopup" data-toggle="modal"><p><i class="i-video"></i>プロスタイル札幌 宮の森　ブランド動画はこちら</p></a>
+        <a href="#videoPopup" data-toggle="modal"><p><i class="i-video"></i><?= _e('プロスタイル札幌 宮の森　ブランド動画はこちら','miyanomori'); ?></p></a>
     </div>
 
     <div class="news notlogin">
         <a href="#modal_login" data-toggle="modal">
             <div class="row">
                 <div class="col-12 col-lg-2 align-self-center">
-                    <h2>物件エントリー</h2>
+                    <h2><?= _e('物件エントリー','miyanomori'); ?></h2>
                 </div>
                 <div class="col-12 col-lg-10 align-self-center">
-                    <p>物件エントリー者様限定サイトでは、未公開プランなど物件エントリー者様だけの「限定情報」を公開中です。</p>
+                    <p><?= _e('物件エントリー者様限定サイトでは、未公開プランなど物件エントリー者様だけの「限定情報」を公開中です。','miyanomori'); ?></p>
                 </div>
             </div>
         </a>

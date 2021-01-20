@@ -56,9 +56,9 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 		 	<div class="box_normal_item">
 		 		<a href="<?= esc_url(get_permalink($post->ID)) ?>" >
 			        <div class="box_premium">
-			            <span class="label_new"><i>New</i></span>
+			            <span class="label_new"><i><?= _e('New','ppl_plan'); ?></i></span>
 			            <ul class="list_view">
-			                <li><span>眺望</span></li>
+			                <li><span><?= _e('眺望','ppl_plan'); ?></span></li>
 			                <!-- <li><span>３Dモデルルーム画像</span></li> -->
 			            </ul>
 			            <h2><?= get_the_title($post->ID)?></h2>
@@ -122,9 +122,9 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 	        <?php else: ?>
 	        	<a href="<?= $post_url ?>">
 		        	<div class="box_premium">
-			        	<span class="label_new"><i>New</i></span>               
+			        	<span class="label_new"><i><?= _e('New','ppl_plan'); ?></i></span>               
 		                <ul class="list_view">
-		                    <li><span>眺望</span></li>
+		                    <li><span><?= _e('眺望','ppl_plan'); ?></span></li>
 		                    <!-- <li><span>３Dモデルルーム画像</span></li> -->
 		                </ul>
 		                <h2><?= $post_title ?></h2>
@@ -173,7 +173,7 @@ function show_carousel_ppl_plan($limit = -1){
 				</div>
 				<!-- <div class="thumb-tag">
 					<div class="wd_pl_des"><?php echo $post_description; ?></div>
-					<div class="wd_pf_readmore"><a alt="<?php echo $post_title; ?>" title="<?php echo $post_title; ?>" href="<?php echo $post_url; ?>" ><?php _e('Learn more','wpdance'); ?></a></div>
+					<div class="wd_pf_readmore"><a alt="<?php echo $post_title; ?>" title="<?php echo $post_title; ?>" href="<?php echo $post_url; ?>" ><?php _e('Learn more','ppl_plan'); ?></a></div>
 				</div> -->
 			</div>   				
 		<?php endwhile; ?>
@@ -248,7 +248,7 @@ function show_item_ppl_plan_imag($id = '',$type_image='thumbnail',$number_word='
 						<?php echo $post_title; ?>
 					</a></h2>
 					<div class="wd_pl_des"><?php echo $post_description; ?></div>
-					<div class="wd_pf_readmore"><a alt="<?php echo $post_title; ?>" title="<?php echo $post_title; ?>" href="<?php echo $post_url; ?>" ><?php _e('Learn more','wpdance'); ?></a></div>
+					<div class="wd_pf_readmore"><a alt="<?php echo $post_title; ?>" title="<?php echo $post_title; ?>" href="<?php echo $post_url; ?>" ><?php _e('Learn more','ppl_plan'); ?></a></div>
 				</div>
 			</div>
 		</div>   				

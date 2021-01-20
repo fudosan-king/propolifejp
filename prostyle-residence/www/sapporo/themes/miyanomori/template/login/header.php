@@ -6,9 +6,9 @@
             <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_black">
         </a>
       
-
+        <?php $lang = qtranxf_getLanguage(); ?>
         <div class="btn-action">
-            <button class="user-login class="nav-link" href="#modal_login" data-toggle="modal">
+            <button class="user-login" class="nav-link" href="#modal_login" data-toggle="modal">
                 <span class="user-login_icon"></span>
             </button>
             <button class="navbar-toggler toggler-spring menu hide-mobile">

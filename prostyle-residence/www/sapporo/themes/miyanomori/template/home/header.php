@@ -5,7 +5,7 @@
                 <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-en.png" alt="" class="img-fluid logo_black">
             </a>
        
-       
+       <?php $lang = qtranxf_getLanguage(); ?>
 
         <div class="btn-action">
             <a class="user-login" href="<?php echo wp_logout_url(home_url()); ?>"><span class="user-login_icon"></span></a>

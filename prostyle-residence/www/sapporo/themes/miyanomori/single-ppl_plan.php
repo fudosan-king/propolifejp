@@ -159,7 +159,7 @@ Template Post Type: page
                                         </div>
 
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ベッド</p>
+                                            <p class="equip-spec_box-title"><?= _e('ベッド','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-9.png" alt="" title="">
                                             </div>
@@ -199,7 +199,7 @@ Template Post Type: page
                             <img class="img-fluid" src="<?php //bloginfo('template_url'); ?>/assets/images/main/3r-vr-img.jpg" alt="" title="">
                         </a>
                     </div> -->
-                    <a href="#panoromaPopup" data-toggle="modal" class="btn btn-find"><i class="i-find-zoom"></i>テラスからの眺望を体験する</a>
+                    <a href="#panoromaPopup" data-toggle="modal" class="btn btn-find"><i class="i-find-zoom"></i><?= _e('テラスからの眺望を体験する','miyanomori'); ?></a>
                 </div>
                 <div class="box_infoview_content">
                     <div class="row no-gutters hide-mobile">

@@ -14,10 +14,15 @@
         padding: 20px 0 20px;
         box-sizing: content-box;
     }
+    .menu-show .navbar-brand{
+        padding: 20px 0 20px 20px;
+    }
+
 
     .header_before-login .btn-action .menu {
         display: none;
     }
+
   /*Lock Display*/
     .menu-show .header_before-login .menu {
         display: none;
@@ -67,7 +72,7 @@
 
     .menu-list ul.lang {
         position: absolute;
-        top: 0;
+        top: 10px;
         right: 30px;
         width: -webkit-max-content;
         width: -moz-max-content;
@@ -174,6 +179,7 @@
         width: 100%;
         overflow-y: scroll;
         overflow-x: hidden;
+        padding-top:10px;
     }
 
     .menu-show .menu-list ul li.dropdown .dropdown-menu a {
@@ -195,10 +201,6 @@
 
     .menu-show .header_sub .menu-list li:hover > a{
         color:#fff;
-    }
-
-    .menu-show .header_sub .user-login:before {
-        background-image: url("../images/SVG/i_user_login.svg");
     }
 
     .menu-show .header_sub .menu-list a {
@@ -231,7 +233,7 @@
     .user-login:before {
         position: absolute;
         content: '';
-        background-image: url("../images/SVG/i_user_login.svg");
+        background-image: url("../images/SVG/i_user_login_dark.svg");
         background-repeat: no-repeat;
         right: 0;
         bottom: 0;
@@ -263,7 +265,7 @@
 
     .menu .menuLine {
         box-sizing: border-box;
-        background: #fff;
+        background: #333;
         position: absolute;
         left: 50%;
         display: inline-block;
@@ -286,7 +288,7 @@
     }
 
     .menu.active .menuLine {
-        background: #fff;
+        background: #333;
     }
 
     .menu.active .menuLine:nth-of-type(1) {
@@ -324,8 +326,21 @@
         bottom: 200px;
     }
 
+    .menu-show .navbar-top{
+        background-color: #fff;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
 
-
+    .menu-show header .menu-list a{
+        color:#fff;
+    }
+    .menu-show  .menu-list .nav-item:last-child .nav-link:hover{
+        color:#fff;
+    }
+    .menu-show .menu-list ul li.dropdown .dropdown-menu a{
+        color:#fff;
+    }
 }
 /*End*/
 
@@ -1127,6 +1142,7 @@
         right: 10px;
     }
   /* header */
+
     .header_afterlogin .bsnav {
         padding: 20px;
     }

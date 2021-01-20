@@ -241,7 +241,7 @@
         </div>
     </section>
 
-    <section class="video-miyanomori after-logged js-popup-video">
+<!--     <section class="video-miyanomori after-logged js-popup-video">
         <div class="modal fade" id="videoPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -252,10 +252,10 @@
               </div>
               <div class="modal-body">
                 <video id="video_miyanomori" loop playsinline>
-                  <source data-src="https://pardot-s3.s3-ap-northeast-1.amazonaws.com/miyanomori/PS%E6%9C%AD%E5%B9%8C%E5%AE%AE%E3%81%AE%E6%A3%AE%E5%8B%95%E7%94%BB_%E9%80%94%E4%B8%AD%E7%B4%8D%E5%93%81_0115.mp4" src="https://pardot-s3.s3-ap-northeast-1.amazonaws.com/miyanomori/PS%E6%9C%AD%E5%B9%8C%E5%AE%AE%E3%81%AE%E6%A3%AE%E5%8B%95%E7%94%BB_%E9%80%94%E4%B8%AD%E7%B4%8D%E5%93%81_0115.mp4" type="video/mp4">
+                  <source src="https://pardot-s3.s3-ap-northeast-1.amazonaws.com/miyanomori/210129_%E7%B4%8D%E5%93%81%E3%83%86%E3%82%99%E3%83%BC%E3%82%BF.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
           </div>
         </div>
-    </section>
+    </section> -->

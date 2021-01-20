@@ -59,7 +59,7 @@ function show_ppl_plan($count = "-1", $ignore_slug = "", $only_info = '')
 			            <span class="label_new"><i>New</i></span>
 			            <ul class="list_view">
 			                <li><span>眺望</span></li>
-			                <li><span>３Dモデルルーム画像</span></li>
+			                <!-- <li><span>３Dモデルルーム画像</span></li> -->
 			            </ul>
 			            <h2><?= get_the_title($post->ID)?></h2>
 			            <h3><?= $post->post_excerpt ?></h3>
@@ -125,7 +125,7 @@ function show_item_ppl_plan($id = '', $slug = '', $style= 'feature')
 			        	<span class="label_new"><i>New</i></span>               
 		                <ul class="list_view">
 		                    <li><span>眺望</span></li>
-		                    <li><span>３Dモデルルーム画像</span></li>
+		                    <!-- <li><span>３Dモデルルーム画像</span></li> -->
 		                </ul>
 		                <h2><?= $post_title ?></h2>
 		                <h3><?= $post_excerpt ?></h3>

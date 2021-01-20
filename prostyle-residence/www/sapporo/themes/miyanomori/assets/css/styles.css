@@ -160,8 +160,17 @@ a:hover {
     margin-bottom:20px;
 }
 
+.slide-dot-slick .slide-dot-slick_item{
+    background-image: url('../images/main/equip-spec-slide.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 680px;
+}
+
 .slide-dot-slick .slide-dot-slick_item img{
     width: 100%;
+    height:100%;
 }
 
 .slide-dot-slick .slick-dots{
@@ -674,6 +683,13 @@ header .menu-list a {
     position: relative;
 }
 
+
+
+.section_subbanner .access-img {
+  background-image: url('../images/1x/bg_access.jpg');
+}
+
+
 .section_subbanner .itv-img {
     padding: 0 15px;
     position: absolute;
@@ -686,8 +702,7 @@ header .menu-list a {
 }
 
 .section_subbanner .subbanner_img {
-    height: 100vh;
-    max-height: 680px;
+    height: 680px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1980,17 +1995,11 @@ footer address p {
     bottom: 6px;
 }
 
-.embed-responsive {
-    padding-top: 150px;
-    position: relative;
-}
 
 .embed-responsive {
     background-image:url('../images/1x/plan-bg-top.jpg');
-    background-repeat: no-repeat;
-    padding-top: 48.7%;
-    background-size: cover;
     background-position: 100% 90%;
+    height:680px;
 }
 
 .embed-responsive h1{

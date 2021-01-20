@@ -37,7 +37,7 @@
 	<div class="container">
 		<div class="row">
     		<div class="col-12 col-lg-12">
-                <a href="<?= home_url() ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_footer.svg" alt="" class="img-fluid mb-3" width="110"></a>
+                <a href="<?= home_url() ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-v-en.png" alt="" class="img-fluid mb-3" width="110"></a>
                 <!-- <ul>
                     <li><a href="<?php echo home_url('/news/'); ?>">新着情報</a></li>
                     <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
@@ -77,19 +77,24 @@
 <div class="bsnav-mobile-overlay"></div>
 
 
-<div class="modal fade" id="modal_video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content">
-        <div class="modal-header">
+
+<section class="video-miyanomori after-logged js-popup-video">
+    <div class="modal fade" id="videoPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">&times;</span>
             </button>
+          </div>
+          <div class="modal-body">
+            <video id="video_miyanomori" loop playsinline>
+              <source src="https://pardot-s3.s3-ap-northeast-1.amazonaws.com/miyanomori/210129_%E7%B4%8D%E5%93%81%E3%83%86%E3%82%99%E3%83%BC%E3%82%BF.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="modal-body">
-            <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" width="100%" height="315" src="https://my.matterport.com/show/?m=VHEQdZ6QNAh" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
+      </div>
     </div>
-  </div>
-</div>
+</section>
+
+

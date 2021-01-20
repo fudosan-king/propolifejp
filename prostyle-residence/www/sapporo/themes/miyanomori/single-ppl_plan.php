@@ -33,7 +33,7 @@ Template Post Type: page
                                 </div>
                             </div>
                         </div>
-                        <a href="#modal_video" data-toggle="modal" class="see_video hide-mobile">
+                        <a href="#videoPopup" data-toggle="modal" class="see_video hide-mobile">
                             <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/3D_img.png" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -196,7 +196,7 @@ Template Post Type: page
             <div class="box_plan_detail_footer">
                 <div class="vr-3d show-mobile hide-pc">
                     <div class="vr-3d_img">
-                        <a href="#" title="">
+                        <a href="#videoPopup" data-toggle="modal" title="">
                             <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/main/3r-vr-img.jpg" alt="" title="">
                         </a>
                     </div>

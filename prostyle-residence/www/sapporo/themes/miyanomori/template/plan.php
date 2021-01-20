@@ -7,7 +7,7 @@ Template Post Type: page
 <?php get_header(); ?>
 <?php get_template_part( 'template/home/header'); ?>
 <section class="section_subbanner">
-    <div class="embed-responsive">
+    <div class="subbanner_img embed-responsive">
         <!-- <div class="embed-responsive_bg-img"></div> -->
         <!-- <img class="<?php //bloginfo('template_url'); ?>/assets/images/1x/plan-bg-top.jpg" alt="plan bg"> -->
 

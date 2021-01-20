@@ -18,6 +18,52 @@
         </div>
         <div id="navbarSupportedContent" class="collapse navbar-collapse menu-list">
             <ul class="navbar-nav">
+                <?php 
+                    switch ($lang) {
+                        case 'en':
+                ?>
+                <li class="<?= ( menu_active() === 'home' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">Living in Miyanomori</a></li>
+                <li class="<?= ( menu_active() === 'feature' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">Design</a></li>
+                <li class="<?= ( menu_active() === 'plan' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">Floor Plans & Views</a></li>
+                <li class="<?= ( menu_active() === 'equipment' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">Amenities & Structure</a></li>
+                <li class="<?= ( menu_active() === 'access' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">Access to Facilities</a></li>
+                <li class="<?= ( menu_active() === 'outline' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">Outline</a></li>
+                <li class="<?= ( menu_active() === 'contactus' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">Contact Us</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="tel:0120853133">TEL: 0120-853-133</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>Logout</span></a></li>
+                <?php
+                            break;
+
+                        case 'zh':
+                ?>
+                <li class="<?= ( menu_active() === 'home' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">在宫之森居住</a></li>
+                <li class="<?= ( menu_active() === 'feature' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">设计</a></li>
+                <li class="<?= ( menu_active() === 'plan' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">方案・眺望</a></li>
+                <li class="<?= ( menu_active() === 'equipment' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">设备式样・结构</a></li>
+                <li class="<?= ( menu_active() === 'access' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">交通</a></li>
+                <li class="<?= ( menu_active() === 'outline' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">概要</a></li>
+                <li class="<?= ( menu_active() === 'contactus' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">咨询</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="tel:0120853133">电话：0120-853-133</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>退出登录</span></a></li>
+                <?php
+                            break;
+
+                        case 'tw':
+                ?>
+                <li class="<?= ( menu_active() === 'home' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">在宮之森生活</a></li>
+                <li class="<?= ( menu_active() === 'feature' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">設計</a></li>
+                <li class="<?= ( menu_active() === 'plan' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">方案、景觀</a></li>
+                <li class="<?= ( menu_active() === 'equipment' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/equipment/'); ?>">設備規格、構造</a></li>
+                <li class="<?= ( menu_active() === 'access' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/access/'); ?>">交通路線</a></li>
+                <li class="<?= ( menu_active() === 'outline' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/outline/'); ?>">概要</a></li>
+                <li class="<?= ( menu_active() === 'contactus' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">相關洽詢</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
+                <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>登出</span></a></li>
+                <?php
+                            break;
+                        
+                        default:
+                            ?>
                 <li class="<?= ( menu_active() === 'home' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url(); ?>">宮の森で暮らすということ</a></li>
                 <li class="<?= ( menu_active() === 'feature' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/feature/'); ?>">デザイン</a></li>
                 <li class="<?= ( menu_active() === 'plan' )?'active':''; ?> nav-item  js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/plan/'); ?> ">プラン・眺望</a></li>
@@ -27,6 +73,11 @@
                 <li class="<?= ( menu_active() === 'contactus' )?'active':''; ?> nav-item js-menuAnimation"><a class="nav-link" href="<?php echo home_url('/contactus/'); ?>">お問い合わせ</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="tel:0120853133">TEL.0120-853-133</a></li>
                 <li class="nav-item js-menuAnimation"><a class="nav-link" href="<?php echo wp_logout_url(home_url()); ?>"><span>ログアウト</span></a></li>
+                            <?php
+                            break;
+                    }
+                 ?>
+                
                 <li class="nav-item dropdown">
                     <?php do_action('miyanomori_nav_language'); ?>
                 </li>

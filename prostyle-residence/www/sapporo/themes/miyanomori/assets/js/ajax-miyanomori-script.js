@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
     // Perform AJAX login on form submit
     $('form#frm_login').on('submit', function(e){
         e.preventDefault();
-        $('form#frm_login p.status').show().text('ログイン情報を送信中です、しばらくお待ちください...');
+        $('form#frm_login p.status').show().text(ajax_miyanomori_object.txtPlsWait);
         $('form#frm_login p.status').append('<br>'+ajax_miyanomori_object.loadingmessage);
         
         $.ajax({
@@ -30,7 +30,7 @@ jQuery(document).ready(function($){
     // Perform AJAX login on form submit
     $('form#frm_regiter').on('submit', function(e){
         e.preventDefault();
-        $('form#frm_regiter p.status').show().text('ログイン情報を送信中です、しばらくお待ちください...');
+        $('form#frm_regiter p.status').show().text(ajax_miyanomori_object.txtPlsWait);
         $('form#frm_regiter p.status').append('<br>'+ajax_miyanomori_object.loadingmessage);
         $.ajax({
             type: 'POST',
@@ -67,7 +67,7 @@ jQuery(document).ready(function($){
     // Perform AJAX login on form submit
     $('form#form_forgot_password').on('submit', function(e){
         e.preventDefault();
-        $('form#form_forgot_password p.status').show().text('ログイン情報を送信中です、しばらくお待ちください...');
+        $('form#form_forgot_password p.status').show().text(ajax_miyanomori_object.txtPlsWait);
         $('form#form_forgot_password p.status').append('<br>'+ajax_miyanomori_object.loadingmessage);
         $.ajax({
             type: 'POST',

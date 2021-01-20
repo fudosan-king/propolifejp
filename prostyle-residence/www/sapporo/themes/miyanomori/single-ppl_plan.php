@@ -33,7 +33,7 @@ Template Post Type: page
                                 </div>
                             </div>
                         </div>
-                        <a href="#videoPopup" data-toggle="modal" class="see_video hide-mobile">
+                        <a href="#panoromaPopup" data-toggle="modal" class="see_video hide-mobile">
                             <img src="<?php bloginfo('template_url'); ?>/assets/images/1x/3D_img.png" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -194,14 +194,14 @@ Template Post Type: page
                 </div>
             </div>
             <div class="box_plan_detail_footer">
-                <div class="vr-3d show-mobile hide-pc">
+               <!--  <div class="vr-3d show-mobile hide-pc">
                     <div class="vr-3d_img">
                         <a href="#videoPopup" data-toggle="modal" title="">
-                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/main/3r-vr-img.jpg" alt="" title="">
+                            <img class="img-fluid" src="<?php //bloginfo('template_url'); ?>/assets/images/main/3r-vr-img.jpg" alt="" title="">
                         </a>
                     </div>
                     <a class="btn btn-find"><i class="i-find-zoom"></i>テラスからの眺望を体験する</a>
-                </div>
+                </div> -->
                 <div class="box_infoview_content">
                     <div class="row no-gutters hide-mobile">
                         <?php 
@@ -226,6 +226,40 @@ Template Post Type: page
             </div>
         </div>
     </section>
+
+    <section class="video-miyanomori after-logged js-popup-video">
+        <div class="modal fade" id="panoromaPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="carousel_view">
+                    <div id="block_carousel_view" class="day carousel_view_day"></div>
+                    <div class="carousel_view_control">
+                        <p class="carousel_view_control_left" id="btn_control_left"><i class="chevron-left"></i></p>
+                        <p class="carousel_view_control_right" id="btn_control_right"><i class="chevron-right"></i></p>
+                    </div>
+                </div>
+                <ul class="list_view_time">
+                    <!-- <li class="list_view_time_day active" id="btn_day"><i class="i_sun"></i>昼景</li> -->
+                    <li class="list_view_time_day active" id="btn_day"><i class="i_sun"></i><?php the_field('plan_day_button'); ?></li> 
+                    <!-- <li class="list_view_time_night" id="btn_night"><i class="i_moon"></i>夜景</li> -->
+                    <li class="list_view_time_night" id="btn_night"><i class="i_moon"></i><?php the_field('plan_night_button'); ?></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+
+
+
 </main>
 <?php get_template_part( 'template/home/footer'); ?>
 <?php get_footer(); ?>

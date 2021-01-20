@@ -60,8 +60,8 @@
                 </ul>
                 
                 <ul class="my-brand mb-0">
-                    <li><a href="https://www.chronicle-web.com" target="blank_">【販売】<img src="<?php bloginfo('template_directory');?>/assets/images/SVG/logo_chronicle.svg" alt="" width="120"></a></li>
-                    <li><a href="https://www.prostyle-residence.com" target="blank_">【売主】 <img src="<?php bloginfo('template_directory');?>/assets/images/1x/logo_small.png" alt="" width="116"> </a></li>
+                    <li><a href="https://www.chronicle-web.com" target="blank_">【販売】<img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/chronicle-logo-en.svg" alt="" width="120"></a></li>
+                    <li><a href="https://www.prostyle-residence.com" target="blank_">【売主】 <img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/prostyle-logo-en.svg" alt="" width="116"> </a></li>
                 </ul>
             </div>
 		</div>

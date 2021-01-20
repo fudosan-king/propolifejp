@@ -42,10 +42,10 @@ Template Post Type: page
                     <div class="tabs-center-u-shaped">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true"><i class="i-house-plan"></i>間取り</a>
+                                <a class="nav-link active" id="plandesign-tab" data-toggle="tab" href="#plandesign" role="tab" aria-controls="plandesign" aria-selected="true"><i class="i-house-plan"></i><?= _e('間取り','miyanomori'); ?></a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="plandetail-tab" data-toggle="tab" href="#plandetail" role="tab" aria-controls="plandetail" aria-selected="false"><i class="i-armchair"></i>家具の配置イメージ</a>
+                                <a class="nav-link" id="plandetail-tab" data-toggle="tab" href="#plandetail" role="tab" aria-controls="plandetail" aria-selected="false"><i class="i-armchair"></i><?= _e('家具の配置イメージ','miyanomori'); ?></a>
                             </li>
                             <!-- <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="planvr-tab" data-toggle="tab" href="#planvr" role="tab" aria-controls="planvr" aria-selected="false"><i class="i-webcam"></i>室内VR</a>
@@ -63,100 +63,100 @@ Template Post Type: page
                                 <div class="equip-spec_box_items">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ダイニングテーブル</p>
+                                            <p class="equip-spec_box-title"><?= _e('ダイニングテーブル','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-1.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">飛騨産業<br>
-                                            クマヒダ　ダイニングテーブル<br>
-                                            W2400 × D900 × H700<br>
-                                            ウォルナット　WA<br>
-                                            ¥660,000（税別）</p>
+                                            <p class="equip-spec_box-des"><?= _e('飛騨産業','miyanomori'); ?><br>
+                                            <?= _e('クマヒダ　ダイニングテーブル','miyanomori'); ?><br>
+                                            <?= _e('W2400 × D900 × H700','miyanomori'); ?><br>
+                                            <?= _e('ウォルナット　WA','miyanomori'); ?><br>
+                                            <?= _e('¥660,000（税別）','miyanomori'); ?></p>
                                         </div>
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ダイニングチェア</p>
+                                            <p class="equip-spec_box-title"><?= _e('ダイニングチェア','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-2.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">飛騨産業<br>
-                                            クマヒダ　アームチェア張り座<br>
-                                            W590 × D540 × H720<br>
-                                            SH410　AH630<br>
-                                            ウォルナット　WA<br>
-                                            ¥261,000（税別）</p>
+                                            <p class="equip-spec_box-des"><?= _e('飛騨産業','miyanomori'); ?><br>
+                                            <?= _e('クマヒダ　アームチェア張り座','miyanomori'); ?><br>
+                                            <?= _e('W590 × D540 × H720','miyanomori'); ?><br>
+                                            <?= _e('SH410　AH630','miyanomori'); ?><br>
+                                            <?= _e('ウォルナット　WA','miyanomori'); ?><br>
+                                            <?= _e('¥261,000（税別）','miyanomori'); ?></p>
                                         </div>
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ペンダントライト</p>
+                                            <p class="equip-spec_box-title"><?= _e('ペンダントライト','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-3.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">LASVIT( 日本代理店YAMAGIWA)<br>
-                                            AKISUGI LARGE<br>
-                                            W120 × H500　12kg<br>
-                                            手吹きガラス<br>
-                                            ¥572,000（税込）</p>
+                                            <p class="equip-spec_box-des"><?= _e('LASVIT( 日本代理店YAMAGIWA)','miyanomori'); ?><br>
+                                            <?= _e('AKISUGI LARGE','miyanomori'); ?><br>
+                                            <?= _e('W120 × H500　12kg','miyanomori'); ?><br>
+                                            <?= _e('手吹きガラス','miyanomori'); ?><br>
+                                            <?= _e('¥572,000（税込）','miyanomori'); ?></p>
                                         </div>
 
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ソファ</p>
+                                            <p class="equip-spec_box-title"><?= _e('ソファ','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-4.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">Time & Style<br>
-                                            MA Sofa<br>
-                                            W2400 × D1024 × H727　SH380<br>
-                                            背/座：ファブリック張り<br>
-                                            脚：ステンレスバイブレーション仕上<br>
-                                            オープン価格</p>
+                                            <p class="equip-spec_box-des"><?= _e('Time & Style','miyanomori'); ?><br>
+                                            <?= _e('MA Sofa','miyanomori'); ?><br>
+                                            <?= _e('W2400 × D1024 × H727　SH380','miyanomori'); ?><br>
+                                            <?= _e('背/座：ファブリック張り','miyanomori'); ?><br>
+                                            <?= _e('脚：ステンレスバイブレーション仕上','miyanomori'); ?><br>
+                                            <?= _e('オープン価格','miyanomori'); ?></p>
                                         </div>
 
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ローテーブル</p>
+                                            <p class="equip-spec_box-title"><?= _e('ローテーブル','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-5.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">Time & Style<br>
-                                            FL Low Table<br>
-                                            W1800 × D700 × H300<br>
-                                            天板：タモスノーホワイト<br>
-                                            脚：ステンレスバイブレーション仕上<br>
-                                            オープン価格</p>
+                                            <p class="equip-spec_box-des"><?= _e('Time & Style','miyanomori'); ?><br>
+                                            <?= _e('FL Low Table','miyanomori'); ?><br>
+                                            <?= _e('W1800 × D700 × H300','miyanomori'); ?><br>
+                                            <?= _e('天板：タモスノーホワイト','miyanomori'); ?><br>
+                                            <?= _e('脚：ステンレスバイブレーション仕上','miyanomori'); ?><br>
+                                            <?= _e('オープン価格','miyanomori'); ?></p>
                                         </div>
 
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">TV台</p>
+                                            <p class="equip-spec_box-title"><?= _e('TV台','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-6.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">Time & Style<br>
-                                                特注<br>
-                                                W2400 × D500 × H300<br>
-                                                天板：タモスノーホワイト<br>
-                                                脚：ステンレスバイブレーション仕上<br>
-                                                オープン価格</p>
+                                            <p class="equip-spec_box-des"><?= _e('Time & Style','miyanomori'); ?><br>
+                                                <?= _e('特注','miyanomori'); ?><br>
+                                                <?= _e('W2400 × D500 × H300','miyanomori'); ?><br>
+                                                <?= _e('天板：タモスノーホワイト','miyanomori'); ?><br>
+                                                <?= _e('脚：ステンレスバイブレーション仕上','miyanomori'); ?><br>
+                                                <?= _e('オープン価格','miyanomori'); ?></p>
                                         </div>
 
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ペンダントライト</p>
+                                            <p class="equip-spec_box-title"><?= _e('ペンダントライト','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-7.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">Herman Miller<br>
-                                            NELSON CIGAR LOTUS FLOOR LAMP<br>
-                                            H1460　φ330<br>
-                                            鋼ニッケルメッキ<br>
-                                            ¥147,400（税込）</p>
+                                            <p class="equip-spec_box-des"><?= _e('Herman Miller','miyanomori'); ?><br>
+                                            <?= _e('NELSON CIGAR LOTUS FLOOR LAMP','miyanomori'); ?><br>
+                                            <?= _e('H1460　φ330','miyanomori'); ?><br>
+                                            <?= _e('鋼ニッケルメッキ','miyanomori'); ?><br>
+                                            <?= _e('¥147,400（税込）','miyanomori'); ?></p>
                                         </div>
 
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">ラグ</p>
+                                            <p class="equip-spec_box-title"><?= _e('ラグ','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-8.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">山形緞通<br>
-                                            KOKE<br>
-                                            1400 × 2000<br>
-                                            ¥715,000( 税込)</p>
+                                            <p class="equip-spec_box-des"><?= _e('山形緞通','miyanomori'); ?><br>
+                                            <?= _e('KOKE','miyanomori'); ?><br>
+                                            <?= _e('1400 × 2000','miyanomori'); ?><br>
+                                            <?= _e('¥715,000( 税込)','miyanomori'); ?></p>
                                         </div>
 
                                         <div class="col-md-4">
@@ -164,23 +164,23 @@ Template Post Type: page
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-9.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">Time & Style<br>
-                                            FU Bed<br>
-                                            背/座：ファブリック張り<br>
-                                            脚：ステンレスバイブレーション仕上<br>
-                                            オープン価格</p>
+                                            <p class="equip-spec_box-des"><?= _e('Time & Style','miyanomori'); ?><br>
+                                            <?= _e('FU Bed','miyanomori'); ?><br>
+                                            <?= _e('背/座：ファブリック張り','miyanomori'); ?><br>
+                                            <?= _e('脚：ステンレスバイブレーション仕上','miyanomori'); ?><br>
+                                            <?= _e('オープン価格','miyanomori'); ?></p>
                                         </div>
 
                                         <div class="col-md-4">
-                                            <p class="equip-spec_box-title">サイドテーブル</p>
+                                            <p class="equip-spec_box-title"><?= _e('サイドテーブル','miyanomori'); ?></p>
                                             <div class="equip-spec_box_img">
                                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/main/detail-furniture-10.png" alt="" title="">
                                             </div>
-                                            <p class="equip-spec_box-des">Time & Style<br>
-                                            PE<br>
-                                            φ450 × H420<br>
-                                            ステンレスバイブレーション仕上<br>
-                                            オープン価格</p>
+                                            <p class="equip-spec_box-des"><?= _e('Time & Style','miyanomori'); ?><br>
+                                            <?= _e('PE','miyanomori'); ?><br>
+                                            <?= _e('φ450 × H420','miyanomori'); ?><br>
+                                            <?= _e('ステンレスバイブレーション仕上','miyanomori'); ?><br>
+                                            <?= _e('オープン価格','miyanomori'); ?></p>
                                         </div>
 
                                     </div>
@@ -214,8 +214,9 @@ Template Post Type: page
                             <div class="box_infoview_img">
                                 <?php $codeApartment = get_post_meta($post->ID, 'ppl-plan', true); ?>
                                 <?php echo do_shortcode("[".$codeApartment."]"); ?>
-                                <p>ご覧になりたいプランをタップしてください。<br>
-                            プラン詳細をご覧いただけます</p>
+                                <p><?= _e('ご覧になりたいプランをタップしてください。','miyanomori'); ?><br>
+                                    <?= _e('プラン詳細をご覧いただけます','miyanomori'); ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -226,6 +227,7 @@ Template Post Type: page
             </div>
         </div>
     </section>
+
 
     <section class="video-miyanomori after-logged js-popup-video">
         <div class="modal fade" id="panoromaPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -238,7 +240,7 @@ Template Post Type: page
               </div>
               <div class="modal-body">
                 <div class="carousel_view">
-                    <div id="block_carousel_view" class="day carousel_view_day"></div>
+                    <div id="block_carousel_view" data-day="<?php echo get_field('single_plan_img_room_day'); ?>" data-night="<?php echo get_field('single_plan_img_room_night'); ?>" class="day carousel_view_day"></div>
                     <div class="carousel_view_control">
                         <p class="carousel_view_control_left" id="btn_control_left"><i class="chevron-left"></i></p>
                         <p class="carousel_view_control_right" id="btn_control_right"><i class="chevron-right"></i></p>
@@ -255,10 +257,6 @@ Template Post Type: page
           </div>
         </div>
     </section>
-
-
-
-
 
 </main>
 <?php get_template_part( 'template/home/footer'); ?>

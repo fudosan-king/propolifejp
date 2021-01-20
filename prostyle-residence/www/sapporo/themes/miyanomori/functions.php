@@ -58,7 +58,8 @@ function ajax_miyanomori_init() {
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'jp_national_holidays_min' => get_template_directory_uri().'/assets/data/jp_national_holidays_min.json',
         'redirecturl' => home_url(),
-        'loadingmessage' => __( 'Sending user info, please wait ...' )
+        'loadingmessage' => __( 'Sending user info, please wait ...' ),
+        'txtPlsWait' => __('ログイン情報を送信中です、しばらくお待ちください...'),
     ));
 
     // Enable the user with no privileges to run ajax_login() in AJAX

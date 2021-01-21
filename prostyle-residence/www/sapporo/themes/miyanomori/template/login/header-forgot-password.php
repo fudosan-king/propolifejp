@@ -51,21 +51,21 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
                         <h4><?= _e('パスワード更新','miyanomori'); ?></h4>
                         <p class="status"></p>
                         <div class="form-group forgot_new-password">
-                            <input autocomplete="off" type="passsword" class="form-control" size="24" placeholder="<?= _e('新しいパスワードをご入力ください','miyanomori'); ?>" name="pass1" id="pass1" value="<?php echo esc_attr( wp_generate_password( 16 ) ); ?>">
-                            <span class="dashicons dashicons-hidden i-password"></span>
+                            <input autocomplete="off" type="text" class="form-control" size="24" placeholder="<?= _e('新しいパスワードをご入力ください','miyanomori'); ?>" name="pass1" id="pass1" value="<?php echo esc_attr( wp_generate_password( 16 ) ); ?>">
+                            <span class="dashicons dashicons-visibility i-password"></span>
                         </div>
 
                         <div class="form-group" >
                             <p class="note-pass" style="display: none;">STRONG</p>
-                            <p><?= _e('パスワードは12文字以上の長さで大文字、小文字数字、','miyanomori'); ?><br><?= _e('記号を含めてください。　※　記号の例（ ! - / $ % ^ & )','miyanomori'); ?></p>
+                            <p><?= _e('パスワードを表示してコピーするか、','miyanomori'); ?><br><?= _e('新しいパスワードを設定してください。','miyanomori'); ?></p>
                         </div>
                           
                         <div class="form-group">
                             <div class="row no-gutters">
                                 <div class="col-md-12">
                                     <input type="hidden" name="rp_key" value="<?php echo esc_attr( $_GET['key'] ); ?>" />
-                                    <button type="submit" class="btn w-100 btn_brown" name="wp-submit" value=""/><?php esc_attr_e( 'パスワードをリセット', 'miyanomori' ); ?></button>
-                                    <a href="<?= get_site_url(); ?>" ><p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span><?= _e('トップページに戻る','miyanomori'); ?></p></a>
+                                    <button type="submit" class="btn w-100 btn_brown" name="wp-submit" value=""/><?php esc_attr_e( 'パスワードを再登録する', 'miyanomori' ); ?></button>
+                                    <a href="<?= get_site_url(); ?>" ><p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span><?= _e('トップページに戻りログインして下さい','miyanomori'); ?></p></a>
                                 </div>
                             </div>
                         </div>

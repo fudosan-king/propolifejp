@@ -152,7 +152,11 @@ Template Post Type: page
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <a href="<?php echo home_url('/equipment/')?>" class="btn btn-equip"><span><?php echo $feature_section_7['button_text']; ?></span></a>
+=======
+                    <a href="<?php echo home_url('/equipment/')?>" class="btn btn-equip"><span><?php echo $feature_section_6['button_text']; ?></span></a>
+>>>>>>> No. 125141 新規作成・リニュアル_業務依頼 （プロスタイル宮の森(仮)販売サイト作成) | front& back
                 </div>
             </div>
 

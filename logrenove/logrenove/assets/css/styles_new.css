@@ -1289,11 +1289,11 @@ footer .footer_bottom {
     margin-right: 0;
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .container {
         max-width: 940px;
     }
-}
+}*/
 
 @media (max-width: 768px) {
     /*.navbar-collapse.collapse:not(.show) {

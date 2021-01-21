@@ -1,4 +1,7 @@
-<?php $event_datetime = get_event_datetime(); ?>
+<?php 
+$event_datetime = get_event_datetime(); 
+$logrenove_customer_id = random_logrenove_customer_id();
+?>
 
 <style type="text/css">
     .validate-error {
@@ -7,7 +10,8 @@
     }
 </style>
 
-<form id="frm_services" class="frm_services" action="https://go.pardot.com/l/185822/2020-09-01/qh62y3" method="post" accept-charset="utf-8">
+<form id="frm_services" class="frm_services" action="/events/thanks/" method="post" accept-charset="utf-8">
+    <input type="hidden" name="logrenove_customer_id" value="<?=$logrenove_customer_id?>">
     <div class="frm-input">
         <div class="form-group">
             <div class="row mb-3">
@@ -73,7 +77,7 @@
                     <label for="">お名前<span class="red">（※）</span></label>
                 </div>
                 <div class="col-12 col-lg-9 align-self-center">
-                    <input type="text" name="name" class="form-control required" placeholder="例：山田 太郎">
+                    <input type="text" name="full_name" class="form-control required" placeholder="例：山田 太郎">
                 </div>
             </div>
         </div>
@@ -145,7 +149,7 @@
              <td>
                 <label>お名前</label>
              </td>
-             <td id="name" class="confirm-text"></td>
+             <td id="full_name" class="confirm-text"></td>
           </tr>
           <tr>
              <td>

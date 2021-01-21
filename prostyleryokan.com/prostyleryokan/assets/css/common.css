@@ -99,6 +99,261 @@
 .gHeader_link > a::after {
 	content: "";
 }
+
+section#pressrelease dl dd a.pdf_ico {
+    padding: 5px 35px 5px 0;
+    background: url(../pdf_ico.png) right 50% no-repeat;
+    background-size: 25px auto;
+}
+/*------------------------------------------------------------
+	トップページ
+------------------------------------------------------------*/
+.headLine02 {
+	margin-bottom: 105px;
+	margin-top: 105px;
+	text-align: center;
+}
+
+#pressrelease {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+#main .h4Ttl {
+	margin-bottom: 70px;
+	margin-top: 25px;
+	font-size: 1.4rem;
+	font-weight: bold
+}
+#pressrelease dl {
+	clear: both;
+}
+#pressrelease dt {
+	margin-bottom: 20px;
+	font-size: 18px;
+	padding-bottom: 3px;
+	font-weight: normal;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+#pressrelease dd {
+	margin-bottom: 40px;
+	font-size: 18px;
+}
+
+#pressrelease section {
+	margin-bottom: 80px;
+}
+
+.pBox hr {
+	border: none;
+	height: 1px;
+	margin-bottom: 30px;
+	background-color: #dcdcdc;
+}
+
+.pBox p,.pBox ul {
+	line-height: 2;
+	margin-bottom: 30px!important;
+	padding: 0 90px;
+}
+
+.pBox ul {
+	list-style-type: none;
+	padding-left: 70px;
+}
+
+.pBox li {
+	width: 100%;
+	word-break:break-all;
+}
+
+.pBox ul li strong {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.pBox ul:nth-of-type(4) li strong,.pBox ul:nth-of-type(5) li strong {
+	margin-left: -20px;
+}
+
+.pBox ul:nth-of-type(4),.pBox ul:nth-of-type(5) {
+	padding-left: 113px;
+}
+
+.pBox ul ul {
+	list-style-type: none;
+	padding: 0 0 0 1.4em;
+	border-top: none;
+}
+
+.pBox ul ul ul {
+	list-style-type: none;
+	padding: 0 0 0 1.4em;
+	border-top: none;
+}
+
+.pBox ul:nth-of-type(4) ul,.pBox ul:nth-of-type(5) ul {
+	list-style-type: none;
+	margin-left: -20px;
+}
+
+.pBox ul:nth-of-type(4) ul ul,.pBox ul:nth-of-type(5) ul ul {
+	list-style-type: none;
+	margin-left: 2.1em;
+}
+
+@media all and (min-width: 0px) and (max-width: 640px) {
+	.pBox hr {
+		margin-bottom: 15px;
+	}
+	
+	.pBox p,.pBox ul {
+		padding: 0;
+	}
+	
+	.pBox p,.pBox ul {
+		margin-bottom: 15px!important;
+	}
+
+	.pBox ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	
+	.pBox ul li strong {
+		display: block;
+		font-size: 13px;
+		font-size: 1.3rem;
+		margin-left: -1em;
+	}
+	
+	.pBox ul:nth-of-type(4) li strong {
+		display: inline;
+	}
+	
+	.pBox ul:nth-of-type(4) li strong,.pBox ul:nth-of-type(5) li strong {
+		margin-left: -1em;
+	}
+
+	.pBox ul:nth-of-type(4),.pBox ul:nth-of-type(5) {
+		padding: 0 0 0 1.8em;
+	}
+
+	.pBox ul ul {
+		list-style-type: none;
+		padding-left: 1.8em;
+	}
+
+	.pBox ul ul ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+}
+
+/*------------------------------------------------------------
+	pageList
+------------------------------------------------------------*/
+#main .pageList {
+	padding-top: 72px;
+	text-align: center;
+}
+
+#main .pageList li {
+	margin: 0 2px;
+	display: inline-block;
+	font-size: 1.4rem;
+	color: #000;
+}
+
+#main .pageList .current span,
+#main .pageList li a {
+	padding: 5px 13px;
+	display: block;
+	color: #000;
+	background-color: #e3e3e3;
+}
+
+#main .pageList .current span,
+#main .pageList li a:hover {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #000;
+}
+
+#main .pageList .prev a,
+#main .pageList .next a {
+	letter-spacing: 2px;
+}
+
+#pressrelease a, 
+#pressrelease a:link,
+#pressrelease a:visited,
+#pressrelease a:hover,
+#pressrelease a:active {
+	text-decoration: underline;
+}
+
+span.cat_name_dt {
+    margin-left: 40px;
+}
+
+
+@media all and (min-width: 0px) and (max-width: 640px) {
+	.headLine02 {
+		margin-bottom: 40px;
+		margin-top: 40px
+	}
+		
+	#pressrelease {
+		width: auto;
+	}
+	
+	#main .h4Ttl {
+		margin-bottom: 35px;
+		font-size: 1.1rem;
+	}
+	
+	#pressrelease dt {
+		margin-bottom: 16px;
+		font-size: 1.1rem;
+		padding-bottom: 4px;
+	}
+	
+	#pressrelease dd {
+		margin-bottom: 20px;
+		font-size: 1rem;
+		line-height: 1.9;
+		letter-spacing: 1px;
+	}
+	
+	#pressrelease section {
+		margin-bottom: 50px;
+	}
+
+
+	
+	/*------------------------------------------------------------
+		pageList
+	------------------------------------------------------------*/
+	#main .pageList {
+		padding-top: 25px;
+	}
+	
+	#main .pageList li {
+		font-size: 1.1rem;
+	}
+	
+	#main .pageList .current span,
+	#main .pageList li a {
+		padding: 5px 10px;
+	}
+	
+	
+	
+
+
+}
 @media screen and (max-width:1299px) {
 	.gFooter_col-no1 {
 		width: auto;

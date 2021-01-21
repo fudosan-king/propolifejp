@@ -5,10 +5,11 @@
     アップデート通知非表示
 *
 */
-remove_action( 'load-update-core.php', 'wp_update_plugins' );
-add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
-add_filter('pre_site_transient_update_core', create_function('$a', "return  null;"));
-show_admin_bar( false );
+
+// remove_action( 'load-update-core.php', 'wp_update_plugins' );
+// add_filter( 'pre_site_transient_update_plugins', function($a)  {return  null;});
+// add_filter('pre_site_transient_update_core', function($a)  {return  null;});
+// show_admin_bar( false );
 
 /*
 
@@ -87,7 +88,7 @@ function get_site_title(){
     
     $site_title = get_bloginfo('name');
     $this_url = $_SERVER["REQUEST_URI"];
-    $_url = split('/', $this_url);
+    $_url = explode('/', $this_url);
     $_url_len = count($_url) - 1;   
     if(empty($_url[$_url_len])){ $_url_len --; }
     $_dir = $_url[$_url_len];

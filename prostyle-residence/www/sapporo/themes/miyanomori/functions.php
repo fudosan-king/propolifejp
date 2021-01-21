@@ -58,7 +58,8 @@ function ajax_miyanomori_init() {
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'jp_national_holidays_min' => get_template_directory_uri().'/assets/data/jp_national_holidays_min.json',
         'redirecturl' => home_url(),
-        'loadingmessage' => __( 'Sending user info, please wait...' )
+        'loadingmessage' => __( 'Sending user info, please wait ...' ),
+        'txtPlsWait' => __('ログイン情報を送信中です、しばらくお待ちください...'),
     ));
 
     // Enable the user with no privileges to run ajax_login() in AJAX
@@ -82,9 +83,9 @@ function ajax_login() {
 
 	$user_signon = wp_signon( $info, false );
 	if ( is_wp_error( $user_signon )) {
-	    echo json_encode( array( 'loggedin'=>false, 'message'=>__( 'Wrong username or password!' )));
+	    echo json_encode( array( 'loggedin'=>false, 'message'=>__( 'Wrong username or password!' ), 'message_jp'=>__('ユーザー名またはパスワード が正しくありません') ) );
 	} else {
-	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Login successful, redirecting...' )));
+	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Login successful! redirecting...' ),'message_jp'=>__('ログインに成功しました。リダイレクトしています...') ));
 	}
 
 	die();
@@ -105,9 +106,9 @@ function ajax_register()
 	$register  = register_new_user( $user_email, $user_email );
 
 	if ( is_wp_error( $register )) {
-	    echo json_encode( array( 'loggedin'=>false, 'message'=> $register->errors));
+	    echo json_encode( array( 'loggedin'=>false, 'message'=> ['This username is already registered. Please choose another one.'], 'message_jp'=> ['このユーザー名は既に登録されています']  ));
 	} else {
-	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Register successful, PLEASE CHECK EMAIL TO GET PASSWORD ...' )));
+	    echo json_encode( array( 'loggedin'=>true, 'message'=>__('Register successful! Please check email to get password.' ), 'message_jp'=> __('会員登録に成功しました。メールを送信しましたのでパスワードをご確認ください') ));
 	}
 
 	die();
@@ -146,13 +147,13 @@ function ajax_forgot_password()
 	}
 
 	if ( ! $user_data ) {
-		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.']));
+		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.'], 'message_jp' => ['ユーザー名またはメールアドレスが正しくありません']));
 		die();
 	}
 
 	if ( is_multisite() && ! is_user_member_of_blog( $user_data->ID, get_current_blog_id() ) )
 	{
-		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.']));
+		echo json_encode( array( 'status'=>false, 'message'=> ['Invalid username or email.'],'message_jp' => ['ユーザー名またはメールアドレスが正しくありません']));
 		die();
 	}
 
@@ -255,7 +256,7 @@ function ajax_forgot_password()
 		die();
 	}
 
-	echo json_encode( array( 'status'=>true, 'message'=> "Reset Password successful!! Please check email to create the new password  "));
+	echo json_encode( array( 'status'=>true, 'message'=> "Reset Password successful!! Please check email to create the new password  ", 'message_jp' => "パスワードのリセットに成功しました。メールをご確認いただき、新しいパスワードを作成ください" ));
 	die();
 }
 
@@ -263,6 +264,10 @@ function get_nav_lang($isMobile=false){
     global $q_config;
 
     if(function_exists('qtranxf_getLanguage')){
+    	$sortedLanguages = array(0 => "ja", 1=>"en", 2=>"zh", 3=>"tw" );
+
+    	$sortedLanguages = $sortedLanguages + qtranxf_getSortedLanguages(); 
+    	
 		$currentLanguage = qtranxf_getLanguage();
 		$currentLangName = strtoupper(qtranxf_getLanguageNameNative( $currentLanguage ));
 
@@ -274,7 +279,7 @@ function get_nav_lang($isMobile=false){
           
 		echo '<a class="nav-link dropdown-toggle '.$classNavLink.'" onclick="return false;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$lang.'<i class="fa fa-angle-down fa-lg"></i></a>';
 		echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
-		foreach ( qtranxf_getSortedLanguages() as $language ) {
+		foreach ( $sortedLanguages as $language ) {
 			$name 	 = strtoupper(qtranxf_getLanguageNameNative( $language ));
 			$locale = $q_config['locale'][ $language ];
 			$lang = substr( $locale, 3, 4 );
@@ -293,7 +298,7 @@ function miyanomori_blogs_type($atts){
 		'type' => 'small_image',
 		"ignore_sticky_posts" => "top",
 		"orderby" => "ID",
-		"order" => "ASC"
+		"order" => "DESC"
 		), $atts));
 
 	if(get_query_var('paged')):
@@ -305,37 +310,100 @@ function miyanomori_blogs_type($atts){
 	endif;
 
 	$args = array(
-		'post_type' 			=> 'post',
+		'post_type' => 'post',
 		'orderby' => $orderby,
 		'order'   => $order,
 		'paged' => $paged,
 	);	
-
-	
-
-	$blogs = new WP_Query($args);	
+	$blogs = new WP_Query($args);
+	$posts_show_home = 1;	
 	ob_start();
 	$maxpage = $blogs->max_num_pages;
+
 	if($blogs->have_posts()):?>
-		<div class="content_blog">
-			<?php while ($blogs->have_posts()):?>
-				<?php $blogs->the_post(); ?>
-				<?php get_template_part( 'template-parts/content'); ?>
-			<?php endwhile; ?>
-			<?php 
-				 $GLOBALS['wp_query']->max_num_pages = $blogs->max_num_pages;
-                the_posts_pagination( array(
-                   'mid_size' => 1,
-                   'prev_text' => __( 'Back', 'green' ),
-                   'next_text' => __( 'Onward', 'green' ),
-                   'screen_reader_text' => __( 'Posts navigation' )
-                ) ); 
-			wp_reset_postdata();
-			?>
-		</div>
-		
+		<?php if( $atts['page'] === 'home_logged') : ?>
+			<?php while ($blogs->have_posts()): 
+				$blogs->the_post();
+			if($posts_show_home > 1) { break; } ?>	
+				<div class="carousel-cell">
+	                <p><?= get_the_title(); ?></p>
+	            </div>	
+            <?php
+            	$posts_show_home++; 
+        		endwhile; 
+        	?>
+		<?php else: ?>
+			<div class="content_blog">
+				<?php while ($blogs->have_posts()):?>
+					<?php $blogs->the_post(); ?>
+					<?php get_template_part( 'template-parts/content'); ?>
+				<?php endwhile; ?>
+				<?php  if($maxpage > 1) : ?>
+					<div class="pagenav_box">
+						<div class="pagenavigation">
+							<span class="total-on-page"><?= ($paged ? $paged : 1).' / '.$maxpage?></span>
+							<?php 
+								$GLOBALS['wp_query']->max_num_pages = $blogs->max_num_pages;
+				                // the_posts_pagination( array(
+				                //    'mid_size' => 2,
+				                //    'end_size' => 0,
+				                //    'prev_text' => __( '«', 'green' ),
+				                //    'next_text' => __( '»', 'green' ),
+				                //    'screen_reader_text' => ' ',
+				                //    'current' => ($paged ? $paged : 1),
+				                //    'total' => $blogs->max_num_pages,
+				                // ) );
+								$pag_args1 = array(
+									'type'         	=> 'array',
+									'end_size'     	=> 0,
+									'mid_size'      => 2,
+									'add_fragment'  => '',
+									'show_all' 		=> false,
+								    'current' 		=> $paged,
+								    'total'   		=> $blogs->max_num_pages,
+								    'prev_text'		=> '«',
+								    'next_text'		=> '»',
+								);
+			    				$paginate_links = paginate_links( $pag_args1 );
+			    				$c=$pag_args1['current'];
+			    				$dots3 =  __( '&hellip;' );
+
+			    				$allowed=[
+			    					'current',
+								    'prev ',
+								    'next ',
+								    $dots3,
+								    sprintf( '/page/%d/', $c+1 ),
+								    sprintf( '/page/%d/', $c+2 ),
+								    sprintf( '/page/%d/', $c-1 ),
+								    sprintf( '/page/%d/', $c+2 ),
+			    				];
+
+			    				$paginate_links=array_filter(
+							        $paginate_links,
+								    function( $value ) use ( $allowed ) {
+								        foreach( (array) $allowed as $tag )
+								        {			        	
+								            if( false !== strpos( $value, $tag ) )
+								                return true;
+								        }
+								        return false;
+								    }
+								);
+
+			    				if( ! empty( $paginate_links ) )
+							    printf(
+							        "%s",
+							        join( "", $paginate_links )
+							    );
+							?>
+						</div>
+					</div>
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
+		<?php wp_reset_postdata(); ?>
 	<?php endif; /* end if*/ 		
-	
 	$content=ob_get_contents();
 	ob_get_clean();
 	return $content;
@@ -424,6 +492,23 @@ function new_user_notification_email_callback( $email )
  
 add_filter( 'wp_new_user_notification_email', 'new_user_notification_email_callback' );
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> true
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+}
 
 // add_action( 'admin_enqueue_scripts', 'miyanomori_admin_enqueue' );
 
@@ -450,3 +535,35 @@ add_filter( 'wp_new_user_notification_email', 'new_user_notification_email_callb
 //     );
 //     wp_enqueue_script( 'miyanomori_admin_script' );
 // }
+// 
+// 
+
+function menu_active(){
+	global $wp;
+	$current_url = home_url( $wp->request );
+	$active = '';
+	switch (true) {
+		case is_numeric(strpos($current_url,'feature')):
+			$active = 'feature';
+			break;
+		case is_numeric(strpos($current_url,'plan')):
+			$active = 'plan';
+			break;
+		case is_numeric(strpos($current_url,'equipment')):
+			$active = 'equipment';
+			break;
+		case is_numeric(strpos($current_url,'access')):
+			$active = 'access';
+			break;
+		case is_numeric(strpos($current_url,'outline')):
+			$active = 'outline';
+			break;
+		case is_numeric(strpos($current_url,'contactus')):
+			$active = 'contactus';
+			break;
+		default:
+			$active = 'home';
+		break;
+	}
+	return $active;
+}

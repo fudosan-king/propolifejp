@@ -2,6 +2,8 @@
 if (!is_home() && !is_front_page() && !is_user_logged_in() && !is_page('lostpassword') )
 {
     wp_redirect(home_url());
+}elseif(is_404()) {
+    wp_redirect(home_url());
 }
 ?>
 <!doctype html>
@@ -18,14 +20,16 @@ if (!is_home() && !is_front_page() && !is_user_logged_in() && !is_page('lostpass
     <?php endif; ?>
 
     <meta name="title" content="<?= get_the_title(); ?>">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="<?php bloginfo('template_directory');?>/assets/favicon_package_v0.16/site.webmanifest">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory');?>/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory');?>/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory');?>/assets/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="<?php bloginfo('template_directory');?>/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css">
@@ -41,12 +45,21 @@ if (!is_home() && !is_front_page() && !is_user_logged_in() && !is_page('lostpass
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/styles.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/mobile.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/assets/css/custom.css" type="text/css">
-    
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVKSR');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body <?php body_class(); ?>>
-    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVKSR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <?php wp_body_open(); ?>
-    
     <div id="page">
 

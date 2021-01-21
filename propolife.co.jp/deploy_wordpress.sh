@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -rlpcgoDvz --delete ./propolife2015/ blog.intra.fudosan-king.jp:/var/www/propolifejp/wordpress/wp-content/themes/propolife2015/
+rsync -rlpcgoDvz --delete ./propolife2015/ websv-prod:/var/www/sources/propolife-group/wordpress/wp-content/themes/propolife2015/

@@ -22,6 +22,11 @@
     define('COUNTER_SCRIPT_PATH', COUNTER_PATH . '/js');
     define('COUNTER_IMAGE_PATH', COUNTER_PATH . '/images');
 
+    define('BRANDING_PATH', ASSETS_PATH . '/branding');
+    define('BRANDING_STYLESHEET_PATH', BRANDING_PATH . '/css');
+    define('BRANDING_SCRIPT_PATH', BRANDING_PATH . '/js');
+    define('BRANDING_IMAGE_PATH', BRANDING_PATH . '/images');
+
     $header_posts = null;
     $header_ids = null;
 
@@ -442,12 +447,17 @@
             is_page('events/thanks')
         );
         if($mdsmaf_m_v_condition) {
-            $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-            $random = '';
-            for ( $i = 0; $i < 10; $i++ ) {
-                $random .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
+            $header_extend_script .= "\n<script>";
+            if(is_page('events/thanks')) {
+                $logrenove_customer_id = $_POST['logrenove_customer_id']?:'';
+                $header_extend_script .= 'var msmaf_m_v = '.$logrenove_customer_id.';';
+                $header_extend_script .= 'var a8_affiliate_id = '.$logrenove_customer_id.';';
             }
-            $header_extend_script .= "\n<script>var msmaf_m_v = '$random';</script>";
+            else {
+                $logrenove_customer_id = random_logrenove_customer_id();
+                $header_extend_script .= 'var msmaf_m_v = '.$logrenove_customer_id.';';
+            }
+            $header_extend_script .= "</script>\n";
             
         }
         echo $header_extend_script;
@@ -2050,6 +2060,29 @@
 
     add_action('wp_ajax_event_date_list', 'get_event_date_list_ajax');
     add_action('wp_ajax_nopriv_event_date_list', 'get_event_date_list_ajax');
+
+    function send_pardot_event() {
+        $pardot_url = 'https://go.pardot.com/l/185822/2020-09-01/qh62y3';
+        $pardot_data = array();
+        $pardot_data['logrenove_customer_id'] = $_POST['logrenove_customer_id']?:'';
+        $pardot_data['date'] = $_POST['date']?:'';
+        $pardot_data['time'] = $_POST['time']?:'';
+        $pardot_data['seminer_method'] = $_POST['seminer_method']?:'';
+        $pardot_data['name'] = $_POST['full_name']?:'';
+        $pardot_data['email'] = $_POST['email']?:'';
+        $pardot_data['phone-number'] = $_POST['phone-number']?:'';
+        $pardot_data['inquiry_content'] = $_POST['inquiry_content']?:'';
+        return send_pardot_form($pardot_url, $pardot_data);
+    }
+
+    function random_logrenove_customer_id() {
+        $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        $random = '';
+        for ( $i = 0; $i < 10; $i++ ) {
+            $random .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
+        }
+        return $random;
+    }
 
     function update_event_date_list($event_id) {
         if(get_post_type($event_id) == 'events') {

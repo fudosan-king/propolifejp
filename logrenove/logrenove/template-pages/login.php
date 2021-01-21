@@ -37,6 +37,7 @@
                 $user_ = wp_signon( $creds, false );
                 $error = !empty($user_->errors)?$user_->errors:false;
                 if(!$error) {
+                    setcookie( $redirect_cookie, ' ', time() - YEAR_IN_SECONDS, $redirect_path, COOKIE_DOMAIN, is_ssl(), true );
                     wp_safe_redirect($redirect_to);
                     exit;
                 }

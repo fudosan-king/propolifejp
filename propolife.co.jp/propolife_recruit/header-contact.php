@@ -178,6 +178,12 @@ if (isset($post->ID) && $post->ID == 663 && $post->post_name=='sales-2'){
                         <a href="https://www.oki-ig.com"><img src="<?php bloginfo('template_directory'); ?>/common/img/com_link12.jpg" width="356" height="98" alt="株式会社沖縄イゲトー"></a>
                         <span><a href="https://www.oki-ig.com">株式会社沖縄イゲトー</a></span>
                     </li>
+                    <li>
+                        <a href="https://www.logknot.co.jp/" style="background-color: #fff; text-align: center" target="_blank">
+                            <img src="https://www.propolife.co.jp/wp/wp-content/themes/corporate/common/img/LogKnot_logo-2.png" width="200" height="98" alt="株式会社沖縄イゲトー" style="object-fit: contain;">
+                        </a>
+                        <span><a href="https://www.logknot.co.jp/">LogKnot株式会社</a></span>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -14,10 +14,15 @@
         padding: 20px 0 20px;
         box-sizing: content-box;
     }
+    .menu-show .navbar-brand{
+        padding: 20px 0 20px 20px;
+    }
+
 
     .header_before-login .btn-action .menu {
         display: none;
     }
+
   /*Lock Display*/
     .menu-show .header_before-login .menu {
         display: none;
@@ -67,7 +72,7 @@
 
     .menu-list ul.lang {
         position: absolute;
-        top: 0;
+        top: 10px;
         right: 30px;
         width: -webkit-max-content;
         width: -moz-max-content;
@@ -171,9 +176,10 @@
         opacity: 1;
         display: block !important;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         overflow-y: scroll;
         overflow-x: hidden;
+        padding-top:10px;
     }
 
     .menu-show .menu-list ul li.dropdown .dropdown-menu a {
@@ -195,10 +201,6 @@
 
     .menu-show .header_sub .menu-list li:hover > a{
         color:#fff;
-    }
-
-    .menu-show .header_sub .user-login:before {
-        background-image: url("../images/SVG/i_user_login.svg");
     }
 
     .menu-show .header_sub .menu-list a {
@@ -231,7 +233,7 @@
     .user-login:before {
         position: absolute;
         content: '';
-        background-image: url("../images/SVG/i_user_login.svg");
+        background-image: url("../images/SVG/i_user_login_dark.svg");
         background-repeat: no-repeat;
         right: 0;
         bottom: 0;
@@ -263,7 +265,7 @@
 
     .menu .menuLine {
         box-sizing: border-box;
-        background: #fff;
+        background: #333;
         position: absolute;
         left: 50%;
         display: inline-block;
@@ -286,7 +288,7 @@
     }
 
     .menu.active .menuLine {
-        background: #fff;
+        background: #333;
     }
 
     .menu.active .menuLine:nth-of-type(1) {
@@ -318,6 +320,26 @@
     .menu.active:after {
         -webkit-animation: circle 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         animation: circle 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .box_designsupervision{
+        bottom: 200px;
+    }
+
+    .menu-show .navbar-top{
+        background-color: #fff;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .menu-show header .menu-list a{
+        color:#fff;
+    }
+    .menu-show  .menu-list .nav-item:last-child .nav-link:hover{
+        color:#fff;
+    }
+    .menu-show .menu-list ul li.dropdown .dropdown-menu a{
+        color:#fff;
     }
 }
 /*End*/
@@ -369,6 +391,7 @@
 @media (max-width: 992px) {
 
 
+
     .box_normal .box_normal_item {
         width: calc(100%/2);
     }
@@ -393,9 +416,12 @@
     .before-login .box_designsupervision {
         bottom: 160px;
     }
+    .before-login .slide-main_video {
+        bottom: 120px;
+    }
 
-    .news a {
-        padding: 8px 0;
+    .news h2:before{
+        width: 0;
     }
 
     .title span {
@@ -1038,6 +1064,18 @@
     .section_plan_detail .box_plan_detail_footer .box_infoview_content{
         padding:0;
     }
+    /*Banner Responsive*/
+    .section_subbanner .subbanner_img, .slide-dot-slick .slide-dot-slick_item{
+        height:auto;
+        padding-top: 47.223%;
+    }
+
+    #panoromaPopup .carousel_view .day{
+        height:auto;
+        padding-top: 75%;
+    }
+
+
 }
 
 @media (min-width: 768px) {
@@ -1100,10 +1138,11 @@
         opacity: 1;
     }
 
-    .news.notlogin::after {
+    .news::after {
         right: 10px;
     }
   /* header */
+
     .header_afterlogin .bsnav {
         padding: 20px;
     }
@@ -1116,8 +1155,8 @@
         background-color: #000;
     }
 
-    .news {
-        padding: 15px 30px 15px 15px;
+    .news a{
+        padding: 15px 30px;
     }
 
     .news h2 {
@@ -1125,12 +1164,9 @@
         margin-bottom: 15px;
     }
 
-    .news.news_afterlogin {
-        padding: 15px 40px 15px 15px;
-    }
 
     .news .carousel_news .flickity-prev-next-button.previous {
-        right: -30px;
+        right: -26px;
     }
 
     .news .flickity-prev-next-button.next {
@@ -1145,7 +1181,7 @@
         margin-bottom: 30px;
     }
     /* login */
-    .btn-link {
+    .frm_login .btn-link {
         padding: 0;
     }
     #modal_login{
@@ -1482,6 +1518,19 @@
         margin-right: -15px;
         margin-left: -15px;
     }
+    .embed-responsive h1{
+        font-size: 2.5rem;
+        top:28%;
+    }
+
+    .video-miyanomori .modal-dialog{
+        padding:0;
+    }
+
+    .tabs-center-u-shaped ul.nav-tabs li.nav-item{
+        margin-right:10px;
+    }
+
 }
 
 @media (max-width: 736px) {
@@ -1506,6 +1555,7 @@
         height: 100vh;
         padding-top: 0;
     }
+
 }
 
 @media (max-width: 425px) {
@@ -1526,12 +1576,6 @@
         left: 20px;
     }
 
-    .box_designsupervision {
-        width: auto;
-        right: 15px;
-        left: 15px;
-    }
-
     .slide-main .slideText {
         right: 5.8%;
         bottom: 23%;
@@ -1541,7 +1585,6 @@
         right: 15px;
         left: 15px;
         width: auto;
-        bottom: 22px;
     }
 
     .slideScroll a {
@@ -1622,6 +1665,22 @@
     .section_plan .tabs-center-u-shaped ul.nav-tabs li.nav-item a.nav-link {
         padding: 5px 0;
     }
+
+    .slide-main_video{
+        right:15px;
+        left:15px;
+    }
+
+    .before-login .box_designsupervision {
+        bottom: 230px;
+    }
+    .before-login .slide-main_video {
+        bottom: 160px;
+    }
+    .embed-responsive h1{
+        font-size: 1.5rem;
+        top:28%;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1637,6 +1696,9 @@
         top:12.5px;
     }
 
+    .tabs-center-u-shaped ul.nav-tabs li.nav-item a.nav-link{
+        font-size: 0.55rem;
+    }
 
 }
 
@@ -1654,10 +1716,6 @@
 
     .section_area_minyanomori .area_minyanomori_content h1 {
         top: 252px;
-    }
-
-    .before-login .box_designsupervision {
-        bottom: 200px;
     }
 
     .section_interview .interview_content {

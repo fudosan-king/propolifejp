@@ -118,7 +118,7 @@ function ajax_register()
 function ajax_forgot_password()
 { 
 	$login = isset( $_POST['user_login'] ) ? sanitize_user( wp_unslash( $_POST['user_login'] ) ) : ''; // WPCS: input var ok, CSRF ok.
-
+	$currentLanguage = qtranxf_getLanguage();
 	if ( empty( $login ) ) 
 	{
 		echo json_encode( array( 'status'=>false, 'message'=> ["Enter a username or email address."]));
@@ -202,7 +202,7 @@ function ajax_forgot_password()
     $message .= __('下記リンクをクリックしますとパスワードの再設定画面に遷移いたします。こちらより新しいパスワードをご設定くださいますようお願いいたします。') . "\r\n\r\n";
 	/* translators: %s: site name */
 	$message .= __( '▼パスワード再設定URL') . "\r\n";
-	$message .= '<' . network_site_url( "lostpassword?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . ">\r\n";
+	$message .= '<' . network_site_url( "$currentLanguage/lostpassword?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . ">\r\n";
 	/* translators: %s: user login */
 	$message .= __('※上記リンクがクリックできない場合は、大変お手数ですがURLをコピーしてお使いのブラウザのアドレスバーに貼り付けていただき、パスワード再設定画面へお進みください。'). "\r\n\r\n";
 
@@ -439,7 +439,8 @@ add_action( 'check_admin_referer', 'logout_without_confirmation', 1, 2);
 function new_user_notification_email_callback( $email )
 {
 	preg_match("/http(.)*\s/i", $email['message'] ,$url_login);
-	$url_login = str_replace("wp-login.php?action","lostpassword?action", $url_login[0] ); 
+	$currentLanguage = qtranxf_getLanguage();
+	$url_login = str_replace("wp-login.php?action","$currentLanguage/lostpassword?action", $url_login[0] ); 
 
 	$message  = __( '※本メールは【プロスタイル札幌宮の森】公式サイトのパスワード設定の自動送信メールです。'). "\r\n\r\n";
 

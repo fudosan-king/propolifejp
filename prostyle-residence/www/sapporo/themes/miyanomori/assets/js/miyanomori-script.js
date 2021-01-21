@@ -41,7 +41,7 @@ function miyanomori() {
     }
 
     this.popupVideoAllLoaded = function(){
-        $('.before-login #videoPopup').modal('show');
+        // $('.before-login #videoPopup').modal('show');
         const video = document.getElementById('video_miyanomori');
         $('#videoPopup').on('shown.bs.modal', function (e) {
            video.play();

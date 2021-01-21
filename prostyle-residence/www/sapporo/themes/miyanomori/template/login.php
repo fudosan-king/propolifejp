@@ -61,7 +61,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <video id="video_miyanomori" loop autoplay playsinline>
+            <video id="video_miyanomori" loop playsinline>
               <source src="https://pardot-s3.s3-ap-northeast-1.amazonaws.com/miyanomori/210129_%E7%B4%8D%E5%93%81%E3%83%86%E3%82%99%E3%83%BC%E3%82%BF.mp4" type="video/mp4">
             </video>
           </div>

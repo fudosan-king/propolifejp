@@ -43,11 +43,17 @@ function miyanomori() {
     this.popupVideoAllLoaded = function(){
         $('.before-login #videoPopup').modal('show');
         const video = document.getElementById('video_miyanomori');
-        $('#videoPopup').on('shown.bs.modal', function (e) {
-           video.play();
+        $('#videoPopup').on('show.bs.modal', function (e) {
+            $('#video_miyanomori').removeAttr('muted');
+            video.muted = false;
+            video.play();
         });
-        $('#videoPopup').on('hidden.bs.modal', function (e) {
+
+        $('#videoPopup').on('hide.bs.modal', function (e) {
+            $('#video_miyanomori').attr('muted','');
+            video.muted = true;
             video.pause();
+            
         });
     }
 

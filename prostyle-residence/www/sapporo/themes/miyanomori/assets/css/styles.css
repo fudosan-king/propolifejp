@@ -43,25 +43,25 @@ button:focus {
 }
 
 ::-moz-selection {
-    background: #000;
+    background: #B48856;
     color: #FFF;
     text-shadow: none;
 }
 
 ::selection {
-    background: #000;
+    background: #B48856;
     color: #FFF;
     text-shadow: none;
 }
 
 ::-moz-selection {
-    background: #000;
+    background: #B48856;
     color: #FFF;
     text-shadow: none;
 }
 
 ::-webkit-selection {
-    background: #000;
+    background: #B48856;
     color: #FFF;
     text-shadow: none;
 }

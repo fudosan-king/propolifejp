@@ -564,14 +564,14 @@
     }
 
     .section_area_minyanomori .area_minyanomori_content h1 {
-        position: absolute;
-        top: 167px;
+      /*  position: absolute;
+        top: 167px;*/
         font-size: 2.25rem;
-        left: 40px;
+        /*left: 40px;*/
     }
 
     .section_area_minyanomori .area_minyanomori_content .title {
-        margin-bottom: 90px;
+        margin-bottom: 10px;
     }
 
     .section_area_minyanomori .area_minyanomori_content .col-lg-7 > div {
@@ -630,12 +630,7 @@
     }
 
     .section_interview .box_interview_info {
-        padding-right: 0;
-        padding-bottom: 30px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
+      padding-right:0;
     }
 
     .section_interview .box_interview_info h4 {
@@ -652,7 +647,7 @@
 
     .section_interview .interview_content {
         padding: 50px 5px 50px;
-        margin-bottom: 300px;
+        margin-bottom: 50px;
         background-color: transparent;
     }
 
@@ -1654,10 +1649,6 @@
         margin: 0 auto 0 0;
     }*/
 
-    .section_interview .interview_content {
-        margin-bottom: 350px;
-    }
-
     .section_kengokuma_architect .interview_content {
         margin-bottom: 0;
     }
@@ -1718,9 +1709,6 @@
         top: 252px;
     }
 
-    .section_interview .interview_content {
-        margin-bottom: 380px;
-    }
 
     .box_infoview_content h1 {
         font-size: 2.5em;

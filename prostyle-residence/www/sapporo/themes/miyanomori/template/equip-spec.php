@@ -454,7 +454,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-10.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <!-- <p class="equip-spec_box-des"><?php //echo $e3_section_2['box_content_1']; ?></p> -->
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_1']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -463,7 +463,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-11.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <!-- <p class="equip-spec_box-des"><?php //echo $e3_section_2['box_content_1']; ?></p> -->
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_1']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -489,7 +489,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-14.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <!-- <p class="equip-spec_box-des"><?php //echo $e3_section_2['box_content_1']; ?></p> -->
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_1']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">

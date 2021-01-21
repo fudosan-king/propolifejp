@@ -164,7 +164,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-5 align-self-center">
-                        <h1><?php echo $area_miyanomori_section['heading']; ?></h1>
+                        <h1 class="hide-mobile"><?php echo $area_miyanomori_section['heading']; ?></h1>
                     </div>
                     <div class="col-12 col-lg-7 align-self-center">
                         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
@@ -174,6 +174,7 @@
                                 <li class="active"><span>LOCATION.03</span></li>
                             </ul>
                             <h2 class="title"><?php echo $area_miyanomori_section['title']; ?></h2>
+                            <h1 class="hide-pc show-mobile"><?php echo $area_miyanomori_section['heading']; ?></h1>
                             <div class="mb-0"><?php echo $area_miyanomori_section['content']; ?></div>
                         </div>
                     </div>
@@ -213,7 +214,7 @@
                     <div class="interview_img">
                         <img src="<?php bloginfo('template_directory');?>/assets/images/1x/mr_kengokuma01.jpg" alt="" class="img-fluid">
                     </div>
-                    <div class="box_interview_info">
+                    <div class="box_interview_info hide-mobile">
                         <h4>PROFILE</h4>
                         <p><?php echo $interview_section['profile']; ?></p>
                         <a href="https://kkaa.co.jp" target="_blank" class="btn-link"><?php echo $interview_section['profile_button_text']; ?></a>
@@ -237,6 +238,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="box_interview_info hide-pc show-mobile">
+                <h4>PROFILE</h4>
+                <p><?php echo $interview_section['profile']; ?></p>
+                <a href="https://kkaa.co.jp" target="_blank" class="btn-link"><?php echo $interview_section['profile_button_text']; ?></a>
             </div>
         </div>
     </section>

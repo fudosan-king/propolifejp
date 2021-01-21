@@ -454,7 +454,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-10.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_1']; ?></p>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_2']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -463,7 +463,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-11.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_1']; ?></p>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_3']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -472,6 +472,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-12.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_4']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -489,7 +490,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-14.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_1']; ?></p>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_6']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -498,7 +499,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-15.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_1']; ?></p>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_7']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -507,6 +508,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-16.jpg" alt="" title="">
                                             <span><?php the_field('image_ref'); ?></span>
                                         </div>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_8']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -515,6 +517,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-17.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_9']; ?></p>
                                     </div>
 
                                      <div class="col-md-4">
@@ -523,6 +526,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-18.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_2['box_content_10']; ?></p>
                                     </div>
 
                                 </div>
@@ -613,7 +617,7 @@ Template Post Type: page
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-3.jpg" alt="" title="">
                                         </div>
-                                        <p class="equip-spec_box-des"><?php echo $e4_section_3['box_content_3'] ?></p>
+                                        <p class="equip-spec_box-des"><?php echo $e4_section_3['box_content_1'] ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -621,7 +625,7 @@ Template Post Type: page
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-4.jpg" alt="" title="">
                                         </div>
-                                        <p class="equip-spec_box-des"><?php echo $e4_section_3['box_content_3'] ?></p>
+                                        <p class="equip-spec_box-des"><?php echo $e4_section_3['box_content_2'] ?></p>
                                     </div>
                                     <div class="col-md-4">
                                         <p class="equip-spec_box-title"><?php echo $e4_section_3['box_title_3']; ?></p>

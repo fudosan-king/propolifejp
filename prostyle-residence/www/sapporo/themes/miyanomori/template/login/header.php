@@ -63,7 +63,7 @@
                             <div class="row no-gutters">
                                 <div class="col-12 col-lg-6">
                                     <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-                                    <button type="submit" class="btn w-100 btn_brown" name="login" value=""/><?php esc_attr_e( 'ログインする', 'miyanomori' ); ?></button>
+                                    <button type="submit" class="btn w-100 btn_brown" name="login" value=""/><?= _e( 'ログインする', 'miyanomori' ); ?></button>
                                     <input type="hidden" name="redirect" value="<?php echo get_home_url(); ?>" />
                                 </div>
                                 <div class="col-12 col-lg-6 text-center">
@@ -81,7 +81,7 @@
                             <input class="form-control" type="text" name="forgot_email"  id="forgot_email" placeholder="<?= _e('メールアドレスをご入力ください','miyanomori'); ?>">
                         </div>
                         <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-                        <button type="submit" class="btn w-100 btn_brown" name="" /><?php esc_attr_e( 'パスワードを再設定する', 'miyanomori' ); ?></button>
+                        <button type="submit" class="btn w-100 btn_brown" name="" /><?= _e( 'パスワードを再設定する', 'miyanomori' ); ?></button>
                     </div>
                 </form>
                 <form  method="post" class="frm_login" id="frm_regiter" >
@@ -99,7 +99,7 @@
                                 <input type="text" class="form-control" placeholder="<?= _e('パスワード','miyanomori'); ?>" name="userlogin" id='userlogin' style="display: none;">
                             </div>
                             <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-                            <button type="submit"  class="btn w-100 btn_brown d-block"><?php esc_attr_e('物件エントリーする'); ?></button>
+                            <button type="submit"  class="btn w-100 btn_brown d-block"><?= _e('物件エントリーする','miyanomori'); ?></button>
                         </div>
                     </div>
                 </form>

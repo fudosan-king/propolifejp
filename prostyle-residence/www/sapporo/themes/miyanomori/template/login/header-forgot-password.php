@@ -64,7 +64,7 @@ if ( empty($message) && isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ))
                             <div class="row no-gutters">
                                 <div class="col-md-12">
                                     <input type="hidden" name="rp_key" value="<?php echo esc_attr( $_GET['key'] ); ?>" />
-                                    <button type="submit" class="btn w-100 btn_brown" name="wp-submit" value=""/><?php esc_attr_e( 'パスワードを再登録する', 'miyanomori' ); ?></button>
+                                    <button type="submit" class="btn w-100 btn_brown" name="wp-submit" value=""/><?= _e( 'パスワードを再登録する', 'miyanomori' ); ?></button>
                                     <a href="<?= get_site_url(); ?>" ><p class="link-back"><span class="dashicons dashicons-arrow-left-alt"></span><?= _e('トップページに戻りログインして下さい','miyanomori'); ?></p></a>
                                 </div>
                             </div>

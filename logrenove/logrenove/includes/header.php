@@ -63,7 +63,7 @@ $header_fixed = $detect->isMobile() && (is_home() || (is_single() && get_post_ty
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav_mobile navbar-mobile">
                 <li><a href="<?php echo site_url('events'); ?>">セミナーを探す</a></li>
-                <li><a href="<?php echo site_url('service'); ?>">LogRenoveを知る</a></li>
+                <li><a href="<?php echo site_url('branding'); ?>">LogRenoveを知る</a></li>
                 <li><a href="<?php echo site_url('work'); ?>">施工事例を見る</a></li>
                 <li><a href="<?php echo site_url('counter'); ?>">プランナーに相談する</a></li>
                 <li><a href="<?php echo site_url('documents'); ?>">資料を探す</a></li>
@@ -84,7 +84,7 @@ $header_fixed = $detect->isMobile() && (is_home() || (is_single() && get_post_ty
                 <div class="box_nav_slider">
                     <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
                         <div class="carousel-cell"><a href="<?php echo site_url('events'); ?>">セミナーを探す</a></div>
-                        <div class="carousel-cell"><a href="<?php echo site_url('service'); ?>">LogRenoveを知る</a></div>
+                        <div class="carousel-cell"><a href="<?php echo site_url('branding'); ?>">LogRenoveを知る</a></div>
                         <div class="carousel-cell"><a href="<?php echo site_url('work'); ?>">施工事例を見る</a></div>
                         <div class="carousel-cell"><a href="<?php echo site_url('counter'); ?>">プランナーに相談する</a></div>
                         <div class="carousel-cell"><a href="<?php echo site_url('documents'); ?>">資料を探す</a></div>

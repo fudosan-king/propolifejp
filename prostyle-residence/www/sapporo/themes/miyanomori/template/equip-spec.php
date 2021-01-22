@@ -370,7 +370,7 @@ Template Post Type: page
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-th-2.jpg" alt="" title="">
                                             <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
-                                        <p class="equip-spec_box-des"><?php echo $e3_section_1['box_content_2']; ?></p>
+                                        <p class="equip-spec_box-des"><?php echo $e3_section_1['box_content_1']; ?></p>
                                     </div>
 
                                     <div class="col-md-4">
@@ -672,7 +672,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-title"><?php echo $e5_section_5['box_title_2']; ?></p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-8.jpg" alt="" title="">
-                                            <span class="txt-black">参考写真</span>
+                                            <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
                                         <p class="equip-spec_box-des"><?php echo $e5_section_5['box_content_2']; ?></p>
                                     </div>
@@ -680,7 +680,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-title"><?php echo $e5_section_5['box_title_3']; ?></p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-9.jpg" alt="" title="">
-                                            <span class="txt-black">参考写真</span>
+                                            <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
                                         <p class="equip-spec_box-des"><?php echo $e5_section_5['box_content_3']; ?></p>
                                     </div>
@@ -688,7 +688,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-title"><?php echo $e5_section_5['box_title_4']; ?></p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-10.jpg" alt="" title="">
-                                            <span class="txt-black">参考写真</span>
+                                            <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
                                         <p class="equip-spec_box-des"><?php echo $e5_section_5['box_content_4']; ?></p>
                                     </div>
@@ -696,7 +696,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-title"><?php echo $e5_section_5['box_title_5']; ?></p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-11.jpg" alt="" title="">
-                                            <span class="txt-black">参考写真</span>
+                                            <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
                                         <p class="equip-spec_box-des"><?php echo $e5_section_5['box_content_5']; ?></p>
                                     </div>
@@ -704,7 +704,7 @@ Template Post Type: page
                                         <p class="equip-spec_box-title"><?php echo $e5_section_5['box_title_6']; ?></p>
                                         <div class="equip-spec_box_img">
                                             <img src="<?php bloginfo('template_directory');?>/assets/images/main/equip-spec-f-12.jpg" alt="" title="">
-                                            <span class="txt-black">参考写真</span>
+                                            <span class="txt-black"><?php the_field('image_ref'); ?></span>
                                         </div>
                                         <p class="equip-spec_box-des"><?php echo $e5_section_5['box_content_6']; ?></p>
                                     </div>

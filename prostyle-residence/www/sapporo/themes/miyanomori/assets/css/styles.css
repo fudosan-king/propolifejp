@@ -3609,7 +3609,7 @@ figure {
 .equip-spec_box .equip-spec_box-title {
     font-weight: 600;
     font-size: 1.125rem;
-    height: 40px;
+    height: auto;
     line-height: 1.6em;
     position: relative;
     padding: 7.5px 0;

@@ -38,23 +38,24 @@
 		<div class="row">
     		<div class="col-12 col-lg-12">
                 <a href="<?= home_url() ?>"><img src="<?php bloginfo('template_directory');?>/assets/images/lang/en/logo-y-v-en.png" alt="" class="img-fluid mb-3" width="110"></a>
-                <!-- <ul>
-                    <li><a href="<?php echo home_url('/news/'); ?>">新着情報</a></li>
-                    <li><a href="<?= home_url('/aboutus/'); ?> ">PROSTYLEについて</a></li>
-                    <li><a target="_blank" href="https://www.propolife.co.jp/terms/">利用規約</a></li>
-                    <li><a target="_blank" href="https://www.propolife.co.jp/antisocial/">反社会的勢力排除に関する基本方針</a></li>
-                    <li><a href="<?= home_url('/privacypolicy/'); ?>">プライバシーポリシー</a></li>
-                    <li><a target="_blank" href="https://www.propolife.co.jp/socialpolicy/">ソーシャルメディアポリシー</a></li>
-                </ul> -->
 
                 <ul>
                     <?php if ( have_rows('footer_menu', 'option') ) {
                         while ( have_rows('footer_menu', 'option') ) { the_row();
+
                             $text = get_sub_field('text');
                             $url = get_sub_field('url');
-                            ?>
-                                <li><a href="<?php echo $url; ?>"><?php echo $text; ?></a></li>
-                            <?php
+                            $is_blank = get_sub_field('is_blank');
+
+                            if ($is_blank == 1):
+                                ?>
+                                    <li><a href="<?php echo $url; ?>" target="_blank"><?php echo $text; ?></a></li>
+                                <?php
+                            else :
+                                ?>
+                                    <li><a href="<?php echo $url; ?>"><?php echo $text; ?></a></li>
+                                <?php
+                            endif;
                         }
                     } ?>
                 </ul>

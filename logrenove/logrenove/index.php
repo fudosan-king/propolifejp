@@ -2,7 +2,7 @@
         <main style="padding-top: unset;">
 
             <section class="section_intro">
-                <p class="mb-0 text-center"><a href="<?php echo site_url('service'); ?>" class="btn btn_detail">詳しく見る</a></p>
+                <p class="mb-0 text-center"><a href="<?php echo site_url('branding'); ?>" class="btn btn_detail">詳しく見る</a></p>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-12">

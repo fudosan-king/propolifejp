@@ -1,6 +1,6 @@
 <input type="hidden" name="term_id" value="<?=get_queried_object()->term_id?>">
 <input type="hidden" name="taxonomy" value="<?=get_query_var('taxonomy')?>">
-<input type="hidden" name="d" value="<?=isset($_GET['d'])?$_GET['d']:''?>">
+<input type="hidden" name="d" value="<?=isset($_GET['d'])?esc_attr($_GET['d']):''?>">
 <?php $event_lists = get_event_date_list();
 foreach ($event_lists as $date => $event_list):
     $date_format = date_i18n('Fj日 (D)', strtotime($date));

@@ -27,6 +27,11 @@
     define('BRANDING_SCRIPT_PATH', BRANDING_PATH . '/js');
     define('BRANDING_IMAGE_PATH', BRANDING_PATH . '/images');
 
+    define('SELL_PATH', ASSETS_PATH . '/sell');
+    define('SELL_STYLESHEET_PATH', SELL_PATH . '/css');
+    define('SELL_SCRIPT_PATH', SELL_PATH . '/js');
+    define('SELL_IMAGE_PATH', SELL_PATH . '/images');
+
     $header_posts = null;
     $header_ids = null;
 

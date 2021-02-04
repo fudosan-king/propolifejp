@@ -22,6 +22,7 @@
                         <div class="col-12 col-md-8">
                             <div class="main_left">
                                 <div class="box_video">
+                                    <h2>LogRenoveとは？</h2>
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" src="https://player.riclink.biz/watch?id=742023e0870828cc9e48_37j4by9r&guide=1&share=1"></iframe>
                                     </div>

@@ -7,7 +7,6 @@
         <a href="<?php echo site_url('work'); ?>" class="btn btn_seeall d-none d-lg-block">施工事例をすべて見る <img src="<?php echo IMAGE_PATH; ?>/i_brown_right.svg" alt="" class="img-fluid" width="5"></a>
     </div>
 </div>
-<p class="sub_title">LogRenoveならではの無垢材を使ったリノベーション事例をご覧いただけます</p>
 <ul class="list_construction d-lg-flex d-none">
     <?php 
         if($construction_examples):

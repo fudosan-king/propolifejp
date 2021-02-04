@@ -752,6 +752,7 @@ body {
         margin-left: -15px;
         margin-right: -15px;
         border-bottom: 1px solid #000;
+        padding-bottom: 5px;
     }
 
     .section_banner {
@@ -1298,6 +1299,8 @@ footer .footer_bottom {
 
     .box_video h2 {
         font-size: 1.3333em;
+        padding-top: 8px;
+        margin-bottom: 3px;
     }
 
     /*.navbar-collapse.collapse:not(.show) {

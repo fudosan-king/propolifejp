@@ -1296,6 +1296,11 @@ footer .footer_bottom {
 }*/
 
 @media (max-width: 768px) {
+
+    .box_video h2 {
+        font-size: 1.3333em;
+    }
+
     /*.navbar-collapse.collapse:not(.show) {
         display: block;
     }*/

@@ -408,7 +408,7 @@
                             </div>
                             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    <p>現在は首都圏の分譲マンションを対象としています。<br>対象エリア外の物件でも、対応可能な場合もありますのでお気軽にご相談ください。<br>
+                                    <p>現在は東京23区のマンション・戸建てを対象としています。<br>対象エリア外の物件でも、対応可能な場合もありますのでお気軽にご相談ください。<br>
                                     また今後、対象エリアや対象不動産種別の拡大を検討しています。</p>
                                 </div>
                             </div>

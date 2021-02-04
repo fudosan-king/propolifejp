@@ -12,7 +12,7 @@
                         </p>
                         <h2><span>売却希望価格<small>と</small></span>売却期限<small>で選べる</small></h2>
                         <a href="https://form.kintoneapp.com/public/form/show/d558bcaeda85b5296c9d36ffecc10bdf0030da7172fe657c3be697f61b05f9ef" class="btn btn_access" target="_tbank" rel="noopener noreferrer"><span>30秒で入力完了！</span>今すぐ査定 <img src="<?=SELL_IMAGE_PATH?>/SVG/arrow-right-circle.svg" alt="" class="img-fluid" width="24"></a>
-                        <p class="mb-0">※首都圏のマンションのみの取り扱いとなります。</p>
+                        <p class="mb-0">※東京23区のマンション・戸建てのみの取り扱いとなります。</p>
                     </div>
                     <div class="col-12 col-lg-12">
                         <img src="<?=SELL_IMAGE_PATH?>/building.png" alt="" class="img-fluid w-100 d-block d-lg-none">

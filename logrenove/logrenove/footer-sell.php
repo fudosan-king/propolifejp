@@ -29,7 +29,7 @@
 	                <div class="col-12 col-lg-12">
 	                    <p class="copyright">Copyright © <a href="index.php">LogKnot Inc.</a> All Rights Reserved.</p>
 	                    <p><a href="https://form.kintoneapp.com/public/form/show/d558bcaeda85b5296c9d36ffecc10bdf0030da7172fe657c3be697f61b05f9ef" target="_tbank" rel="noopener noreferrer" class="btn btn_accessnow">今すぐ査定</a></p>
-	                    <p class="mb-0">※首都圏のマンションのみの取り扱いとなります。</p>
+	                    <p class="mb-0">※東京23区のマンション・戸建てのみの取り扱いとなります。</p>
 	                </div>
 	    		</div>
 	    	</div>

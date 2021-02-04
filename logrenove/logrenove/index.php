@@ -25,6 +25,7 @@
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" src="https://player.riclink.biz/watch?id=742023e0870828cc9e48_37j4by9r&guide=1&share=1"></iframe>
                                     </div>
+                                    <h2>お客様の声</h2>
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" src="https://player.riclink.biz/watch?id=b479f42971f6bebc16e5&guide=1&share=0%E3%80%80"></iframe>
                                     </div>

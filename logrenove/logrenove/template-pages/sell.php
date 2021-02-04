@@ -107,7 +107,7 @@
                         ご納得いただけた方のみ売却活動のご案内をいたします。</h4>
                         <h4 class="mb-2">30秒で入力完了！</h4>
                         <a href="https://form.kintoneapp.com/public/form/show/d558bcaeda85b5296c9d36ffecc10bdf0030da7172fe657c3be697f61b05f9ef" target="_tbank" rel="noopener noreferrer" class="btn btn_accessnow">今すぐ査定</a>
-                        <p>※首都圏のマンションのみの取り扱いとなります。</p>
+                        <p>※東京23区のマンション・戸建てのみの取り扱いとなります。</p>
                     </div>
                 </div>
             </div>

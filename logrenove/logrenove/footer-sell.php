@@ -12,7 +12,8 @@
 	                    <div class="row">
 	                        <div class="col-12 col-lg-6 align-self-center">
 	                            <p class="mb-2"><a href="https://www.chronicle-web.com/" target="_tbank" rel="noopener noreferrer"><img src="<?=SELL_IMAGE_PATH?>/img_logo_chronicle_ja.png" alt="" class="img-fluid" width="178"></a></p>
-	                            <p class="mb-0">〒107-0061　東京都港区北⻘⼭3-6-23</p>
+	                            <p class="mb-0">免許番号：宅地建物取引業 国土交通大臣（3）第7684号</p>
+								<p class="mb-0">〒107-0061　東京都港区北⻘⼭3-6-23</p>
 	                        </div>
 	                        <div class="col-12 col-lg-6 align-self-center">
 	                            <a href="https://www.propolife.co.jp/contact/" target="_tbank" rel="noopener noreferrer" class="btn btn_contact">問合せフォーム</a>

@@ -11,11 +11,11 @@
 	                    </ul>
 	                    <div class="row">
 	                        <div class="col-12 col-lg-6 align-self-center">
-	                            <p class="mb-2"><a href="https://www.logknot.co.jp/" target="_tbank" rel="noopener noreferrer"><img src="<?=SELL_IMAGE_PATH?>/SVG/LogKnot.svg" alt="" class="img-fluid" width="178"></a></p>
+	                            <p class="mb-2"><a href="https://www.chronicle-web.com/" target="_tbank" rel="noopener noreferrer"><img src="<?=SELL_IMAGE_PATH?>/img_logo_chronicle_ja.png" alt="" class="img-fluid" width="178"></a></p>
 	                            <p class="mb-0">〒107-0061　東京都港区北⻘⼭3-6-23</p>
 	                        </div>
 	                        <div class="col-12 col-lg-6 align-self-center">
-	                            <a href="<?=site_url('contact')?>" class="btn btn_contact">お問い合わせ</a>
+	                            <a href="https://www.propolife.co.jp/contact/" target="_tbank" rel="noopener noreferrer" class="btn btn_contact">問合せフォーム</a>
 	                        </div>
 	                    </div>
 	                </div>
@@ -27,7 +27,7 @@
 	    	<div class="container">
 	    		<div class="row">
 	                <div class="col-12 col-lg-12">
-	                    <p class="copyright">Copyright © <a href="index.php">LogKnot Inc.</a> All Rights Reserved.</p>
+	                    <p class="copyright">Copyright © <a href="https://www.chronicle-web.com/" target="_tbank" rel="noopener noreferrer">CHRONICLE INC.</a> All Rights Reserved.</p>
 	                    <p><a href="https://form.kintoneapp.com/public/form/show/d558bcaeda85b5296c9d36ffecc10bdf0030da7172fe657c3be697f61b05f9ef" target="_tbank" rel="noopener noreferrer" class="btn btn_accessnow">今すぐ査定</a></p>
 	                    <p class="mb-0">※東京23区のマンション・戸建てのみの取り扱いとなります。</p>
 	                </div>

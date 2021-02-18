@@ -2185,7 +2185,7 @@ blockquote:before {
 
 @media (max-width: 768px) {
 	.login_header {
-		padding: 120px 0 30px;
+		padding: 30px 0 30px;
 	}
 	.login_body {
 		width: 100%;
@@ -2785,6 +2785,7 @@ ul.list_event li a.disabled {
 	}
 	.frm_services {
 		padding: 40px 20px;
+		margin-bottom: 40px;
 	}
 	.frm_services .form-group {
 		margin-bottom: 15px;
@@ -2796,6 +2797,7 @@ ul.list_event li a.disabled {
 	.box_otherevents {
 		margin-left: -15px;
 		margin-right: -15px;
+		margin-bottom: unset;
 	}
 	.box_otherevents .carousel-cell {
 		width: 50%;

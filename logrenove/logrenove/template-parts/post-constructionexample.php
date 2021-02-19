@@ -43,4 +43,4 @@
         </div>
     <?php endforeach;endif; ?>
 </div>
-<a href="<?php echo site_url('work'); ?>" class="btn btn_seeall d-block d-lg-none">施工事例をすべて見る <img src="<?php echo IMAGE_PATH; ?>/i_brown_right.svg" alt="" class="img-fluid" width="5"></a>
+<a href="<?php echo site_url('work'); ?>" class="btn btn_seeall btn_work d-block d-lg-none">施工事例をすべて見る <img src="<?php echo IMAGE_PATH; ?>/i_brown_right.svg" alt="" class="img-fluid" width="5"></a>

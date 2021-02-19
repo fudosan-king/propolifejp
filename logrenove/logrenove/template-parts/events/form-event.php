@@ -50,20 +50,20 @@ $logrenove_customer_id = random_logrenove_customer_id();
               <div class="col-12 col-lg-9 align-self-center">
                 <div class="row seminer_method">
                     <div class="col-12 col-md-4 custom-checkradio">
-                        <label class="check-radio">オンライン
-                            <input type="radio" value="オンライン" name="seminer_method" class="required" checked>
+                        <label class="check-radio">オンライン受講
+                            <input type="radio" value="オンライン受講" name="seminer_method" class="required" checked>
                             <span class="checkmark"></span>
                         </label>
                     </div>
                     <div class="col-12 col-md-4 custom-checkradio">
-                        <label class="check-radio">表参道ショールーム
-                            <input type="radio" value="表参道ショールーム" name="seminer_method" class="required">
+                        <label class="check-radio">表参道ショールーム来場
+                            <input type="radio" value="表参道ショールーム来場" name="seminer_method" class="required">
                             <span class="checkmark"></span>
                         </label>
                     </div>
                     <div class="col-12 col-md-4 custom-checkradio">
-                        <label class="check-radio">バーチャルプランナー
-                            <input type="radio" value="バーチャルプランナー" name="seminer_method" class="required">
+                        <label class="check-radio">バーチャルプランナーに相談
+                            <input type="radio" value="バーチャルプランナーに相談" name="seminer_method" class="required">
                             <span class="checkmark"></span>
                         </label>
                     </div>

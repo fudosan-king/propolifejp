@@ -1533,10 +1533,14 @@
 
     function send_pardot_form($pardot_url, $pardot_data) {
         $data = http_build_query($pardot_data);
+        $referer = wp_get_referer()?:home_url();
         $opts = array('http' =>
             array(
                 'method'  => 'POST',
-                'header'  => 'Content-Type: application/x-www-form-urlencoded',
+                'header'  => array(
+                    "Content-Type: application/x-www-form-urlencoded", 
+                    "Referer: ".$referer,
+                ),
                 'content' => $data
             ),
             'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
@@ -2067,7 +2071,7 @@
     add_action('wp_ajax_nopriv_event_date_list', 'get_event_date_list_ajax');
 
     function send_pardot_event() {
-        $pardot_url = 'https://go.pardot.com/l/185822/2020-09-01/qh62y3';
+        $pardot_url = 'https://form.run/api/v1/r/hn539u1luahij46gdb768an0';
         $pardot_data = array();
         $pardot_data['logrenove_customer_id'] = $_POST['logrenove_customer_id']?:'';
         $pardot_data['date'] = $_POST['date']?:'';

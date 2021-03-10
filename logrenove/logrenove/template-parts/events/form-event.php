@@ -42,7 +42,7 @@ $logrenove_customer_id = random_logrenove_customer_id();
                 </div>
             </div>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <div class="row mb-3">
              <div class="col-12 col-lg-3 align-self-center">
                   <label for="">参加方法<span class="red">（※）</span></label>
@@ -70,7 +70,7 @@ $logrenove_customer_id = random_logrenove_customer_id();
                 </div>
               </div>
             </div>
-        </div>
+        </div> -->
         <div class="form-group">
             <div class="row">
                 <div class="col-12 col-lg-3 align-self-center">
@@ -137,14 +137,14 @@ $logrenove_customer_id = random_logrenove_customer_id();
                  <span id="date"></span> <span id="time"></span>
              </td>
           </tr>
-          <tr>
+          <!-- <tr>
              <td>
                 <label>参加方法</label>
              </td>
              <td class="confirm-text">
                  <span id="seminer_method"></span>
              </td>
-          </tr>
+          </tr> -->
           <tr>
              <td>
                 <label>お名前</label>

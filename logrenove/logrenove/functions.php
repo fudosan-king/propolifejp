@@ -2076,7 +2076,7 @@
         $pardot_data['logrenove_customer_id'] = $_POST['logrenove_customer_id']?:'';
         $pardot_data['date'] = $_POST['date']?:'';
         $pardot_data['time'] = $_POST['time']?:'';
-        $pardot_data['seminer_method'] = $_POST['seminer_method']?:'';
+        // $pardot_data['seminer_method'] = $_POST['seminer_method']?:'';
         $pardot_data['name'] = $_POST['full_name']?:'';
         $pardot_data['email'] = $_POST['email']?:'';
         $pardot_data['phone-number'] = $_POST['phone-number']?:'';

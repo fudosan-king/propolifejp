@@ -100,16 +100,16 @@ $(function($) {
             var element = $('[name^='+name+']');
             var required = element.hasClass('required');
             if(required) {
-                if(name == 'seminer_method') {
-                    if(val == '') {
-                        $('.'+name).find('.checkmark').addClass('validate-error');
-                        $('.'+name).find('label').css('color', '#ff0000');
-                    }
-                    else {
-                        $('.'+name).find('.checkmark').removeClass('validate-error');
-                        $('.'+name).find('label').removeAttr('style');
-                    }
-                }
+                // if(name == 'seminer_method') {
+                //     if(val == '') {
+                //         $('.'+name).find('.checkmark').addClass('validate-error');
+                //         $('.'+name).find('label').css('color', '#ff0000');
+                //     }
+                //     else {
+                //         $('.'+name).find('.checkmark').removeClass('validate-error');
+                //         $('.'+name).find('label').removeAttr('style');
+                //     }
+                // }
                 if(val == '' || val.length == 0) {
                     element.addClass('validate-error');
                     invalid.push(name);

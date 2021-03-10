@@ -2081,7 +2081,7 @@
         $pardot_data['email'] = $_POST['email']?:'';
         $pardot_data['phone-number'] = $_POST['phone-number']?:'';
         $pardot_data['inquiry_content'] = $_POST['inquiry_content']?:'';
-        if(empty($pardot_data['logrenove_customer_id']) && empty($pardot_data['date']) && empty($pardot_data['time']) && empty($pardot_data['name']) && empty($pardot_data['email']) && empty($pardot_data['phone-number'])) {
+        if(empty($pardot_data['logrenove_customer_id']) || empty($pardot_data['date']) || empty($pardot_data['time']) || empty($pardot_data['name']) || empty($pardot_data['email']) || empty($pardot_data['phone-number'])) {
             return;
         }
         return send_pardot_form($pardot_url, $pardot_data);

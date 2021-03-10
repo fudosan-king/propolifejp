@@ -69,6 +69,6 @@
     }
     wp_enqueue_style( 'main-new', STYLESHEET_PATH.'/styles_new.css');
 ?>
-
+<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 <?php event_popular_seminar_schema(); ?>
 <?php event_detail_schema(); ?>

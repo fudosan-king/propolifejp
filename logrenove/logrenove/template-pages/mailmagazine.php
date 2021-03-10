@@ -77,7 +77,8 @@
                             </div>
                         </div>
                     </div>
-                    <form action="https://go.pardot.com/l/185822/2020-10-01/qk54cj" class="frm_registration">
+                    <!-- <form action="https://go.pardot.com/l/185822/2020-10-01/qk54cj" class="frm_registration"> -->
+                        <form action="https://form.run/api/v1/r/kpkk8dkqhsanp9zljwumqyp3" class="frm_registration" method="post">
                         <h2><span class="head_title">登録10秒！<span class="d-block d-lg-inline-block">興味のあるカテゴリを選んで</span>メールアドレスを入力するだけ！</span></h2>
                         <div class="frm-input">
                             <div class="form-group">

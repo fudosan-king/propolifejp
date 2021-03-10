@@ -1378,7 +1378,7 @@
                         $pardot_data = array();
                         $pardot_data['email'] = $user_email;
                         $pardot_data['mail_magazine'] = 1;
-                        $pardot_url = 'http://go.pardot.com/l/185822/2020-11-12/qpj6kj';
+                        $pardot_url = 'https://form.run/api/v1/r/na87k3dtv1m6cp7wdcsr81x6';//'http://go.pardot.com/l/185822/2020-11-12/qpj6kj';
                         send_pardot_form($pardot_url, $pardot_data);
                     }
                 }
@@ -1533,10 +1533,14 @@
 
     function send_pardot_form($pardot_url, $pardot_data) {
         $data = http_build_query($pardot_data);
+        $referer = 'https://www.logrenove.jp/';//wp_get_referer()?:home_url();
         $opts = array('http' =>
             array(
                 'method'  => 'POST',
-                'header'  => 'Content-Type: application/x-www-form-urlencoded',
+                'header'  => array(
+                    "Content-Type: application/x-www-form-urlencoded", 
+                    "Referer: ".$referer,
+                ),
                 'content' => $data
             ),
             'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
@@ -1569,14 +1573,14 @@
         if (is_user_logged_in()){
             $user = wp_get_current_user();
             $pardot_data['email'] = $user->user_email;
-            $pardot_url = 'https://go.pardot.com/l/185822/2020-11-12/qpj5x8';
+            $pardot_url = 'https://form.run/api/v1/r/mcfggys1usrhdi33o0wtn46m';//'https://go.pardot.com/l/185822/2020-11-12/qpj5x8';
         }
         else {
             $email = isset($_POST['user_email'])?$_POST['user_email']:'';
             $mail_magazine = isset($_POST['mail_magazine']) ? filter_var($_POST['mail_magazine'], FILTER_VALIDATE_BOOLEAN)  : false ;
             $pardot_data['email'] = $email;
             $pardot_data['mail_magazine'] = $mail_magazine?1:0;
-            $pardot_url = 'http://go.pardot.com/l/185822/2020-11-12/qpj61l';
+            $pardot_url = 'https://form.run/api/v1/r/rkkol6l72qmcu1qlovu08y3k';//'http://go.pardot.com/l/185822/2020-11-12/qpj61l';
         }
         $result = send_pardot_form($pardot_url, $pardot_data);
         $direct_url = 'booking-completed';
@@ -2067,7 +2071,7 @@
     add_action('wp_ajax_nopriv_event_date_list', 'get_event_date_list_ajax');
 
     function send_pardot_event() {
-        $pardot_url = 'https://go.pardot.com/l/185822/2020-09-01/qh62y3';
+        $pardot_url = 'https://form.run/api/v1/r/6f67ahn35gb05uppn8qtt5xw';//'https://go.pardot.com/l/185822/2020-09-01/qh62y3';
         $pardot_data = array();
         $pardot_data['logrenove_customer_id'] = $_POST['logrenove_customer_id']?:'';
         $pardot_data['date'] = $_POST['date']?:'';

@@ -28,7 +28,8 @@
                                         <?php the_content(); ?>
                                         <p>ログリノベに関するご意見・お問い合わせは下記フォームからご送信ください</p>
                                         <!-- https://go.pardot.com/l/185822/2020-03-11/pn35z9 -->
-                                        <form action="https://go.pardot.com/l/185822/2020-03-11/pn35z9" method="POST" role="form" class="frm_contact" id="pardotFormHandler_Contact">
+                                        <!-- <form action="https://go.pardot.com/l/185822/2020-03-11/pn35z9" method="POST" role="form" class="frm_contact" id="pardotFormHandler_Contact"> -->
+                                            <form action="https://form.run/api/v1/r/yyr5g3ztsfw5lcy9w9me1u05" method="POST" role="form" class="frm_contact" id="pardotFormHandler_Contact">
                                             <div class="form-group">
                                                 <label for="">メールアドレス（必須）</label>
                                                 <div class="row">

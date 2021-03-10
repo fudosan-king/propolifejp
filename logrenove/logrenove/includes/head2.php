@@ -38,7 +38,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
-
+<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 <?php
     wp_enqueue_style( 'service', SERVICE_STYLESHEET_PATH.'/service.css');
     if ($detect->isMobile()):

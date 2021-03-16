@@ -2074,6 +2074,7 @@
         $pardot_url = 'https://form.run/api/v1/r/e3qw48e2wxr4o6wdi8tebekk';//'https://go.pardot.com/l/185822/2020-09-01/qh62y3';
         $pardot_data = array();
         $pardot_data['logrenove_customer_id'] = $_POST['logrenove_customer_id']?:'';
+        $pardot_data['origin_url'] = $_POST['origin_url']?:'';
         $pardot_data['date'] = $_POST['date']?:'';
         $pardot_data['time'] = $_POST['time']?:'';
         // $pardot_data['seminer_method'] = $_POST['seminer_method']?:'';

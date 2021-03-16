@@ -1,6 +1,8 @@
 <?php 
 $event_datetime = get_event_datetime(); 
 $logrenove_customer_id = random_logrenove_customer_id();
+global $wp;
+$current_url = home_url($wp->request);
 ?>
 
 <style type="text/css">
@@ -12,6 +14,7 @@ $logrenove_customer_id = random_logrenove_customer_id();
 
 <form id="frm_services" class="frm_services" action="/events/thanks/" method="post" accept-charset="utf-8">
     <input type="hidden" name="logrenove_customer_id" value="<?=$logrenove_customer_id?>">
+    <input type="hidden" name="origin_url" value="<?=$current_url?>">
     <div class="frm-input">
         <div class="form-group">
             <div class="row mb-3">

@@ -970,6 +970,7 @@ ul.list_Kokutan li p {
   background: #184e1a;
   color: #fff;
 }
+.btnSend:focus {color: #fff;}
 .frm_contact .form-row {
   border-bottom: 1px solid #ced4da;
   margin-bottom: 15px;
@@ -1066,8 +1067,16 @@ h4.brands {
   text-align: center;
 }
 
+.was-validated .form-control:valid {border-color: #ced4da;}
+.was-validated .form-control:valid:focus {border-color: #80bdff;box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);}
 
-
+.was-validated .form-control:invalid {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 104, 104, 0.6)!important; border-color: #ff0000!important;}
+input[type="button"]{
+   outline:none;
+}
+input[type="button"]::-moz-focus-inner {
+   border: 0;
+}
 
 
 
